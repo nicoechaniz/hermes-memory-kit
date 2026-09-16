@@ -12,11 +12,28 @@ This kit ships a **vendored copy** of the plugin at `templates/plugins/dialogue-
 - This kit is **long-term memory** (durable facts, embeddings, hybrid retrieval, library curation).
 - Both layers are useful independently. Splitting them lets each evolve at its own pace and lets users adopt only the part they need.
 
-The continuity plugin is bundled by default because most kit users want both layers, but you can disable it (remove from `config.yaml: plugins.enabled`) if you have your own continuity mechanism.
+New workspaces use native Hermes session/goal continuity and explicitly disable
+this plugin. HMK bootstrap/upgrade no longer installs, reinstalls or overwrites
+it, including when an existing config enables it. Existing standalone installs
+and opted-in configurations are preserved. This is distribution decoupling, not
+a claim about the standalone project's maintenance status.
+
+To disable an existing install, add `dialogue-handoff` to `plugins.disabled` and
+remove it from `plugins.enabled`, preserving other entries. Do not remove HMK or
+its memory toolset. See [native-continuity.md](native-continuity.md).
 
 ## How it's used in this kit
 
-`bootstrap_agent.py` copies the vendored plugin into `<workspace>/hermes-home/plugins/dialogue-handoff/`. The `.env.template` emits both canonical (`HERMES_HANDOFF_PATH`, etc) and legacy (`HMK_DIALOGUE_HANDOFF_PATH`, etc) env vars resolving to the workspace's `agent-memory/state/` paths.
+For explicit compatibility use, install a reviewed version from the standalone
+repository (or deliberately copy the pinned `templates/plugins/dialogue-handoff/`
+artifact into the target home's `plugins/`). Then add the name to `plugins.enabled`
+and remove it from `plugins.disabled`. Do not replace a newer independently
+maintained install with this older vendor. Verify its session-isolation semantics
+and runtime compatibility before activation; bootstrap does not perform it.
+
+The `.env.template` retains canonical and legacy dialogue path aliases for existing
+opt-ins. These aliases do not install or activate hooks. No handoff/always-context
+placeholder is generated. The HMK provider still needs `HMK_AGENT_MEMORY_BASE`.
 
 The plugin reads via cascade:
 

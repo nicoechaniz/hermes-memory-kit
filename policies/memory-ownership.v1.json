@@ -80,7 +80,7 @@
       "selector": {
         "kind": "filesystem",
         "path_globs": [
-          "${AGENT_MEMORY_BASE}/state/DIALOGUE-HANDOFF.md",
+          "${HERMES_HOME}/state.db",
           "${SESSIONS_DIR}/**"
         ]
       },

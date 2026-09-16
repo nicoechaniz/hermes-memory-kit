@@ -5,15 +5,14 @@ Since v3.7.0 the kit ships a memory provider that implements the formal
 ABC of Hermes Agent. This is a different extension point from the
 `dialogue-handoff` plugin — they live in different planes and they coexist.
 
-## Two planes, two plugins
+## Separate continuity and durable-memory planes
 
-| Plane | Plugin | Question it answers |
-|---|---|---|
-| **Working memory** (per-session, anti-amnesia across sessions / model swaps / context compression) | `dialogue-handoff` (vendored from `hermes-continuity-plugin`) — generic plugin via `pre_llm_call` / `post_llm_call` hooks | "What were we doing last time?" |
-| **Long-term memory** (per-turn, fact recall during the live session) | `hmk-memory` — formal `MemoryProvider` via `prefetch(query)` | "What does our knowledge base say about this query?" |
-
-Both ship in the kit and the bootstrap copies both into a new agent. They
-don't share state and they don't conflict.
+Native Hermes session history and goal state own conversational continuity.
+`hmk-memory` owns durable curated recall through automatic `prefetch(query)` and
+`librarian`. Neither path reads a handoff or calls continuityctl. The standalone
+`dialogue-handoff` hooks are optional compatibility tooling, not a dependency.
+Bootstrap installs HMK, explicitly disables dialogue, and leaves native file
+stores disabled. See [native-continuity.md](native-continuity.md).
 
 ## Architecture
 
@@ -53,6 +52,8 @@ In the agent's `config.yaml`:
 ```yaml
 memory:
   provider: hmk-memory
+  memory_enabled: false
+  user_profile_enabled: false
 ```
 
 Restart the gateway. Hermes' "single provider rule" means only one external
@@ -84,17 +85,17 @@ descriptive metadata, not active discovery. This means:
 
 ## What this provider does NOT do (yet)
 
-The v3.7.0 MVP only implements `prefetch` + `system_prompt_block`. Other
-hooks of the `MemoryProvider` ABC are no-op:
+The provider implements `prefetch`, `system_prompt_block`, and `librarian`.
+These optional hooks of the `MemoryProvider` ABC remain no-op:
 
 - `sync_turn` — turns are not auto-persisted as new chapters. Use the
   existing CLI ingestion path (`memoryctl add-text`, `ingest_any.py`) for
   durable writes.
-- `on_pre_compress` — Hermes' context compression runs without per-call
-  insight extraction. The `dialogue-handoff` plugin still preserves the
-  recent-exchanges tail.
-- `get_tool_schemas` — the LLM cannot invoke memory queries on demand.
-  Recall is purely pre-emptive via `prefetch`.
+- `on_pre_compress` — Hermes owns native compression and session continuity;
+  this provider does not create a second dialogue summary.
+
+Unlike those optional hooks, `get_tool_schemas` is implemented: it exposes
+`librarian` for on-demand queries, expansion and curated memory operations.
 
 These are reserved for future releases. The MVP scope was chosen so the
 provider could ship behind a single configuration switch without changing
@@ -122,7 +123,7 @@ queued prefetch for next-turn pre-warming via `queue_prefetch`.
 | v3.7.0 (this release) | `prefetch` + `system_prompt_block` over engram_pack/hybrid_pack. Env-driven config. CLI status. |
 | v3.8.x (future) | `sync_turn` (auto-persist substantive turns to `chapters` as episodic), `queue_prefetch` (async pre-warm). |
 | v3.9.x (future) | `on_pre_compress` (extract durable facts from to-be-compressed messages, write as semantic chapters). |
-| v3.10.x (future) | `get_tool_schemas` exposing `search_memory`/`recall(query)` tools to the LLM for on-demand recall. |
+| Implemented since the initial roadmap | `get_tool_schemas` exposes `librarian` for on-demand recall and curation. |
 
 These are tentative — concrete scope and timing get committed when the
 prior release has stabilized in production for at least a couple of weeks.

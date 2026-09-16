@@ -105,18 +105,16 @@ This is the long-term memory layer for records authored natively in HMK:
 - episodic traces;
 - and domain-specific shelves such as the Minecraft-scoped `mc-*` shelves when you need them.
 
-### 2. Re-entry continuity
+### 2. Native re-entry continuity
 
-Stored in `agent-memory/state/`.
+Hermes native session history and goal state own conversational continuity. HMK
+provides durable recall, not a second transcript. New workspaces select HMK with
+native MEMORY.md/USER.md stores and `dialogue-handoff` explicitly disabled.
 
-This is the “pick the thread back up” layer:
-
-- `DIALOGUE-HANDOFF*.md`
-- `ALWAYS-CONTEXT.md`
-- `NOW.md`
-- `ACTIVE-CONTEXT.md`
-
-The continuity plugin lives in a separate repo now, but this kit vendors a pinned copy automatically.
+`NOW.md` and optional `ACTIVE-CONTEXT.md` are engineering notes, not current user
+intent. The standalone dialogue vendor remains for explicit compatibility use,
+but bootstrap/upgrade never install or overwrite it. Existing opt-ins are left
+intact. See [native continuity migration](docs/native-continuity.md).
 
 ### 3. Generated HMK navigation layer
 
@@ -178,7 +176,8 @@ It wants:
 - the immediate thread;
 - and a few stable reminders.
 
-That is what the continuity files are for.
+Use the selected native Hermes session and goal state for this, not shared
+continuity files or a guess about the latest conversation.
 
 ### Projection
 
@@ -203,7 +202,7 @@ flowchart LR
     H([human operator])
 
     LLM <-->|"memoryctl · hybrid_pack / engram_pack"| DB[("agent-memory/library.db<br/>durable canon")]
-    LLM <-->|"continuity-plugin · pre/post_llm_call"| DH[/"DIALOGUE-HANDOFF.*.md<br/>working memory"/]
+    LLM <-->|"native sessions / goals"| STATE[("Hermes state.db<br/>conversation continuity")]
     DB -.->|"export_obsidian.py"| WIKI[/"workspace wiki/<br/>generated HMK projection"/]
     DB -.->|"reviewed publish_collective.py"| CM[/"collective-memory corpus<br/>derived artifacts"/]
     H --> WIKI
@@ -234,7 +233,8 @@ cd ~/agents/hermes-alfa
 # 5. Fill in the basics
 vim .env
 vim hermes-home/SOUL.md
-vim hermes-home/memories/USER.md
+# Native MEMORY.md/USER.md stores are disabled by default.
+# Curate durable knowledge through HMK; keep identity concise in SOUL.md.
 
 # 6. Initialize the memory DB
 ./scripts/hmk memoryctl.py init
@@ -275,8 +275,9 @@ The intended daily workflow is simple:
 ./scripts/hmk memoryctl.py hybrid-pack --query "what matters right now?" --budget 1800 --limit 4 --threshold 0.4
 ./scripts/hmk memoryctl.py expand --id 42
 
-# Rehydrate after restart
-./scripts/hmk continuityctl.py rehydrate
+# Resume dialogue through Hermes /resume (select the intended session).
+# Optional engineering notes are NOT conversation history:
+./scripts/hmk continuityctl.py show
 
 # Export selected HMK-native material to the isolated projection vault
 ./scripts/hmk export_obsidian.py --ids 1 2 3
@@ -340,18 +341,15 @@ After bootstrap, a workspace looks roughly like this:
 ├── hermes-home/
 │   ├── config.yaml
 │   ├── SOUL.md
-│   ├── memories/{MEMORY,USER}.md
 │   ├── plugins/
-│   │   └── dialogue-handoff/
+│   │   └── hmk-memory/
 │   ├── skills/
 │   └── sessions/
 ├── agent-memory/
 │   ├── library.db
 │   ├── state/
-│   │   ├── ALWAYS-CONTEXT.md
-│   │   ├── DIALOGUE-HANDOFF.md
 │   │   ├── NOW.md
-│   │   └── ACTIVE-CONTEXT.md
+│   │   └── ACTIVE-CONTEXT.md  (optional, operator-maintained)
 │   ├── episodes/
 │   ├── plans/
 │   ├── evidence/

@@ -138,102 +138,43 @@ sed -n '1,200p' wiki/maps/project-memory-system.md
 Use this only for navigation over HMK-native records. Do not confuse it with
 the independently authored LLM Wiki at `$WIKI_PATH`.
 
-### 9. Fast continuity rehydration
+### 9. Native session re-entry, separate from durable retrieval
 
-```bash
-./scripts/hmk continuityctl.py rehydrate
-```
+Use Hermes `/resume` for the intended session, `session_search` for explicitly
+selected history, and native `/goal` for the active mission. Native SQLite
+session/goal persistence is distinct from the optional MEMORY.md/USER.md stores.
+The kit defaults to HMK for durable memory with those native stores disabled.
 
-Use this after:
-- model changes
-- service restart
-- crash recovery
-- obvious continuity loss
-
-This path is intentionally cheap:
-- reads identity anchors
-- reads `agent-memory/state/NOW.md`
-- reads `agent-memory/state/ACTIVE-CONTEXT.md`
-- reads `agent-memory/state/DIALOGUE-HANDOFF.md` for conversational handoff (platform, last user msg, last assistant resp, working set, resume hint, and — with plugin v3.1+ — the `## Recent Exchanges` multi-line tail)
-- reads legacy episodic handoff fields from `ACTIVE-CONTEXT.md` when present (deprecated)
-- expands exact `[mem:N]` anchors from `ACTIVE-CONTEXT.md`
-- runs one small `hybrid-pack` only as a supplement
-
-Do not replace normal retrieval with this. Use it as tactical re-entry.
-Use it once at the beginning of the first substantial turn after restart, crash recovery, or `/model` change when continuity may be degraded.
+`continuityctl.py rehydrate` is deprecated: it returns native re-entry guidance,
+not recovered context, and reads no files or databases. Old retrieval/summary
+flags are accepted but ignored. Use `memoryctl hybrid-pack`, `expand`, or the
+`librarian` tool for explicit durable recall. `continuityctl show` and `update`
+remain available for operator-maintained engineering notes only.
 
 ## Memory Topology (workspace-relative)
 
-Paths relative to the agent workspace root:
-- `agent-memory/README.md`
-- `agent-memory/index/INDEX.md`
-- `agent-memory/state/NOW.md`
-- `agent-memory/state/ACTIVE-CONTEXT.md`
-- `agent-memory/state/DIALOGUE-HANDOFF.md`
-- `agent-memory/plans/MEMORY-ARCHITECTURE.md`
-- `agent-memory/library.db`
-- `wiki/index.md`
-- `wiki/maps/project-memory-system.md`
+- `agent-memory/library.db`: curated durable HMK memory
+- `agent-memory/state/NOW.md`, `ACTIVE-CONTEXT.md`: optional engineering notes
+- `agent-memory/index/INDEX.md`, `plans/MEMORY-ARCHITECTURE.md`: navigation
+- `hermes-home/state.db`: native sessions and goal state, managed by Hermes
+- `wiki/`: generated HMK navigation, not the independently authored LLM Wiki
+
+These are bootstrap defaults. Follow the actual deployment paths and preserve
+`HMK_AGENT_MEMORY_BASE`; do not invent another memory root to match the examples.
 
 ## Retrieval Strategy
 
-1. Start with `hybrid-pack`
-2. If continuity was likely lost, run `continuityctl.py rehydrate` first
-3. If the task is orientation, roadmap mapping, or conceptual grouping, inspect `wiki/` next
-4. Cite chapter ids like `[mem:17]`
-5. If needed, `expand` one or two ids
-6. Synthesize only from retrieved items; do not hallucinate continuity
+1. Use `hybrid-pack` or `librarian` for durable knowledge.
+2. For lost dialogue, select the native session/history rather than searching a
+   shared handoff or assuming the latest same-platform conversation is yours.
+3. For conceptual orientation, inspect the appropriate navigation surface.
+4. Cite chapter IDs like `[mem:17]`, then `expand` selected IDs if needed.
+5. Accept `null_retrieval`; missing recall does not activate native file stores.
 
-## Handoff sources — two separate files, two distinct semantics
-
-`continuityctl.py rehydrate` returns two independent handoff sources:
-
-| Key | File | Semantic | Written by |
-|---|---|---|---|
-| `meta_context` | `agent-memory/state/ACTIVE-CONTEXT.md` + `NOW.md` | Engineering / operator meta-state (system goals, blockers, memory architecture) | Operator manually via `continuityctl update` |
-| `dialogue_handoff` | `agent-memory/state/DIALOGUE-HANDOFF.md` | Last real user↔Hermes conversation turn + (plugin v3.1+) a `## Recent Exchanges` multi-line tail of the last N substantive turns | `dialogue-handoff` plugin on `post_llm_call` |
-| `episode_handoff` | legacy section inside `ACTIVE-CONTEXT.md` | historical/compat — deprecated | (kept only for back-compat) |
-
-### Rule for consumption — source of truth order
-
-Authority order for "what were we talking about" / re-entry queries (this matches the ALWAYS-CONTEXT rule):
-
-1. **`<previous_session_context>` already injected at turn start** — treat as authoritative; cite concrete details before looking anywhere else.
-2. **`dialogue_handoff` (DIALOGUE-HANDOFF.md)** — same content as injected; read directly if you need exchanges older than the rolling tail.
-3. **Sessions JSON** (`$HMK_SESSIONS_DIR/*.json`) — fallback ONLY if (a) the user mentions a topic not in the handoff, or (b) you need history older than the rolling window.
-4. **`meta_context` (ACTIVE-CONTEXT.md, NOW.md)** — never as conversation; describes the system, not the dialogue.
-
-For "what are we working on / project status / roadmap" queries → `meta_context` is primary.
-
-Never quote `meta_context` as if it were the user conversation.
-
-### Recovering broader thread context (beyond last turn)
-
-With plugin v3.1+, `DIALOGUE-HANDOFF.md` contains a `## Recent Exchanges` block with the last N (default 4) substantive turns verbatim — usually enough to recover the thread without reopening session JSON.
-
-If you need older context, `dialogue_handoff.session_path` points to the full session JSON of the previous session. Scan the last ~20 messages for:
-- referenced paths, files, or URLs
-- the main topic of the exchange
-- decisions or conclusions already reached
-
-`last_working_set` already captures paths touched in shell / file tools of the last turn; cross-reference those with the session messages to reconstruct thread. Do not reread the entire session file — 20 trailing messages are enough.
-
-### Response style on re-entry
-
-Treat recovered context as YOUR OWN memory — not as something to report.
-
-When the user asks "¿en qué estábamos?", "de qué veníamos hablando?", "recordás lo último?" or similar re-entry cues:
-
-- DO absorb the handoff silently and pick up the thread naturally. Examples:
-  - "Dale, seguimos con el PDF de malabarismos. Decías que…"
-  - "Veníamos trabajando con X sobre Y. ¿Querés que continúe desde Z?"
-- DO NOT list structured fields like `session_id`, timestamps, model, platform, working set paths — they are metadata for you, not for the user.
-- DO NOT frame the answer as a "report" with headers/bullets unless the user explicitly asks for a recap or audit.
-- If context is genuinely empty/stale, say so briefly in one sentence and invite the user to reorient you.
-
-The handoff system is infrastructure; from the user's perspective, you just remember.
-
-`DIALOGUE-HANDOFF.md` is updated automatically by the `dialogue-handoff` plugin on every non-trivial user turn. `ACTIVE-CONTEXT.md` remains the engineering meta-context file (goals, blockers, focus) and is updated manually by the operator.
+Current user direction outranks historical summaries, quotations and engineering
+notes. Do not promote a worker result, `/new` parent ID, or stale context into a
+new human request. HMK automatic prefetch and `librarian` do not depend on the
+optional dialogue plugin. Do not treat retrieved chapters as a conversation log.
 
 ## Ingestion Strategy
 

@@ -1,5 +1,26 @@
 ## [Unreleased]
 
+### Native-first continuity migration
+
+- New workspaces select `hmk-memory`, explicitly disable `dialogue-handoff`, and
+  disable native MEMORY.md/USER.md stores. HMK provider retrieval and librarian
+  remain independent; `HMK_AGENT_MEMORY_BASE` and other provider APIs are unchanged.
+- Bootstrap/upgrade no longer install, reinstall, or overwrite the standalone
+  dialogue plugin. Existing plugin code, opted-in configurations and user-owned
+  native files are preserved. No config rewriting, schema migration or deletion
+  of historical handoff data is performed.
+- `continuityctl rehydrate` now returns native session/goal guidance only, with
+  `restored: false`, and no file/database reads or inference. Old flags are accepted
+  as deprecated no-ops; use Hermes resume/history for dialogue and librarian or
+  memoryctl for explicit durable recall. Engineering `show`/`update` are retained.
+- Librarian and legacy always-context guidance, ownership policy and installation
+  docs no longer make shared handoff or archived native memory authoritative. No new
+  session adapter or global continuity store is introduced.
+- Regression tests cover poisoned legacy paths, root-free guidance, disposable
+  bootstrap/upgrade configuration preservation, real temporary SQLite retrieval,
+  null recall and backend failure. Embedding computation is stubbed offline;
+  these tests do not claim to verify Hermes routing or model behavior.
+
 ### Added
 
 - `HERMES_EMBED_DEVICE` selects the device used by the local

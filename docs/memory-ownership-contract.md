@@ -29,7 +29,7 @@ Deleting or regenerating the LLM Wiki from HMK is forbidden.
 | Curated LLM Wiki note | File under `$WIKI_PATH` | HMK `library` chapter is a retrieval index |
 | HMK-native identity/state/plan/episode/atomic note | `library.db` | HMK projection vault is disposable navigation |
 | Live project branch/blocker/task state | Project `MEMORY.md` and GitHub | May be linked, never copied as durable wiki truth |
-| Dialogue continuity | Session log and `DIALOGUE-HANDOFF.md` | HMK retrieval may supplement, not replace it |
+| Dialogue continuity | Native Hermes session/goal state (`state.db`; optional session exports) | HMK retrieval may supplement, not replace it; shared handoff files are not authoritative |
 | Daimon `/me` personal memory | Daimon Matrix signed/evented memory ledger | HMK `daimon-projection` row is a disposable retrieval view |
 
 An HMK `library` shelf can therefore contain both authoritative HMK-native
