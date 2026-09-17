@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import json
-import re
 from pathlib import Path
-
-import memoryctl
-
 
 import os as _os
 import sys as _sys
@@ -32,71 +28,18 @@ def _require(name: str, value):
 
 
 AGENT_MEMORY_BASE = _resolve(["HMK_AGENT_MEMORY_BASE", "AGENT_MEMORY_BASE", "HMK_BASE_DIR"])
-HERMES_HOME = _resolve(["HMK_HERMES_HOME", "HERMES_HOME"])
 
 # The module-level constants below are lazy-built from the cascade roots.
 # If roots are None, downstream functions will hit _require() and hard-fail.
 BASE_DIR = AGENT_MEMORY_BASE
 STATE_DIR = (BASE_DIR / "state") if BASE_DIR else None
 ACTIVE_CONTEXT_PATH = (STATE_DIR / "ACTIVE-CONTEXT.md") if STATE_DIR else None
-NOW_PATH = (STATE_DIR / "NOW.md") if STATE_DIR else None
-DIALOGUE_HANDOFF_PATH = (
-    _resolve(["HMK_DIALOGUE_HANDOFF_PATH"])
-    or ((STATE_DIR / "DIALOGUE-HANDOFF.md") if STATE_DIR else None)
-)
-SOUL_PATH = (HERMES_HOME / "SOUL.md") if HERMES_HOME else None
-USER_PATH = (HERMES_HOME / "memories" / "USER.md") if HERMES_HOME else None
-MEMORY_PATH = (HERMES_HOME / "memories" / "MEMORY.md") if HERMES_HOME else None
 
 
 def read_text(path: Path) -> str:
     if not path.exists():
         return ""
     return path.read_text(encoding="utf-8", errors="replace").strip()
-
-
-def normalize_bullet(value: str) -> str:
-    value = value.strip()
-    value = re.sub(r"^\-\s*", "", value)
-    return value.strip()
-
-
-def split_bullets(block: str):
-    out = []
-    for raw in block.splitlines():
-        raw = raw.strip()
-        if not raw:
-            continue
-        if raw.startswith("- "):
-            out.append(normalize_bullet(raw))
-        else:
-            out.append(raw)
-    return out
-
-
-def compact_phrase(text: str, max_words: int = 10) -> str:
-    words = text.strip().split()
-    if not words:
-        return ""
-    return " ".join(words[:max_words])
-
-
-def extract_mem_ids(block: str):
-    ids = []
-    for item in split_bullets(block):
-        for match in re.findall(r"\[mem:(\d+)\]", item):
-            try:
-                ids.append(int(match))
-            except ValueError:
-                continue
-    out = []
-    seen = set()
-    for item in ids:
-        if item in seen:
-            continue
-        seen.add(item)
-        out.append(item)
-    return out
 
 
 def parse_sections(text: str):
@@ -186,171 +129,28 @@ def update_active_context(args):
     return {"ok": True, "path": str(ACTIVE_CONTEXT_PATH)}
 
 
-def summarize_markdown(text: str, max_lines: int):
-    bullets = []
-    for line in text.splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        if line.startswith("#"):
-            bullets.append(f"- heading: {line.lstrip('#').strip()}")
-        elif line.startswith("- "):
-            bullets.append(line)
-        else:
-            bullets.append(f"- {line[:140]}")
-        if len(bullets) >= max_lines:
-            break
-    return bullets or ["- none"]
-
-
-def summarize_memory_row(row, max_lines: int):
-    text = (row.get("spr") or row.get("raw") or "").strip()
-    bullets = []
-    if row.get("title"):
-        bullets.append(f"- title: {row['title']}")
-    for line in text.splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        if line.startswith("#"):
-            bullets.append(f"- heading: {line.lstrip('#').strip()}")
-        elif line.startswith("- "):
-            bullets.append(line)
-        else:
-            bullets.append(f"- {line[:140]}")
-        if len(bullets) >= max_lines:
-            break
-    return bullets or ["- none"]
-
-
-def load_relevant_memories(max_items: int, max_lines: int):
-    sections = load_active_context()
-    mem_ids = extract_mem_ids(sections.get("Relevant Memory", ""))
-    items = []
-    for chapter_id in mem_ids[:max_items]:
-        try:
-            row = memoryctl.expand(chapter_id)
-        except (Exception, SystemExit) as exc:
-            items.append(
-                {
-                    "id": chapter_id,
-                    "citation": f"[mem:{chapter_id}]",
-                    "error": str(exc),
-                }
-            )
-            continue
-        items.append(
-            {
-                "id": chapter_id,
-                "citation": f"[mem:{chapter_id}]",
-                "title": row.get("title", ""),
-                "shelf": row.get("shelf", ""),
-                "book_title": row.get("book_title", ""),
-                "source_path": row.get("source_path", ""),
-                "summary": summarize_memory_row(row, max_lines),
-            }
-        )
-    return items
-
-
-def build_query():
-    sections = load_active_context()
-    query_parts = ["continuity", "current state", "active focus", "continuidad", "estado actual", "foco activo"]
-    for key in ["Active Goal", "Current Focus", "Next Steps", "Last Topic", "Last User Intent"]:
-        if key in sections:
-            compacted = [compact_phrase(item) for item in split_bullets(sections[key])[:2]]
-            query_parts.extend([item for item in compacted if item])
-    cleaned = []
-    seen = set()
-    for part in query_parts:
-        part = part.strip()
-        if not part:
-            continue
-        lowered = part.lower()
-        if lowered in seen:
-            continue
-        seen.add(lowered)
-        cleaned.append(part)
-    return " ".join(cleaned)
-
-
-def load_episode_handoff(max_lines: int):
-    sections = load_active_context()
-    out = {}
-    mapping = [
-        ("last_topic", "Last Topic"),
-        ("last_user_intent", "Last User Intent"),
-        ("last_working_set", "Last Working Set"),
-        ("resume_hint", "Resume Hint"),
-    ]
-    for out_key, section_name in mapping:
-        raw = sections.get(section_name, "")
-        items = split_bullets(raw)[:max_lines]
-        out[out_key] = items or []
-    return out
-
-
-def load_dialogue_handoff(max_lines: int):
-    if not DIALOGUE_HANDOFF_PATH.exists():
-        return {}
-    text = read_text(DIALOGUE_HANDOFF_PATH)
-    sections = parse_sections(text)
-    mapping = [
-        ("last_turn", "Last Turn"),
-        ("session_path", "Session Path"),
-        ("last_user_message", "Last User Message"),
-        ("last_assistant_response", "Last Assistant Response"),
-        ("last_working_set", "Last Working Set"),
-        ("resume_hint", "Resume Hint"),
-    ]
-    out = {}
-    for key, section in mapping:
-        raw = sections.get(section, "")
-        out[key] = split_bullets(raw)[:max_lines]
-    return out
-
-
 def rehydrate(args):
-    identity = {
-        "soul": summarize_markdown(read_text(SOUL_PATH), args.max_identity_lines),
-        "user": summarize_markdown(read_text(USER_PATH), args.max_identity_lines),
-        "memory": summarize_markdown(read_text(MEMORY_PATH), args.max_identity_lines),
+    """Describe native re-entry; never guess a dialogue from shared files."""
+    return {
+        "mode": "native-first",
+        "continuity": {
+            "source": "Hermes native session/goal state",
+            "restored": False,
+            "guidance": (
+                "Resume the intended session through Hermes /resume; use session_search "
+                "for explicitly selected history and native /goal for the active mission. "
+                "This command does not restore a session or infer one from platform, "
+                "recency, engineering notes, or a parent ID. Current user direction wins."
+            ),
+        },
+        "meta_context": {},
+        "exact_memories": [],
+        "query": None,
+        "retrieval": None,
     }
-    state = {
-        "now": summarize_markdown(read_text(NOW_PATH), args.max_state_lines),
-        "active_context": summarize_markdown(read_text(ACTIVE_CONTEXT_PATH), args.max_state_lines),
-    }
-    episode_handoff = load_episode_handoff(args.max_episode_lines)
-    dialogue_handoff = load_dialogue_handoff(args.max_dialogue_lines)
-    exact_memories = load_relevant_memories(args.relevant_limit, args.max_memory_lines)
-    query = build_query()
-    retrieval = None
-    valid_exact = [item for item in exact_memories if not item.get("error")]
-    should_retrieve = (not args.skip_retrieval) and (args.always_retrieve or not valid_exact)
-    if should_retrieve:
-        retrieval = memoryctl.hybrid_pack(
-            query,
-            budget_tokens=args.budget,
-            limit=args.limit,
-            threshold=args.threshold,
-        )
-    result = {
-        "mode": "minimal-rehydration",
-        "query": query,
-        "identity": identity,
-        "meta_context": state,
-        "dialogue_handoff": dialogue_handoff,
-        "state": state,
-        "episode_handoff": episode_handoff,
-        "exact_memories": exact_memories,
-        "retrieval": retrieval,
-    }
-    return result
 
 
 def main():
-    _require("HMK_AGENT_MEMORY_BASE", AGENT_MEMORY_BASE)
-    _require("HMK_HERMES_HOME", HERMES_HOME)
     parser = argparse.ArgumentParser(description="Tactical continuity control for Hermes")
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -373,7 +173,10 @@ def main():
     upd.add_argument("--memories", nargs="*")
     upd.add_argument("--notes", nargs="*")
 
-    reh = sub.add_parser("rehydrate")
+    reh = sub.add_parser(
+        "rehydrate", help="Deprecated: native session/goal re-entry guidance only",
+        description="No file or database reads. Legacy options are accepted but ignored.",
+    )
     reh.add_argument("--budget", type=int, default=700)
     reh.add_argument("--limit", type=int, default=2)
     reh.add_argument("--threshold", type=float, default=0.52)
@@ -387,6 +190,8 @@ def main():
     reh.add_argument("--always-retrieve", action="store_true")
 
     args = parser.parse_args()
+    if args.command != "rehydrate":
+        _require("HMK_AGENT_MEMORY_BASE", AGENT_MEMORY_BASE)
 
     if args.command == "show":
         if args.json:
@@ -400,6 +205,12 @@ def main():
         return
 
     if args.command == "rehydrate":
+        _sys.stderr.write(
+            "Deprecated: rehydrate now returns native re-entry guidance only; "
+            "legacy retrieval/summary flags have no effect. Use Hermes resume/history "
+            "for dialogue, continuityctl show for engineering notes, and "
+            "memoryctl hybrid-pack or librarian for explicit durable recall.\n"
+        )
         print(json.dumps(rehydrate(args), indent=2, ensure_ascii=False))
         return
 

@@ -538,3 +538,9 @@ And if you change behavior around the continuity plugin, test it against a real 
 ## License
 
 [MIT](LICENSE)
+
+## Native-first manual re-entry
+
+See [native re-entry](docs/native-reentry.md) for the deprecated `rehydrate`
+compatibility response and migration from shared handoff reads. HMK durable
+retrieval remains unchanged. This does not automatically disable a plugin.

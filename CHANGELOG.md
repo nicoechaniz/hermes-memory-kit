@@ -1,3 +1,15 @@
+## [Unreleased]
+
+### Native-first manual re-entry
+
+- Rehydrate returns native session/goal guidance without shared handoff, disabled
+  native-store, engineering-state or database reads. Legacy flags are accepted
+  as deprecated no-ops; no conversation is claimed restored.
+- Workspace re-entry instructions preserve current human precedence and avoid
+  mandatory global-handoff startup. HMK provider and schemas are unchanged.
+- Two offline regressions cover poisoned legacy paths and root-free guidance.
+- This focused change leaves bootstrap defaults and installed plugins alone.
+
 ## [3.7.3] — 2026-05-09
 
 ### Fixed
