@@ -28,10 +28,12 @@ This workspace uses Hermes Memory Kit as its durable memory layer.
 
 ## Re-entry priorities
 
-On fresh session start (new CLI, restart, `/model` change), the priority is:
+Use native Hermes session history and goal state for the matching conversation.
+The latest human direction controls continuation; historical summaries do not
+revive cancelled work. Retrieve HMK or the project cockpit when needed, but do
+not infer current dialogue from engineering-state files or global handoffs.
 
-- **Priority 1 — `agent-memory/state/DIALOGUE-HANDOFF.md`** — the last real user↔agent turn, auto-populated by the `dialogue-handoff` plugin (if installed).
-- **Priority 2 — `./scripts/hmk continuityctl.py rehydrate`** — returns identity + meta_context + dialogue_handoff + exact memories in a single JSON.
-- **Never** infer current dialogue from engineering-state files like `agent-memory/state/ACTIVE-CONTEXT.md`. That file describes the system's meta-state, not the conversation.
-
-When recovering context on a new session, **absorb the handoff silently** and continue the conversation naturally. Do NOT present `session_id`, timestamps, file paths, model name, or working-set entries as a report to the user — that is metadata for the agent, not for the user. The user experience should be the agent remembers, not the agent just queried a database.
+`./scripts/hmk continuityctl.py rehydrate` provides an optional native-first
+orientation result, not a recovered conversation or a mandatory startup ritual.
+Keep retrieval metadata out of ordinary conversation unless relevant to the
+user's request.
