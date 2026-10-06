@@ -64,6 +64,12 @@ The guiding idea is simple:
 
 > **One agent = one directory = one memory world.**
 
+This is the default installation-isolation pattern. It does not define a being's
+identity: authorized bodies of the same being may use an explicitly bound shared
+memory pool while keeping their native sessions and body configuration separate.
+See the [general-memory review](docs/general-memory-review.md) for the broader
+continuity requirements and current implementation gaps.
+
 Each agent gets its own:
 
 - `hermes-home/`
@@ -523,6 +529,7 @@ The README should not pretend otherwise.
 - [Providers](./docs/providers.md)
 - [Curation Pipeline](./docs/curation-pipeline.md)
 - [Durable Recall Improvement Plan](./docs/durable-recall-plan.md)
+- [General Memory Review](./docs/general-memory-review.md)
 
 ---
 

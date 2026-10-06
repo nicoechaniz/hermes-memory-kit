@@ -28,6 +28,8 @@ Globally:
 |---|---|
 | `queries.example.txt` | Template showing the format. **Not your real queries.** |
 | `README.md` | This doc. |
+| `durable-recall-cases.json` | Fictional foreground experience and later recall questions; see the [capture/recall plan](../durable-recall-plan.md). |
+| `general-memory-diagnostics.py` | Disposable source-level checks used by the [general-memory review](../general-memory-review.md); no model or embedding service calls. |
 
 ## Privacy — where your benchmark outputs live
 

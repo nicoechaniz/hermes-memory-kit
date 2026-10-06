@@ -11,6 +11,11 @@ already provides ten-year recall, automatic experience extraction or receiving
 acceptance in another body. A successful native session resume tests a different
 property from durable recall without that session.
 
+The [general-memory review](general-memory-review.md) examines the whole kit
+against this use, including preservation, metadata, capture, retrieval,
+workspace lifecycle and source authority. Its disposable diagnostics establish
+concrete gaps beyond the selection policy.
+
 ## First delivery
 
 The first delivery adds:
@@ -161,7 +166,12 @@ that force the loss of meaningful people, projects or irreplaceable episodes.
 
 ## Next decision
 
-Run the baseline/proposed-policy pilot before choosing structural changes.
+First fix the review's confirmed preservation hazards: incomplete WAL migration
+backup, acquired-skill loss during upgrade and silent native title collisions.
+Publish each fix with the relevant regression evidence. These observations are
+already concrete; they do not need to wait for a model capture benchmark.
+
+Then run the baseline/proposed-policy pilot before choosing broader structural changes.
 Start with the issue proposal, project synopsis change, ordinary shared moment,
 account attribution correction and missing-source/other-body recall. Use the
 remaining cases to examine the particular failures found.

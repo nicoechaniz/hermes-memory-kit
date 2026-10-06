@@ -1,6 +1,8 @@
 # Multi-agent deployment
 
-Hermes Memory Kit v3.0+ treats **one directory = one fully isolated agent**. This page explains what that means in practice and how to deploy several agents side-by-side without cross-contamination.
+Hermes Memory Kit v3.0+ defaults to **one directory = one isolated installation**.
+This page explains how to deploy several agents side-by-side without accidental
+cross-contamination. Installation boundaries do not establish being identity.
 
 ## The rule
 
@@ -26,9 +28,17 @@ For each agent, everything it needs lives inside its own workspace:
 > (`EnvironmentFile=%h/agents/%i/.env`) follow it to the real file.
 ```
 
-Agents **never share** any of: config, SOUL, memory, sessions, plugins, skills, library.db, wiki, or scripts. If you run the library on host Y and configure agent X wrong, X gets an explicit error — it cannot silently fall back into another agent's files.
+Separate installations receive separate config, SOUL, memory, sessions, plugins,
+skills, library.db, wiki and scripts by default. Missing memory-path configuration
+fails explicitly rather than selecting another installation's files.
 
-Only thing that may be shared: an external read-only corpus you want every agent to see (e.g. a research library). That is not the kit's concern — keep it outside `~/agents/`.
+An external read-only corpus can be shared deliberately. Authorized bodies of the
+same being may also use an explicitly configured being-level durable-memory pool,
+while keeping native sessions and body-specific configuration separate. Such
+membership and access come from the runtime's authorized binding, not matching
+agent names, workspace paths, models or copied SOUL files. This kit's bootstrap
+does not establish those bindings or synchronize offline SQLite copies. See the
+[general-memory review](general-memory-review.md).
 
 ## Bootstrapping a new agent
 
@@ -58,7 +68,7 @@ systemctl --user enable --now hermes-gateway@hermes-beta.service
 
 The template assumes agents live at `%h/agents/%i/`. If an agent lives somewhere else (different disk, shared mount), generate a non-template unit with absolute paths — `bootstrap_agent.py` prints a hint when the location is non-standard.
 
-## What gets shared — nothing
+## Default path isolation
 
 Every script in the kit checks the cascade and hard-fails if the agent's `.env` is missing or misconfigured:
 
@@ -91,7 +101,8 @@ python3 scripts/bootstrap_agent.py ~/agents/hermes-beta --name hermes-beta
 systemctl --user enable --now hermes-gateway@hermes-beta.service
 ```
 
-Both agents run in parallel as systemd user services. Their sessions, memory, and config are fully disjoint.
+Both agents run in parallel as systemd user services. Under this default setup,
+their sessions, memory and config are disjoint.
 
 ## What if I misconfigure `.env`?
 
