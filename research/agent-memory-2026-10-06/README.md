@@ -51,8 +51,12 @@ The [durable-recall plan](../../docs/durable-recall-plan.md) remains the work re
 Existing preservation defects are still unfixed. Source-loss capture/recall,
 ten-year ranking perturbation, consolidation, scale and receiving acceptance
 remain untested. Markdown is the delivered format; a PDF was not requested or
-generated and no LaTeX/pandoc toolchain was available. No private corpus, other
-being's diary, runtime hooks, schedulers or deployment were accessed/changed.
+generated and no LaTeX/pandoc toolchain was available. Research lanes used public
+sources and did not access private corpora or another being's diary, or change
+runtime hooks, schedulers or deployments. A brief publication milestone was
+curated separately in the authorized being pool after a verified snapshot;
+persistence and configured-provider retrieval were checked. No retrieved private
+content entered this public research archive.
 
 Publication belongs to the existing
 [fork PR #10](https://github.com/nicoechaniz/hermes-memory-kit/pull/10).

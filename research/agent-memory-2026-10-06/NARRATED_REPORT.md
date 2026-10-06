@@ -3,8 +3,11 @@
 Research cutoff: 2026-10-06. This report consolidates five research lanes using
 primary papers, official documentation and selected versioned implementations.
 The [raw reports](agent_reports/MANIFEST.md) and [bibliography](BIBLIOGRAPHY.md)
-retain dates, inspection scope and uncertainty. No competing system or model
-benchmark was run, and no live memory or deployment was changed.
+retain dates, inspection scope and uncertainty. Research used public sources;
+no competing deployment, model benchmark or live memory migration was performed.
+A brief publication milestone was curated separately in the authorized being
+pool after a verified snapshot and checked retrieval. That record was not a
+research input or a public artifact.
 
 ## The decision
 

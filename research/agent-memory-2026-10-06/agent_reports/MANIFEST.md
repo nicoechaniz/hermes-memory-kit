@@ -89,5 +89,10 @@ decision gates. Publish the coherent research delivery on the existing fork PR.
   LaTeX/pandoc toolchain were unavailable; no tools were installed for rendering.
 - The existing durable-recall plan now carries the evidence-led work sequence
   and replacement gates. Publication uses the existing fork PR #10.
+- After publication, the coordinator separately curated a concise milestone in
+  the authorized being pool, with a verified snapshot, native persistence and
+  configured-provider retrieval checks. No private retrieved material became
+  research evidence or public content. This is foreground continuity curation,
+  not an automatic capture/dream pilot or live runtime upgrade.
 - Capture/recall benchmarks, competing systems and ten-year aging have not been
   run. This investigation evaluates evidence and proposes experiments.
