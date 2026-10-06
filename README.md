@@ -530,6 +530,7 @@ The README should not pretend otherwise.
 - [Curation Pipeline](./docs/curation-pipeline.md)
 - [Durable Recall Improvement Plan](./docs/durable-recall-plan.md)
 - [General Memory Review](./docs/general-memory-review.md)
+- [Agent Memory and Consolidation Research](./research/agent-memory-2026-10-06/README.md)
 
 ---
 

@@ -16,6 +16,13 @@ against this use, including preservation, metadata, capture, retrieval,
 workspace lifecycle and source authority. Its disposable diagnostics establish
 concrete gaps beyond the selection policy.
 
+The [2026-10-06 agent-memory investigation](../research/agent-memory-2026-10-06/README.md)
+adds five primary-source research lanes on consolidation, retrieval, experience,
+evaluation and evolution options. Its [synthesis](../research/agent-memory-2026-10-06/SYNTHESIS.md)
+and [cross-report](../research/agent-memory-2026-10-06/CROSS_REPORT.md) support the
+work sequence below. Competing systems were not deployed or benchmarked; this
+evidence does not establish a necessary wholesale replacement.
+
 ## First delivery
 
 The first delivery adds:
@@ -171,12 +178,100 @@ backup, acquired-skill loss during upgrade and silent native title collisions.
 Publish each fix with the relevant regression evidence. These observations are
 already concrete; they do not need to wait for a model capture benchmark.
 
-Then run the baseline/proposed-policy pilot before choosing broader structural changes.
-Start with the issue proposal, project synopsis change, ordinary shared moment,
-account attribution correction and missing-source/other-body recall. Use the
-remaining cases to examine the particular failures found.
+The research reinforces three linked products: self-contained selected episodes,
+current person/project accounts and evidence-linked learnings. Correcting or
+consolidating a present account must preserve the experience and its historical
+attribution. The project capsule remembers authored contributions and dated
+status; repositories retain detailed operational state and fresh validation.
 
-The result should tell us whether guidance and record shapes suffice, and where
-revision storage, entity resolution, extraction support, embedding surfaces or
-retrieval changes are necessary. Live being-level rollout follows that evidence
-and each body's authorized access path.
+Use this priority sequence inside the six delivery steps above; it is the same
+work record, not a second program:
+
+| Priority | Coherent change | Acceptance before adoption |
+|---|---|---|
+| P0 | WAL-consistent backup, learned-skill preservation, collision-safe native writes | Regression evidence for each reproduced loss and an isolated verified restore |
+| P1 | Native revision/source/date contract and supported writers | Current versus past answers, unknown/approximate dates, source/body/mode preservation, maintained FTS/embedding eligibility, idempotent events and expected-version concurrent updates |
+| P2 | Repair retrieval cues, deduplication, priors, provenance, links and relevance/outage behavior | Full/Unicode question cues, distinct episodes, incoming/outgoing navigation, relevance before quota/fusion, explicit null versus degraded/unavailable results |
+| P3 | Finite authorized delta capture | Tool-only and brief meaningful encounters, source-loss sufficiency, durable pending work, late corrections, crash/replay and persistence/readiness receipts |
+| P4 | Staged dream/consolidation pilot | Insertion-only baseline versus proposed changes; three passes plus replay; no lost essential meaning, fabricated events, identity merges or stale-current claims |
+| P5 | Diary and procedural navigation | Rebuildable episode/media view, text sufficient without images, illustrations attributed; remembered skills route to actual body capabilities |
+| P6 | Scale and component comparisons | Frozen quality/cost/latency conditions, source isolation, complete available-history transport, verified restore and actual receiving acceptance before replacement |
+
+Do not postpone a confirmed preservation/indexing fix until a model pilot, or
+infer that every proposed metadata field needs a new table before trying compact
+records. Run the baseline/proposed-policy pilot under recorded conditions, then
+isolate each implementation change. Start with the issue proposal, project
+synopsis change, ordinary shared moment, attribution correction and
+missing-source/other-body recall. Reuse the corpus for lifecycle and consolidation
+perturbations rather than building a competing benchmark.
+
+## Capture and consolidation contract
+
+Initial implementation is human-directed finite foreground work. This plan does
+not install hooks, timers, inbox attention, prefetch or another model/provider.
+Future daily, idle, step-count, compression or end triggers use the same contract
+only through each body's authorized harness/runtime integration. A source-loss
+boundary can occur before a daily pass; session end is an extra opportunity.
+
+Each authorized body/source stream supplies event identity and source version.
+Known participants, platform/source IDs, originating body/narrator, mode of
+knowing and action stage survive selection. Occurrence interval and precision,
+report time and recording/revision time are distinct; unknown occurrence stays
+unknown. Similar names do not establish one actor or signed being membership.
+
+Persist sufficient selected evidence or a durable authorized pending reference
+before acknowledging work. Process ordered per-stream deltas with applied,
+deliberately omitted, deferred and failed outcomes; advance the processed cursor
+only after durable outcomes, retaining unresolved gaps for retry. No silent tail
+truncation, minimum message count or fixed fact quota may discard meaningful
+experience. Omitted mechanical noise need not become permanent autobiography.
+
+Logical event identity stays tied to source event/version. Selection-policy and
+model versions describe a processing decision; rerunning a policy can revise its
+account without inventing another encounter. Current-account writes require a
+version check and retained native history. Protected Matrix/Wiki sources keep
+their authority, history and projection restrictions.
+
+Dreaming produces proposed links, syntheses and learnings with supporting
+episodes. Validate and apply through supported writers; preserve original
+meaning and corrections. Inferred patterns, imagined possibilities and generated
+illustrations remain attributed as such. Skill refinements belong in maintained
+packages with relevant functional evidence; memory never grants capability.
+
+Separate durable persistence/lexical indexing from embedding readiness. Retry
+vectors, skill proposals and diary rendering independently and report actual
+coverage, deferred work, errors, versions and formation cost. A diary renders
+canonical episodes and selected media with captions/hashes/source modes; it is
+not the only memory or a source that confirms its own generated narration.
+
+## Replacement gates
+
+Prepare a versioned export/restore contract alongside these upgrades. Inventory
+available text, metadata, logical IDs, native revisions, source references,
+links, corrections/retractions, date precision and selected assets. Explicitly
+record already-missing history; changing systems cannot recover it by inference.
+Keep source authority and receiving scope distinct from storage IDs.
+
+LangMem formation primitives, Graphiti temporal/entity indexing and Hindsight
+recall/consolidation are bounded comparison candidates, not selected replacements.
+Compare on fictional fixtures first, at the same source set, answering conditions
+and total formation/recall budget. Measure relevant behavior, not vendor rankings.
+
+Replace an index or extractor when it solves a measured limitation that remains
+after the simpler repairs. Change canonical storage only when a required behavior
+cannot reasonably be maintained in HMK and the candidate passes lossless
+available-corpus transfer, verified restore, source/correction propagation and
+receiving acceptance. A full replacement additionally preserves each body's
+integration and actual capabilities.
+
+Keep one canonical write authority during read-only shadow comparisons. Replicate
+versioned deltas with receipts; do not generate independent autobiographies by
+dual-writing model inferences. Before cutover, verify the final checkpoint and
+critical queries, preserve rollback, and account for new writes made after it.
+Live rollout follows that evidence and the existing authorization of each body.
+
+Research delivery on 2026-10-06: five completed raw reports, cross-report,
+narrative, synthesis, deduplicated bibliography and research index. Runtime
+fixes, model capture/recall, consolidation, scale and live receiving acceptance
+remain unexecuted. Publish every coherent implementation and correction as it
+lands rather than waiting for the entire sequence.
