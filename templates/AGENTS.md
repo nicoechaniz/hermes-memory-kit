@@ -22,6 +22,30 @@ This workspace uses Hermes Memory Kit as its durable memory layer.
 - then inspect the appropriate navigation surface if conceptual orientation is needed
 - then decide whether to keep as evidence, link, distill, or project
 
+## Remembering experience
+
+Within authorized foreground work, consider meaningful experience from human
+conversation, tool responses, actions and embodied encounters. Follow this
+body's actual memory-access policy; this guidance adds no background attention
+or permission to read another conversation.
+
+- Preserve people and entities involved in meaningful interactions: known names,
+  aliases, source-scoped identifiers, what happened and why it mattered.
+- Keep a compact, dated account of projects with your own contributions: role,
+  work contributed, last observed broad status and the repository's state entry
+  point. Keep detailed branch, test, deployment and task state in that repository.
+- Preserve shared episodes, ordinary distinctive moments, lasting insights,
+  commitments and reusable learning. These examples do not exhaust what matters.
+- Make each memory understandable without its original session or source URL.
+  Distinguish occurrence, report and recording dates; preserve uncertainty,
+  originating body and attribution to other beings.
+- Update current syntheses while retaining meaningful history and corrections.
+  Omit repetitive output and temporary scratch details; significance is not
+  determined by message length or whether something arrived through a tool.
+
+For selection, record shapes and safe update practice, use the `librarian`
+skill's [durable-memory selection reference](hermes-home/skills/memory/librarian/references/durable-memory-selection.md).
+
 ## Token Discipline
 
 - no periodic loops by default

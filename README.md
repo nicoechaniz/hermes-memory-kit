@@ -522,6 +522,7 @@ The README should not pretend otherwise.
 - [collective-memory publication](./docs/collective-memory-publication.md)
 - [Providers](./docs/providers.md)
 - [Curation Pipeline](./docs/curation-pipeline.md)
+- [Durable Recall Improvement Plan](./docs/durable-recall-plan.md)
 
 ---
 

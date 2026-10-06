@@ -1,7 +1,7 @@
 ---
 name: librarian
-description: Query and curate the local HMK library, distinguishing HMK-native authority from LLM Wiki records that HMK indexes for retrieval.
-version: 2.0.0
+description: Query and curate durable experience and documents in the local HMK library, preserving history, attribution and the distinction between native records and authoritative-source retrieval indexes.
+version: 2.1.0
 author: Local System
 license: MIT
 metadata:
@@ -28,6 +28,7 @@ Paths referenced below (e.g. `agent-memory/state/NOW.md`, `wiki/index.md`) are *
 - You need legacy project roadmap or architecture context
 - You need current memory-system status or design rationale
 - You want to register a durable fact or document
+- You are selecting meaningful experience from authorized foreground work
 - You need to expand one stored item without loading everything
 
 ## Rules
@@ -41,6 +42,16 @@ Paths referenced below (e.g. `agent-memory/state/NOW.md`, `wiki/index.md`) are *
 - Treat `$WIKI_PATH` as a separate, authoritative LLM Wiki for its raw and
   curated files. HMK copies of those files are retrieval indexes.
 - For HMK-native records and precise continuity, use `library.db`.
+
+## Selecting experience
+
+Use [durable-memory-selection.md](references/durable-memory-selection.md) when
+selecting or updating memories of people, projects, shared episodes, actions or
+learning. It explains what to retain, what to omit, how to distinguish current
+syntheses from history, and how to preserve body and source attribution. The
+same selection applies to tool responses and embodied encounters as to dialogue.
+Follow the receiving body's memory-access policy; this reference does not
+authorize automatic prefetch, inbox attention or access to private sessions.
 
 ## Core Commands
 
@@ -70,6 +81,10 @@ Use this when ranking looks suspicious and you need to inspect why.
 This returns the full raw content plus linked neighbors.
 
 ### 4. Add a durable text memory
+
+Use a unique episode title. `add-text` replaces chapters under an existing
+same-shelf title; it is not an append-only history operation. Inspect related
+records and preserve meaningful history before updating a current synthesis.
 
 ```bash
 ./scripts/hmk memoryctl.py add-text \
