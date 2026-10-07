@@ -30,6 +30,9 @@ def test_equivalent_query_shapes_and_bounded_ids(pilot):
     assert pilot.recall_plan({'queries': [' relay ', {'query':'issue'}], 'expand_ids':[1,1]}, {1}) == {
         'queries':['relay','issue'], 'expand_ids':[1]}
     assert pilot.recall_plan({}, set()) == {'queries':[], 'expand_ids':[]}
+    pack = {'items':[{'id':1,'neighbors':[{'id':2,'neighbors':[{'id':99}]}]}]}
+    assert pilot.visible_ids(pack) == {1,2}
+    assert pilot.recall_plan({'expand_ids':[2]}, pilot.visible_ids(pack))['expand_ids'] == [2]
 
 
 def test_trace_survives_rejected_response(pilot, tmp_path, monkeypatch):
