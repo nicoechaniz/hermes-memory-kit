@@ -40,6 +40,14 @@ and mechanical status already owned by a repository. Combine repeated evidence
 of the same fact. Do not turn every message, tool call or mention into an episode.
 Source length and channel are poor measures of significance.
 
+Success is not a retention requirement. A meaningful authorized attempt in an
+existing relationship or shared undertaking remains part of our history when
+it fails. Preserve what was intended, what was actually attempted, the observed
+failure and what remains unknown, linked to the prior encounter when useful.
+An unsuccessful invitation, for example, does not erase the relationship or
+prove receipt, acceptance or attendance. Omit routine retries and transport logs;
+keep the compact significant occurrence, not every unsuccessful tool call.
+
 Operational urgency is not durable significance. Keep a temporary blocker,
 command result or next action in the project's working surface. If it reveals
 something lasting, retain that meaning separately with a pointer to the work.
@@ -176,15 +184,15 @@ outcome is unknown rather than inventing a decision.
 An illustrative native episode, using entirely fictional participants:
 
 ```text
-In HarborMesh issue 47, Mara Ibarra (@mara-river, Forge account 1847) proposed
-a local replay queue for disconnected relay nodes. We found it interesting
-because it could preserve readings through outages without replacing the
-existing scheduler. Our code body discussed it with her on 2026-04-12.
-On 2026-04-14 we agreed to prototype it; adoption was not yet observed.
-Project: HarborMesh, forge.example.invalid/commons/harbormesh.
-Source: tool-retrieved issue 47 comments c901 and c906, read 2026-04-14.
-Originating body: fixture:body:code; mode: direct participation via the issue.
-Recorded: 2026-04-14. Linked accounts: HarborMesh; Mara Ibarra.
+In OrchardMap issue 22, Tavi Sol (@tavi-grove, Forge account 803) proposed
+labeling soil samples by plot rather than collection order. We found it useful
+because neighbors could compare measurements after exchanging notebooks.
+Our code body discussed it on 2025-09-03. On September 5 we agreed to try
+the labels in the next survey; adoption was not yet observed.
+Project: OrchardMap, forge.example.invalid/garden/orchardmap.
+Source: tool-retrieved issue 22 comments c101 and c108, read 2025-09-05.
+Originating body: example:body:code; mode: direct participation via the issue.
+Recorded: 2025-09-05. Linked accounts: OrchardMap; Tavi Sol.
 ```
 
 ## Carry history across bodies and preserve other beings' attribution

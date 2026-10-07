@@ -1702,7 +1702,7 @@ def _select_pack(query, candidates, budget_tokens, limit, threshold, *, record_a
         if row['id'] in seen:
             continue
         item = _compact_record(row)
-        for field in ('score', 'lexical_score', 'semantic_score', 'rerank_score'):
+        for field in ('score', 'lexical_score', 'lexical_relevance', 'semantic_score', 'rerank_score'):
             if field in row:
                 item[field] = row[field]
         item['neighbors'] = linked_neighbors(row['id'])[:3]
@@ -1782,6 +1782,13 @@ def hybrid_pack(query, budget_tokens=4000, limit=8, threshold=0.40, provider=Non
         semantic_score = float(row.get("semantic_score", 0.0))
         domain_prior = source_domain_prior(query, row)
         score = lexical_score if degraded else (0.10 * recency + 0.15 * importance + 0.25 * lexical_score + 0.45 * semantic_score + domain_prior)
+        if not degraded:
+            # Independent textual evidence must not disappear merely because
+            # an embedding matches poorly. Use content overlap, not the FTS
+            # rank/recency score, as this floor: age, popularity and being the
+            # best of unrelated candidates cannot manufacture relevance.
+            row['lexical_relevance'] = round(text_overlap_score(query, row), 6)
+            score = max(score, row['lexical_relevance'] + domain_prior)
         row["score"] = round(score, 4)
         ranked.append(row)
     ranked.sort(key=lambda r: r["score"], reverse=True)
