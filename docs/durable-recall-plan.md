@@ -168,6 +168,15 @@ also exposes a scoped-unknown facet-validator false rejection needing correction
 Further provider expansion and Gemini/Qwen are deferred. Keep embeddings unchanged and
 preserve unfinished reviews; provisional model selection does not lower the
 exit criteria or enable live automatic consolidation.
+After the human resumed work, [PR #43](https://github.com/nicoechaniz/hermes-memory-kit/pull/43)
+corrected the scoped-unknown validator mismatch and froze changed validation in
+the checkpoint fingerprint. The previous nine-candidate Flash run remains
+resumable with its preserved code and identical pending review. The corrected
+receiver now tests numbered original proof passages, keeping semantic judgment,
+all assertion/requirement checks and raw responses separate from exact source
+quotation materialization. A non-thinking reviewer smoke failed; low-effort Flash
+narration/review remains the selected complete-trial candidate. Complete outside
+grading and all three consolidation passes remain pending.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

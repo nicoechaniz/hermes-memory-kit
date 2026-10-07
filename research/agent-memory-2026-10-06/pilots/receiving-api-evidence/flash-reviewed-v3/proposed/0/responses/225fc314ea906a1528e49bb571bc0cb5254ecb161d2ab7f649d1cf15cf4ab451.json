@@ -1,0 +1,24 @@
+{
+  "request_sha256": "225fc314ea906a1528e49bb571bc0cb5254ecb161d2ab7f649d1cf15cf4ab451",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "proposed/0/dispatches/225fc314ea906a1528e49bb571bc0cb5254ecb161d2ab7f649d1cf15cf4ab451.json",
+  "usage": {
+    "prompt_tokens": 3599,
+    "completion_tokens": 5796,
+    "total_tokens": 9395,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4975
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 3599
+  },
+  "seconds": 24.425713762640953,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed a local replay queue on disconnected relay nodes in HarborMesh issue 47 comment c901.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Comment c901 was dated 2026-04-12 on HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The issue-comments tool response was received 2026-04-14 through fixture:body:code.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara's proposal kept readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body replied in comment c903 that the proposal fits the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Comment c906 dated 2026-04-14 recorded that Mara and our code body agreed to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No merge or deployment was reported as of that 2026-04-14 comment.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A foreground_work memory received 2026-04-16 through fixture:body:code said we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That 2026-04-16 memory gave repository https://forge.example.invalid/commons/harbormesh and docs/STATUS.md as the declared current-state entry point.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"As of 2026-04-16 the prototype was active and waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received 2026-05-03 through fixture:body:code described the April 30 HarborMesh trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The report says the April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The report says Mara's replay proposal became the prototype tested together, without listing all trial participants.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift is understood, and no production deployment was reported yet as of 2026-05-03.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record HarborMesh's current status after 2026-05-03.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A July 1 human report thought HarborMesh repair checklist comment c1200 signed River might be Mara, but was not sure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A July 4 correction says c1200's author is display name River, login river-tools, account ID 2901, not Mara; Mara's known Forge account remains 1847, login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The receiving body fixture:body:voice has no source network access, repository runtime access, physical sensors, physical actuators, or private session access, so it cannot check HarborMesh now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

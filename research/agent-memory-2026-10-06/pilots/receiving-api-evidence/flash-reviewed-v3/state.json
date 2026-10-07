@@ -1,0 +1,33 @@
+{
+  "questions": 44,
+  "completed_candidates": 4,
+  "new_dispatch_attempts": 10,
+  "invocation_max_calls": 48,
+  "results": [
+    {
+      "arm": "baseline",
+      "answer_index": 0,
+      "state": "completed",
+      "rejected": true
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 12,
+      "state": "completed",
+      "rejected": false
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 0,
+      "state": "completed",
+      "rejected": true
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 20,
+      "state": "completed",
+      "rejected": false
+    }
+  ],
+  "qualification": false
+}

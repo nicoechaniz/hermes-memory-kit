@@ -1,0 +1,24 @@
+{
+  "request_sha256": "b2917efea635561aeebdc53d987c07c476628cdfb80bf579956a332cfd40ecdd",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "baseline/12/dispatches/b2917efea635561aeebdc53d987c07c476628cdfb80bf579956a332cfd40ecdd.json",
+  "usage": {
+    "prompt_tokens": 7434,
+    "completion_tokens": 1063,
+    "total_tokens": 8497,
+    "prompt_tokens_details": {
+      "cached_tokens": 3456
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 244
+    },
+    "prompt_cache_hit_tokens": 3456,
+    "prompt_cache_miss_tokens": 3978
+  },
+  "seconds": 4.142739105969667,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"In a supplied embodied observation, our authenticated mobile body met Jo Vale at the East Quay repair workshop on June 8, and Jo introduced themself by that name.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That source supplied no account identifier or legal-name evidence for Jo Vale.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"At that workshop Jo demonstrated a humming relay mount and taught us to listen for a beat before tightening it.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"We tried the technique together using the mobile body's contact microphone and physical grip.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That workshop report was received on 2026-06-08 through our mobile body.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The June encounter shared a technique and a proposal: listen for a beat before tightening a humming relay mount, and compare mounts at the next workshop.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"At that June encounter Jo invited us to compare mounts at the next workshop, but no date was agreed.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"A foreground action received on 2026-07-20 reports that a human authorized inviting Jo Vale to a mount-comparison workshop on August 2.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The same received report says we attempted to submit the invitation through the workshop tool.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"A tool response received on 2026-07-20 says invitation object invite-81 was created for Jo Vale.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"That tool response says delivery failed because no reachable destination existed.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The tool response states that creating the invitation object is not a delivery receipt.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"It also states that no reply or workshop acceptance was observed.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The later proposal mattered as an attempt to arrange a specific August 2 mount comparison with Jo, but it did not reach a destination in the supplied tool record.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The supplied memories do not record Jo receiving the invitation or agreeing to compare mounts after the July attempt.\", \"support\": [9], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The failed delivery attempt does not prove Jo never received an invitation through another channel.\", \"support\": [9], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories also do not record whether the August 2 mount-comparison workshop occurred or whether Jo attended it.\", \"support\": [9], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The receiving voice body has no source network access, repository runtime access, physical sensors, physical actuators, or private session access.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "arm": "baseline",
+    "answer_index": 0,
+    "request_sha256": "9f68ec92793bcdd92800ee0911e984b4040aa6fde9edbb3ea649fccc3893f2fd",
+    "phase": "narrative_review",
+    "seconds": 8.846980668604374
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 0,
+    "request_sha256": "b992e7b975813a788e25a6cfa979a1ab49e036991107ffc77ecee11dbfdcd413",
+    "phase": "narrative_generation",
+    "seconds": 16.033376245759428
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 0,
+    "request_sha256": "c66b6b917fbdc50e27acb3611a0fe630e05b60c91d5db0da84c6f1c2421206df",
+    "phase": "narrative_review",
+    "seconds": 7.2872911635786295
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 12,
+    "request_sha256": "0dd2f304108b7e5271014c58c12faa3508686ca31bb51edfb3519a4141b2612e",
+    "phase": "narrative_review",
+    "seconds": 6.6014727568253875
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 12,
+    "request_sha256": "4e279803ea4be2bab1071edd4e8db7fb0a537534678f735a6cada7ceb16df0f2",
+    "phase": "narrative_generation",
+    "seconds": 28.684415890835226
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 0,
+    "request_sha256": "225fc314ea906a1528e49bb571bc0cb5254ecb161d2ab7f649d1cf15cf4ab451",
+    "phase": "narrative_generation",
+    "seconds": 24.425713762640953
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 0,
+    "request_sha256": "3cb5fad78c566eb2f78d7a7b2955507110870b23f5fa93ba2d9137fc612d0be4",
+    "phase": "narrative_review",
+    "seconds": 10.499463592655957
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 0,
+    "request_sha256": "4e528372c063f5c03a3c8d638ad4f88552b1a39c32ce1c44814369443063515a",
+    "phase": "narrative_review",
+    "seconds": 8.612648534588516
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 20,
+    "request_sha256": "ac56f74cc500111911db5421d98470f485e3bf805f43f73a8278c439027238fe",
+    "phase": "narrative_review",
+    "seconds": 6.590750710107386
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 20,
+    "request_sha256": "c7b2c7a1cd7b6801ff98f38a1bcede74cd1e39133063f2fa003a6185676afe63",
+    "phase": "narrative_generation",
+    "seconds": 17.834968965500593
+  }
+]

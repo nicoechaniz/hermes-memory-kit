@@ -69,3 +69,17 @@ def test_failed_call_has_unknown_usage_and_cannot_be_replayed_implicitly(api,tmp
     assert not (tmp_path/'responses'/path.name).exists()
     with pytest.raises(ValueError,match='no implicit retry'):
         api.dispatch(path,tmp_path,'fixture-secret','deepseek',timeout)
+
+
+def test_explicit_deepseek_nonthinking_profile_omits_unsupported_effort(api,tmp_path):
+    _,value=request(api,tmp_path,phase='narrative_review')
+    old=api.parameters(value,'deepseek')
+    value['reasoning_effort']='none'
+    selected=api.parameters(value,'deepseek')
+    assert selected['thinking']=={'type':'disabled'}
+    assert 'reasoning_effort' not in selected
+    assert selected['messages']==old['messages'] and selected['max_tokens']==32768
+    value['model']='openai/gpt-6.1-sol'
+    with pytest.raises(ValueError):api.parameters(value,'nous')
+    value.update(model='deepseek-flash',reasoning_effort='low')
+    assert api.parameters(value,'deepseek')==old
