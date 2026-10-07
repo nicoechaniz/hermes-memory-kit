@@ -4,6 +4,9 @@ Reviewed on 2026-10-06 against runtime source at `3d841eb`. This review covers
 the kit's storage, write paths, ingestion, curation, retrieval, projections,
 publication, workspace lifecycle and evaluation. It extends the
 [durable-recall plan](durable-recall-plan.md); it is not a second task tracker.
+The findings below preserve that baseline observation. Repair status and
+regression evidence are maintained in the plan under
+[issue #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13).
 
 HMK already has a useful general-memory foundation. Episodic/semantic/procedural
 retrieval and Minecraft social, place and skill shelves show that its implemented
@@ -89,6 +92,14 @@ diagnostics intentionally report current behavior; they are not yet regression
 tests asserting that these issues have been fixed.
 
 ## Additional source-confirmed gaps
+
+The P0–P2 [repair delivery](https://github.com/nicoechaniz/hermes-memory-kit/pull/14)
+addresses the reproduced findings plus source-bearing compact retrieval and
+authored summaries. The [maintained plan](durable-recall-plan.md#next-decision)
+records evidence and limits. The table above retains the reviewed baseline;
+native history now has explicit historical lookup, separate from current search.
+The diagnostic runner reports both. Remaining capture/answer, scale, chronology
+and receiving-adoption questions are not resolved by mechanical regression tests.
 
 **Native provenance and identity.** The native schema stores titles, text, tags,
 importance and storage timestamps, with book-level source path/kind. It does not

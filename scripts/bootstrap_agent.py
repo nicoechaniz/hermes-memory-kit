@@ -415,13 +415,15 @@ def upgrade(agent_dir: Path) -> None:
                     print(f"  rotated {plugin_dir.name} → plugin-backups/{backup.name}")
                 copy_tree_overwrite(plugin_dir, target)
 
-    # Refresh skills (same)
+    # Merge shipped skills while preserving acquired skills and edited pre-images.
     skills_src = TEMPLATES / "skills"
     hh_skills = agent_dir / "hermes-home" / "skills"
     if skills_src.exists() and hh_skills.exists():
-        for skill_dir in skills_src.iterdir():
-            if skill_dir.is_dir():
-                copy_tree_overwrite(skill_dir, hh_skills / skill_dir.name)
+        ts = _dt.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+        skill_backup = agent_dir / "hermes-home" / "skill-backups" / ts
+        counts = copy_tree_merge(skills_src, hh_skills, backup_dir=skill_backup)
+        print(f"  skills/: copied={counts['copied']} overwritten={counts['overwritten']} "
+              f"preserved={counts['preserved']} (pre-images in skill-backups/{ts}/)")
 
     # Refresh .env.template reference (for diffing); keep user's .env intact.
     # The workspace .env.example is a symlink ideally; this is just a sanity touch.

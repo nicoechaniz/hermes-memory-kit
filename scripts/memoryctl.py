@@ -10,10 +10,15 @@ import re
 import sqlite3
 import sys
 import time
+import unicodedata
+import uuid
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+import native_records
 
 # v3.0: NO hardcoded fallbacks. Cascade resolves from env; if none is set,
 # BASE_DIR / DB_PATH / HERMES_HOME remain None and _require_config() hard-fails
@@ -107,6 +112,7 @@ class EmbeddingBackendError(RuntimeError):
 LOCAL_MODEL_CACHE = {}
 MODEL2VEC_CACHE = {}
 FLASHRANK_CACHE = {}
+_UNSET = object()
 PROJECT_QUERY_TERMS = {
     "hermes",
     "openclaw",
@@ -425,6 +431,21 @@ def migrate_daimon_projection(con, fault_hook=None):
 def init_db():
     _require_config("initializing the library DB")
     con = connect()
+    columns = {r[1] for r in con.execute('PRAGMA table_info(chapters)')}
+    native_columns = {'record_uid', 'revision', 'source_metadata_json', 'engram_type',
+                      'event_ts', 'actor', 'location_json', 'embed_disabled', 'embed_disable_reason'}
+    embedding_columns = {r[1] for r in con.execute('PRAGMA table_info(chapter_embeddings)')}
+    tables = {r[0] for r in con.execute("SELECT name FROM sqlite_master")}
+    needs_migration = (not native_columns.issubset(columns)
+                       or not {'provider','model','embedding_bin'}.issubset(embedding_columns)
+                       or not {'chapter_revisions', 'daimon_projection_schema'}.issubset(tables))
+    if columns and needs_migration and con.execute('SELECT 1 FROM chapters LIMIT 1').fetchone():
+        from sqlite_snapshot import verified_snapshot
+        try:
+            verified_snapshot(DB_PATH, f'{DB_PATH}.bak.preupgrade.{time.time_ns()}')
+        except BaseException:
+            con.close()
+            raise
     con.executescript(
         """
         CREATE TABLE IF NOT EXISTS shelves (
@@ -522,6 +543,7 @@ def init_db():
     migrate_add_embed_disabled(con)
     con.commit()
     try:
+        native_records.ensure_schema(con, DB_PATH, snapshot=False)
         migrate_daimon_projection(con)
     except Exception:
         con.close()
@@ -536,8 +558,9 @@ def init_db():
 
 
 def slugify(text):
-    slug = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
-    return slug or "item"
+    normalized = unicodedata.normalize("NFKC", text).casefold()
+    slug = re.sub(r"[\W_]+", "-", normalized).strip("-")
+    return slug or "item-" + hashlib.sha256(text.encode()).hexdigest()[:16]
 
 
 def token_estimate(text):
@@ -572,6 +595,9 @@ def _attach_daimon_origin(row):
     }
     if row.get("daimon_projection_id") is None:
         row["origin"] = {"kind": row.get("source_kind") or "hmk-native"}
+        source_metadata = json.loads(row.get("source_metadata_json") or "{}")
+        if source_metadata:
+            row["origin"]["source"] = source_metadata
     else:
         values = {output: row.get(source) for output, source in fields.items()}
         values["active"] = bool(values["active"])
@@ -587,6 +613,8 @@ def simple_spr(text, max_lines=8):
     text = normalize_text(text)
     if not text:
         return "- empty"
+    if len(text) <= 1500:
+        return text
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     bullets = []
     for line in lines:
@@ -600,7 +628,7 @@ def simple_spr(text, max_lines=8):
             break
     if not bullets:
         bullets = [f"- {text[:140]}"]
-    return "\n".join(bullets)
+    return "\n".join(bullets) + "\n[Incomplete preview; expand full record or supply an authored summary.]"
 
 
 def shelf_id(con, shelf_name):
@@ -615,10 +643,26 @@ def upsert_book(con, shelf_name, title, source_path=None, source_kind="file"):
         raise SystemExit("Daimon projections require the versioned projection API")
     sid = shelf_id(con, shelf_name)
     slug = slugify(title)
+    # Keep existing IDs/slugs when an older ASCII slug represents this title.
     row = con.execute(
-        "SELECT id, source_kind FROM books WHERE shelf_id=? AND slug=?",
-        (sid, slug),
+        "SELECT id, title, source_kind FROM books WHERE shelf_id=? AND title=?",
+        (sid, title),
     ).fetchone()
+    if not row:
+        row = con.execute(
+            "SELECT id, title, source_kind FROM books WHERE shelf_id=? AND slug=?",
+            (sid, slug),
+        ).fetchone()
+        if row and row["title"] != title:
+            # Punctuation-equivalent titles can describe distinct records.
+            suffix = hashlib.sha256(title.encode()).hexdigest()
+            slug += "-" + suffix
+            row = con.execute(
+                "SELECT id, title, source_kind FROM books WHERE shelf_id=? AND slug=?",
+                (sid, slug),
+            ).fetchone()
+            if row and row["title"] != title:
+                raise SystemExit("book slug collision; existing record preserved")
     if row:
         if "daimon-projection" in {row["source_kind"], source_kind}:
             raise SystemExit(
@@ -681,54 +725,90 @@ def delete_chapter_fts(con, row):
     )
 
 
-def add_text(shelf_name, title, raw, tags=None, importance=0.5, source_path=None, source_kind="text", replace=True):
+def add_text(shelf_name, title, raw, tags=None, importance=0.5, source_path=None, source_kind=None, replace=True,
+             engram_type=None, event_ts=None, actor=None, location=None, metadata=None, expected_revision=None, summary=None):
     if source_kind == "daimon-projection" or shelf_name == "daimon-projection":
         raise SystemExit("Daimon projections require the versioned projection API")
     init_db()
     raw = normalize_text(raw)
     tags = tags or []
-    spr = simple_spr(raw)
+    spr = normalize_text(summary) if summary is not None else simple_spr(raw)
+    if not spr:
+        raise ValueError("summary must not be empty")
+    kind = engram_type or native_records.SHELF_TYPES.get(shelf_name, "semantic")
+    if kind not in {"episodic", "semantic", "procedural"}:
+        raise ValueError("invalid memory type")
+    source_meta = native_records.metadata(metadata)
+    if event_ts is not None and (not isinstance(event_ts, int) or isinstance(event_ts, bool)):
+        raise ValueError("event_ts must be an integer timestamp or unknown")
     con = connect()
-    book_id = upsert_book(con, shelf_name, title, source_path=source_path, source_kind=source_kind)
-    if replace:
-        clear_book_chapters(con, book_id)
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        book_id = upsert_book(con, shelf_name, title, source_path=source_path, source_kind=source_kind or "text")
+        existing = con.execute("SELECT * FROM chapters WHERE book_id=? ORDER BY ordinal,id", (book_id,)).fetchall() if replace else []
+        if len(existing) > 1:
+            con.rollback()
+            con.close()
+            raise SystemExit("multi-chapter replacement requires explicit chapter updates; existing history preserved")
+        old = dict(existing[0]) if existing else None
+        if expected_revision is not None and (old is None or old['revision'] != expected_revision):
+            con.rollback()
+            con.close()
+            raise SystemExit("native revision conflict; existing record preserved")
+        # Replacing an account preserves its ID, links and historical pre-image.
+        if old:
+            con.rollback()
+            con.close()
+            update_chapter(old['id'], content=raw, tags=tags, importance=importance,
+                           engram_type=engram_type, event_ts=event_ts if event_ts is not None else _UNSET,
+                           actor=actor if actor is not None else _UNSET,
+                           location=location if location is not None else _UNSET,
+                           metadata=metadata, expected_revision=old['revision'],
+                           source_path=source_path if source_path is not None else _UNSET, source_kind=source_kind, summary=summary)
+            return old['id']
 
-    # v3.9.0 — determine embed_disabled from content scan + source kind
-    embed_disabled = 0
-    embed_disable_reason = None
-    if source_kind in ("code", "config"):
-        embed_disabled = 1
-        embed_disable_reason = f"source_kind={source_kind}"
-    if embed_disabled == 0 and scan_content_for_secrets:
-        secret_reason = scan_content_for_secrets(raw)
-        if secret_reason:
+        # v3.9.0 — determine embed_disabled from content scan + source kind
+        embed_disabled = 0
+        embed_disable_reason = None
+        if source_kind in ("code", "config"):
             embed_disabled = 1
-            embed_disable_reason = secret_reason
+            embed_disable_reason = f"source_kind={source_kind}"
+        if embed_disabled == 0 and scan_content_for_secrets:
+            secret_reason = scan_content_for_secrets(f'{title}\n{spr}\n{raw}')
+            if secret_reason:
+                embed_disabled = 1
+                embed_disable_reason = secret_reason
 
-    cur = con.execute(
-        """
-        INSERT INTO chapters(book_id, ordinal, title, spr, raw, tokens, importance, created_at, updated_at, tags_json, embed_disabled, embed_disable_reason)
-        VALUES(?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """,
-        (
-            book_id,
-            title,
-            spr,
-            raw,
-            token_estimate(raw),
-            float(importance),
-            now_ts(),
-            now_ts(),
-            json.dumps(tags),
-            embed_disabled,
-            embed_disable_reason,
-        ),
-    )
-    chapter_id = cur.lastrowid
-    insert_chapter_fts(con, chapter_id, title, spr, raw, json.dumps(tags))
-    con.commit()
-    con.close()
-    return chapter_id
+        cur = con.execute(
+            """
+            INSERT INTO chapters(book_id, ordinal, title, spr, raw, tokens, importance, created_at, updated_at, tags_json, embed_disabled, embed_disable_reason,record_uid,engram_type,event_ts,actor,location_json,source_metadata_json)
+            VALUES(?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?)
+            """,
+            (
+                book_id,
+                title,
+                spr,
+                raw,
+                token_estimate(raw),
+                float(importance),
+                now_ts(),
+                now_ts(),
+                json.dumps(tags),
+                embed_disabled,
+                embed_disable_reason,
+                str(uuid.uuid4()), kind, event_ts, actor,
+                json.dumps(location) if location is not None else None,
+                json.dumps(source_meta, ensure_ascii=False),
+            ),
+        )
+        chapter_id = cur.lastrowid
+        insert_chapter_fts(con, chapter_id, title, spr, raw, json.dumps(tags))
+        con.commit()
+        con.close()
+        return chapter_id
+
+    finally:
+        con.close()
 
 
 def add_file(path, shelf_name, title=None, tags=None, importance=0.5, replace=True):
@@ -962,20 +1042,29 @@ def embed_texts_model2vec(texts, input_type="passage", model=None):
 def embed_texts(provider, texts, input_type="passage", model=None, output_dimensionality=None):
     provider = normalize_embed_provider(provider)
     model = normalize_embed_model(provider, model)
-    if provider == "nvidia":
-        return embed_texts_nvidia(texts, input_type=input_type, model=model)
-    if provider == "google":
-        return embed_texts_google(
-            texts,
-            input_type=input_type,
-            model=model,
-            output_dimensionality=output_dimensionality,
-        )
-    if provider == "local":
-        return embed_texts_local(texts, input_type=input_type, model=model)
-    if provider == "model2vec":
-        return embed_texts_model2vec(texts, input_type=input_type, model=model)
-    raise EmbeddingBackendError(f"unsupported embedding provider: {provider}")
+    try:
+        if provider == "nvidia":
+            return embed_texts_nvidia(texts, input_type=input_type, model=model)
+        if provider == "google":
+            return embed_texts_google(
+                texts,
+                input_type=input_type,
+                model=model,
+                output_dimensionality=output_dimensionality,
+            )
+        if provider == "local":
+            return embed_texts_local(texts, input_type=input_type, model=model)
+        if provider == "model2vec":
+            return embed_texts_model2vec(texts, input_type=input_type, model=model)
+        raise EmbeddingBackendError(f"unsupported embedding provider: {provider}")
+
+    except EmbeddingBackendError:
+        raise
+    except Exception as exc:
+        # Provider/network/model failures are a typed backend outage. Preserve
+        # the cause privately; public retrieval diagnostics never echo endpoints
+        # or credentials that an HTTP error might contain.
+        raise EmbeddingBackendError('embedding backend operation failed') from exc
 
 
 def quantize_binary(vector):
@@ -1117,20 +1206,29 @@ def upsert_embedding(con, chapter_id, provider, model, source_text, vector):
 
 
 def tokenize_query(query):
-    tokens = [t for t in re.findall(r"[a-zA-Z0-9_/-]+", query.lower()) if len(t) > 1]
-    return tokens[:8]
+    normalized = unicodedata.normalize("NFKC", query).casefold()
+    return re.findall(r"[^\W_]+", normalized, flags=re.UNICODE)
+
+
+QUERY_STOP_WORDS = set('a an the of for to in on at by and or is was were be do does did you we i it that this who what when where how remember recall once something el la los las un una de del para por en al y o es era fue se te me nos que quien quién como cómo cuando cuándo dónde recuerdas recordar acordás algo esa ese'.split())
+
+
+def query_cues(query):
+    tokens = tokenize_query(query)
+    cues = [token for token in tokens if token not in QUERY_STOP_WORDS]
+    return cues or tokens
 
 
 def fts_query_string(query):
-    toks = tokenize_query(query)
+    toks = query_cues(query)
     if not toks:
-        return f"\"{query.strip()}\""
+        return '""'
     return " OR ".join(f"\"{tok}\"" for tok in toks)
 
 
 def text_overlap_score(query, row):
     row = dict(row)
-    query_tokens = set(tokenize_query(query))
+    query_tokens = set(query_cues(query))
     if not query_tokens:
         return 0.0
     title_text = " ".join(
@@ -1139,17 +1237,23 @@ def text_overlap_score(query, row):
             row.get("book_title") or "",
             row.get("tags_json") or "",
         ]
-    ).lower()
+    )
     haystack = " ".join(
         [
             title_text,
             row.get("shelf") or "",
             row.get("spr") or "",
-            (row.get("raw") or "")[:600],
+            row.get("raw") or "",
         ]
-    ).lower()
-    hit_count = sum(1 for tok in query_tokens if tok in haystack)
-    title_hits = sum(1 for tok in query_tokens if tok in title_text)
+    )
+    # Match tokens as FTS does, including diacritics, rather than substrings
+    # (e.g. "Mara" must not count as a hit on "Marathon").
+    fold = lambda text: "".join(c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c))
+    query_tokens = {fold(t) for t in query_tokens}
+    haystack_tokens = {fold(t) for t in tokenize_query(haystack)}
+    title_tokens = {fold(t) for t in tokenize_query(title_text)}
+    hit_count = len(query_tokens & haystack_tokens)
+    title_hits = len(query_tokens & title_tokens)
     base = hit_count / max(1, len(query_tokens))
     title_boost = min(0.35, title_hits * 0.12)
     return min(1.0, base + title_boost)
@@ -1160,14 +1264,14 @@ def is_project_query(query):
 
 
 def source_domain_prior(query, row):
-    if is_project_query(query):
+    if os.environ.get("HMK_RETRIEVAL_PROFILE", "general") != "research" or is_project_query(query):
         return 0.0
 
     row_data = dict(row)
     path = (row_data.get("source_path") or "").strip()
     shelf = (row_data.get("shelf") or "").strip()
 
-    if path.startswith(BIBLIOTECA_PREFIX):
+    if BIBLIOTECA_PREFIX and path.startswith(BIBLIOTECA_PREFIX):
         return 0.14
     if path in META_EXACT_PATHS:
         return -0.16
@@ -1205,6 +1309,8 @@ def overlap_ratio(a, b):
 
 def search(query, limit=12, shelves=None, exclude_shelves=None,
            tags=None, exclude_tags=None, engram_types=None):
+    if not tokenize_query(query) or limit <= 0:
+        return []
     init_db()
     con = connect()
     q = fts_query_string(query)
@@ -1229,6 +1335,8 @@ def search(query, limit=12, shelves=None, exclude_shelves=None,
           c.last_access,
           c.access_count,
           c.tags_json,
+          c.record_uid, c.revision, c.engram_type, c.event_ts, c.actor,
+          c.location_json, c.source_metadata_json,
           b.title AS book_title,
           b.source_path,
           b.source_kind,
@@ -1258,7 +1366,8 @@ def search(query, limit=12, shelves=None, exclude_shelves=None,
         JOIN shelves s ON s.id = b.shelf_id
         LEFT JOIN daimon_projections p ON p.chapter_id = c.id
         LEFT JOIN daimon_projection_namespaces n ON n.namespace_id = p.namespace_id
-        WHERE chapters_fts MATCH ?{extra_sql}
+        WHERE chapters_fts MATCH ? AND (p.active IS NULL OR p.active=1){extra_sql}
+        ORDER BY bm25_score
         LIMIT ?
         """,
         (q, *extra_params, limit * 3),
@@ -1275,23 +1384,24 @@ def search(query, limit=12, shelves=None, exclude_shelves=None,
 
 
 def linked_neighbors(chapter_id):
+    """Bounded traversal in either direction, retaining relation attribution."""
     init_db()
     con = connect()
-    rows = con.execute(
-        """
-        SELECT l.link_type, l.weight, c.id, c.title, c.spr, b.title AS book_title, s.name AS shelf
-        FROM chapter_links l
-        JOIN chapters c ON c.id = l.dst_chapter_id
-        JOIN books b ON b.id = c.book_id
-        JOIN shelves s ON s.id = b.shelf_id
-        WHERE l.src_chapter_id=?
-        ORDER BY l.weight DESC, c.updated_at DESC
-        LIMIT 12
-        """,
-        (chapter_id,),
-    ).fetchall()
-    con.close()
-    return [dict(row) for row in rows]
+    try:
+        edges = con.execute("""SELECT CASE WHEN src_chapter_id=? THEN dst_chapter_id ELSE src_chapter_id END AS neighbor_id,
+            CASE WHEN src_chapter_id=? THEN 'outgoing' ELSE 'incoming' END AS direction,
+            link_type, weight, note FROM chapter_links
+            WHERE src_chapter_id=? OR dst_chapter_id=? ORDER BY weight DESC, id LIMIT 12""",
+            (chapter_id, chapter_id, chapter_id, chapter_id)).fetchall()
+    finally:
+        con.close()
+    neighbors = []
+    for edge in edges:
+        # expand would recurse through links; fetch the attributed record only.
+        row = _read_chapter(edge['neighbor_id'])
+        if row is not None:
+            neighbors.append({**_compact_record(row), **{key: edge[key] for key in ('direction','link_type','weight','note')}})
+    return neighbors
 
 
 # --- maintenance lock (v3.9.0, flock) ---
@@ -1416,7 +1526,8 @@ def backfill_embeddings(provider=None, model=None, batch_size=8, limit=0, only_m
 
 
 def semantic_search(query, limit=8, provider=None, model=None, use_binary=None,
-                    shelves=None, exclude_shelves=None, tags=None, exclude_tags=None, engram_types=None):
+                    shelves=None, exclude_shelves=None, tags=None, exclude_tags=None, engram_types=None,
+                    _query_cache=None):
     """Semantic search via embeddings.
 
     If use_binary is True (default when binary embeddings exist), does a two-pass:
@@ -1428,18 +1539,24 @@ def semantic_search(query, limit=8, provider=None, model=None, use_binary=None,
     If embedding_bin is missing for the matched provider/model rows (legacy data
     from before the migration), falls back to full-scan float32 cosine.
     """
+    if not tokenize_query(query) or limit <= 0:
+        return []
     cfg = embeddings_runtime_config(provider=provider, model=model)
     provider = cfg["provider"]
     model = cfg["model"]
     output_dimensionality = cfg["output_dimensionality"]
     init_db()
-    query_vec = embed_texts(
-        provider,
-        [query],
-        input_type="query",
-        model=model,
-        output_dimensionality=output_dimensionality,
-    )[0]
+    cache = {} if _query_cache is None else _query_cache
+    cache_key = (provider, model, output_dimensionality, query)
+    if cache_key not in cache:
+        try:
+            cache[cache_key] = embed_texts(provider, [query], input_type='query', model=model,
+                                           output_dimensionality=output_dimensionality)[0]
+        except EmbeddingBackendError as exc:
+            cache[cache_key] = exc
+    if isinstance(cache[cache_key], EmbeddingBackendError):
+        raise cache[cache_key]
+    query_vec = cache[cache_key]
     _sem_extra_clauses, _sem_extra_params = _filter_clauses_and_params(
         shelves=shelves, exclude_shelves=exclude_shelves,
         tags=tags, exclude_tags=exclude_tags,
@@ -1462,9 +1579,30 @@ def semantic_search(query, limit=8, provider=None, model=None, use_binary=None,
           c.last_access,
           c.access_count,
           c.tags_json,
+          c.record_uid, c.revision, c.engram_type, c.event_ts, c.actor,
+          c.location_json, c.source_metadata_json,
+          b.source_kind,
           b.title AS book_title,
           b.source_path,
           s.name AS shelf,
+          p.projection_id AS daimon_projection_id,
+          p.memory_id AS daimon_memory_id,
+          p.author_me_id AS daimon_author_me_id,
+          p.category AS daimon_category,
+          p.head_event_id AS daimon_head_event_id,
+          p.head_event_hash AS daimon_head_event_hash,
+          p.head_sequence AS daimon_head_sequence,
+          p.statement_hash AS daimon_statement_hash,
+          p.statement_media_type AS daimon_statement_media_type,
+          p.classification AS daimon_classification,
+          p.source_checkpoint_sequence AS daimon_source_checkpoint_sequence,
+          p.source_checkpoint_hash AS daimon_source_checkpoint_hash,
+          p.active AS daimon_active,
+          n.namespace_id AS daimon_namespace_id,
+          n.source_instance AS daimon_source_instance,
+          n.subject_me_id AS daimon_subject_me_id,
+          n.projector_id AS daimon_projector_id,
+          n.projector_version AS daimon_projector_version,
           e.embedding_json,
           e.embedding_bin,
           e.dims
@@ -1472,7 +1610,9 @@ def semantic_search(query, limit=8, provider=None, model=None, use_binary=None,
         JOIN chapters c ON c.id = e.chapter_id
         JOIN books b ON b.id = c.book_id
         JOIN shelves s ON s.id = b.shelf_id
-        WHERE e.provider = ? AND e.model = ?{_sem_extra_sql}
+        LEFT JOIN daimon_projections p ON p.chapter_id=c.id
+        LEFT JOIN daimon_projection_namespaces n ON n.namespace_id=p.namespace_id
+        WHERE c.embed_disabled=0 AND (p.active IS NULL OR p.active=1) AND e.provider = ? AND e.model = ?{_sem_extra_sql}
         """,
         (provider, model, *_sem_extra_params),
     ).fetchall()
@@ -1502,9 +1642,67 @@ def semantic_search(query, limit=8, provider=None, model=None, use_binary=None,
         data["tags"] = json.loads(data["tags_json"] or "[]")
         data.pop("embedding_json", None)
         data.pop("embedding_bin", None)
+        _attach_daimon_origin(data)
         scored.append(data)
     scored.sort(key=lambda r: r["semantic_score"], reverse=True)
     return scored[:limit]
+
+
+def _compact_record(row):
+    fields = ('id', 'shelf', 'book_title', 'title', 'spr', 'source_path', 'origin',
+              'record_uid', 'revision', 'engram_type', 'event_ts', 'actor',
+              'created_at', 'updated_at', 'location_json')
+    result = {key: row[key] for key in fields if key in row}
+    result['citation'] = f"[mem:{row['id']}]"
+    return result
+
+
+def _item_cost(item):
+    # Estimate the entire returned item, including source and neighbor metadata.
+    # This is an estimate, not a provider-specific tokenizer count.
+    text = json.dumps(item, ensure_ascii=False, separators=(',', ':'))
+    return max(token_estimate(text), math.ceil(len(text) / 4))
+
+
+def _select_pack(query, candidates, budget_tokens, limit, threshold, *, record_access=True, **details):
+    if limit <= 0 or budget_tokens < 0:
+        raise ValueError('limit must be positive and budget nonnegative')
+    eligible = [row for row in candidates if row['score'] >= threshold]
+    items, used, seen = [], 0, set()
+    for row in eligible:
+        # Similar openings do not prove that two encounters are the same event.
+        if row['id'] in seen:
+            continue
+        item = _compact_record(row)
+        for field in ('score', 'lexical_score', 'semantic_score', 'rerank_score'):
+            if field in row:
+                item[field] = row[field]
+        item['neighbors'] = linked_neighbors(row['id'])[:3]
+        cost = _item_cost(item)
+        if used + cost > budget_tokens:
+            # Neighbors are navigation hints; preserve the source-qualified
+            # primary account if it fits without those optional hints.
+            item['neighbors'] = []
+            cost = _item_cost(item)
+        if used + cost > budget_tokens:
+            continue
+        items.append(item)
+        seen.add(row['id'])
+        used += cost
+        if len(items) >= limit:
+            break
+    reason = ('ok' if items else 'budget_exhausted' if eligible else
+              'below_threshold' if candidates else 'no_candidates')
+    if not candidates and details.get('retrieval_status') == 'unavailable':
+        reason = 'backend_unavailable'
+    result = {'query': query, 'null_retrieval': not items, 'reason': reason,
+              'threshold': threshold, 'budget_tokens': budget_tokens,
+              'used_tokens_estimate': used, 'items': sandwich_order(items), **details}
+    if record_access:
+        for item in items:
+            touch_access(item['id'])
+        log_query(query, budget_tokens, len(items), not items, result)
+    return result
 
 
 def pack(query, budget_tokens=4000, limit=8, threshold=0.60,
@@ -1512,67 +1710,13 @@ def pack(query, budget_tokens=4000, limit=8, threshold=0.60,
     candidates = search(query, limit=limit * 2,
                         shelves=shelves, exclude_shelves=exclude_shelves,
                         tags=tags, exclude_tags=exclude_tags)
-    if not candidates or candidates[0]["score"] < threshold:
-        result = {
-            "query": query,
-            "null_retrieval": True,
-            "reason": "below_threshold",
-            "threshold": threshold,
-            "budget_tokens": budget_tokens,
-            "items": [],
-        }
-        log_query(query, budget_tokens, 0, True, result)
-        return result
-
-    chosen = []
-    used = 0
-    for row in candidates:
-        candidate_text = f"{row['title']} {row['spr']}"
-        if any(overlap_ratio(candidate_text, f"{item['title']} {item['spr']}") > 0.85 for item in chosen):
-            continue
-        cost = token_estimate(row["spr"])
-        if used + cost > budget_tokens:
-            continue
-        chosen.append(row)
-        used += cost
-        if len(chosen) >= limit:
-            break
-
-    ordered = sandwich_order(chosen)
-    items = []
-    for row in ordered:
-        neighbors = linked_neighbors(row["id"])[:3]
-        items.append(
-            {
-                "id": row["id"],
-                "shelf": row["shelf"],
-                "book_title": row["book_title"],
-                "title": row["title"],
-                "score": row["score"],
-                "spr": row["spr"],
-                "source_path": row["source_path"],
-                "neighbors": neighbors,
-                "citation": f"[mem:{row['id']}]",
-            }
-        )
-        touch_access(row["id"])
-
-    result = {
-        "query": query,
-        "null_retrieval": False,
-        "reason": "ok",
-        "threshold": threshold,
-        "budget_tokens": budget_tokens,
-        "used_tokens_estimate": used,
-        "items": items,
-    }
-    log_query(query, budget_tokens, len(items), False, result)
-    return result
+    return _select_pack(query, candidates, budget_tokens, limit, threshold,
+                        retrieval_status='ok', score_space='lexical')
 
 
 def hybrid_pack(query, budget_tokens=4000, limit=8, threshold=0.40, provider=None, model=None,
                 shelves=None, exclude_shelves=None, tags=None, exclude_tags=None,
-                engram_types=None):
+                engram_types=None, _record_access=True, _query_cache=None):
     cfg = embeddings_runtime_config(provider=provider, model=model)
     provider = cfg["provider"]
     model = cfg["model"]
@@ -1580,10 +1724,16 @@ def hybrid_pack(query, budget_tokens=4000, limit=8, threshold=0.40, provider=Non
                      shelves=shelves, exclude_shelves=exclude_shelves,
                      tags=tags, exclude_tags=exclude_tags,
                      engram_types=engram_types)
-    semantic = semantic_search(query, limit=limit * 2, provider=provider, model=model,
-                               shelves=shelves, exclude_shelves=exclude_shelves,
-                               tags=tags, exclude_tags=exclude_tags,
-                               engram_types=engram_types)
+    backend_errors = []
+    try:
+        semantic = semantic_search(query, limit=limit * 2, provider=provider, model=model,
+                                   shelves=shelves, exclude_shelves=exclude_shelves,
+                                   tags=tags, exclude_tags=exclude_tags, engram_types=engram_types,
+                                   _query_cache=_query_cache)
+    except EmbeddingBackendError:
+        semantic = []
+        backend_errors.append('embedding_backend_unavailable')
+    degraded = bool(backend_errors)
     merged = {}
     for row in lexical:
         merged[row["id"]] = dict(row)
@@ -1594,20 +1744,6 @@ def hybrid_pack(query, budget_tokens=4000, limit=8, threshold=0.40, provider=Non
             merged[row["id"]] = dict(row)
             merged[row["id"]]["lexical_score"] = 0.0
         merged[row["id"]]["semantic_score"] = row["semantic_score"]
-    if not merged:
-        result = {
-            "query": query,
-            "null_retrieval": True,
-            "reason": "no_candidates",
-            "threshold": threshold,
-            "budget_tokens": budget_tokens,
-            "items": [],
-            "provider": provider,
-            "model": model,
-        }
-        log_query(query, budget_tokens, 0, True, result)
-        return result
-
     ranked = []
     now = now_ts()
     for row in merged.values():
@@ -1617,7 +1753,7 @@ def hybrid_pack(query, budget_tokens=4000, limit=8, threshold=0.40, provider=Non
         lexical_score = float(row.get("lexical_score", 0.0))
         semantic_score = float(row.get("semantic_score", 0.0))
         domain_prior = source_domain_prior(query, row)
-        score = 0.10 * recency + 0.15 * importance + 0.25 * lexical_score + 0.45 * semantic_score + domain_prior
+        score = lexical_score if degraded else (0.10 * recency + 0.15 * importance + 0.25 * lexical_score + 0.45 * semantic_score + domain_prior)
         row["score"] = round(score, 4)
         ranked.append(row)
     ranked.sort(key=lambda r: r["score"], reverse=True)
@@ -1636,175 +1772,84 @@ def hybrid_pack(query, budget_tokens=4000, limit=8, threshold=0.40, provider=Non
         reranked = flashrank_rerank(query, passages)
         if reranked and isinstance(reranked, list) and "score" in reranked[0]:
             score_by_id = {p["id"]: float(p.get("score", 0.0)) for p in reranked}
-            max_rerank = max(score_by_id.values()) or 1.0
             for r in head:
-                rerank_score = score_by_id.get(str(r["id"]), 0.0) / max_rerank
+                # Relative-to-best normalization would make the strongest
+                # unrelated candidate look perfectly relevant.
+                rerank_score = max(0.0, min(1.0, score_by_id.get(str(r["id"]), 0.0)))
                 r["rerank_score"] = round(rerank_score, 4)
                 # Blend Park scoring + rerank 50/50 (rerank emphasizes
                 # query-passage semantic match; Park brings recency/importance).
                 r["score"] = round(0.5 * r["score"] + 0.5 * rerank_score, 4)
             head.sort(key=lambda r: r["score"], reverse=True)
-            ranked = head + ranked[rerank_pool:]
+            ranked = sorted(head + ranked[rerank_pool:], key=lambda r: r['score'], reverse=True)
 
-    if not ranked or ranked[0]["score"] < threshold:
-        result = {
-            "query": query,
-            "null_retrieval": True,
-            "reason": "below_threshold",
-            "threshold": threshold,
-            "budget_tokens": budget_tokens,
-            "items": [],
-            "provider": provider,
-            "model": model,
-        }
-        log_query(query, budget_tokens, 0, True, result)
-        return result
-
-    chosen = []
-    used = 0
-    for row in ranked:
-        candidate_text = f"{row['title']} {row['spr']}"
-        if any(overlap_ratio(candidate_text, f"{item['title']} {item['spr']}") > 0.85 for item in chosen):
-            continue
-        cost = token_estimate(row["spr"])
-        if used + cost > budget_tokens:
-            continue
-        chosen.append(row)
-        used += cost
-        if len(chosen) >= limit:
-            break
-
-    items = []
-    for row in sandwich_order(chosen):
-        neighbors = linked_neighbors(row["id"])[:3]
-        item = {
-            "id": row["id"],
-            "shelf": row["shelf"],
-            "book_title": row["book_title"],
-            "title": row["title"],
-            "score": row["score"],
-            "lexical_score": round(float(row.get("lexical_score", 0.0)), 4),
-            "semantic_score": round(float(row.get("semantic_score", 0.0)), 4),
-            "spr": row["spr"],
-            "source_path": row["source_path"],
-            "neighbors": neighbors,
-            "citation": f"[mem:{row['id']}]",
-        }
-        if "rerank_score" in row:
-            item["rerank_score"] = round(float(row["rerank_score"]), 4)
-        items.append(item)
-        touch_access(row["id"])
-
-    result = {
-        "query": query,
-        "null_retrieval": False,
-        "reason": "ok",
-        "threshold": threshold,
-        "budget_tokens": budget_tokens,
-        "used_tokens_estimate": used,
-        "items": items,
-        "provider": provider,
-        "model": model,
-    }
-    log_query(query, budget_tokens, len(items), False, result)
-    return result
+    return _select_pack(query, ranked, budget_tokens, limit, threshold,
+                        record_access=_record_access, provider=provider, model=model,
+                        retrieval_status=('degraded' if lexical else 'unavailable') if degraded else 'ok',
+                        backend_errors=backend_errors,
+                        score_space='lexical' if degraded else 'hybrid')
 
 
 def engram_pack(query, budget_tokens=4000, limit=8, threshold=0.30,
-                provider=None, model=None,
-                shelves=None, exclude_shelves=None,
-                tags=None, exclude_tags=None,
-                quotas=None, k=60):
-    """Reciprocal Rank Fusion (RRF) over the 3 ENGRAM buckets:
-    episodic, semantic, procedural.
-
-    Each bucket is queried independently via hybrid_pack (which already does
-    lexical+semantic+rerank within bucket). Results are then fused using RRF:
-        rrf_score(d) = Σ_b 1 / (k + rank_b(d))
-
-    quotas: dict {episodic: 2, semantic: 4, procedural: 2} — minimum number
-    of items from each bucket BEFORE general RRF ranking. Ensures the prompt
-    always gets a balanced view (no fact-only or no-procedural collapse).
-    """
-    quotas = quotas or {"episodic": 2, "semantic": 4, "procedural": 2}
-    buckets = ["episodic", "semantic", "procedural"]
-
-    # Per-bucket queries
-    bucket_results = {}
+                provider=None, model=None, shelves=None, exclude_shelves=None,
+                tags=None, exclude_tags=None, quotas=None, k=60):
+    """RRF orders relevant bucket candidates. Quotas never bypass relevance."""
+    if limit <= 0 or budget_tokens < 0 or k <= 0:
+        raise ValueError('limit and RRF k must be positive; budget must be nonnegative')
+    quotas = {'episodic': 2, 'semantic': 4, 'procedural': 2} if quotas is None else quotas
+    buckets = ['episodic', 'semantic', 'procedural']
+    if set(quotas) - set(buckets) or any(not isinstance(v, int) or v < 0 for v in quotas.values()):
+        raise ValueError('invalid memory quotas')
+    bucket_results, statuses, backend_errors = {}, {}, set()
+    query_cache = {}
     for et in buckets:
-        try:
-            r = hybrid_pack(query, budget_tokens=budget_tokens, limit=limit * 2,
-                            threshold=0.0,  # don't filter by threshold per-bucket
-                            provider=provider, model=model,
-                            shelves=shelves, exclude_shelves=exclude_shelves,
-                            tags=tags, exclude_tags=exclude_tags,
-                            engram_types=[et])
-            items = r.get("items", []) if isinstance(r, dict) else []
-            bucket_results[et] = items
-        except Exception as e:
-            bucket_results[et] = []
-
-    # RRF scoring across buckets
-    rrf_scores = {}
-    item_lookup = {}
+        result = hybrid_pack(query, budget_tokens=budget_tokens, limit=limit * 2,
+                             threshold=threshold, provider=provider, model=model,
+                             shelves=shelves, exclude_shelves=exclude_shelves,
+                             tags=tags, exclude_tags=exclude_tags,
+                             engram_types=[et], _record_access=False, _query_cache=query_cache)
+        # Defensively retain the relevance gate even for alternative retrievers.
+        bucket_results[et] = [dict(item, engram_type=et) for item in result.get('items', [])
+                              if item.get('score', 0) >= threshold]
+        statuses[et] = result.get('retrieval_status', 'ok')
+        backend_errors.update(result.get('backend_errors', []))
+    scores, lookup = {}, {}
+    for items in bucket_results.values():
+        for rank, item in enumerate(sorted(items, key=lambda item: item['score'], reverse=True), 1):
+            iid = item['id']
+            scores[iid] = scores.get(iid, 0) + 1 / (k + rank)
+            lookup.setdefault(iid, item)
+    preferred = []
     for et, items in bucket_results.items():
-        for rank_idx, item in enumerate(items):
-            item_id = item.get("id") or item.get("chapter_id")
-            if item_id is None:
-                continue
-            rrf_scores[item_id] = rrf_scores.get(item_id, 0.0) + 1.0 / (k + rank_idx + 1)
-            if item_id not in item_lookup:
-                item_lookup[item_id] = item
-                item_lookup[item_id]["engram_type"] = et
-
-    # Apply quotas FIRST: take top N from each bucket guaranteed
-    quota_picks = []
-    quota_taken = set()
-    for et in buckets:
-        n_quota = quotas.get(et, 0)
-        for item in bucket_results.get(et, [])[:n_quota]:
-            iid = item.get("id") or item.get("chapter_id")
-            if iid is None or iid in quota_taken:
-                continue
-            quota_picks.append((rrf_scores.get(iid, 0.0), item))
-            quota_taken.add(iid)
-
-    # Then fill remaining slots from RRF ranking
-    remaining = []
-    for iid, score in sorted(rrf_scores.items(), key=lambda x: x[1], reverse=True):
-        if iid in quota_taken:
-            continue
-        if iid in item_lookup:
-            remaining.append((score, item_lookup[iid]))
-
-    # Combine: quota_picks first (in their original RRF order), then remaining
-    quota_picks.sort(key=lambda x: x[0], reverse=True)
-    chosen = []
-    used = 0
-    for score, item in quota_picks + remaining:
-        if score < threshold and len(chosen) > sum(quotas.values()):
-            break
-        cost = token_estimate(item.get("spr", ""))
+        preferred.extend(item['id'] for item in sorted(items, key=lambda item: item['score'], reverse=True)[:quotas.get(et, 0)])
+    ranking = sorted(scores, key=lambda iid: scores[iid], reverse=True)
+    order = sorted(set(preferred), key=lambda iid: scores[iid], reverse=True) + [iid for iid in ranking if iid not in preferred]
+    chosen, used = [], 0
+    for iid in order:
+        item = dict(lookup[iid], rrf_score=round(scores[iid], 6))
+        cost = _item_cost(item)
+        if used + cost > budget_tokens:
+            item['neighbors'] = []
+            cost = _item_cost(item)
         if used + cost > budget_tokens:
             continue
-        item = dict(item)
-        item["rrf_score"] = round(score, 4)
         chosen.append(item)
         used += cost
         if len(chosen) >= limit:
             break
-
-    return {
-        "query": query,
-        "engram_pack": True,
-        "rrf_k": k,
-        "quotas": quotas,
-        "buckets_size": {et: len(items) for et, items in bucket_results.items()},
-        "items": chosen,
-        "total_tokens": used,
-        "budget_tokens": budget_tokens,
-        "null_retrieval": len(chosen) == 0,
-    }
+    status = 'ok' if all(s == 'ok' for s in statuses.values()) else ('degraded' if chosen or any(s != 'unavailable' for s in statuses.values()) else 'unavailable')
+    reason = 'ok' if chosen else ('backend_unavailable' if status == 'unavailable' else 'budget_exhausted' if lookup else 'below_threshold')
+    result = {'query': query, 'engram_pack': True, 'rrf_k': k, 'quotas': quotas,
+              'buckets_size': {et: len(items) for et, items in bucket_results.items()},
+              'items': chosen, 'total_tokens': used, 'used_tokens_estimate': used,
+              'budget_tokens': budget_tokens, 'threshold': threshold,
+              'null_retrieval': not chosen, 'reason': reason,
+              'retrieval_status': status, 'bucket_status': statuses,
+              'backend_errors': sorted(backend_errors), 'score_space': 'relevance_then_rrf'}
+    for item in chosen:
+        touch_access(item['id'])
+    log_query(query, budget_tokens, len(chosen), not chosen, result)
+    return result
 
 
 def sandwich_order(rows):
@@ -1833,7 +1878,7 @@ def touch_access(chapter_id):
     con.close()
 
 
-def expand(chapter_id):
+def _read_chapter(chapter_id):
     init_db()
     con = connect()
     row = con.execute(
@@ -1863,19 +1908,26 @@ def expand(chapter_id):
         JOIN shelves s ON s.id = b.shelf_id
         LEFT JOIN daimon_projections p ON p.chapter_id = c.id
         LEFT JOIN daimon_projection_namespaces n ON n.namespace_id = p.namespace_id
-        WHERE c.id=?
+        WHERE c.id=? AND (p.active IS NULL OR p.active=1)
         """,
         (chapter_id,),
     ).fetchone()
     con.close()
     if not row:
         raise SystemExit(f"chapter not found: {chapter_id}")
-    touch_access(chapter_id)
     data = dict(row)
-    data["neighbors"] = linked_neighbors(chapter_id)
     data["tags"] = json.loads(data["tags_json"] or "[]")
     _attach_daimon_origin(data)
     return data
+
+
+def expand(chapter_id):
+    out = _read_chapter(chapter_id)
+    if out is None:
+        raise SystemExit(f"chapter not found: {chapter_id}")
+    out['neighbors'] = linked_neighbors(chapter_id)
+    touch_access(chapter_id)
+    return out
 
 
 def add_link(src_id, dst_id, link_type, weight=1.0, note=None):
@@ -2091,7 +2143,9 @@ def review_link_suggestion(suggestion_id, action, note=None):
     return {"suggestion_id": suggestion_id, "action": action, "status": action}
 
 
-def update_chapter(chapter_id, content=None, title=None, tags=None, importance=None):
+def update_chapter(chapter_id, content=None, title=None, tags=None, importance=None,
+                   engram_type=None, event_ts=_UNSET, actor=_UNSET, location=_UNSET,
+                   metadata=None, expected_revision=None, source_path=_UNSET, source_kind=None, summary=None):
     """Update a chapter in place (v3.8.0+).
 
     Only the fields explicitly passed are changed; the rest are preserved.
@@ -2106,101 +2160,183 @@ def update_chapter(chapter_id, content=None, title=None, tags=None, importance=N
 
     Returns a small report dict.
     """
-    if content is None and title is None and tags is None and importance is None:
+    if (content is None and title is None and tags is None and importance is None
+            and engram_type is None and event_ts is _UNSET and actor is _UNSET
+            and location is _UNSET and metadata is None and source_path is _UNSET and source_kind is None and summary is None):
         raise SystemExit("update_chapter: nothing to update (pass content, title, tags, and/or importance)")
     init_db()
     con = connect()
-    row = con.execute("SELECT * FROM chapters WHERE id=?", (chapter_id,)).fetchone()
-    if not row:
-        con.close()
-        raise SystemExit(f"chapter not found: {chapter_id}")
-    if con.execute(
-        "SELECT 1 FROM daimon_projections WHERE chapter_id=?", (chapter_id,)
-    ).fetchone():
-        con.close()
-        raise SystemExit(
-            "projection-managed chapters cannot be changed through generic update"
-        )
-    old = dict(row)
-
-    new_raw = normalize_text(content) if content is not None else old["raw"]
-    new_title = title if title is not None else old["title"]
-    new_tags = list(tags) if tags is not None else json.loads(old["tags_json"] or "[]")
-    new_importance = float(importance) if importance is not None else old["importance"]
-    new_spr = simple_spr(new_raw)
-    content_changed = (new_raw != old["raw"]) or (new_title != old["title"])
-
-    # v3.9.0 — re-scan content for secrets on content change
-    embed_disabled_new = old.get("embed_disabled", 0)
-    embed_disable_reason_new = old.get("embed_disable_reason")
-    if content_changed and scan_content_for_secrets:
-        secret_reason = scan_content_for_secrets(new_raw)
-        if secret_reason:
-            embed_disabled_new = 1
-            embed_disable_reason_new = secret_reason
-
-    if title is not None and title != old["title"]:
-        new_slug = slugify(title)
-        collision = con.execute(
-            "SELECT id FROM books WHERE shelf_id=(SELECT shelf_id FROM books WHERE id=?) AND slug=? AND id != ?",
-            (old["book_id"], new_slug, old["book_id"]),
-        ).fetchone()
-        if collision:
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        row = con.execute("SELECT * FROM chapters WHERE id=?", (chapter_id,)).fetchone()
+        if not row:
+            con.close()
+            raise SystemExit(f"chapter not found: {chapter_id}")
+        if con.execute(
+            "SELECT 1 FROM daimon_projections WHERE chapter_id=?", (chapter_id,)
+        ).fetchone():
             con.close()
             raise SystemExit(
-                f"update_chapter: title slug '{new_slug}' already used by book {collision['id']} "
-                f"on the same shelf; choose a different title"
+                "projection-managed chapters cannot be changed through generic update"
             )
+        old = dict(row)
+        if expected_revision is not None and old['revision'] != expected_revision:
+            con.rollback()
+            con.close()
+            raise SystemExit("native revision conflict; existing record preserved")
+        if source_kind == 'daimon-projection':
+            con.rollback()
+            con.close()
+            raise SystemExit("Daimon projections require the versioned projection API")
+        new_kind = engram_type or old['engram_type']
+        if new_kind not in {'episodic', 'semantic', 'procedural'}:
+            con.rollback()
+            con.close()
+            raise ValueError("invalid memory type")
+        new_event = old['event_ts'] if event_ts is _UNSET else event_ts
+        if new_event is not None and (not isinstance(new_event, int) or isinstance(new_event, bool)):
+            con.rollback()
+            con.close()
+            raise ValueError("event_ts must be an integer timestamp or unknown")
+        new_actor = old['actor'] if actor is _UNSET else actor
+        new_location = old['location_json'] if location is _UNSET else (None if location is None else json.dumps(location))
+        new_metadata = old['source_metadata_json'] if metadata is None else json.dumps(native_records.metadata(metadata), ensure_ascii=False)
+
+        new_raw = normalize_text(content) if content is not None else old["raw"]
+        new_title = title if title is not None else old["title"]
+        new_tags = list(tags) if tags is not None else json.loads(old["tags_json"] or "[]")
+        new_importance = float(importance) if importance is not None else old["importance"]
+        new_spr = (normalize_text(summary) if summary is not None else
+                   old["spr"] if new_raw == old["raw"] else simple_spr(new_raw))
+        if not new_spr:
+            raise ValueError("summary must not be empty")
+        content_changed = (new_raw != old["raw"]) or (new_title != old["title"]) or (new_spr != old["spr"])
+        book_before = con.execute('SELECT source_path,source_kind FROM books WHERE id=?', (old['book_id'],)).fetchone()
+        source_changed = ((source_path is not _UNSET and source_path != book_before['source_path'])
+                          or (source_kind is not None and source_kind != book_before['source_kind']))
+        unchanged = (not content_changed and new_tags == json.loads(old['tags_json'] or '[]')
+                     and new_importance == old['importance'] and new_kind == old['engram_type']
+                     and new_event == old['event_ts'] and new_actor == old['actor']
+                     and new_location == old['location_json']
+                     and json.loads(new_metadata) == json.loads(old['source_metadata_json']) and not source_changed)
+        if unchanged:
+            con.rollback()
+            con.close()
+            return {'chapter_id': chapter_id, 'record_uid': old['record_uid'], 'revision': old['revision'],
+                    'content_changed': False, 'embeddings_dropped': 0, 'title': new_title,
+                    'tags': new_tags, 'importance': new_importance, 'noop': True}
+
+        # v3.9.0 — re-scan content for secrets on content change
+        embed_disabled_new = old.get("embed_disabled", 0)
+        embed_disable_reason_new = old.get("embed_disable_reason")
+        if content_changed and scan_content_for_secrets:
+            secret_reason = scan_content_for_secrets(f'{new_title}\n{new_spr}\n{new_raw}')
+            if secret_reason:
+                embed_disabled_new = 1
+                embed_disable_reason_new = secret_reason
+
+        # Archive before changing the book container, so source/title history stays
+        # attached to the prior revision. Access statistics do not create revisions.
+        native_records.archive(con, old, 'update')
+        if source_path is not _UNSET or source_kind is not None:
+            book = con.execute('SELECT source_path,source_kind FROM books WHERE id=?', (old['book_id'],)).fetchone()
+            con.execute('UPDATE books SET source_path=?,source_kind=? WHERE id=?',
+                        (book['source_path'] if source_path is _UNSET else source_path,
+                         source_kind or book['source_kind'], old['book_id']))
+        if title is not None and title != old["title"]:
+            new_slug = slugify(title)
+            collision = con.execute(
+                "SELECT id FROM books WHERE shelf_id=(SELECT shelf_id FROM books WHERE id=?) AND slug=? AND id != ?",
+                (old["book_id"], new_slug, old["book_id"]),
+            ).fetchone()
+            if collision:
+                con.close()
+                raise SystemExit(
+                    f"update_chapter: title slug '{new_slug}' already used by book {collision['id']} "
+                    f"on the same shelf; choose a different title"
+                )
+            con.execute(
+                "UPDATE books SET title=?, slug=?, updated_at=? WHERE id=?",
+                (new_title, new_slug, now_ts(), old["book_id"]),
+            )
+
+        delete_chapter_fts(con, old)
         con.execute(
-            "UPDATE books SET title=?, slug=?, updated_at=? WHERE id=?",
-            (new_title, new_slug, now_ts(), old["book_id"]),
+            """
+            UPDATE chapters SET title=?, spr=?, raw=?, tokens=?, importance=?, updated_at=?, tags_json=?, embed_disabled=?, embed_disable_reason=?,revision=revision+1,engram_type=?,event_ts=?,actor=?,location_json=?,source_metadata_json=?
+            WHERE id=?
+            """,
+            (
+                new_title,
+                new_spr,
+                new_raw,
+                token_estimate(new_raw),
+                new_importance,
+                now_ts(),
+                json.dumps(new_tags),
+                embed_disabled_new,
+                embed_disable_reason_new,
+                new_kind, new_event, new_actor, new_location, new_metadata,
+                chapter_id,
+            ),
+        )
+        insert_chapter_fts(con, chapter_id, new_title, new_spr, new_raw, json.dumps(new_tags))
+
+        # The book container reflects the last content mutation, consistent with
+        # upsert_book() bumping updated_at on every add_text.
+        con.execute(
+            "UPDATE books SET updated_at=? WHERE id=?",
+            (now_ts(), old["book_id"]),
         )
 
-    delete_chapter_fts(con, old)
-    con.execute(
-        """
-        UPDATE chapters SET title=?, spr=?, raw=?, tokens=?, importance=?, updated_at=?, tags_json=?, embed_disabled=?, embed_disable_reason=?
-        WHERE id=?
-        """,
-        (
-            new_title,
-            new_spr,
-            new_raw,
-            token_estimate(new_raw),
-            new_importance,
-            now_ts(),
-            json.dumps(new_tags),
-            embed_disabled_new,
-            embed_disable_reason_new,
-            chapter_id,
-        ),
-    )
-    insert_chapter_fts(con, chapter_id, new_title, new_spr, new_raw, json.dumps(new_tags))
+        embeddings_dropped = 0
+        if content_changed:
+            cur = con.execute("DELETE FROM chapter_embeddings WHERE chapter_id=?", (chapter_id,))
+            embeddings_dropped = cur.rowcount
 
-    # The book container reflects the last content mutation, consistent with
-    # upsert_book() bumping updated_at on every add_text.
-    con.execute(
-        "UPDATE books SET updated_at=? WHERE id=?",
-        (now_ts(), old["book_id"]),
-    )
+        con.commit()
+        con.close()
+        return {
+            "chapter_id": chapter_id,
+            "content_changed": content_changed,
+            "embeddings_dropped": embeddings_dropped,
+            "title": new_title,
+            "tags": new_tags,
+            "importance": new_importance,
+            "embed_disabled": embed_disabled_new,
+            "embed_disable_reason": embed_disable_reason_new,
+            "revision": old['revision'] + 1,
+            "record_uid": old['record_uid'],
+        }
 
-    embeddings_dropped = 0
-    if content_changed:
-        cur = con.execute("DELETE FROM chapter_embeddings WHERE chapter_id=?", (chapter_id,))
-        embeddings_dropped = cur.rowcount
+    finally:
+        con.close()
 
-    con.commit()
-    con.close()
-    return {
-        "chapter_id": chapter_id,
-        "content_changed": content_changed,
-        "embeddings_dropped": embeddings_dropped,
-        "title": new_title,
-        "tags": new_tags,
-        "importance": new_importance,
-        "embed_disabled": embed_disabled_new,
-        "embed_disable_reason": embed_disable_reason_new,
-    }
+
+def history(chapter_id):
+    """Native pre-images only; signed projections keep history in their owner."""
+    init_db()
+    con = connect()
+    try:
+        rows = con.execute('SELECT snapshot_json,reason,archived_at FROM chapter_revisions WHERE chapter_id=? ORDER BY revision', (chapter_id,)).fetchall()
+        return [{**json.loads(r['snapshot_json']), 'revision_reason': r['reason'], 'archived_at': r['archived_at']} for r in rows]
+    finally:
+        con.close()
+
+
+def history_search(query, limit=12):
+    if not tokenize_query(query) or limit <= 0:
+        return []
+    init_db()
+    con = connect()
+    try:
+        rows = con.execute('SELECT r.snapshot_json,r.reason,r.archived_at FROM chapter_revisions_fts f '
+                           'JOIN chapter_revisions r ON r.id=f.rowid WHERE chapter_revisions_fts MATCH ? '
+                           'ORDER BY bm25(chapter_revisions_fts) LIMIT ?', (fts_query_string(query), limit)).fetchall()
+        return [{**json.loads(r['snapshot_json']), 'revision_reason': r['reason'], 'archived_at': r['archived_at'],
+                 'historical': True} for r in rows]
+    finally:
+        con.close()
 
 
 def delete_chapter(chapter_id, prune_book=True):
@@ -2218,7 +2354,7 @@ def delete_chapter(chapter_id, prune_book=True):
     init_db()
     con = connect()
     row = con.execute(
-        "SELECT id, book_id, title, spr, raw, tags_json FROM chapters WHERE id=?",
+        "SELECT id, book_id, title, spr, raw, tags_json,record_uid FROM chapters WHERE id=?",
         (chapter_id,),
     ).fetchone()
     if not row:
@@ -2243,6 +2379,7 @@ def delete_chapter(chapter_id, prune_book=True):
     ).fetchone()[0]
 
     delete_chapter_fts(con, row)
+    revisions_removed = native_records.forget_history(con, row['record_uid'])
     con.execute("DELETE FROM chapters WHERE id=?", (chapter_id,))
 
     book_deleted = False
@@ -2260,6 +2397,7 @@ def delete_chapter(chapter_id, prune_book=True):
         "title": title,
         "raw_sha256": raw_sha256,
         "embeddings_removed": embeddings_removed,
+        "revisions_removed": revisions_removed,
         "links_removed": links_removed,
         "book_deleted": book_deleted,
     }
@@ -2540,6 +2678,12 @@ def main():
     p_add_text.add_argument("--raw", required=True)
     p_add_text.add_argument("--tags", default="")
     p_add_text.add_argument("--importance", type=float, default=0.5)
+    p_add_text.add_argument("--type", choices=['episodic','semantic','procedural'])
+    p_add_text.add_argument("--event-ts", type=int)
+    p_add_text.add_argument("--actor")
+    p_add_text.add_argument("--summary", help="Self-contained selected recall text; stored as SPR")
+    p_add_text.add_argument("--metadata-json", help="Attributed native source metadata; never signed authority")
+    p_add_text.add_argument("--if-revision", type=int)
 
     p_add_file = sub.add_parser("add-file")
     p_add_file.add_argument("--shelf", required=True, choices=sorted(DEFAULT_SHELVES))
@@ -2570,6 +2714,11 @@ def main():
 
     p_expand = sub.add_parser("expand")
     p_expand.add_argument("--id", type=int, required=True)
+    p_history = sub.add_parser('history', help='preserved native pre-images for a current chapter')
+    p_history.add_argument('--id', type=int, required=True)
+    p_history_search = sub.add_parser('history-search', help='lexical search of preserved native history')
+    p_history_search.add_argument('--query', required=True)
+    p_history_search.add_argument('--limit', type=int, default=12)
 
     p_update = sub.add_parser("update", help="update a chapter in place (content/title/tags/importance)")
     p_update.add_argument("--id", type=int, required=True)
@@ -2577,6 +2726,14 @@ def main():
     p_update.add_argument("--title", help="new title (keeps book title/slug in sync)")
     p_update.add_argument("--tags", help="CSV of tags; replaces the tag set when provided")
     p_update.add_argument("--importance", type=float)
+    p_update.add_argument('--type', choices=['episodic','semantic','procedural'])
+    event_time = p_update.add_mutually_exclusive_group()
+    event_time.add_argument('--event-ts', type=int)
+    event_time.add_argument('--clear-event-time', action='store_true')
+    p_update.add_argument('--actor')
+    p_update.add_argument('--summary')
+    p_update.add_argument('--metadata-json')
+    p_update.add_argument('--if-revision', type=int)
 
     p_delete = sub.add_parser("delete", help="delete a chapter (cascades embeddings/links; prunes empty book)")
     p_delete.add_argument("--id", type=int, required=True)
@@ -2660,6 +2817,9 @@ def main():
             raw=args.raw,
             tags=parse_tags(args.tags),
             importance=args.importance,
+            engram_type=args.type, event_ts=args.event_ts, actor=args.actor,
+            metadata=json.loads(args.metadata_json) if args.metadata_json else None,
+            expected_revision=args.if_revision, summary=args.summary,
         )
         print(json.dumps({"ok": True, "chapter_id": cid}, indent=2))
     elif args.command == "add-file":
@@ -2685,6 +2845,10 @@ def main():
         ), indent=2))
     elif args.command == "expand":
         print(json.dumps(expand(args.id), indent=2))
+    elif args.command == 'history':
+        print(json.dumps(history(args.id), indent=2, ensure_ascii=False))
+    elif args.command == 'history-search':
+        print(json.dumps(history_search(args.query, args.limit), indent=2, ensure_ascii=False))
     elif args.command == "update":
         result = update_chapter(
             args.id,
@@ -2692,6 +2856,11 @@ def main():
             title=args.title,
             tags=parse_tags(args.tags) if args.tags is not None else None,
             importance=args.importance,
+            engram_type=args.type,
+            event_ts=None if args.clear_event_time else (args.event_ts if args.event_ts is not None else _UNSET),
+            actor=args.actor if args.actor is not None else _UNSET,
+            metadata=json.loads(args.metadata_json) if args.metadata_json else None,
+            expected_revision=args.if_revision, summary=args.summary,
         )
         print(json.dumps({"ok": True, **result}, indent=2, ensure_ascii=False))
     elif args.command == "delete":

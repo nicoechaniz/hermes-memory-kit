@@ -82,9 +82,23 @@ This returns the full raw content plus linked neighbors.
 
 ### 4. Add a durable text memory
 
-Use a unique episode title. `add-text` replaces chapters under an existing
-same-shelf title; it is not an append-only history operation. Inspect related
-records and preserve meaningful history before updating a current synthesis.
+Use a unique episode title. Replacing a single native chapter under the same
+shelf/title now preserves its ID, links and searchable prior revisions. Inspect
+related records and use `--if-revision` for updates based on an observed revision;
+a conflict means retrieve the current version before reconciling it. Replacing
+a multi-chapter book requires explicit chapter updates.
+
+Set `--type`, known `--event-ts` and attributed `--metadata-json` when available.
+Unknown occurrence is not the recording date. Metadata describes the source and
+whether a claim is observed, reported, inferred or generated; it grants no signed
+authority. For past questions, use `history --id N` or `history-search --query
+"past cue"` and qualify the returned revision as historical. Current retrieval
+does not silently mix superseded accounts into present answers. Explicit native
+deletion also removes that record's revisions; snapshots require separate handling.
+Short selected memories retain their full text as SPR. For longer source records,
+pass `--summary` with the participant, event, significance and uncertainty that
+must survive recall. Automatic previews are marked incomplete; expand before
+answering details absent from them. Lexical search covers the full source text.
 
 ```bash
 ./scripts/hmk memoryctl.py add-text \

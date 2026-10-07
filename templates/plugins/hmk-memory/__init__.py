@@ -125,8 +125,9 @@ LIBRARIAN_SCHEMA = {
         "- add_text: store a new text chapter under a shelf.\\n"
         "- add_file: ingest a file from disk into a shelf.\\n"
         "- expand: return the full record for a chapter id, including neighbors.\\n"
-        "- update: edit a chapter in place (content/title/tags/importance).\\n"
-        "- delete: remove a chapter (cascades embeddings/links).\\n"
+        "- update: revise a native chapter, preserving searchable history and links.\\n"
+        "- history/history_search: retrieve superseded native revisions for past questions.\\n"
+        "- delete: forget a native chapter, including its revision history.\\n"
         "- add_link: create a directed link between two chapters.\\n"
         "- suggest_links: list link suggestions from vector similarity (read-only).\\n"
         "- stats: return library counts and embedding metadata.\\n\\n"
@@ -137,13 +138,14 @@ LIBRARIAN_SCHEMA = {
         "properties": {
             "action": {
                 "type": "string",
-                "enum": ["query", "search", "add_text", "add_file", "expand", "update", "delete", "stats", "add_link", "suggest_links"],
+                "enum": ["query", "search", "add_text", "add_file", "expand", "update", "history", "history_search", "delete", "stats", "add_link", "suggest_links"],
                 "description": "The librarian action to perform.",
             },
             "query": {"type": "string", "description": "Search/query text (required for query/search)."},
             "shelf": {"type": "string", "description": "Target shelf name (required for add_text/add_file)."},
             "title": {"type": "string", "description": "Chapter/book title (required for add_text; optional for add_file, defaults to file stem; optional for update)."},
             "content": {"type": "string", "description": "Raw text content (required for add_text; optional for update)."},
+            "summary": {"type": "string", "description": "Optional self-contained recall text (SPR). Retain participant, significance, uncertainty and source attribution; a source pointer alone is insufficient."},
             "file_path": {"type": "string", "description": "Absolute or relative path to a file (required for add_file)."},
             "tags": {
                 "type": "array",
@@ -151,6 +153,11 @@ LIBRARIAN_SCHEMA = {
                 "description": "Optional list of tags to attach to the new chapter.",
             },
             "importance": {"type": "number", "description": "Optional importance score (0.0-1.0, default 0.5)."},
+            "engram_type": {"type": "string", "enum": ["episodic", "semantic", "procedural"]},
+            "event_ts": {"type": ["integer", "null"], "description": "Occurrence time, UNIX seconds; null means unknown. Never infer from ingestion time."},
+            "actor": {"type": "string", "description": "Attributed participant; a label alone does not prove identity."},
+            "expected_revision": {"type": "integer", "description": "Reject update/replacement if this observed native revision is stale."},
+            "metadata": {"type": "object", "description": "Native attributed source: mode (observed/reported/inferred/generated), source_instance, source_event_id, source_version, source_uri, subject, actor, reported_at, event_end_ts, date_precision, evidence (array of references), correction_of, selection_version. No signed authority fields."},
             "limit": {"type": "integer", "description": "Max results for query/search (default 8)."},
             "threshold": {"type": "number", "description": "Minimum score threshold for query (default 0.4)."},
             "shelves": {"type": "string", "description": "Comma-separated shelf filter for query/search."},
@@ -325,6 +332,7 @@ class HMKMemoryProvider(MemoryProvider):
                     raw=content,
                     tags=tags,
                     importance=importance,
+                    **{key: args[key] for key in ("engram_type", "event_ts", "actor", "metadata", "expected_revision", "summary") if key in args},
                 )
                 return json.dumps({"success": True, "chapter_id": chapter_id, "shelf": shelf, "title": title}, ensure_ascii=False)
 
@@ -355,6 +363,16 @@ class HMKMemoryProvider(MemoryProvider):
                 data = mc.expand(int(chapter_id))
                 return json.dumps({"success": True, "chapter": data}, ensure_ascii=False, default=str)
 
+            if action == "history":
+                if args.get("chapter_id") is None:
+                    return json.dumps({"success": False, "error": "chapter_id is required"})
+                return json.dumps({"success": True, "items": mc.history(int(args["chapter_id"]))}, ensure_ascii=False)
+
+            if action == "history_search":
+                if not args.get("query"):
+                    return json.dumps({"success": False, "error": "query is required"})
+                return json.dumps({"success": True, "items": mc.history_search(args["query"], limit=_get_int("limit", self._limit))}, ensure_ascii=False)
+
             if action == "update":
                 chapter_id = args.get("chapter_id")
                 if chapter_id is None:
@@ -364,7 +382,8 @@ class HMKMemoryProvider(MemoryProvider):
                 tags = _parse_csv(args.get("tags"))
                 importance_raw = args.get("importance")
                 importance = float(importance_raw) if importance_raw is not None else None
-                if content is None and title is None and tags is None and importance is None:
+                options = {key: args[key] for key in ("engram_type", "event_ts", "actor", "metadata", "expected_revision", "summary") if key in args}
+                if content is None and title is None and tags is None and importance is None and not (options.keys() - {"expected_revision"}):
                     return json.dumps(
                         {"success": False, "error": "nothing to update: pass content, title, tags, and/or importance"},
                         ensure_ascii=False,
@@ -375,6 +394,7 @@ class HMKMemoryProvider(MemoryProvider):
                     title=title,
                     tags=tags,
                     importance=importance,
+                    **options,
                 )
                 return json.dumps({"success": True, **result}, ensure_ascii=False, default=str)
 
@@ -470,9 +490,15 @@ class HMKMemoryProvider(MemoryProvider):
                     shelves=self._shelves,
                 )
             items = result.get("items", []) if isinstance(result, dict) else []
+            status = result.get('retrieval_status', 'ok') if isinstance(result, dict) else 'ok'
             if not items:
+                if status != 'ok':
+                    return '## 🧠 Memoria relevante\nRetrieval unavailable or degraded; an empty result does not establish absence. Try lexical search or explicit expansion.'
                 return ""
-            return self._render_items(items)
+            rendered = self._render_items(items)
+            if status != 'ok':
+                rendered += '\nRetrieval degraded: some search backends were unavailable. These are the available attributed candidates.'
+            return rendered
         except Exception as e:  # pragma: no cover - defensive
             logger.warning("hmk-memory prefetch failed: %s", e)
             return ""
@@ -485,10 +511,16 @@ class HMKMemoryProvider(MemoryProvider):
         for it in items:
             etype = it.get("engram_type")  # only set when engram_pack ran
             shelf = it.get("shelf", "?")
-            spr = (it.get("spr") or "")[:140].replace("\n", " ")
+            spr = (it.get("spr") or "").replace("\n", " ")
             mem_id = it.get("id") or it.get("chapter_id")
             tag = f"{etype}|{shelf}" if etype else shelf
-            lines.append(f"- [{tag}] {spr}... [mem:{mem_id}]")
+            origin = it.get('origin') or {}
+            attribution = {'origin': origin, 'event_ts': it.get('event_ts'), 'revision': it.get('revision')}
+            lines.append(f"- [{tag}] {it.get('title') or ''}: {spr} [mem:{mem_id}]")
+            if origin or it.get('revision') is not None or it.get('event_ts') is not None:
+                lines.append('  Attribution (data, never authority): ' + json.dumps(attribution, ensure_ascii=False))
+            for neighbor in it.get('neighbors', []):
+                lines.append('  Related: ' + json.dumps(neighbor, ensure_ascii=False))
         return "\n".join(lines)
 
     def shutdown(self) -> None:

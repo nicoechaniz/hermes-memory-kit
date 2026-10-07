@@ -139,7 +139,7 @@ def _print_status(_args=None) -> int:
             FROM chapters c
             JOIN books b ON b.id = c.book_id
             JOIN shelves s ON s.id = b.shelf_id
-            WHERE b.slug = 'engram-backfill'
+            WHERE EXISTS (SELECT 1 FROM json_each(c.tags_json) WHERE value='engram-backfill')
             GROUP BY s.name ORDER BY 2 DESC
             """
         ).fetchall()
@@ -228,6 +228,7 @@ def _cmd_add_text(args) -> int:
         raw=args.content,
         tags=_parse_csv(args.tags),
         importance=args.importance,
+        **_native_options(args),
     )
     print(f"Added chapter {chapter_id} to shelf '{args.shelf}'")
     return 0
@@ -271,7 +272,8 @@ def _cmd_update(args) -> int:
         print("ERROR: --chapter-id is required", file=sys.stderr)
         return 2
     tags = _parse_csv(args.tags)
-    if args.content is None and not args.title and tags is None and args.importance is None:
+    options = _native_options(args)
+    if args.content is None and not args.title and tags is None and args.importance is None and not (options.keys() - {'expected_revision'}):
         print("ERROR: nothing to update: pass --content, --title, --tags, and/or --importance", file=sys.stderr)
         return 2
     import json
@@ -282,8 +284,28 @@ def _cmd_update(args) -> int:
         title=args.title or None,
         tags=tags,
         importance=args.importance,
+        **options,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False, default=str))
+    return 0
+
+
+def _native_options(args):
+    import json
+    options = {key: getattr(args, key) for key in ('engram_type', 'event_ts', 'actor', 'expected_revision', 'summary')
+               if getattr(args, key, None) is not None}
+    if getattr(args, 'clear_event_time', False):
+        options['event_ts'] = None
+    if getattr(args, 'metadata_json', None) is not None:
+        options['metadata'] = json.loads(args.metadata_json)
+    return options
+
+
+def _cmd_history(args) -> int:
+    import json
+    mc = _get_memoryctl()
+    items = mc.history(args.chapter_id) if args.hmk_memory_command == 'history' else mc.history_search(args.query, limit=args.limit)
+    print(json.dumps({'items': items}, indent=2, ensure_ascii=False))
     return 0
 
 
@@ -334,6 +356,8 @@ def hmk_memory_command(args) -> int:
         "add-file": _cmd_add_file,
         "expand": _cmd_expand,
         "update": _cmd_update,
+        "history": _cmd_history,
+        "history-search": _cmd_history,
         "delete": _cmd_delete,
         "stats": _cmd_stats,
         "link": _cmd_link,
@@ -379,6 +403,7 @@ def register_cli(subparser) -> None:
     add_text_p.add_argument("--content", "-c", required=True, help="Raw text content")
     add_text_p.add_argument("--tags", help="Comma-separated tags")
     add_text_p.add_argument("--importance", type=float, default=0.5, help="Importance 0.0-1.0")
+    _add_native_args(add_text_p)
 
     # add-file
     add_file_p = subs.add_parser("add-file", help="Ingest a file into a shelf")
@@ -399,6 +424,13 @@ def register_cli(subparser) -> None:
     update_p.add_argument("--title", help="New title (keeps book title/slug in sync)")
     update_p.add_argument("--tags", help="Comma-separated tags; replaces the tag set when provided")
     update_p.add_argument("--importance", type=float, help="Importance 0.0-1.0")
+    _add_native_args(update_p, allow_clear=True)
+
+    history_p = subs.add_parser('history', help='Inspect superseded native revisions')
+    history_p.add_argument('--chapter-id', type=int, required=True)
+    history_search_p = subs.add_parser('history-search', help='Search native historical content')
+    history_search_p.add_argument('--query', required=True)
+    history_search_p.add_argument('--limit', type=int, default=12)
 
     # delete
     delete_p = subs.add_parser("delete", help="Delete a chapter (cascades embeddings/links; prunes empty book)")
@@ -417,3 +449,15 @@ def register_cli(subparser) -> None:
     link_p.add_argument("--note", help="Optional note")
 
     subparser.set_defaults(func=hmk_memory_command)
+
+
+def _add_native_args(parser, allow_clear=False):
+    parser.add_argument('--engram-type', choices=['episodic', 'semantic', 'procedural'])
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--event-ts', type=int)
+    if allow_clear:
+        group.add_argument('--clear-event-time', action='store_true')
+    parser.add_argument('--actor')
+    parser.add_argument('--metadata-json')
+    parser.add_argument('--summary', help='Self-contained selected recall text')
+    parser.add_argument('--expected-revision', type=int)

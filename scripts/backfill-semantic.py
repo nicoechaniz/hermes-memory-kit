@@ -3,8 +3,7 @@
 
 Walks `chapters` rows where `engram_type='episodic'`, sends each one to
 the Hermes gateway with an extraction prompt, and inserts the resulting
-durable facts as new `chapters` rows under an auto-created
-`engram-backfill` book in the appropriate shelf:
+durable facts through memoryctl under attributed, source-qualified titles:
     social         -> mc-social   (or first social-tagged shelf)
     place          -> mc-places
     skill_pattern  -> mc-skills
@@ -14,10 +13,11 @@ durable facts as new `chapters` rows under an auto-created
 Each new chapter is tagged `engram-backfill`, `<fact_type>`, and
 `src-chapter-<source_id>` for traceability.
 
-Idempotency note: this script does NOT dedupe against previous runs.
-Run with `--shelf-pattern` and `--limit` to scope. Re-running the same
-range will produce duplicate facts; use the source-chapter tag to clean
-up if needed.
+Identical facts from the same stable source record reuse their chapter. Extracted
+facts are inferences, with an explicit source revision and derived-from link;
+they do not become independent observations. Source changes require curation of
+any older derived claims. Signed projections and embedding-disabled chapters
+are excluded from this generic extraction path.
 
 Env vars (cascade, first match wins):
     HMK_DB_PATH                 # path to library.db
@@ -42,12 +42,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import hashlib
+from pathlib import Path
 import os
 import shutil
 import sqlite3
 import subprocess
 import sys
 import time
+
+import memoryctl as mc
+from sqlite_snapshot import verified_snapshot
 
 
 FACT_TYPES = ("social", "place", "skill_pattern", "preference", "discovery")
@@ -148,6 +153,8 @@ def call_hermes(hermes_bin: str, hermes_home: str, prompt: str, timeout: int = 6
             "HERMES_HOME": hermes_home,
         },
     )
+    if p.returncode:
+        raise RuntimeError(f"Hermes extraction exited with status {p.returncode}")
     return p.stdout.strip()
 
 
@@ -205,22 +212,33 @@ def main() -> int:
             "{agent_name}", agent_name
         ).replace("{domain_desc}", domain_desc)
 
+    if not args.dry_run:
+        verified_snapshot(db_path, f"{db_path}.bak.presemantic.{time.time_ns()}")
+        mc.BASE_DIR = Path(db_path).parent
+        mc.DB_PATH = Path(db_path)
+        mc.init_db()
     db = sqlite3.connect(db_path)
     db.row_factory = sqlite3.Row
 
+    columns = {r[1] for r in db.execute("PRAGMA table_info(chapters)")}
+    if 'engram_type' not in columns:
+        print("ERROR: source DB has no ENGRAM types; migrate before extraction", file=sys.stderr)
+        db.close()
+        return 2
+    optional = ', '.join('c.' + key if key in columns else 'NULL AS ' + key
+                         for key in ('event_ts', 'actor', 'location_json', 'record_uid', 'revision'))
+    protected = " AND b.source_kind != 'daimon-projection'"
+    if db.execute("SELECT 1 FROM sqlite_master WHERE name='daimon_projections'").fetchone():
+        protected += " AND NOT EXISTS (SELECT 1 FROM daimon_projections p WHERE p.chapter_id=c.id)"
+    if 'embed_disabled' in columns:
+        protected += " AND c.embed_disabled=0"
     rows = db.execute(
-        """
-        SELECT c.id, c.title, c.spr, c.raw, c.event_ts, c.actor, c.location_json,
+        f"""SELECT c.id, c.title, c.spr, c.raw, {optional},
                s.name AS shelf, b.title AS book_title
-        FROM chapters c
-        JOIN books b ON c.book_id = b.id
-        JOIN shelves s ON b.shelf_id = s.id
-        WHERE c.engram_type = 'episodic'
-          AND s.name LIKE ?
-          AND c.id >= ?
-        ORDER BY c.id
-        """,
-        (args.shelf_pattern, args.start_from_id),
+        FROM chapters c JOIN books b ON c.book_id=b.id
+        JOIN shelves s ON b.shelf_id=s.id
+        WHERE c.engram_type='episodic'{protected} AND s.name LIKE ? AND c.id>=?
+        ORDER BY c.id""", (args.shelf_pattern, args.start_from_id),
     ).fetchall()
 
     if args.limit > 0:
@@ -235,8 +253,8 @@ def main() -> int:
         for r in db.execute("SELECT id, name FROM shelves").fetchall()
     }
 
-    now = int(time.time())
     inserted = 0
+    failures = 0
     skipped_shelf = 0
 
     for r in rows:
@@ -244,7 +262,7 @@ def main() -> int:
         print(f"\n--- chapter {r['id']}: {r['title'][:60]} ---")
         try:
             resp = call_hermes(hermes_bin, hermes_home, prompt_template.format(ep_text=ep_text), timeout=args.timeout)
-            resp_tail = resp[-800:]
+            resp_tail = resp
             print(f"  resp: {resp_tail[:200]}...")
 
             facts = parse_facts(resp_tail)
@@ -262,57 +280,29 @@ def main() -> int:
                     skipped_shelf += 1
                     print(f"     SKIP: shelf '{target_shelf}' not present in this DB")
                     continue
-                book_row = db.execute(
-                    "SELECT id FROM books WHERE shelf_id=? AND slug=?",
-                    (shelf_id, "engram-backfill"),
-                ).fetchone()
-                if book_row:
-                    book_id = book_row[0]
-                else:
-                    cur = db.execute(
-                        "INSERT INTO books (shelf_id, slug, title, source_kind, "
-                        "created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)",
-                        (
-                            shelf_id,
-                            "engram-backfill",
-                            "Engram Backfill (auto-extracted facts)",
-                            "auto",
-                            now,
-                            now,
-                        ),
-                    )
-                    book_id = cur.lastrowid
-                ord_row = db.execute(
-                    "SELECT COALESCE(MAX(ordinal),0)+1 FROM chapters WHERE book_id=?",
-                    (book_id,),
-                ).fetchone()
-                ord_n = ord_row[0]
-                title = f"{ftype}: {ftext[:50]}"
-                db.execute(
-                    """
-                    INSERT INTO chapters (book_id, ordinal, title, spr, raw, tokens,
-                        importance, created_at, updated_at, engram_type, tags_json)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'semantic', ?)
-                    """,
-                    (
-                        book_id,
-                        ord_n,
-                        title,
-                        ftext,
-                        ftext,
-                        len(ftext) // 4,
-                        0.6,
-                        now,
-                        now,
-                        json.dumps(["engram-backfill", ftype, f"src-chapter-{r['id']}"]),
-                    ),
-                )
-                inserted += 1
+                # Bind inferred output to the exact episode version considered.
+                current = mc.expand(r['id'])
+                if current['revision'] != r['revision'] or current['record_uid'] != r['record_uid']:
+                    raise RuntimeError("source changed during extraction; retry its new version")
+                fact_hash = hashlib.sha256((ftype + "\n" + ftext).encode()).hexdigest()
+                title = f"Extracted {ftype}: {ftext[:50]} [{r['record_uid']}:{fact_hash}]"
+                existing = db.execute("SELECT c.id FROM chapters c JOIN books b ON b.id=c.book_id "
+                                      "WHERE b.title=? AND b.shelf_id=?", (title, shelf_id)).fetchone()
+                cid = mc.add_text(target_shelf, title, ftext, importance=0.6,
+                                  tags=["engram-backfill", ftype, f"src-chapter-{r['id']}"],
+                                  engram_type='semantic', source_kind='auto',
+                                  metadata={'mode':'inferred','source_event_id':r['record_uid'],
+                                            'source_version':str(r['revision']),
+                                            'evidence':[f"[mem:{r['id']}]"], 'source_uri':f"[mem:{r['id']}]"})
+                mc.add_link(cid, r['id'], 'derived-from', note='Inferred extraction; consult the source episode.')
+                inserted += int(existing is None)
             if not args.dry_run:
                 db.commit()
         except subprocess.TimeoutExpired:
+            failures += 1
             print("  TIMEOUT")
         except Exception as e:
+            failures += 1
             print(f"  ERROR: {e}")
         time.sleep(args.sleep)
 
@@ -326,7 +316,7 @@ def main() -> int:
         ).fetchone()[0]
     )
     db.close()
-    return 0
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":
