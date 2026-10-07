@@ -406,6 +406,14 @@ a small transportable core, but this being's history/provenance requirements
 need an additional preservation profile and actual consumer round trips.
 No universal standard or fully qualified replacement has been selected.
 
+The subsequent human steering adds a
+[portable-being/native-projection route](lifelong-memory-portability-review.md#another-architecture-portable-being-history-and-harness-native-projections),
+building on existing Matrix memory lanes and their exact content rather than
+assuming a new competing ledger is needed. Preserve HMK-native and native
+authored originals through explicit migration. The supplied ResonantNetwork
+exploration becomes an experimental associative/learned-state track, with
+reconstruction and recall evidence required before any adoption.
+
 Prepare a versioned export/restore contract alongside these upgrades. Inventory
 available text, metadata, logical IDs, native revisions, source references,
 links, corrections/retractions, date precision and selected assets. Explicitly

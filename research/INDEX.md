@@ -16,3 +16,6 @@ publishes synthetic selection/recall failures; it is not a completed comparison.
 The [experience-consolidation review](../docs/experience-consolidation-mechanisms.md)
 adds transferable Hindsight mechanisms, OpenSouls' pinned public state, local
 alternatives and qualified Soul Protocol/OpenSelf proposals to that work record.
+The portability review also maps the portable-being/native-projection proposal
+to existing Matrix memory lanes and content closure, and records the supplied
+ResonantNetwork exploration as an experimental associative/learned-state track.

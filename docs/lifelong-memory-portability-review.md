@@ -292,6 +292,120 @@ Codex learning in the comparison, without assuming its retention policy supplies
 lifelong autobiography. Prioritization is an engineering judgment from the
 deployment shapes, not a measured quality ranking.
 
+## Another architecture: portable being history and harness-native projections
+
+The human added this route on October 7: use each harness's native memory while
+preserving the being in its own portable representation. That changes the main
+comparison from choosing one memory engine to qualifying preservation, formation
+and projection seams. HMK may remain a retrieval/projection adapter or be
+replaced; neither outcome defines the being.
+
+The inspected Matrix source at
+[`196ec721`](https://github.com/AlterMundi/daimon-matrix/tree/196ec7219f954cf4e514a1f61ae72eb3451d851e)
+already contains an important part of this design:
+
+- [Origin-retaining memory lanes](https://github.com/AlterMundi/daimon-matrix/blob/196ec7219f954cf4e514a1f61ae72eb3451d851e/specs/memory-boundaries.md)
+  represent accepted assertions, corrections and retractions as immutable
+  successors, with personal-experience/insight/skill categories, author/context,
+  evidence and exact content references. Admission authenticates origin and
+  policy; it does not establish that an inferred conclusion is true or useful.
+- [DM-034](https://github.com/AlterMundi/daimon-matrix/blob/196ec7219f954cf4e514a1f61ae72eb3451d851e/docs/dm034-memory-projection.md)
+  already projects accepted personal-memory heads into HMK. For those lanes,
+  Matrix is canonical and HMK is a derived retrieval view. Its exact target
+  contract and provenance namespace remain separate from HMK-native records.
+- The ledger does not itself own the bytes named by every memory content
+  reference. The projection contract explicitly treats unavailable content as
+  unavailable, even after signed-event sync. A portable package must preserve
+  the exact referenced bytes and available revisions, not just events/hashes.
+- Existing HMK-native records and native harness learning are not automatically
+  present in accepted Matrix lanes. DM-034 explicitly refuses to hide such an
+  import inside projection cutover. Preserve them with original attribution;
+  design the source/admission migration instead of fabricating body occurrences.
+
+This is source/contract inspection, not a new claim of installed-runtime
+capabilities or a live migration. Reuse the existing versioned Matrix contracts;
+do not introduce unknown fields into their closed v1 schemas. Any richer memory
+content profile, manifest or new projector needs an explicit versioned seam.
+
+The proposed local preservation package has three related parts:
+
+1. Accepted being history and its reference closure: memory events, exact
+   content, meaningful revisions, sources, corrections, selected assets and
+   applicable identity/skill history, retaining original authorship and scope.
+2. Original native learned artifacts and their available history/lifecycle state,
+   initially preserved as attributed originals. Selection can admit new durable
+   insights or skills with links back to them; a projection cannot silently
+   replace those originals.
+3. Regenerable or versioned harness projections plus a reconstruction manifest:
+   native indexes/topic files, HMK/SQLite views or other local retrieval engines,
+   named source versions, adapters and observed reconstruction/recall results.
+
+Credential custody and body-specific runtime bindings are separate from a
+shareable memory/identity package. Restoring a new body is not copying a live
+writable ledger or another body's private keys. Same-being synchronization and
+foreign attributed knowledge retain their existing Matrix boundaries.
+
+Each harness can form useful memory natively. A bounded explicit capture path
+then evaluates genuinely new authored learning/experience, records attribution
+and preserved originals, and produces a successor projection for other bodies.
+Reading a projection must not be fed back as a new experience or supporting
+source. Native cleanup affects its local view; it must not delete the only copy
+of significant history. This lifecycle remains to qualify; no automatic observer
+or native memory is activated here.
+
+An archive alone is insufficient: after native pruning, a fresh body still needs
+a documented path to discover and retrieve older memories. A routing summary,
+topic files or a local archive query tool must recover the weak-cue encounter,
+not merely make its bytes recoverable by an operator. Measure that independently
+of native session resume and compare how much adapter work each harness needs.
+
+## ResonantNetwork as associative memory and learned state
+
+The human also supplied the earlier
+[Resonant Neural Net exploration](https://hackmd.io/@nicoechaniz/ResonantNeuralNet).
+Read through its public Markdown download on October 7; no private conversation
+was imported. It is a dialogue exploring harmonic/phase organization, a trained
+interference configuration and query-as-excitation (Jpsh!), rather than an
+implemented or validated durable-memory system. Publication date is not supplied
+by the retrieved text.
+
+This provides two distinct experimental roles:
+
+- Associative retrieval: a partial cue activates related episodes/entities or
+  concepts; return stable record IDs and evidence rather than treating a recalled
+  blend as an authenticated event. Compare with existing lexical/vector/graph
+  retrieval on the same old weak-cue and correction cases.
+- Learned being state: if the network accumulates meaningful associations or
+  structure that selected text does not fully reproduce, preserve that learned
+  delta as a versioned original artifact too. Record architecture/encoding,
+  baseline/version, parameters/phase state, numeric precision, update recipe and
+  supported record mapping. Do not call it disposable merely because it serves
+  retrieval; test reconstruction and cross-body behavioral continuity.
+
+[Modern Hopfield networks](https://arxiv.org/abs/2008.02217) provide a concrete
+primary associative-memory reference with continuous states and an attention-
+equivalent update under that model. They do not validate this specific harmonic
+proposal. Infinite phase capacity, instantaneous inference and general quantum
+equivalence in the exploratory dialogue are not established engineering results.
+The experiment must specify a finite representation, noise/precision, observable
+cost, collision/ambiguity behavior and how new learning changes old recall.
+
+The human specifically recalled interest in superadditive capacity. Keep it as
+a measured hypothesis: with N independent phase coordinates and M distinguishable
+values per coordinate there are M^N configurations, whose maximum information
+is N log2(M) bits. Pairwise interference counts do not establish independent
+stored information. A useful gain would instead be demonstrated as more
+correctly retrievable associations/episodes per comparable storage and inference
+budget, robust partial-cue recall, or less interference when adding new learning.
+Specify the encoder, state update and readout before running a harmonic model;
+compare against local vector/graph and an associative baseline on the same data.
+
+Run this as a bounded research track after a safe archive/projection baseline.
+The preservation format should permit such attributed learned-state artifacts
+without requiring every body to execute the same neural substrate. When a body
+cannot use it, report that capability gap and retain usable evidence/text plus
+the original state. A byte round trip alone does not prove continuity of uptake.
+
 ## Decision: preserve the being's delta; qualify the backend
 
 Native Codex-authored learning is itself part of the being's accumulated delta.
