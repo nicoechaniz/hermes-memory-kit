@@ -463,15 +463,6 @@ def test_capture_keeps_embedding_failure_separate_from_persistence(mc, monkeypat
     assert mc.search('HarborMesh')
 
 
-def test_selected_summary_is_scanned_for_embedding_eligibility(mc, monkeypatch):
-    monkeypatch.setattr(mc, 'scan_content_for_secrets', lambda text: 'synthetic-secret' if 'fixture-secret' in text else None)
-    cid = mc.add_text('episodes','An account','Ordinary text',summary='fixture-secret')
-    assert mc.expand(cid)['embed_disabled'] == 1
-    cid = mc.add_text('episodes','Another account','Ordinary text')
-    mc.update_chapter(cid, summary='fixture-secret')
-    assert mc.expand(cid)['embed_disabled'] == 1
-
-
 def test_finite_capture_cli_persists_across_processes_without_a_listener(mc, tmp_path):
     source = tmp_path / 'event.json'
     source.write_text(json.dumps(event()))

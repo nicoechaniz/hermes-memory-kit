@@ -255,7 +255,8 @@ later changed/missing supports are exposed as needing reconciliation. This is a
 mechanical foundation, not an automatic extractor or a completed dream pilot.
 Model selection/answer quality, three-pass consolidation, cost comparison and
 actual receiving adoption remain unqualified. No live binding or trigger changed.
-The complete suite after this delivery passes 187 tests, including separate
+Published capture/consolidation: [PR #15](https://github.com/nicoechaniz/hermes-memory-kit/pull/15),
+based on #14. The complete suite after this delivery passes 187 tests, including separate
 process capture after deleting its source file and pre/post-commit failures.
 
 Published implementation: [PR #14](https://github.com/nicoechaniz/hermes-memory-kit/pull/14),
