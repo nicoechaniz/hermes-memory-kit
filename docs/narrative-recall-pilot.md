@@ -14,6 +14,18 @@ meanings nor answer requirements enter capture, planning, narration or review.
 Both policy arms reuse complete frozen fictional formation and use identical
 receiving limits, provider/model and reasoning settings.
 
+`--model` selects formation; `--receiving-model` explicitly selects the planner,
+narrator and reviewer for both receiving arms, defaulting to the formation model.
+This permits a new receiving-model comparison over unchanged formation without
+changing its authorship/selection metadata or silently recapturing its sources.
+The receiving selection is frozen in conditions and cannot change on resume.
+Embeddings remain configured separately. This NVIDIA API selector does not add
+an OpenAI adapter or authorize a fresh Codex subagent; those require their own
+explicitly selected receiving setup and blind-context evidence. If planner/model
+or reader changes produce different packets, do not claim an isolated model-only
+comparison over identical evidence. Freeze or replay the actual supplied packets
+when that narrower comparison is intended.
+
 Each receiving request sees only retrieved previews, bounded expansions and the
 fictional binding. The source-loss database excludes capture payloads/ledgers;
 retrieval actually runs with its clock advanced ten years, retaining original
@@ -60,6 +72,12 @@ and planning retain low reasoning. The
 defines those modes. Narration/review use a 2,048-token reasoning budget within the 12,000-token
 output ceiling, leaving space for assertion/proof JSON. Formation and planning
 retain the 6,000-token ceiling. Every request records effort, budget and output limit.
+For a provider that rejects an explicit reasoning budget, the deliberately
+selected `--narrative-reasoning-budget none` omits that parameter. It does not
+silently substitute a new budget: conditions and traces record null, and both
+arms still use the same output ceiling, schema, local validators and outside
+grading. Output exhaustion remains an incomplete answer. A successful HTTP/schema
+response is not proof that the returned content preserved its source.
 An exhausted output ceiling or null content is retained as an incomplete response
 with actual known usage; it is never accepted as an answer. Resumption freezes
 the semantic module and backend dependency hashes, narration effort, reasoning
@@ -129,3 +147,8 @@ returned HTTP 200 and correctly escaped an embedded quotation, using 269 total
 provider tokens. That establishes acceptance of that request and sample output,
 not universal schema enforcement or narrative quality. The probe and its cost
 are separate from formation, recall and hidden-rubric grading.
+
+[Alternative receiving probes](../research/agent-memory-2026-10-06/pilots/receiving-model-probes/README.md)
+record Ultra's temporary overload, explicit-budget incompatibility and a
+schema-shaped HTTP 200 response that nevertheless lost the supplied quotation.
+No receiving-quality advantage is established by those capability probes.

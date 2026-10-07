@@ -114,7 +114,7 @@ def test_source_review_precedes_commit_and_never_sees_hidden_rubric(pilot, tmp_p
         memory.rerank_provider_default = lambda: 'none'
         return memory
     monkeypatch.setattr(pilot, 'memory_at', isolated)
-    args = SimpleNamespace(out=tmp_path, resume=False, model='fictional', consolidate=False, review_capture=True)
+    args = SimpleNamespace(out=tmp_path, resume=False, model='fictional', receiving_model='fictional-receiver', consolidate=False, review_capture=True)
     corpus = {'fixture_context':{}, 'cases':[{'id':'report', 'sources':[
         {'id':'source','originating_body':'fixture:body:voice','content':'The human reports an encounter.'}],
         'expected':{'secret':'HIDDEN_RUBRIC'},'questions':[{'query':'HIDDEN_RECALL_QUESTION'}]}]}
@@ -129,6 +129,7 @@ def test_source_review_precedes_commit_and_never_sees_hidden_rubric(pilot, tmp_p
     phases=[]
     def chat(model, messages, trace):
         phases.append(trace.phase)
+        assert model == ('fictional' if trace.phase.startswith('capture') else 'fictional-receiver')
         if trace.phase.startswith('capture'):
             assert 'HIDDEN_' not in json.dumps(messages)
         if trace.phase == 'capture_review':
@@ -211,7 +212,8 @@ def test_only_all_empty_facet_array_has_an_unambiguous_normalization(pilot):
 
 
 @pytest.mark.parametrize('content', [None, '{"claims":[]'])
-def test_truncated_response_preserves_usage_bytes_and_explicit_reasoning_budget(pilot,tmp_path,monkeypatch,content):
+@pytest.mark.parametrize('budget', [2048,None])
+def test_truncated_response_preserves_usage_bytes_and_explicit_reasoning_budget(pilot,tmp_path,monkeypatch,content,budget):
     class Response:
         def __enter__(self):return self
         def __exit__(self,*args):pass
@@ -224,17 +226,18 @@ def test_truncated_response_preserves_usage_bytes_and_explicit_reasoning_budget(
     monkeypatch.setattr(pilot.configuration,'read_env_key',lambda key:'fictional-key')
     monkeypatch.setattr(pilot.urllib.request,'urlopen',receive)
     trace=pilot.Trace(tmp_path/'trace.json');trace.phase='narrative_review'
-    trace.narrative_reasoning_effort='high';trace.narrative_reasoning_budget=2048
+    trace.narrative_reasoning_effort='high';trace.narrative_reasoning_budget=budget
     messages=[{'role':'system','content':'Fictional'}, {'role':'user','content':json.dumps({'evidence':[],
         'candidate':{'claims':[{'text':'Unknown here.'}]}})}]
     value=pilot.chat('fixture',messages,trace)
     assert value=={'_invalid_json':content,'_finish_reason':'length'}
-    assert requests[0]['reasoning_budget']==2048 and requests[0]['max_tokens']==12000
+    assert requests[0].get('reasoning_budget')==budget and requests[0]['max_tokens']==12000
+    if budget is None:assert 'reasoning_budget' not in requests[0]
     assert requests[0]['response_format']['type']=='json_schema'
     assert requests[0]['response_format']['json_schema']['strict'] is True
     row=json.loads(trace.path.read_text())[0]
     assert row['usage']['total_tokens']==6000 and row['response_content']==content
-    assert row['parse_error']=='incomplete_response' and row['requested_reasoning_budget']==2048
+    assert row['parse_error']=='incomplete_response' and row['requested_reasoning_budget']==budget
     assert row['requested_max_tokens']==12000
     assert row['response_format_sha256']==pilot.digest(requests[0]['response_format'])
 
@@ -248,8 +251,31 @@ def test_reader_upgrade_requires_explicit_comparable_formation(pilot):
     with pytest.raises(ValueError,match='explicit'):
         pilot.formation_compatibility(source,conditions)
     assert pilot.formation_compatibility(source,conditions,True)['explicit_upgrade'] is True
+    # Receiving is a new experiment over preserved formation, not recapture.
+    assert pilot.formation_compatibility(source,dict(conditions,receiving_model='different-receiver'),True)['explicit_upgrade'] is True
     with pytest.raises(ValueError,match='identical'):
         pilot.formation_compatibility(source,dict(conditions,fixture_hash='different'),True)
+    with pytest.raises(ValueError,match='identical'):
+        pilot.formation_compatibility(source,dict(conditions,model='different-formation'),True)
+
+
+def test_resume_cannot_change_receiving_model_or_rewrite_conditions(pilot,tmp_path,monkeypatch):
+    corpus=tmp_path/'corpus.json';corpus.write_text(json.dumps({'fictional':True,'cases':[]}))
+    output=tmp_path/'comparison';calls=[]
+    def run(name,guidance,args,corpus):
+        calls.append((name,args.model,args.receiving_model));return {'variant':name}
+    monkeypatch.setattr(pilot,'run_variant',run)
+    argv=['pilot','--out',str(output),'--corpus',str(corpus),'--model','fictional-formation',
+          '--receiving-model','receiver-one']
+    monkeypatch.setattr('sys.argv',argv);pilot.main()
+    original=(output/'conditions.json').read_bytes()
+    conditions=json.loads(original)
+    assert conditions['model']=='fictional-formation' and conditions['receiving_model']=='receiver-one'
+    monkeypatch.setattr('sys.argv',argv[:-1]+['receiver-two','--resume'])
+    with pytest.raises(SystemExit):pilot.main()
+    assert len(calls)==2 and (output/'conditions.json').read_bytes()==original
+    assert pilot.optional_reasoning_budget('none') is None
+    assert pilot.optional_reasoning_budget('2048')==2048
 
 
 def test_formation_preservation_includes_originals_and_history(pilot,tmp_path):
