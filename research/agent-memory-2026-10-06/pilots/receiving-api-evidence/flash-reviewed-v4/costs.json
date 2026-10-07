@@ -1,0 +1,21 @@
+{
+  "qualification": false,
+  "scope": "Four-case role/procedure smoke, not a full comparison or independent narrative qualification.",
+  "calls": 27,
+  "usage": {
+    "prompt_tokens": 156968,
+    "completion_tokens": 271186,
+    "total_tokens": 428154,
+    "cache_hit_tokens": 87168,
+    "cache_miss_tokens": 69800,
+    "reasoning_tokens": 216931
+  },
+  "billed_cost_usd": null,
+  "tariff_estimate_usd": {
+    "off_peak": 0.173443104,
+    "peak": 0.346886208
+  },
+  "embedding_calls": 0,
+  "formation_calls": 0,
+  "source_loss_and_clock_aging": "Same frozen packets; retrieval was not rerun in these smoke tests."
+}

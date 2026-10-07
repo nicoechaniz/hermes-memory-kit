@@ -70,7 +70,7 @@ An answer led by a packet-scoped unknown may also retain brief cited context
 from an older relevant report. That context does not establish the question's
 presupposed event. This exception permits only context/limits facets after the
 leading unknown; it does not replace semantic review or positive requirements.
-Validation protocol `narrative-shape/v2` is frozen in the phase fingerprint, so
+Validation protocol `narrative-shape/v3` is frozen in the phase fingerprint, so
 historical accepted or pending work cannot silently acquire new qualification.
 The prior Flash procedure remains resumable with its preserved implementation
 from commit `eb08e32`; its nine completed candidates and pending review are
@@ -81,6 +81,29 @@ reduces malformed review output and compound-claim overload without certifying
 factual fidelity. The same local validators and independent semantic grading
 still apply even when the provider accepts the schema. The schema hash is
 recorded for each call; the frozen helper hash includes its implementation.
+The explicitly selected `passages/v1` verifier receives numbered original source
+headers and quotation blocks and returns `{id, passage}` references. The adapter
+materializes their exact text, checks that the source is cited by the claim, and
+runs the same assertion coverage, verdict and proof-membership checks. Original
+model responses remain intact beside their canonical quoted review. Selecting a
+valid passage is still not semantic entailment; outside grading checks that the
+chosen passage actually supports the assertion. This avoids making the model
+copy source punctuation without weakening factual or coverage requirements.
+
+The legacy literal mode retains its raw response and separately records a narrow
+syntax repair when a source clause's terminal semicolon was rendered as a period.
+It changes no words, IDs, spans or verdicts, and cannot repair question marks or
+conditional commas. Other invalid quotation text remains rejected.
+
+`receiving_batch.py` runs at most three fictional receivers concurrently with a
+finite invocation call budget and per-question phase checkpoints. Every future
+is observed. Unresolved dispatches cannot be implicitly repeated; exact-parameter
+response reuse retains its original receipt and incurs no new inference call.
+Generation and reviewer effort are frozen separately. The direct DeepSeek
+`none` option explicitly disables thinking and omits reasoning_effort; low/high
+profiles remain unchanged. The four-case non-thinking reviewer smoke failed and
+is not adopted. The current complete trial uses low effort for both roles.
+
 Two evidence-grounded revisions are permitted. Actual candidates, reviewers,
 anchor checks, phases and known provider usage remain recorded separately.
 Native tools absent from the current body restrict new actions, not access to

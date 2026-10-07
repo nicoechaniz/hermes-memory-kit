@@ -22,7 +22,8 @@ def parameters(request, provider, generation_limit=12000, review_limit=32768):
     if (provider not in MODELS or request.get('model') not in MODELS[provider]
             or request.get('format') != 'hmk-fictional-receiving-request/v1'
             or request.get('phase') not in {'narrative_generation', 'narrative_revision', 'narrative_review'}
-            or request.get('reasoning_effort') not in {'low', 'high'}
+            or request.get('reasoning_effort') not in (
+                {'low', 'high', 'none'} if provider == 'deepseek' else {'low', 'high'})
             or request.get('fresh_context') is not True
             or request.get('tools_allowed') is not False
             or request.get('native_memory_allowed') is not False):
@@ -42,7 +43,9 @@ def parameters(request, provider, generation_limit=12000, review_limit=32768):
         reasoning_effort=request['reasoning_effort'], response_format={'type': 'json_object'},
         max_tokens=review_limit if request['phase'] == 'narrative_review' else generation_limit)
     if provider == 'deepseek':
-        value['thinking'] = {'type': 'enabled'}
+        value['thinking'] = {'type': 'disabled' if request['reasoning_effort'] == 'none' else 'enabled'}
+        if request['reasoning_effort'] == 'none':
+            del value['reasoning_effort']
     # No temperature/reasoning budget: the selected reasoning modes do not
     # establish those controls. Local semantic and schema gates are unchanged.
     return value

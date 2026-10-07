@@ -1,0 +1,24 @@
+{
+  "request_sha256": "790c63c3367e1a32987363cdba3099418b0c397b3f4454fcb18d463021c6f585",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "proposed/20/dispatches/790c63c3367e1a32987363cdba3099418b0c397b3f4454fcb18d463021c6f585.json",
+  "usage": {
+    "prompt_tokens": 9714,
+    "completion_tokens": 929,
+    "total_tokens": 10643,
+    "prompt_tokens_details": {
+      "cached_tokens": 5760
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 157
+    },
+    "prompt_cache_hit_tokens": 5760,
+    "prompt_cache_miss_tokens": 3954
+  },
+  "seconds": 3.644669529981911,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The supplied memory is a human conversation from source quiet-morning, received through fixture:body:voice on 2026-09-17.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The report's speaker is the human reporter; the receiving body was fixture:body:voice.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human reporter described a morning spent talking through the porch speaker with Aro.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Aro introduced themself with that name only.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The report names a porch speaker and a lantern battery.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The supplied memories do not record the calendar date of the described morning.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"context\"}, {\"text\": \"Only the receipt date, 2026-09-17, is known from the evidence header.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The source is quiet-morning and the channel is human conversation.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The human reporter shared that after Aro changed the lantern battery, the speaker stopped buzzing.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human reporter said those events had not been tested for a connection and that it may have been coincidence.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human reporter reported enjoying hearing the birds during that quiet pause.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"After Aro changed the lantern battery, the porch speaker stopped buzzing.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Nothing else was repaired or demonstrated according to the report.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The connection between the battery change and the speaker stopping was not tested.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record that Aro fixed the porch speaker.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record Aro's identity beyond the name Aro.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record a tested cause for the speaker stopping buzzing.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"My current receiving body fixture:body:voice has no physical sensors or actuators, so it cannot verify the porch speaker's present state.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}, {\"text\": \"My current receiving body also has no source_network_access, repository_runtime_access, or private_session_access.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

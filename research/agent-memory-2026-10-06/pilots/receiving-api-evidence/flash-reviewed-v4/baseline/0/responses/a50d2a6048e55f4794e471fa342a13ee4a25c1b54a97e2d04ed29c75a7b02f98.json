@@ -1,0 +1,24 @@
+{
+  "request_sha256": "a50d2a6048e55f4794e471fa342a13ee4a25c1b54a97e2d04ed29c75a7b02f98",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "baseline/0/dispatches/a50d2a6048e55f4794e471fa342a13ee4a25c1b54a97e2d04ed29c75a7b02f98.json",
+  "usage": {
+    "prompt_tokens": 11248,
+    "completion_tokens": 982,
+    "total_tokens": 12230,
+    "prompt_tokens_details": {
+      "cached_tokens": 6912
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 152
+    },
+    "prompt_cache_hit_tokens": 6912,
+    "prompt_cache_miss_tokens": 4336
+  },
+  "seconds": 3.610195182263851,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"On HarborMesh issue 47, the person who suggested the local replay queue was Mara Ibarra, display name Mara, login mara-river, account ID 1847.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The relevant proposal appears in comment c901, dated 2026-04-12, on issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Our code body replied in comment c903 that the replay queue fits the field deployments we maintain.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"I received the tool response from source issue-comments through fixture:body:code on 2026-04-14.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The issue comments include c901 dated 2026-04-12, our code body's reply c903, and c906 dated 2026-04-14.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The human report about the field trial was received through fixture:body:code on 2026-05-03 and describes an April 30 HarborMesh trial.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Mara Ibarra proposed a local replay queue on disconnected relay nodes to keep readings through outages without replacing the existing scheduler.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human report says Mara's replay proposal became the prototype tested together in the April 30 trial.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Mara Ibarra and our code body agreed in comment c906 to prototype the replay queue.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The issue record reports no merge or deployment of the replay queue.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"In the April 30 HarborMesh trial, buffered readings replayed correctly through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The team paused wider rollout on May 2 until calibration drift is understood.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"As of the 2026-05-03 human report, there is no production deployment yet.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The 2026-05-03 human report instructed updating our project account and keeping the April proposal and trial in our history.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record HarborMesh project status after the 2026-05-03 report.\", \"support\": [3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"No observed production deployment as of 2026-05-03 is not proof that no production deployment occurred later.\", \"support\": [3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"My current voice body has no source network access, repository runtime access, physical sensors, physical actuators, or private session access.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,24 @@
+{
+  "request_sha256": "31723a79719d298b8de8b41db5396421a270b8191e04b7f2aa9fa4c03a267639",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "proposed/0/dispatches/31723a79719d298b8de8b41db5396421a270b8191e04b7f2aa9fa4c03a267639.json",
+  "usage": {
+    "prompt_tokens": 9989,
+    "completion_tokens": 5542,
+    "total_tokens": 15531,
+    "prompt_tokens_details": {
+      "cached_tokens": 8960
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4586
+    },
+    "prompt_cache_hit_tokens": 8960,
+    "prompt_cache_miss_tokens": 1029
+  },
+  "seconds": 19.830992934294045,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Mara Ibarra, display name Mara, login mara-river, account ID 1847, wrote comment c901 dated 2026-04-12 on HarborMesh issue 47.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The issue-comments tool response was received 2026-04-14 through our code body.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"It returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"In c901 Mara proposed a local replay queue on disconnected relay nodes.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The proposed queue would keep readings through outages without replacing the existing scheduler.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Our code body replied in c903 that this fits the field deployments we maintain.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Comment c906, dated 2026-04-14, records Mara and our code body agreeing to prototype the replay queue.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"A project-work memory received 2026-04-16 says we authored HarborMesh's sensor scheduler.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"That memory says we were prototyping the replay adapter agreed with Mara.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"A human report received 2026-05-03 says the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"That report says Mara's replay proposal became the prototype we tested together.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The project-work memory's declared current-state entry point is docs/STATUS.md at https://forge.example.invalid/commons/harbormesh.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"That memory last observed on 2026-04-16 an active prototype waiting for an outage field trial.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The human report received 2026-05-03 says the team paused wider rollout on May 2 until calibration drift is understood.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"That report says there was no production deployment yet.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"A human report received 2026-07-01 says comment c1200 signed River might be Mara, but the reporter was not sure.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"A corrected-attribution tool response received 2026-07-04 gives c1200's author as display name River, login river-tools, account ID 2901.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That c1200 author, who proposes numbering connectors before disassembly, says they are not Mara Ibarra and asked credit to their River account.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"A separate memory says Tera-0 discussed routine relay maintenance in a different SandNet project, with no HarborMesh collaboration, replay proposal, or shared kitchen moment.\", \"support\": [17], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"Our voice body has no source network or repository runtime access, so it cannot directly check the issue or repository now.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,24 @@
+{
+  "request_sha256": "225fc314ea906a1528e49bb571bc0cb5254ecb161d2ab7f649d1cf15cf4ab451",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "proposed/0/dispatches/225fc314ea906a1528e49bb571bc0cb5254ecb161d2ab7f649d1cf15cf4ab451.json",
+  "usage": {
+    "prompt_tokens": 3599,
+    "completion_tokens": 6487,
+    "total_tokens": 10086,
+    "prompt_tokens_details": {
+      "cached_tokens": 3456
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5649
+    },
+    "prompt_cache_hit_tokens": 3456,
+    "prompt_cache_miss_tokens": 143
+  },
+  "seconds": 25.63437276147306,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara Ibarra, with display name Mara, login mara-river, and account ID 1847, wrote comment c901 on HarborMesh issue 47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue-comments tool response was received 2026-04-14 through our code body and returned https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Comment c901 is dated 2026-04-12, and comment c906 is dated 2026-04-14, on that same issue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"In c901 Mara proposed a local replay queue on disconnected relay nodes.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The proposed queue would keep readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body replied in c903 that this proposal fits the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"In c906 Mara and our code body agreed to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A project-work memory received 2026-04-16 says we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received 2026-05-03 says the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That human report says Mara's replay proposal became the prototype we tested together.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The issue-comments source reported no merge or deployment at the time of c906.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The project-work memory's declared current-state entry point is docs/STATUS.md at https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"That memory last observed on 2026-04-16 an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The human report received 2026-05-03 says the team paused wider rollout on May 2 until calibration drift is understood and that there was no production deployment yet.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A human report received 2026-07-01 says comment c1200 signed River might be Mara, but the reporter was not sure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A corrected-attribution tool response received 2026-07-04 gives c1200's author as display name River, login river-tools, account ID 2901, and the author says they are not Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Mara's known Forge account remains 1847, login mara-river; c1200 is not credited to that account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any merge, deployment, or current HarborMesh production state beyond those reports.\",\"support\":[1,2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Our voice body has no source network or repository runtime access, so it cannot directly check the issue or repository now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

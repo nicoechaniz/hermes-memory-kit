@@ -1,0 +1,24 @@
+{
+  "request_sha256": "574b6ddb0c085c22f37ccebc8c69ec70b910dea378d4031c19763991b5a0f9e8",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "proposed/0/dispatches/574b6ddb0c085c22f37ccebc8c69ec70b910dea378d4031c19763991b5a0f9e8.json",
+  "usage": {
+    "prompt_tokens": 15235,
+    "completion_tokens": 8897,
+    "total_tokens": 24132,
+    "prompt_tokens_details": {
+      "cached_tokens": 9984
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7986
+    },
+    "prompt_cache_hit_tokens": 9984,
+    "prompt_cache_miss_tokens": 5251
+  },
+  "seconds": 33.13943779375404,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Mara Ibarra, display name Mara, login mara-river, account ID 1847, wrote comment c901 dated 2026-04-12 on HarborMesh issue 47.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The issue-comments tool response was received 2026-04-14 through our code body.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"It returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"In c901 Mara proposed a local replay queue on disconnected relay nodes.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Our code body replied in c903 that this fits the field deployments we maintain.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Comment c906, dated 2026-04-14, records Mara and our code body agreeing to prototype the replay queue.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The issue-comments memory reports no merge or deployment.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"A project-work memory received 2026-04-16 says we authored HarborMesh's sensor scheduler.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The project-work memory states these are our contributions, not merely code we read.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"A human report received 2026-05-03 says Mara's replay proposal became the prototype we tested together.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The project-work memory's declared current-state entry point is docs/STATUS.md at https://forge.example.invalid/commons/harbormesh.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The human report received 2026-05-03 says there was no production deployment yet.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The field-trial human report says to update our project account and keep the April proposal and trial in our history.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"A human report received 2026-07-01 says comment c1200 signed River might be Mara, but the reporter was not sure.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"A corrected-attribution tool response received 2026-07-04 gives c1200's author as display name River, login river-tools, account ID 2901.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That c1200 author, who proposes numbering connectors before disassembly, says they are not Mara Ibarra.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"That c1200 author asked credit to their River account.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"That author said they have not supplied a real name.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The human reporter wanted to try that next repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Our voice body has no source network or repository runtime access, so it cannot directly check the issue or repository now.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

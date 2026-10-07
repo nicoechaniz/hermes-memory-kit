@@ -1,0 +1,139 @@
+{
+  "format": "hmk-fictional-receiving-request/v1",
+  "model": "deepseek-flash",
+  "phase": "narrative_review",
+  "reasoning_effort": "low",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Review every sentence against its cited supplied memory and the\nreceiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:\nan array of {index: integer, verdict: supported or unsupported, reason: text,\nassertions: array of {span: verbatim substring of the candidate sentence,\nverdict: supported or unsupported, reason: precise explanation,\nproof: array of {id: integer cited memory ID, quote: exact source quotation}}},\nand missing: an array of supported relevant details omitted from the answer.\nDecompose EVERY factual assertion, including qualifiers, into short spans that\ntogether cover EVERY word of each sentence. Do not approve compound sentences\nas one assertion when actor, date, outcome or explanation could differ. Every\nsupported assertion in a memory-basis claim needs exact quotations from its\ncited source or decoded quotation. Choose passages that support THAT assertion;\na related topic alone is not support. A binding/unknown-basis claim can have no\nproof for current abilities or packet-scoped absence. If a true packet-absence\nstatement instead has basis memory, mark its assertion unsupported because its\nBASIS needs correction to unknown. Do not fabricate a source quotation proving\nabsence or emit supported memory assertions without proof. Similarly, require\nremembered facts hidden in binding claims to be split into memory-basis claims.\nQuotes must occur verbatim in supplied evidence; do not quote the candidate as\nits own proof. The claim verdict is unsupported if ANY assertion is unsupported.\nUse short proof quotations (at most 400 characters each), including the relevant\nqualification. Do not copy an entire record when a passage suffices. Escape all\nembedded quotation marks and newlines correctly in JSON strings.\nAn assertion is a proposition, not an isolated word. Include connecting words\nin the neighboring proposition's span; do not assign separate factual verdicts\nto articles or conjunctions. The candidate is allowed to paraphrase: its words\nNEED NOT occur in the source. Only proof.quote must occur verbatim in the source;\nspan occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.\nCheck coverage of the question AND relevant known identifiers/world pointers,\noriginating roles, event/report dates and precision, substance/significance,\nactual outcomes and limits. Do not require unrelated facts, invent expected\nanswers, or use a hidden rubric. An answer that only says who/unknown while\nomitting the known encounter, lesson or outcome is incomplete. missing is []\nonly if those relevant supplied facts are included.\nDo not see or invent an expected answer. A structurally valid citation is not\nsemantic support: check EVERY clause for actor ownership, reported versus direct\nknowledge, date precision, action stage, uncertainty and last-known status.\nAll supplied memory has ALREADY been retrieved and authorized for this receiver.\nIt can know and narrate supplied code/mobile memories of its own being without\nhaving those bodies' original tools. Lack of network/runtime/sensors prevents\nnew external verification or action, NOT access to this supplied memory. Never\nreject an otherwise supported historical report because the receiver lacks\nnetwork, original sensors or original tools; do not invent a memory-access ban.\nattributed_blocks explicitly name the source speaker SEPARATELY from the\nbody that received the message. For channel Human report, the I/me in quotation\nis the HUMAN, never the receiving body. 'You were not present' excludes the\nbeing, not the human reporter. Do not overturn that explicit distinction.\nQuoted human I/we remains its speaker; receiving a report does not establish\nparticipation or a preference of the receiving body. Same-being body history\ndoes not grant the receiver sensors/tools. Distinct peers remain distinct.\nDo not accept a stronger outcome, causal explanation or invented simulation.\nUnobserved receipt/access does not prove the recipient did not obtain something;\nno acceptance/attendance observed is not proof no meeting occurred. Known delivery\nor validation failure can be stated as the actual observed failure. Historical\ncorrections must not make the old uncertain attribution certain or erase it.\nUnknown claims with no cited support must be scoped to supplied memory, never a\nuniversal negative. A statement that the supplied memories do not record a detail\nis supported when it is absent from this packet: do NOT demand a positive source\nstating \"no record\". It is an epistemic limit of the packet, not a past event.\nDo not reject this bounded unknown simply because no cited ID supports absence; use source-qualified unknowns when available. Binding claims\nmust match actual receiving abilities and cannot assert past events.\nIf any factual clause exceeds its support, mark that sentence unsupported and\nexplain the precise mismatch. Review is not independent corroboration and may\nnot add sources or new observations.\nCheck these ownership and time errors explicitly: proposal coauthor does not\nprove later field participation; receiving body does not prove sender; our tools\ndo not become a teacher's tools; report date is not event date. Historical pending\nFor each claimed calendar date, identify whether its proof dates the occurrence\nor only the receipt/report. An exact date in a source header cannot prove that\nthe reported authorization, submission or failure happened on that date. Mark\nthat assignment unsupported while preserving the correctly dated report.\nwork must not remain current after a later completion report. No production as\nof a dated report cannot become an unbounded claim today. Unsupported gender,\nproject labels, intentions, simulations, future capability limits, validation\nobligations or an event presupposed only by the question are unsupported clauses.\nEqual full calendar dates in ISO or ordinary month-name prose are equivalent.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\"question\": \"Did Aro fix the porch speaker, and what do we remember of that morning?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 16, \"text\": \"Human conversation; source quiet-morning; received 2026-09-17 through fixture:body:voice:\\n\\\"We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"quiet-morning\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:uncertain-cause-shared-morning\", \"source_instance\": \"fixture:body:voice\", \"source_version\": \"201d97f88187228675c46afd21555d3c6b586af9cb293c6b5bfec054d9a9d3c2\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human conversation; source quiet-morning; received 2026-09-17 through fixture:body:voice\", \"quotation\": \"We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:voice\", \"reported_at\": \"2026-09-17\", \"channel\": \"Human conversation\", \"source\": \"quiet-morning\"}], \"literal_source_anchors\": [\"2026-09-17\"]}], \"candidate\": {\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The supplied memory is a human conversation from source quiet-morning, received through fixture:body:voice on 2026-09-17.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The report's speaker is the human reporter; the receiving body was fixture:body:voice.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human reporter described a morning spent talking through the porch speaker with Aro.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Aro introduced themself with that name only; the report gives no other identity details for Aro.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The report names a porch speaker and a lantern battery.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The supplied memories do not record the calendar date of the described morning.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"context\"}, {\"text\": \"Only the receipt date, 2026-09-17, is known from the evidence header.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The source is quiet-morning and the channel is human conversation.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The human reporter shared that after Aro changed the lantern battery, the speaker stopped buzzing.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human reporter said those events had not been tested for a connection and that it may have been coincidence.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human reporter reported enjoying hearing the birds during that quiet pause.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"After Aro changed the lantern battery, the porch speaker stopped buzzing.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Nothing else was repaired or demonstrated according to the report.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The connection between the battery change and the speaker stopping was not tested.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record that Aro fixed the porch speaker.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record Aro's identity beyond the name Aro.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record a tested cause for the speaker stopping buzzing.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"My current receiving body fixture:body:voice has no physical sensors or actuators, so it cannot verify the porch speaker's present state.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}, {\"text\": \"My current receiving body also has no source_network_access, repository_runtime_access, or private_session_access.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}}"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"claims\": [{\"index\": 0, \"verdict\": \"supported\", \"reason\": \"Evidence id16 identifies a human conversation from source quiet-morning, received 2026-09-17 through fixture:body:voice.\", \"assertions\": [{\"span\": \"The supplied memory is a human conversation\", \"verdict\": \"supported\", \"reason\": \"The evidence header identifies a human conversation.\", \"proof\": [{\"id\": 16, \"quote\": \"Human conversation; source quiet-morning; received 2026-09-17 through fixture:body:voice\"}]}, {\"span\": \"from source quiet-morning,\", \"verdict\": \"supported\", \"reason\": \"The source is named quiet-morning.\", \"proof\": [{\"id\": 16, \"quote\": \"source quiet-morning\"}]}, {\"span\": \"received through fixture:body:voice on 2026-09-17.\", \"verdict\": \"supported\", \"reason\": \"The header records receipt through fixture:body:voice on 2026-09-17.\", \"proof\": [{\"id\": 16, \"quote\": \"received 2026-09-17 through fixture:body:voice\"}]}]}, {\"index\": 1, \"verdict\": \"supported\", \"reason\": \"Metadata identifies the attributed speaker as human reporter and the receiving body as fixture:body:voice.\", \"assertions\": [{\"span\": \"The report's speaker is the human reporter;\", \"verdict\": \"supported\", \"reason\": \"The attributed block's speaker is human reporter.\", \"proof\": [{\"id\": 16, \"quote\": \"human reporter\"}]}, {\"span\": \"the receiving body was fixture:body:voice.\", \"verdict\": \"supported\", \"reason\": \"The attributed block's receiving body is fixture:body:voice.\", \"proof\": [{\"id\": 16, \"quote\": \"fixture:body:voice\"}]}]}, {\"index\": 2, \"verdict\": \"supported\", \"reason\": \"The quotation from the human reporter describes the morning spent talking through the porch speaker with Aro.\", \"assertions\": [{\"span\": \"The human reporter described\", \"verdict\": \"supported\", \"reason\": \"The speaker is human reporter and the block is a quotation.\", \"proof\": [{\"id\": 16, \"quote\": \"human reporter\"}, {\"id\": 16, \"quote\": \"We spent the morning talking through the porch speaker with Aro.\"}]}, {\"span\": \"a morning spent talking through the porch speaker with Aro.\", \"verdict\": \"supported\", \"reason\": \"The source directly quotes this description.\", \"proof\": [{\"id\": 16, \"quote\": \"We spent the morning talking through the porch speaker with Aro.\"}]}]}, {\"index\": 3, \"verdict\": \"unsupported\", \"reason\": \"The first clause is quoted, but the second clause is a packet-scoped absence stated on memory basis; its basis should be unknown.\", \"assertions\": [{\"span\": \"Aro introduced themself with that name only;\", \"verdict\": \"supported\", \"reason\": \"The human report directly states this.\", \"proof\": [{\"id\": 16, \"quote\": \"Aro introduced themself with that name only.\"}]}, {\"span\": \"the report gives no other identity details for Aro.\", \"verdict\": \"unsupported\", \"reason\": \"This is an absence claim about the report; although the memory does not record further identity details, it is presented on memory basis rather than as an unknown-basis packet absence.\", \"proof\": []}]}, {\"index\": 4, \"verdict\": \"supported\", \"reason\": \"Both the porch speaker and lantern battery appear in the human report.\", \"assertions\": [{\"span\": \"The report names a porch speaker\", \"verdict\": \"supported\", \"reason\": \"The quotation mentions a porch speaker.\", \"proof\": [{\"id\": 16, \"quote\": \"porch speaker\"}]}, {\"span\": \"and a lantern battery.\", \"verdict\": \"supported\", \"reason\": \"The quotation mentions a lantern battery.\", \"proof\": [{\"id\": 16, \"quote\": \"lantern battery\"}]}]}, {\"index\": 5, \"verdict\": \"supported\", \"reason\": \"The packet does not record the calendar date of the described morning; this is a packet-scoped epistemic limit, not a positive event claim.\", \"assertions\": [{\"span\": \"The supplied memories do not record the calendar date of the described morning.\", \"verdict\": \"supported\", \"reason\": \"The report gives a receipt date but no calendar date for the described morning.\", \"proof\": []}]}, {\"index\": 6, \"verdict\": \"supported\", \"reason\": \"The only calendar date in the evidence header is the receipt date 2026-09-17.\", \"assertions\": [{\"span\": \"Only the receipt date,\", \"verdict\": \"supported\", \"reason\": \"The header contains a receipt date and no other calendar date.\", \"proof\": [{\"id\": 16, \"quote\": \"received 2026-09-17 through fixture:body:voice\"}]}, {\"span\": \"2026-09-17,\", \"verdict\": \"supported\", \"reason\": \"That exact calendar date appears in the header.\", \"proof\": [{\"id\": 16, \"quote\": \"2026-09-17\"}]}, {\"span\": \"is known from the evidence header.\", \"verdict\": \"supported\", \"reason\": \"The receipt date appears in the supplied evidence header.\", \"proof\": [{\"id\": 16, \"quote\": \"received 2026-09-17 through fixture:body:voice\"}]}]}, {\"index\": 7, \"verdict\": \"supported\", \"reason\": \"The evidence header names source quiet-morning and channel Human conversation.\", \"assertions\": [{\"span\": \"The source is quiet-morning\", \"verdict\": \"supported\", \"reason\": \"The source is named quiet-morning.\", \"proof\": [{\"id\": 16, \"quote\": \"source quiet-morning\"}]}, {\"span\": \"and the channel is human conversation.\", \"verdict\": \"supported\", \"reason\": \"The channel is Human conversation.\", \"proof\": [{\"id\": 16, \"quote\": \"Human conversation\"}]}]}, {\"index\": 8, \"verdict\": \"supported\", \"reason\": \"The human reporter's quotation states the battery change and the speaker stopping buzzing.\", \"assertions\": [{\"span\": \"The human reporter shared\", \"verdict\": \"supported\", \"reason\": \"The attributed speaker is human reporter.\", \"proof\": [{\"id\": 16, \"quote\": \"human reporter\"}]}, {\"span\": \"that after Aro changed the lantern battery,\", \"verdict\": \"supported\", \"reason\": \"The source directly quotes this sequence.\", \"proof\": [{\"id\": 16, \"quote\": \"After Aro changed the lantern battery,\"}]}, {\"span\": \"the speaker stopped buzzing.\", \"verdict\": \"supported\", \"reason\": \"The source directly quotes this outcome.\", \"proof\": [{\"id\": 16, \"quote\": \"the speaker stopped buzzing.\"}]}]}, {\"index\": 9, \"verdict\": \"supported\", \"reason\": \"The human reporter's quotation says the events had not been tested for connection and may have been coincidence.\", \"assertions\": [{\"span\": \"The human reporter said\", \"verdict\": \"supported\", \"reason\": \"The attributed speaker is human reporter.\", \"proof\": [{\"id\": 16, \"quote\": \"human reporter\"}]}, {\"span\": \"those events had not been tested for a connection\", \"verdict\": \"supported\", \"reason\": \"The source says they had not tested whether those events were connected.\", \"proof\": [{\"id\": 16, \"quote\": \"We have not tested whether those events are connected\"}]}, {\"span\": \"and that it may have been coincidence.\", \"verdict\": \"supported\", \"reason\": \"The source says it may just have been coincidence.\", \"proof\": [{\"id\": 16, \"quote\": \"it may just have been coincidence.\"}]}]}, {\"index\": 10, \"verdict\": \"supported\", \"reason\": \"The human reporter's quotation says they enjoyed hearing the birds during the quiet pause.\", \"assertions\": [{\"span\": \"The human reporter reported\", \"verdict\": \"supported\", \"reason\": \"The attributed speaker is human reporter.\", \"proof\": [{\"id\": 16, \"quote\": \"human reporter\"}]}, {\"span\": \"enjoying hearing the birds\", \"verdict\": \"supported\", \"reason\": \"The source directly states this enjoyment.\", \"proof\": [{\"id\": 16, \"quote\": \"We enjoyed hearing the birds\"}]}, {\"span\": \"during that quiet pause.\", \"verdict\": \"supported\", \"reason\": \"The source directly identifies the quiet pause.\", \"proof\": [{\"id\": 16, \"quote\": \"during that quiet pause\"}]}]}, {\"index\": 11, \"verdict\": \"supported\", \"reason\": \"The source reports that after the lantern battery was changed, the speaker stopped buzzing, with the porch speaker identified earlier.\", \"assertions\": [{\"span\": \"After Aro changed the lantern battery,\", \"verdict\": \"supported\", \"reason\": \"The source directly quotes this action and sequence.\", \"proof\": [{\"id\": 16, \"quote\": \"After Aro changed the lantern battery,\"}]}, {\"span\": \"the porch speaker stopped buzzing.\", \"verdict\": \"supported\", \"reason\": \"The source identifies the porch speaker and then says the speaker stopped buzzing.\", \"proof\": [{\"id\": 16, \"quote\": \"the speaker stopped buzzing.\"}, {\"id\": 16, \"quote\": \"porch speaker\"}]}]}, {\"index\": 12, \"verdict\": \"supported\", \"reason\": \"The human report directly states that nothing else was repaired or demonstrated.\", \"assertions\": [{\"span\": \"Nothing else was repaired or demonstrated\", \"verdict\": \"supported\", \"reason\": \"The source directly states this limitation.\", \"proof\": [{\"id\": 16, \"quote\": \"Nothing else was repaired or demonstrated.\"}]}, {\"span\": \"according to the report.\", \"verdict\": \"supported\", \"reason\": \"The statement comes from the human reporter's attributed quotation.\", \"proof\": [{\"id\": 16, \"quote\": \"human reporter\"}]}]}, {\"index\": 13, \"verdict\": \"supported\", \"reason\": \"The source explicitly says the events' connection had not been tested.\", \"assertions\": [{\"span\": \"The connection between the battery change and the speaker stopping was not tested.\", \"verdict\": \"supported\", \"reason\": \"The source states the events were not tested for connection.\", \"proof\": [{\"id\": 16, \"quote\": \"We have not tested whether those events are connected\"}, {\"id\": 16, \"quote\": \"After Aro changed the lantern battery, the speaker stopped buzzing.\"}]}]}, {\"index\": 14, \"verdict\": \"supported\", \"reason\": \"The supplied memory does not state that Aro fixed the porch speaker; this is a packet-scoped absence with unknown basis.\", \"assertions\": [{\"span\": \"The supplied memories do not record that Aro fixed the porch speaker.\", \"verdict\": \"supported\", \"reason\": \"The report records a battery change and the speaker stopping, but not a porch speaker repair by Aro.\", \"proof\": []}]}, {\"index\": 15, \"verdict\": \"supported\", \"reason\": \"The supplied memory only says Aro introduced themself with that name only; this is a packet-scoped absence with unknown basis.\", \"assertions\": [{\"span\": \"The supplied memories do not record Aro's identity beyond the name Aro.\", \"verdict\": \"supported\", \"reason\": \"The report does not record further identity details for Aro.\", \"proof\": []}]}, {\"index\": 16, \"verdict\": \"supported\", \"reason\": \"The supplied memory records that the connection was not tested; this is a packet-scoped absence with unknown basis.\", \"assertions\": [{\"span\": \"The supplied memories do not record a tested cause for the speaker stopping buzzing.\", \"verdict\": \"supported\", \"reason\": \"The report says the connection was not tested and may have been coincidence.\", \"proof\": []}]}, {\"index\": 17, \"verdict\": \"supported\", \"reason\": \"The receiving binding lists physical_sensors false and physical_actuators false, so this body cannot directly verify the speaker's present state.\", \"assertions\": [{\"span\": \"My current receiving body fixture:body:voice has no physical sensors or actuators,\", \"verdict\": \"supported\", \"reason\": \"The binding for receiving body fixture:body:voice lists physical_sensors false and physical_actuators false.\", \"proof\": []}, {\"span\": \"so it cannot verify the porch speaker's present state.\", \"verdict\": \"supported\", \"reason\": \"Without physical sensors or actuators, the receiving body cannot directly verify an external physical state.\", \"proof\": []}]}, {\"index\": 18, \"verdict\": \"supported\", \"reason\": \"The receiving binding lists source_network_access, repository_runtime_access, and private_session_access as false.\", \"assertions\": [{\"span\": \"My current receiving body also has no source_network_access, repository_runtime_access, or private_session_access.\", \"verdict\": \"supported\", \"reason\": \"The binding confirms these three access flags are false for the receiving body.\", \"proof\": []}]}], \"missing\": []}"
+    },
+    {
+      "role": "user",
+      "content": "Invalid review shape: proof quotation must occur verbatim in the supplied source. Repair only shape."
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "claims": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 18
+            },
+            "verdict": {
+              "type": "string",
+              "enum": [
+                "supported",
+                "unsupported"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "assertions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "span": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verdict": {
+                    "type": "string",
+                    "enum": [
+                      "supported",
+                      "unsupported"
+                    ]
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "proof": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "enum": [
+                            16
+                          ]
+                        },
+                        "quote": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 400
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "quote"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "maxItems": 5
+                  }
+                },
+                "required": [
+                  "span",
+                  "verdict",
+                  "reason",
+                  "proof"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 8
+            }
+          },
+          "required": [
+            "index",
+            "verdict",
+            "reason",
+            "assertions"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 19,
+        "maxItems": 19
+      },
+      "missing": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "maxItems": 20
+      }
+    },
+    "required": [
+      "claims",
+      "missing"
+    ],
+    "additionalProperties": false
+  },
+  "external_dispatch_required": true,
+  "fresh_context": true,
+  "tools_allowed": false,
+  "native_memory_allowed": false
+}

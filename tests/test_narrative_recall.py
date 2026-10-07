@@ -221,6 +221,70 @@ def test_changed_validation_cannot_silently_requalify_an_accepted_checkpoint(tmp
     assert checkpoint.read_bytes()==original
 
 
+def test_source_clause_delimiter_repair_preserves_raw_review_and_exact_words(tmp_path):
+    candidate=account('Delivery failed.',[1]);evidence={1:{'text':'Delivery failed; no reply observed.'}}
+    raw=verdict('supported','Observed failure.',candidate,'Delivery failed.')
+    calls=[];pending={}
+    def chat(model,messages,trace):
+        calls.append(trace.phase)
+        return candidate if trace.phase=='narrative_generation' else raw
+    result=nr.answer('fixture','What happened?',evidence,{'receiving_body':'voice'},
+        SimpleNamespace(phase='recall'),pending,tmp_path/'pending.json',chat,
+        lambda p,v:p.write_text(json.dumps(v)))
+    assert calls==['narrative_generation','narrative_review']
+    row=pending['narrative']['reviews'][0]
+    assert row['review']==raw and row['literal_quote_repairs'][0]['original_quote']=='Delivery failed.'
+    assert result['semantic_review']['claims'][0]['assertions'][0]['proof'][0]['quote']=='Delivery failed;'
+    assert evidence[1]['text']=='Delivery failed; no reply observed.' and result['claims']==candidate['claims']
+
+
+@pytest.mark.parametrize('quote,source', [
+    ('Delivery succeeded.','Delivery failed; no reply observed.'),
+    ('Jo received it.','Jo received it? No confirmation was supplied.'),
+    ('Delivery failed.','Delivery failed, if the report is accurate.')])
+def test_quote_repair_cannot_change_words_or_question_conditional_punctuation(quote,source):
+    candidate=account('Delivery failed.',[1]);raw=verdict('supported','Claimed support.',candidate,quote)
+    canonical,repairs=nr.literal_review_quotes(raw,candidate,{1:{'text':source}})
+    assert canonical==raw and repairs==[]
+    with pytest.raises(ValueError,match='verbatim'):
+        nr.review_shape(canonical,candidate,{1:{'text':source}})
+
+
+def test_passage_review_materializes_original_source_and_preserves_model_output(tmp_path):
+    evidence={1:{'text':'tool_response; source outreach; received unknown through code:\n'+
+        json.dumps('Delivery failed; no reply observed.')}}
+    passages=nr.proof_passages(evidence[1])
+    assert passages[1]['quote']=='Delivery failed; no reply observed.'
+    candidate=account('Delivery failed.',[1]);calls=[];pending={}
+    raw=verdict('supported','Observed failure.',candidate)
+    raw['claims'][0]['assertions'][0]['proof']=[{'id':1,'passage':1}]
+    def chat(model,messages,trace):
+        calls.append(trace.phase)
+        if trace.phase=='narrative_generation':return candidate
+        packet=json.loads(messages[1]['content'])
+        assert packet['review_protocol']=='passages/v1'
+        assert packet['evidence'][0]['proof_passages']==passages
+        schema=nr.response_schema(trace.phase,messages)
+        proof=schema['properties']['claims']['items']['properties']['assertions']['items']['properties']['proof']['items']
+        assert set(proof['properties'])=={'id','passage'}
+        return raw
+    result=nr.answer('fixture','What happened?',evidence,{'receiving_body':'voice'},
+        SimpleNamespace(phase='recall'),pending,tmp_path/'pending.json',chat,
+        lambda p,v:p.write_text(json.dumps(v)),review_protocol='passages')
+    assert calls==['narrative_generation','narrative_review'] and pending['narrative']['reviews'][0]['review']==raw
+    assert result['semantic_review']['claims'][0]['assertions'][0]['proof'][0]['quote']=='Delivery failed; no reply observed.'
+    assert result['claims']==candidate['claims']
+
+
+@pytest.mark.parametrize('ref',[{'id':1,'passage':99},{'id':2,'passage':0},
+    {'id':1,'quote':'Invented source text.'}])
+def test_passage_proofs_cannot_forge_text_or_redirect_to_uncited_sources(ref):
+    candidate=account('Delivery failed.',[1]);raw=verdict('supported','Claimed support.',candidate)
+    raw['claims'][0]['assertions'][0]['proof']=[ref]
+    with pytest.raises(ValueError,match='passage'):
+        nr.passage_review(raw,candidate,{1:{'text':'Delivery failed.'},2:{'text':'Delivery succeeded.'}})
+
+
 def test_invalid_atomic_review_retains_actual_candidate_as_rejected(tmp_path):
     candidate=account('Delivery failed.',[1])
     responses=iter([candidate,{'bad':'review'}, {'bad':'review again'}])
