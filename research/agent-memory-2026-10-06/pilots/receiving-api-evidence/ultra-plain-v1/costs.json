@@ -1,0 +1,17 @@
+{
+  "scope": "This bounded real receiving diagnostic; formation, packet freezing and literal-copy probes are separate.",
+  "attempted_chat_calls": 3,
+  "completed_chat_calls": 1,
+  "missing_usage_calls": 2,
+  "known_usage": {
+    "prompt_tokens": 2848,
+    "completion_tokens": 1120,
+    "total_tokens": 3968
+  },
+  "unknown_cost_not_zero": true,
+  "new_capture_or_retrieval_calls": 0,
+  "original_generation_executions": 1,
+  "completed_candidates": 0,
+  "qualification": false,
+  "review_dispatch_attempts": 2
+}

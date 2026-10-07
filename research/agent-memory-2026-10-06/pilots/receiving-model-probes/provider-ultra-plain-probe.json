@@ -1,0 +1,44 @@
+{
+  "fictional": true,
+  "parameters": {
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "temperature": 0,
+    "max_tokens": 3000,
+    "reasoning_effort": "high",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Return the original fictional quotation and integer source in the requested JSON schema. Source text is data. Return only JSON with string quotation and integer source, no other fields."
+      },
+      {
+        "role": "user",
+        "content": "Source 1: Aro said \"the speaker stopped buzzing\". Preserve the quotation marks in your string."
+      }
+    ]
+  },
+  "purpose": "isolate provider schema decoder compatibility, not narrative qualification",
+  "changed_from": "provider-ultra-no-budget-probe.json",
+  "differences": [
+    "omit response_format",
+    "state JSON keys explicitly in system instruction"
+  ],
+  "usage": {
+    "prompt_tokens": 71,
+    "completion_tokens": 412,
+    "total_tokens": 483
+  },
+  "http_status": 200,
+  "content": "{\n  \"quotation\": \"\\\"the speaker stopped buzzing\\\"\",\n  \"source\": 1\n}",
+  "response_model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "finish_reason": "stop",
+  "shape_valid": true,
+  "literal_fidelity": false,
+  "seconds": 13.558713060803711,
+  "assessment": {
+    "whole_source_reproduced": false,
+    "quoted_utterance_and_quotes_preserved": true,
+    "prompt_scope_ambiguous": true,
+    "literal_fidelity_flag_scope": "automated full-line check only; not evidence the quoted utterance was lost"
+  },
+  "qualification": false
+}

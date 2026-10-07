@@ -160,3 +160,10 @@ fresh-context requests and preserves externally observed responses without
 dispatching a model or reading a rubric in the receiving process. This enables
 a controlled narrative comparison on identical actual evidence; it does not
 qualify a new model's planner, provide a native dispatcher or establish recall.
+
+The [receiving API diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-receiving-api-diagnostic.md)
+isolates an observed Ultra provider-schema failure and supplies a finite direct
+text-only dispatcher with unchanged local criteria. Its actual baseline candidate
+still has narrative gaps; review timed out and its explicit retry returned 503.
+Raw output, unknown costs and the saved review phase remain preserved. This is
+not a complete receiving comparison or stage-two qualification.

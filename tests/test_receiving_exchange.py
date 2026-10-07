@@ -116,6 +116,20 @@ def test_durable_response_replay_is_one_observed_call_with_unknown_usage(exchang
     assert len(trace)==1 and trace[0]['usage'] is None
 
 
+def test_truncated_external_content_is_not_accepted_even_if_valid_json(exchange,tmp_path):
+    out=tmp_path/'receiving';out.mkdir()
+    transport=exchange.FileExchange(out,'xhigh')
+    trace=exchange.pilot.Trace(out/'trace.json');trace.phase='narrative_generation'
+    messages=[{'role':'system','content':'Fictional'},
+              {'role':'user','content':json.dumps(packet(exchange)['context'])}]
+    with pytest.raises(exchange.ResponsePending) as error:transport('fixture-model',messages,trace)
+    response(exchange,out,Path(str(error.value)),{'claims':[]},finish_reason='length')
+    result=transport('fixture-model',messages,trace)
+    assert result['_finish_reason']=='length' and result['_invalid_json']=='{"claims": []}'
+    assert trace[0]['response_content']=='{"claims": []}'
+    assert trace[0]['parse_error']=='incomplete_response' and trace[0]['usage'] is None
+
+
 def test_changed_model_or_frozen_packet_cannot_reuse_pending_candidate(exchange,tmp_path):
     root=tmp_path/'packets';write_packets(exchange,root);out=tmp_path/'receiving'
     exchange.receive(root,out,'fixture-model');before=(out/'pending.json').read_bytes()
