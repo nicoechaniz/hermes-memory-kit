@@ -231,6 +231,29 @@ def test_general_priors_are_neutral_and_research_prefix_must_be_nonempty(mc, mon
     assert mc.source_domain_prior('coupling', {'shelf': 'library', 'source_path': '/fixture/papers/a'}) == 0
 
 
+def test_hybrid_preserves_independent_old_textual_evidence_without_noise(mc, monkeypatch):
+    old = mc.add_text('episodes', 'Prototype agreement',
+                      'A person proposed a relay queue in an issue. We agreed to prototype it.')
+    clock = mc.now_ts()
+    monkeypatch.setattr(mc, 'now_ts', lambda: clock + 10 * 365 * 86400)
+    recent = mc.add_text('episodes', 'Recent maintenance', 'Routine relay maintenance.')
+    noise = mc.add_text('episodes', 'Irrelevant', 'Routine maintenance repeated many times.', importance=1)
+    # A poor embedding must not veto independently sufficient content. A high
+    # lexical ranking without actual cue overlap is not a relevance floor.
+    monkeypatch.setattr(mc, 'semantic_search', lambda *a, **k: [
+        dict(mc._read_chapter(old), semantic_score=0.19),
+        dict(mc._read_chapter(recent), semantic_score=0.3),
+        dict(mc._read_chapter(noise), semantic_score=0.001)])
+    monkeypatch.setattr(mc, 'rerank_provider_default', lambda: 'none')
+    result = mc.hybrid_pack('person interesting issue relay project', threshold=0.4, budget_tokens=1500)
+    assert old in {r['id'] for r in result['items']}
+    assert noise not in {r['id'] for r in result['items']}
+    assert all(r['score'] >= 0.4 for r in result['items'])
+    assert result['used_tokens_estimate'] <= 1500
+    assert mc._read_chapter(old)['updated_at'] == clock
+    assert mc.hybrid_pack('unknown absent nonexistent', threshold=0.4)['null_retrieval']
+
+
 def test_project_can_recover_attributed_incoming_episode(mc):
     project = mc.add_text('library', 'HarborMesh', 'We maintain the scheduler.')
     episode = mc.add_text('episodes', 'Mara encounter', 'Mara proposed replay.',
