@@ -1,0 +1,1409 @@
+{
+  "fictional": true,
+  "format": "hmk-stage-one-evidence/v1",
+  "runs": {
+    "stage-one-supported": {
+      "conditions": {
+        "commit": "f0938c4d82f68cbd960006e37613e9b271df72ae",
+        "runner_sha256": "0cd02759d365b9bc3dadf7ca1fe2fede6e269a52d47ec070b9fb8756fa7b2886",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+        "reasoning_effort": "low",
+        "guidance_hashes": {
+          "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+          "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+        },
+        "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+        "retrieval_threshold": 0.4,
+        "pack_budget": 1500,
+        "pack_limit": 5,
+        "consolidate": false,
+        "embedding_config": {
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "output_dimensionality": null
+        },
+        "rerank_provider": "none",
+        "retrieval_profile": "general",
+        "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "recall_contract": "five-field-support/v4-exact-evidence",
+        "review_capture": false,
+        "source_blocks": true,
+        "formation_origin_conditions": {
+          "commit": "04142a81e2edf3b0bd82610497096909e0320bb9",
+          "runner_sha256": "7ec40166aa4dba7479b2a9437d035ead0b0aaee83283a8274d27bc0c0c3937c2",
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+          "reasoning_effort": "low",
+          "guidance_hashes": {
+            "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+            "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+          },
+          "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+          "retrieval_threshold": 0.4,
+          "pack_budget": 1500,
+          "pack_limit": 5,
+          "consolidate": false,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "rerank_provider": "none",
+          "retrieval_profile": "general",
+          "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+          "recall_contract": "five-field-evidence/v2",
+          "review_capture": false,
+          "source_blocks": true,
+          "resumes": [
+            {
+              "commit": "49306ec38c9e4bb137e3d35f1e8b378b002be097",
+              "runner_sha256": "d0bc787cea2cceb62584ca38fe0f5ececa5fcca85f9c689fe778cd8d56b18896",
+              "model": "nvidia/nemotron-3-super-120b-a12b",
+              "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+              "reasoning_effort": "low",
+              "guidance_hashes": {
+                "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+                "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+              },
+              "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+              "retrieval_threshold": 0.4,
+              "pack_budget": 1500,
+              "pack_limit": 5,
+              "consolidate": false,
+              "embedding_config": {
+                "provider": "nvidia",
+                "model": "nvidia/nemotron-3-embed-1b",
+                "output_dimensionality": null
+              },
+              "rerank_provider": "none",
+              "retrieval_profile": "general",
+              "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+              "recall_contract": "five-field-evidence/v2",
+              "review_capture": false,
+              "source_blocks": true
+            }
+          ]
+        },
+        "resumes": [
+          {
+            "commit": "f0938c4d82f68cbd960006e37613e9b271df72ae",
+            "runner_sha256": "0cd02759d365b9bc3dadf7ca1fe2fede6e269a52d47ec070b9fb8756fa7b2886",
+            "model": "nvidia/nemotron-3-super-120b-a12b",
+            "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+            "reasoning_effort": "low",
+            "guidance_hashes": {
+              "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+              "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+            },
+            "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+            "retrieval_threshold": 0.4,
+            "pack_budget": 1500,
+            "pack_limit": 5,
+            "consolidate": false,
+            "embedding_config": {
+              "provider": "nvidia",
+              "model": "nvidia/nemotron-3-embed-1b",
+              "output_dimensionality": null
+            },
+            "rerank_provider": "none",
+            "retrieval_profile": "general",
+            "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+            "recall_contract": "five-field-support/v4-exact-evidence",
+            "review_capture": false,
+            "source_blocks": true,
+            "formation_origin_conditions": {
+              "commit": "04142a81e2edf3b0bd82610497096909e0320bb9",
+              "runner_sha256": "7ec40166aa4dba7479b2a9437d035ead0b0aaee83283a8274d27bc0c0c3937c2",
+              "model": "nvidia/nemotron-3-super-120b-a12b",
+              "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+              "reasoning_effort": "low",
+              "guidance_hashes": {
+                "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+                "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+              },
+              "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+              "retrieval_threshold": 0.4,
+              "pack_budget": 1500,
+              "pack_limit": 5,
+              "consolidate": false,
+              "embedding_config": {
+                "provider": "nvidia",
+                "model": "nvidia/nemotron-3-embed-1b",
+                "output_dimensionality": null
+              },
+              "rerank_provider": "none",
+              "retrieval_profile": "general",
+              "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+              "recall_contract": "five-field-evidence/v2",
+              "review_capture": false,
+              "source_blocks": true,
+              "resumes": [
+                {
+                  "commit": "49306ec38c9e4bb137e3d35f1e8b378b002be097",
+                  "runner_sha256": "d0bc787cea2cceb62584ca38fe0f5ececa5fcca85f9c689fe778cd8d56b18896",
+                  "model": "nvidia/nemotron-3-super-120b-a12b",
+                  "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+                  "reasoning_effort": "low",
+                  "guidance_hashes": {
+                    "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+                    "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+                  },
+                  "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+                  "retrieval_threshold": 0.4,
+                  "pack_budget": 1500,
+                  "pack_limit": 5,
+                  "consolidate": false,
+                  "embedding_config": {
+                    "provider": "nvidia",
+                    "model": "nvidia/nemotron-3-embed-1b",
+                    "output_dimensionality": null
+                  },
+                  "rerank_provider": "none",
+                  "retrieval_profile": "general",
+                  "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+                  "recall_contract": "five-field-evidence/v2",
+                  "review_capture": false,
+                  "source_blocks": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "results": [
+        {
+          "variant": "baseline",
+          "selected_count": 8,
+          "questions": 16,
+          "llm_calls": 34,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106931929,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        },
+        {
+          "variant": "proposed",
+          "selected_count": 11,
+          "questions": 16,
+          "llm_calls": 33,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106932004,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "file": "stage-one-supported-baseline.json",
+          "sha256": "e40da5172758e383b40943f8a36fb6e668db022bba10f2a70dc44b5f7608caac",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 14,
+                "completed": 14,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 52717,
+                "completion_tokens": 15453,
+                "provider_total_tokens": 68170,
+                "elapsed_seconds": 191.825
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 34,
+                "completed": 33,
+                "failed": 1,
+                "unknown_usage_attempts": 1,
+                "prompt_tokens": 36033,
+                "completion_tokens": 18017,
+                "provider_total_tokens": 54050,
+                "elapsed_seconds": 228.938
+              }
+            },
+            "raw_utf8_bytes": 5114,
+            "spr_utf8_bytes": 3998,
+            "stored_chapter_tokens_estimate": 954,
+            "retained_preimages": 2,
+            "native_preimage_raw_utf8_bytes": 1735,
+            "receiver_database_allocated_bytes": 679936,
+            "pack_tokens_estimate": 23991,
+            "expansion_characters": 71411,
+            "expanded_json_tokens_estimate": 17848,
+            "exact_answer_evidence_utf8_bytes": 14699,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 8,
+          "receiving_questions": 16
+        },
+        "proposed": {
+          "file": "stage-one-supported-proposed.json",
+          "sha256": "0b0d7fe65858cc77f0e904aa7bfbfaee7392e7f28da9f4b7d82ffebc88e4f6b6",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 15,
+                "completed": 15,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 71518,
+                "completion_tokens": 24493,
+                "provider_total_tokens": 96011,
+                "elapsed_seconds": 267.086
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 33,
+                "completed": 32,
+                "failed": 1,
+                "unknown_usage_attempts": 1,
+                "prompt_tokens": 49678,
+                "completion_tokens": 20126,
+                "provider_total_tokens": 69804,
+                "elapsed_seconds": 266.981
+              }
+            },
+            "raw_utf8_bytes": 6792,
+            "spr_utf8_bytes": 5676,
+            "stored_chapter_tokens_estimate": 1258,
+            "retained_preimages": 2,
+            "native_preimage_raw_utf8_bytes": 1735,
+            "receiver_database_allocated_bytes": 856064,
+            "pack_tokens_estimate": 41507,
+            "expansion_characters": 165628,
+            "expanded_json_tokens_estimate": 41402,
+            "exact_answer_evidence_utf8_bytes": 17770,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 11,
+          "receiving_questions": 16
+        }
+      }
+    },
+    "stage-one-supported-heldout": {
+      "conditions": {
+        "commit": "f0938c4d82f68cbd960006e37613e9b271df72ae",
+        "runner_sha256": "0cd02759d365b9bc3dadf7ca1fe2fede6e269a52d47ec070b9fb8756fa7b2886",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+        "reasoning_effort": "low",
+        "guidance_hashes": {
+          "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+          "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+        },
+        "fixture_hash": "491bf6b27db87b102dc8ad37344cf9b4c251448d0ac1a2b9701d8e126b32bcb1",
+        "retrieval_threshold": 0.4,
+        "pack_budget": 1500,
+        "pack_limit": 5,
+        "consolidate": false,
+        "embedding_config": {
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "output_dimensionality": null
+        },
+        "rerank_provider": "none",
+        "retrieval_profile": "general",
+        "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "recall_contract": "five-field-support/v4-exact-evidence",
+        "review_capture": false,
+        "source_blocks": true,
+        "formation_origin_conditions": {
+          "commit": "04142a81e2edf3b0bd82610497096909e0320bb9",
+          "runner_sha256": "7ec40166aa4dba7479b2a9437d035ead0b0aaee83283a8274d27bc0c0c3937c2",
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+          "reasoning_effort": "low",
+          "guidance_hashes": {
+            "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+            "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+          },
+          "fixture_hash": "491bf6b27db87b102dc8ad37344cf9b4c251448d0ac1a2b9701d8e126b32bcb1",
+          "retrieval_threshold": 0.4,
+          "pack_budget": 1500,
+          "pack_limit": 5,
+          "consolidate": false,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "rerank_provider": "none",
+          "retrieval_profile": "general",
+          "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+          "recall_contract": "five-field-evidence/v2",
+          "review_capture": false,
+          "source_blocks": true
+        }
+      },
+      "results": [
+        {
+          "variant": "baseline",
+          "selected_count": 3,
+          "questions": 2,
+          "llm_calls": 4,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106931760,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        },
+        {
+          "variant": "proposed",
+          "selected_count": 1,
+          "questions": 2,
+          "llm_calls": 4,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106931813,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "file": "stage-one-supported-heldout-baseline.json",
+          "sha256": "5a2a3f66e64e2daba4fd50cdca1fe3f53f1a09cc7f9277a85ae5d518fa03112b",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 2,
+                "completed": 2,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 9448,
+                "completion_tokens": 2905,
+                "provider_total_tokens": 12353,
+                "elapsed_seconds": 24.125
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 4,
+                "completed": 4,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 4451,
+                "completion_tokens": 2028,
+                "provider_total_tokens": 6479,
+                "elapsed_seconds": 41.435
+              }
+            },
+            "raw_utf8_bytes": 835,
+            "spr_utf8_bytes": 835,
+            "stored_chapter_tokens_estimate": 143,
+            "retained_preimages": 0,
+            "native_preimage_raw_utf8_bytes": 0,
+            "receiver_database_allocated_bytes": 385024,
+            "pack_tokens_estimate": 4214,
+            "expansion_characters": 10646,
+            "expanded_json_tokens_estimate": 2661,
+            "exact_answer_evidence_utf8_bytes": 835,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 3,
+          "receiving_questions": 2
+        },
+        "proposed": {
+          "file": "stage-one-supported-heldout-proposed.json",
+          "sha256": "73939e01e75420c6167f71b2266dcea30b1bb730b1484cab627409da8e44e592",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 3,
+                "completed": 3,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 11806,
+                "completion_tokens": 3287,
+                "provider_total_tokens": 15093,
+                "elapsed_seconds": 76.837
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 4,
+                "completed": 4,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 2498,
+                "completion_tokens": 1432,
+                "provider_total_tokens": 3930,
+                "elapsed_seconds": 17.666
+              }
+            },
+            "raw_utf8_bytes": 839,
+            "spr_utf8_bytes": 839,
+            "stored_chapter_tokens_estimate": 142,
+            "retained_preimages": 0,
+            "native_preimage_raw_utf8_bytes": 0,
+            "receiver_database_allocated_bytes": 319488,
+            "pack_tokens_estimate": 1342,
+            "expansion_characters": 3204,
+            "expanded_json_tokens_estimate": 800,
+            "exact_answer_evidence_utf8_bytes": 839,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 1,
+          "receiving_questions": 2
+        }
+      }
+    },
+    "stage-one-refinement": {
+      "conditions": {
+        "commit": "c2b549b00c911b9b1c8c8cc455df6cc6d2def01b",
+        "runner_sha256": "e90d3a33af518a7432c17322c8ac2344e2b543ab177e3dd461dd5a186e055175",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+        "reasoning_effort": "low",
+        "guidance_hashes": {
+          "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+          "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+        },
+        "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+        "retrieval_threshold": 0.4,
+        "pack_budget": 1500,
+        "pack_limit": 5,
+        "consolidate": false,
+        "embedding_config": {
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "output_dimensionality": null
+        },
+        "rerank_provider": "none",
+        "retrieval_profile": "general",
+        "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "recall_contract": "five-field-support/v5-null-refinement",
+        "recall_cases": [
+          "learning-beyond-project-state"
+        ],
+        "review_capture": false,
+        "source_blocks": true,
+        "formation_origin_conditions": {
+          "commit": "04142a81e2edf3b0bd82610497096909e0320bb9",
+          "runner_sha256": "7ec40166aa4dba7479b2a9437d035ead0b0aaee83283a8274d27bc0c0c3937c2",
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+          "reasoning_effort": "low",
+          "guidance_hashes": {
+            "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+            "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+          },
+          "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+          "retrieval_threshold": 0.4,
+          "pack_budget": 1500,
+          "pack_limit": 5,
+          "consolidate": false,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "rerank_provider": "none",
+          "retrieval_profile": "general",
+          "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+          "recall_contract": "five-field-evidence/v2",
+          "review_capture": false,
+          "source_blocks": true,
+          "resumes": [
+            {
+              "commit": "49306ec38c9e4bb137e3d35f1e8b378b002be097",
+              "runner_sha256": "d0bc787cea2cceb62584ca38fe0f5ececa5fcca85f9c689fe778cd8d56b18896",
+              "model": "nvidia/nemotron-3-super-120b-a12b",
+              "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+              "reasoning_effort": "low",
+              "guidance_hashes": {
+                "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+                "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+              },
+              "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+              "retrieval_threshold": 0.4,
+              "pack_budget": 1500,
+              "pack_limit": 5,
+              "consolidate": false,
+              "embedding_config": {
+                "provider": "nvidia",
+                "model": "nvidia/nemotron-3-embed-1b",
+                "output_dimensionality": null
+              },
+              "rerank_provider": "none",
+              "retrieval_profile": "general",
+              "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+              "recall_contract": "five-field-evidence/v2",
+              "review_capture": false,
+              "source_blocks": true
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "variant": "baseline",
+          "selected_count": 8,
+          "questions": 1,
+          "llm_calls": 2,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106931929,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        },
+        {
+          "variant": "proposed",
+          "selected_count": 11,
+          "questions": 1,
+          "llm_calls": 2,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106932004,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "file": "stage-one-refinement-baseline.json",
+          "sha256": "0fb922f1c7379f662d4ccaca5f4893dccae8aa6eae6feab39f4309fd016e0371",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 14,
+                "completed": 14,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 52717,
+                "completion_tokens": 15453,
+                "provider_total_tokens": 68170,
+                "elapsed_seconds": 191.825
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 2,
+                "completed": 2,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 2210,
+                "completion_tokens": 1887,
+                "provider_total_tokens": 4097,
+                "elapsed_seconds": 17.023
+              }
+            },
+            "raw_utf8_bytes": 5114,
+            "spr_utf8_bytes": 3998,
+            "stored_chapter_tokens_estimate": 954,
+            "retained_preimages": 2,
+            "native_preimage_raw_utf8_bytes": 1735,
+            "receiver_database_allocated_bytes": 577536,
+            "pack_tokens_estimate": 1392,
+            "expansion_characters": 3611,
+            "expanded_json_tokens_estimate": 902,
+            "exact_answer_evidence_utf8_bytes": 2170,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 8,
+          "receiving_questions": 1
+        },
+        "proposed": {
+          "file": "stage-one-refinement-proposed.json",
+          "sha256": "66330905a123fd1186a6fe8ac418bc1a3f0153f64c60f13980625d6545429180",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 15,
+                "completed": 15,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 71518,
+                "completion_tokens": 24493,
+                "provider_total_tokens": 96011,
+                "elapsed_seconds": 267.086
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 2,
+                "completed": 2,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 2015,
+                "completion_tokens": 1689,
+                "provider_total_tokens": 3704,
+                "elapsed_seconds": 20.341
+              }
+            },
+            "raw_utf8_bytes": 6792,
+            "spr_utf8_bytes": 5676,
+            "stored_chapter_tokens_estimate": 1258,
+            "retained_preimages": 2,
+            "native_preimage_raw_utf8_bytes": 1735,
+            "receiver_database_allocated_bytes": 671744,
+            "pack_tokens_estimate": 1328,
+            "expansion_characters": 2,
+            "expanded_json_tokens_estimate": 0,
+            "exact_answer_evidence_utf8_bytes": 1624,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 11,
+          "receiving_questions": 1
+        }
+      }
+    },
+    "stage-one-refinement-negative": {
+      "conditions": {
+        "commit": "f52be98f6e344b6306998dae7b6ddfe66c33243c",
+        "runner_sha256": "e90d3a33af518a7432c17322c8ac2344e2b543ab177e3dd461dd5a186e055175",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+        "reasoning_effort": "low",
+        "guidance_hashes": {
+          "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+          "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+        },
+        "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+        "retrieval_threshold": 0.4,
+        "pack_budget": 1500,
+        "pack_limit": 5,
+        "consolidate": false,
+        "embedding_config": {
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "output_dimensionality": null
+        },
+        "rerank_provider": "none",
+        "retrieval_profile": "general",
+        "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "recall_contract": "five-field-support/v5-null-refinement",
+        "recall_cases": [
+          "mechanical-noise",
+          "missing-unobserved-history"
+        ],
+        "review_capture": false,
+        "source_blocks": true,
+        "formation_origin_conditions": {
+          "commit": "04142a81e2edf3b0bd82610497096909e0320bb9",
+          "runner_sha256": "7ec40166aa4dba7479b2a9437d035ead0b0aaee83283a8274d27bc0c0c3937c2",
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+          "reasoning_effort": "low",
+          "guidance_hashes": {
+            "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+            "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+          },
+          "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+          "retrieval_threshold": 0.4,
+          "pack_budget": 1500,
+          "pack_limit": 5,
+          "consolidate": false,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "rerank_provider": "none",
+          "retrieval_profile": "general",
+          "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+          "recall_contract": "five-field-evidence/v2",
+          "review_capture": false,
+          "source_blocks": true,
+          "resumes": [
+            {
+              "commit": "49306ec38c9e4bb137e3d35f1e8b378b002be097",
+              "runner_sha256": "d0bc787cea2cceb62584ca38fe0f5ececa5fcca85f9c689fe778cd8d56b18896",
+              "model": "nvidia/nemotron-3-super-120b-a12b",
+              "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+              "reasoning_effort": "low",
+              "guidance_hashes": {
+                "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+                "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+              },
+              "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+              "retrieval_threshold": 0.4,
+              "pack_budget": 1500,
+              "pack_limit": 5,
+              "consolidate": false,
+              "embedding_config": {
+                "provider": "nvidia",
+                "model": "nvidia/nemotron-3-embed-1b",
+                "output_dimensionality": null
+              },
+              "rerank_provider": "none",
+              "retrieval_profile": "general",
+              "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+              "recall_contract": "five-field-evidence/v2",
+              "review_capture": false,
+              "source_blocks": true
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "variant": "baseline",
+          "selected_count": 8,
+          "questions": 3,
+          "llm_calls": 6,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106931929,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        },
+        {
+          "variant": "proposed",
+          "selected_count": 11,
+          "questions": 3,
+          "llm_calls": 6,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106932004,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "file": "stage-one-refinement-negative-baseline.json",
+          "sha256": "fe15b118e37cefb96e5571aa8ac5ae0052f4f9f38dddb9a115b5cb272602d526",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 14,
+                "completed": 14,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 52717,
+                "completion_tokens": 15453,
+                "provider_total_tokens": 68170,
+                "elapsed_seconds": 191.825
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 6,
+                "completed": 6,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 4589,
+                "completion_tokens": 1948,
+                "provider_total_tokens": 6537,
+                "elapsed_seconds": 22.347
+              }
+            },
+            "raw_utf8_bytes": 5114,
+            "spr_utf8_bytes": 3998,
+            "stored_chapter_tokens_estimate": 954,
+            "retained_preimages": 2,
+            "native_preimage_raw_utf8_bytes": 1735,
+            "receiver_database_allocated_bytes": 577536,
+            "pack_tokens_estimate": 1900,
+            "expansion_characters": 5730,
+            "expanded_json_tokens_estimate": 1431,
+            "exact_answer_evidence_utf8_bytes": 383,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 8,
+          "receiving_questions": 3
+        },
+        "proposed": {
+          "file": "stage-one-refinement-negative-proposed.json",
+          "sha256": "2f44690ddb05414b8fa29b248df65a5364a13bd7cd63401b1f3d8d42e067fd9f",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 15,
+                "completed": 15,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 71518,
+                "completion_tokens": 24493,
+                "provider_total_tokens": 96011,
+                "elapsed_seconds": 267.086
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 6,
+                "completed": 6,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 6224,
+                "completion_tokens": 1799,
+                "provider_total_tokens": 8023,
+                "elapsed_seconds": 16.971
+              }
+            },
+            "raw_utf8_bytes": 6792,
+            "spr_utf8_bytes": 5676,
+            "stored_chapter_tokens_estimate": 1258,
+            "retained_preimages": 2,
+            "native_preimage_raw_utf8_bytes": 1735,
+            "receiver_database_allocated_bytes": 671744,
+            "pack_tokens_estimate": 3087,
+            "expansion_characters": 13927,
+            "expanded_json_tokens_estimate": 3480,
+            "exact_answer_evidence_utf8_bytes": 0,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 11,
+          "receiving_questions": 3
+        }
+      }
+    },
+    "stage-one-refinement-heldout": {
+      "conditions": {
+        "commit": "f52be98f6e344b6306998dae7b6ddfe66c33243c",
+        "runner_sha256": "e90d3a33af518a7432c17322c8ac2344e2b543ab177e3dd461dd5a186e055175",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+        "reasoning_effort": "low",
+        "guidance_hashes": {
+          "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+          "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+        },
+        "fixture_hash": "491bf6b27db87b102dc8ad37344cf9b4c251448d0ac1a2b9701d8e126b32bcb1",
+        "retrieval_threshold": 0.4,
+        "pack_budget": 1500,
+        "pack_limit": 5,
+        "consolidate": false,
+        "embedding_config": {
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "output_dimensionality": null
+        },
+        "rerank_provider": "none",
+        "retrieval_profile": "general",
+        "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "recall_contract": "five-field-support/v5-null-refinement",
+        "recall_cases": [
+          "repeated-transport-noise"
+        ],
+        "review_capture": false,
+        "source_blocks": true,
+        "formation_origin_conditions": {
+          "commit": "04142a81e2edf3b0bd82610497096909e0320bb9",
+          "runner_sha256": "7ec40166aa4dba7479b2a9437d035ead0b0aaee83283a8274d27bc0c0c3937c2",
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+          "reasoning_effort": "low",
+          "guidance_hashes": {
+            "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+            "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+          },
+          "fixture_hash": "491bf6b27db87b102dc8ad37344cf9b4c251448d0ac1a2b9701d8e126b32bcb1",
+          "retrieval_threshold": 0.4,
+          "pack_budget": 1500,
+          "pack_limit": 5,
+          "consolidate": false,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "rerank_provider": "none",
+          "retrieval_profile": "general",
+          "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+          "recall_contract": "five-field-evidence/v2",
+          "review_capture": false,
+          "source_blocks": true
+        }
+      },
+      "results": [
+        {
+          "variant": "baseline",
+          "selected_count": 3,
+          "questions": 1,
+          "llm_calls": 2,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106931760,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        },
+        {
+          "variant": "proposed",
+          "selected_count": 1,
+          "questions": 1,
+          "llm_calls": 2,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106931813,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "file": "stage-one-refinement-heldout-baseline.json",
+          "sha256": "c1f03c3b805e4c3fa5fa7c54afd8bbe919ba3c43dce044ee08470739020a6791",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 2,
+                "completed": 2,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 9448,
+                "completion_tokens": 2905,
+                "provider_total_tokens": 12353,
+                "elapsed_seconds": 24.125
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 2,
+                "completed": 2,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 812,
+                "completion_tokens": 654,
+                "provider_total_tokens": 1466,
+                "elapsed_seconds": 5.893
+              }
+            },
+            "raw_utf8_bytes": 835,
+            "spr_utf8_bytes": 835,
+            "stored_chapter_tokens_estimate": 143,
+            "retained_preimages": 0,
+            "native_preimage_raw_utf8_bytes": 0,
+            "receiver_database_allocated_bytes": 385024,
+            "pack_tokens_estimate": 0,
+            "expansion_characters": 2,
+            "expanded_json_tokens_estimate": 0,
+            "exact_answer_evidence_utf8_bytes": 0,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 3,
+          "receiving_questions": 1
+        },
+        "proposed": {
+          "file": "stage-one-refinement-heldout-proposed.json",
+          "sha256": "8b9aafe1b248b787ab4d256568aa9bb4d1a2e8ae95bf2c04ea369712037b04a8",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 3,
+                "completed": 3,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 11806,
+                "completion_tokens": 3287,
+                "provider_total_tokens": 15093,
+                "elapsed_seconds": 76.837
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 2,
+                "completed": 2,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 812,
+                "completion_tokens": 441,
+                "provider_total_tokens": 1253,
+                "elapsed_seconds": 6.395
+              }
+            },
+            "raw_utf8_bytes": 839,
+            "spr_utf8_bytes": 839,
+            "stored_chapter_tokens_estimate": 142,
+            "retained_preimages": 0,
+            "native_preimage_raw_utf8_bytes": 0,
+            "receiver_database_allocated_bytes": 319488,
+            "pack_tokens_estimate": 0,
+            "expansion_characters": 2,
+            "expanded_json_tokens_estimate": 0,
+            "exact_answer_evidence_utf8_bytes": 0,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 1,
+          "receiving_questions": 1
+        }
+      }
+    },
+    "stage-one-unknown": {
+      "conditions": {
+        "commit": "0f0bc8fbbff2e4f43f5212da32086b0011043d14",
+        "runner_sha256": "bfeede8a679c1f8ab823a7603aa91336be624e49ccce6cf2382319cf2cf23afb",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+        "reasoning_effort": "low",
+        "guidance_hashes": {
+          "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+          "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+        },
+        "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+        "retrieval_threshold": 0.4,
+        "pack_budget": 1500,
+        "pack_limit": 5,
+        "consolidate": false,
+        "embedding_config": {
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "output_dimensionality": null
+        },
+        "rerank_provider": "none",
+        "retrieval_profile": "general",
+        "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "recall_contract": "five-field-support/v6-qualified-unknown",
+        "recall_cases": [
+          "missing-unobserved-history"
+        ],
+        "review_capture": false,
+        "source_blocks": true,
+        "formation_origin_conditions": {
+          "commit": "04142a81e2edf3b0bd82610497096909e0320bb9",
+          "runner_sha256": "7ec40166aa4dba7479b2a9437d035ead0b0aaee83283a8274d27bc0c0c3937c2",
+          "model": "nvidia/nemotron-3-super-120b-a12b",
+          "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+          "reasoning_effort": "low",
+          "guidance_hashes": {
+            "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+            "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+          },
+          "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+          "retrieval_threshold": 0.4,
+          "pack_budget": 1500,
+          "pack_limit": 5,
+          "consolidate": false,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "rerank_provider": "none",
+          "retrieval_profile": "general",
+          "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+          "recall_contract": "five-field-evidence/v2",
+          "review_capture": false,
+          "source_blocks": true,
+          "resumes": [
+            {
+              "commit": "49306ec38c9e4bb137e3d35f1e8b378b002be097",
+              "runner_sha256": "d0bc787cea2cceb62584ca38fe0f5ececa5fcca85f9c689fe778cd8d56b18896",
+              "model": "nvidia/nemotron-3-super-120b-a12b",
+              "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+              "reasoning_effort": "low",
+              "guidance_hashes": {
+                "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+                "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+              },
+              "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+              "retrieval_threshold": 0.4,
+              "pack_budget": 1500,
+              "pack_limit": 5,
+              "consolidate": false,
+              "embedding_config": {
+                "provider": "nvidia",
+                "model": "nvidia/nemotron-3-embed-1b",
+                "output_dimensionality": null
+              },
+              "rerank_provider": "none",
+              "retrieval_profile": "general",
+              "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+              "recall_contract": "five-field-evidence/v2",
+              "review_capture": false,
+              "source_blocks": true
+            }
+          ]
+        },
+        "resumes": [
+          {
+            "commit": "0f0bc8fbbff2e4f43f5212da32086b0011043d14",
+            "runner_sha256": "0152be07dfb9be130180f1a53c13062e16f6934d024e840b22993e18668a2918",
+            "model": "nvidia/nemotron-3-super-120b-a12b",
+            "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+            "reasoning_effort": "low",
+            "guidance_hashes": {
+              "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+              "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+            },
+            "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+            "retrieval_threshold": 0.4,
+            "pack_budget": 1500,
+            "pack_limit": 5,
+            "consolidate": false,
+            "embedding_config": {
+              "provider": "nvidia",
+              "model": "nvidia/nemotron-3-embed-1b",
+              "output_dimensionality": null
+            },
+            "rerank_provider": "none",
+            "retrieval_profile": "general",
+            "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+            "recall_contract": "five-field-support/v6-qualified-unknown",
+            "recall_cases": [
+              "missing-unobserved-history"
+            ],
+            "review_capture": false,
+            "source_blocks": true,
+            "formation_origin_conditions": {
+              "commit": "04142a81e2edf3b0bd82610497096909e0320bb9",
+              "runner_sha256": "7ec40166aa4dba7479b2a9437d035ead0b0aaee83283a8274d27bc0c0c3937c2",
+              "model": "nvidia/nemotron-3-super-120b-a12b",
+              "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+              "reasoning_effort": "low",
+              "guidance_hashes": {
+                "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+                "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+              },
+              "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+              "retrieval_threshold": 0.4,
+              "pack_budget": 1500,
+              "pack_limit": 5,
+              "consolidate": false,
+              "embedding_config": {
+                "provider": "nvidia",
+                "model": "nvidia/nemotron-3-embed-1b",
+                "output_dimensionality": null
+              },
+              "rerank_provider": "none",
+              "retrieval_profile": "general",
+              "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+              "recall_contract": "five-field-evidence/v2",
+              "review_capture": false,
+              "source_blocks": true,
+              "resumes": [
+                {
+                  "commit": "49306ec38c9e4bb137e3d35f1e8b378b002be097",
+                  "runner_sha256": "d0bc787cea2cceb62584ca38fe0f5ececa5fcca85f9c689fe778cd8d56b18896",
+                  "model": "nvidia/nemotron-3-super-120b-a12b",
+                  "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+                  "reasoning_effort": "low",
+                  "guidance_hashes": {
+                    "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+                    "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+                  },
+                  "fixture_hash": "c8dd10653f7129b7e0d83de13bd662fe5f670b5501ddc87af7fd885aa07ccaf5",
+                  "retrieval_threshold": 0.4,
+                  "pack_budget": 1500,
+                  "pack_limit": 5,
+                  "consolidate": false,
+                  "embedding_config": {
+                    "provider": "nvidia",
+                    "model": "nvidia/nemotron-3-embed-1b",
+                    "output_dimensionality": null
+                  },
+                  "rerank_provider": "none",
+                  "retrieval_profile": "general",
+                  "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+                  "recall_contract": "five-field-evidence/v2",
+                  "review_capture": false,
+                  "source_blocks": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "results": [
+        {
+          "variant": "baseline",
+          "selected_count": 8,
+          "questions": 2,
+          "llm_calls": 6,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106931929,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        },
+        {
+          "variant": "proposed",
+          "selected_count": 11,
+          "questions": 2,
+          "llm_calls": 4,
+          "schema": "hmk-synthetic-model-pilot/v2",
+          "source_loss": true,
+          "retrieval_clock": 2106932004,
+          "embedding_config": {
+            "provider": "nvidia",
+            "model": "nvidia/nemotron-3-embed-1b",
+            "output_dimensionality": null
+          },
+          "all_retrieval_statuses": [
+            "ok"
+          ]
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "file": "stage-one-unknown-baseline.json",
+          "sha256": "3080739bb3a38c87370a8bc3f0f12d543648c5c44db6391bb6c42c8479dceb99",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 14,
+                "completed": 14,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 52717,
+                "completion_tokens": 15453,
+                "provider_total_tokens": 68170,
+                "elapsed_seconds": 191.825
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 6,
+                "completed": 6,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 5767,
+                "completion_tokens": 1801,
+                "provider_total_tokens": 7568,
+                "elapsed_seconds": 21.338
+              }
+            },
+            "raw_utf8_bytes": 5114,
+            "spr_utf8_bytes": 3998,
+            "stored_chapter_tokens_estimate": 954,
+            "retained_preimages": 2,
+            "native_preimage_raw_utf8_bytes": 1735,
+            "receiver_database_allocated_bytes": 577536,
+            "pack_tokens_estimate": 1899,
+            "expansion_characters": 5728,
+            "expanded_json_tokens_estimate": 1431,
+            "exact_answer_evidence_utf8_bytes": 383,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 8,
+          "receiving_questions": 2
+        },
+        "proposed": {
+          "file": "stage-one-unknown-proposed.json",
+          "sha256": "82c4d7c1891bfc07f85e5147e34cb98665ee4f9c562b75101276f58f1b02e2e5",
+          "costs": {
+            "formation": {
+              "capture": {
+                "attempts": 15,
+                "completed": 15,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 71518,
+                "completion_tokens": 24493,
+                "provider_total_tokens": 96011,
+                "elapsed_seconds": 267.086
+              }
+            },
+            "receiving": {
+              "recall": {
+                "attempts": 4,
+                "completed": 4,
+                "failed": 0,
+                "unknown_usage_attempts": 0,
+                "prompt_tokens": 5523,
+                "completion_tokens": 1647,
+                "provider_total_tokens": 7170,
+                "elapsed_seconds": 18.609
+              }
+            },
+            "raw_utf8_bytes": 6792,
+            "spr_utf8_bytes": 5676,
+            "stored_chapter_tokens_estimate": 1258,
+            "retained_preimages": 2,
+            "native_preimage_raw_utf8_bytes": 1735,
+            "receiver_database_allocated_bytes": 671744,
+            "pack_tokens_estimate": 3087,
+            "expansion_characters": 13925,
+            "expanded_json_tokens_estimate": 3480,
+            "exact_answer_evidence_utf8_bytes": 383,
+            "monetary_billing": null,
+            "embedding_token_usage": null
+          },
+          "selected_records": 11,
+          "receiving_questions": 2
+        }
+      }
+    }
+  },
+  "cost_ledger_sha256": "ac176c865c4ee08ad14660aecd230e7312ebdfd08dfa5b9fd2209ebc70a70384",
+  "grading": {
+    "file": "grading.json",
+    "sha256": "e1c296de4aa6a06e653a9310583bed94e29613441290049483e91831cb703e0e"
+  },
+  "adoption": {
+    "file": "adoption.json",
+    "sha256": "2fe6da9ea88c81c3310ad833081ddb32c614b537b560133078254dd8abc6bf6b"
+  }
+}
