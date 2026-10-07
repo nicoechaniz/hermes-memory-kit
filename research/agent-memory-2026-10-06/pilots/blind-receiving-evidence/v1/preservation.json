@@ -1,0 +1,328 @@
+{
+  "baseline": {
+    "before": {
+      "books": {
+        "columns": [
+          "id",
+          "shelf_id",
+          "slug",
+          "title",
+          "source_path",
+          "source_kind",
+          "created_at",
+          "updated_at"
+        ],
+        "rows": 19,
+        "sha256": "8077c7707e99a5449fef30cfa1f6b4920bb633bf464b98ed55a4c170eb147092"
+      },
+      "chapter_links": {
+        "columns": [
+          "id",
+          "src_chapter_id",
+          "dst_chapter_id",
+          "link_type",
+          "weight",
+          "note",
+          "created_at"
+        ],
+        "rows": 2,
+        "sha256": "680d3761a69cecbe7344ba1f27507e817d6d3961ce4e21726b7b0bef81119c5f"
+      },
+      "chapter_revisions": {
+        "columns": [
+          "id",
+          "record_uid",
+          "chapter_id",
+          "revision",
+          "snapshot_json",
+          "reason",
+          "archived_at"
+        ],
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "chapters": {
+        "columns": [
+          "id",
+          "book_id",
+          "ordinal",
+          "title",
+          "spr",
+          "raw",
+          "tokens",
+          "importance",
+          "created_at",
+          "updated_at",
+          "tags_json",
+          "embed_disabled",
+          "embed_disable_reason",
+          "record_uid",
+          "revision",
+          "source_metadata_json",
+          "engram_type",
+          "event_ts",
+          "actor",
+          "location_json"
+        ],
+        "rows": 19,
+        "sha256": "0244d605291d28570b2fc8823f522e64ccd2ccf74c1b885dbb4c2e60c2407ea4"
+      },
+      "shelves": {
+        "columns": [
+          "id",
+          "name",
+          "description"
+        ],
+        "rows": 11,
+        "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+      }
+    },
+    "after": {
+      "books": {
+        "columns": [
+          "id",
+          "shelf_id",
+          "slug",
+          "title",
+          "source_path",
+          "source_kind",
+          "created_at",
+          "updated_at"
+        ],
+        "rows": 19,
+        "sha256": "8077c7707e99a5449fef30cfa1f6b4920bb633bf464b98ed55a4c170eb147092"
+      },
+      "chapter_links": {
+        "columns": [
+          "id",
+          "src_chapter_id",
+          "dst_chapter_id",
+          "link_type",
+          "weight",
+          "note",
+          "created_at"
+        ],
+        "rows": 2,
+        "sha256": "680d3761a69cecbe7344ba1f27507e817d6d3961ce4e21726b7b0bef81119c5f"
+      },
+      "chapter_revisions": {
+        "columns": [
+          "id",
+          "record_uid",
+          "chapter_id",
+          "revision",
+          "snapshot_json",
+          "reason",
+          "archived_at"
+        ],
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "chapters": {
+        "columns": [
+          "id",
+          "book_id",
+          "ordinal",
+          "title",
+          "spr",
+          "raw",
+          "tokens",
+          "importance",
+          "created_at",
+          "updated_at",
+          "tags_json",
+          "embed_disabled",
+          "embed_disable_reason",
+          "record_uid",
+          "revision",
+          "source_metadata_json",
+          "engram_type",
+          "event_ts",
+          "actor",
+          "location_json"
+        ],
+        "rows": 19,
+        "sha256": "0244d605291d28570b2fc8823f522e64ccd2ccf74c1b885dbb4c2e60c2407ea4"
+      },
+      "shelves": {
+        "columns": [
+          "id",
+          "name",
+          "description"
+        ],
+        "rows": 11,
+        "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+      }
+    },
+    "identical": true,
+    "permitted_changes": [
+      "chapters.last_access",
+      "chapters.access_count"
+    ],
+    "source_clock": 2106956370,
+    "questions": 22
+  },
+  "proposed": {
+    "before": {
+      "books": {
+        "columns": [
+          "id",
+          "shelf_id",
+          "slug",
+          "title",
+          "source_path",
+          "source_kind",
+          "created_at",
+          "updated_at"
+        ],
+        "rows": 19,
+        "sha256": "c30ae72d76bdfda5b09d96d8c75f487dac7895e4c289e457fb42a1f9155af4f9"
+      },
+      "chapter_links": {
+        "columns": [
+          "id",
+          "src_chapter_id",
+          "dst_chapter_id",
+          "link_type",
+          "weight",
+          "note",
+          "created_at"
+        ],
+        "rows": 7,
+        "sha256": "df04bb78d7951b9fc8f46b0e8160467054a8fc4dfe6b3a1731d034ee1991c6d3"
+      },
+      "chapter_revisions": {
+        "columns": [
+          "id",
+          "record_uid",
+          "chapter_id",
+          "revision",
+          "snapshot_json",
+          "reason",
+          "archived_at"
+        ],
+        "rows": 1,
+        "sha256": "20c45b88471fa2f431aff27a617c8ea5f32c0e76209f5683ca92c93999b9730e"
+      },
+      "chapters": {
+        "columns": [
+          "id",
+          "book_id",
+          "ordinal",
+          "title",
+          "spr",
+          "raw",
+          "tokens",
+          "importance",
+          "created_at",
+          "updated_at",
+          "tags_json",
+          "embed_disabled",
+          "embed_disable_reason",
+          "record_uid",
+          "revision",
+          "source_metadata_json",
+          "engram_type",
+          "event_ts",
+          "actor",
+          "location_json"
+        ],
+        "rows": 19,
+        "sha256": "d6905c174c2a30d1b4c34c64d0eb3cd2566582dda7346a503c21a3e14155248b"
+      },
+      "shelves": {
+        "columns": [
+          "id",
+          "name",
+          "description"
+        ],
+        "rows": 11,
+        "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+      }
+    },
+    "after": {
+      "books": {
+        "columns": [
+          "id",
+          "shelf_id",
+          "slug",
+          "title",
+          "source_path",
+          "source_kind",
+          "created_at",
+          "updated_at"
+        ],
+        "rows": 19,
+        "sha256": "c30ae72d76bdfda5b09d96d8c75f487dac7895e4c289e457fb42a1f9155af4f9"
+      },
+      "chapter_links": {
+        "columns": [
+          "id",
+          "src_chapter_id",
+          "dst_chapter_id",
+          "link_type",
+          "weight",
+          "note",
+          "created_at"
+        ],
+        "rows": 7,
+        "sha256": "df04bb78d7951b9fc8f46b0e8160467054a8fc4dfe6b3a1731d034ee1991c6d3"
+      },
+      "chapter_revisions": {
+        "columns": [
+          "id",
+          "record_uid",
+          "chapter_id",
+          "revision",
+          "snapshot_json",
+          "reason",
+          "archived_at"
+        ],
+        "rows": 1,
+        "sha256": "20c45b88471fa2f431aff27a617c8ea5f32c0e76209f5683ca92c93999b9730e"
+      },
+      "chapters": {
+        "columns": [
+          "id",
+          "book_id",
+          "ordinal",
+          "title",
+          "spr",
+          "raw",
+          "tokens",
+          "importance",
+          "created_at",
+          "updated_at",
+          "tags_json",
+          "embed_disabled",
+          "embed_disable_reason",
+          "record_uid",
+          "revision",
+          "source_metadata_json",
+          "engram_type",
+          "event_ts",
+          "actor",
+          "location_json"
+        ],
+        "rows": 19,
+        "sha256": "d6905c174c2a30d1b4c34c64d0eb3cd2566582dda7346a503c21a3e14155248b"
+      },
+      "shelves": {
+        "columns": [
+          "id",
+          "name",
+          "description"
+        ],
+        "rows": 11,
+        "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+      }
+    },
+    "identical": true,
+    "permitted_changes": [
+      "chapters.last_access",
+      "chapters.access_count"
+    ],
+    "source_clock": 2106956468,
+    "questions": 22
+  }
+}

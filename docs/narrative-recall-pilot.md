@@ -152,3 +152,11 @@ are separate from formation, recall and hidden-rubric grading.
 record Ultra's temporary overload, explicit-budget incompatibility and a
 schema-shaped HTTP 200 response that nevertheless lost the supplied quotation.
 No receiving-quality advantage is established by those capability probes.
+
+The [blind receiving preparation](../research/agent-memory-2026-10-06/pilots/2026-10-07-blind-receiving-preparation.md)
+freezes all 44 corrected-reader packets from unqueried original formation and
+replays only prior question-derived plans. Its finite file exchange prepares
+fresh-context requests and preserves externally observed responses without
+dispatching a model or reading a rubric in the receiving process. This enables
+a controlled narrative comparison on identical actual evidence; it does not
+qualify a new model's planner, provide a native dispatcher or establish recall.

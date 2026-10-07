@@ -101,6 +101,12 @@ unfinished phases, saved responses and repair/revision budgets across resumption
 historical diagnostics retain their original procedure. The exact continuation
 is a comparable stronger receiving-model trial, with formation and receiving
 configuration separated. No stage-two pass is claimed.
+The [blind receiving preparation](../research/agent-memory-2026-10-06/pilots/2026-10-07-blind-receiving-preparation.md)
+now supplies 44 fixed corrected-reader packets from unqueried original formation
+and a finite external-response transport. Its first Sol request is prepared,
+with zero external chat dispatches. The next action is receiving-setup selection
+and actual fresh-context acceptance, then the complete independently graded
+narrative comparison. Preparation is not narrative or stage-two qualification.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These
