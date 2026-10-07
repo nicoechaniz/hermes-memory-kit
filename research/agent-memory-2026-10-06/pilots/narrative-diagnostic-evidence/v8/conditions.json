@@ -1,0 +1,221 @@
+{
+  "commit": "cc58ebcba6590f54460b398cba405a00a55188b1",
+  "runner_sha256": "8c85f7bdb0b38a13a7b02538df5ee201ae8ea5b6689de330c0ca1bb0dbee47dd",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+  "reasoning_effort": "low",
+  "guidance_hashes": {
+    "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+    "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+  },
+  "fixture_hash": "bd9dffe452322cec20a505484d7e9454d0988a25cd622c68529f68ba8d6a438f",
+  "retrieval_threshold": 0.4,
+  "pack_budget": 1500,
+  "pack_limit": 5,
+  "consolidate": false,
+  "embedding_config": {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3-embed-1b",
+    "output_dimensionality": null
+  },
+  "rerank_provider": "none",
+  "retrieval_profile": "general",
+  "retrieval_sha256": "7ec09f963542ebe86c5b9dc029cd24650b9ce928d86458f7462390354a413561",
+  "backend_dependencies": {
+    "support_currency.py": "ec7b8f55c98c7d19cdea659ea6c19aad2c4c7b15d47c15981a3c6d9b8c593d35",
+    "native_records.py": "62ce01ed8205d1eb3cdb9d39026c3b826f2dd49f43ca6e343d3956f1dda5fe29",
+    "capturectl.py": "8f752747c09b1d9e0a266aeec5951cd112c11c88d05fba91ec975c45d93eb1fd",
+    "consolidationctl.py": "c526c5914e81adae4ce4af71c22f880d39a2709b6481670068db14c8b476d5ef"
+  },
+  "recall_contract": "natural-claims/v8-atomic-source-review",
+  "narrative_reasoning_effort": "high",
+  "narrative_reasoning_budget": 2048,
+  "narrative_max_tokens": 12000,
+  "narrative_sha256": "17fc7d9a66e490145858a8b982c0f63bf5382e7ef30888e4b649c576be5a08a2",
+  "complete_diagnostics": true,
+  "recall_cases": [],
+  "review_capture": false,
+  "source_blocks": true,
+  "formation_reader_comparison": {
+    "original_retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+    "receiving_retrieval_sha256": "7ec09f963542ebe86c5b9dc029cd24650b9ce928d86458f7462390354a413561",
+    "explicit_upgrade": true
+  },
+  "formation_origin_conditions": {
+    "commit": "76fcea0462d9645392ef2bb160403221eb3454cb",
+    "runner_sha256": "20a596edd35b5e012a4432f18fb5b7127f6a3071dcfc62ec8a888a3c5039cfbb",
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+    "reasoning_effort": "low",
+    "guidance_hashes": {
+      "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+      "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+    },
+    "fixture_hash": "bd9dffe452322cec20a505484d7e9454d0988a25cd622c68529f68ba8d6a438f",
+    "retrieval_threshold": 0.4,
+    "pack_budget": 1500,
+    "pack_limit": 5,
+    "consolidate": false,
+    "embedding_config": {
+      "provider": "nvidia",
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null
+    },
+    "rerank_provider": "none",
+    "retrieval_profile": "general",
+    "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+    "recall_contract": "natural-claims/v1-reviewed",
+    "narrative_sha256": "195082f24e584d5d983141843204f20d9d0f2361e29ea3a1a68a8ce03ec38aa3",
+    "recall_cases": [],
+    "review_capture": false,
+    "source_blocks": true
+  },
+  "resumes": [
+    {
+      "commit": "cc58ebcba6590f54460b398cba405a00a55188b1",
+      "runner_sha256": "8c85f7bdb0b38a13a7b02538df5ee201ae8ea5b6689de330c0ca1bb0dbee47dd",
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+      "reasoning_effort": "low",
+      "guidance_hashes": {
+        "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+        "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+      },
+      "fixture_hash": "bd9dffe452322cec20a505484d7e9454d0988a25cd622c68529f68ba8d6a438f",
+      "retrieval_threshold": 0.4,
+      "pack_budget": 1500,
+      "pack_limit": 5,
+      "consolidate": false,
+      "embedding_config": {
+        "provider": "nvidia",
+        "model": "nvidia/nemotron-3-embed-1b",
+        "output_dimensionality": null
+      },
+      "rerank_provider": "none",
+      "retrieval_profile": "general",
+      "retrieval_sha256": "7ec09f963542ebe86c5b9dc029cd24650b9ce928d86458f7462390354a413561",
+      "backend_dependencies": {
+        "support_currency.py": "ec7b8f55c98c7d19cdea659ea6c19aad2c4c7b15d47c15981a3c6d9b8c593d35",
+        "native_records.py": "62ce01ed8205d1eb3cdb9d39026c3b826f2dd49f43ca6e343d3956f1dda5fe29",
+        "capturectl.py": "8f752747c09b1d9e0a266aeec5951cd112c11c88d05fba91ec975c45d93eb1fd",
+        "consolidationctl.py": "c526c5914e81adae4ce4af71c22f880d39a2709b6481670068db14c8b476d5ef"
+      },
+      "recall_contract": "natural-claims/v8-atomic-source-review",
+      "narrative_reasoning_effort": "high",
+      "narrative_reasoning_budget": 2048,
+      "narrative_max_tokens": 12000,
+      "narrative_sha256": "17fc7d9a66e490145858a8b982c0f63bf5382e7ef30888e4b649c576be5a08a2",
+      "complete_diagnostics": true,
+      "recall_cases": [],
+      "review_capture": false,
+      "source_blocks": true,
+      "formation_reader_comparison": {
+        "original_retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "receiving_retrieval_sha256": "7ec09f963542ebe86c5b9dc029cd24650b9ce928d86458f7462390354a413561",
+        "explicit_upgrade": true
+      },
+      "formation_origin_conditions": {
+        "commit": "76fcea0462d9645392ef2bb160403221eb3454cb",
+        "runner_sha256": "20a596edd35b5e012a4432f18fb5b7127f6a3071dcfc62ec8a888a3c5039cfbb",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+        "reasoning_effort": "low",
+        "guidance_hashes": {
+          "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+          "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+        },
+        "fixture_hash": "bd9dffe452322cec20a505484d7e9454d0988a25cd622c68529f68ba8d6a438f",
+        "retrieval_threshold": 0.4,
+        "pack_budget": 1500,
+        "pack_limit": 5,
+        "consolidate": false,
+        "embedding_config": {
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "output_dimensionality": null
+        },
+        "rerank_provider": "none",
+        "retrieval_profile": "general",
+        "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "recall_contract": "natural-claims/v1-reviewed",
+        "narrative_sha256": "195082f24e584d5d983141843204f20d9d0f2361e29ea3a1a68a8ce03ec38aa3",
+        "recall_cases": [],
+        "review_capture": false,
+        "source_blocks": true
+      }
+    },
+    {
+      "commit": "cc58ebcba6590f54460b398cba405a00a55188b1",
+      "runner_sha256": "8c85f7bdb0b38a13a7b02538df5ee201ae8ea5b6689de330c0ca1bb0dbee47dd",
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+      "reasoning_effort": "low",
+      "guidance_hashes": {
+        "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+        "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+      },
+      "fixture_hash": "bd9dffe452322cec20a505484d7e9454d0988a25cd622c68529f68ba8d6a438f",
+      "retrieval_threshold": 0.4,
+      "pack_budget": 1500,
+      "pack_limit": 5,
+      "consolidate": false,
+      "embedding_config": {
+        "provider": "nvidia",
+        "model": "nvidia/nemotron-3-embed-1b",
+        "output_dimensionality": null
+      },
+      "rerank_provider": "none",
+      "retrieval_profile": "general",
+      "retrieval_sha256": "7ec09f963542ebe86c5b9dc029cd24650b9ce928d86458f7462390354a413561",
+      "backend_dependencies": {
+        "support_currency.py": "ec7b8f55c98c7d19cdea659ea6c19aad2c4c7b15d47c15981a3c6d9b8c593d35",
+        "native_records.py": "62ce01ed8205d1eb3cdb9d39026c3b826f2dd49f43ca6e343d3956f1dda5fe29",
+        "capturectl.py": "8f752747c09b1d9e0a266aeec5951cd112c11c88d05fba91ec975c45d93eb1fd",
+        "consolidationctl.py": "c526c5914e81adae4ce4af71c22f880d39a2709b6481670068db14c8b476d5ef"
+      },
+      "recall_contract": "natural-claims/v8-atomic-source-review",
+      "narrative_reasoning_effort": "high",
+      "narrative_reasoning_budget": 2048,
+      "narrative_max_tokens": 12000,
+      "narrative_sha256": "17fc7d9a66e490145858a8b982c0f63bf5382e7ef30888e4b649c576be5a08a2",
+      "complete_diagnostics": true,
+      "recall_cases": [],
+      "review_capture": false,
+      "source_blocks": true,
+      "formation_reader_comparison": {
+        "original_retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "receiving_retrieval_sha256": "7ec09f963542ebe86c5b9dc029cd24650b9ce928d86458f7462390354a413561",
+        "explicit_upgrade": true
+      },
+      "formation_origin_conditions": {
+        "commit": "76fcea0462d9645392ef2bb160403221eb3454cb",
+        "runner_sha256": "20a596edd35b5e012a4432f18fb5b7127f6a3071dcfc62ec8a888a3c5039cfbb",
+        "model": "nvidia/nemotron-3-super-120b-a12b",
+        "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+        "reasoning_effort": "low",
+        "guidance_hashes": {
+          "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+          "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+        },
+        "fixture_hash": "bd9dffe452322cec20a505484d7e9454d0988a25cd622c68529f68ba8d6a438f",
+        "retrieval_threshold": 0.4,
+        "pack_budget": 1500,
+        "pack_limit": 5,
+        "consolidate": false,
+        "embedding_config": {
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "output_dimensionality": null
+        },
+        "rerank_provider": "none",
+        "retrieval_profile": "general",
+        "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+        "recall_contract": "natural-claims/v1-reviewed",
+        "narrative_sha256": "195082f24e584d5d983141843204f20d9d0f2361e29ea3a1a68a8ce03ec38aa3",
+        "recall_cases": [],
+        "review_capture": false,
+        "source_blocks": true
+      }
+    }
+  ]
+}

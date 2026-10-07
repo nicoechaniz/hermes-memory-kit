@@ -1,0 +1,142 @@
+{
+  "baseline": {
+    "receiving": {
+      "phases": {
+        "narrative_generation": {
+          "calls": 22,
+          "known_prompt_tokens": 53925,
+          "known_completion_tokens": 28022,
+          "known_total_tokens": 81947,
+          "missing_usage_calls": 0,
+          "failed_calls": 0
+        },
+        "narrative_review": {
+          "calls": 50,
+          "known_prompt_tokens": 206089,
+          "known_completion_tokens": 205159,
+          "known_total_tokens": 411248,
+          "missing_usage_calls": 0,
+          "failed_calls": 0
+        },
+        "narrative_revision": {
+          "calls": 7,
+          "known_prompt_tokens": 31608,
+          "known_completion_tokens": 11527,
+          "known_total_tokens": 43135,
+          "missing_usage_calls": 0,
+          "failed_calls": 0
+        },
+        "recall": {
+          "calls": 22,
+          "known_prompt_tokens": 30427,
+          "known_completion_tokens": 9552,
+          "known_total_tokens": 39979,
+          "missing_usage_calls": 0,
+          "failed_calls": 0
+        }
+      },
+      "calls": 101,
+      "known_total_tokens": 576309,
+      "missing_usage_calls": 0
+    },
+    "retrieval": {
+      "pack_calls": 48,
+      "pack_token_estimates": 30147,
+      "expansion_characters": 135744
+    },
+    "formation": "Reused original formation; its separately retained traces are not another capture execution.",
+    "cost_note": "Missing provider usage is unknown, never zero. Includes failed/repeated calls after resumptions. No monetary price assumed.",
+    "original_formation": {
+      "calls": 18,
+      "known_prompt_tokens": 84056,
+      "known_completion_tokens": 16559,
+      "known_total_tokens": 100615,
+      "missing_usage_calls": 0,
+      "executed_again": false
+    },
+    "original_indexing": {
+      "calls": 3,
+      "texts": 19,
+      "input_characters": 17325,
+      "provider_token_usage": "unknown",
+      "missing_usage_calls": 3
+    },
+    "receiving_query_embeddings": {
+      "calls": 48,
+      "texts": 48,
+      "input_characters": 2169,
+      "provider_token_usage": "unknown",
+      "missing_usage_calls": 48
+    }
+  },
+  "proposed": {
+    "receiving": {
+      "phases": {
+        "narrative_generation": {
+          "calls": 23,
+          "known_prompt_tokens": 53351,
+          "known_completion_tokens": 31731,
+          "known_total_tokens": 85082,
+          "missing_usage_calls": 0,
+          "failed_calls": 0
+        },
+        "narrative_review": {
+          "calls": 50,
+          "known_prompt_tokens": 179286,
+          "known_completion_tokens": 183206,
+          "known_total_tokens": 362492,
+          "missing_usage_calls": 1,
+          "failed_calls": 1
+        },
+        "narrative_revision": {
+          "calls": 6,
+          "known_prompt_tokens": 42205,
+          "known_completion_tokens": 11654,
+          "known_total_tokens": 53859,
+          "missing_usage_calls": 0,
+          "failed_calls": 0
+        },
+        "recall": {
+          "calls": 22,
+          "known_prompt_tokens": 33555,
+          "known_completion_tokens": 8754,
+          "known_total_tokens": 42309,
+          "missing_usage_calls": 0,
+          "failed_calls": 0
+        }
+      },
+      "calls": 101,
+      "known_total_tokens": 543742,
+      "missing_usage_calls": 1
+    },
+    "retrieval": {
+      "pack_calls": 45,
+      "pack_token_estimates": 32091,
+      "expansion_characters": 182299
+    },
+    "formation": "Reused original formation; its separately retained traces are not another capture execution.",
+    "cost_note": "Missing provider usage is unknown, never zero. Includes failed/repeated calls after resumptions. No monetary price assumed.",
+    "original_formation": {
+      "calls": 22,
+      "known_prompt_tokens": 110747,
+      "known_completion_tokens": 23254,
+      "known_total_tokens": 134001,
+      "missing_usage_calls": 0,
+      "executed_again": false
+    },
+    "original_indexing": {
+      "calls": 3,
+      "texts": 19,
+      "input_characters": 17834,
+      "provider_token_usage": "unknown",
+      "missing_usage_calls": 3
+    },
+    "receiving_query_embeddings": {
+      "calls": 46,
+      "texts": 46,
+      "input_characters": 2162,
+      "provider_token_usage": "unknown",
+      "missing_usage_calls": 46
+    }
+  }
+}
