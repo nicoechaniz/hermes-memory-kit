@@ -704,6 +704,37 @@ def test_transitive_account_currency_and_atomic_consolidation_dependency_check(m
         assert check(con,[(cycle_uid,2)])[0]['status']=='cyclic'
 
 
+def test_retrieval_exposes_transitive_correction_until_all_accounts_reconcile(mc):
+    original=mc.add_text('episodes','Original trial','Human reported successful replay.')
+    uid=mc.expand(original)['record_uid']
+    account=mc.add_text('library','Trial account','A dated account.',metadata={
+        'mode':'inferred','evidence':[f'mem:{uid}@1']})
+    account_uid=mc.expand(account)['record_uid']
+    insight=mc.add_text('library','Replay understanding','An inferred replay lesson.',metadata={
+        'mode':'inferred','evidence':[f'mem:{account_uid}@1']})
+    assert mc.expand(insight)['support_status']=='current'
+    mc.update_chapter(original,content='Later correction: some readings were lost.')
+    expanded=mc.expand(insight)
+    assert expanded['support_status']=='needs_reconciliation'
+    assert expanded['support_checks'][0]['dependencies']==[
+        {'record_uid':uid,'revision':1,'status':'changed'}]
+    packed=mc.pack('Replay understanding',threshold=0,budget_tokens=1500)
+    assert next(row for row in packed['items'] if row['id']==insight)['support_status']=='needs_reconciliation'
+    # Reconciliation of the intermediate account alone leaves its dependent stale.
+    mc.update_chapter(account,content='Reconciled partial replay.',metadata={'evidence':[f'mem:{uid}@2']})
+    assert mc.expand(insight)['support_checks'][0]['status']=='changed'
+    mc.update_chapter(insight,content='Reconciled lesson.',metadata={'evidence':[f'mem:{account_uid}@2']})
+    assert mc.expand(insight)['support_status']=='current'
+    mc.delete_chapter(original)
+    assert mc.expand(insight)['support_checks'][0]['dependencies']==[
+        {'record_uid':uid,'revision':2,'status':'missing'}]
+    # Cyclic legacy support is also an explicit retrieval limit, not currency.
+    cycle=mc.add_text('library','Cyclic lesson','Unresolved self-support.')
+    cycle_uid=mc.expand(cycle)['record_uid']
+    mc.update_chapter(cycle,metadata={'evidence':[f'mem:{cycle_uid}@2']})
+    assert mc.expand(cycle)['support_status']=='needs_reconciliation'
+
+
 def test_consolidation_relabels_obsolete_support_edges_and_rejects_batch_stale_dependency(mc):
     from consolidationctl import preview,apply
     first=mc.add_text('episodes','Old encounter','An old proposal.')

@@ -31,10 +31,18 @@ speaker from the receiving body; unfamiliar/incomplete formats stay unknown.
 It preserves the original supplied text. This is a pilot-format adapter, not a
 general-purpose attribution extractor.
 
-Literal report dates and world pointers extracted from cited support must survive
-in the prose. This narrow mechanical check cannot verify actor ownership,
+Report calendar dates and world pointers extracted from decoded cited support must survive
+in the prose; ISO and full month-name dates preserve the same value. Missing
+years, approximate dates or different years do not satisfy a full dated anchor.
+This narrow mechanical check cannot verify actor ownership,
 meaning, dates of occurrence, action outcomes or semantic completeness. A
-separate model review evaluates each claim and relevant supported omissions.
+separate model review decomposes each claim into assertion spans covering every
+word. Each supported memory assertion must quote its actual cited source; an
+unsupported clause makes the enclosing claim unsupported. The adapter validates
+quote membership and decomposition, not semantic entailment. Quoting a related
+passage can still be wrong, so independent grading remains mandatory. A question
+asking only an unavailable detail may cite source-qualified limits without five
+irrelevant filler facets; a positive remembered account still needs all five.
 Two evidence-grounded revisions are permitted. Actual candidates, reviewers,
 anchor checks, phases and known provider usage remain recorded separately.
 Native tools absent from the current body restrict new actions, not access to
@@ -43,12 +51,19 @@ already supplied same-being history.
 Narration/review default to the selected NVIDIA model's full reasoning; formation
 and planning retain low reasoning. The
 [provider API](https://docs.api.nvidia.com/nim/reference/nvidia-nemotron-3-super-120b-a12b-infer)
-defines those modes. Narration/review use a 2,048-token reasoning budget within the 6,000-token
-output ceiling, leaving space for JSON. Every request records effort and budget.
+defines those modes. Narration/review use a 2,048-token reasoning budget within the 12,000-token
+output ceiling, leaving space for assertion/proof JSON. Formation and planning
+retain the 6,000-token ceiling. Every request records effort, budget and output limit.
 An exhausted output ceiling or null content is retained as an incomplete response
 with actual known usage; it is never accepted as an answer. Resumption freezes
-the semantic module hash, narration effort and reasoning budget; reused formation must still match
-its sources, guidance, selected model and retrieval configuration.
+the semantic module and backend dependency hashes, narration effort, reasoning
+budget and output ceiling. Accepted resumption also fingerprints the actual
+question, binding and supplied evidence. Reused formation must match sources,
+guidance, model and configuration. A changed reader needs the explicit
+`--reuse-with-retrieval-upgrade` comparison flag; its before/after hashes are
+recorded and copied canonical records, UIDs, revisions, history and links must
+remain identical across reader initialization. This is a new receiving comparison,
+not retrospective qualification of the original procedure.
 
 Rejected terminal candidates preserve pending work. `--complete-diagnostics`
 additionally archives that pending state and proceeds to later questions while
@@ -77,3 +92,8 @@ qualification. Complete final-contract recall and three consolidation passes,
 replay and dependent corrections remain necessary before stage two can close.
 No live memory changes, native activation, hooks, timers or autonomous attention
 follow from invoking this pilot.
+
+The complete v7 diagnostic compared all twenty-two questions in both arms but
+did not qualify natural narration. Operational acceptance and correct retrieval
+did not prevent participant, chronology and outcome errors. See the
+[preserved diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-narrative-diagnostic.md).

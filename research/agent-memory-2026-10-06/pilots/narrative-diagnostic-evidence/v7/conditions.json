@@ -1,0 +1,61 @@
+{
+  "commit": "b332c0de47b2f644ff719df74c1f5fc48b3f88ea",
+  "runner_sha256": "590c4dbbb1a2a534c723fc9d5efd20cf304eb0b46d5a54e1798fbeb56d4c8b20",
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+  "reasoning_effort": "low",
+  "guidance_hashes": {
+    "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+    "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+  },
+  "fixture_hash": "bd9dffe452322cec20a505484d7e9454d0988a25cd622c68529f68ba8d6a438f",
+  "retrieval_threshold": 0.4,
+  "pack_budget": 1500,
+  "pack_limit": 5,
+  "consolidate": false,
+  "embedding_config": {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3-embed-1b",
+    "output_dimensionality": null
+  },
+  "rerank_provider": "none",
+  "retrieval_profile": "general",
+  "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+  "recall_contract": "natural-claims/v6-faceted-diagnostics",
+  "narrative_reasoning_effort": "high",
+  "narrative_reasoning_budget": 2048,
+  "narrative_sha256": "d015d5492bb2e2116c502c213f16f44d2d7ecf5810728252f88f6d3681904fb6",
+  "complete_diagnostics": true,
+  "recall_cases": [],
+  "review_capture": false,
+  "source_blocks": true,
+  "formation_origin_conditions": {
+    "commit": "76fcea0462d9645392ef2bb160403221eb3454cb",
+    "runner_sha256": "20a596edd35b5e012a4432f18fb5b7127f6a3071dcfc62ec8a888a3c5039cfbb",
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "baseline_commit": "5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d",
+    "reasoning_effort": "low",
+    "guidance_hashes": {
+      "baseline": "3eb6d58f84649f1881b92d4420c50ad5dfd8b3a19ecfb0b6161c6a6152cdd9c3",
+      "proposed": "d540621081e87e767e47a1a6efceffe34c5700e92e475a766a6fe485a66262f5"
+    },
+    "fixture_hash": "bd9dffe452322cec20a505484d7e9454d0988a25cd622c68529f68ba8d6a438f",
+    "retrieval_threshold": 0.4,
+    "pack_budget": 1500,
+    "pack_limit": 5,
+    "consolidate": false,
+    "embedding_config": {
+      "provider": "nvidia",
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null
+    },
+    "rerank_provider": "none",
+    "retrieval_profile": "general",
+    "retrieval_sha256": "a0891f0ffbc2b52b111fa4f13ad1662ab3f59c3ebadfd8a244c9b4fe28b2dc24",
+    "recall_contract": "natural-claims/v1-reviewed",
+    "narrative_sha256": "195082f24e584d5d983141843204f20d9d0f2361e29ea3a1a68a8ce03ec38aa3",
+    "recall_cases": [],
+    "review_capture": false,
+    "source_blocks": true
+  }
+}

@@ -171,8 +171,11 @@ reachable source-version graph without recursive depth limits; missing/changed
 sources and cyclic dependencies remain unresolved. Reconcile from inspected
 current originals before publishing another dependent understanding. These are
 mechanical source/version checks, not semantic verification of proposed prose.
-Ordinary retrieval's existing status surface is separately qualified; these
-checks do not claim narrative or three-pass consolidation acceptance.
+Ordinary pack/expand retrieval uses the same transitive checks: an unchanged
+dependent account is not current when its upstream original changed. After the
+intermediate account is reconciled, downstream references to its former revision
+remain stale until separately reconciled. These checks do not claim narrative
+or three-pass consolidation acceptance.
 
 ## Qualification and later integration
 

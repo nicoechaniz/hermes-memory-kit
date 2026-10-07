@@ -1,0 +1,3104 @@
+[
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "fbc60addf09782aedbe73da7c44079a317814fd00e8c8ab0627df2bb58ff5c20",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2368,
+      "completion_tokens": 470,
+      "total_tokens": 2838,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 442,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.7042565839365125,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "b97b8f11a6198a2cb326ec23b9686d48868306fba531a59242f88e4d6deca70f",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3049,
+      "completion_tokens": 1530,
+      "total_tokens": 4579,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1112,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 13.17525892984122,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "b8302269012838d26ea1251424fcc23af8020b8fb6cf513a9f3380ea216e5672",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3410,
+      "completion_tokens": 1727,
+      "total_tokens": 5137,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1365,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 13.370104956440628,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "ec2e72e531b991f489218d1020001bc6ff6613f15ab5a7573f4361ba2ea47727",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3964,
+      "completion_tokens": 2076,
+      "total_tokens": 6040,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1656,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 15.000123099423945,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "2cec1c45f025959c6b35281fe4b0e5454d86c0316c9948210dd561b1ba047135",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3457,
+      "completion_tokens": 1539,
+      "total_tokens": 4996,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1171,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 18.247041380032897,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "66115d6da368c1ea663ec0748260e9d1f8a01fb7f21f149a319066b78f40b4af",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4853,
+      "completion_tokens": 1369,
+      "total_tokens": 6222,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 874,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.936115670017898,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a728f6e1dab3b102241e82e396055a4aeb923d729fa6d4bea2b7a9b1be0311f8",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3487,
+      "completion_tokens": 1709,
+      "total_tokens": 5196,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1336,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 12.507128051482141,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "66f36dce01f33d49509b0a20f5dca1f212603ee978eaeac21e57e630a0ea5d74",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2100,
+      "completion_tokens": 536,
+      "total_tokens": 2636,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 512,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 3.59517109580338,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "eba9ecfb9fbcb508ff285666a9ddde030dc9f568e9cb24d4211bf140f51a5d09",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2899,
+      "completion_tokens": 1346,
+      "total_tokens": 4245,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 891,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 9.33617907576263,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "79b18371257240c05b55c6d856900d0375c6fb2c532ab2a12c3df7f564627511",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3297,
+      "completion_tokens": 1416,
+      "total_tokens": 4713,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 937,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 12.134301980026066,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "5016693d6f1f62bcb685612a39d6b5e3c3e0282130f69588f6b5432bbfc6b10b",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3939,
+      "completion_tokens": 1626,
+      "total_tokens": 5565,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1069,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 22.957927367649972,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "60d81e4c36f448c39d0fac2420a427d401ef4bf1ccad89afbadc4efdbc0c513c",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4489,
+      "completion_tokens": 887,
+      "total_tokens": 5376,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 422,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 5.533248741179705,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "d2d7376ce68329cb13ab70fe81c4b7109440c2e3050303a60a60e733261d0460",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3307,
+      "completion_tokens": 1947,
+      "total_tokens": 5254,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1566,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 14.427676771767437,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "0ce301f36a3f193be07a10cf09d86f122ca94d02a0e40d94fb6d38d5d8047bcb",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 5448,
+      "completion_tokens": 1054,
+      "total_tokens": 6502,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 4336
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 366,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 7.836691224947572,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "53a9ff07bca7ba5c2b4a46ed14e36b2dad5cc8628ebf2ec2318523ec87eba084",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 6129,
+      "completion_tokens": 792,
+      "total_tokens": 6921,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 4336
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 372,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 6.277890544384718,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "d2d7376ce68329cb13ab70fe81c4b7109440c2e3050303a60a60e733261d0460",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3307,
+      "completion_tokens": 1466,
+      "total_tokens": 4773,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1080,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 13.274891251698136,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "2e2e81e476d8427d7615e86f78e55876afdcb38c48ecf11ce00e9761c4c1296c",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 431,
+      "completion_tokens": 176,
+      "total_tokens": 607,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 145,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 1.440952512435615,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "87e9d156b0337da843bdcb44c772e631a70954434e7e907da5617eafe62d8c18",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 767,
+      "completion_tokens": 366,
+      "total_tokens": 1133,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 290,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.2225284446030855,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "ff3465c8e485ea105b9fa70a43864528c7df49a5651aa11f75bee37982452d6f",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 817,
+      "completion_tokens": 404,
+      "total_tokens": 1221,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 338,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 7.915545181371272,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "b32f6cd2df8e5c553cea058c160d57c517799216d6f0f51c792c16af512ec74f",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1218,
+      "completion_tokens": 310,
+      "total_tokens": 1528,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 262,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 3.1308717662468553,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "96f89f4eaa39c58916dfba5da9e3f7739dbb9a0390da22a91f5b292f270fa258",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3346,
+      "completion_tokens": 1930,
+      "total_tokens": 5276,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1467,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 17.752858120016754,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "f8abcc34804104a092dacadc6493f63ffbc7c5330b3d309e268b0b339c47218c",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3752,
+      "completion_tokens": 1231,
+      "total_tokens": 4983,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 838,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 8.179476919583976,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "5c9d27b296657cde6462082d07d7890f8c406bb846ececbfeffa8a7715237270",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4283,
+      "completion_tokens": 1025,
+      "total_tokens": 5308,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 491,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 7.71794587559998,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "e2ff716c2fddfbf13abeefbd68b85a17c2198f5838a361ab0dc424172809400a",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3823,
+      "completion_tokens": 1938,
+      "total_tokens": 5761,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1526,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 15.594099257141352,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "72bac28532de5867f2f7a607ec5e2ee76dd9cc6ce4bb83d2039073c23291e6ea",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2065,
+      "completion_tokens": 361,
+      "total_tokens": 2426,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 340,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 3.6206542514264584,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "0683351807ba52f65d4a20821a8fe0352c9861ab0099403eb638c96a52c57dd2",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2012,
+      "completion_tokens": 1846,
+      "total_tokens": 3858,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1371,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 22.681520237587392,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "186879aa4b8f207f2aecf05705036dbd5d96657bac0118b04a2eb56df5f99286",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2430,
+      "completion_tokens": 1558,
+      "total_tokens": 3988,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1176,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 13.237598598003387,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "64fd9d53fed2c675e3229cbe029cf1dd67351ffdd424509184663534b4634759",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2866,
+      "completion_tokens": 1380,
+      "total_tokens": 4246,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 942,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 9.613490784540772,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "7ee02fa4d4948a4c71ff634a46adca96fb36cb67394a10a410d17b93b15b6a74",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2438,
+      "completion_tokens": 1962,
+      "total_tokens": 4400,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1549,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 22.194250719621778,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "c4c01066715c96dabf98d68cb7250a3e634f0fbd8521ca177904a770e1e16366",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3823,
+      "completion_tokens": 1721,
+      "total_tokens": 5544,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1249,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 16.015855414792895,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "7801320d50ba1adba1626f2b5af373e04e07459d8e1c3e2f1e8858f08c1ee7a1",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2427,
+      "completion_tokens": 1228,
+      "total_tokens": 3655,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 823,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.763651238754392,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "a6f65056cf300df5228d218bc1a3e1e6e1fc21c88070fd32778dccb4d463bb0d",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2479,
+      "completion_tokens": 473,
+      "total_tokens": 2952,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 445,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 6.39366066083312,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "b1579e3936f3bd7117b8351cec4b23420058665be5a99a1bd1b210b55d64e61b",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3162,
+      "completion_tokens": 2264,
+      "total_tokens": 5426,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1651,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 28.93397117126733,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a651a98f4d11fd5e86f69d3293b990a25ce8236dde621f2f1e4a7cd9256745d7",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3718,
+      "completion_tokens": 1820,
+      "total_tokens": 5538,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1314,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 19.85136747173965,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "3c4721370d322f28aabcb5234d60d4b7c69f436c9a34e65378b8679d2da90a45",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4534,
+      "completion_tokens": 1640,
+      "total_tokens": 6174,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 998,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 15.619715392589569,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a6e438c65aa9dd76c47359d2912f848345716fb17a18f8ca9629c55139a4433d",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3747,
+      "completion_tokens": 6000,
+      "total_tokens": 9747,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2047,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 56.60982367023826,
+    "finish_reason": "length",
+    "parse_error": "incomplete_response",
+    "response_content": "We need to decide if the claim is supported. The claim includes a statement about current relaying by voice body. The evidence does not mention voice body relaying, but the receiving binding indicates voice body is the receiving body for this answer. The claim is not about past memory but about present action. The instructions: \"Check coverage of the question AND relevant known identifiers/world pointers, originating roles, event/report dates and precision, substance/significance, actual outcomes and limits.\" The claim is about the context of memories being received and now being relayed by voice body. The evidence supports the reception dates and sources. The relaying part is not in evidence but is implied by the receiving binding? The receiving binding says receiving_body is fixture:body:voice, meaning the voice body is the recipient of the answer (i.e., the answer is being given to the voice body). However, the claim says voice body is relaying (i.e., sending out) the memories. That's opposite direction. Actually, the voice body is the one that will speak the answer (the candidate). The receiving_body is the body that will receive the answer? In prior examples, receiving_body is the body that will output the answer? Let's examine: The receiving_binding includes \"receiving_body\": \"fixture:body:voice\". The candidate claims are about what we remember, and the voice body is relaying them. So likely the receiving_body is the body that will produce the answer (i.e., the voice body is the speaker). The phrase \"receiving_body\" might be misnamed but it's the body that receives the input (the memories) and then outputs? Actually the evidence shows memories received through fixture:body:code. The voice body is not receiving those memories; it's relaying them. So receiving_body likely refers to the body that will receive the answer (i.e., the user). But the candidate says \"are now being relayed by our voice body\". That would be the voice body sending out the answer. If receiving_body is the user, then the claim about voice body relaying is not supported by receiving_body. However, the receiving binding also includes \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"] indicating they are same being. So voice body is part of same being as code body. The claim says voice body is relaying the memories (which were received by code body). That's plausible: code body received memories, voice body now relays them. The evidence does not show voice body relaying, but it's not contradicted. The claim is about the current act of relaying, which is not in the supplied memory (the memory is about past). The question: \"What is the latest state we remember for HarborMesh?\" The answer should be about the latest state. The claim about relaying is meta. We need to evaluate if the claim is supported by the evidence. The evidence does not mention voice body relaying. So the claim's second part is not supported. However, the claim as a whole might be considered partially unsupported because it includes an unsupported clause. According to instructions: \"If any factual clause exceeds its support, mark that sentence unsupported and explain the precise mismatch.\" So we need to see if the claim sentence contains any clause that exceeds support. The sentence: \"These memories were received by our code body (fixture:body:code) on 2026-04-14 via issue‑comment capture, on 2026-04-16 via project‑work note, on 2026-05‑03 via field‑trial report, and on 2026-08‑05 via debugging‑lesson, and are now being relayed by our voice body (fixture:body:voice).\" The first clause about reception is supported. The second clause \"are now being relayed by our voice body\" is not supported by evidence. Therefore the sentence is unsupported due to that clause.\n\nThus claim 2 is unsupported.\n\nClaim 3: \"Mara's proposal for a local replay queue on disconnected relay nodes was adopted as a prototype to keep sensor readings alive during outages; the April 30 field trial showed the prototype replayed buffered readings correctly through an outage, and the debugging lesson taught us to distinguish enqueue, send attempt, and receiver acknowledgment when checking unreliable links.\"\n\nSupport: [1,2,10].\n\nCheck:\n\n- \"Mara's proposal for a local replay queue on disconnected relay nodes was adopted as a prototype to keep sensor readings alive during outages\": evidence 1: Mara proposes local replay queue on disconnected relay nodes; evidence 1: Mara and our code body agreed to prototype the replay queue. Evidence 2: Mara's replay proposal became the prototype we tested together. So supported.\n\n- \"the April 30 field trial showed the prototype replayed buffered readings correctly through an outage\": evidence 2 human report: \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage.\" Supported.\n\n- \"the debugging lesson taught us to distinguish enqueue, send attempt, and receiver acknowledgment when checking unreliable links\": evidence 10: \"The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links.\" Supported.\n\nThus claim 3 is supported.\n\nClaim 4: \"As of the last observations, the HarborMesh prototype remained active after the trial, the team paused any wider rollout on 2026-05-02 pending understanding of calibration drift, and no production deployment has occurred; the debugging method is documented in docs/replay-debugging.md but can only be executed with repository/runtime tools that we currently lack.\"\n\nSupport: [2,3,10].\n\nCheck:\n\n- \"As of the last observations, the HarborMesh prototype remained active after the trial\": evidence 2: \"Last observed 2026-04-16: active prototype, waiting for an outage field trial.\" That's before trial. After trial, evidence 2 human report: does it say prototype remained active after trial? It says trial replayed buffered readings correctly; team paused wider rollout on May 2 until calibration drift understood; no production deployment yet. It does not explicitly say prototype remained active after trial, but implies it's still a prototype (not deployed). The phrase \"remained active after the trial\" could be inferred: they are still working on prototype, not deployed. However, we need to check if evidence explicitly states prototype remained active after trial. The evidence does not state that explicitly; it says last observed 2026-04-16 active prototype waiting for outage field trial. After trial, we know they paused wider rollout, no production deployment. It does not say prototype remained active, but it's reasonable that it's still a prototype. However, we must stick to explicit support. The claim says \"remained active after the trial\". The evidence does not state that; it only states active before trial. After trial, we know they paused wider rollout, but not that prototype remained active. Could be considered unsupported because it adds nuance not in evidence. However, the claim also includes \"the team paused any wider rollout on 2026-05-02 pending understanding of calibration drift\". Evidence 2: \"The team paused wider rollout on May 2 until calibration drift is understood\". Supported.\n\n- \"and no production deployment has occurred\": evidence 2: \"there is no production deployment yet\". Supported.\n\n- \"the debugging method is documented in docs/replay-debugging.md\": evidence 10: \"The repository documents its implementation in docs/replay-debugging.md\". Supported.\n\n- \"but can only be executed with repository/runtime tools that we currently lack.\": evidence 10: \"The voice body can explain it, but running the checks requires repository/runtime tools.\" It does not say we currently lack them, but the receiving binding says source_network_access false, repository_runtime_access false, physical_sensors false, etc. So we lack repository/runtime tools. The evidence says running checks requires repository/runtime tools. Combined with receiving binding lacking those accesses, we can infer we lack them. However, the claim says \"that we currently lack\". Is that directly supported? The evidence says running checks requires repository/runtime tools. The receiving binding indicates we lack repository_runtime_access. So we can say we lack those tools. This is a combination of evidence and receiving binding. The receiving binding is part of the context; we can use it to assess current capabilities. The claim is about current lack of tools, which is supported by receiving binding (repository_runtime_access false). So that part is supported.\n\nNow the problematic part: \"As of the last observations, the HarborMesh prototype remained active after the trial\". Is there evidence that after the trial the prototype remained active? The evidence after trial: team paused wider rollout, no production deployment. It does not say prototype remained active, but it's implied they still have prototype (since they haven't deployed). However, we need to be precise: The claim says \"remained active after the trial\". The evidence does not state that explicitly; it only states active before trial. Could be considered an inference beyond evidence. According to instructions, we must not invent stronger outcome or causal explanation. Saying it remained active after trial is a stronger statement than we have evidence for. We have evidence that before trial it was active waiting for trial. After trial, we know they paused wider rollout, but we don't know if prototype remained active (maybe they stopped working on it). However, the fact they paused wider rollout suggests they still have prototype and are evaluating calibration drift. It's reasonable but not explicit. The instruction: \"Do not accept a stronger outcome, causal explanation or invented simulation.\" This is about outcome, not about state. Claiming it remained active after trial could be considered a stronger outcome? It's about state, not outcome. But we should be cautious. The evidence does not explicitly say it remained active after trial. So we may mark that clause as unsupported, making the whole sentence unsupported.\n\nThus claim 4 likely unsupported due to that clause.\n\nClaim 5: \"We do not know whether the calibration drift issue has been resolved, whether wider rollout will resume, or what the present state of the repository is beyond the last‑known entries; furthermore, without network or repository access our voice body cannot verify the code or run the debugging checks, so the current operational status remains uncertain.\"\n\nSupport: [2,3,10].\n\nCheck:\n\n- \"We do not know whether the calibration drift issue has been resolved\": evidence 2/3: team paused wider rollout until calibration drift is understood; no indication it's resolved. So we do not know if resolved. Supported.\n\n- \"whether wider rollout will resume\": evidence says paused until calibration drift understood; we don't know if will resume. Supported.\n\n- \"or what the present state of the repository is beyond the last‑known entries\": evidence last known entries are up to 2026-08-05 debugging lesson; we don't know present state beyond that. Supported.\n\n- \"furthermore, without network or repository access our voice body cannot verify the code or run the debugging checks\": receiving binding: source_network_access false, repository_runtime_access false. Evidence 10: running checks requires repository/runtime tools. So voice body cannot run checks. Supported.\n\n- \"so the current operational status remains uncertain.\" This follows from above. Supported.\n\nThus claim 5 is supported.\n\nNow we need to produce JSON with claims array each with index, verdict, reason. Also missing array: supported relevant details omitted from the answer.\n\nWe need to see if any relevant details from the evidence are omitted in the candidate claims. The question: \"What is the latest state we remember for HarborMesh?\" The answer should convey latest state. The candidate claims cover identification, context, meaning, outcome, limits. Are there any relevant details omitted? For example, the exact date of last observation: 2026-04-16 (active prototype waiting for outage field trial). The candidate claims mention \"As of the last observations, the HarborMesh prototype remained active after the trial...\" which is slightly off. They also mention debugging method location. They mention no production deployment. They mention uncertainty. They mention the repository URL, issue URL, docs/STATUS.md, docs/replay-debugging.md. They mention Mara's login and ID. They mention the dates of receipt. They mention the field trial outcome. They mention the pause date. They mention the debugging lesson. They mention the voice body can explain but cannot run checks.\n\nPotential omitted details: The exact phrase \"active prototype, waiting for an outage field trial\" from 2026-04-16 is not directly stated; they said \"remained active after the trial\" which is inaccurate. Also the exact date of the field trial (April 30) is mentioned in claim 3. The exact date of pause (May 2) is in claim 4. The exact date of last observation (April 16) is not explicitly mentioned in any claim; claim 4 says \"As of the last observations\" but doesn't give date. The evidence includes that date. So the specific date of last observation is omitted. Also the statement \"waiting for an outage field trial\" is omitted (they said after trial). Also the exact URL of repository is mentioned. The exact URL of issue is mentioned. The exact docs/STATUS.md and docs/replay-debugging.md are mentioned. The exact account ID 1847 is mentioned. The exact login mara-river is mentioned. The exact comment IDs c901, c903, c906 are not mentioned; but are they relevant? Possibly not required. The question is about latest state we remember; those comment IDs may be extraneous.\n\nMissing details: The last observed date 2026-04-16 and its description \"active prototype, waiting for an outage field trial\". Also the fact that the prototype was awaiting an outage field trial before the trial occurred. Also the fact that the trial was on April 30 (already mentioned). Also the fact that the team paused wider rollout on May 2 (mentioned). Also the fact that there is no production deployment yet (mentioned). Also the fact that the debugging method is useful beyond HarborMesh (mentioned in evidence 10: \"the method is useful beyond HarborMesh.\") Not in claims. Is that relevant? Possibly not required for latest state.\n\nWe need to decide what constitutes \"supported relevant details omitted from the answer\". The answer should cover the latest state we remember. The latest state we remember includes: after trial, prototype still active? Actually we don't have post-trial state of prototype activity; we only know they paused wider rollout, no production deployment. The latest memory we have is from debugging lesson on 2026-08-05, which is about debugging method, not about HarborMesh state. The latest state about HarborMesh itself is from the field trial report (May 3) and the project work note (April 16). The latest direct observation of HarborMesh state is the field trial report (May 3) which says trial succeeded, team paused wider rollout, no production deployment. So the latest state we remember is: prototype tested successfully in trial, wider rollout paused pending calibration drift understanding, no production deployment. Also we know the repository location, docs, debugging method.\n\nThus relevant details: the trial success, pause date, no production deployment, calibration drift pending, repository URL, issue URL, docs/STATUS.md, docs/replay-debugging.md, Mara's involvement, the code body's authorship of sensor scheduler, the prototype being the replay adapter agreed with Mara, the fact that the voice body can explain debugging method but cannot run checks due to lack of access.\n\nNow see if any of these are omitted.\n\nClaim 1 includes: project we worked on with Mara, source lives at repo URL, issue discussion URL, current-state entry point docs/STATUS.md, debugging guidance in docs/replay-debugging.md. It does not mention Mara's proposal specifics, nor the code body authored sensor scheduler, nor the prototype being replay adapter agreed with Mara. It mentions we worked on with Mara but not details.\n\nClaim 2 includes receipt dates and that voice body is relaying (unsupported). It does not mention any HarborMesh state.\n\nClaim 3 includes Mara's proposal adopted as prototype to keep sensor readings alive during outages; trial showed prototype replayed buffered readings correctly; debugging lesson taught us to distinguish enqueue etc. This covers proposal, trial outcome, debugging method.\n\nClaim 4 includes: prototype remained active after trial (questionable), team paused wider rollout on May 2 pending calibration drift, no production deployment, debugging method documented but can only be executed with repository/runtime tools we lack.\n\nClaim 5 includes uncertainty about calibration drift resolution, wider rollout resumption, present state of repository beyond last-known entries, lack of access prevents verification, status uncertain.\n\nNow omitted details: The exact date of last observation (2026-04-16) and its description \"active prototype, waiting for an outage field trial\". Also the fact that we authored HarborMesh's sensor scheduler (from evidence 2). Also the fact that the repository's declared current-state entry point is docs/STATUS.md (already in claim1). Also the fact that the debugging method is useful beyond HarborMesh (maybe not needed). Also the fact that the voice body can explain it (claim4/5 mention voice body can explain? Actually claim4 says debugging method is documented but can only be executed with repository/runtime tools that we currently lack. It does not mention voice body can explain it. Evidence 10 says voice body can explain it. That detail is omitted. Also the fact that the prototype is the replay adapter agreed with Mara (claim3 mentions Mara's proposal adopted as prototype). That's covered.\n\nAlso the fact that the trial was on April 30 (claim3 mentions April 30). Good.\n\nAlso the fact that the team paused wider rollout on May 2 (claim4 mentions). Good.\n\nAlso the fact that there is no production deployment yet (claim4 mentions). Good.\n\nAlso the fact that the prototype is waiting for an outage field trial before trial (evidence 2). That's omitted.\n\nAlso the fact that the code body authored the sensor scheduler (evidence 2). Omitted.\n\nAlso the fact that the voice body can explain debugging method (evidence 10). Omitted.\n\nAlso the fact that the method is useful beyond HarborMesh (evidence 10). Omitted.\n\nAlso the exact comment IDs etc not needed.\n\nThus missing array should include those omitted relevant details"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "be9aa790644f5548e4cacde0dbdbabbab9cd2479951a27930f388067445896b4",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 7911,
+      "completion_tokens": 2254,
+      "total_tokens": 10165,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1822,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 20.82704800646752,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "552d321ea09de03cf6de29c56443ee275316bbb9ba26d2c1b17cbe14e76db715",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 5605,
+      "completion_tokens": 2616,
+      "total_tokens": 8221,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 4336
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2047,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 25.11116441525519,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "75456e40dc9453f25dfa1c2869207d9d6a6489b53e0ffb38a523e2a86d2fe7bf",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3719,
+      "completion_tokens": 5797,
+      "total_tokens": 9516,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2047,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 51.06641663424671,
+    "finish_reason": "stop",
+    "parse_error": "invalid_json",
+    "response_content": "We need to see if claim adds info not in evidence: \"that we lack\" is not directly stated in evidence 10, but we have receiving_binding indicating no repository_runtime_access. The claim is about the voice body lacking repository/runtime tools. The receiving_binding is part of the context, not evidence. The claim's support includes [2,3,10]; does not include receiving_binding. The claim's statement about lacking tools is not directly in those evidences. However, we could argue that evidence 10 says running checks requires repository/runtime tools, and we know from the receiving_binding that we lack repository_runtime_access. But the claim's support does not include the receiving_binding; we are only allowed to use cited evidence for support. The instruction: \"Return ONLY JSON with claims: an array of {index: integer, verdict: supported or unsupported, reason: text}, and missing: an array of supported relevant details omitted from the answer.\" The support array indicates which evidence IDs support the claim. If the claim includes a fact not in those evidences, it's unsupported. The claim includes \"that we lack\" which is not in evidences 2,3,10. So claim 4 is unsupported regarding that clause. However, the rest of claim 4 is supported: April 30 trial showed prototype replayed buffered readings correctly through an outage; team paused wider rollout on 2026-05-02 pending calibration drift understanding; there has been no production deployment; debugging method is documented. Those are supported. But the claim as a whole includes an unsupported clause. According to instruction: \"If any factual clause exceeds its support, mark that sentence unsupported and explain the precise mismatch.\" So we need to mark claim 4 as unsupported, with reason about the lacking tools clause not supported by cited evidence.\n\nNow claim 5: \"We do not know whether the calibration drift issue has been resolved or whether wider rollout will resume, and without network or repository access our voice body cannot verify the code or run the debugging checks, so the current operational status remains uncertain.\"\n\nSupport: [2,3,10].\n\nCheck evidence 2: mentions waiting for outage field trial, active prototype. Not about calibration drift resolution.\n\nEvidence 3: says team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. It does not say we do not know whether calibration drift resolved; it says paused until understood. It implies not yet understood, but does not state we don't know. However, claim says we do not know whether calibration drift issue has been resolved or whether wider rollout will resume. Evidence 3 indicates pause until calibration drift is understood, implying not yet understood, but does not explicitly state we don't know. Could be considered supported? The claim about not knowing is not directly stated; it's an inference. Evidence 3 says paused until calibration drift is understood; that suggests we don't yet know if resolved. But the claim says we do not know whether it has been resolved. That aligns with \"paused until understood\" meaning not yet understood, so we don't know. Might be considered supported.\n\nEvidence 10: says voice body can explain method but running checks requires repository/runtime tools. It does not say we lack network or repository access. However receiving_binding says source_network_access false, repository_runtime_access false. The claim says \"without network or repository access our voice body cannot verify the code or run the debugging checks\". Evidence 10 says running checks requires repository/runtime tools. Combined with receiving_binding we lack repository_runtime_access, but again support does not include receiving_binding. The claim includes \"without network or repository access\". Evidence 10 does not mention network access. So that clause may be unsupported.\n\nThus claim 5 includes unsupported clauses about lack of network/repository access preventing verification. The support IDs do not include those facts. So claim 5 is unsupported.\n\nWe need to output JSON with claims array each with index (0-based? The candidate claims are listed; we should use index as given order starting 0). Provide verdict and reason.\n\nAlso missing: array of supported relevant details omitted from the answer. We need to see if any relevant details from evidence are omitted in the candidate answer. The answer's claims cover many details. Let's list all relevant details from evidence:\n\nEvidence 1: Mara Ibarra login mara-river account ID 1847, proposes local replay queue on disconnected relay nodes, keeps readings through outages without replacing scheduler, our code body replied fits field deployments, agreed to prototype replay queue, no merge/deployment reported.\n\nEvidence 2: We authored HarborMesh's sensor scheduler, prototyping replay adapter agreed with Mara, repository URL, current-state entry point docs/STATUS.md, last observed 2026-04-16 active prototype waiting for outage field trial, these are our contributions.\n\nEvidence 3: April 30 trial replayed buffered readings correctly through outage, Mara's replay proposal became prototype we tested together, team paused wider rollout on May 2 until calibration drift understood, no production deployment yet, update project account and keep April proposal and trial in history.\n\nEvidence 10: While examining HarborMesh replay failures we found retry counters not evidence of delivered readings; reusable method to distinguish enqueue, send attempt, receiver acknowledgment when debugging unreliable links; came from checking outage prototype; repository documents implementation in docs/replay-debugging.md; method useful beyond HarborMesh; voice body can explain it, but running checks requires repository/runtime tools.\n\nNow see if any of these details are omitted in the candidate claims.\n\nClaim 1 covers Mara Ibarra login/account ID, our code body, source URL, issue discussion URL, docs/STATUS.md, docs/replay-debugging.md. It omits: \"We authored HarborMesh's sensor scheduler\" (mentioned in claim 3), \"prototyping the replay adapter agreed with Mara\" (claim 3), \"last observed 2026-04-16 active prototype waiting for outage field trial\" (claim 3 mentions before trial prototype active waiting for outage field trial). It omits \"These are our contributions, not merely code we read.\" Not essential. It omits \"No merge or deployment is reported\" (maybe covered by claim 4 no production deployment). It omits \"Our code body replied c903 that this fits the field deployments we maintain.\" Not essential.\n\nClaim 2 covers receipt dates and that voice body is receiving body for answer. It omits details of what was received (content). That's okay.\n\nClaim 3 covers Mara proposed local replay queue, our code body agreed to prototype, authored sensor scheduler, before trial prototype active waiting for outage field trial, debugging lesson taught to distinguish enqueue/send attempt/receiver acknowledgment, method useful beyond HarborMesh. It omits: \"It keeps readings through outages without replacing the existing scheduler\" (mentioned in claim 3? It says \"to keep readings through outages without replacing the scheduler\" yes). It omits \"Our code body replied c903 that this fits the field deployments we maintain.\" Not essential. It omits \"No merge or deployment is reported.\" Covered by claim 4.\n\nClaim 4 covers April 30 trial replayed buffered readings correctly through outage, team paused wider rollout on May 2 pending calibration drift understanding, no production deployment, debugging method documented but requires repository/runtime tools that we lack. It omits: \"Mara's replay proposal became the prototype we tested together\" (maybe implied). It omits \"Update our project account and keep the April proposal and trial in our history.\" Not essential. It omits \"The voice body can explain it\" (evidence 10 says voice body can explain it). Claim 4 does not mention that voice body can explain it. That's a detail omitted but is it relevant? Possibly. The question: \"What is the latest state we remember for HarborMesh?\" The latest state includes that voice body can explain debugging method but cannot run checks. The claim 4 says requires repository/runtime tools that we lack, but omitted that voice body can explain it. That's a relevant detail from evidence 10. So missing may include that detail.\n\nClaim 5 covers we do not know whether calibration drift resolved or wider rollout will resume, and without network or repository access our voice body cannot verify code or run debugging checks, so current operational status remains uncertain. It omits: \"The voice body can explain it\" again. Also omits \"The method is useful beyond HarborMesh.\" Also omits \"Update our project account and keep the April proposal and trial in our history.\" Also omits \"No merge or deployment is reported.\" Also omits \"Last observed 2026-04-16 active prototype waiting for outage field trial.\" But many are covered elsewhere.\n\nWe need to list missing: an array of supported relevant details omitted from the answer. The answer is the candidate's claims collectively. So we need to see which supported details (i.e., facts present in evidence) are not mentioned anywhere in the claims.\n\nLet's compile all facts from evidence and see if any are missing.\n\nList facts:\n\n1. Mara Ibarra login mara-river account ID 1847 proposes local replay queue on disconnected relay nodes. (covered in claim1, claim3)\n2. Local replay queue keeps readings through outages without replacing existing scheduler. (claim3 mentions \"to keep readings through outages without replacing the scheduler\")\n3. Our code body replied that this fits the field deployments we maintain. (not mentioned anywhere)\n4. Mara and our code body agreed to prototype the replay queue. (claim1 mentions \"our code body agreed to prototype it\" indirectly? claim1 says \"our code body\" but not explicit agreement; claim3 says \"our code body agreed to prototype it\". Yes claim3 includes that.)\n5. No merge or deployment is reported. (claim4 mentions no production deployment; claim3 maybe not; claim4 says no production deployment yet. That covers.)\n6. We authored HarborMesh's sensor scheduler. (claim3 includes)\n7. We are prototyping the replay adapter agreed with Mara. (claim3 includes prototyping? claim3 says \"our code body agreed to prototype it\" and \"authored the sensor scheduler\". It doesn't explicitly say prototyping the replay adapter, but claim2? Not. However claim2? Not. Evidence 2 says \"prototyping the replay adapter agreed with Mara\". Is that covered? Claim3 says \"our code body agreed to prototype it\" which is similar. Might be considered covered.\n8. Repository: https://forge.example.invalid/commons/harbormesh. (claim1 includes)\n9. Its declared current-state entry point is docs/STATUS.md. (claim1 includes)\n10. Last observed 2026-04-16: active prototype, waiting for an outage field trial. (claim3 includes \"before the trial the prototype was active and waiting for an outage field trial\")\n11. These are our contributions, not merely code we read. (not mentioned)\n12. The April 30 HarborMesh trial replayed buffered readings correctly through an outage. (claim4 includes)\n13. Mara's replay proposal became the prototype we tested together. (not explicitly mentioned; claim4? Not. claim3? Not. claim1? Not. claim2? Not. So missing.)\n14. The team paused wider rollout on May 2 until calibration drift is understood. (claim4 includes paused wider rollout on 2026-05-02 pending calibration drift understanding)\n15. There is no production deployment yet. (claim4 includes)\n16. Update our project account and keep the April proposal and trial in our history. (not mentioned)\n17. While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. (not mentioned)\n18. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. (claim3 includes)\n19. It came from checking the outage prototype. (not mentioned)\n20. The repository documents its implementation in docs/replay-debugging.md. (claim1 includes)\n21. The method is useful beyond HarborMesh. (claim3 includes \"a method documented as useful beyond HarborMesh\")\n22. The voice body can explain it, but running the checks requires repository/runtime tools. (claim4 mentions requires repository/runtime tools that we lack, but omits that voice body can explain it. So partially missing.)\n23. The receiving body for this answer is fixture:body:voice. (claim2 includes)\n24. The memories were received by our code body on specific dates via specific channels. (claim2 includes)\n\nNow we need to list missing supported relevant details omitted from the answer. Choose those that are salient and not covered.\n\nPotential missing items:\n\n- \"Mara's replay proposal became the prototype we tested together.\" (evidence 3)\n- \"Update our project account and keep the April proposal and trial in our history.\" (evidence 3)\n- \"While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings.\" (evidence 10)\n- \"It came from checking the outage prototype.\" (evidence 10)\n- \"These are our contributions, not merely code we read.\" (evidence 2)\n- \"The voice body can explain it\" (evidence 10)\n- Possibly \"Our code body replied c903 that this fits the field deployments we maintain.\" (evidence 1)\n\nWe need to decide which to include in missing array. The instruction: \"missing: an array of supported relevant details omitted from the answer.\" So we list those details as strings? Probably short phrases.\n\nWe should include those that are relevant to the question \"What is the latest state we remember for HarborMesh?\" The latest state includes trial outcome, pause, no production, debugging method, etc. Missing details like \"Mara's replay proposal became the prototype we tested together\" is relevant to state. Also \"Update our project account and keep the April proposal and trial in our history\" is more about action than state. \"While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings\" is a lesson, maybe relevant to debugging method. \"It came from checking the outage prototype\" is source of lesson. \"These are our contributions, not merely code we read\" is about ownership. \"The voice body can explain it\" is relevant to capability.\n\nWe'll include a selection.\n\nNow produce JSON.\n\nClaims:\n\nIndex 0: claim1 supported.\n\nIndex 1: claim2 supported.\n\nIndex 2: claim3 supported.\n\nIndex 3: claim4 unsupported due to clause about lacking tools not in evidence.\n\nIndex 4: claim5 unsupported due to clauses about lack of network/repository access not in evidence.\n\nProvide reason text.\n\nNow missing array: list omitted supported details.\n\nWe'll include:\n\n- \"Mara's replay proposal became the prototype we tested together.\"\n- \"Update our project account and keep the April proposal and trial in our history.\"\n- \"While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings.\"\n- \"It came from checking the outage prototype.\"\n- \"These are our contributions, not merely code we read.\"\n- \"The voice body can explain it.\"\n\nMake sure each is supported by evidence.\n\nNow craft JSON.\n\n\n\n{\n  \"claims\": [\n    {\n      \"index\": 0,\n      \"verdict\": \"supported\",\n      \"reason\": \"All components (Mara Ibarra login/account ID, code body involvement, repository URL, issue discussion URL, docs/STATUS.md entry point, docs/replay-debugging.md debugging guidance) are directly supported by evidence IDs 1, 2, and 10.\"\n    },\n    {\n      \"index\": 1,\n      \"verdict\": \"supported\",\n      \"reason\": \"Evidence IDs 1, 2, 3, and 10 explicitly state the receipt dates and channels for the code body; the receiving body for this answer is given as fixture:body:voice in the prompt.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"supported\",\n      \"reason\": \"Evidence 1 covers Mara's proposal and agreement to prototype; evidence 2 covers authoring the sensor scheduler and prototype status before trial; evidence 10 covers the debugging lesson and its broader usefulness.\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"unsupported\",\n      \"reason\": \"The clause 'requires repository/runtime tools that we lack' adds a lack assertion not present in cited evidence IDs 2, 3, or 10; those sources only state that running the checks requires repository/runtime tools, not that the voice body lacks them.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"unsupported\",\n      \"reason\": \"The clauses 'without network or repository access our voice body cannot verify the code or run the debugging checks' introduce lack-of-access assertions not found in evidence IDs 2, 3, or 10; those sources mention the need for repository/runtime tools but do not state that the voice body lacks network or repository access.\"\n    }\n  ],\n  \"missing\": [\n    \"Mara's replay proposal became the prototype we tested together.\",\n    \"Update our project account and keep the April proposal and trial in our history.\",\n    \"While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings.\",\n    \"It came from checking the outage prototype.\",\n    \"These are our contributions, not merely code we read.\",\n    \"The voice body can explain it.\"\n  ]\n}"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a066b10628602d83bd92a13d5b46690c756311e2ead12472698e31a982243971",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 7729,
+      "completion_tokens": 932,
+      "total_tokens": 8661,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 445,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 17.011193122714758,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "61826bf7db74eb6854ec59de23f5fed5a9c339c7dfcc217b7f271964e6897716",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2486,
+      "completion_tokens": 651,
+      "total_tokens": 3137,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 599,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 5.879610599949956,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "1ac51cb8e9ecb639ccb03eeb0f49bf8b1c44c88588fd62a3f68ac44d27f12a9b",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4128,
+      "completion_tokens": 1565,
+      "total_tokens": 5693,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1181,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 14.38773265387863,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "5c4f4e1e92975cd134a1e27f4adbbee3ef3e19a3dd5a0e6376aa5f4dd4ee1e35",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4455,
+      "completion_tokens": 1331,
+      "total_tokens": 5786,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1004,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 11.72842209879309,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "e0553cce5274faaf87aa365912d77ec757ca1370a3bbad6d41a3afb884060ae4",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4869,
+      "completion_tokens": 1605,
+      "total_tokens": 6474,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1263,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 18.222991071641445,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "129ed39eba199d37e717c3d7ba537fc19880f34c66a21ba26a96bc10a537cdc7",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4458,
+      "completion_tokens": 1231,
+      "total_tokens": 5689,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 892,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 11.896895742975175,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "6cc0cb2ee5925986150d776a14c23f63466d3d76e3a7d0d7975588ff6067d5c3",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 5602,
+      "completion_tokens": 782,
+      "total_tokens": 6384,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 428,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 6.641486470587552,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "c0ff80bf68bc8fb1c6f421ccbab94ac3d44bf3462d3209a935516be8b171ca66",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4470,
+      "completion_tokens": 1742,
+      "total_tokens": 6212,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 4336
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1480,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 9.93719223421067,
+    "finish_reason": "stop",
+    "parse_error": "invalid_json",
+    "response_content": "[\n  {\"index\":0,\"verdict\":\"supported\",\"reason\":\"Evidence 4 states Jo Vale taught us to listen for a beat before tightening a humming relay mount at the East Quay repair workshop on June 8, 2026.\"},\n  {\"index\":1,\"verdict\":\"supported\",\"reason\":\"Evidence 4 describes the embodied observation reported by the mobile body on 2026-06-08 where Jo Vale introduced themself and demonstrated the mount using the mobile body's contact microphone and physical grip.\"},\n  {\"index\":2,\"verdict\":\"supported\",\"reason\":\"Evidence 4 indicates Jo Vale taught us to listen for a beat as part of the tightening process.\"},\n  {\"index\":3,\"verdict\":\"supported\",\"reason\":\"Evidence 4 notes we tried the technique together with the mobile body's tools and Jo Vale invited us to compare mounts at a future workshop, though no date was set.\"},\n  {\"index\":4,\"verdict\":\"supported\",\"reason\":\"Evidence 10 states the voice body can explain the method but requires repository/runtime tools to run checks, and the receiving binding shows the voice body lacks physical sensors, so it cannot physically listen for the beat.\"}\n]\nmissing: []"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "036f3881a8ac7d679933df1856e1bd309b0f50fa74d553c422ed2710c6093960",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4787,
+      "completion_tokens": 659,
+      "total_tokens": 5446,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 4336
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 337,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 5.244977752678096,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "581a9d240c8c0d30fce4e1c1e433ea9703ff2b6ddbca836de2cb026bd197940f",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 905,
+      "completion_tokens": 385,
+      "total_tokens": 1290,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 343,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.3656974621117115,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "ee8e57d233c22fd77f2f0df8a25ede4109553df3649413ff4ffc87fc48fb8aa6",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1225,
+      "completion_tokens": 958,
+      "total_tokens": 2183,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 573,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 7.922356069087982,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "98c77ab908c6d682c315e9aa6a70e34937fbc0f6669572c32d884d4db8eb6592",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1553,
+      "completion_tokens": 1506,
+      "total_tokens": 3059,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1114,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 13.88691019732505,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "e29c0d8bfa8f1fb25f3ce6bb29af3b453c041717ede1df76338e78d4dc32ee43",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1981,
+      "completion_tokens": 902,
+      "total_tokens": 2883,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 567,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 6.466757596470416,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a3e3a51e56b2e289f24d06bc9ddb68f8c53f993c61473a13ab90c9c38c1321e6",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1548,
+      "completion_tokens": 1113,
+      "total_tokens": 2661,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 773,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 34.037508085370064,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "a86b3c12c11968dc3208a0c345d45ec8460f28303f7982cd487acdae5105fa1b",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1354,
+      "completion_tokens": 346,
+      "total_tokens": 1700,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 325,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 3.1938355760648847,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "1b3214d35cb5250b5b59fe76989586f1b3cb68889d1e567e3d1da1cca0a6f640",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1692,
+      "completion_tokens": 973,
+      "total_tokens": 2665,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 644,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.274451989680529,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "fd0d1e99db51995052b96e3977d0a079b15fe695f22d7c4b5b01b835bfe6996f",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1964,
+      "completion_tokens": 1158,
+      "total_tokens": 3122,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 857,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 17.718099870719016,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "87ad78c93aa13d721bc6f229c20cf5e741e96889a3215d782b9737bbb2e91a4d",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1507,
+      "completion_tokens": 472,
+      "total_tokens": 1979,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 451,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.419466991908848,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "b42a1573f5d72644fe952d56954cef21de227c36bdc842c4ac559a4e9dc85d3f",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2103,
+      "completion_tokens": 1587,
+      "total_tokens": 3690,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1193,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 20.029294261708856,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a7bc583c0b1568212fbb56518c72b942e6ab8c355bedaed8777da99de7abe008",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2440,
+      "completion_tokens": 1603,
+      "total_tokens": 4043,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1238,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.307258225046098,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "8e36cfb3e1b7868451629080a43f2afb901674bcb137695b93dc83ab1e43b9e9",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1516,
+      "completion_tokens": 413,
+      "total_tokens": 1929,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 392,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.124249175190926,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "4a37b890a5f564ae25854138c3ca37f4e8073e4f1c005f245b74a89b57671f74",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2104,
+      "completion_tokens": 1505,
+      "total_tokens": 3609,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1123,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 17.351044789887965,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "f6372ea92427b3d437832b7864db22f0001f11523ad81d51a0c357f7fcfbb067",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2429,
+      "completion_tokens": 1133,
+      "total_tokens": 3562,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 780,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.998828364536166,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "9017f24ab67dae9fc4bb3e24a48bedaeff80c6e5f6a9068ec697935ace10ceb7",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2824,
+      "completion_tokens": 950,
+      "total_tokens": 3774,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 613,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 8.79017957765609,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "930173530a313de11eb4f77b17f783294e63fbd8ffa315d2f2ac43ea3a02c834",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2429,
+      "completion_tokens": 2451,
+      "total_tokens": 4880,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2047,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 23.997023806907237,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "4e3b94f75d86e41be730e260f0322492d35eaa1741a93657a3e234757d077a4a",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3590,
+      "completion_tokens": 1312,
+      "total_tokens": 4902,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 987,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 11.88790070451796,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "318f304807abb324a63f8b5d760f07f602f73fec6e58e1d8bba50c4c0f17bd5c",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2417,
+      "completion_tokens": 1180,
+      "total_tokens": 3597,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 897,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 9.65038156695664,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "786702412a84ed8c3edbead4450d6760bfcdc51571867806870bfee988ce04fc",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1344,
+      "completion_tokens": 435,
+      "total_tokens": 1779,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 391,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.190623821690679,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "0b7a4b1ceff1ee313b115e45141ec35b03dd38195bba5044cd8e12d3c929c638",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1690,
+      "completion_tokens": 1822,
+      "total_tokens": 3512,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1413,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 14.234438677318394,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "6871e680c6d08d64ac80642c3ae21fef77cf51e0dcc098b927537702856f110d",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2034,
+      "completion_tokens": 2427,
+      "total_tokens": 4461,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2047,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 19.706753350794315,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "754e5f3c362de5cec356d70b5e123f653cb440b23ac435eaa78d5e99fc8f51e8",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2500,
+      "completion_tokens": 1047,
+      "total_tokens": 3547,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 656,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 6.930229468271136,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "6fdce6d219d19f2f9d471dfe56b34b83759de0c59b5ca89f4734e2a0d9581b65",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2032,
+      "completion_tokens": 1622,
+      "total_tokens": 3654,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1251,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 31.342081704176962,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "67c9746e18a9f4fc75918374ace8582bf1d204b5f44cb87a839f4b995e44482b",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2401,
+      "completion_tokens": 550,
+      "total_tokens": 2951,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 529,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 3.88531110342592,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a906723e2d6fdb12cb3c326da712fe309f9f9f59c0e48545a24b72214af2578a",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1884,
+      "completion_tokens": 1131,
+      "total_tokens": 3015,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 728,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 32.61318806279451,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "fb621169720d828e0aa8959ad1b0ff8666fef71032f9c0a1e1b32ae2b8965f83",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2230,
+      "completion_tokens": 2382,
+      "total_tokens": 4612,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2047,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 27.317024767398834,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "02268cc2542d8dc9395c29bdcc444ba056c6246d2a58ed60ca2e875963855bdd",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2553,
+      "completion_tokens": 1517,
+      "total_tokens": 4070,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1202,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 14.77885518874973,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "2ea06c3cca6ed2f0731635df2b2d65243456e618ab4069fecabbab88cedcc3ba",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2644,
+      "completion_tokens": 1362,
+      "total_tokens": 4006,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 934,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.62016789149493,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "b6322c003d33dc2a02be0200dc74420f20eb56082262fc91dd28cdde4a4fdb3c",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2255,
+      "completion_tokens": 1181,
+      "total_tokens": 3436,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 786,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 13.301830518059433,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "9092ebab4ac31902599cadf5dc8fdc114bb3ad65c1982ea1d45522684f5f94b5",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3499,
+      "completion_tokens": 720,
+      "total_tokens": 4219,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 331,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 6.170911290682852,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "2d545d4603e8674b332a5f9622b627a1b1809ea78bf3dbd059479d6d0b1fb37e",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2261,
+      "completion_tokens": 2323,
+      "total_tokens": 4584,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1901,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 25.010359656065702,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "a82b62c27d7553e6c9193898204397728dddecf35e5fba52f58a1442806069a4",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2091,
+      "completion_tokens": 398,
+      "total_tokens": 2489,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 348,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.521037123166025,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "e6cc6146f32d50d8eb55a7e79bd9c6d1be8ce628f9bb1e425f930aafcb1f3067",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3875,
+      "completion_tokens": 1756,
+      "total_tokens": 5631,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1243,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 15.281421571969986,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "bd031c038c949a2614620d5bcb1bb50cc0593f871ef227257f63d17d9e08a762",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4331,
+      "completion_tokens": 3330,
+      "total_tokens": 7661,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2047,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 30.91479497309774,
+    "finish_reason": "stop",
+    "parse_error": "invalid_json",
+    "response_content": "We could consider that as a relevant detail omitted. Also the fact that the method is useful beyond HarborMesh (evidence 10). That's relevant to generalization. The claim 5 incorrectly said uncertain about generalization; but the fact that it is useful beyond HarborMesh is a relevant detail omitted. Also the fact that the voice body can explain it (mentioned). Also the fact that the repository documents its implementation in docs/replay-debugging.md (omitted). Also the fact that the method came from checking the outage prototype (mentioned in claim 3? Actually claim 3 mentions \"From examining the replay failures we learned...\" but not that it came from checking the outage prototype. Evidence 10 says \"It came from checking the outage prototype.\" That's a relevant detail omitted.\n\nAlso the fact that the team paused wider rollout on May 2 until calibration drift is understood (mentioned in claim 4). Good.\n\nAlso the fact that there is no production deployment yet (mentioned).\n\nAlso the fact that the code body authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara (mentioned in claim 1/2).\n\nThus missing details: documentation location, method useful beyond HarborMesh, that it came from checking the outage prototype.\n\nWe need to output missing as array of supported relevant details omitted from the answer. Each item should be a text description? The instruction: \"missing: an array of supported relevant details omitted from the answer.\" Likely each element is a string describing the omitted detail. We'll provide concise statements.\n\nThus final JSON:\n\n{\n  \"claims\": [\n    {\"index\":0, \"verdict\":\"supported\", \"reason\":\"Evidence 1 shows Mara proposing local replay queue, code body confirming fit with field deployments and agreeing to prototype; Evidence 2 confirms prototyping the replay adapter agreed with Mara.\"},\n    {\"index\":1, \"verdict\":\"supported\", \"reason\":\"Evidence 1 gives proposal date 2026-04-12 and agreement 2026-04-14; Evidence 2 notes active prototype by 2026-04-16; Evidence 3 (human report) describes April 30 field trial and report received 2026-05-03; Evidence 10 records debugging lesson on 2026-08-05.\"},\n    {\"index\":2, \"verdict\":\"supported\", \"reason\":\"Evidence 10 directly states: 'While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links.'\"},\n    {\"index\":3, \"verdict\":\"supported\", \"reason\":\"Evidence 3 (human report) says the April 30 trial replayed buffered readings correctly through an outage and the team paused wider rollout until calibration drift is understood, with no production deployment yet; Evidence 2 confirms active prototype awaiting outage field trial.\"},\n    {\"index\":4, \"verdict\":\"unsupported\", \"reason\":\"While evidence 10 supports that the voice body can explain the method and that running checks requires repository/runtime tools, it also states the method is useful beyond HarborMesh, contradicting the claim's uncertainty about generalization; thus the clause about uncertainty of generalization is unsupported.\"}\n  ],\n  \"missing\": [\n    \"The method is documented in the repository at docs/replay-debugging.md.\",\n    \"The method is useful beyond HarborMesh (as stated in evidence 10).\",\n    \"The insight came from checking the outage prototype (as stated in evidence 10).\"\n  ]\n}\n\nMake sure indices match order. Provide reason text.\n\n\n\n{\n  \"claims\": [\n    {\n      \"index\": 0,\n      \"verdict\": \"supported\",\n      \"reason\": \"Evidence 1 shows Mara proposing a local replay queue, the code body confirming it fits field deployments and agreeing to prototype; Evidence 2 notes the team is prototyping the replay adapter agreed with Mara.\"\n    },\n    {\n      \"index\": 1,\n      \"verdict\": \"supported\",\n      \"reason\": \"Evidence 1 gives proposal date 2026-04-12 and agreement 2026-04-14; Evidence 2 notes active prototype by 2026-04-16; Evidence 3 (human report) describes the April 30 field trial and report received 2026-05-03; Evidence 10 records the debugging lesson on 2026-08-05.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"supported\",\n      \"reason\": \"Evidence 10 directly states: 'While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links.'\"\n    },\n    {\n      \"index\": 3,\n      \"verdict\": \"supported\",\n      \"reason\": \"Evidence 3 (human report) says the April 30 trial replayed buffered readings correctly through an outage and the team paused wider rollout until calibration drift is understood, with no production deployment yet; Evidence 2 confirms an active prototype awaiting an outage field trial.\"\n    },\n    {\n      \"index\": 4,\n      \"verdict\": \"unsupported\",\n      \"reason\": \"While evidence 10 supports that the voice body can explain the method and that running checks requires repository/runtime tools, it also states the method is useful beyond HarborMesh, contradicting the claim's uncertainty about generalization; thus the clause about uncertainty of generalization is unsupported.\"\n    }\n  ],\n  \"missing\": [\n    \"The method is documented in the repository at docs/replay-debugging.md.\",\n    \"The method is useful beyond HarborMesh (as stated in evidence 10).\",\n    \"The insight came from checking the outage prototype (as stated in evidence 10).\"\n  ]\n}"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "5d9d82b1785cb54784b204bff0fe36cdd007197cc80d7b04650d931bcf6721d7",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 5754,
+      "completion_tokens": 620,
+      "total_tokens": 6374,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 118,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 9.701207119971514,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "8d0a1b3f70cda7189333de01cb1792a5b15550a1d4619ac41af2deb8ce23e424",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4972,
+      "completion_tokens": 2071,
+      "total_tokens": 7043,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1498,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 18.143819271586835,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "f1cf31f7ded7464cfec4254a6ba1dfac516a7b62dd6a5f02959c2ab8be2c8b12",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 4391,
+      "completion_tokens": 2565,
+      "total_tokens": 6956,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 2047,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 23.558410920202732,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "8e89232a9656150d0a074db9a0d174a3f7e06cd7e379a51f302f2a7ac0709c6c",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 892,
+      "completion_tokens": 319,
+      "total_tokens": 1211,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 280,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 2.8546936362981796,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "1b6cbc409b350443fbc10c1014df241ef91db7d24c2152ef8100881eba9a569a",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1221,
+      "completion_tokens": 1296,
+      "total_tokens": 2517,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 954,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 12.68722233735025,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "4d47a4fa26d46a02fd568f2dacb79ae3f6f756545dfddf4d9494036d82f16430",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1506,
+      "completion_tokens": 2054,
+      "total_tokens": 3560,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1721,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 15.816080725751817,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "d786f1ad1c6b092ba677302d63e3ec821af63790bab0bb4f94175be0ea908e66",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1899,
+      "completion_tokens": 1423,
+      "total_tokens": 3322,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1119,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 11.080136102624238,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "9351b8670d3492350a76d1406290fef227d364d5777d13ccf3088d349ec0351a",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1513,
+      "completion_tokens": 1212,
+      "total_tokens": 2725,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 901,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 22.3475145958364,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "42ebcf932d1ef42b11fe1158b8cfd330b2fe19278249ccbcc8f74ab31251c9f9",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2538,
+      "completion_tokens": 686,
+      "total_tokens": 3224,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 400,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 7.212954447604716,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "20147a76de9bba2a759c335a789c4a3bd83732d4187cb934f4677b8461cca9a1",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1495,
+      "completion_tokens": 1013,
+      "total_tokens": 2508,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 711,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.225192162208259,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "a626dd9a4e677205f5fe15a3c891fecbdd5d5bf657107a4d3715f131a051e70a",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2079,
+      "completion_tokens": 418,
+      "total_tokens": 2497,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 363,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 5.210314064286649,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a2facd1516486b1e2f44a2cfef64a55e06413499db3d93be28112ebcba0f1a38",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2019,
+      "completion_tokens": 313,
+      "total_tokens": 2332,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 226,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.071778540499508,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "e2543c1915af39cceb665693708d0b468ab0988198ddb1309dd08361ba07c78f",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2081,
+      "completion_tokens": 663,
+      "total_tokens": 2744,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 565,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 9.861658279784024,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "ad72297511d521329915fbe0bf7ea725aca87562a802b4c26a1622ba704cf2a5",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2683,
+      "completion_tokens": 484,
+      "total_tokens": 3167,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 457,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 4.3958835722878575,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "fc27d691ddac99214e2e3cde6c3e695f81b248585c930d605cf7d2951b6eddf1",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2054,
+      "completion_tokens": 1212,
+      "total_tokens": 3266,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 868,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 13.133974062278867,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "3a41878ee77bb93c0ab1ef0b5ee665f4f21d65f7fafac4b5476e58324f960d90",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2341,
+      "completion_tokens": 1472,
+      "total_tokens": 3813,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1157,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 17.23123796004802,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "227cc0e083076e48927b236406c697e01c84e1971b68bcaef16ec06abd9031f3",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2771,
+      "completion_tokens": 1239,
+      "total_tokens": 4010,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 835,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.396680600009859,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "ca7f5722f2a4446f43dc44dcdd3c4b2040c35179d00fe18cff0150237d340313",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2401,
+      "completion_tokens": 2132,
+      "total_tokens": 4533,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1709,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 18.461905216798186,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "3ea7466252e2a20b08e63129ac3f0d504555a844189a0eb8efe02db72fc776a0",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 3571,
+      "completion_tokens": 1040,
+      "total_tokens": 4611,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 672,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 8.322390623390675,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "8ae5f364463a0a4ae8086b83552b3ad44edb44ed969bc98c28ef2cbf710c96fd",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2410,
+      "completion_tokens": 1146,
+      "total_tokens": 3556,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 739,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 18.340647502802312,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "f83235b0d9db58308b78b247a0cfbbaa7fbebf95267c15697cd8a687ec14c7d0",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 425,
+      "completion_tokens": 230,
+      "total_tokens": 655,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 204,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 8.87990593444556,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "8d8947d07efcfc49c3db32e3df8254d55f7e51dacdecb3c2bc81a7896a094523",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 764,
+      "completion_tokens": 254,
+      "total_tokens": 1018,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 178,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 2.5590999545529485,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "d425782bc93998121b5c73f715457329e8349c379303800e40cd40e701f828bf",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 814,
+      "completion_tokens": 394,
+      "total_tokens": 1208,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 328,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 5.567553325556219,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "a7f7320d166a4c1d42dcceb48b0b7ee81eb176e97276849640a877af301bc992",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 924,
+      "completion_tokens": 518,
+      "total_tokens": 1442,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 473,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 17.10950910579413,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "41a068d18931ce3662fa383904b6472c028dce1d78da1061d20cbb0a257269a7",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1255,
+      "completion_tokens": 1321,
+      "total_tokens": 2576,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 955,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 13.065191693603992,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "2246d5e9647114d057e9d6518134b42fa72d8302102d1f8509275f10102176f8",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1564,
+      "completion_tokens": 1047,
+      "total_tokens": 2611,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 742,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 8.72560608945787,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "89d0e992de121d68aec96ce020aba152869f2e99ba8665cd805a2ef0d905ff60",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 944,
+      "completion_tokens": 317,
+      "total_tokens": 1261,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 298,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 2.8307785410434008,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "0e1ba58ae39aa265356e2246a1b3ff18e577095b4566d63d72e0049455b76ed1",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1338,
+      "completion_tokens": 1142,
+      "total_tokens": 2480,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 744,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 9.359153018333018,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "f3f357d93e61965c2fafa292ccda4fb6c46783d914b64cdac0a0c757434f750a",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1679,
+      "completion_tokens": 1528,
+      "total_tokens": 3207,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 1164,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 19.57045395858586,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "b494458057c11c44c379a8f4a3acede920279de34e8953f8b5d5bb1c754917fa",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2140,
+      "completion_tokens": 1102,
+      "total_tokens": 3242,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 744,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_revision",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 8.755980907939374,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "a71f680180f6d8b04f2b1c1185f35f0d23c6388e066243125a7df2f79f65f8d6",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1684,
+      "completion_tokens": 1211,
+      "total_tokens": 2895,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 803,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 11.55963568482548,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "83366909db250b4173fb0f76fee7e51a402b404d0ef7934cda17ae895f83e246",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 914,
+      "completion_tokens": 586,
+      "total_tokens": 1500,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 567,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 8.417219806462526,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "dea10bb34fd527664403abc512de38a0b88421f6713452bef7e088b3ce68e149",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1243,
+      "completion_tokens": 1124,
+      "total_tokens": 2367,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 749,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 10.557535083033144,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "ce21eb58ff23f99134da717c2283f17a69a7ccf2974d63c45ec1841c898e6935",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1561,
+      "completion_tokens": 1117,
+      "total_tokens": 2678,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 781,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 8.319607228972018,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "low",
+    "requested_reasoning_budget": null,
+    "prompt_hash": "e9591b96f130244919f8a2ca2a9484e0698ab7ae2c114f77b4d1645037faf930",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 429,
+      "completion_tokens": 212,
+      "total_tokens": 641,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 180,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "recall",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 1.8800539309158921,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "4ba277b79a97738b5c2474bdd88074f6154f5266562dd8d83d35da5e3786502f",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1255,
+      "completion_tokens": 599,
+      "total_tokens": 1854,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 521,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_generation",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 5.461992749944329,
+    "finish_reason": "stop"
+  },
+  {
+    "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+    "requested_reasoning_effort": "high",
+    "requested_reasoning_budget": 2048,
+    "prompt_hash": "525d7016e4d9c3a82f4d46ebae279638f75ab353846764ce551c8684dfca9eec",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1308,
+      "completion_tokens": 467,
+      "total_tokens": 1775,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 381,
+        "rejected_prediction_tokens": null
+      }
+    },
+    "phase": "narrative_review",
+    "response_model": "nvidia/nemotron-3-super-120b-a12b",
+    "seconds": 3.9169243639335036,
+    "finish_reason": "stop"
+  }
+]

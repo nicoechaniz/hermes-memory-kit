@@ -11,6 +11,7 @@ import importlib.util
 import hashlib
 import json
 import shutil
+import sqlite3
 from pathlib import Path
 import subprocess
 import sys
@@ -62,8 +63,9 @@ def chat(model, messages, trace):
     effort = (getattr(trace, 'narrative_reasoning_effort', 'low')
               if trace.phase.startswith('narrative_') else 'low')
     budget = getattr(trace, 'narrative_reasoning_budget', 2048) if trace.phase.startswith('narrative_') else None
+    output_limit = getattr(trace, 'narrative_max_tokens', 12000) if trace.phase.startswith('narrative_') else 6000
     parameters = dict(model=model, messages=messages, temperature=0,
-                      reasoning_effort=effort, max_tokens=6000)
+                      reasoning_effort=effort, max_tokens=output_limit)
     if budget is not None:
         parameters['reasoning_budget'] = budget
     request = urllib.request.Request(
@@ -72,7 +74,7 @@ def chat(model, messages, trace):
         headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
     started = time.monotonic()
     attempt = trace.begin(dict(requested_model=model, requested_reasoning_effort=effort, requested_reasoning_budget=budget,
-                               prompt_hash=digest(messages)))
+                               requested_max_tokens=output_limit, prompt_hash=digest(messages)))
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
             result = json.load(response)
@@ -253,6 +255,29 @@ def memory_at(pool):
     return memory
 
 
+def formation_state(path):
+    """Canonical bytes/UIDs/revisions/history/links, excluding retrieval logs."""
+    with sqlite3.connect(path.resolve().as_uri()+'?mode=ro', uri=True) as con:
+        tables = {row[0] for row in con.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+        result = {}
+        for table in sorted(tables & {'chapters','books','shelves','chapter_links','chapter_revisions'}):
+            rows = con.execute('SELECT * FROM '+table+' ORDER BY rowid').fetchall()
+            result[table] = dict(rows=len(rows), sha256=digest(rows))
+        return result
+
+
+def formation_compatibility(source, conditions, allow_retrieval_upgrade=False):
+    for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
+                  'embedding_config','retrieval_profile','rerank_provider','review_capture','source_blocks'):
+        if source.get(field, False) != conditions[field]:
+            raise ValueError('reused formation must have identical frozen sources, guidance and configuration')
+    if source['retrieval_sha256'] != conditions['retrieval_sha256'] and not allow_retrieval_upgrade:
+        raise ValueError('a changed reader requires explicit --reuse-with-retrieval-upgrade')
+    return dict(original_retrieval_sha256=source['retrieval_sha256'],
+                receiving_retrieval_sha256=conditions['retrieval_sha256'],
+                explicit_upgrade=allow_retrieval_upgrade)
+
+
 def current_records(memory):
     con = memory.connect()
     try:
@@ -298,11 +323,17 @@ def run_variant(name, guidance, args, corpus):
         save(out/'formation-embedding-trace.json', [call for call in json.loads((source/'embedding-trace.json').read_text())
                                                     if call['phase'] == 'indexing'])
     memory = memory_at(out / 'memory')
+    if getattr(args, 'reuse_capture', None):
+        original_state = formation_state(args.reuse_capture/name/'memory/library.db')
+        if formation_state(memory.DB_PATH) != original_state:
+            raise ValueError('reader initialization changed frozen formation; retain both copies')
+        save(out/'formation-preservation.json',dict(original=original_state, copied=formation_state(memory.DB_PATH), identical=True))
     instrument_embeddings(memory, out/'embedding-trace.json')
     ledger = CaptureLedger(memory)
     trace = Trace(out/'trace.json')
     trace.narrative_reasoning_effort = getattr(args, 'narrative_reasoning_effort', 'high')
     trace.narrative_reasoning_budget = getattr(args, 'narrative_reasoning_budget', 2048)
+    trace.narrative_max_tokens = getattr(args, 'narrative_max_tokens', 12000)
     captures = json.loads((out/'capture.json').read_text()) if (out/'capture.json').exists() else []
     selection = f'pilot:{name}:{args.model}'
     contract = '''You curate only the supplied fictional foreground experience.
@@ -696,6 +727,8 @@ def main():
                         help='Fictional evaluation corpus; expectations never enter model prompts')
     parser.add_argument('--reuse-capture', type=Path,
                         help='Reuse frozen fictional formation; new recall evidence and costs stay separate')
+    parser.add_argument('--reuse-with-retrieval-upgrade', action='store_true',
+                        help='Explicitly evaluate an upgraded reader over preserved identical formation')
     parser.add_argument('--review-capture', action='store_true',
                         help='Review each candidate against authorized sources before committing it')
     parser.add_argument('--source-blocks', action=argparse.BooleanOptionalAction, default=True,
@@ -711,12 +744,18 @@ def main():
     parser.add_argument('--narrative-reasoning-effort', choices=('low','high'), default='high',
                         help='Receiving narration/review effort; formation and planning remain low')
     parser.add_argument('--narrative-reasoning-budget', type=int, default=2048,
-                        help='Receiving reasoning token budget within the 6000-token total output limit')
+                        help='Receiving reasoning token budget; leave room for answer/review JSON')
+    parser.add_argument('--narrative-max-tokens', type=int, default=12000,
+                        help='Receiving output ceiling including reasoning and atomic review; formation remains 6000')
     parser.add_argument('--complete-diagnostics', action='store_true',
                         help='Archive rejected narrative candidates and evaluate remaining questions; never count rejection as success')
     args = parser.parse_args()
     if not 1 <= args.narrative_reasoning_budget <= 4000:
         parser.error('narrative reasoning budget must leave room for the JSON answer: 1..4000')
+    if not args.narrative_reasoning_budget < args.narrative_max_tokens <= 32768:
+        parser.error('narrative output ceiling must exceed reasoning budget and be at most 32768')
+    if args.reuse_with_retrieval_upgrade and not args.reuse_capture:
+        parser.error('--reuse-with-retrieval-upgrade needs --reuse-capture')
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
         parser.error('--out must be new; preserve previous pilot evidence')
@@ -743,12 +782,15 @@ def main():
     conditions['rerank_provider'] = configuration.rerank_provider_default()
     conditions['retrieval_profile'] = configuration.read_env_key('HMK_RETRIEVAL_PROFILE') or 'general'
     conditions['retrieval_sha256'] = hashlib.sha256(Path(configuration.__file__).read_bytes()).hexdigest()
+    conditions['backend_dependencies'] = {name:hashlib.sha256((repo/'scripts'/name).read_bytes()).hexdigest()
+        for name in ('support_currency.py','native_records.py','capturectl.py','consolidationctl.py')}
     conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
     if args.narrative:
-        conditions['recall_contract'] = 'natural-claims/v6-faceted-diagnostics'
+        conditions['recall_contract'] = 'natural-claims/v8-atomic-source-review'
         conditions['narrative_reasoning_effort'] = args.narrative_reasoning_effort
         conditions['narrative_reasoning_budget'] = args.narrative_reasoning_budget
+        conditions['narrative_max_tokens'] = args.narrative_max_tokens
         conditions['narrative_sha256'] = hashlib.sha256(Path(narrative_recall.__file__).read_bytes()).hexdigest()
     conditions['complete_diagnostics'] = args.complete_diagnostics
     conditions['recall_cases'] = args.recall_case
@@ -757,10 +799,10 @@ def main():
     if args.reuse_capture:
         args.reuse_capture = args.reuse_capture.resolve()
         source = json.loads((args.reuse_capture/'conditions.json').read_text())
-        for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
-                      'embedding_config','retrieval_profile','retrieval_sha256','rerank_provider','review_capture','source_blocks'):
-            if source.get(field, False) != conditions[field]:
-                parser.error('reused formation must have identical frozen sources, guidance and configuration')
+        try:
+            conditions['formation_reader_comparison'] = formation_compatibility(source,conditions,args.reuse_with_retrieval_upgrade)
+        except ValueError as error:
+            parser.error(str(error))
         for name in ('baseline','proposed'):
             capture = json.loads((args.reuse_capture/name/'capture.json').read_text())
             if [c['case_id'] for c in capture] != [c['id'] for c in corpus['cases']]:
@@ -771,11 +813,12 @@ def main():
         for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
                       'consolidate', 'retrieval_threshold', 'pack_budget', 'pack_limit',
                       'embedding_config', 'rerank_provider', 'retrieval_profile', 'retrieval_sha256',
+                      'backend_dependencies',
                       'recall_contract', 'recall_cases', 'review_capture', 'source_blocks', 'complete_diagnostics'):
             if previous.get(field, False) != conditions[field]:
                 parser.error('resume cannot change frozen model, guidance or fixtures')
         if args.narrative and any(previous.get(field) != conditions[field]
-                                 for field in ('narrative_sha256', 'narrative_reasoning_effort', 'narrative_reasoning_budget')):
+                                 for field in ('narrative_sha256', 'narrative_reasoning_effort', 'narrative_reasoning_budget', 'narrative_max_tokens')):
             parser.error('resume cannot change the frozen semantic narrative procedure')
         resumed = previous.get('resumes', [])
         resumed.append(conditions)

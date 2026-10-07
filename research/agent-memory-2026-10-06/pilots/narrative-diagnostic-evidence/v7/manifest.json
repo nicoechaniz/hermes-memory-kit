@@ -1,0 +1,23 @@
+{
+  "fictional": true,
+  "independent_full_grading": false,
+  "files": {
+    "baseline/answers.json": "7a74bfb5f00c958afed5ebd0c6b6c2d771029da66964ad380ed032779b184d40",
+    "baseline/capture.json": "b05d92c162b81267fa2c7e223d69938fe0d7a8b6485b228cd795b61ed01c904d",
+    "baseline/embedding-trace.json": "69155ecabd0fe0bda8b3164aa33921ee40416afc6a426ed02ca4a161678cf736",
+    "baseline/formation-embedding-trace.json": "cefa3cda19c010e23747be990d62a6e44becaf37e9b5edbe9449f731e27d38f3",
+    "baseline/formation-trace.json": "5dc36f54ca7eb84cf39f050c9216da4241b5183d21492fb27de3ccb1026bf750",
+    "baseline/selected-canon.json": "4f7ef0326680485b5c097bae9f77dc6e09aa53df43c98f164a474496b050b554",
+    "baseline/trace.json": "b49074a33db8a4154a0ecd57886107c40720b7382c4378bb0019da64af6191a3",
+    "conditions.json": "4fd4334984efadded61c48059082a99802595ba3208193ddaa72336297eeadf8",
+    "costs.json": "7e63704dab0abf15136dafb83894771616f3408a065954ffd47a97eef2b68576",
+    "proposed/answers.json": "3feb2a8e201b58c3b962d4b5a7267fb54c0add7429ef9c61ee977de899c4167c",
+    "proposed/capture.json": "8e8dfc7e24173139372b20a8b99589345b2fba5d226261be3943ab2dab5d193c",
+    "proposed/embedding-trace.json": "e39465a4862919cf0f59d20250e50c18645b464ca43d79b98c00b9d946fa6ee8",
+    "proposed/formation-embedding-trace.json": "5b48555d7bf73e1271a77199249cf0b9813e3b4c2c31e046f7c3e38ff02d0919",
+    "proposed/formation-trace.json": "2535d3f2b5de23f48cfb853de152fe3beb8c7b17f581ccbff0cb797829bd9635",
+    "proposed/selected-canon.json": "675b8f825fe7180fd720d438d472f5153144910b15f5f07fbea005a0778a3bd7",
+    "proposed/trace.json": "496ed7c45271bb1d04c412f90d39ea94cb75975226b3ec83657e892ab0da5e18",
+    "results.json": "734212854013f8ef7ee58aa1ee691f6a3093f4c0b3b89623fcecfbb25235a927"
+  }
+}
