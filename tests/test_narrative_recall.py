@@ -174,6 +174,53 @@ def test_known_uncertainty_can_be_cited_without_five_filler_facets():
     assert nr.validate(candidate,{1:{'text':'No surname was supplied.'}},{'receiving_body':'voice'})==candidate
 
 
+@pytest.mark.parametrize('facet', ['context', 'limits'])
+def test_unrecorded_return_can_retain_older_context_without_inventing_an_episode(facet):
+    candidate={'receiving_body':'voice','claims':[
+        dict(text='The supplied memories do not record a return or who welcomed us.',
+             support=[1],basis='unknown',facet='limits'),
+        dict(text='The human report received September 12 describes their earlier meeting, which I did not attend.',
+             support=[1],basis='memory',facet=facet)]}
+    evidence={1:{'text':'The human reported the earlier meeting. The being was absent.'}}
+    assert nr.validate(candidate,evidence,{'receiving_body':'voice'})==candidate
+    # Structural acceptance neither approves the prose nor removes review.
+    with pytest.raises(ValueError,match='review every claim'):
+        nr.review_shape({'claims':[],'missing':[]},candidate,evidence)
+    # A positive occurrence cannot hide behind the leading unknown's exception.
+    candidate['claims'][1]['facet']='outcome'
+    with pytest.raises(ValueError,match='all five facets'):
+        nr.validate(candidate,evidence,{'receiving_body':'voice'})
+
+
+def test_known_account_still_requires_meaning_outcome_and_limits():
+    candidate={'receiving_body':'voice','claims':[
+        dict(text='Our code body met the contributor in the issue.',support=[1],
+             basis='memory',facet='context')]}
+    with pytest.raises(ValueError,match='all five facets'):
+        nr.validate(candidate,{1:{'text':'A known interaction.'}},{'receiving_body':'voice'})
+
+
+def test_changed_validation_cannot_silently_requalify_an_accepted_checkpoint(tmp_path):
+    import hashlib
+    candidate=account('Delivery failed.',[1]);evidence={1:{'text':'Delivery failed.'}}
+    binding={'receiving_body':'voice'};checkpoint=tmp_path/'pending.json';pending={}
+    def chat(model,messages,trace):
+        return candidate if trace.phase=='narrative_generation' else verdict(
+            'supported','Actual failure.',candidate,'Delivery failed.')
+    nr.answer('fixture','What happened?',evidence,binding,SimpleNamespace(phase='recall'),
+              pending,checkpoint,chat,lambda p,v:p.write_text(json.dumps(v)))
+    historical=dict(model='fixture',generation=nr.GENERATION,review=nr.REVIEW,
+                    protocol='receiving-phase/v1')
+    pending['narrative']['procedure_sha256']=hashlib.sha256(
+        json.dumps(historical,sort_keys=True).encode()).hexdigest()
+    checkpoint.write_text(json.dumps(pending));original=checkpoint.read_bytes()
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('fixture','What happened?',evidence,binding,SimpleNamespace(phase='recall'),
+                  pending,checkpoint,lambda *a:pytest.fail('Unexpected model call'),
+                  lambda p,v:p.write_text(json.dumps(v)))
+    assert checkpoint.read_bytes()==original
+
+
 def test_invalid_atomic_review_retains_actual_candidate_as_rejected(tmp_path):
     candidate=account('Delivery failed.',[1])
     responses=iter([candidate,{'bad':'review'}, {'bad':'review again'}])

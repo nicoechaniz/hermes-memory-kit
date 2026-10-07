@@ -161,7 +161,14 @@ def validate(value, evidence, binding):
             raise ValueError('support needs at most five supplied memory IDs')
         if claim['basis'] == 'memory' and not ids:
             raise ValueError('remembered assertions need supplied evidence')
-    if (any(c['basis'] == 'memory' for c in claims) and
+    # An unavailable event may be answered with a packet-scoped unknown plus
+    # older contextual evidence. This is not a positive account of that event.
+    # Semantic review and outside requirements still decide whether the unknown
+    # is justified; labels alone cannot establish that a memory is absent.
+    bounded_unknown = (claims[0]['basis'] == 'unknown' and
+        claims[0]['facet'] == 'limits' and
+        all(c['facet'] in {'context', 'limits'} for c in claims[1:]))
+    if (any(c['basis'] == 'memory' for c in claims) and not bounded_unknown and
             {c['facet'] for c in claims} != {'limits'} and {c['facet'] for c in claims} != {
             'identification', 'context', 'meaning', 'outcome', 'limits'}):
         raise ValueError('a remembered account needs all five facets, not identification alone')
@@ -232,8 +239,10 @@ basis (memory/binding/unknown), facet (identification/context/meaning/outcome/li
 A supported remembered account MUST cover ALL FIVE FACETS in five to twenty
 SHORT factual sentences. Split compound assertions; do not pad facets with
 speculation. A wholly unsupported event may instead have one scoped unknown
-claim. A question asking only an unavailable detail may use source-cited limits
-claims, preserving the known uncertainty without retelling an unrelated story.
+claim followed by brief source-cited context or limits from an older relevant
+report. That older report does not establish the unrecorded event. A question
+asking only an unavailable detail may use source-cited limits claims, preserving
+the known uncertainty without retelling an unrelated story.
 Each sentence is at most 220 characters. Prefer one factual assertion per
 sentence, using several sentences within a facet when needed. Do not cram an
 entire timeline, several actors and an outcome into one sentence.
@@ -368,8 +377,10 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
     if state.get('context_sha256', fingerprint) != fingerprint:
         raise ValueError('narrative context changed; preserve pending work and start a new comparison')
     procedure_settings = dict(model=model, generation=GENERATION,
-        review=REVIEW, protocol='receiving-phase/v1')
-    # Preserve the historical fingerprint for the unchanged shared-model path.
+        review=REVIEW, protocol='receiving-phase/v1',
+        validation_protocol='narrative-shape/v2')
+    # Changed validation needs a new comparison, including accepted checkpoints.
+    # Historical trials can resume with their preserved implementation.
     # Selecting a separate reviewer is a new frozen procedure, never an implicit
     # replacement of a saved reviewer or a reset of its repair/revision budget.
     if review_model != model:
