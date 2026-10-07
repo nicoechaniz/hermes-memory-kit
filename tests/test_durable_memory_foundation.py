@@ -615,3 +615,123 @@ def test_summary_and_title_follow_embedding_eligibility_policy(mc, monkeypatch):
     assert mc.expand(cid)['embed_disabled'] == 1
     cid = mc.add_text('episodes','fixture-secret','Ordinary text')
     assert mc.expand(cid)['embed_disabled'] == 1
+
+
+def test_native_consolidation_uses_exact_per_account_supports_and_preserves_originals(mc):
+    from consolidationctl import preview, apply
+    own = mc.add_text('library','Our project contribution','Our code body authored the scheduler.', source_kind='capture')
+    first = mc.add_text('episodes','April proposal','Mara proposed replay on April 12.')
+    other = mc.add_text('episodes','Workshop encounter','Jo taught a beat-listening method.')
+    originals = {cid:mc.expand(cid)['raw'] for cid in (own,first,other)}
+    with pytest.raises(ValueError,match='native episodes'):
+        preview([own],mc)
+    manifest = preview([own,first,other],mc,profile='native')
+    proposal = {'outcome':'applied','reason':'Source-bound current accounts','records':[
+        {'key':'project','operation':'add','shelf':'library','title':'Project account',
+         'raw':'Our scheduler work and Mara replay discussion are connected.'},
+        {'key':'workshop','operation':'add','shelf':'library','title':'Workshop account',
+         'raw':'Our mobile workshop experience includes Jo beat-listening.'}]}
+    options=dict(stream_id='fixture:organization', sequence=1,event_id='pass:1',selection_version='fixture:v2',memory=mc)
+    mapping={'project':[own,first], 'workshop':[other]}
+    with pytest.raises(ValueError,match='explicit supports'):
+        apply(manifest,proposal,**options)
+    receipt=apply(manifest,proposal,supports_by_record=mapping,**options)
+    assert receipt==apply(manifest,proposal,supports_by_record=mapping,**options)
+    project=receipt['records']['project']['chapter_id'];workshop=receipt['records']['workshop']['chapter_id']
+    assert len(mc.expand(project)['origin']['source']['evidence'])==2
+    assert {r['id'] for r in mc.expand(workshop)['neighbors']}=={other}
+    assert {cid:mc.expand(cid)['raw'] for cid in originals}==originals
+    mc.update_chapter(first,content='Mara withdrew the replay proposal.')
+    assert mc.expand(project)['support_status']=='needs_reconciliation'
+    assert mc.expand(workshop)['support_status']=='current'
+    # A newly inspected support manifest permits updating the dependent account.
+    update={'outcome':'applied','reason':'Reconcile changed evidence','records':[
+        {'key':'project','operation':'update','chapter_id':project,'expected_revision':1,
+         'raw':'Our scheduler authorship remains; Mara later withdrew replay.'}]}
+    apply(preview([own,first],mc,profile='native'),update,supports_by_record={'project':[own,first]},
+          **dict(options,sequence=2,event_id='reconcile:2'))
+    assert mc.expand(project)['support_status']=='current'
+    assert mc.history(project)[0]['raw']==proposal['records'][0]['raw']
+
+
+def test_native_consolidation_rejects_self_support_external_sources_and_stale_derivation(mc):
+    from consolidationctl import preview,apply
+    original=mc.add_text('library','Scheduler account','We authored it.')
+    opts=dict(stream_id='fixture:organization',sequence=1,event_id='pass:1',selection_version='fixture:v2',memory=mc)
+    proposal={'outcome':'applied','reason':'Invalid self-support','records':[
+        {'key':'account','operation':'update','chapter_id':original,'expected_revision':1,'raw':'New account.'}]}
+    with pytest.raises(ValueError,match='own update'):
+        apply(preview([original],mc,profile='native'),proposal,supports_by_record={'account':[original]},**opts)
+    assert mc.expand(original)['revision']==1
+    external=mc.add_text('library','Wiki account','External wiki authority.',source_kind='file')
+    with pytest.raises(ValueError,match='protected sources'):
+        preview([external],mc,profile='native')
+    derived=mc.add_text('library','Derived navigation','A source-bound inference.',metadata={
+        'mode':'inferred','evidence':[f"mem:{mc.expand(original)['record_uid']}@1"]})
+    mc.update_chapter(original,content='Corrected authorship.')
+    with pytest.raises(ValueError,match='reconcile derived support'):
+        preview([derived],mc,profile='native')
+
+
+def test_transitive_account_currency_and_atomic_consolidation_dependency_check(mc):
+    from support_currency import check
+    from consolidationctl import preview,apply
+    original=mc.add_text('episodes','Trial report','Human reported successful replay.')
+    uid=mc.expand(original)['record_uid']
+    account=mc.add_text('library','Project account','Derived trial account.', metadata={
+        'mode':'inferred','evidence':[f'mem:{uid}@1']})
+    account_uid=mc.expand(account)['record_uid']
+    manifest=preview([account],mc,profile='native')
+    mc.update_chapter(original,content='Human corrected replay: some readings were lost.')
+    with mc.connect() as con:
+        status=check(con,[(account_uid,1)])[0]
+    assert status['status']=='needs_reconciliation'
+    assert status['dependencies']==[{'record_uid':uid,'revision':1,'status':'changed'}]
+    proposal={'outcome':'applied','reason':'Stale dependent account','records':[
+        {'key':'insight','operation':'add','shelf':'library','title':'Trial insight','raw':'An inferred lesson.'}]}
+    with pytest.raises(ValueError,match='support dependency changed'):
+        apply(manifest,proposal,supports_by_record={'insight':[account]},memory=mc,
+              stream_id='fixture:dream',sequence=1,event_id='stale:1',selection_version='fixture:v2')
+    assert not any(row['title'] == 'Trial insight' for row in mc.search('Trial insight'))
+    mc.update_chapter(account,content='Reconciled partial-replay account.',metadata={'evidence':[f'mem:{uid}@2']})
+    with mc.connect() as con:
+        assert check(con,[(account_uid,2)])[0]['status']=='current'
+    # An existing cyclic reference remains explicit instead of becoming current.
+    cycle=mc.add_text('library','Cycle account','An invalid legacy self-reference.')
+    cycle_uid=mc.expand(cycle)['record_uid']
+    mc.update_chapter(cycle,metadata={'evidence':[f'mem:{cycle_uid}@2']})
+    with mc.connect() as con:
+        assert check(con,[(cycle_uid,2)])[0]['status']=='cyclic'
+
+
+def test_consolidation_relabels_obsolete_support_edges_and_rejects_batch_stale_dependency(mc):
+    from consolidationctl import preview,apply
+    first=mc.add_text('episodes','Old encounter','An old proposal.')
+    later=mc.add_text('episodes','Later encounter','A distinct later decision.')
+    opts=dict(stream_id='fixture:organization',sequence=1,event_id='pass:1',selection_version='fixture:v2',memory=mc)
+    proposal={'outcome':'applied','reason':'Selected account','records':[
+        {'key':'account','operation':'add','shelf':'library','title':'Current account','raw':'Old proposal account.'}]}
+    receipt=apply(preview([first],mc,profile='native'),proposal,supports_by_record={'account':[first]},**opts)
+    account=receipt['records']['account']['chapter_id']
+    update={'outcome':'applied','reason':'Reconciled account','records':[
+        {'key':'account','operation':'update','chapter_id':account,'expected_revision':1,'raw':'Later decision account.'}]}
+    opts=dict(opts,sequence=2,event_id='pass:2')
+    apply(preview([later],mc,profile='native'),update,supports_by_record={'account':[later]},**opts)
+    edges={row['id']:row['link_type'] for row in mc.expand(account)['neighbors']}
+    assert edges=={first:'formerly-supported-by',later:'supported-by'}
+    assert f"mem:{mc.expand(first)['record_uid']}@1" in mc.history(account)[0]['source_metadata_json']
+    stale={'outcome':'applied','reason':'Stale target CAS','records':[
+        {'key':'account','operation':'update','chapter_id':account,'expected_revision':1,'raw':'Stale account update.'}]}
+    with pytest.raises(SystemExit,match='revision conflict'):
+        apply(preview([first],mc,profile='native'),stale,supports_by_record={'account':[first]},
+              **dict(opts,sequence=3,event_id='stale-cas:3'))
+    assert {row['id']:row['link_type'] for row in mc.expand(account)['neighbors']}==edges
+    # Updating an account and deriving from its old revision in one batch would
+    # publish an immediately stale dependent, even without direct self-support.
+    bad={'outcome':'applied','reason':'Invalid simultaneous dependency','records':[
+        {'key':'account','operation':'update','chapter_id':account,'expected_revision':2,'raw':'New account.'},
+        {'key':'insight','operation':'add','shelf':'library','title':'New understanding','raw':'Derived understanding.'}]}
+    with pytest.raises(ValueError,match='also uses as support'):
+        apply(preview([later,account],mc,profile='native'),bad,
+              supports_by_record={'account':[later],'insight':[account]},**dict(opts,sequence=4,event_id='pass:4'))
+    assert mc.expand(account)['revision']==2

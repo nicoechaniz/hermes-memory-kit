@@ -7,8 +7,10 @@ import json
 
 import memoryctl as mc
 from capturectl import CaptureLedger, digest
+from support_currency import check, references
 
 
+AUTO_SUPPORT_NOTE = 'Derived account; the source episode is not superseded.'
 FIELDS = ('id','record_uid','revision','title','raw','spr','engram_type','event_ts','source_metadata_json')
 
 
@@ -16,29 +18,39 @@ def snapshot(row):
     return {key: row[key] for key in FIELDS}
 
 
-def preview(chapter_ids, memory=mc):
+def preview(chapter_ids, memory=mc, *, profile='episodes'):
     """Full selected episode input, without a hidden per-source text cutoff."""
     if not chapter_ids or len(set(chapter_ids)) != len(chapter_ids):
         raise ValueError('select a nonempty finite set of distinct episodes')
+    if profile not in {'episodes', 'native'}:
+        raise ValueError('preview profile must be episodes or native')
     supports = []
     for cid in chapter_ids:
         row = memory._read_chapter(cid)
-        if row['engram_type'] != 'episodic' or row['origin']['kind'] == 'daimon-projection':
+        if (row['origin']['kind'] == 'daimon-projection' or
+                (profile == 'episodes' and row['engram_type'] != 'episodic') or
+                (profile == 'native' and row['source_kind'] not in {'text', 'capture', 'auto'})):
             raise ValueError('generic dream input must be native episodes; protected sources keep their owner contract')
-        supports.append(snapshot(row))
-    return {'schema': 'hmk-dream-preview/v1', 'supports': supports,
+        with memory.connect() as con:
+            stale = any(item['status'] != 'current' for item in check(con, references(
+                json.loads(row['source_metadata_json'] or '{}'), row['source_kind'])))
+        if row.get('support_status') == 'needs_reconciliation' or stale:
+            raise ValueError('reconcile derived support before using it for consolidation')
+        supports.append(dict(snapshot(row), source_kind=row['source_kind'])
+                        if profile == 'native' else snapshot(row))
+    return {'schema': 'hmk-dream-preview/v2' if profile == 'native' else 'hmk-dream-preview/v1', 'supports': supports,
             'fingerprint': digest(supports), 'input_count': len(supports),
             'independence': 'Input count does not establish independent corroboration.'}
 
 
-def apply(manifest, decision, *, stream_id, sequence, event_id, selection_version, memory=mc, _fault_hook=None):
+def apply(manifest, decision, *, stream_id, sequence, event_id, selection_version, memory=mc, supports_by_record=None, _fault_hook=None):
     """Apply a reviewed proposal; evidence and writes share one transaction.
 
     A structurally valid inference is not evidence that its prose is true.
     The selecting body must inspect all supplied inputs, preserve uncertainty
     and evaluate the output against the capture/recall pilot contract.
     """
-    if (not isinstance(manifest, dict) or manifest.get('schema') != 'hmk-dream-preview/v1'
+    if (not isinstance(manifest, dict) or manifest.get('schema') not in {'hmk-dream-preview/v1', 'hmk-dream-preview/v2'}
             or not isinstance(manifest.get('supports'), list) or not manifest['supports']
             or manifest.get('fingerprint') != digest(manifest['supports'])):
         raise ValueError('invalid evidence manifest')
@@ -48,6 +60,22 @@ def apply(manifest, decision, *, stream_id, sequence, event_id, selection_versio
         raise ValueError('a repeated episode does not provide independent corroboration')
     if decision.get('outcome') != 'applied' or not decision.get('records'):
         raise ValueError('consolidation requires selected account/learning proposals')
+    keys = [item.get('key') for item in decision['records']]
+    if any(not isinstance(key, str) or not key.strip() for key in keys):
+        raise ValueError('consolidation record keys must be nonempty strings')
+    if len(set(keys)) != len(keys):
+        raise ValueError('consolidation record keys must be distinct')
+    if supports_by_record is None:
+        if manifest['schema'] == 'hmk-dream-preview/v2':
+            raise ValueError('native consolidation needs explicit supports for every record')
+        supports_by_record = {key: ids for key in keys}
+    if not isinstance(supports_by_record, dict) or set(supports_by_record) != set(keys):
+        raise ValueError('support map must cover every proposal record exactly')
+    for key, selected in supports_by_record.items():
+        if (not isinstance(selected, list) or not selected
+                or any(type(cid) is not int or cid not in ids for cid in selected)
+                or len(set(selected)) != len(selected)):
+            raise ValueError('record supports must be a nonempty distinct subset of the manifest')
     records = []
     for item in decision['records']:
         record = dict(item)
@@ -55,16 +83,25 @@ def apply(manifest, decision, *, stream_id, sequence, event_id, selection_versio
             raise ValueError('consolidation cannot create or replace lived episodes')
         if record.get('operation') == 'add' and record.get('shelf') not in {'library','plans','mc-social','mc-skills','mc-places'}:
             raise ValueError('generic dream proposals target knowledge/procedure shelves')
+        selected = supports_by_record[record['key']]
+        if (manifest['schema'] == 'hmk-dream-preview/v2' and
+                record.get('operation') == 'update' and record.get('chapter_id') in selected):
+            raise ValueError('a derived account cannot support its own update')
         metadata = dict(record.get('metadata') or {})
         if metadata.get('mode', 'inferred') not in {'inferred','generated'}:
             raise ValueError('consolidation is inferred/generated, not an independent observation')
         metadata.setdefault('mode', 'inferred')
-        metadata['evidence'] = [f"mem:{entry['record_uid']}@{entry['revision']}" for entry in supports]
+        metadata['evidence'] = [f"mem:{entry['record_uid']}@{entry['revision']}" for entry in supports if entry['id'] in selected]
         records.append(dict(record, metadata=metadata, engram_type=record.get('engram_type','semantic')))
+    if manifest['schema'] == 'hmk-dream-preview/v2':
+        referenced = {cid for selected in supports_by_record.values() for cid in selected}
+        if any(record.get('operation') == 'update' and record.get('chapter_id') in referenced
+               for record in records):
+            raise ValueError('a consolidation batch cannot update a record it also uses as support')
     links = list(decision.get('links', []))
     for record in records:
         links.extend({'source': record['key'], 'target': cid, 'link_type': 'supported-by',
-                      'note': 'Derived account; the source episode is not superseded.'} for cid in ids)
+                      'note': AUTO_SUPPORT_NOTE} for cid in supports_by_record[record['key']])
     proposal = dict(decision, records=records, links=links, selection_version=selection_version)
     ledger = CaptureLedger(memory)
     event = {'stream_id': stream_id, 'sequence': sequence, 'event_id': event_id,
@@ -75,9 +112,16 @@ def apply(manifest, decision, *, stream_id, sequence, event_id, selection_versio
 
     def validate(con):
         for entry in supports:
-            row = con.execute('SELECT * FROM chapters WHERE id=?', (entry['id'],)).fetchone()
-            if not row or snapshot(row) != entry or row['engram_type'] != 'episodic':
+            row = con.execute('SELECT c.*,b.source_kind FROM chapters c JOIN books b ON b.id=c.book_id WHERE c.id=?', (entry['id'],)).fetchone()
+            native = manifest['schema'] == 'hmk-dream-preview/v2'
+            current = (dict(snapshot(row), source_kind=row['source_kind']) if native else snapshot(row)) if row else None
+            if (not row or current != entry or
+                    (not native and row['engram_type'] != 'episodic') or
+                    (native and row['source_kind'] not in {'text', 'capture', 'auto'})):
                 raise ValueError('support changed since preview; inspect a fresh manifest')
+            if any(item['status'] != 'current' for item in check(con, references(
+                    json.loads(row['source_metadata_json'] or '{}'), row['source_kind']))):
+                raise ValueError('support dependency changed; reconcile before consolidation')
             if con.execute('SELECT 1 FROM daimon_projections WHERE chapter_id=?', (entry['id'],)).fetchone():
                 raise ValueError('protected source cannot enter generic consolidation')
         for record in records:
@@ -86,6 +130,19 @@ def apply(manifest, decision, *, stream_id, sequence, event_id, selection_versio
                 if not target or target[0] == 'episodic' or target[1] not in {'library','plans','mc-social','mc-skills','mc-places'}:
                     raise ValueError('consolidation cannot overwrite episodes/identity')
 
+        for record in records:
+            if record.get('operation') != 'update':
+                continue
+            cid = record['chapter_id']
+            selected = supports_by_record[record['key']]
+            for edge in con.execute("SELECT * FROM chapter_links WHERE src_chapter_id=? AND link_type='supported-by' AND note=?", (cid, AUTO_SUPPORT_NOTE)).fetchall():
+                if edge['dst_chapter_id'] not in selected:
+                    con.execute('INSERT OR IGNORE INTO chapter_links(src_chapter_id,dst_chapter_id,link_type,weight,note,created_at) '
+                                'VALUES(?,?,?,?,?,?)', (cid,edge['dst_chapter_id'],'formerly-supported-by',edge['weight'],
+                                'Earlier account support; inspect native revision evidence. '+(edge['note'] or ''),edge['created_at']))
+                    con.execute("DELETE FROM chapter_links WHERE src_chapter_id=? AND dst_chapter_id=? AND link_type='supported-by'",
+                                (cid, edge['dst_chapter_id']))
+
     return ledger.assess(staged['event_key'], proposal, _validator=validate, _fault_hook=_fault_hook)
 
 
@@ -93,18 +150,25 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
     inspect = sub.add_parser('preview'); inspect.add_argument('--ids', nargs='+', type=int, required=True)
+    inspect.add_argument('--profile', choices=('episodes','native'), default='episodes')
     commit = sub.add_parser('apply'); commit.add_argument('--manifest', required=True); commit.add_argument('--proposal', required=True)
     commit.add_argument('--stream', required=True); commit.add_argument('--sequence', type=int, required=True)
+    commit.add_argument('--record-supports', help='JSON map of proposal keys to selected manifest IDs')
     commit.add_argument('--event-id', required=True); commit.add_argument('--selection-version', required=True)
     args = parser.parse_args()
     if args.action == 'preview':
-        result = preview(args.ids)
+        result = preview(args.ids, profile=args.profile)
     else:
         with open(args.manifest, encoding='utf-8') as handle:
             manifest = json.load(handle)
         with open(args.proposal, encoding='utf-8') as handle:
             proposal = json.load(handle)
-        result = apply(manifest, proposal, stream_id=args.stream, sequence=args.sequence,
+        supports_by_record = None
+        if args.record_supports:
+            with open(args.record_supports, encoding='utf-8') as handle:
+                supports_by_record = json.load(handle)
+        result = apply(manifest, proposal, supports_by_record=supports_by_record,
+                       stream_id=args.stream, sequence=args.sequence,
                        event_id=args.event_id, selection_version=args.selection_version)
     print(json.dumps(result, indent=2, ensure_ascii=False))
 
