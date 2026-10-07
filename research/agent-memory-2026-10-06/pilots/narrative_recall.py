@@ -4,6 +4,55 @@ Semantic review is a measured model procedure, not a proof of truth. The hidden
 rubric must independently check coverage and every resulting assertion.
 """
 import json
+import re
+
+
+def source_blocks(text, depth=0):
+    """Decode only exact shipped source envelopes, never infer a narrator.
+
+    Nested retained records keep their own headers. Unrecognized or incomplete
+    material remains supplied text with unknown attribution, not an invented
+    human/being witness. This is a pilot format adapter, not a general NLP parser.
+    """
+    blocks = []
+    decoder = json.JSONDecoder()
+    pattern = re.compile(r'(?:^|\n\n)([^\n]+):\n')
+    for match in pattern.finditer(text):
+        try:
+            value, _ = decoder.raw_decode(text[match.end():])
+        except ValueError:
+            continue
+        if not isinstance(value, str):
+            continue
+        header = match.group(1)
+        if header.startswith('Previously retained memory ') and depth < 20:
+            blocks.extend(source_blocks(value, depth + 1))
+            continue
+        attributes = re.fullmatch(r'(.+); source (.+); received (.+) through (.+)', header)
+        block = dict(header=header, quotation=value, speaker='unknown',
+                     receiving_body=None, reported_at=None, channel=None)
+        if attributes:
+            role, source, date, body = attributes.groups()
+            speaker = ('human reporter' if role in {'Human report', 'Human conversation'}
+                       else 'distinct peer in attributed communication' if
+                       role == 'Attributed peer communication' else 'source tool' if
+                       role == 'tool_response' else 'same-being originating body')
+            block.update(speaker=speaker, receiving_body=body, reported_at=date,
+                         channel=role, source=source)
+        blocks.append(block)
+    return blocks or [dict(quotation=text, speaker='unknown', receiving_body=None,
+                          reported_at=None, channel=None)]
+
+
+def supplied_context(query, evidence, binding):
+    rows = []
+    for cid, item in evidence.items():
+        row = dict(item, id=cid, attributed_blocks=source_blocks(item.get('text', '')))
+        # Exact duplicate envelopes are navigation copies, not corroboration.
+        row['attributed_blocks'] = list({json.dumps(block, sort_keys=True): block
+                                        for block in row['attributed_blocks']}.values())
+        rows.append(row)
+    return dict(question=query, receiving_binding=binding, evidence=rows)
 
 
 def validate(value, evidence, binding):
@@ -31,8 +80,10 @@ def validate(value, evidence, binding):
 
 
 def review_shape(value, count):
-    if not isinstance(value, dict) or set(value) != {'claims'} or not isinstance(value['claims'], list):
-        raise ValueError('review needs a claims array only')
+    if not isinstance(value, dict) or set(value) != {'claims', 'missing'} or not isinstance(value['claims'], list):
+        raise ValueError('review needs claims and missing arrays only')
+    if not isinstance(value['missing'], list) or any(not isinstance(x, str) or not x.strip() for x in value['missing']):
+        raise ValueError('missing needs strings describing relevant supported omissions')
     if len(value['claims']) != count:
         raise ValueError('review every claim exactly once')
     indices = []
@@ -66,6 +117,10 @@ remembered assertion; binding supports current body/tool limits, not past events
 No unsupported bridge prose outside these sentences. Preserve enough known
 participants/accounts/world pointers, substance, significance, chronology and
 outcome to answer the question, rather than just a name or generic uncertainty.
+Write a substantial answer, normally four to eight sentences when an encounter
+is supported. Answer the direct question AND give the relevant context, known
+identifiers and dates, meaning, outcome and evidence limits in connected prose.
+For a wholly unsupported event, a bounded unknown is sufficient.
 Before finishing, check that the answer retains relevant known identifiers,
 world pointers, occurrence/report dates and qualifications from its support.
 For a recalled encounter, name the source speaker and date of the report as
@@ -74,6 +129,14 @@ details. For a last-known project account, give its evidence date/year and its
 recorded current-state entry point. For an attributed lesson, retain the lesson
 and its source, not just who mentioned it. These checks use only supplied facts;
 do not fill a missing detail by guessing or turn every answer into a log dump.
+Each evidence row includes attributed_blocks decoded from exact envelopes.
+Use their speaker, receiving_body, channel and reported_at as separate fields.
+For a HUMAN REPORT the quotation's I/me is the HUMAN REPORTER, never the
+receiving_body. Do not rename the human as voice/mobile/code. A human's you
+addresses this being; 'you were not present' excludes the being, not the human.
+For human conversation, shared we can denote a human/being interaction, but
+physical sensor/tool possession still requires the binding or explicit source.
+Unknown speaker attribution must remain unknown.
 Distinguish source speaker, body receiving a report and event participants.
 A human's quoted I is the human. Another body of this being carries our shared
 history, but another being's experience remains theirs. Explain which original
@@ -96,7 +159,14 @@ abilities, private access or a performed learning solely to make a smooth story.
 
 REVIEW = '''Review every sentence against its cited supplied memory and the
 receiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:
-an array of {index: integer, verdict: supported or unsupported, reason: text}.
+an array of {index: integer, verdict: supported or unsupported, reason: text},
+and missing: an array of supported relevant details omitted from the answer.
+Check coverage of the question AND relevant known identifiers/world pointers,
+originating roles, event/report dates and precision, substance/significance,
+actual outcomes and limits. Do not require unrelated facts, invent expected
+answers, or use a hidden rubric. An answer that only says who/unknown while
+omitting the known encounter, lesson or outcome is incomplete. missing is []
+only if those relevant supplied facts are included.
 Do not see or invent an expected answer. A structurally valid citation is not
 semantic support: check EVERY clause for actor ownership, reported versus direct
 knowledge, date precision, action stage, uncertainty and last-known status.
@@ -106,6 +176,10 @@ having those bodies' original tools. Lack of network/runtime/sensors prevents
 new external verification or action, NOT access to this supplied memory. Never
 reject an otherwise supported historical report because the receiver lacks
 network, original sensors or original tools; do not invent a memory-access ban.
+attributed_blocks explicitly name the source speaker SEPARATELY from the
+body that received the message. For channel Human report, the I/me in quotation
+is the HUMAN, never the receiving body. 'You were not present' excludes the
+being, not the human reporter. Do not overturn that explicit distinction.
 Quoted human I/we remains its speaker; receiving a report does not establish
 participation or a preference of the receiving body. Same-being body history
 does not grant the receiver sensors/tools. Distinct peers remain distinct.
@@ -133,7 +207,7 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         validate(state['accepted'], evidence, binding)
         review_shape(state['accepted_review'], len(state['accepted']['claims']))
         return rendered(state['accepted'], state['accepted_review'])
-    context = dict(question=query, receiving_binding=binding, evidence=list(evidence.values()))
+    context = supplied_context(query, evidence, binding)
     messages = [dict(role='system', content=GENERATION),
                 dict(role='user', content=json.dumps(context, ensure_ascii=False))]
     previous_phase = trace.phase
@@ -168,17 +242,19 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                     review_messages.extend([dict(role='assistant', content=json.dumps(review)),
                         dict(role='user', content='Invalid review shape: '+str(error)+'. Repair only shape.')])
                 else: break
-            if all(row['verdict'] == 'supported' for row in review['claims']):
+            if not review['missing'] and all(row['verdict'] == 'supported' for row in review['claims']):
                 state['accepted'] = candidate
                 state['accepted_review'] = review
                 save(checkpoint, pending)
                 return rendered(candidate, review)
-            state['error'] = 'unsupported narrative claims'; save(checkpoint, pending)
+            state['error'] = 'unsupported or incomplete narrative'; save(checkpoint, pending)
             if revision == 1:
-                raise ValueError('narrative remained unsupported after one evidence-grounded revision')
+                raise ValueError('narrative remained unsupported or incomplete after one evidence-grounded revision')
             messages.extend([dict(role='assistant', content=json.dumps(candidate)),
                 dict(role='user', content=json.dumps(dict(review=review))+
                     '\nRevise the answer against the SAME supplied evidence. Correct attribution '
-                    'and qualifications; retain supported useful meaning. No new facts or rubric.')])
+                    'and qualifications; restore relevant supported omissions in missing. Do not '
+                    'adopt reviewer assertions unless the original evidence supports them. '
+                    'Retain supported useful meaning. No new facts or rubric.')])
     finally:
         trace.phase = previous_phase

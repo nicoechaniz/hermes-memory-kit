@@ -59,13 +59,16 @@ def chat(model, messages, trace):
     key = configuration.read_env_key('NVIDIA_API_KEY')
     if not key:
         raise ValueError('configured NVIDIA inference key required for this pilot')
+    effort = (getattr(trace, 'narrative_reasoning_effort', 'low')
+              if trace.phase.startswith('narrative_') else 'low')
     request = urllib.request.Request(
         'https://integrate.api.nvidia.com/v1/chat/completions',
         data=json.dumps(dict(model=model, messages=messages, temperature=0,
-                             reasoning_effort='low', max_tokens=6000)).encode(),
+                             reasoning_effort=effort, max_tokens=6000)).encode(),
         headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
     started = time.monotonic()
-    attempt = trace.begin(dict(requested_model=model, prompt_hash=digest(messages)))
+    attempt = trace.begin(dict(requested_model=model, requested_reasoning_effort=effort,
+                               prompt_hash=digest(messages)))
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
             result = json.load(response)
@@ -143,10 +146,12 @@ def answer_evidence(packs, expanded):
         for item in pack['items']:
             for row in [item, *item.get('neighbors', [])]:
                 available[row['id']] = dict(id=row['id'], text=row.get('spr', ''),
-                    origin=row.get('origin'), representation='retrieved_preview')
+                    origin=row.get('origin'), support_status=row.get('support_status'),
+                    support_checks=row.get('support_checks'), representation='retrieved_preview')
     for row in expanded:
         available[row['id']] = dict(id=row['id'], text=row.get('raw', row.get('spr', '')),
-            origin=row.get('origin'), representation='expanded_record')
+            origin=row.get('origin'), support_status=row.get('support_status'),
+            support_checks=row.get('support_checks'), representation='expanded_record')
     return available
 
 
@@ -288,6 +293,7 @@ def run_variant(name, guidance, args, corpus):
     instrument_embeddings(memory, out/'embedding-trace.json')
     ledger = CaptureLedger(memory)
     trace = Trace(out/'trace.json')
+    trace.narrative_reasoning_effort = getattr(args, 'narrative_reasoning_effort', 'high')
     captures = json.loads((out/'capture.json').read_text()) if (out/'capture.json').exists() else []
     selection = f'pilot:{name}:{args.model}'
     contract = '''You curate only the supplied fictional foreground experience.
@@ -677,6 +683,8 @@ def main():
                         help='Repeat only selected case recall over a complete frozen formation')
     parser.add_argument('--narrative', action='store_true',
                         help='Generate natural narrative with clause support and bounded semantic review')
+    parser.add_argument('--narrative-reasoning-effort', choices=('low','high'), default='high',
+                        help='Receiving narration/review effort; formation and planning remain low')
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
@@ -707,7 +715,8 @@ def main():
     conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
     if args.narrative:
-        conditions['recall_contract'] = 'natural-claims/v1-reviewed'
+        conditions['recall_contract'] = 'natural-claims/v3-attributed-coverage'
+        conditions['narrative_reasoning_effort'] = args.narrative_reasoning_effort
         conditions['narrative_sha256'] = hashlib.sha256(Path(narrative_recall.__file__).read_bytes()).hexdigest()
     conditions['recall_cases'] = args.recall_case
     conditions['review_capture'] = args.review_capture
@@ -732,7 +741,8 @@ def main():
                       'recall_contract', 'recall_cases', 'review_capture', 'source_blocks'):
             if previous.get(field, False) != conditions[field]:
                 parser.error('resume cannot change frozen model, guidance or fixtures')
-        if args.narrative and previous.get('narrative_sha256') != conditions['narrative_sha256']:
+        if args.narrative and any(previous.get(field) != conditions[field]
+                                 for field in ('narrative_sha256', 'narrative_reasoning_effort')):
             parser.error('resume cannot change the frozen semantic narrative procedure')
         resumed = previous.get('resumes', [])
         resumed.append(conditions)
