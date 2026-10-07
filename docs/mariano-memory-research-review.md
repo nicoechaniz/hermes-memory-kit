@@ -83,6 +83,69 @@ Additional mounted context used to establish the source wiring:
 | `.mapa/tier1.py` | Source/index/map root definitions | `e5de7372298250e35549470d0b0249e4ae4bc030b12a0b04e8ec1339c0f6b295` |
 | `.mapa/mapa-serve.service` | Serving entry point and configured environment | `008a663b9e0a2f617f536da7e7df1f0090a27a0b0d5d3edd3df4ad090825902f` |
 
+## GitHub freshness check and implemented thematic synthesis
+
+The October 7 follow-up inventories 15 public repositories under `Mar-IA-no`
+and 70 under `AlterMundi`. It inspects complete default-branch trees for all 15
+Mariano repositories and 15 selected organization repositories, then reads
+relevant documents/source and checks commit authorship. The three upstream
+memory/continuity repositories' branch, issue and pull-request lists were also
+checked. Repository inventories and filename matches locate candidates; they
+are not equivalent to reading every repository or proving that no newer work
+exists. Two Mariano code searches returned `incomplete_results=true`; their
+empty results supply no negative evidence. Selected private repository metadata
+was checked separately; private documents are not reproduced here.
+
+The newest directly inspected Mariano research on consolidation remains the
+July writer-side report M7. A later **public implementation** is established:
+`collective-memory` published its synthesis code on July 23, and its inspected
+default-branch head is July 29. The distinction matters: this is executable source,
+not merely a proposal in an earlier research document. It was not run here, and
+this does not establish which version is deployed on the mounted source host.
+No inspected source establishes a later August–October Mariano investigation
+specifically on autobiographical sleep/consolidation.
+
+| Public source | Pinned evidence | Relevant result |
+|---|---|---|
+| G1: collective-memory architecture | [`docs/arquitectura.md`](https://github.com/Mar-IA-no/collective-memory/blob/ca0486307aea6ea8ec65f70ffd5ba32fd56b8850/docs/arquitectura.md), SHA-256 `6b43afefdaba9d42adf7d924e525da8a78a1406b0bf8e97b7865d6a14d9a22c0` | Separate corpus index, coherent map publication, derived atlas, attributed discovery and optional director |
+| G2: implemented thematic distillation | [`mapa/synthesize.py`](https://github.com/Mar-IA-no/collective-memory/blob/ca0486307aea6ea8ec65f70ffd5ba32fd56b8850/mapa/synthesize.py), SHA-256 `6b2affb288afdb9e4996a177fe5b71c5fde64368ed2de2da85c9aa42de60f2f2` | Source-hashed clusters, local-LLM synthesis, model/prompt provenance, preview, lock-protected publication and unchanged-result reuse |
+| G3: upstream HMK extraction proposal | [PR #1](https://github.com/Mar-IA-no/hermes-memory-kit/pull/1), open, head `e1e4c612181fc118cb2574444c8a279627722dc8`, updated June 17 | End-of-session distiller by **Fede654**, already inspected in R1; repository ownership does not make Mariano the author or establish adoption |
+| G4: later upstream publication work | [collective-memory PR #3](https://github.com/Mar-IA-no/collective-memory/pull/3), open, head `a96eba65c3ca39551ee8f1387f5ae93114fd59f3`, updated August 12 | Export/publication work by **nicoechaniz**; later activity does not establish a new Mariano sleep study |
+| G5: later Mariano operational documentation | [Phideus protocol](https://github.com/Mar-IA-no/Phideus/blob/f6150557b1f2834e645d8e2ae13174ce9591beda/Documents/00_TRONCAL/PROTOCOLO_OPERATIVO_CODEX_CLAUDE.md), SHA-256 `2461db90e52898e47ec110d57bcd26fa55c145d25feb80ccd16d6d9fb3f66d7f` | File audited by Mariano in August, content framed in March; agent roles and project methodology, not a durable-memory consolidation implementation |
+| G6: organization memory contract | [DM-030](https://github.com/AlterMundi/daimon-matrix/blob/d92ded09634bfce790f96e2452c13b9868c02e2b/docs/dm030-memory-policy.md), SHA-256 `585f08e253f7ac22dad51b79e15ee718ce53f347ccf107be079bc738b80c7d72` | Eligible evidence, decisions, checkpoints and signed recording; runtime authority remains distinct from LLM-generated consolidation |
+
+G2 clusters prose documents with Louvain, excluding generated syntheses and
+volatile map artifacts from inputs. It checks index/vector-generation coherence,
+keys reusable output by source-content fingerprint plus model/prompt version,
+and supports a preview without publishing. A run lock serializes generation;
+the librarian lock protects replacement of the synthesis overlay. These are
+useful patterns for P3/P4's explicit inputs, replay and coherent derived output.
+
+Several details need adaptation before using it for lifelong memory:
+
+- `source_paths` lists the full cluster, while the model receives bounded
+  excerpts: 300 characters per document, capped at 8,000 characters overall.
+  Cluster membership alone does not prove that the model saw each listed source
+  or that each source supports a generated claim. Retain the actual evidence
+  manifest and selected, sufficient episode text; test support explicitly.
+- `MIN_SOURCES=3` guards a general synthesis and the default cluster minimum is
+  five. Neither may become a minimum for remembering a single significant
+  interaction or tool-delivered communication.
+- Replacing the derived overlay removes its previous directory. An unchanged
+  cluster's previous synthesis can survive a generation failure, but this is not
+  an immutable episode/revision ledger. Regenerable thematic output and retained
+  autobiography need different preservation contracts.
+- Excluding generated synthesis from synthesis inputs is a useful protection
+  against recursive amplification. HMK/native coexistence also needs explicit
+  source ownership so a recalled HMK fact is not re-extracted as independent new
+  evidence by Codex.
+
+The public activity also contains many keyword false positives: process RAM,
+system/worktree sleep, media continuity and practitioner-experience protocols.
+Their presence is not evidence of agent memory consolidation. Preserve the
+April/July research cutoff and the distinct later implementation/author dates
+instead of labeling all material current from a repository's latest push.
+
 ## Mechanisms to carry into the existing plan
 
 The documents already address agent continuity and consolidation alongside
@@ -165,8 +228,10 @@ and source boundaries. Reuse the existing #11/#12 Codex work for that integratio
 ## Evidence and next discriminating work
 
 This delivery verifies selected filesystem access, establishes the configured
-source/index/API relationship and compares inspected designs. It does not run
-their examples, benchmark models, consolidate a live pool or qualify API access.
+source/index/API relationship and compares inspected designs. Its GitHub
+follow-up pins implemented thematic synthesis and distinguishes author/revision
+dates from repository activity. It does not run their examples, benchmark
+models, consolidate a live pool or qualify API access.
 The October raw reports and their checksum record remain unchanged.
 
 Consult the published map and trace its conclusions to the source revisions.

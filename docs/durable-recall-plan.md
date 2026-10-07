@@ -43,6 +43,17 @@ The source ledger separates document age, access and editorial status. Fixed
 hardware, scoring and lifecycle recommendations require fresh evidence before
 adoption.
 
+The same comparison now checks Mariano's GitHub repositories and selected
+AlterMundi repositories, including upstream memory PRs and author dates.
+Collective-memory's July public source implements thematic distillation with
+source fingerprints, preview, provenance, unchanged-result reuse and serialized
+publication. Reuse those mechanisms for P3/P4 while retaining self-contained
+episodes and actual evidence manifests. Generated synthesis cannot serve as
+independent corroboration of its own sources or replace episode history.
+No inspected source establishes a later Mariano autobiographical-sleep study;
+inventory/search coverage is stated in the comparison rather than treated as
+proof of absence.
+
 ## First delivery
 
 The first delivery adds:

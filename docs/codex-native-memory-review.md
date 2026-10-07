@@ -67,6 +67,7 @@ still reads `memory_summary.md` from the selected native memory namespace.
 | Retrieval and initial context | [Backend](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/ext/memories/src/backend.rs), [extension](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/ext/memories/src/extension.rs), [prompts](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/ext/memories/src/prompts.rs) | Preserve citation, path/line, namespace and truncation contracts alongside semantic retrieval. Dedicated tools have their own enablement setting. |
 | Thread use and contribution controls | [Config](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/config/src/types.rs), [selection](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/state/src/runtime/memories.rs) | `generate_memories=false` disables contribution for newly created threads, not every pre-existing enabled thread. A shared native home is unsuitable for the first fictional experiment. |
 | Source eligibility | [Allowed interactive sources](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/rollout/src/lib.rs), [claim call](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/memories/write/src/phase1.rs) | Verify the actual Telegram session source. The inspected claim call supplies no signed being binding or explicit per-project allowlist. |
+| External-context eligibility | [Official controls](https://learn.chatgpt.com/docs/customization/memories), [pinned defaults](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/config/src/types.rs) | `disable_on_external_context=true` excludes chats that used external context from generation; the older `no_memories_if_mcp_or_web_search` key remains an alias. Its pinned default is false. Test this explicitly with an HMK MCP adapter and external communications: excluding these chats can lose meaningful input, while allowing them requires protection against treating recalled memory as independent new evidence. |
 | Worker capabilities | [Consolidator configuration](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/memories/write/src/phase2.rs) disables MCP, plugins, native memory tools and recursive collaboration | An HMK MCP installation alone cannot connect this writer. Managed permissions restrict local writes/network; explicitly disabled or external parent permission profiles are preserved. |
 
 ## Persistence is not a lifelong preservation guarantee
@@ -109,6 +110,13 @@ attributed, repairable index with an explicit owner, rather than independently
 editing two versions of the same fact. This is an experiment proposal, not an
 adapter that has been deployed.
 
+Domain descriptions in a prompt do not establish source isolation. Qualify
+thread eligibility, namespace boundaries and the external-context setting in
+the actual lifecycle. Keep origin/record/version identifiers on projections;
+a retrieved HMK record must not become independent corroboration of itself
+when a later native pass extracts the conversation. Corrections and retractions
+must update or invalidate those projections through their recorded owner.
+
 Use the existing fictional corpus and an isolated native test home. Start with
 one reusable engineering lesson, one enduring preference, one autobiographical
 episode, one correction and one routine exchange. Record native version/model,
@@ -135,7 +143,9 @@ is a compaction event, not an established native-consolidation-completed event.
 The human authorized enabling the Codex hooks framework in the other project
 conversation; the 2026-10-07 receiving check confirms it is enabled. The check
 also confirms native memories, external memory import, generation and use are
-disabled, with no explicit memory version override. No HMK memory hook handler
+disabled, with no explicit memory version override. An October 7 follow-up
+reconfirmed those settings and CLI version; the external-context option and its
+older alias are unset, so the pinned false default applies. No HMK memory hook handler
 was installed by this investigation. Existing manual access remains distinct
 from any later qualified lifecycle integration.
 
