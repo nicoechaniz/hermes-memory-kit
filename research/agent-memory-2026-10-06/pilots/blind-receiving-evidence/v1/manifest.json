@@ -1,0 +1,35 @@
+{
+  "fictional": true,
+  "qualification": false,
+  "prepared_sol_chat_requests_executed": 0,
+  "files": {
+    "baseline/embedding-trace.json": {
+      "sha256": "0e789a5de4ab2c2762c19a02b546e50e58f6f3f1f417c185037a9f1e62a4ef41",
+      "bytes": 13747
+    },
+    "conditions.json": {
+      "sha256": "aee324d5037134d254e3783e8c50930709ff406713d0fe623b78483d22ca2318",
+      "bytes": 11554
+    },
+    "costs.json": {
+      "sha256": "27783ff3aa8593a54c283c8910a5fe14335a4e9a4b1411954acd19725a4d8f97",
+      "bytes": 838
+    },
+    "packets.json": {
+      "sha256": "189360a87b057c7430d44ea5cf6689e17f3fbf7bc7bf786d1949dce25a7b162f",
+      "bytes": 1117021
+    },
+    "prepared-sol-request.json": {
+      "sha256": "d86a06b97f896d93721329d1c2b4d36b2e989abc76b6cc8b3d1734b29d485c8b",
+      "bytes": 12604
+    },
+    "preservation.json": {
+      "sha256": "7776b489e630034d9f97970f745221d70db573324b89b49306c7e6893fdab5a3",
+      "bytes": 7833
+    },
+    "proposed/embedding-trace.json": {
+      "sha256": "5547368231978bc22899000bcb88f664ada3edb52700baa5b1418aa84b3a9759",
+      "bytes": 12887
+    }
+  }
+}

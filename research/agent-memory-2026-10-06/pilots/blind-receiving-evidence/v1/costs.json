@@ -1,0 +1,27 @@
+{
+  "scope": "This packet freeze only; prior formation/receiving attempts are separate.",
+  "generative_chat_requests_executed": 0,
+  "query_embedding_usage": "Unknown provider token usage; never zero cost.",
+  "arms": {
+    "baseline": {
+      "questions": 22,
+      "packs": 48,
+      "query_embedding_calls": 48,
+      "query_embedding_input_characters": 2169,
+      "query_embedding_missing_usage": 48,
+      "pack_token_estimates": 30753,
+      "max_pack_token_estimate": 1415,
+      "expansion_characters": 140664
+    },
+    "proposed": {
+      "questions": 22,
+      "packs": 45,
+      "query_embedding_calls": 45,
+      "query_embedding_input_characters": 2119,
+      "query_embedding_missing_usage": 45,
+      "pack_token_estimates": 31554,
+      "max_pack_token_estimate": 1499,
+      "expansion_characters": 184827
+    }
+  }
+}
