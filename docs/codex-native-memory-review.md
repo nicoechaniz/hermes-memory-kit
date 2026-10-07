@@ -90,11 +90,19 @@ In this version:
   authorize erasing an independently retained HMK episode. Conversely, a revoked
   source must not survive by blindly copying it into another authority. Preserve
   the record's classification, consent and correction/retraction semantics.
-- HMK also has confirmed native overwrite/history gaps. Its intended role alone
-  does not prove it already satisfies our ten-year contract; see the
-  [whole-project review](general-memory-review.md).
+- HMK had confirmed overwrite/history gaps at initial review. The repaired fork
+  now preserves native revisions, but the partial model pilot still fails essential
+  selection/weak-cue recall. See the maintained [plan](durable-recall-plan.md);
+  intended scope does not establish the ten-year contract.
 
 ## Integration decision and smallest next experiment
+
+The later [lifelong-memory review](lifelong-memory-portability-review.md)
+supersedes any assumption that every native artifact must be regenerable from
+HMK. Native-authored learning is part of the being's accumulated delta: preserve
+its original representation, available history and provenance separately from
+selected projections. Compare Codex plus collective-memory and other backends
+against the same enduring-memory contract. HMK retention is not the goal.
 
 Keep three routes open under [issue #11](https://github.com/nicoechaniz/hermes-memory-kit/issues/11):
 

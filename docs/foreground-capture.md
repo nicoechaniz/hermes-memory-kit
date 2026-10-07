@@ -54,6 +54,21 @@ evidence lost earlier: staging or selection before that boundary is required.
 
 ## Selection outcomes
 
+Supply the proposal schema to the selecting model rather than asking it to
+imitate database rows:
+
+```bash
+./scripts/hmk capturectl.py decision-schema > decision-schema.json
+```
+
+This command opens no pool and installs nothing. Source modes are `observed`,
+`reported`, `inferred` or `generated`; descriptive words such as “experienced”
+belong in prose. Structured occurrence/report/end dates use integer Unix seconds
+with explicit precision, or remain unknown and qualified in the account. Do not
+send ISO strings into integer fields or copy internal `location_json` columns
+as writer arguments. Schema conformity does not prove significance, truth,
+source rights or a valid update; those remain separate checks.
+
 Supply `applied`, `omitted` or `deferred`, a reason and `selection_version`
 identifying the policy/model decision. A processing decision is not another
 encounter. Failed writes retain retryable sources. Only contiguous applied/omitted

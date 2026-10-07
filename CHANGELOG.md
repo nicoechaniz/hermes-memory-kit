@@ -1,7 +1,19 @@
 ## [Unreleased]
 
+- Compare local Markdown/SQLite backends and interchange profiles, and review
+  transferable Hindsight mechanisms plus the current public OpenSouls source.
+  Preserve native authored learning and history independently of projections;
+  no competitor deployment, universal standard or lifelong qualification is claimed.
+
 ### Durable memory foundation and foreground consolidation
 
+- `capturectl decision-schema` exposes the structural proposal contract without
+  opening a pool. Invalid record fields and link references return actionable
+  errors; failed links preserve pending work and roll back the entire decision.
+- The lifelong-memory review compares native imports, shared memory backends and
+  interchange drafts. Published fictional model-pilot evidence includes failed
+  weak-cue recall and a lost meaningful action; no completed quality comparison
+  or native/competitor acceptance is claimed.
 - Verified SQLite online snapshots preserve committed WAL data before schema
   changes. Bootstrap refuses an existing database; upgrade preserves acquired
   skills and overwritten pre-images. Unicode title collisions no longer merge
