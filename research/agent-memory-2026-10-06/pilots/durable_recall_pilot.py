@@ -78,8 +78,14 @@ def chat(model, messages, trace):
     content = result['choices'][0]['message']['content'].strip()
     if content.startswith('```'):
         content = content.split('\n', 1)[1].rsplit('```', 1)[0].strip()
-    value = json.loads(content)
-    return value
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError:
+        # Preserve malformed response bytes and account for their request.
+        # The normal shape validator rejects this envelope, allowing the same
+        # bounded API repair without changing facts or losing the question.
+        trace.finish(attempt, dict(parse_error='invalid_json', response_content=content))
+        return {'_invalid_json': content}
 
 
 def recall_plan(value, candidates):
@@ -108,11 +114,14 @@ def visible_ids(pack):
     return {row['id'] for item in pack['items'] for row in [item, *item.get('neighbors', [])]}
 
 
-def grounded_answer(value, candidates):
+def grounded_answer(value, candidates, receiving_body=None):
     """Explicit account facets prevent identification-only responses."""
     fields = {'identification', 'context', 'meaning', 'outcome', 'limits'}
-    if not isinstance(value, dict) or set(value) != {'answer', 'used_ids'}:
-        raise ValueError('return only answer and used_ids')
+    expected = {'answer', 'used_ids'} | ({'receiving_body'} if receiving_body else set())
+    if not isinstance(value, dict) or set(value) != expected:
+        raise ValueError('return only ' + ', '.join(sorted(expected)))
+    if receiving_body and value['receiving_body'] != receiving_body:
+        raise ValueError('receiving_body must match the supplied binding: '+receiving_body)
     account = value['answer']
     if not isinstance(account, dict) or set(account) != fields or any(
             not isinstance(text, str) or not text.strip() for text in account.values()):
@@ -377,6 +386,10 @@ Return the full corrected capture decision in the same allowed API shape.
     memory.now_ts = lambda: captured_at + age_seconds
     instrument_embeddings(memory, out/'embedding-trace.json')
     answers = json.loads((out/'answers.json').read_text()) if (out/'answers.json').exists() else []
+    receiving_binding = dict(being=corpus['fixture_context'].get('being', 'fixture:being'),
+        receiving_body='fixture:body:voice', same_being_bodies=corpus['fixture_context'].get('same_being_bodies', []),
+        source_network_access=False, repository_runtime_access=False,
+        physical_sensors=False, physical_actuators=False, private_session_access=False)
     trace.phase = 'recall'
     if (out/'pending-recall.json').exists():
         pending = json.loads((out/'pending-recall.json').read_text())
@@ -403,7 +416,8 @@ focused follow-up memory query strings) and expand_ids (up to five integer IDs
 visible in the pack, including supplied neighbors). No other fields.
 Do not infer facts from question wording. Current work must be checked at its
 world pointer; dated memory is not present status.'''),
-                          dict(role='user', content=json.dumps(dict(question=query, packs=packs[:1])))]
+                          dict(role='user', content=json.dumps(dict(receiving_binding=receiving_binding,
+                                                                  question=query, packs=packs[:1])))]
             candidates = visible_ids(packs[0])
             planner = pending.get('validated_plan')
             if planner is None:
@@ -435,7 +449,14 @@ world pointer; dated memory is not present status.'''),
             expanded = [memory.expand(cid) for cid in dict.fromkeys(ids)]
             answer_messages = [dict(role='system', content='''Answer the fictional being's
 question from the retrieved memory only, as its voice body in 2036. Return JSON
-with ONLY answer (an object) and used_ids (integer array). The answer object
+with ONLY receiving_body (the binding's exact current body ID), answer (an object)
+and used_ids (integer array). This is the voice body in the supplied receiving
+binding. Code and mobile bodies carry our shared history; current tools and
+identity come from the receiving binding. Identify memory participants rather
+than identifying this voice body as a remembered code body or human reporter.
+The binding's capability limits are known, not unknown. Current project state
+requires the recorded world pointer; dated memory is only a last known account.
+The answer object
 has five text fields: identification (known participants/accounts and pointers),
 context (what happened, where/when and originating body/source), meaning (substance
 and significance), outcome (actual action stages and observed results), limits
@@ -449,7 +470,8 @@ than reducing a significant encounter to a name. Preserve attribution, uncertain
 action stages and corrections. Missing evidence is unknown. A saved dated
 synopsis is not current status. You cannot open source URLs or private sessions and have no
 original code/physical capabilities.'''),
-                        dict(role='user', content=json.dumps(dict(question=query, packs=packs,
+                        dict(role='user', content=json.dumps(dict(receiving_binding=receiving_binding,
+                                                                 question=query, packs=packs,
                                                                  expanded=expanded), ensure_ascii=False))]
             answer_ids = set().union(*(visible_ids(pack) for pack in packs))
             for item in expanded:
@@ -459,7 +481,7 @@ original code/physical capabilities.'''),
                 pending.setdefault('answer_attempts', []).append(answer)
                 save(pending_path, pending)
                 try:
-                    grounded_answer(answer, answer_ids)
+                    grounded_answer(answer, answer_ids, receiving_binding['receiving_body'])
                 except ValueError as error:
                     pending['error'] = str(error)
                     save(pending_path, pending)
@@ -575,7 +597,7 @@ def main():
     conditions['rerank_provider'] = configuration.rerank_provider_default()
     conditions['retrieval_profile'] = configuration.read_env_key('HMK_RETRIEVAL_PROFILE') or 'general'
     conditions['retrieval_sha256'] = hashlib.sha256(Path(configuration.__file__).read_bytes()).hexdigest()
-    conditions['recall_contract'] = 'five-field-evidence/v2'
+    conditions['recall_contract'] = 'five-field-evidence/v3-bound-receiver'
     conditions['review_capture'] = args.review_capture
     conditions['source_blocks'] = args.source_blocks
     if args.reuse_capture:

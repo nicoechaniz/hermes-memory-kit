@@ -46,9 +46,11 @@ def test_trace_survives_rejected_response(pilot, tmp_path, monkeypatch):
                 'choices':[{'message':{'content':'not JSON'}, 'finish_reason':'stop'}]}).encode()
     monkeypatch.setattr(pilot.configuration, 'read_env_key', lambda key: 'fictional-key')
     monkeypatch.setattr(pilot.urllib.request, 'urlopen', lambda *a, **k: Response())
-    with pytest.raises(json.JSONDecodeError):
-        pilot.chat('fixture-model', [], trace)
-    assert json.loads(path.read_text())[0]['usage']['total_tokens'] == 42
+    value=pilot.chat('fixture-model', [], trace)
+    assert value == {'_invalid_json':'not JSON'}
+    saved=json.loads(path.read_text())[0]
+    assert saved['usage']['total_tokens'] == 42 and saved['response_content']=='not JSON'
+    with pytest.raises(ValueError):pilot.recall_plan(value,set())
 
 
 def test_failed_plans_resume_without_losing_capture_or_pending_question(pilot, tmp_path, monkeypatch):
@@ -76,7 +78,7 @@ def test_failed_plans_resume_without_losing_capture_or_pending_question(pilot, t
     assert len(pending_before['plans']) == 2
     assert len(json.loads((out/'capture.json').read_text())) == 1
     args.resume = True
-    responses = iter([{'queries':[], 'expand_ids':[1]}, {'answer':{
+    responses = iter([{'queries':[], 'expand_ids':[1]}, {'receiving_body':'fixture:body:voice','answer':{
         'identification':'Tavi', 'context':'A label discussion', 'meaning':'Proposed labels',
         'outcome':'Unknown', 'limits':'No other evidence'}, 'used_ids':[1]}])
     pilot.run_variant('test', '', args, corpus)
@@ -117,7 +119,7 @@ def test_source_review_precedes_commit_and_never_sees_hidden_rubric(pilot, tmp_p
          'raw':'We attended the encounter.'}], 'links':[]}
     corrected = json.loads(json.dumps(candidate))
     corrected['records'][0]['raw'] = 'The human reported an encounter; the receiving voice body did not attend.'
-    responses = iter([candidate, corrected, {'queries':[],'expand_ids':[]}, {'answer':{
+    responses = iter([candidate, corrected, {'queries':[],'expand_ids':[]}, {'receiving_body':'fixture:body:voice','answer':{
         'identification':'Unknown','context':'A report','meaning':'Unknown','outcome':'Reported',
         'limits':'Not directly observed'},'used_ids':[]}])
     phases=[]
@@ -164,3 +166,10 @@ def test_source_blocks_preserve_reporter_uncertainty_and_refuse_generated_facts(
     candidate['records'][0].pop('raw')
     candidate['records'][0]['source_ids']=['invented']
     with pytest.raises(ValueError):pilot.source_decision(candidate,sources,[])
+
+
+def test_answer_cannot_select_its_body_from_remembered_provenance(pilot):
+    value={'receiving_body':'fixture:body:code','answer':dict.fromkeys(
+        ('identification','context','meaning','outcome','limits'),'Unknown'),'used_ids':[]}
+    with pytest.raises(ValueError,match='supplied binding'):
+        pilot.grounded_answer(value,set(),'fixture:body:voice')
