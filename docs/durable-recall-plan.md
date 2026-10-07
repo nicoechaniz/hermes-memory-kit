@@ -35,10 +35,13 @@ being-shared lifelong store or a configurable HMK backend.
 The [2026-10-07 Mariano research comparison](mariano-memory-research-review.md)
 adds inspected April/July designs from four authorized live research collections.
 It connects typed memory, historical changes, coherent publication and layered
-synthesis to this plan. Its source ledger separates document age, current access
-and editorial status; the intended recent/curated roles of the two mounted views
-remain to qualify. Fixed hardware, scoring and lifecycle recommendations require
-fresh evidence before adoption.
+synthesis to this plan. Mounted documentation and source configuration establish
+that collective-memory serves a filtered index of the live tree, including its
+curated map and underlying documents; the second view retains additional material
+and may also contain current work. Its name does not establish source age.
+The source ledger separates document age, access and editorial status. Fixed
+hardware, scoring and lifecycle recommendations require fresh evidence before
+adoption.
 
 ## First delivery
 

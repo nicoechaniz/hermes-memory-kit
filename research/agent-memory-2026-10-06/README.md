@@ -74,6 +74,9 @@ The [2026-10-07 Mariano research comparison](../../docs/mariano-memory-research-
 adds seven selected source documents from four authorized research collections
 after read-only receiving access was independently qualified. It distinguishes
 their April/July content dates from October access and compares the designs with
-lifelong source-loss requirements. The intended recent/curated source roles remain
-to qualify. This additive review preserves the five original raw reports and
+lifelong source-loss requirements. Mounted system documentation and selected
+source configuration establish that collective-memory serves the live tree's
+filtered index, including its curated map and source documents. Both mounted
+views may contain current work; 66 selected memory research files matched by hash.
+This additive review preserves the five original raw reports and
 does not change the public-source scope of the closed October investigation.
