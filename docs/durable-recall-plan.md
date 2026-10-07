@@ -138,6 +138,12 @@ only for its recorded scope and conditions.
 Sol 6.1 low remains an explicitly requested bounded comparator when the expected
 consumption warrants it. Compare identical packets and count review/retry costs;
 do not infer a native OpenAI API credential from Codex subscription access.
+The [actual Sol-low comparator](../research/agent-memory-2026-10-06/pilots/2026-10-07-flash-sol-comparison.md)
+now preserves eight identical-message generations through the authorized Nous
+API, outside grading and costs. It has omissions and unsupported gender clauses;
+no full reviewed configuration is qualified. Continue the complete Flash run,
+then compare reviewed Sol if warranted, before a new full formation/consolidation
+comparison. All deployment and stage-two gates remain unchanged.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

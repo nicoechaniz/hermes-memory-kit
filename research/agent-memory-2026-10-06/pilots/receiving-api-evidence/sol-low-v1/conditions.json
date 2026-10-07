@@ -1,0 +1,16 @@
+{
+  "qualification": false,
+  "scope": "eight generation-only identical-packet Sol low comparator",
+  "maximum_calls": 8,
+  "provider": "nous",
+  "model": "openai/gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "generation_limit": 12000,
+  "review_limit": 32768,
+  "decoder": "json_object",
+  "script_sha256": "a927d6d13b733d6f4404a6055a0d8e2ebe4ecb2bfe198c7f31dab05341542e4d",
+  "identical_message_schema_reference": "0269cf575b32394de1f8ef52a185e42ce443b0ff94824dc39be752e043c436b6",
+  "embeddings": "unchanged frozen retrieval",
+  "reviewer": "not invoked",
+  "source_access": false
+}

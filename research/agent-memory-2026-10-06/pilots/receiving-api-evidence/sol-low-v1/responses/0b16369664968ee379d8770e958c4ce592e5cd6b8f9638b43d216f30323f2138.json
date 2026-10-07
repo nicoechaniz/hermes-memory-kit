@@ -1,0 +1,33 @@
+{
+  "request_sha256": "0b16369664968ee379d8770e958c4ce592e5cd6b8f9638b43d216f30323f2138",
+  "requested_model": "openai/gpt-6.1-sol",
+  "response_model": "openai/gpt-6.1-sol",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/sol-low-generation-probe-v1/dispatches/0b16369664968ee379d8770e958c4ce592e5cd6b8f9638b43d216f30323f2138.json",
+  "usage": {
+    "prompt_tokens": 2583,
+    "completion_tokens": 270,
+    "total_tokens": 2853,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 2580,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "cost": 0.009156,
+    "cost_details": {
+      "source": "openrouter_list",
+      "floor_applied": false,
+      "rate_source": "openrouter_catalog"
+    }
+  },
+  "seconds": 8.86411343794316,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The person was Mara Ibarra, whose display name was Mara, login was mara-river, and account ID was 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body received the issue comments from Forge on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"In comment c901, dated 2026-04-12, Mara proposed a local replay queue for disconnected HarborMesh relay nodes.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The queue would preserve readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed to prototype it in comment c906 on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied issue account reports no merge or deployment as of 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The recorded issue is https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"}]}",
+  "finish_reason": "stop"
+}

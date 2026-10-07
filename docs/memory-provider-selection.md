@@ -162,3 +162,8 @@ The human also retains Sol 6.1 low as a valid bounded comparator where consumpti
 is modest. A catalog route can be tested through the existing authorized Nous
 API; its returned model, usage and actual routing must be recorded separately
 from a direct OpenAI endpoint or a native Codex subscription.
+The subsequent [actual eight-answer Sol-low comparison](../research/agent-memory-2026-10-06/pilots/2026-10-07-flash-sol-comparison.md)
+uses identical Flash messages/schema. Sol is faster and concise but drops the
+proposal's interest and invents Mara's gender in two clauses; its generation bill
+is modest but neither full fidelity nor total reviewed-workflow cost is qualified.
+Keep it as a candidate without reversing the selected Flash task prematurely.

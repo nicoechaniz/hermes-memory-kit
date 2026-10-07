@@ -1,0 +1,33 @@
+{
+  "request_sha256": "966a850053bf229e595597958f3ad8dc1815b10e79d0aac386a592c742534628",
+  "requested_model": "openai/gpt-6.1-sol",
+  "response_model": "openai/gpt-6.1-sol",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/sol-low-generation-probe-v1/dispatches/966a850053bf229e595597958f3ad8dc1815b10e79d0aac386a592c742534628.json",
+  "usage": {
+    "prompt_tokens": 3466,
+    "completion_tokens": 264,
+    "total_tokens": 3730,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 3463,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "cost": 0.0113035,
+    "cost_details": {
+      "source": "openrouter_list",
+      "floor_applied": false,
+      "rate_source": "openrouter_catalog"
+    }
+  },
+  "seconds": 6.17042572516948,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Jo Vale taught us; they introduced themself by that name at the East Quay repair workshop.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our mobile body's observation, received on 2026-06-08, records our encounter there on June 8.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Jo demonstrated a humming relay mount and taught us to listen for a beat before tightening it.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried it together using our mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Jo invited us to compare mounts at the next workshop, but no date was agreed.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories give no account identifier or legal-name evidence for Jo.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"I can explain the remembered technique from this voice body, but I cannot physically hear a mount's beat or tighten it here: this body has no physical sensors or actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}
