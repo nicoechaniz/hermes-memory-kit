@@ -11,10 +11,14 @@ import sqlite3
 import sys
 import time
 import unicodedata
+import uuid
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+import native_records
 
 # v3.0: NO hardcoded fallbacks. Cascade resolves from env; if none is set,
 # BASE_DIR / DB_PATH / HERMES_HOME remain None and _require_config() hard-fails
@@ -108,6 +112,7 @@ class EmbeddingBackendError(RuntimeError):
 LOCAL_MODEL_CACHE = {}
 MODEL2VEC_CACHE = {}
 FLASHRANK_CACHE = {}
+_UNSET = object()
 PROJECT_QUERY_TERMS = {
     "hermes",
     "openclaw",
@@ -523,6 +528,7 @@ def init_db():
     migrate_add_embed_disabled(con)
     con.commit()
     try:
+        native_records.ensure_schema(con, DB_PATH)
         migrate_daimon_projection(con)
     except Exception:
         con.close()
@@ -574,6 +580,9 @@ def _attach_daimon_origin(row):
     }
     if row.get("daimon_projection_id") is None:
         row["origin"] = {"kind": row.get("source_kind") or "hmk-native"}
+        source_metadata = json.loads(row.get("source_metadata_json") or "{}")
+        if source_metadata:
+            row["origin"]["source"] = source_metadata
     else:
         values = {output: row.get(source) for output, source in fields.items()}
         values["active"] = bool(values["active"])
@@ -699,54 +708,88 @@ def delete_chapter_fts(con, row):
     )
 
 
-def add_text(shelf_name, title, raw, tags=None, importance=0.5, source_path=None, source_kind="text", replace=True):
+def add_text(shelf_name, title, raw, tags=None, importance=0.5, source_path=None, source_kind=None, replace=True,
+             engram_type=None, event_ts=None, actor=None, location=None, metadata=None, expected_revision=None):
     if source_kind == "daimon-projection" or shelf_name == "daimon-projection":
         raise SystemExit("Daimon projections require the versioned projection API")
     init_db()
     raw = normalize_text(raw)
     tags = tags or []
     spr = simple_spr(raw)
+    kind = engram_type or native_records.SHELF_TYPES.get(shelf_name, "semantic")
+    if kind not in {"episodic", "semantic", "procedural"}:
+        raise ValueError("invalid memory type")
+    source_meta = native_records.metadata(metadata)
+    if event_ts is not None and (not isinstance(event_ts, int) or isinstance(event_ts, bool)):
+        raise ValueError("event_ts must be an integer timestamp or unknown")
     con = connect()
-    book_id = upsert_book(con, shelf_name, title, source_path=source_path, source_kind=source_kind)
-    if replace:
-        clear_book_chapters(con, book_id)
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        book_id = upsert_book(con, shelf_name, title, source_path=source_path, source_kind=source_kind or "text")
+        existing = con.execute("SELECT * FROM chapters WHERE book_id=? ORDER BY ordinal,id", (book_id,)).fetchall() if replace else []
+        if len(existing) > 1:
+            con.rollback()
+            con.close()
+            raise SystemExit("multi-chapter replacement requires explicit chapter updates; existing history preserved")
+        old = dict(existing[0]) if existing else None
+        if expected_revision is not None and (old is None or old['revision'] != expected_revision):
+            con.rollback()
+            con.close()
+            raise SystemExit("native revision conflict; existing record preserved")
+        # Replacing an account preserves its ID, links and historical pre-image.
+        if old:
+            con.rollback()
+            con.close()
+            update_chapter(old['id'], content=raw, tags=tags, importance=importance,
+                           engram_type=engram_type, event_ts=event_ts if event_ts is not None else _UNSET,
+                           actor=actor if actor is not None else _UNSET,
+                           location=location if location is not None else _UNSET,
+                           metadata=metadata, expected_revision=old['revision'],
+                           source_path=source_path if source_path is not None else _UNSET, source_kind=source_kind)
+            return old['id']
 
-    # v3.9.0 — determine embed_disabled from content scan + source kind
-    embed_disabled = 0
-    embed_disable_reason = None
-    if source_kind in ("code", "config"):
-        embed_disabled = 1
-        embed_disable_reason = f"source_kind={source_kind}"
-    if embed_disabled == 0 and scan_content_for_secrets:
-        secret_reason = scan_content_for_secrets(raw)
-        if secret_reason:
+        # v3.9.0 — determine embed_disabled from content scan + source kind
+        embed_disabled = 0
+        embed_disable_reason = None
+        if source_kind in ("code", "config"):
             embed_disabled = 1
-            embed_disable_reason = secret_reason
+            embed_disable_reason = f"source_kind={source_kind}"
+        if embed_disabled == 0 and scan_content_for_secrets:
+            secret_reason = scan_content_for_secrets(raw)
+            if secret_reason:
+                embed_disabled = 1
+                embed_disable_reason = secret_reason
 
-    cur = con.execute(
-        """
-        INSERT INTO chapters(book_id, ordinal, title, spr, raw, tokens, importance, created_at, updated_at, tags_json, embed_disabled, embed_disable_reason)
-        VALUES(?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """,
-        (
-            book_id,
-            title,
-            spr,
-            raw,
-            token_estimate(raw),
-            float(importance),
-            now_ts(),
-            now_ts(),
-            json.dumps(tags),
-            embed_disabled,
-            embed_disable_reason,
-        ),
-    )
-    chapter_id = cur.lastrowid
-    insert_chapter_fts(con, chapter_id, title, spr, raw, json.dumps(tags))
-    con.commit()
-    con.close()
-    return chapter_id
+        cur = con.execute(
+            """
+            INSERT INTO chapters(book_id, ordinal, title, spr, raw, tokens, importance, created_at, updated_at, tags_json, embed_disabled, embed_disable_reason,record_uid,engram_type,event_ts,actor,location_json,source_metadata_json)
+            VALUES(?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?)
+            """,
+            (
+                book_id,
+                title,
+                spr,
+                raw,
+                token_estimate(raw),
+                float(importance),
+                now_ts(),
+                now_ts(),
+                json.dumps(tags),
+                embed_disabled,
+                embed_disable_reason,
+                str(uuid.uuid4()), kind, event_ts, actor,
+                json.dumps(location) if location is not None else None,
+                json.dumps(source_meta, ensure_ascii=False),
+            ),
+        )
+        chapter_id = cur.lastrowid
+        insert_chapter_fts(con, chapter_id, title, spr, raw, json.dumps(tags))
+        con.commit()
+        con.close()
+        return chapter_id
+
+    finally:
+        con.close()
 
 
 def add_file(path, shelf_name, title=None, tags=None, importance=0.5, replace=True):
@@ -1247,6 +1290,8 @@ def search(query, limit=12, shelves=None, exclude_shelves=None,
           c.last_access,
           c.access_count,
           c.tags_json,
+          c.record_uid, c.revision, c.engram_type, c.event_ts, c.actor,
+          c.location_json, c.source_metadata_json,
           b.title AS book_title,
           b.source_path,
           b.source_kind,
@@ -2109,7 +2154,9 @@ def review_link_suggestion(suggestion_id, action, note=None):
     return {"suggestion_id": suggestion_id, "action": action, "status": action}
 
 
-def update_chapter(chapter_id, content=None, title=None, tags=None, importance=None):
+def update_chapter(chapter_id, content=None, title=None, tags=None, importance=None,
+                   engram_type=None, event_ts=_UNSET, actor=_UNSET, location=_UNSET,
+                   metadata=None, expected_revision=None, source_path=_UNSET, source_kind=None):
     """Update a chapter in place (v3.8.0+).
 
     Only the fields explicitly passed are changed; the rest are preserved.
@@ -2124,101 +2171,178 @@ def update_chapter(chapter_id, content=None, title=None, tags=None, importance=N
 
     Returns a small report dict.
     """
-    if content is None and title is None and tags is None and importance is None:
+    if (content is None and title is None and tags is None and importance is None
+            and engram_type is None and event_ts is _UNSET and actor is _UNSET
+            and location is _UNSET and metadata is None and source_path is _UNSET and source_kind is None):
         raise SystemExit("update_chapter: nothing to update (pass content, title, tags, and/or importance)")
     init_db()
     con = connect()
-    row = con.execute("SELECT * FROM chapters WHERE id=?", (chapter_id,)).fetchone()
-    if not row:
-        con.close()
-        raise SystemExit(f"chapter not found: {chapter_id}")
-    if con.execute(
-        "SELECT 1 FROM daimon_projections WHERE chapter_id=?", (chapter_id,)
-    ).fetchone():
-        con.close()
-        raise SystemExit(
-            "projection-managed chapters cannot be changed through generic update"
-        )
-    old = dict(row)
-
-    new_raw = normalize_text(content) if content is not None else old["raw"]
-    new_title = title if title is not None else old["title"]
-    new_tags = list(tags) if tags is not None else json.loads(old["tags_json"] or "[]")
-    new_importance = float(importance) if importance is not None else old["importance"]
-    new_spr = simple_spr(new_raw)
-    content_changed = (new_raw != old["raw"]) or (new_title != old["title"])
-
-    # v3.9.0 — re-scan content for secrets on content change
-    embed_disabled_new = old.get("embed_disabled", 0)
-    embed_disable_reason_new = old.get("embed_disable_reason")
-    if content_changed and scan_content_for_secrets:
-        secret_reason = scan_content_for_secrets(new_raw)
-        if secret_reason:
-            embed_disabled_new = 1
-            embed_disable_reason_new = secret_reason
-
-    if title is not None and title != old["title"]:
-        new_slug = slugify(title)
-        collision = con.execute(
-            "SELECT id FROM books WHERE shelf_id=(SELECT shelf_id FROM books WHERE id=?) AND slug=? AND id != ?",
-            (old["book_id"], new_slug, old["book_id"]),
-        ).fetchone()
-        if collision:
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        row = con.execute("SELECT * FROM chapters WHERE id=?", (chapter_id,)).fetchone()
+        if not row:
+            con.close()
+            raise SystemExit(f"chapter not found: {chapter_id}")
+        if con.execute(
+            "SELECT 1 FROM daimon_projections WHERE chapter_id=?", (chapter_id,)
+        ).fetchone():
             con.close()
             raise SystemExit(
-                f"update_chapter: title slug '{new_slug}' already used by book {collision['id']} "
-                f"on the same shelf; choose a different title"
+                "projection-managed chapters cannot be changed through generic update"
             )
+        old = dict(row)
+        if expected_revision is not None and old['revision'] != expected_revision:
+            con.rollback()
+            con.close()
+            raise SystemExit("native revision conflict; existing record preserved")
+        if source_kind == 'daimon-projection':
+            con.rollback()
+            con.close()
+            raise SystemExit("Daimon projections require the versioned projection API")
+        new_kind = engram_type or old['engram_type']
+        if new_kind not in {'episodic', 'semantic', 'procedural'}:
+            con.rollback()
+            con.close()
+            raise ValueError("invalid memory type")
+        new_event = old['event_ts'] if event_ts is _UNSET else event_ts
+        if new_event is not None and (not isinstance(new_event, int) or isinstance(new_event, bool)):
+            con.rollback()
+            con.close()
+            raise ValueError("event_ts must be an integer timestamp or unknown")
+        new_actor = old['actor'] if actor is _UNSET else actor
+        new_location = old['location_json'] if location is _UNSET else (None if location is None else json.dumps(location))
+        new_metadata = old['source_metadata_json'] if metadata is None else json.dumps(native_records.metadata(metadata), ensure_ascii=False)
+
+        new_raw = normalize_text(content) if content is not None else old["raw"]
+        new_title = title if title is not None else old["title"]
+        new_tags = list(tags) if tags is not None else json.loads(old["tags_json"] or "[]")
+        new_importance = float(importance) if importance is not None else old["importance"]
+        new_spr = simple_spr(new_raw)
+        content_changed = (new_raw != old["raw"]) or (new_title != old["title"])
+        book_before = con.execute('SELECT source_path,source_kind FROM books WHERE id=?', (old['book_id'],)).fetchone()
+        source_changed = ((source_path is not _UNSET and source_path != book_before['source_path'])
+                          or (source_kind is not None and source_kind != book_before['source_kind']))
+        unchanged = (not content_changed and new_tags == json.loads(old['tags_json'] or '[]')
+                     and new_importance == old['importance'] and new_kind == old['engram_type']
+                     and new_event == old['event_ts'] and new_actor == old['actor']
+                     and new_location == old['location_json']
+                     and json.loads(new_metadata) == json.loads(old['source_metadata_json']) and not source_changed)
+        if unchanged:
+            con.rollback()
+            con.close()
+            return {'chapter_id': chapter_id, 'record_uid': old['record_uid'], 'revision': old['revision'],
+                    'content_changed': False, 'embeddings_dropped': 0, 'title': new_title,
+                    'tags': new_tags, 'importance': new_importance, 'noop': True}
+
+        # v3.9.0 — re-scan content for secrets on content change
+        embed_disabled_new = old.get("embed_disabled", 0)
+        embed_disable_reason_new = old.get("embed_disable_reason")
+        if content_changed and scan_content_for_secrets:
+            secret_reason = scan_content_for_secrets(new_raw)
+            if secret_reason:
+                embed_disabled_new = 1
+                embed_disable_reason_new = secret_reason
+
+        # Archive before changing the book container, so source/title history stays
+        # attached to the prior revision. Access statistics do not create revisions.
+        native_records.archive(con, old, 'update')
+        if source_path is not _UNSET or source_kind is not None:
+            book = con.execute('SELECT source_path,source_kind FROM books WHERE id=?', (old['book_id'],)).fetchone()
+            con.execute('UPDATE books SET source_path=?,source_kind=? WHERE id=?',
+                        (book['source_path'] if source_path is _UNSET else source_path,
+                         source_kind or book['source_kind'], old['book_id']))
+        if title is not None and title != old["title"]:
+            new_slug = slugify(title)
+            collision = con.execute(
+                "SELECT id FROM books WHERE shelf_id=(SELECT shelf_id FROM books WHERE id=?) AND slug=? AND id != ?",
+                (old["book_id"], new_slug, old["book_id"]),
+            ).fetchone()
+            if collision:
+                con.close()
+                raise SystemExit(
+                    f"update_chapter: title slug '{new_slug}' already used by book {collision['id']} "
+                    f"on the same shelf; choose a different title"
+                )
+            con.execute(
+                "UPDATE books SET title=?, slug=?, updated_at=? WHERE id=?",
+                (new_title, new_slug, now_ts(), old["book_id"]),
+            )
+
+        delete_chapter_fts(con, old)
         con.execute(
-            "UPDATE books SET title=?, slug=?, updated_at=? WHERE id=?",
-            (new_title, new_slug, now_ts(), old["book_id"]),
+            """
+            UPDATE chapters SET title=?, spr=?, raw=?, tokens=?, importance=?, updated_at=?, tags_json=?, embed_disabled=?, embed_disable_reason=?,revision=revision+1,engram_type=?,event_ts=?,actor=?,location_json=?,source_metadata_json=?
+            WHERE id=?
+            """,
+            (
+                new_title,
+                new_spr,
+                new_raw,
+                token_estimate(new_raw),
+                new_importance,
+                now_ts(),
+                json.dumps(new_tags),
+                embed_disabled_new,
+                embed_disable_reason_new,
+                new_kind, new_event, new_actor, new_location, new_metadata,
+                chapter_id,
+            ),
+        )
+        insert_chapter_fts(con, chapter_id, new_title, new_spr, new_raw, json.dumps(new_tags))
+
+        # The book container reflects the last content mutation, consistent with
+        # upsert_book() bumping updated_at on every add_text.
+        con.execute(
+            "UPDATE books SET updated_at=? WHERE id=?",
+            (now_ts(), old["book_id"]),
         )
 
-    delete_chapter_fts(con, old)
-    con.execute(
-        """
-        UPDATE chapters SET title=?, spr=?, raw=?, tokens=?, importance=?, updated_at=?, tags_json=?, embed_disabled=?, embed_disable_reason=?
-        WHERE id=?
-        """,
-        (
-            new_title,
-            new_spr,
-            new_raw,
-            token_estimate(new_raw),
-            new_importance,
-            now_ts(),
-            json.dumps(new_tags),
-            embed_disabled_new,
-            embed_disable_reason_new,
-            chapter_id,
-        ),
-    )
-    insert_chapter_fts(con, chapter_id, new_title, new_spr, new_raw, json.dumps(new_tags))
+        embeddings_dropped = 0
+        if content_changed:
+            cur = con.execute("DELETE FROM chapter_embeddings WHERE chapter_id=?", (chapter_id,))
+            embeddings_dropped = cur.rowcount
 
-    # The book container reflects the last content mutation, consistent with
-    # upsert_book() bumping updated_at on every add_text.
-    con.execute(
-        "UPDATE books SET updated_at=? WHERE id=?",
-        (now_ts(), old["book_id"]),
-    )
+        con.commit()
+        con.close()
+        return {
+            "chapter_id": chapter_id,
+            "content_changed": content_changed,
+            "embeddings_dropped": embeddings_dropped,
+            "title": new_title,
+            "tags": new_tags,
+            "importance": new_importance,
+            "embed_disabled": embed_disabled_new,
+            "embed_disable_reason": embed_disable_reason_new,
+            "revision": old['revision'] + 1,
+            "record_uid": old['record_uid'],
+        }
 
-    embeddings_dropped = 0
-    if content_changed:
-        cur = con.execute("DELETE FROM chapter_embeddings WHERE chapter_id=?", (chapter_id,))
-        embeddings_dropped = cur.rowcount
+    finally:
+        con.close()
 
-    con.commit()
-    con.close()
-    return {
-        "chapter_id": chapter_id,
-        "content_changed": content_changed,
-        "embeddings_dropped": embeddings_dropped,
-        "title": new_title,
-        "tags": new_tags,
-        "importance": new_importance,
-        "embed_disabled": embed_disabled_new,
-        "embed_disable_reason": embed_disable_reason_new,
-    }
+
+def history(chapter_id):
+    """Native pre-images only; signed projections keep history in their owner."""
+    init_db()
+    con = connect()
+    try:
+        rows = con.execute('SELECT snapshot_json,reason,archived_at FROM chapter_revisions WHERE chapter_id=? ORDER BY revision', (chapter_id,)).fetchall()
+        return [{**json.loads(r['snapshot_json']), 'revision_reason': r['reason'], 'archived_at': r['archived_at']} for r in rows]
+    finally:
+        con.close()
+
+
+def history_search(query, limit=12):
+    init_db()
+    con = connect()
+    try:
+        rows = con.execute('SELECT r.snapshot_json,r.reason,r.archived_at FROM chapter_revisions_fts f '
+                           'JOIN chapter_revisions r ON r.id=f.rowid WHERE chapter_revisions_fts MATCH ? '
+                           'ORDER BY bm25(chapter_revisions_fts) LIMIT ?', (fts_query_string(query), limit)).fetchall()
+        return [{**json.loads(r['snapshot_json']), 'revision_reason': r['reason'], 'archived_at': r['archived_at'],
+                 'historical': True} for r in rows]
+    finally:
+        con.close()
 
 
 def delete_chapter(chapter_id, prune_book=True):
@@ -2236,7 +2360,7 @@ def delete_chapter(chapter_id, prune_book=True):
     init_db()
     con = connect()
     row = con.execute(
-        "SELECT id, book_id, title, spr, raw, tags_json FROM chapters WHERE id=?",
+        "SELECT id, book_id, title, spr, raw, tags_json,record_uid FROM chapters WHERE id=?",
         (chapter_id,),
     ).fetchone()
     if not row:
@@ -2261,6 +2385,7 @@ def delete_chapter(chapter_id, prune_book=True):
     ).fetchone()[0]
 
     delete_chapter_fts(con, row)
+    revisions_removed = native_records.forget_history(con, row['record_uid'])
     con.execute("DELETE FROM chapters WHERE id=?", (chapter_id,))
 
     book_deleted = False
@@ -2278,6 +2403,7 @@ def delete_chapter(chapter_id, prune_book=True):
         "title": title,
         "raw_sha256": raw_sha256,
         "embeddings_removed": embeddings_removed,
+        "revisions_removed": revisions_removed,
         "links_removed": links_removed,
         "book_deleted": book_deleted,
     }
@@ -2558,6 +2684,11 @@ def main():
     p_add_text.add_argument("--raw", required=True)
     p_add_text.add_argument("--tags", default="")
     p_add_text.add_argument("--importance", type=float, default=0.5)
+    p_add_text.add_argument("--type", choices=['episodic','semantic','procedural'])
+    p_add_text.add_argument("--event-ts", type=int)
+    p_add_text.add_argument("--actor")
+    p_add_text.add_argument("--metadata-json", help="Attributed native source metadata; never signed authority")
+    p_add_text.add_argument("--if-revision", type=int)
 
     p_add_file = sub.add_parser("add-file")
     p_add_file.add_argument("--shelf", required=True, choices=sorted(DEFAULT_SHELVES))
@@ -2588,6 +2719,11 @@ def main():
 
     p_expand = sub.add_parser("expand")
     p_expand.add_argument("--id", type=int, required=True)
+    p_history = sub.add_parser('history', help='preserved native pre-images for a current chapter')
+    p_history.add_argument('--id', type=int, required=True)
+    p_history_search = sub.add_parser('history-search', help='lexical search of preserved native history')
+    p_history_search.add_argument('--query', required=True)
+    p_history_search.add_argument('--limit', type=int, default=12)
 
     p_update = sub.add_parser("update", help="update a chapter in place (content/title/tags/importance)")
     p_update.add_argument("--id", type=int, required=True)
@@ -2595,6 +2731,13 @@ def main():
     p_update.add_argument("--title", help="new title (keeps book title/slug in sync)")
     p_update.add_argument("--tags", help="CSV of tags; replaces the tag set when provided")
     p_update.add_argument("--importance", type=float)
+    p_update.add_argument('--type', choices=['episodic','semantic','procedural'])
+    event_time = p_update.add_mutually_exclusive_group()
+    event_time.add_argument('--event-ts', type=int)
+    event_time.add_argument('--clear-event-time', action='store_true')
+    p_update.add_argument('--actor')
+    p_update.add_argument('--metadata-json')
+    p_update.add_argument('--if-revision', type=int)
 
     p_delete = sub.add_parser("delete", help="delete a chapter (cascades embeddings/links; prunes empty book)")
     p_delete.add_argument("--id", type=int, required=True)
@@ -2678,6 +2821,9 @@ def main():
             raw=args.raw,
             tags=parse_tags(args.tags),
             importance=args.importance,
+            engram_type=args.type, event_ts=args.event_ts, actor=args.actor,
+            metadata=json.loads(args.metadata_json) if args.metadata_json else None,
+            expected_revision=args.if_revision,
         )
         print(json.dumps({"ok": True, "chapter_id": cid}, indent=2))
     elif args.command == "add-file":
@@ -2703,6 +2849,10 @@ def main():
         ), indent=2))
     elif args.command == "expand":
         print(json.dumps(expand(args.id), indent=2))
+    elif args.command == 'history':
+        print(json.dumps(history(args.id), indent=2, ensure_ascii=False))
+    elif args.command == 'history-search':
+        print(json.dumps(history_search(args.query, args.limit), indent=2, ensure_ascii=False))
     elif args.command == "update":
         result = update_chapter(
             args.id,
@@ -2710,6 +2860,11 @@ def main():
             title=args.title,
             tags=parse_tags(args.tags) if args.tags is not None else None,
             importance=args.importance,
+            engram_type=args.type,
+            event_ts=None if args.clear_event_time else (args.event_ts if args.event_ts is not None else _UNSET),
+            actor=args.actor if args.actor is not None else _UNSET,
+            metadata=json.loads(args.metadata_json) if args.metadata_json else None,
+            expected_revision=args.if_revision,
         )
         print(json.dumps({"ok": True, **result}, indent=2, ensure_ascii=False))
     elif args.command == "delete":

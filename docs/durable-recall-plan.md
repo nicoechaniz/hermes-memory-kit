@@ -87,11 +87,11 @@ general guidance emphasizes document ingestion. The provider supports retrieval;
 it does not by itself select and write meaningful experience after every
 interaction. Curation currently depends on the model and its available guidance.
 
-Three storage/retrieval properties need explicit evaluation:
+Three storage/retrieval properties identified at review time needed repair:
 
-- `add-text` replaces chapters under an existing same-shelf title; `update`
-  overwrites a chapter without a revision ledger. History preservation is a
-  curation responsibility today.
+- The reviewed `add-text`/`update` overwrote native accounts without a revision
+  ledger. The repair delivery below now preserves native revisions and stable
+  IDs; meaningful distinct encounters still need their own selected episodes.
 - `simple_spr` uses the first eight nonempty lines and truncates ordinary lines;
   previews can omit the participant or significance if metadata leads the text.
 - Hybrid ranking includes recency. An old episode may remain stored yet fail to
@@ -218,7 +218,19 @@ pre-images outside skill discovery. Native titles preserve Unicode and resolve
 slug collisions without replacing differently titled records; legacy exact-title
 books keep their existing IDs/slugs. Thirty-two targeted regression/compatibility
 tests passed, including isolated snapshot retrieval and repeated migration.
-Native revisions, normal-write metadata and retrieval repairs are still pending.
+P1 adds stable native record UUIDs, searchable revision pre-images, expected-
+revision writes, explicit kind/date/source metadata and native forgetting of
+current/history copies. Single-chapter replacement retains ID and links;
+multi-chapter replacement requires explicit updates. The CLI and provider expose
+the metadata and historical lookup. Semantic backfill now uses the maintained
+writer, binds inferences to source revisions and keeps FTS/eligibility consistent;
+repeating identical output does not duplicate it. Source changes still require
+reconciling derived claims; generic extraction excludes signed projections and
+embedding-disabled records. Seventy-two targeted compatibility/regression tests
+cover this delivery. Retrieval repairs are next.
+
+Published implementation: [PR #14](https://github.com/nicoechaniz/hermes-memory-kit/pull/14),
+based on the selection/research [PR #10](https://github.com/nicoechaniz/hermes-memory-kit/pull/10).
 This is code/test evidence; no live being pool was migrated or deployed.
 
 First fix the review's confirmed preservation hazards: incomplete WAL migration
