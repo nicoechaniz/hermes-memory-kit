@@ -16,3 +16,13 @@ publishes synthetic selection/recall failures; it is not a completed comparison.
 The [experience-consolidation review](../docs/experience-consolidation-mechanisms.md)
 adds transferable Hindsight mechanisms, OpenSouls' pinned public state, local
 alternatives and qualified Soul Protocol/OpenSelf proposals to that work record.
+The portability review also maps the portable-being/native-projection proposal
+to existing Matrix memory lanes and content closure, and records the supplied
+ResonantNetwork exploration as an experimental associative/learned-state track.
+
+The human's later October 7 direction is now the
+[agreed implementation roadmap](../docs/durable-recall-plan.md#agreed-roadmap--2026-10-07):
+retain HMK, repair observed selection/recall failures, qualify consolidation and
+portable preservation with Matrix, verify receiving continuity, then pilot native
+Codex coexistence while preserving its authored delta. Alternative backends and
+resonant storage remain documented future options rather than prerequisites.
