@@ -164,6 +164,14 @@ def answer_evidence(packs, expanded):
                 available[row['id']] = dict(id=row['id'], text=row.get('spr', ''),
                     origin=row.get('origin'), support_status=row.get('support_status'),
                     support_checks=row.get('support_checks'), representation='retrieved_preview')
+    # Full expansion also supplies attributed navigation previews. Do not discard
+    # a learned method merely because it was outside the initial three hints.
+    # Apply full records last so a later neighbor cannot downgrade their text.
+    for row in expanded:
+        for neighbor in row.get('neighbors', []):
+            available.setdefault(neighbor['id'], dict(id=neighbor['id'], text=neighbor.get('spr', ''),
+                origin=neighbor.get('origin'), support_status=neighbor.get('support_status'),
+                support_checks=neighbor.get('support_checks'), representation='expanded_neighbor_preview'))
     for row in expanded:
         available[row['id']] = dict(id=row['id'], text=row.get('raw', row.get('spr', '')),
             origin=row.get('origin'), support_status=row.get('support_status'),
@@ -621,25 +629,33 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
                     try:
                         answer = narrative_recall.answer(receiving_model, query, evidence, receiving_binding,
                             trace, pending, pending_path, chat, save)
-                    except narrative_recall.NarrativeRejected:
-                        if not getattr(args, 'complete_diagnostics', False):
+                    except (narrative_recall.NarrativeRejected, ValueError):
+                        state = pending.get('narrative', {})
+                        # Only terminal narrative failures belong to complete diagnostics.
+                        # Changed contexts/cursors and provider failures stay resumable errors.
+                        if (not getattr(args, 'complete_diagnostics', False) or
+                                state.get('progress', {}).get('phase') != 'rejected'):
                             raise
-                        # Retain the actual candidate/review, not an empty fallback or pass.
-                        state = pending['narrative']
                         candidate = state['generations'][-1]
-                        narrative_recall.validate(candidate, evidence, receiving_binding)
                         failed = out/'rejected-recall'
                         failed.mkdir(exist_ok=True)
                         save(failed/(digest([case['id'], query])+'.json'), pending)
-                        answer = dict(candidate, text=' '.join(c['text'] for c in candidate['claims']),
-                            used_ids=list(dict.fromkeys(cid for c in candidate['claims'] for cid in c['support'])),
-                            semantic_review=state['reviews'][-1]['review'], review_is_proof=False,
-                            operational_status='rejected', error=state['error'])
+                        # Preserve the actual failed candidate, including malformed shape.
+                        # Never substitute an empty answer or reset its exhausted budget.
+                        answer = dict(candidate) if isinstance(candidate, dict) else {'raw_candidate':candidate}
+                        answer.update(operational_status='rejected', error=state['error'],
+                                      review_is_proof=False, terminal_failure=state['progress']['failure_type'])
+                        if isinstance(candidate, dict) and isinstance(candidate.get('claims'), list):
+                            answer['text'] = ' '.join(c.get('text', '') for c in candidate['claims'] if isinstance(c, dict))
+                        answer['semantic_review'] = state['reviews'][-1]['review'] if state['reviews'] else None
+
                 else:
                     answer = chat(receiving_model, answer_messages, trace)
                 pending.setdefault('answer_attempts', []).append(answer)
                 save(pending_path, pending)
                 try:
+                    if getattr(args, 'narrative', False) and answer.get('operational_status') == 'rejected':
+                        break
                     if getattr(args, 'narrative', False):
                         narrative_recall.validate({'receiving_body':answer['receiving_body'],
                             'claims':answer['claims']}, evidence, receiving_binding)
@@ -842,7 +858,14 @@ def main():
     with ThreadPoolExecutor(max_workers=2) as workers:
         futures = [workers.submit(run_variant,name,guidance,args,corpus)
                    for name,guidance in [('baseline',baseline),('proposed',proposed)]]
-        results = [f.result() for f in futures]
+        results, failures = [], []
+        for future in futures:
+            try:
+                results.append(future.result())
+            except Exception as error:
+                failures.append(error)
+        if failures:
+            raise failures[0]
     save(args.out / 'results.json', results)
     print(json.dumps(results,indent=2))
 

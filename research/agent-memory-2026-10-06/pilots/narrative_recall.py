@@ -322,7 +322,9 @@ A supported remembered account MUST cover ALL FIVE FACETS in five to twenty
 SHORT factual sentences. Split compound assertions; do not pad facets with
 speculation. A wholly unsupported event may instead have one scoped unknown
 claim followed by brief source-cited context or limits from an older relevant
-report. That older report does not establish the unrecorded event. A question
+report. Label ALL those older-context claims context or limits, even when they
+describe an older method or outcome; they are not facets of the missing event.
+That older report does not establish the unrecorded event. A question
 asking only an unavailable detail may use source-cited limits claims, preserving
 the known uncertainty without retelling an unrelated story.
 Each sentence is at most 220 characters. Prefer one factual assertion per
@@ -358,6 +360,9 @@ occurrence dates/precision, explicit identity unknowns and reported knowledge.
 Relative dates belong to their dated report, not today. Do not infer event dates
 from recording/import time. Do not make a tentative attribution certain or let
 a later correction erase the earlier uncertain report.
+Month and day without an explicit occurrence year must remain month and day.
+Do not borrow the year from a full report/receipt date, even when its month and
+day match. A fully dated receipt does not increase an occurrence's precision.
 
 A created object is not delivery; no observed receipt/access is not proof of
 non-receipt. Say the supplied actual failure and bound unknown acceptance or
@@ -473,6 +478,8 @@ For each claimed calendar date, identify whether its proof dates the occurrence
 or only the receipt/report. An exact date in a source header cannot prove that
 the reported authorization, submission or failure happened on that date. Mark
 that assignment unsupported while preserving the correctly dated report.
+Check year precision separately: a month/day occurrence plus a fully dated
+receipt cannot support adding an occurrence year, even if month/day coincide.
 Historical pending work must not remain current after a later completion report. No production as
 of a dated report cannot become an unbounded claim today. Unsupported gender,
 project labels, intentions, simulations, future capability limits, validation

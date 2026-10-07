@@ -1402,24 +1402,37 @@ def search(query, limit=12, shelves=None, exclude_shelves=None,
 
 
 def linked_neighbors(chapter_id):
-    """Bounded traversal in either direction, retaining relation attribution."""
+    """Bound distinct chapters before traversal; preserve every selected relation."""
     init_db()
     con = connect()
     try:
-        edges = con.execute("""SELECT CASE WHEN src_chapter_id=? THEN dst_chapter_id ELSE src_chapter_id END AS neighbor_id,
+        edges = con.execute("""WITH edges AS (
+            SELECT id, CASE WHEN src_chapter_id=? THEN dst_chapter_id ELSE src_chapter_id END AS neighbor_id,
             CASE WHEN src_chapter_id=? THEN 'outgoing' ELSE 'incoming' END AS direction,
-            link_type, weight, note FROM chapter_links
-            WHERE src_chapter_id=? OR dst_chapter_id=? ORDER BY weight DESC, id LIMIT 12""",
+            link_type, weight, note FROM chapter_links WHERE src_chapter_id=? OR dst_chapter_id=?)
+            SELECT * FROM edges WHERE neighbor_id IN (
+                SELECT neighbor_id FROM edges GROUP BY neighbor_id
+                ORDER BY MAX(weight) DESC, MIN(id) LIMIT 12)
+            ORDER BY weight DESC, id""",
             (chapter_id, chapter_id, chapter_id, chapter_id)).fetchall()
     finally:
         con.close()
-    neighbors = []
+    grouped = {}
     for edge in edges:
-        # expand would recurse through links; fetch the attributed record only.
-        row = _read_chapter(edge['neighbor_id'])
-        if row is not None:
-            neighbors.append({**_compact_record(row), **{key: edge[key] for key in ('direction','link_type','weight','note')}})
-    return neighbors
+        relation = {key: edge[key] for key in ('direction','link_type','weight','note')}
+        cid = edge['neighbor_id']
+        if cid not in grouped:
+            # Expand would recurse through links; fetch each attributed record once.
+            row = _read_chapter(cid)
+            if row is None:
+                continue
+            grouped[cid] = {**_compact_record(row), **relation}
+        else:
+            neighbor = grouped[cid]
+            if 'relations' not in neighbor:
+                neighbor['relations'] = [{key: neighbor[key] for key in ('direction','link_type','weight','note')}]
+            neighbor['relations'].append(relation)
+    return list(grouped.values())
 
 
 def capture_neighbors(chapter_id):
@@ -1740,7 +1753,10 @@ def _select_pack(query, candidates, budget_tokens, limit, threshold, *, record_a
         for field in ('score', 'lexical_score', 'lexical_relevance', 'semantic_score', 'rerank_score'):
             if field in row:
                 item[field] = row[field]
-        item['neighbors'] = recall_neighbors(row['id'])[:3]
+        # Compact hints keep the primary relation; full expand retains every relation.
+        # Repeating a target cannot consume another navigation slot.
+        item['neighbors'] = [{key: value for key, value in neighbor.items() if key != 'relations'}
+                             for neighbor in recall_neighbors(row['id'])[:3]]
         cost = _item_cost(item)
         if used + cost > budget_tokens:
             # Neighbors are navigation hints; preserve the source-qualified

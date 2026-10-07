@@ -809,3 +809,74 @@ def test_consolidation_relabels_obsolete_support_edges_and_rejects_batch_stale_d
         apply(preview([later,account],mc,profile='native'),bad,
               supports_by_record={'account':[later],'insight':[account]},**dict(opts,sequence=4,event_id='pass:4'))
     assert mc.expand(account)['revision']==2
+
+
+def test_neighbor_quota_counts_distinct_chapters_and_retains_relation_details(mc):
+    project=mc.add_text('library','HarborMesh project','Our relay project with durable reports and learning.')
+    first=mc.add_text('episodes','Old issue encounter','Mara proposed a replay queue.')
+    for i in range(14):
+        mc.add_link(project,first,'context-'+str(i),note='Distinct relation '+str(i))
+    report=mc.add_text('episodes','Reported trial','Human report of the trial; attendance unknown.')
+    lesson=mc.add_text('library','Delivery lesson','Separate enqueue, attempt and receiver acknowledgment.')
+    mc.add_link(report,project,'updates-account',note='Later dated report')
+    mc.add_link(lesson,project,'learned-through',note='Reusable debugging method')
+    neighbors=mc.expand(project)['neighbors']
+    assert [r['id'] for r in neighbors]==[first,report,lesson]
+    assert len(neighbors[0]['relations'])==14
+    assert {r['note'] for r in neighbors[0]['relations']}=={'Distinct relation '+str(i) for i in range(14)}
+    row=mc._read_chapter(project);row['score']=1
+    pack=mc._select_pack('HarborMesh project',[row],1500,1,.4,record_access=False)
+    assert [r['id'] for r in pack['items'][0]['neighbors']]==[first,report,lesson]
+    assert 'relations' not in pack['items'][0]['neighbors'][0]
+
+
+def test_answer_handoff_preserves_expanded_learning_preview_and_full_records(monkeypatch):
+    pilots=SCRIPTS.parent/'research/agent-memory-2026-10-06/pilots'
+    monkeypatch.syspath_prepend(str(pilots));monkeypatch.syspath_prepend(str(SCRIPTS))
+    module=load('expanded_handoff_fixture',pilots/'durable_recall_pilot.py')
+    lesson=dict(id=10,spr='Our code work taught us to separate enqueue, send and acknowledgment.',origin={'kind':'native'})
+    project=dict(id=2,raw='Full current project account.',neighbors=[lesson])
+    evidence=module.answer_evidence([], [project])
+    assert evidence[10]['text']==lesson['spr']
+    assert evidence[10]['representation']=='expanded_neighbor_preview'
+    full=dict(id=10,raw='Full method with attributed date and repository/runtime limits.',neighbors=[])
+    evidence=module.answer_evidence([], [full,project])
+    assert evidence[10]['text']==full['raw']
+    assert evidence[10]['representation']=='expanded_record'
+
+
+def test_terminal_shape_diagnostic_retains_actual_candidate_and_continues(mc,tmp_path,monkeypatch):
+    from types import SimpleNamespace
+    pilots=SCRIPTS.parent/'research/agent-memory-2026-10-06/pilots'
+    monkeypatch.syspath_prepend(str(pilots));monkeypatch.syspath_prepend(str(SCRIPTS))
+    p=load('terminal_diagnostic_fixture',pilots/'durable_recall_pilot.py')
+    original_memory_at=p.memory_at
+    def memory_at(path):
+        m=original_memory_at(path)
+        m.backfill_embeddings=lambda: {'calls':0}
+        m.hybrid_pack=lambda query,**kwargs: dict(query=query,items=[],null_retrieval=True,used_tokens_estimate=0,retrieval_status='ok')
+        return m
+    monkeypatch.setattr(p,'memory_at',memory_at)
+    monkeypatch.setattr(p,'chat',lambda model,messages,trace: dict(outcome='omitted',reason='No selected evidence',records=[],links=[]) if trace.phase=='capture' else {'queries':['ferry return'],'expand_ids':[]})
+    malformed={'receiving_body':'fixture:body:voice','claims':[{'text':'Actual malformed candidate','unexpected':'kept'}]}
+    calls=[]
+    def answer(model,query,evidence,binding,trace,pending,path,chat,save):
+        calls.append(query)
+        if query=='first question':
+            pending['narrative']=dict(generations=[malformed],reviews=[],progress={'phase':'rejected','failure_type':'structure'},error='exhausted repair')
+            save(path,pending);raise ValueError('exhausted repair')
+        claim=dict(text='The supplied memory does not record that return.',support=[],basis='unknown',facet='limits')
+        return dict(receiving_body=binding['receiving_body'],claims=[claim],text=claim['text'])
+    monkeypatch.setattr(p.narrative_recall,'answer',answer)
+    args=SimpleNamespace(out=tmp_path/'pilot',resume=False,model='fake',review_capture=False,source_blocks=False,narrative=True,complete_diagnostics=True,consolidate=False)
+    args.out.mkdir()
+    corpus=dict(fictional=True,fixture_context={},cases=[dict(id='returns',sources=[],questions=[{'query':'first question'},{'query':'second question'}])])
+    result=p.run_variant('proposed','Fixture guidance',args,corpus)
+    answers=json.loads((args.out/'proposed/answers.json').read_text())
+    assert calls==['first question','second question'] and result['rejected_narratives']==1
+    assert answers[0]['answer']['claims']==malformed['claims']
+    assert answers[0]['answer']['operational_status']=='rejected'
+    assert answers[1]['answer']['claims'][0]['basis']=='unknown'
+    archived=json.loads(next((args.out/'proposed/rejected-recall').glob('*.json')).read_text())
+    assert archived['narrative']['progress']['phase']=='rejected'
+    assert archived['narrative']['generations']==[malformed]
