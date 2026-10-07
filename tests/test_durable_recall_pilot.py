@@ -97,3 +97,51 @@ def test_grounded_answer_requires_context_and_actual_visible_ids(pilot):
     answer['used_ids'] = [99]
     with pytest.raises(ValueError):
         pilot.grounded_answer(answer, {1})
+
+
+def test_source_review_precedes_commit_and_never_sees_hidden_rubric(pilot, tmp_path, monkeypatch):
+    original = pilot.memory_at
+    def isolated(path):
+        memory = original(path)
+        memory.backfill_embeddings = lambda: {'updated':0}
+        memory.semantic_search = lambda *a, **k: []
+        memory.rerank_provider_default = lambda: 'none'
+        return memory
+    monkeypatch.setattr(pilot, 'memory_at', isolated)
+    args = SimpleNamespace(out=tmp_path, resume=False, model='fictional', consolidate=False, review_capture=True)
+    corpus = {'fixture_context':{}, 'cases':[{'id':'report', 'sources':[
+        {'id':'source','originating_body':'fixture:body:voice','content':'The human reports an encounter.'}],
+        'expected':{'secret':'HIDDEN_RUBRIC'},'questions':[{'query':'HIDDEN_RECALL_QUESTION'}]}]}
+    candidate = {'outcome':'applied','reason':'Meaningful encounter','records':[
+        {'key':'event','operation':'add','shelf':'episodes','title':'Encounter',
+         'raw':'We attended the encounter.'}], 'links':[]}
+    corrected = json.loads(json.dumps(candidate))
+    corrected['records'][0]['raw'] = 'The human reported an encounter; the receiving voice body did not attend.'
+    responses = iter([candidate, corrected, {'queries':[],'expand_ids':[]}, {'answer':{
+        'identification':'Unknown','context':'A report','meaning':'Unknown','outcome':'Reported',
+        'limits':'Not directly observed'},'used_ids':[]}])
+    phases=[]
+    def chat(model, messages, trace):
+        phases.append(trace.phase)
+        if trace.phase.startswith('capture'):
+            assert 'HIDDEN_' not in json.dumps(messages)
+        if trace.phase == 'capture_review':
+            with isolated(tmp_path/'test/memory').connect() as con:
+                assert con.execute('SELECT COUNT(*) FROM chapters').fetchone()[0] == 0
+        return next(responses)
+    monkeypatch.setattr(pilot,'chat',chat)
+    pilot.run_variant('test','',args,corpus)
+    assert phases == ['capture','capture_review','recall','recall']
+    records=json.loads((tmp_path/'test/selected-canon.json').read_text())
+    assert records[0]['raw'] == corrected['records'][0]['raw']
+
+
+def test_inflight_attempt_is_durable_with_unknown_usage(pilot, tmp_path):
+    path=tmp_path/'trace.json'
+    trace=pilot.Trace(path)
+    trace.phase='capture_review'
+    index=trace.begin({'requested_model':'fixture'})
+    saved=json.loads(path.read_text())
+    assert saved[index]['state']=='started' and saved[index]['usage'] is None
+    trace.finish(index,{'state':'completed','usage':{'total_tokens':42}})
+    assert len(json.loads(path.read_text())) == 1

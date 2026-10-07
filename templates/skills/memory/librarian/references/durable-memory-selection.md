@@ -225,3 +225,16 @@ as mere transport status. Mechanical retries without this lasting context can
 still be omitted. Explain omission by lack of lasting significance or redundancy,
 never by failure alone. Keep intended participation distinct from observed
 attendance, and object creation distinct from delivery.
+
+Before committing, compare each factual clause with the authorized sources or
+qualified existing memory. Proposed prose is not independent evidence. Preserve
+the selected meaning while correcting unsupported additions, changed ownership,
+uncertain dates and actor attribution. Keep a prior tentative attribution and
+the later correction as history rather than retaining only the final name.
+
+The body that receives a human report is not that human, and receipt does not
+establish attendance by that body. A successful observation supports its stated
+result, not an invented simulation, stronger validation, deployment or receipt.
+Label who reported it and when; retain occurrence time separately. Recheck title
+and summary as well as full text: a qualified raw record cannot make an incorrect
+title safe. If an inference is useful, label it and its support explicitly.
