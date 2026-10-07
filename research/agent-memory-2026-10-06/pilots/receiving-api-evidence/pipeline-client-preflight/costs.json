@@ -1,0 +1,22 @@
+{
+  "calls": 1,
+  "phase": "capture",
+  "usage": {
+    "prompt_tokens": 310,
+    "completion_tokens": 524,
+    "total_tokens": 834,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 468
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 310
+  },
+  "seconds": 3.1623939080163836,
+  "billed_cost_usd": null,
+  "embedding_calls": 0,
+  "native_calls": 0,
+  "scope": "Transport/noise-selection preflight only; no full formation or stage-two qualification."
+}
