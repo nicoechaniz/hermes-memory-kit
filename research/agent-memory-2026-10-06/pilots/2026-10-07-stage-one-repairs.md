@@ -103,3 +103,27 @@ This favors verifiable compact support before interpretive synthesis, which
 belongs to stage 2. It does not archive every source: mechanical blocks remain
 subject to selection and omitted blocks stay absent. The receiving contract
 explicitly separates the quoted human speaker from its receiving body.
+
+## Completed qualification and further observed repairs
+
+The [stage-one qualification](2026-10-07-stage-one-qualification.md) preserves
+the complete comparison, paired affected-case reruns, per-question rubric
+inspection, native history and all available procedure/cost traces. It closes
+the three original failures with exact attributed evidence as the qualified
+answer form; generated free-form narration remains unqualified.
+
+Provider JSON containing two fragments is persisted and rejected through the
+bounded shape-repair path. Receiving identity/capabilities come from an explicit
+fictional binding, not remembered body IDs. Correct factual capture alone did
+not prevent narrative from overstating recipient non-receipt, so the qualified
+response selects IDs and returns exact supplied blocks rather than factual prose.
+
+The complete 16-question support comparison then exposed a retained lesson
+that a broad query missed. Require a concise question-derived refinement after
+an empty initial pack within the existing query bound; paired reruns recovered
+the lesson without lower thresholds, canon edits or answer facts in the prompt.
+Explicit source uncertainty remains useful evidence even when the requested
+detail is unknown. A five-empty-array reply has one safe normalization; nonempty
+uncontracted arrays remain refused. Actual malformed-output and HTTP 429
+resumptions retained completed work and pending questions. All 211 tests pass.
+Three consolidation passes are still stage 2 and were not run here.

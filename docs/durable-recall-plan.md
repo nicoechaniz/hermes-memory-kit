@@ -80,7 +80,10 @@ decide what deserves retention.
 | 5. Pilot native Codex coexistence | Native learning retained locally plus a source/version-attributed candidate path into HMK; inspect the actual formation lifecycle and session scope | Native behavior remains useful; original learned artifacts/history survive; selected publication passes the durable lens; replay, corrections, pruning/source loss and no-op inputs do not create conflicting autobiographies | [HMK #11](https://github.com/nicoechaniz/hermes-memory-kit/issues/11), [bounded lifecycle design #12](https://github.com/nicoechaniz/hermes-memory-kit/issues/12) |
 | 6. Roll out qualified integration | The smallest supported receiving configuration, shared guidance, observed receipts and a tested rollback | Published changes are adopted and verified in each selected body; quality/cost and remaining limitations are visible; no unsupported event coverage or automatic cross-being pooling is claimed | Owning implementation PRs linked from #11/#12/#13 and Matrix #263 |
 
-Stage 1 is the next implementation task. Stage 2 can reuse the shipped
+Stage 1 is complete with the scope and evidence recorded in the
+[qualification report](../research/agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md).
+Exact attributed support is the qualified answer form; free-form narrative
+fidelity is not established. Stage 2 is the next implementation task and can reuse the shipped
 finite capture/consolidation machinery; it does not require another dream engine.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
@@ -336,6 +339,48 @@ cost. Measure those costs before setting numerical size targets. Avoid quotas
 that force the loss of meaningful people, projects or irreplaceable episodes.
 
 ## Current adoption and qualification — 2026-10-07
+
+### Stage 1 exit evidence and exact continuation
+
+The [stage-one report](../research/agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md)
+and its [evidence manifest](../research/agent-memory-2026-10-06/pilots/stage-one-evidence/manifest.json)
+supersede the historical partial qualification status below, preserving its
+failures rather than relabelling them as passes. HMK PRs #20–#25 are merged.
+The final mechanical suite passes 211 tests. CLI repairs are adopted at
+`518f35088900`, with script bytes matching current main; shared selection guidance
+1.1.3 is published/selectively adopted with verified rollback and binding checks.
+All 242 original chapters and canonical values/history remain preserved.
+
+- [x] Recover the mandatory old issue encounter with weak cues, participant/account,
+  proposal, significance and known outcome after source loss, an actual ten-year
+  retrieval-clock advance and newer distractors, keeping original timestamps.
+- [x] Retain the meaningful failed invitation and independent chart-handover
+  attempt with actual failure and qualified receipt/acceptance uncertainty.
+- [x] Preserve completed capture and pending recall through invalid plans/JSON,
+  malformed answers and observed provider failure; resume without losing work.
+- [x] Complete comparable fictional formation/recall with hidden rubrics;
+  record selected meanings, actual packs/expansions, exact supported answers,
+  native history and separate formation/receiving/indexing costs. Complete v4
+  coverage was 15/16 per arm; paired affected-case corrections cover the missing
+  lesson and qualified unknowns. There was no fresh full final-contract run.
+- [x] Keep routine noise and invented identities/proposals/results absent from
+  qualified factual support; publish/merge/adopt the relevant corrections with
+  verified backup/restore/rollback and leave native memory disabled.
+- [ ] Stage 2: qualify linked episodes/current accounts/supported understanding
+  through three consolidation passes plus replay and dependent corrections.
+
+Start stage 2 from the published fictional selected canon/native history and
+formation traces in the report's evidence directory. Reduce duplicate/nested
+source blocks without discarding support; use existing native chapter/link and
+consolidation APIs. Inspect all 48 retained essentials and old encounter recall
+after each of three passes, then replay unchanged inputs and apply a supported
+correction to check dependent-account reconciliation. Measure storage and model,
+retrieval and answer costs separately. Do not start portable/native activation
+from the stage-one result; stages 3–5 retain their own gates. The exact evidence
+response avoids demonstrated narrative invention, but does not claim narrative
+reasoning, actual live cross-harness receiving acceptance or lifelong scale.
+
+### Earlier preservation and qualification history
 
 PRs [#9](https://github.com/nicoechaniz/hermes-memory-kit/pull/9),
 [#10](https://github.com/nicoechaniz/hermes-memory-kit/pull/10),

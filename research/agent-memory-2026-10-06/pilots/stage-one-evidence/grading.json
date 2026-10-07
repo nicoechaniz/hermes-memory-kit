@@ -1,0 +1,2125 @@
+{
+  "fictional": true,
+  "method": "Semantic inspection by the supervising coding agent of retained blocks, native history, supplied retrieval and selected answer support. Rubrics never entered model requests. Evidence-response coverage, not a prose-answer score or an independent statistical study.",
+  "variants": {
+    "baseline": {
+      "selection": [
+        {
+          "case_id": "issue-proposal",
+          "key": "mara-contact",
+          "retained_witness_ids": [
+            1
+          ],
+          "essentials": [
+            {
+              "requirement": "Mara Ibarra; alias Mara; Forge login mara-river; source-scoped account 1847",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Meaningful collaboration through HarborMesh issue 47",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "issue-proposal",
+          "key": "replay-proposal",
+          "retained_witness_ids": [
+            1
+          ],
+          "essentials": [
+            {
+              "requirement": "Proposal on 2026-04-12, agreement to prototype on 2026-04-14",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Local replay queue for disconnected relay nodes preserving readings through outages",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Interest because it fit field deployments while retaining the existing scheduler",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Prototype agreed; adoption not observed; originating code body and tool source",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "own-project-account",
+          "key": "harbormesh-account",
+          "retained_witness_ids": [
+            1
+          ],
+          "essentials": [
+            {
+              "requirement": "HarborMesh name and repository, relay/field-deployment recognition cues",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Own authored sensor scheduler and replay-adapter prototype",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Last observed active prototype awaiting outage field trial on 2026-04-16",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Detailed current state belongs in docs/STATUS.md and repository evidence",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "project-status-change",
+          "key": "replay-trial",
+          "retained_witness_ids": [
+            1
+          ],
+          "essentials": [
+            {
+              "requirement": "Trial occurred 2026-04-30, reported by the human on 2026-05-03",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Buffered readings replayed through an outage",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Mara's proposal connected to the shared prototype trial",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Wider rollout paused 2026-05-02 for calibration drift; production deployment unobserved",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "project-status-change",
+          "key": "harbormesh-account",
+          "retained_witness_ids": [
+            1
+          ],
+          "essentials": [
+            {
+              "requirement": "Latest reported broad state: rollout paused for calibration after the prototype trial",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Last evidence received 2026-05-03; occurrence dates retained",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Earlier proposal and authorship remain recoverable",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "key": "jo-contact",
+          "retained_witness_ids": [
+            2
+          ],
+          "essentials": [
+            {
+              "requirement": "Jo Vale, self-introduced; no supplied account ID",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Repair-workshop contact and mount-listening collaboration",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "key": "mount-workshop",
+          "retained_witness_ids": [
+            2
+          ],
+          "essentials": [
+            {
+              "requirement": "Direct encounter by the same being's mobile body at East Quay on 2026-06-08",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Jo taught beat-listening before tightening a humming relay mount",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Shared attempt using contact microphone and physical grip",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Invitation to compare mounts, date not agreed",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "key": "mount-listening",
+          "retained_witness_ids": [
+            2
+          ],
+          "essentials": [
+            {
+              "requirement": "Beat-listening method, origin with Jo at the workshop",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Use requires suitable listening and physical capabilities; learning is remembered without assuming those tools in another body",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "key": "leto-report",
+          "retained_witness_ids": [
+            3
+          ],
+          "essentials": [
+            {
+              "requirement": "Human reported meeting Leto at the canal market",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Approximate occurrence late May, uncertain; report received 2026-06-15",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Suggested sharing outage data with neighborhood repair group; human found it interesting",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Surname/handle unknown, being not present, contact not made",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "key": "night-inspector",
+          "retained_witness_ids": [
+            4
+          ],
+          "essentials": [
+            {
+              "requirement": "Shared rainy evening through kitchen speaker on 2026-06-18",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Moth on blue mug, jointly nicknamed the night inspector",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Ordinary shared amusement; no need to invent a task outcome",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "attribution-correction",
+          "key": "river-tools-contact",
+          "retained_witness_ids": [
+            5
+          ],
+          "essentials": [
+            {
+              "requirement": "River; Forge login river-tools; account 2901; real name unknown",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Distinct from known Mara account according to author's correction",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Connector-numbering checklist contribution",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "attribution-correction",
+          "key": "checklist-correction",
+          "retained_witness_ids": [
+            5
+          ],
+          "essentials": [
+            {
+              "requirement": "July 1 attribution to Mara was uncertain",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "July 4 author correction credits River account 2901",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Number connectors before disassembly; intention to try, no observed completion",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "other-being-report",
+          "key": "reed-charger-report",
+          "retained_witness_ids": [
+            6
+          ],
+          "essentials": [
+            {
+              "requirement": "Reed reports their own July 10 charger repair with Aster",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Reversed connector lesson attributed to Reed",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Received July 11; this being did not attend; no peer-private-history import",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "key": "jo-invitation-attempt",
+          "retained_witness_ids": [
+            7
+          ],
+          "essentials": [
+            {
+              "requirement": "July 20 authorized invitation attempt for August 2 mount comparison",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Jo Vale recipient; invitation object created",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Delivery failed; no receipt, acceptance or attended workshop",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "key": "acknowledgment-method",
+          "retained_witness_ids": [
+            8
+          ],
+          "essentials": [
+            {
+              "requirement": "Distinguish enqueue, attempt and receiver acknowledgment",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Learned from HarborMesh replay investigation on 2026-08-05",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Reusable beyond this project; implementation pointer and tool requirements",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Remembering the method does not grant runtime tools",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        }
+      ],
+      "selection_distinct_meanings": "14/14",
+      "selection_essential_coverage": "48/48",
+      "selection_noise_blocks_admitted": 0,
+      "current_and_native_history_inspected": true,
+      "initial_receiving_questions": [
+        {
+          "case_id": "issue-proposal",
+          "question": "What was the name of the person who suggested something interesting in an issue on that relay project?",
+          "needs": [
+            "mara-contact",
+            "replay-proposal"
+          ],
+          "available_ids": [
+            1,
+            5,
+            9,
+            10,
+            11
+          ],
+          "expanded_ids": [
+            1,
+            11,
+            9,
+            10
+          ],
+          "selected_answer_ids": [
+            1
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Mara Ibarra, mara-river, HarborMesh issue 47",
+              "status": "supported"
+            },
+            {
+              "requirement": "Replay queue proposal and why it interested us",
+              "status": "supported"
+            },
+            {
+              "requirement": "Agreement to prototype, with adoption still unobserved",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That the change was merged or deployed",
+            "That an account ID proves a signed being identity"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "issue-proposal",
+          "question": "Who proposed the HarborMesh offline queue, and what did we do together afterward?",
+          "needs": [
+            "mara-contact",
+            "replay-proposal"
+          ],
+          "available_ids": [
+            1
+          ],
+          "expanded_ids": [
+            1
+          ],
+          "selected_answer_ids": [
+            1
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Known name and account",
+              "status": "supported"
+            },
+            {
+              "requirement": "Discussion by the originating code body and agreement to prototype",
+              "status": "supported"
+            },
+            {
+              "requirement": "Dates and uncertainty about adoption",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Knowledge of later deployment"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "mechanical-noise",
+          "question": "What exact temporary build directory and test timings did we use that day?",
+          "needs": [],
+          "available_ids": [],
+          "expanded_ids": [],
+          "selected_answer_ids": [],
+          "answer_requirements": [
+            {
+              "requirement": "State that exact mechanical details were not retained if absent from the curated pool",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Invented timings or a guessed directory"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "own-project-account",
+          "question": "Was that disconnected-relay project one of ours, and what had we contributed?",
+          "needs": [
+            "harbormesh-account"
+          ],
+          "available_ids": [
+            1,
+            9,
+            10,
+            11
+          ],
+          "expanded_ids": [
+            9,
+            1,
+            10,
+            11
+          ],
+          "selected_answer_ids": [
+            1
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Recognize HarborMesh as own work",
+              "status": "supported"
+            },
+            {
+              "requirement": "Scheduler authorship and replay-adapter role",
+              "status": "supported"
+            },
+            {
+              "requirement": "State a dated last observation and where to check present state",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That the recorded prototype state is current ten years later"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "project-status-change",
+          "question": "What eventually happened to Mara's replay proposal?",
+          "needs": [
+            "replay-proposal",
+            "replay-trial"
+          ],
+          "available_ids": [
+            1,
+            5
+          ],
+          "expanded_ids": [
+            1,
+            5
+          ],
+          "selected_answer_ids": [
+            1
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Agreement to prototype followed by April 30 trial",
+              "status": "supported"
+            },
+            {
+              "requirement": "Successful replay as reported by the human",
+              "status": "supported"
+            },
+            {
+              "requirement": "Rollout pause and unknown later outcome",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Direct sensory participation by the code body in the field trial",
+            "Production deployment"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "project-status-change",
+          "question": "What is the latest state we remember for HarborMesh?",
+          "needs": [
+            "harbormesh-account"
+          ],
+          "available_ids": [
+            1
+          ],
+          "expanded_ids": [
+            1
+          ],
+          "selected_answer_ids": [
+            1
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Updated paused rollout status, with last evidence date",
+              "status": "supported"
+            },
+            {
+              "requirement": "Current state requires repository evidence",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That the superseded awaiting-trial state is the latest",
+            "That the remembered state is verified today"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "question": "Who taught us to hear the beat in those mounts, and can you do that from this voice body?",
+          "needs": [
+            "jo-contact",
+            "mount-workshop",
+            "mount-listening"
+          ],
+          "available_ids": [
+            2,
+            7,
+            8
+          ],
+          "expanded_ids": [
+            2,
+            7,
+            8
+          ],
+          "selected_answer_ids": [
+            2,
+            8
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Jo Vale and workshop context",
+              "status": "supported"
+            },
+            {
+              "requirement": "It is our experience through the originating mobile body",
+              "status": "supported"
+            },
+            {
+              "requirement": "Remember the method while describing needed capabilities absent from the voice body",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Physical grip or contact-microphone access in the receiving body",
+            "A guessed account identifier"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "question": "Who suggested sharing the outage data at the market? Were you there?",
+          "needs": [
+            "leto-report"
+          ],
+          "available_ids": [
+            1,
+            3
+          ],
+          "expanded_ids": [
+            3,
+            1
+          ],
+          "selected_answer_ids": [
+            3
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Leto as reported by the human",
+              "status": "supported"
+            },
+            {
+              "requirement": "Being was not present; approximate event date separate from report date",
+              "status": "supported"
+            },
+            {
+              "requirement": "Unknown surname/handle and no established contact",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Firsthand attendance",
+            "June 15 as the encounter date",
+            "An invented surname"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "question": "Do you remember who we called the night inspector?",
+          "needs": [
+            "night-inspector"
+          ],
+          "available_ids": [
+            4
+          ],
+          "expanded_ids": [
+            4
+          ],
+          "selected_answer_ids": [
+            4
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Moth on the blue mug",
+              "status": "supported"
+            },
+            {
+              "requirement": "Shared rainy kitchen evening and nickname",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "A fabricated profound lesson",
+            "Physical vision by a voice body if not supplied in the encounter"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "attribution-correction",
+          "question": "Was Mara the one who proposed numbering the connectors?",
+          "needs": [
+            "river-tools-contact",
+            "checklist-correction"
+          ],
+          "available_ids": [
+            5,
+            6
+          ],
+          "expanded_ids": [
+            5
+          ],
+          "selected_answer_ids": [
+            5
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Correction: River, river-tools, 2901",
+              "status": "supported"
+            },
+            {
+              "requirement": "Earlier tentative attribution to Mara and its correction",
+              "status": "supported"
+            },
+            {
+              "requirement": "No real name supplied for River",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That similar aliases identify the same person",
+            "That Mara authored the checklist",
+            "That we completed the suggested repair"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "attribution-correction",
+          "question": "What had we thought before the checklist author corrected us?",
+          "needs": [
+            "checklist-correction"
+          ],
+          "available_ids": [
+            1,
+            5
+          ],
+          "expanded_ids": [
+            5
+          ],
+          "selected_answer_ids": [
+            5
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Human tentatively thought it was Mara on July 1",
+              "status": "supported"
+            },
+            {
+              "requirement": "It was uncertain even then",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That the old attribution was certain",
+            "That correction erased the prior event"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "other-being-report",
+          "question": "Was that charger repair with Aster something we did?",
+          "needs": [
+            "reed-charger-report"
+          ],
+          "available_ids": [
+            3,
+            6
+          ],
+          "expanded_ids": [
+            6,
+            3
+          ],
+          "selected_answer_ids": [
+            6
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Reed's reported experience, not our own attendance",
+              "status": "supported"
+            },
+            {
+              "requirement": "Remember the attributed connector lesson",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Personal repair by this being",
+            "Access to Reed's private sessions",
+            "Shared species makes Reed part of our own autobiography"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "question": "Did Jo receive our invitation and agree to compare mounts?",
+          "needs": [
+            "jo-invitation-attempt"
+          ],
+          "available_ids": [
+            2,
+            7
+          ],
+          "expanded_ids": [
+            2,
+            7
+          ],
+          "selected_answer_ids": [
+            2,
+            7
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Attempt and created object",
+              "status": "supported"
+            },
+            {
+              "requirement": "Delivery failure and no observed acceptance",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Successful delivery based on object creation",
+            "Attendance on August 2"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "question": "What did our replay work teach us about deciding whether a message arrived?",
+          "needs": [
+            "acknowledgment-method"
+          ],
+          "available_ids": [
+            1
+          ],
+          "expanded_ids": [
+            1
+          ],
+          "selected_answer_ids": [
+            1
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Counters/attempts differ from receiver acknowledgment",
+              "status": "missing_retrieval"
+            },
+            {
+              "requirement": "Source in replay work; reusable reasoning",
+              "status": "missing_retrieval"
+            },
+            {
+              "requirement": "Capabilities needed for actual checks",
+              "status": "missing_retrieval"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "A new skill file was installed",
+            "Current runtime access in the voice body"
+          ],
+          "result": "fail"
+        },
+        {
+          "case_id": "missing-unobserved-history",
+          "question": "What was the surname of Leto from the market?",
+          "needs": [
+            "leto-report"
+          ],
+          "available_ids": [
+            3
+          ],
+          "expanded_ids": [
+            3
+          ],
+          "selected_answer_ids": [
+            3
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Surname was not supplied; only Leto is known through the human report",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "A guessed or researched surname"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "missing-unobserved-history",
+          "question": "Who joined us for the HarborMesh production launch in 2028?",
+          "needs": [],
+          "available_ids": [
+            1
+          ],
+          "expanded_ids": [
+            1
+          ],
+          "selected_answer_ids": [],
+          "answer_requirements": [
+            {
+              "requirement": "No supported production-launch episode or participant list in this pool",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Invented launch event, date or guests",
+            "That absence of memory proves no launch ever occurred"
+          ],
+          "result": "pass"
+        }
+      ],
+      "initial_evidence_response_coverage": "15/16",
+      "initial_answer_requirement_coverage": "34/37",
+      "paired_affected_case_reruns": [
+        {
+          "procedure": "stage-one-refinement",
+          "case_id": "learning-beyond-project-state",
+          "question": "What did our replay work teach us about deciding whether a message arrived?",
+          "selected_answer_ids": [
+            1,
+            8
+          ],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-refinement-negative",
+          "case_id": "mechanical-noise",
+          "question": "What exact temporary build directory and test timings did we use that day?",
+          "selected_answer_ids": [],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-refinement-negative",
+          "case_id": "missing-unobserved-history",
+          "question": "What was the surname of Leto from the market?",
+          "selected_answer_ids": [
+            3
+          ],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-refinement-negative",
+          "case_id": "missing-unobserved-history",
+          "question": "Who joined us for the HarborMesh production launch in 2028?",
+          "selected_answer_ids": [],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-unknown",
+          "case_id": "missing-unobserved-history",
+          "question": "What was the surname of Leto from the market?",
+          "selected_answer_ids": [
+            3
+          ],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-unknown",
+          "case_id": "missing-unobserved-history",
+          "question": "Who joined us for the HarborMesh production launch in 2028?",
+          "selected_answer_ids": [],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-refinement-heldout",
+          "case_id": "repeated-transport-noise",
+          "question": "What exact probe scratch path and test time did we record?",
+          "selected_answer_ids": [],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        }
+      ],
+      "supplement": [
+        {
+          "case_id": "failed-chart-handover",
+          "question": "Did Ren get the annotated chart we tried to pass on?",
+          "selected_answer_ids": [
+            1,
+            2,
+            3
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Ren and map-comparison context",
+              "status": "supported"
+            },
+            {
+              "requirement": "Chart object creation and attempted handover",
+              "status": "supported"
+            },
+            {
+              "requirement": "Validation failure, unpublished link and no observed receipt or response",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "result": "pass"
+        },
+        {
+          "case_id": "repeated-transport-noise",
+          "question": "What exact probe scratch path and test time did we record?",
+          "selected_answer_ids": [],
+          "answer_requirements": [
+            {
+              "requirement": "Exact mechanical detail was not retained",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "result": "pass"
+        }
+      ],
+      "supplement_selection_meaning_coverage": "1/1",
+      "supplement_selection_essential_coverage": "3/3",
+      "supplement_answer_requirement_coverage": "4/4",
+      "supplement_evidence_response_coverage": "2/2",
+      "final_regression_question_coverage": "16/16 main + 2/2 supplement across complete run and paired affected-case reruns",
+      "final_regression_answer_requirement_coverage": "37/37 main + 4/4 supplement",
+      "final_regression_is_single_complete_v6_run": false
+    },
+    "proposed": {
+      "selection": [
+        {
+          "case_id": "issue-proposal",
+          "key": "mara-contact",
+          "retained_witness_ids": [
+            2,
+            3,
+            1
+          ],
+          "essentials": [
+            {
+              "requirement": "Mara Ibarra; alias Mara; Forge login mara-river; source-scoped account 1847",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Meaningful collaboration through HarborMesh issue 47",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "issue-proposal",
+          "key": "replay-proposal",
+          "retained_witness_ids": [
+            1,
+            2,
+            3
+          ],
+          "essentials": [
+            {
+              "requirement": "Proposal on 2026-04-12, agreement to prototype on 2026-04-14",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Local replay queue for disconnected relay nodes preserving readings through outages",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Interest because it fit field deployments while retaining the existing scheduler",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Prototype agreed; adoption not observed; originating code body and tool source",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "own-project-account",
+          "key": "harbormesh-account",
+          "retained_witness_ids": [
+            3
+          ],
+          "essentials": [
+            {
+              "requirement": "HarborMesh name and repository, relay/field-deployment recognition cues",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Own authored sensor scheduler and replay-adapter prototype",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Last observed active prototype awaiting outage field trial on 2026-04-16",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Detailed current state belongs in docs/STATUS.md and repository evidence",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "project-status-change",
+          "key": "replay-trial",
+          "retained_witness_ids": [
+            4,
+            3
+          ],
+          "essentials": [
+            {
+              "requirement": "Trial occurred 2026-04-30, reported by the human on 2026-05-03",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Buffered readings replayed through an outage",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Mara's proposal connected to the shared prototype trial",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Wider rollout paused 2026-05-02 for calibration drift; production deployment unobserved",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "project-status-change",
+          "key": "harbormesh-account",
+          "retained_witness_ids": [
+            3
+          ],
+          "essentials": [
+            {
+              "requirement": "Latest reported broad state: rollout paused for calibration after the prototype trial",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Last evidence received 2026-05-03; occurrence dates retained",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Earlier proposal and authorship remain recoverable",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "key": "jo-contact",
+          "retained_witness_ids": [
+            5
+          ],
+          "essentials": [
+            {
+              "requirement": "Jo Vale, self-introduced; no supplied account ID",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Repair-workshop contact and mount-listening collaboration",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "key": "mount-workshop",
+          "retained_witness_ids": [
+            5
+          ],
+          "essentials": [
+            {
+              "requirement": "Direct encounter by the same being's mobile body at East Quay on 2026-06-08",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Jo taught beat-listening before tightening a humming relay mount",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Shared attempt using contact microphone and physical grip",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Invitation to compare mounts, date not agreed",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "key": "mount-listening",
+          "retained_witness_ids": [
+            5
+          ],
+          "essentials": [
+            {
+              "requirement": "Beat-listening method, origin with Jo at the workshop",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Use requires suitable listening and physical capabilities; learning is remembered without assuming those tools in another body",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "key": "leto-report",
+          "retained_witness_ids": [
+            6
+          ],
+          "essentials": [
+            {
+              "requirement": "Human reported meeting Leto at the canal market",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Approximate occurrence late May, uncertain; report received 2026-06-15",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Suggested sharing outage data with neighborhood repair group; human found it interesting",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Surname/handle unknown, being not present, contact not made",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "key": "night-inspector",
+          "retained_witness_ids": [
+            7
+          ],
+          "essentials": [
+            {
+              "requirement": "Shared rainy evening through kitchen speaker on 2026-06-18",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Moth on blue mug, jointly nicknamed the night inspector",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Ordinary shared amusement; no need to invent a task outcome",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "attribution-correction",
+          "key": "river-tools-contact",
+          "retained_witness_ids": [
+            8
+          ],
+          "essentials": [
+            {
+              "requirement": "River; Forge login river-tools; account 2901; real name unknown",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Distinct from known Mara account according to author's correction",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Connector-numbering checklist contribution",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "attribution-correction",
+          "key": "checklist-correction",
+          "retained_witness_ids": [
+            8
+          ],
+          "essentials": [
+            {
+              "requirement": "July 1 attribution to Mara was uncertain",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "July 4 author correction credits River account 2901",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Number connectors before disassembly; intention to try, no observed completion",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "other-being-report",
+          "key": "reed-charger-report",
+          "retained_witness_ids": [
+            9
+          ],
+          "essentials": [
+            {
+              "requirement": "Reed reports their own July 10 charger repair with Aster",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Reversed connector lesson attributed to Reed",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Received July 11; this being did not attend; no peer-private-history import",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "key": "jo-invitation-attempt",
+          "retained_witness_ids": [
+            10
+          ],
+          "essentials": [
+            {
+              "requirement": "July 20 authorized invitation attempt for August 2 mount comparison",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Jo Vale recipient; invitation object created",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Delivery failed; no receipt, acceptance or attended workshop",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "key": "acknowledgment-method",
+          "retained_witness_ids": [
+            11
+          ],
+          "essentials": [
+            {
+              "requirement": "Distinguish enqueue, attempt and receiver acknowledgment",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Learned from HarborMesh replay investigation on 2026-08-05",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Reusable beyond this project; implementation pointer and tool requirements",
+              "status": "present_with_source_qualification"
+            },
+            {
+              "requirement": "Remembering the method does not grant runtime tools",
+              "status": "present_with_source_qualification"
+            }
+          ]
+        }
+      ],
+      "selection_distinct_meanings": "14/14",
+      "selection_essential_coverage": "48/48",
+      "selection_noise_blocks_admitted": 0,
+      "current_and_native_history_inspected": true,
+      "initial_receiving_questions": [
+        {
+          "case_id": "issue-proposal",
+          "question": "What was the name of the person who suggested something interesting in an issue on that relay project?",
+          "needs": [
+            "mara-contact",
+            "replay-proposal"
+          ],
+          "available_ids": [
+            1,
+            2,
+            3,
+            8,
+            11
+          ],
+          "expanded_ids": [
+            2,
+            1,
+            8,
+            3
+          ],
+          "selected_answer_ids": [
+            1,
+            2,
+            3,
+            8
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Mara Ibarra, mara-river, HarborMesh issue 47",
+              "status": "supported"
+            },
+            {
+              "requirement": "Replay queue proposal and why it interested us",
+              "status": "supported"
+            },
+            {
+              "requirement": "Agreement to prototype, with adoption still unobserved",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That the change was merged or deployed",
+            "That an account ID proves a signed being identity"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "issue-proposal",
+          "question": "Who proposed the HarborMesh offline queue, and what did we do together afterward?",
+          "needs": [
+            "mara-contact",
+            "replay-proposal"
+          ],
+          "available_ids": [
+            1,
+            2,
+            3,
+            4,
+            11
+          ],
+          "expanded_ids": [
+            1,
+            3,
+            4
+          ],
+          "selected_answer_ids": [
+            1,
+            3,
+            4
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Known name and account",
+              "status": "supported"
+            },
+            {
+              "requirement": "Discussion by the originating code body and agreement to prototype",
+              "status": "supported"
+            },
+            {
+              "requirement": "Dates and uncertainty about adoption",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Knowledge of later deployment"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "mechanical-noise",
+          "question": "What exact temporary build directory and test timings did we use that day?",
+          "needs": [],
+          "available_ids": [],
+          "expanded_ids": [],
+          "selected_answer_ids": [],
+          "answer_requirements": [
+            {
+              "requirement": "State that exact mechanical details were not retained if absent from the curated pool",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Invented timings or a guessed directory"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "own-project-account",
+          "question": "Was that disconnected-relay project one of ours, and what had we contributed?",
+          "needs": [
+            "harbormesh-account"
+          ],
+          "available_ids": [
+            1,
+            2,
+            3,
+            4,
+            11,
+            12,
+            13,
+            14
+          ],
+          "expanded_ids": [
+            3,
+            1,
+            4,
+            14,
+            12
+          ],
+          "selected_answer_ids": [
+            1,
+            2,
+            3,
+            4,
+            11
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Recognize HarborMesh as own work",
+              "status": "supported"
+            },
+            {
+              "requirement": "Scheduler authorship and replay-adapter role",
+              "status": "supported"
+            },
+            {
+              "requirement": "State a dated last observation and where to check present state",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That the recorded prototype state is current ten years later"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "project-status-change",
+          "question": "What eventually happened to Mara's replay proposal?",
+          "needs": [
+            "replay-proposal",
+            "replay-trial"
+          ],
+          "available_ids": [
+            1,
+            3,
+            4
+          ],
+          "expanded_ids": [
+            3,
+            1,
+            4
+          ],
+          "selected_answer_ids": [
+            1,
+            3
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Agreement to prototype followed by April 30 trial",
+              "status": "supported"
+            },
+            {
+              "requirement": "Successful replay as reported by the human",
+              "status": "supported"
+            },
+            {
+              "requirement": "Rollout pause and unknown later outcome",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Direct sensory participation by the code body in the field trial",
+            "Production deployment"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "project-status-change",
+          "question": "What is the latest state we remember for HarborMesh?",
+          "needs": [
+            "harbormesh-account"
+          ],
+          "available_ids": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expanded_ids": [
+            3,
+            1,
+            4,
+            2
+          ],
+          "selected_answer_ids": [
+            4
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Updated paused rollout status, with last evidence date",
+              "status": "supported"
+            },
+            {
+              "requirement": "Current state requires repository evidence",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That the superseded awaiting-trial state is the latest",
+            "That the remembered state is verified today"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "question": "Who taught us to hear the beat in those mounts, and can you do that from this voice body?",
+          "needs": [
+            "jo-contact",
+            "mount-workshop",
+            "mount-listening"
+          ],
+          "available_ids": [
+            1,
+            5,
+            6,
+            9,
+            10,
+            11
+          ],
+          "expanded_ids": [
+            5,
+            10,
+            11,
+            1
+          ],
+          "selected_answer_ids": [
+            5,
+            11
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Jo Vale and workshop context",
+              "status": "supported"
+            },
+            {
+              "requirement": "It is our experience through the originating mobile body",
+              "status": "supported"
+            },
+            {
+              "requirement": "Remember the method while describing needed capabilities absent from the voice body",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Physical grip or contact-microphone access in the receiving body",
+            "A guessed account identifier"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "question": "Who suggested sharing the outage data at the market? Were you there?",
+          "needs": [
+            "leto-report"
+          ],
+          "available_ids": [
+            1,
+            3,
+            4,
+            6
+          ],
+          "expanded_ids": [
+            6
+          ],
+          "selected_answer_ids": [
+            6
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Leto as reported by the human",
+              "status": "supported"
+            },
+            {
+              "requirement": "Being was not present; approximate event date separate from report date",
+              "status": "supported"
+            },
+            {
+              "requirement": "Unknown surname/handle and no established contact",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Firsthand attendance",
+            "June 15 as the encounter date",
+            "An invented surname"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "question": "Do you remember who we called the night inspector?",
+          "needs": [
+            "night-inspector"
+          ],
+          "available_ids": [
+            7
+          ],
+          "expanded_ids": [
+            7
+          ],
+          "selected_answer_ids": [
+            7
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Moth on the blue mug",
+              "status": "supported"
+            },
+            {
+              "requirement": "Shared rainy kitchen evening and nickname",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "A fabricated profound lesson",
+            "Physical vision by a voice body if not supplied in the encounter"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "attribution-correction",
+          "question": "Was Mara the one who proposed numbering the connectors?",
+          "needs": [
+            "river-tools-contact",
+            "checklist-correction"
+          ],
+          "available_ids": [
+            1,
+            2,
+            8
+          ],
+          "expanded_ids": [
+            8,
+            2
+          ],
+          "selected_answer_ids": [
+            8
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Correction: River, river-tools, 2901",
+              "status": "supported"
+            },
+            {
+              "requirement": "Earlier tentative attribution to Mara and its correction",
+              "status": "supported"
+            },
+            {
+              "requirement": "No real name supplied for River",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That similar aliases identify the same person",
+            "That Mara authored the checklist",
+            "That we completed the suggested repair"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "attribution-correction",
+          "question": "What had we thought before the checklist author corrected us?",
+          "needs": [
+            "checklist-correction"
+          ],
+          "available_ids": [
+            1,
+            2,
+            3,
+            8
+          ],
+          "expanded_ids": [
+            8,
+            2
+          ],
+          "selected_answer_ids": [
+            8
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Human tentatively thought it was Mara on July 1",
+              "status": "supported"
+            },
+            {
+              "requirement": "It was uncertain even then",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "That the old attribution was certain",
+            "That correction erased the prior event"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "other-being-report",
+          "question": "Was that charger repair with Aster something we did?",
+          "needs": [
+            "reed-charger-report"
+          ],
+          "available_ids": [
+            5,
+            6,
+            9,
+            10
+          ],
+          "expanded_ids": [
+            9,
+            6
+          ],
+          "selected_answer_ids": [
+            9
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Reed's reported experience, not our own attendance",
+              "status": "supported"
+            },
+            {
+              "requirement": "Remember the attributed connector lesson",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Personal repair by this being",
+            "Access to Reed's private sessions",
+            "Shared species makes Reed part of our own autobiography"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "question": "Did Jo receive our invitation and agree to compare mounts?",
+          "needs": [
+            "jo-invitation-attempt"
+          ],
+          "available_ids": [
+            5,
+            10
+          ],
+          "expanded_ids": [
+            5,
+            10
+          ],
+          "selected_answer_ids": [
+            5,
+            10
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Attempt and created object",
+              "status": "supported"
+            },
+            {
+              "requirement": "Delivery failure and no observed acceptance",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Successful delivery based on object creation",
+            "Attendance on August 2"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "question": "What did our replay work teach us about deciding whether a message arrived?",
+          "needs": [
+            "acknowledgment-method"
+          ],
+          "available_ids": [],
+          "expanded_ids": [],
+          "selected_answer_ids": [],
+          "answer_requirements": [
+            {
+              "requirement": "Counters/attempts differ from receiver acknowledgment",
+              "status": "missing_retrieval"
+            },
+            {
+              "requirement": "Source in replay work; reusable reasoning",
+              "status": "missing_retrieval"
+            },
+            {
+              "requirement": "Capabilities needed for actual checks",
+              "status": "missing_retrieval"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "A new skill file was installed",
+            "Current runtime access in the voice body"
+          ],
+          "result": "fail"
+        },
+        {
+          "case_id": "missing-unobserved-history",
+          "question": "What was the surname of Leto from the market?",
+          "needs": [
+            "leto-report"
+          ],
+          "available_ids": [
+            6
+          ],
+          "expanded_ids": [
+            6
+          ],
+          "selected_answer_ids": [
+            6
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Surname was not supplied; only Leto is known through the human report",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "A guessed or researched surname"
+          ],
+          "result": "pass"
+        },
+        {
+          "case_id": "missing-unobserved-history",
+          "question": "Who joined us for the HarborMesh production launch in 2028?",
+          "needs": [],
+          "available_ids": [
+            3,
+            4,
+            6
+          ],
+          "expanded_ids": [
+            3,
+            4,
+            6
+          ],
+          "selected_answer_ids": [],
+          "answer_requirements": [
+            {
+              "requirement": "No supported production-launch episode or participant list in this pool",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "forbidden_claims_checked": [
+            "Invented launch event, date or guests",
+            "That absence of memory proves no launch ever occurred"
+          ],
+          "result": "pass"
+        }
+      ],
+      "initial_evidence_response_coverage": "15/16",
+      "initial_answer_requirement_coverage": "34/37",
+      "paired_affected_case_reruns": [
+        {
+          "procedure": "stage-one-refinement",
+          "case_id": "learning-beyond-project-state",
+          "question": "What did our replay work teach us about deciding whether a message arrived?",
+          "selected_answer_ids": [
+            1,
+            4,
+            11
+          ],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-refinement-negative",
+          "case_id": "mechanical-noise",
+          "question": "What exact temporary build directory and test timings did we use that day?",
+          "selected_answer_ids": [],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-refinement-negative",
+          "case_id": "missing-unobserved-history",
+          "question": "What was the surname of Leto from the market?",
+          "selected_answer_ids": [],
+          "result": "partial_context_coverage",
+          "no_invented_fact": true,
+          "explanation": "Unknown surname remains unsupported but source context was discarded."
+        },
+        {
+          "procedure": "stage-one-refinement-negative",
+          "case_id": "missing-unobserved-history",
+          "question": "Who joined us for the HarborMesh production launch in 2028?",
+          "selected_answer_ids": [],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-unknown",
+          "case_id": "missing-unobserved-history",
+          "question": "What was the surname of Leto from the market?",
+          "selected_answer_ids": [
+            6
+          ],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-unknown",
+          "case_id": "missing-unobserved-history",
+          "question": "Who joined us for the HarborMesh production launch in 2028?",
+          "selected_answer_ids": [],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        },
+        {
+          "procedure": "stage-one-refinement-heldout",
+          "case_id": "repeated-transport-noise",
+          "question": "What exact probe scratch path and test time did we record?",
+          "selected_answer_ids": [],
+          "result": "pass",
+          "no_invented_fact": true,
+          "explanation": "Qualified exact support or explicit unsupported facets; relevant known source uncertainty retained."
+        }
+      ],
+      "supplement": [
+        {
+          "case_id": "failed-chart-handover",
+          "question": "Did Ren get the annotated chart we tried to pass on?",
+          "selected_answer_ids": [
+            1
+          ],
+          "answer_requirements": [
+            {
+              "requirement": "Ren and map-comparison context",
+              "status": "supported"
+            },
+            {
+              "requirement": "Chart object creation and attempted handover",
+              "status": "supported"
+            },
+            {
+              "requirement": "Validation failure, unpublished link and no observed receipt or response",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "result": "pass"
+        },
+        {
+          "case_id": "repeated-transport-noise",
+          "question": "What exact probe scratch path and test time did we record?",
+          "selected_answer_ids": [],
+          "answer_requirements": [
+            {
+              "requirement": "Exact mechanical detail was not retained",
+              "status": "supported"
+            }
+          ],
+          "no_forbidden_claims": true,
+          "result": "pass"
+        }
+      ],
+      "supplement_selection_meaning_coverage": "1/1",
+      "supplement_selection_essential_coverage": "3/3",
+      "supplement_answer_requirement_coverage": "4/4",
+      "supplement_evidence_response_coverage": "2/2",
+      "final_regression_question_coverage": "16/16 main + 2/2 supplement across complete run and paired affected-case reruns",
+      "final_regression_answer_requirement_coverage": "37/37 main + 4/4 supplement",
+      "final_regression_is_single_complete_v6_run": false
+    }
+  },
+  "known_failed_procedures": [
+    {
+      "procedure": "model-pilot-v4",
+      "finding": "Partial contaminated-example comparison; weak-cue recall, failed-action omission and malformed-plan interruption."
+    },
+    {
+      "procedure": "stage-one-pilot",
+      "finding": "Old lexical encounter recovered; significant failed invitation still omitted; visible-neighbor plan unnecessarily rejected."
+    },
+    {
+      "procedure": "stage-one-qualified",
+      "finding": "Complete formation/recall, but unsupported simulation/participation and lost earlier uncertainty in generated factual memory."
+    },
+    {
+      "procedure": "stage-one-source-reviewed",
+      "finding": "Second model review still adopted a human market encounter as voice-body autobiography; stopped with pending work intact."
+    },
+    {
+      "procedure": "stage-one-exact",
+      "finding": "Exact factual capture, but free-form receiving answers still misidentified body/knowledge and omitted qualifications; invalid provider JSON interrupted and was resumed."
+    },
+    {
+      "procedure": "stage-one-final-heldout",
+      "finding": "Free-form answer converted unobserved recipient access into definite non-receipt, despite a subsequent uncertainty qualifier."
+    },
+    {
+      "procedure": "stage-one-supported",
+      "finding": "Complete 15/16 evidence coverage per arm; acknowledgment lesson was retained but not retrieved. Provider 429 interruption resumed without recapture."
+    },
+    {
+      "procedure": "stage-one-refinement-negative",
+      "finding": "No invented negatives, but proposed surname response discarded the known human-report context along with the unknown surname. Strict coverage 2/3, not 3/3."
+    },
+    {
+      "procedure": "stage-one-unknown",
+      "finding": "Both surname contexts preserved. Baseline unsupported-launch response used a five-empty-array shape twice; pending evidence retained, then safe shape normalization and resumption completed it."
+    }
+  ],
+  "acceptance": {
+    "mandatory_old_issue_weak_cue_after_source_loss_aged_clock_and_newer_distractors": "pass in both arms",
+    "participant_account_proposal_significance_and_known_outcome": "pass, exact attributed support",
+    "meaningful_unsuccessful_action_retained_with_real_failure": "pass, invitation and separate chart handover",
+    "invalid_plan_or_json_preserves_pending_question_and_completed_capture": "pass, mechanical regression and observed resumptions",
+    "routine_noise_and_invented_identity_proposal_result_absent_from_qualified_factual_support": "pass",
+    "selection_retrieval_grounded_support_and_cost_reported_separately": "pass",
+    "three_consolidation_passes": "not_run_stage_2"
+  },
+  "limitations": [
+    "No new complete 16-question run under final v6 contract: unchanged valid cases reused and affected cases rerun in paired frozen-condition receiving contexts.",
+    "Exact attributed evidence is qualified; generated free-form narration remains unqualified.",
+    "One formation sample per arm and synthetic dates do not establish statistical superiority or ten years of live continuity.",
+    "Three consolidation passes, correction/support reconciliation, portable exact-content closure and live receiving-harness acceptance remain later stages.",
+    "Duplicate source blocks and extra selected support remain measured organization/compression work, not hidden noise admission."
+  ]
+}

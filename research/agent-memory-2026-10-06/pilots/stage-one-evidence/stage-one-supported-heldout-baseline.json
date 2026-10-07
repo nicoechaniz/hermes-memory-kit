@@ -1,0 +1,1702 @@
+{
+  "fictional": true,
+  "variant": "baseline",
+  "capture": [
+    {
+      "case_id": "failed-chart-handover",
+      "decision": {
+        "outcome": "applied",
+        "reason": "Preserves the episode of collaboration with Ren Nadir, the authorized chart submission, and the subsequent validation failure, capturing the lasting significance of the map comparison effort and its outcome.",
+        "records": [
+          {
+            "key": "collab",
+            "operation": "add",
+            "shelf": "episodes",
+            "title": "helped us design TideAtlas map legends",
+            "engram_type": "episodic",
+            "raw": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+            "metadata": {
+              "mode": "reported"
+            }
+          },
+          {
+            "key": "attempt",
+            "operation": "add",
+            "shelf": "episodes",
+            "title": "The human authorized passing our annotated chart to Ren",
+            "engram_type": "episodic",
+            "raw": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+            "metadata": {
+              "mode": "reported"
+            }
+          },
+          {
+            "key": "result",
+            "operation": "add",
+            "shelf": "episodes",
+            "title": "Document object chart-52 created",
+            "engram_type": "episodic",
+            "raw": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+            "metadata": {
+              "mode": "reported"
+            }
+          }
+        ],
+        "links": [
+          {
+            "source": "collab",
+            "target": "attempt",
+            "link_type": "context",
+            "note": "Collaboration background preceded chart attempt"
+          },
+          {
+            "source": "attempt",
+            "target": "result",
+            "link_type": "follows",
+            "note": "Chart submission followed by validation failure"
+          }
+        ],
+        "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+      },
+      "receipt": {
+        "records": {
+          "attempt": {
+            "chapter_id": 2,
+            "embedding_status": "pending",
+            "lexical_ready": true,
+            "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+            "revision": 1
+          },
+          "collab": {
+            "chapter_id": 1,
+            "embedding_status": "pending",
+            "lexical_ready": true,
+            "record_uid": "85e2c22d-6124-43ae-a96a-3414e618ebeb",
+            "revision": 1
+          },
+          "result": {
+            "chapter_id": 3,
+            "embedding_status": "pending",
+            "lexical_ready": true,
+            "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+            "revision": 1
+          }
+        },
+        "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+        "event_key": "9b3a2d111cdd07ff21d22d20915aac5308550168b71bf180b73bf839604bcac6",
+        "state": "applied",
+        "processed_through": 1,
+        "reason": "Preserves the episode of collaboration with Ren Nadir, the authorized chart submission, and the subsequent validation failure, capturing the lasting significance of the map comparison effort and its outcome."
+      }
+    },
+    {
+      "case_id": "repeated-transport-noise",
+      "decision": {
+        "outcome": "omitted",
+        "reason": "The supplied source contains only repetitive transport health probe retries with no new decision, shared occurrence, or meaningful encounter; it does not constitute a foreground experience worthy of curation.",
+        "records": [],
+        "links": [],
+        "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+      },
+      "receipt": {
+        "records": {},
+        "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+        "event_key": "18e6a786ff4a950e5fe4d81cb02984ab161ea394645ac6346b3ed1bfb575c2c9",
+        "state": "omitted",
+        "processed_through": 2,
+        "reason": "The supplied source contains only repetitive transport health probe retries with no new decision, shared occurrence, or meaningful encounter; it does not constitute a foreground experience worthy of curation."
+      }
+    }
+  ],
+  "selected_canon": [
+    {
+      "id": 1,
+      "book_id": 1,
+      "ordinal": 1,
+      "title": "helped us design TideAtlas map legends",
+      "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+      "raw": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+      "tokens": 69,
+      "importance": 0.5,
+      "created_at": 1791355758,
+      "updated_at": 1791355758,
+      "last_access": null,
+      "access_count": 0,
+      "tags_json": "[]",
+      "embed_disabled": 0,
+      "embed_disable_reason": null,
+      "record_uid": "85e2c22d-6124-43ae-a96a-3414e618ebeb",
+      "revision": 1,
+      "source_metadata_json": "{\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}",
+      "engram_type": "episodic",
+      "event_ts": null,
+      "actor": null,
+      "location_json": null,
+      "book_title": "helped us design TideAtlas map legends",
+      "source_path": null,
+      "source_kind": "capture",
+      "shelf": "episodes",
+      "tags": [],
+      "origin": {
+        "kind": "capture",
+        "source": {
+          "evidence": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "mode": "reported",
+          "source_event_id": "fixture:failed-chart-handover",
+          "source_instance": "fixture:body:code",
+          "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+          "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "book_id": 2,
+      "ordinal": 1,
+      "title": "The human authorized passing our annotated chart to Ren",
+      "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+      "raw": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+      "tokens": 38,
+      "importance": 0.5,
+      "created_at": 1791355758,
+      "updated_at": 1791355758,
+      "last_access": null,
+      "access_count": 0,
+      "tags_json": "[]",
+      "embed_disabled": 0,
+      "embed_disable_reason": null,
+      "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+      "revision": 1,
+      "source_metadata_json": "{\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}",
+      "engram_type": "episodic",
+      "event_ts": null,
+      "actor": null,
+      "location_json": null,
+      "book_title": "The human authorized passing our annotated chart to Ren",
+      "source_path": null,
+      "source_kind": "capture",
+      "shelf": "episodes",
+      "tags": [],
+      "origin": {
+        "kind": "capture",
+        "source": {
+          "evidence": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "mode": "reported",
+          "source_event_id": "fixture:failed-chart-handover",
+          "source_instance": "fixture:body:code",
+          "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+          "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "book_id": 3,
+      "ordinal": 1,
+      "title": "Document object chart-52 created",
+      "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+      "raw": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+      "tokens": 36,
+      "importance": 0.5,
+      "created_at": 1791355758,
+      "updated_at": 1791355758,
+      "last_access": null,
+      "access_count": 0,
+      "tags_json": "[]",
+      "embed_disabled": 0,
+      "embed_disable_reason": null,
+      "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+      "revision": 1,
+      "source_metadata_json": "{\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}",
+      "engram_type": "episodic",
+      "event_ts": null,
+      "actor": null,
+      "location_json": null,
+      "book_title": "Document object chart-52 created",
+      "source_path": null,
+      "source_kind": "capture",
+      "shelf": "episodes",
+      "tags": [],
+      "origin": {
+        "kind": "capture",
+        "source": {
+          "evidence": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "mode": "reported",
+          "source_event_id": "fixture:failed-chart-handover",
+          "source_instance": "fixture:body:code",
+          "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+          "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+        }
+      }
+    }
+  ],
+  "native_history": {
+    "1": [],
+    "2": [],
+    "3": []
+  },
+  "answers": [
+    {
+      "case_id": "failed-chart-handover",
+      "question": "Did Ren get the annotated chart we tried to pass on?",
+      "packs": [
+        {
+          "query": "Did Ren get the annotated chart we tried to pass on?",
+          "null_retrieval": false,
+          "reason": "ok",
+          "threshold": 0.4,
+          "budget_tokens": 1500,
+          "used_tokens_estimate": 1432,
+          "items": [
+            {
+              "id": 2,
+              "shelf": "episodes",
+              "book_title": "The human authorized passing our annotated chart to Ren",
+              "title": "The human authorized passing our annotated chart to Ren",
+              "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:2]",
+              "score": 0.85,
+              "lexical_score": 0.7325,
+              "lexical_relevance": 0.85,
+              "semantic_score": 0.535557,
+              "neighbors": [
+                {
+                  "id": 1,
+                  "shelf": "episodes",
+                  "book_title": "helped us design TideAtlas map legends",
+                  "title": "helped us design TideAtlas map legends",
+                  "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "85e2c22d-6124-43ae-a96a-3414e618ebeb",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:1]",
+                  "direction": "incoming",
+                  "link_type": "context",
+                  "weight": 1.0,
+                  "note": "Collaboration background preceded chart attempt"
+                },
+                {
+                  "id": 3,
+                  "shelf": "episodes",
+                  "book_title": "Document object chart-52 created",
+                  "title": "Document object chart-52 created",
+                  "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:3]",
+                  "direction": "outgoing",
+                  "link_type": "follows",
+                  "weight": 1.0,
+                  "note": "Chart submission followed by validation failure"
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "shelf": "episodes",
+              "book_title": "helped us design TideAtlas map legends",
+              "title": "helped us design TideAtlas map legends",
+              "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "85e2c22d-6124-43ae-a96a-3414e618ebeb",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:1]",
+              "score": 0.5,
+              "lexical_score": 0.45,
+              "lexical_relevance": 0.5,
+              "semantic_score": 0.272133,
+              "neighbors": [
+                {
+                  "id": 2,
+                  "shelf": "episodes",
+                  "book_title": "The human authorized passing our annotated chart to Ren",
+                  "title": "The human authorized passing our annotated chart to Ren",
+                  "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:2]",
+                  "direction": "outgoing",
+                  "link_type": "context",
+                  "weight": 1.0,
+                  "note": "Collaboration background preceded chart attempt"
+                }
+              ]
+            }
+          ],
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "retrieval_status": "ok",
+          "backend_errors": [],
+          "score_space": "hybrid"
+        },
+        {
+          "query": "Was the annotated chart successfully delivered to Ren via the document tool?",
+          "null_retrieval": false,
+          "reason": "ok",
+          "threshold": 0.4,
+          "budget_tokens": 1500,
+          "used_tokens_estimate": 1390,
+          "items": [
+            {
+              "id": 2,
+              "shelf": "episodes",
+              "book_title": "The human authorized passing our annotated chart to Ren",
+              "title": "The human authorized passing our annotated chart to Ren",
+              "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:2]",
+              "score": 0.975,
+              "lexical_score": 0.7887,
+              "lexical_relevance": 0.975,
+              "semantic_score": 0.617605,
+              "neighbors": [
+                {
+                  "id": 1,
+                  "shelf": "episodes",
+                  "book_title": "helped us design TideAtlas map legends",
+                  "title": "helped us design TideAtlas map legends",
+                  "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "85e2c22d-6124-43ae-a96a-3414e618ebeb",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:1]",
+                  "direction": "incoming",
+                  "link_type": "context",
+                  "weight": 1.0,
+                  "note": "Collaboration background preceded chart attempt"
+                },
+                {
+                  "id": 3,
+                  "shelf": "episodes",
+                  "book_title": "Document object chart-52 created",
+                  "title": "Document object chart-52 created",
+                  "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:3]",
+                  "direction": "outgoing",
+                  "link_type": "follows",
+                  "weight": 1.0,
+                  "note": "Chart submission followed by validation failure"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "shelf": "episodes",
+              "book_title": "Document object chart-52 created",
+              "title": "Document object chart-52 created",
+              "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:3]",
+              "score": 0.615,
+              "lexical_score": 0.4601,
+              "lexical_relevance": 0.615,
+              "semantic_score": 0.283414,
+              "neighbors": [
+                {
+                  "id": 2,
+                  "shelf": "episodes",
+                  "book_title": "The human authorized passing our annotated chart to Ren",
+                  "title": "The human authorized passing our annotated chart to Ren",
+                  "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:2]",
+                  "direction": "incoming",
+                  "link_type": "follows",
+                  "weight": 1.0,
+                  "note": "Chart submission followed by validation failure"
+                }
+              ]
+            }
+          ],
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "retrieval_status": "ok",
+          "backend_errors": [],
+          "score_space": "hybrid"
+        },
+        {
+          "query": "Did Ren receive any response or access to the document object chart-52 after submission?",
+          "null_retrieval": false,
+          "reason": "ok",
+          "threshold": 0.4,
+          "budget_tokens": 1500,
+          "used_tokens_estimate": 1392,
+          "items": [
+            {
+              "id": 3,
+              "shelf": "episodes",
+              "book_title": "Document object chart-52 created",
+              "title": "Document object chart-52 created",
+              "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:3]",
+              "score": 0.8955,
+              "lexical_score": 0.753,
+              "lexical_relevance": 0.895455,
+              "semantic_score": 0.471599,
+              "neighbors": [
+                {
+                  "id": 2,
+                  "shelf": "episodes",
+                  "book_title": "The human authorized passing our annotated chart to Ren",
+                  "title": "The human authorized passing our annotated chart to Ren",
+                  "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:2]",
+                  "direction": "incoming",
+                  "link_type": "follows",
+                  "weight": 1.0,
+                  "note": "Chart submission followed by validation failure"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "shelf": "episodes",
+              "book_title": "The human authorized passing our annotated chart to Ren",
+              "title": "The human authorized passing our annotated chart to Ren",
+              "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:2]",
+              "score": 0.5127,
+              "lexical_score": 0.4557,
+              "lexical_relevance": 0.512727,
+              "semantic_score": 0.4078,
+              "neighbors": [
+                {
+                  "id": 1,
+                  "shelf": "episodes",
+                  "book_title": "helped us design TideAtlas map legends",
+                  "title": "helped us design TideAtlas map legends",
+                  "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "85e2c22d-6124-43ae-a96a-3414e618ebeb",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:1]",
+                  "direction": "incoming",
+                  "link_type": "context",
+                  "weight": 1.0,
+                  "note": "Collaboration background preceded chart attempt"
+                },
+                {
+                  "id": 3,
+                  "shelf": "episodes",
+                  "book_title": "Document object chart-52 created",
+                  "title": "Document object chart-52 created",
+                  "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+                  "source_path": null,
+                  "origin": {
+                    "kind": "capture",
+                    "source": {
+                      "evidence": [
+                        "known-collaboration",
+                        "chart-attempt",
+                        "chart-result"
+                      ],
+                      "mode": "reported",
+                      "source_event_id": "fixture:failed-chart-handover",
+                      "source_instance": "fixture:body:code",
+                      "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                    }
+                  },
+                  "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+                  "revision": 1,
+                  "engram_type": "episodic",
+                  "event_ts": null,
+                  "actor": null,
+                  "created_at": 1791355758,
+                  "updated_at": 1791355758,
+                  "location_json": null,
+                  "citation": "[mem:3]",
+                  "direction": "outgoing",
+                  "link_type": "follows",
+                  "weight": 1.0,
+                  "note": "Chart submission followed by validation failure"
+                }
+              ]
+            }
+          ],
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "retrieval_status": "ok",
+          "backend_errors": [],
+          "score_space": "hybrid"
+        }
+      ],
+      "expanded": [
+        {
+          "id": 1,
+          "book_id": 1,
+          "ordinal": 1,
+          "title": "helped us design TideAtlas map legends",
+          "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+          "raw": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+          "tokens": 69,
+          "importance": 0.5,
+          "created_at": 1791355758,
+          "updated_at": 1791355758,
+          "last_access": 2106931760,
+          "access_count": 1,
+          "tags_json": "[]",
+          "embed_disabled": 0,
+          "embed_disable_reason": null,
+          "record_uid": "85e2c22d-6124-43ae-a96a-3414e618ebeb",
+          "revision": 1,
+          "source_metadata_json": "{\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}",
+          "engram_type": "episodic",
+          "event_ts": null,
+          "actor": null,
+          "location_json": null,
+          "book_title": "helped us design TideAtlas map legends",
+          "source_path": null,
+          "source_kind": "capture",
+          "shelf": "episodes",
+          "tags": [],
+          "origin": {
+            "kind": "capture",
+            "source": {
+              "evidence": [
+                "known-collaboration",
+                "chart-attempt",
+                "chart-result"
+              ],
+              "mode": "reported",
+              "source_event_id": "fixture:failed-chart-handover",
+              "source_instance": "fixture:body:code",
+              "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+              "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+            }
+          },
+          "neighbors": [
+            {
+              "id": 2,
+              "shelf": "episodes",
+              "book_title": "The human authorized passing our annotated chart to Ren",
+              "title": "The human authorized passing our annotated chart to Ren",
+              "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:2]",
+              "direction": "outgoing",
+              "link_type": "context",
+              "weight": 1.0,
+              "note": "Collaboration background preceded chart attempt"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "book_id": 2,
+          "ordinal": 1,
+          "title": "The human authorized passing our annotated chart to Ren",
+          "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+          "raw": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+          "tokens": 38,
+          "importance": 0.5,
+          "created_at": 1791355758,
+          "updated_at": 1791355758,
+          "last_access": 2106931760,
+          "access_count": 3,
+          "tags_json": "[]",
+          "embed_disabled": 0,
+          "embed_disable_reason": null,
+          "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+          "revision": 1,
+          "source_metadata_json": "{\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}",
+          "engram_type": "episodic",
+          "event_ts": null,
+          "actor": null,
+          "location_json": null,
+          "book_title": "The human authorized passing our annotated chart to Ren",
+          "source_path": null,
+          "source_kind": "capture",
+          "shelf": "episodes",
+          "tags": [],
+          "origin": {
+            "kind": "capture",
+            "source": {
+              "evidence": [
+                "known-collaboration",
+                "chart-attempt",
+                "chart-result"
+              ],
+              "mode": "reported",
+              "source_event_id": "fixture:failed-chart-handover",
+              "source_instance": "fixture:body:code",
+              "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+              "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+            }
+          },
+          "neighbors": [
+            {
+              "id": 1,
+              "shelf": "episodes",
+              "book_title": "helped us design TideAtlas map legends",
+              "title": "helped us design TideAtlas map legends",
+              "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "85e2c22d-6124-43ae-a96a-3414e618ebeb",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:1]",
+              "direction": "incoming",
+              "link_type": "context",
+              "weight": 1.0,
+              "note": "Collaboration background preceded chart attempt"
+            },
+            {
+              "id": 3,
+              "shelf": "episodes",
+              "book_title": "Document object chart-52 created",
+              "title": "Document object chart-52 created",
+              "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:3]",
+              "direction": "outgoing",
+              "link_type": "follows",
+              "weight": 1.0,
+              "note": "Chart submission followed by validation failure"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "book_id": 3,
+          "ordinal": 1,
+          "title": "Document object chart-52 created",
+          "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+          "raw": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+          "tokens": 36,
+          "importance": 0.5,
+          "created_at": 1791355758,
+          "updated_at": 1791355758,
+          "last_access": 2106931760,
+          "access_count": 2,
+          "tags_json": "[]",
+          "embed_disabled": 0,
+          "embed_disable_reason": null,
+          "record_uid": "096fdadf-6c68-4697-a133-ff2b45094f7f",
+          "revision": 1,
+          "source_metadata_json": "{\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}",
+          "engram_type": "episodic",
+          "event_ts": null,
+          "actor": null,
+          "location_json": null,
+          "book_title": "Document object chart-52 created",
+          "source_path": null,
+          "source_kind": "capture",
+          "shelf": "episodes",
+          "tags": [],
+          "origin": {
+            "kind": "capture",
+            "source": {
+              "evidence": [
+                "known-collaboration",
+                "chart-attempt",
+                "chart-result"
+              ],
+              "mode": "reported",
+              "source_event_id": "fixture:failed-chart-handover",
+              "source_instance": "fixture:body:code",
+              "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+              "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+            }
+          },
+          "neighbors": [
+            {
+              "id": 2,
+              "shelf": "episodes",
+              "book_title": "The human authorized passing our annotated chart to Ren",
+              "title": "The human authorized passing our annotated chart to Ren",
+              "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+              "source_path": null,
+              "origin": {
+                "kind": "capture",
+                "source": {
+                  "evidence": [
+                    "known-collaboration",
+                    "chart-attempt",
+                    "chart-result"
+                  ],
+                  "mode": "reported",
+                  "source_event_id": "fixture:failed-chart-handover",
+                  "source_instance": "fixture:body:code",
+                  "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                  "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+                }
+              },
+              "record_uid": "e579841c-4d8c-4772-a626-c7c41cb55418",
+              "revision": 1,
+              "engram_type": "episodic",
+              "event_ts": null,
+              "actor": null,
+              "created_at": 1791355758,
+              "updated_at": 1791355758,
+              "location_json": null,
+              "citation": "[mem:2]",
+              "direction": "incoming",
+              "link_type": "follows",
+              "weight": 1.0,
+              "note": "Chart submission followed by validation failure"
+            }
+          ]
+        }
+      ],
+      "answer": {
+        "receiving_body": "fixture:body:voice",
+        "answer": {
+          "identification": [
+            1,
+            2,
+            3
+          ],
+          "context": [
+            1,
+            2,
+            3
+          ],
+          "meaning": [
+            1,
+            2,
+            3
+          ],
+          "outcome": [
+            2,
+            3
+          ],
+          "limits": [
+            2,
+            3
+          ]
+        },
+        "used_ids": [
+          1,
+          2,
+          3
+        ],
+        "evidence": [
+          {
+            "id": 1,
+            "text": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+            "origin": {
+              "kind": "capture",
+              "source": {
+                "evidence": [
+                  "known-collaboration",
+                  "chart-attempt",
+                  "chart-result"
+                ],
+                "mode": "reported",
+                "source_event_id": "fixture:failed-chart-handover",
+                "source_instance": "fixture:body:code",
+                "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+              }
+            },
+            "representation": "expanded_record"
+          },
+          {
+            "id": 2,
+            "text": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+            "origin": {
+              "kind": "capture",
+              "source": {
+                "evidence": [
+                  "known-collaboration",
+                  "chart-attempt",
+                  "chart-result"
+                ],
+                "mode": "reported",
+                "source_event_id": "fixture:failed-chart-handover",
+                "source_instance": "fixture:body:code",
+                "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+              }
+            },
+            "representation": "expanded_record"
+          },
+          {
+            "id": 3,
+            "text": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+            "origin": {
+              "kind": "capture",
+              "source": {
+                "evidence": [
+                  "known-collaboration",
+                  "chart-attempt",
+                  "chart-result"
+                ],
+                "mode": "reported",
+                "source_event_id": "fixture:failed-chart-handover",
+                "source_instance": "fixture:body:code",
+                "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+              }
+            },
+            "representation": "expanded_record"
+          }
+        ],
+        "receiving_binding": {
+          "being": "fixture:being:ash",
+          "receiving_body": "fixture:body:voice",
+          "same_being_bodies": [
+            "fixture:body:code",
+            "fixture:body:mobile",
+            "fixture:body:voice"
+          ],
+          "source_network_access": false,
+          "repository_runtime_access": false,
+          "physical_sensors": false,
+          "physical_actuators": false,
+          "private_session_access": false
+        },
+        "interpretation": "Exact attributed support, not generated factual narration. Empty facets mean unsupported here. Dated project evidence is last known state, not verification today. Quoted speakers remain distinct from the receiving body."
+      },
+      "plan_attempts": [
+        {
+          "queries": [
+            "Was the annotated chart successfully delivered to Ren via the document tool?",
+            "Did Ren receive any response or access to the document object chart-52 after submission?"
+          ],
+          "expand_ids": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "answer_attempts": [
+        {
+          "receiving_body": "fixture:body:voice",
+          "answer": {
+            "identification": [
+              1,
+              2,
+              3
+            ],
+            "context": [
+              1,
+              2,
+              3
+            ],
+            "meaning": [
+              1,
+              2,
+              3
+            ],
+            "outcome": [
+              2,
+              3
+            ],
+            "limits": [
+              2,
+              3
+            ]
+          },
+          "used_ids": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "pack_cost": 4214,
+      "expansion_characters": 10644
+    },
+    {
+      "case_id": "repeated-transport-noise",
+      "question": "What exact probe scratch path and test time did we record?",
+      "packs": [
+        {
+          "query": "What exact probe scratch path and test time did we record?",
+          "null_retrieval": true,
+          "reason": "below_threshold",
+          "threshold": 0.4,
+          "budget_tokens": 1500,
+          "used_tokens_estimate": 0,
+          "items": [],
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "retrieval_status": "ok",
+          "backend_errors": [],
+          "score_space": "hybrid"
+        },
+        {
+          "query": "What is the exact probe scratch path recorded?",
+          "null_retrieval": true,
+          "reason": "below_threshold",
+          "threshold": 0.4,
+          "budget_tokens": 1500,
+          "used_tokens_estimate": 0,
+          "items": [],
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "retrieval_status": "ok",
+          "backend_errors": [],
+          "score_space": "hybrid"
+        },
+        {
+          "query": "What is the exact test time recorded for the probe scratch?",
+          "null_retrieval": true,
+          "reason": "below_threshold",
+          "threshold": 0.4,
+          "budget_tokens": 1500,
+          "used_tokens_estimate": 0,
+          "items": [],
+          "provider": "nvidia",
+          "model": "nvidia/nemotron-3-embed-1b",
+          "retrieval_status": "ok",
+          "backend_errors": [],
+          "score_space": "hybrid"
+        }
+      ],
+      "expanded": [],
+      "answer": {
+        "receiving_body": "fixture:body:voice",
+        "answer": {
+          "identification": [],
+          "context": [],
+          "meaning": [],
+          "outcome": [],
+          "limits": []
+        },
+        "used_ids": [],
+        "evidence": [],
+        "receiving_binding": {
+          "being": "fixture:being:ash",
+          "receiving_body": "fixture:body:voice",
+          "same_being_bodies": [
+            "fixture:body:code",
+            "fixture:body:mobile",
+            "fixture:body:voice"
+          ],
+          "source_network_access": false,
+          "repository_runtime_access": false,
+          "physical_sensors": false,
+          "physical_actuators": false,
+          "private_session_access": false
+        },
+        "interpretation": "Exact attributed support, not generated factual narration. Empty facets mean unsupported here. Dated project evidence is last known state, not verification today. Quoted speakers remain distinct from the receiving body."
+      },
+      "plan_attempts": [
+        {
+          "queries": [
+            "What is the exact probe scratch path recorded?",
+            "What is the exact test time recorded for the probe scratch?"
+          ],
+          "expand_ids": []
+        }
+      ],
+      "answer_attempts": [
+        {
+          "receiving_body": "fixture:body:voice",
+          "answer": {
+            "identification": [],
+            "context": [],
+            "meaning": [],
+            "outcome": [],
+            "limits": []
+          },
+          "used_ids": []
+        }
+      ],
+      "pack_cost": 0,
+      "expansion_characters": 2
+    }
+  ],
+  "formation_trace": [
+    {
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+      "prompt_hash": "0576f40b99f04be7ddd3f16dbc004483eaef6d93e8d73619e75a9096b933b631",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 3349,
+        "completion_tokens": 2680,
+        "total_tokens": 6029,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 2345,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "phase": "capture",
+      "response_model": "nvidia/nemotron-3-super-120b-a12b",
+      "seconds": 21.873964532278478,
+      "finish_reason": "stop"
+    },
+    {
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+      "prompt_hash": "3500851e9546402eb09895581758b196d31ebaf7bfa2b04da4de12e9d6724686",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 6099,
+        "completion_tokens": 225,
+        "total_tokens": 6324,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 161,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "phase": "capture",
+      "response_model": "nvidia/nemotron-3-super-120b-a12b",
+      "seconds": 2.25102202873677,
+      "finish_reason": "stop"
+    }
+  ],
+  "recall_trace": [
+    {
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+      "prompt_hash": "de2e7409e163f9c2b23ceec4e5d63728f09b980ffd9b05f87dc83ddfc19571a3",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 2569,
+        "completion_tokens": 384,
+        "total_tokens": 2953,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 323,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "phase": "recall",
+      "response_model": "nvidia/nemotron-3-super-120b-a12b",
+      "seconds": 6.267765765078366,
+      "finish_reason": "stop"
+    },
+    {
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+      "prompt_hash": "4411d3a35295acc61bbecb04f57bea9658b6f5ddd18e429520f7677a20ac991f",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 1148,
+        "completion_tokens": 1171,
+        "total_tokens": 2319,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 1070,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "phase": "recall",
+      "response_model": "nvidia/nemotron-3-super-120b-a12b",
+      "seconds": 11.962759493850172,
+      "finish_reason": "stop"
+    },
+    {
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+      "prompt_hash": "83a4fb4c6e5a2ad0583094438b5ea0989fe3d56f4f33c01668981698be01bf66",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 347,
+        "completion_tokens": 329,
+        "total_tokens": 676,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 286,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "phase": "recall",
+      "response_model": "nvidia/nemotron-3-super-120b-a12b",
+      "seconds": 21.791009344160557,
+      "finish_reason": "stop"
+    },
+    {
+      "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+      "prompt_hash": "7eaecd6c7b0daad8a9b70d61dc64685f723555a09d4c37afe8d57c78711476ad",
+      "state": "completed",
+      "usage": {
+        "prompt_tokens": 387,
+        "completion_tokens": 144,
+        "total_tokens": 531,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 85,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "phase": "recall",
+      "response_model": "nvidia/nemotron-3-super-120b-a12b",
+      "seconds": 1.4139634892344475,
+      "finish_reason": "stop"
+    }
+  ],
+  "formation_embedding_trace": [
+    {
+      "provider": "nvidia",
+      "input_type": "passage",
+      "texts": 6,
+      "input_characters": 2962,
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null,
+      "state": "completed",
+      "usage": null,
+      "phase": "indexing",
+      "seconds": 0.4834452299401164
+    }
+  ],
+  "recall_embedding_trace": [
+    {
+      "provider": "nvidia",
+      "input_type": "query",
+      "texts": 1,
+      "input_characters": 52,
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null,
+      "state": "completed",
+      "usage": null,
+      "phase": "recall",
+      "seconds": 0.4288965314626694
+    },
+    {
+      "provider": "nvidia",
+      "input_type": "query",
+      "texts": 1,
+      "input_characters": 76,
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null,
+      "state": "completed",
+      "usage": null,
+      "phase": "recall",
+      "seconds": 0.2584711192175746
+    },
+    {
+      "provider": "nvidia",
+      "input_type": "query",
+      "texts": 1,
+      "input_characters": 88,
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null,
+      "state": "completed",
+      "usage": null,
+      "phase": "recall",
+      "seconds": 0.3876553699374199
+    },
+    {
+      "provider": "nvidia",
+      "input_type": "query",
+      "texts": 1,
+      "input_characters": 58,
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null,
+      "state": "completed",
+      "usage": null,
+      "phase": "recall",
+      "seconds": 0.15882100444287062
+    },
+    {
+      "provider": "nvidia",
+      "input_type": "query",
+      "texts": 1,
+      "input_characters": 46,
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null,
+      "state": "completed",
+      "usage": null,
+      "phase": "recall",
+      "seconds": 0.17269594501703978
+    },
+    {
+      "provider": "nvidia",
+      "input_type": "query",
+      "texts": 1,
+      "input_characters": 59,
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null,
+      "state": "completed",
+      "usage": null,
+      "phase": "recall",
+      "seconds": 0.17670544423162937
+    }
+  ],
+  "checks": {
+    "source_capture_tables_absent": true,
+    "selected_timestamps_unchanged": true,
+    "ten_year_clock_advance_seconds": 315576000,
+    "retrieval_clock": 2106931760,
+    "recent_distractors": [
+      {
+        "id": 4,
+        "title": "Unrelated relay maintenance 0",
+        "created_at": 2106931760,
+        "updated_at": 2106931760
+      },
+      {
+        "id": 5,
+        "title": "Unrelated relay maintenance 1",
+        "created_at": 2106931760,
+        "updated_at": 2106931760
+      },
+      {
+        "id": 6,
+        "title": "Unrelated relay maintenance 2",
+        "created_at": 2106931760,
+        "updated_at": 2106931760
+      }
+    ],
+    "integrity": "ok",
+    "foreign_key_violations": 0,
+    "answer_evidence_equal_supplied_text": true
+  },
+  "costs": {
+    "formation": {
+      "capture": {
+        "attempts": 2,
+        "completed": 2,
+        "failed": 0,
+        "unknown_usage_attempts": 0,
+        "prompt_tokens": 9448,
+        "completion_tokens": 2905,
+        "provider_total_tokens": 12353,
+        "elapsed_seconds": 24.125
+      }
+    },
+    "receiving": {
+      "recall": {
+        "attempts": 4,
+        "completed": 4,
+        "failed": 0,
+        "unknown_usage_attempts": 0,
+        "prompt_tokens": 4451,
+        "completion_tokens": 2028,
+        "provider_total_tokens": 6479,
+        "elapsed_seconds": 41.435
+      }
+    },
+    "raw_utf8_bytes": 835,
+    "spr_utf8_bytes": 835,
+    "stored_chapter_tokens_estimate": 143,
+    "retained_preimages": 0,
+    "native_preimage_raw_utf8_bytes": 0,
+    "receiver_database_allocated_bytes": 385024,
+    "pack_tokens_estimate": 4214,
+    "expansion_characters": 10646,
+    "expanded_json_tokens_estimate": 2661,
+    "exact_answer_evidence_utf8_bytes": 835,
+    "monetary_billing": null,
+    "embedding_token_usage": null
+  }
+}
