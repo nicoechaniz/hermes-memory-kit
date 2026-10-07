@@ -125,6 +125,19 @@ All positive requirements were met, but three unsupported clauses and one
 source-date omission keep qualification open. No reviewer or consolidation pass
 ran. DeepSeek is the first inexpensive consolidation candidate; the goal remains
 paused until explicitly resumed, with all full-comparison/stage-two gates intact.
+The human then supplied an expanded goal allowing isolated fictional API or
+context-free subagent receivers and independent role selection, and selected
+DeepSeek Flash for the current work. Gemini/Qwen comparisons are deferred by that
+later steering. Keep the existing embedding space for the first complete
+frozen-packet narration/review run; do not report a provider winner. The external
+receiver now freezes narrator/reviewer models and efforts separately, retaining
+pending generations and budgets. After that isolated comparison, a changed
+formation/retrieval configuration requires a new complete equivalent pipeline
+comparison before stage-two qualification. All earlier evidence remains valid
+only for its recorded scope and conditions.
+Sol 6.1 low remains an explicitly requested bounded comparator when the expected
+consumption warrants it. Compare identical packets and count review/retry costs;
+do not infer a native OpenAI API credential from Codex subscription access.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

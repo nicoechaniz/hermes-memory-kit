@@ -143,3 +143,22 @@ or full narrative qualification. Three unsupported clauses and a missing source
 date remain. Prefer this inexpensive candidate for the next consolidation trial;
 keep Sol low as an unexecuted comparison and qualify the reviewer separately.
 The broader goal remains paused; no production model or index was changed.
+
+Later human steering selects **DeepSeek Flash for now** and defers Gemini/Qwen
+comparisons. Treat that as an explicit processing choice, not a measured victory
+over unevaluated vendors. Use the existing NVIDIA embedding model/index unchanged
+for the isolated narrator comparison. Narrator and reviewer remain independently
+configurable and frozen, even when both currently select Flash. Qualify the
+complete narrative contract and then the new end-to-end formation/consolidation
+configuration; retain the earlier limited diagnostics and every failure.
+
+Read-only access inspection found an existing Nous inference credential and a
+working model catalog listing OpenAI Sol/Luna, Qwen 3.8 Max, Gemini Flash and
+Voyage embeddings. Catalog access is not successful inference or a qualified
+component. No inference was dispatched to those candidates; they remain later
+options if needed. The selected DeepSeek task continues without waiting for
+additional account setup.
+The human also retains Sol 6.1 low as a valid bounded comparator where consumption
+is modest. A catalog route can be tested through the existing authorized Nous
+API; its returned model, usage and actual routing must be recorded separately
+from a direct OpenAI endpoint or a native Codex subscription.

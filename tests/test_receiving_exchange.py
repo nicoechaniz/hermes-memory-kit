@@ -60,6 +60,31 @@ def test_missing_response_only_prepares_blind_request_and_does_not_call_provider
     assert result['qualification'] is False
 
 
+def test_model_and_effort_roles_are_independent_and_frozen_without_dispatch(exchange,tmp_path):
+    root=tmp_path/'packets';write_packets(exchange,root);out=tmp_path/'receiving'
+    first=exchange.receive(root,out,'narrator','low',review_model='reviewer',review_effort='high')
+    request=json.loads(Path(first['request']).read_text())
+    assert request['model']=='narrator' and request['reasoning_effort']=='low'
+    text="The human's June 15, 2026 report gives no surname for Leto."
+    candidate={'receiving_body':'fixture:body:voice','claims':[
+        dict(text=text,support=[1],basis='memory',facet='limits')]}
+    response(exchange,out,Path(first['request']),candidate)
+    second=exchange.receive(root,out,'narrator','low',resume=True,
+                            review_model='reviewer',review_effort='high')
+    request=json.loads(Path(second['request']).read_text())
+    assert request['phase']=='narrative_review'
+    assert request['model']=='reviewer' and request['reasoning_effort']=='high'
+    original=(out/'pending.json').read_bytes()
+    for reviewer,effort in [('other-reviewer','high'),('reviewer','low')]:
+        with pytest.raises(ValueError,match='conditions changed'):
+            exchange.receive(root,out,'narrator','low',resume=True,
+                             review_model=reviewer,review_effort=effort)
+        assert (out/'pending.json').read_bytes()==original
+    trace=json.loads((out/'trace.json').read_text())
+    assert len(trace)==1 and trace[0]['requested_model']=='narrator'
+    assert trace[0]['requested_reasoning_effort']=='low'
+
+
 def test_external_narration_and_review_resume_without_source_database_or_rubric(exchange,tmp_path,monkeypatch):
     root=tmp_path/'packets';write_packets(exchange,root);out=tmp_path/'receiving'
     first=exchange.receive(root,out,'fixture-model')

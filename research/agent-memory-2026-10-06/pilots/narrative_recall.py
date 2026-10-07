@@ -359,14 +359,22 @@ Equal full calendar dates in ISO or ordinary month-name prose are equivalent.
 '''
 
 
-def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save):
+def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save,
+           review_model=None):
+    review_model = review_model or model
     state = pending.setdefault('narrative', {'generations': [], 'reviews': []})
     fingerprint = hashlib.sha256(json.dumps(dict(query=query, evidence=evidence, binding=binding),
         sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     if state.get('context_sha256', fingerprint) != fingerprint:
         raise ValueError('narrative context changed; preserve pending work and start a new comparison')
-    procedure = hashlib.sha256(json.dumps(dict(model=model, generation=GENERATION,
-        review=REVIEW, protocol='receiving-phase/v1'), sort_keys=True).encode()).hexdigest()
+    procedure_settings = dict(model=model, generation=GENERATION,
+        review=REVIEW, protocol='receiving-phase/v1')
+    # Preserve the historical fingerprint for the unchanged shared-model path.
+    # Selecting a separate reviewer is a new frozen procedure, never an implicit
+    # replacement of a saved reviewer or a reset of its repair/revision budget.
+    if review_model != model:
+        procedure_settings.update(review_model=review_model, protocol='receiving-phase/v2')
+    procedure = hashlib.sha256(json.dumps(procedure_settings, sort_keys=True).encode()).hexdigest()
     if state.get('procedure_sha256', procedure) != procedure:
         raise ValueError('narrative procedure/model changed; preserve pending work and start a new comparison')
     if 'procedure_sha256' not in state and (state['generations'] or state['reviews'] or 'accepted' in state):
@@ -431,7 +439,7 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
             elif progress['phase'] == 'review':
                 candidate = state['generations'][progress['candidate_index']]
                 trace.phase = 'narrative_review'
-                review = chat(model, progress['review_messages'], trace)
+                review = chat(review_model, progress['review_messages'], trace)
                 state['reviews'].append(dict(candidate=candidate, review=review))
                 progress.update(phase='review_validate', review_index=len(state['reviews'])-1)
                 save(checkpoint, pending)

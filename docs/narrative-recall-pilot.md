@@ -26,6 +26,17 @@ or reader changes produce different packets, do not claim an isolated model-only
 comparison over identical evidence. Freeze or replay the actual supplied packets
 when that narrower comparison is intended.
 
+The external frozen-packet receiver additionally supports `--review-model` and
+`--review-reasoning-effort`. `--model`/`--reasoning-effort` continue to select
+generation and every revision; only atomic review uses the reviewer settings.
+Defaults retain the shared-model behavior. Each selected role is frozen in the
+comparison conditions; a pending reviewer or its effort cannot be replaced on
+resume. A review timeout retains its generation and its repair/revision budget.
+The underlying narrative procedure fingerprints a distinct reviewer while
+preserving the historical shared-model fingerprint. Changed module hashes still
+require a new comparison; old packets, requests, responses and checkpoints stay.
+This selector adds no dispatch, independent corroboration or qualification.
+
 Each receiving request sees only retrieved previews, bounded expansions and the
 fictional binding. The source-loss database excludes capture payloads/ledgers;
 retrieval actually runs with its clock advanced ten years, retaining original
