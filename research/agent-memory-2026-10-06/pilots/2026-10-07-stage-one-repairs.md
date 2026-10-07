@@ -53,3 +53,20 @@ to both arms without case-specific facts. A new main run is required; changing
 an answer prompt is not a comparable continuation of earlier answers. A separate
 predeclared fictional chart-handover case and 100 repeated transport lines check
 generalization and noise selection, not just the invitation wording.
+
+## Recall response correction
+
+The fresh main formation completed: both arms retained the failed action and
+omitted routine noise. All 16 questions ran in each arm, but some responses
+reduced the retrieved old encounter to its name or put necessary meaning in
+uncontracted extra fields. Retrieval success is not full answer coverage.
+
+The experimental runner now requests five explicit grounded account facets:
+identification, context, meaning, outcome and limits. These are a response aid,
+not a closed memory ontology. Unsupported facets remain unknown. Visible citation
+IDs and response shape are checked, with one shape-only repair and persistent
+pending evidence. The same contract is used in both arms; no expected fact or
+rubric is supplied. A new recall run reuses the frozen, complete fictional
+formation in a separate snapshot, keeps its provenance/cost traces separately,
+and issues new clean receiving requests. Reuse is not claimed as independent
+formation or a new observation. Thirteen runner tests pass.

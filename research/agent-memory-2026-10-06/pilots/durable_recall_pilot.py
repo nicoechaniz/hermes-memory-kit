@@ -10,6 +10,7 @@ from concurrent.futures import ThreadPoolExecutor
 import importlib.util
 import hashlib
 import json
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -99,6 +100,21 @@ def visible_ids(pack):
     return {row['id'] for item in pack['items'] for row in [item, *item.get('neighbors', [])]}
 
 
+def grounded_answer(value, candidates):
+    """Explicit account facets prevent identification-only responses."""
+    fields = {'identification', 'context', 'meaning', 'outcome', 'limits'}
+    if not isinstance(value, dict) or set(value) != {'answer', 'used_ids'}:
+        raise ValueError('return only answer and used_ids')
+    account = value['answer']
+    if not isinstance(account, dict) or set(account) != fields or any(
+            not isinstance(text, str) or not text.strip() for text in account.values()):
+        raise ValueError('answer needs five nonempty text fields: identification, context, meaning, outcome, limits')
+    if not isinstance(value['used_ids'], list) or any(
+            type(cid) is not int or cid not in candidates for cid in value['used_ids']):
+        raise ValueError('used_ids must be integers visible in retrieved context')
+    return value
+
+
 def memory_at(pool):
     pool.mkdir(mode=0o700, exist_ok=True)
     spec = importlib.util.spec_from_file_location('fixture_' + pool.parent.name,
@@ -143,6 +159,16 @@ def instrument_embeddings(memory, path):
 def run_variant(name, guidance, args, corpus):
     out = args.out / name
     out.mkdir(mode=0o700, exist_ok=args.resume)
+    if getattr(args, 'reuse_capture', None) and not (out/'capture.json').exists():
+        source = args.reuse_capture/name
+        (out/'memory').mkdir(mode=0o700)
+        verified_snapshot(source/'memory/library.db', out/'memory/library.db')
+        for filename in ('capture.json','selected-canon.json'):
+            shutil.copy2(source/filename, out/filename)
+        save(out/'formation-trace.json', [call for call in json.loads((source/'trace.json').read_text())
+                                         if call['phase'] == 'capture'])
+        save(out/'formation-embedding-trace.json', [call for call in json.loads((source/'embedding-trace.json').read_text())
+                                                    if call['phase'] == 'indexing'])
     memory = memory_at(out / 'memory')
     instrument_embeddings(memory, out/'embedding-trace.json')
     ledger = CaptureLedger(memory)
@@ -303,20 +329,45 @@ world pointer; dated memory is not present status.'''),
             ids = planner['expand_ids']
             # Linked expansion remains bounded to candidates actually retrieved.
             expanded = [memory.expand(cid) for cid in dict.fromkeys(ids)]
-            answer = chat(args.model, [dict(role='system', content='''Answer the fictional being's
+            answer_messages = [dict(role='system', content='''Answer the fictional being's
 question from the retrieved memory only, as its voice body in 2036. Return JSON
-with answer and used_ids. For recognition questions, include the supported
-participant/account and world pointer, the encounter's substance and lasting
-significance, and its qualified outcome. Give enough context to recognize what
-happened; a name alone may lose the meaning. Preserve attribution, uncertain dates,
+with ONLY answer (an object) and used_ids (integer array). The answer object
+has five text fields: identification (known participants/accounts and pointers),
+context (what happened, where/when and originating body/source), meaning (substance
+and significance), outcome (actual action stages and observed results), limits
+(uncertainty, unknowns and receiving-body capability limits). Each field must
+use evidence; say unknown or not applicable when unsupported. Include relevant
+identifiers, dates and object-creation-versus-delivery qualifications rather
+than reducing a significant encounter to a name. Preserve attribution, uncertain dates,
 action stages and corrections. Missing evidence is unknown. A saved dated
-synopsis is not current status. You have no source URLs, private sessions or
+synopsis is not current status. You cannot open source URLs or private sessions and have no
 original code/physical capabilities.'''),
                         dict(role='user', content=json.dumps(dict(question=query, packs=packs,
-                                                                 expanded=expanded), ensure_ascii=False))], trace)
+                                                                 expanded=expanded), ensure_ascii=False))]
+            answer_ids = set().union(*(visible_ids(pack) for pack in packs))
+            for item in expanded:
+                answer_ids |= visible_ids({'items':[item]})
+            for attempt in range(2):
+                answer = chat(args.model, answer_messages, trace)
+                pending.setdefault('answer_attempts', []).append(answer)
+                save(pending_path, pending)
+                try:
+                    grounded_answer(answer, answer_ids)
+                except ValueError as error:
+                    pending['error'] = str(error)
+                    save(pending_path, pending)
+                    if attempt == 1:
+                        raise
+                    answer_messages.extend([dict(role='assistant', content=json.dumps(answer)),
+                        dict(role='user', content='Invalid response shape: '+str(error)+
+                             '. Reformat using the five answer fields above, preserving supported '
+                             'meaning only. Unknown remains unknown. No new facts or rubric.')])
+                else:
+                    break
             answers.append(dict(case_id=case['id'], question=query, packs=packs,
                                 expanded=expanded, answer=answer,
                                 plan_attempts=pending['plans'],
+                                answer_attempts=pending['answer_attempts'],
                                 pack_cost=sum(p['used_tokens_estimate'] for p in packs),
                                 expansion_characters=len(json.dumps(expanded, ensure_ascii=False))))
             save(out / 'answers.json', answers)
@@ -370,7 +421,7 @@ reflection. Keep the same account's purpose rather than creating more events.'''
                                      reflection=reflected))
     save(out / 'trace.json', trace)
     return dict(variant=name, selected_count=len(selected), questions=len(answers),
-                llm_calls=len(trace), schema='hmk-synthetic-model-pilot/v1',
+                llm_calls=len(trace), schema='hmk-synthetic-model-pilot/v2',
                 source_loss=True, retrieval_clock=captured_at + round(10*365.25*86400),
                 embedding_config=memory.embeddings_runtime_config(),
                 all_retrieval_statuses=sorted({p['retrieval_status'] for a in answers for p in a['packs']}))
@@ -385,6 +436,8 @@ def main():
     parser.add_argument('--consolidate', action='store_true', help='Stage 2 only: run three consolidation passes')
     parser.add_argument('--corpus', type=Path, default=REPO_ROOT/'docs/benchmarks/durable-recall-cases.json',
                         help='Fictional evaluation corpus; expectations never enter model prompts')
+    parser.add_argument('--reuse-capture', type=Path,
+                        help='Reuse frozen fictional formation; new recall evidence and costs stay separate')
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
@@ -410,11 +463,25 @@ def main():
     conditions['rerank_provider'] = configuration.rerank_provider_default()
     conditions['retrieval_profile'] = configuration.read_env_key('HMK_RETRIEVAL_PROFILE') or 'general'
     conditions['retrieval_sha256'] = hashlib.sha256(Path(configuration.__file__).read_bytes()).hexdigest()
+    conditions['recall_contract'] = 'five-field-evidence/v1'
+    if args.reuse_capture:
+        args.reuse_capture = args.reuse_capture.resolve()
+        source = json.loads((args.reuse_capture/'conditions.json').read_text())
+        for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
+                      'embedding_config','retrieval_profile','retrieval_sha256','rerank_provider'):
+            if source[field] != conditions[field]:
+                parser.error('reused formation must have identical frozen sources, guidance and configuration')
+        for name in ('baseline','proposed'):
+            capture = json.loads((args.reuse_capture/name/'capture.json').read_text())
+            if [c['case_id'] for c in capture] != [c['id'] for c in corpus['cases']]:
+                parser.error('reused formation is incomplete; preserve its pending work')
+        conditions['formation_origin_conditions'] = source
     if args.resume:
         previous = json.loads((args.out/'conditions.json').read_text())
         for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
                       'consolidate', 'retrieval_threshold', 'pack_budget', 'pack_limit',
-                      'embedding_config', 'rerank_provider', 'retrieval_profile', 'retrieval_sha256'):
+                      'embedding_config', 'rerank_provider', 'retrieval_profile', 'retrieval_sha256',
+                      'recall_contract'):
             if previous[field] != conditions[field]:
                 parser.error('resume cannot change frozen model, guidance or fixtures')
         resumed = previous.get('resumes', [])

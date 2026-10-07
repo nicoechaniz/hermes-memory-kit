@@ -76,7 +76,9 @@ def test_failed_plans_resume_without_losing_capture_or_pending_question(pilot, t
     assert len(pending_before['plans']) == 2
     assert len(json.loads((out/'capture.json').read_text())) == 1
     args.resume = True
-    responses = iter([{'queries':[], 'expand_ids':[1]}, {'answer':'Tavi', 'used_ids':[1]}])
+    responses = iter([{'queries':[], 'expand_ids':[1]}, {'answer':{
+        'identification':'Tavi', 'context':'A label discussion', 'meaning':'Proposed labels',
+        'outcome':'Unknown', 'limits':'No other evidence'}, 'used_ids':[1]}])
     pilot.run_variant('test', '', args, corpus)
     answer = json.loads((out/'answers.json').read_text())[0]
     assert answer['packs'] == pending_before['packs']
@@ -84,3 +86,14 @@ def test_failed_plans_resume_without_losing_capture_or_pending_question(pilot, t
     assert not (out/'pending-recall.json').exists()
     assert not (out/'dream.json').exists()
     assert len(json.loads((out/'selected-canon.json').read_text())) == 1
+
+
+def test_grounded_answer_requires_context_and_actual_visible_ids(pilot):
+    with pytest.raises(ValueError):
+        pilot.grounded_answer({'answer':'Tavi','used_ids':[1]}, {1})
+    answer = {'answer':{'identification':'Unknown','context':'Unknown','meaning':'Unknown',
+              'outcome':'Unknown','limits':'No supporting memory'}, 'used_ids':[]}
+    assert pilot.grounded_answer(answer, set()) == answer
+    answer['used_ids'] = [99]
+    with pytest.raises(ValueError):
+        pilot.grounded_answer(answer, {1})
