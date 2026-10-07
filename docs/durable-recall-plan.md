@@ -32,6 +32,14 @@ complete HMK adapter with controlled coexistence in
 local persistence and its external-memory import are not yet evidence of a
 being-shared lifelong store or a configurable HMK backend.
 
+The [2026-10-07 Mariano research comparison](mariano-memory-research-review.md)
+adds inspected April/July designs from four authorized live research collections.
+It connects typed memory, historical changes, coherent publication and layered
+synthesis to this plan. Its source ledger separates document age, current access
+and editorial status; the intended recent/curated roles of the two mounted views
+remain to qualify. Fixed hardware, scoring and lifecycle recommendations require
+fresh evidence before adoption.
+
 ## First delivery
 
 The first delivery adds:
@@ -253,6 +261,12 @@ episodes. Validate and apply through supported writers; preserve original
 meaning and corrections. Inferred patterns, imagined possibilities and generated
 illustrations remain attributed as such. Skill refinements belong in maintained
 packages with relevant functional evidence; memory never grants capability.
+
+Consolidation links supporting episodes without treating the act of summarizing
+them as a factual correction. Keep meaningful encounters reachable by ordinary
+past-event queries after a higher-level synthesis exists. Minimum source counts
+for generalizations and cluster size for a batch are not capture prerequisites:
+a single significant encounter may need immediate durable selection.
 
 Separate durable persistence/lexical indexing from embedding readiness. Retry
 vectors, skill proposals and diary rendering independently and report actual

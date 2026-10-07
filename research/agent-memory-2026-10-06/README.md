@@ -69,3 +69,11 @@ provided by the human. Codex already has a cross-session memory lifecycle in
 addition to session continuity. The addendum reuses issues #11/#12 and leaves the
 five raw reports and their checksum record unchanged. It is source inspection,
 not a completed native/HMK model experiment or a live memory rollout.
+
+The [2026-10-07 Mariano research comparison](../../docs/mariano-memory-research-review.md)
+adds seven selected source documents from four authorized research collections
+after read-only receiving access was independently qualified. It distinguishes
+their April/July content dates from October access and compares the designs with
+lifelong source-loss requirements. The intended recent/curated source roles remain
+to qualify. This additive review preserves the five original raw reports and
+does not change the public-source scope of the closed October investigation.
