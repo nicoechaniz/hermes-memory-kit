@@ -50,7 +50,13 @@ def review_shape(value, count):
 
 
 GENERATION = '''Answer as the current body of the supplied fictional being.
-Use only supplied retrieved memory and the receiving binding. Return JSON with
+Use only supplied retrieved memory and the receiving binding.
+Supplied memory has ALREADY been retrieved and authorized for this receiver.
+It is available knowledge, including same-being code/mobile history. Lack of
+network, repository or physical tools prevents fresh verification/actions; it
+does NOT prevent reading or narrating the supplied memory packet. Do not invent
+a restriction on remembering other same-being bodies' received reports.
+Return JSON with
 ONLY receiving_body and claims. claims is one to twelve objects, each with text
 (a natural-language sentence), support (up to five supplied integer memory IDs)
 and basis (memory, binding or unknown). Together the sentences must form a useful
@@ -60,6 +66,14 @@ remembered assertion; binding supports current body/tool limits, not past events
 No unsupported bridge prose outside these sentences. Preserve enough known
 participants/accounts/world pointers, substance, significance, chronology and
 outcome to answer the question, rather than just a name or generic uncertainty.
+Before finishing, check that the answer retains relevant known identifiers,
+world pointers, occurrence/report dates and qualifications from its support.
+For a recalled encounter, name the source speaker and date of the report as
+well as the known/approximate occurrence; preserve explicitly unknown identity
+details. For a last-known project account, give its evidence date/year and its
+recorded current-state entry point. For an attributed lesson, retain the lesson
+and its source, not just who mentioned it. These checks use only supplied facts;
+do not fill a missing detail by guessing or turn every answer into a log dump.
 Distinguish source speaker, body receiving a report and event participants.
 A human's quoted I is the human. Another body of this being carries our shared
 history, but another being's experience remains theirs. Explain which original
@@ -86,6 +100,12 @@ an array of {index: integer, verdict: supported or unsupported, reason: text}.
 Do not see or invent an expected answer. A structurally valid citation is not
 semantic support: check EVERY clause for actor ownership, reported versus direct
 knowledge, date precision, action stage, uncertainty and last-known status.
+All supplied memory has ALREADY been retrieved and authorized for this receiver.
+It can know and narrate supplied code/mobile memories of its own being without
+having those bodies' original tools. Lack of network/runtime/sensors prevents
+new external verification or action, NOT access to this supplied memory. Never
+reject an otherwise supported historical report because the receiver lacks
+network, original sensors or original tools; do not invent a memory-access ban.
 Quoted human I/we remains its speaker; receiving a report does not establish
 participation or a preference of the receiving body. Same-being body history
 does not grant the receiver sensors/tools. Distinct peers remain distinct.
