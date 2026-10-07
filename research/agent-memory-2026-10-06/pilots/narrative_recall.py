@@ -72,7 +72,7 @@ def source_blocks(text, depth=0):
                        else 'distinct peer in attributed communication' if
                        role == 'Attributed peer communication' else 'source tool' if
                        role == 'tool_response' else 'attributed originating body' if
-                       role in {'foreground_work', 'action', 'embodied_observation'} else 'unknown')
+                       role in {'foreground_work', 'foreground_action', 'action', 'embodied_observation'} else 'unknown')
             block.update(speaker=speaker, receiving_body=body, reported_at=date,
                          channel=role, source=source)
         blocks.append(block)
@@ -307,6 +307,11 @@ its own proof. The claim verdict is unsupported if ANY assertion is unsupported.
 Use short proof quotations (at most 400 characters each), including the relevant
 qualification. Do not copy an entire record when a passage suffices. Escape all
 embedded quotation marks and newlines correctly in JSON strings.
+An assertion is a proposition, not an isolated word. Include connecting words
+in the neighboring proposition's span; do not assign separate factual verdicts
+to articles or conjunctions. The candidate is allowed to paraphrase: its words
+NEED NOT occur in the source. Only proof.quote must occur verbatim in the source;
+span occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.
 Check coverage of the question AND relevant known identifiers/world pointers,
 originating roles, event/report dates and precision, substance/significance,
 actual outcomes and limits. Do not require unrelated facts, invent expected

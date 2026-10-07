@@ -1,0 +1,182 @@
+{
+  "fictional": true,
+  "query": "Did Ren get the annotated chart we tried to pass on?",
+  "clock": 2106956370,
+  "formation": "Preserved v1 baseline fictional selection; no recapture or noise admission.",
+  "before": {
+    "primary_ids": [
+      12,
+      11
+    ],
+    "neighbor_ids": [],
+    "expanded_ids": [
+      12,
+      11
+    ]
+  },
+  "after": {
+    "query": "Did Ren get the annotated chart we tried to pass on?",
+    "null_retrieval": false,
+    "reason": "ok",
+    "threshold": 0.4,
+    "budget_tokens": 1500,
+    "used_tokens_estimate": 1181,
+    "items": [
+      {
+        "id": 12,
+        "shelf": "episodes",
+        "book_title": "authorized passing our annotated chart to Ren",
+        "title": "authorized passing our annotated chart to Ren",
+        "spr": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+        "source_path": null,
+        "origin": {
+          "kind": "capture",
+          "source": {
+            "evidence": [
+              "known-collaboration",
+              "chart-attempt",
+              "chart-result"
+            ],
+            "mode": "reported",
+            "source_event_id": "fixture:failed-chart-handover",
+            "source_instance": "fixture:body:code",
+            "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+            "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+          }
+        },
+        "record_uid": "6bde29e5-7e20-42fe-a738-ea4ac47a375f",
+        "revision": 1,
+        "engram_type": "episodic",
+        "event_ts": null,
+        "actor": null,
+        "created_at": 1791380331,
+        "updated_at": 1791380331,
+        "location_json": null,
+        "citation": "[mem:12]",
+        "score": 0.85,
+        "lexical_score": 0.7325,
+        "lexical_relevance": 0.85,
+        "semantic_score": 0.55475,
+        "neighbors": [
+          {
+            "id": 11,
+            "shelf": "episodes",
+            "book_title": "helped us design TideAtlas map legends",
+            "title": "helped us design TideAtlas map legends",
+            "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+            "source_path": null,
+            "origin": {
+              "kind": "capture",
+              "source": {
+                "evidence": [
+                  "known-collaboration",
+                  "chart-attempt",
+                  "chart-result"
+                ],
+                "mode": "reported",
+                "source_event_id": "fixture:failed-chart-handover",
+                "source_instance": "fixture:body:code",
+                "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+              }
+            },
+            "record_uid": "fac48b04-59f7-4b7f-92c9-22fe9e4939fb",
+            "revision": 1,
+            "engram_type": "episodic",
+            "event_ts": null,
+            "actor": null,
+            "created_at": 1791380331,
+            "updated_at": 1791380331,
+            "location_json": null,
+            "citation": "[mem:11]",
+            "direction": "shared-source",
+            "link_type": "same-capture-source",
+            "weight": null,
+            "note": "Same attributed capture source/version; navigation only, not independent corroboration."
+          },
+          {
+            "id": 13,
+            "shelf": "episodes",
+            "book_title": "Document object chart-52 created",
+            "title": "Document object chart-52 created",
+            "spr": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+            "source_path": null,
+            "origin": {
+              "kind": "capture",
+              "source": {
+                "evidence": [
+                  "known-collaboration",
+                  "chart-attempt",
+                  "chart-result"
+                ],
+                "mode": "reported",
+                "source_event_id": "fixture:failed-chart-handover",
+                "source_instance": "fixture:body:code",
+                "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+                "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+              }
+            },
+            "record_uid": "97972338-0d6f-4fde-b997-2bc4196b8b48",
+            "revision": 1,
+            "engram_type": "episodic",
+            "event_ts": null,
+            "actor": null,
+            "created_at": 1791380331,
+            "updated_at": 1791380331,
+            "location_json": null,
+            "citation": "[mem:13]",
+            "direction": "shared-source",
+            "link_type": "same-capture-source",
+            "weight": null,
+            "note": "Same attributed capture source/version; navigation only, not independent corroboration."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "shelf": "episodes",
+        "book_title": "helped us design TideAtlas map legends",
+        "title": "helped us design TideAtlas map legends",
+        "spr": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+        "source_path": null,
+        "origin": {
+          "kind": "capture",
+          "source": {
+            "evidence": [
+              "known-collaboration",
+              "chart-attempt",
+              "chart-result"
+            ],
+            "mode": "reported",
+            "source_event_id": "fixture:failed-chart-handover",
+            "source_instance": "fixture:body:code",
+            "source_version": "f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88",
+            "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+          }
+        },
+        "record_uid": "fac48b04-59f7-4b7f-92c9-22fe9e4939fb",
+        "revision": 1,
+        "engram_type": "episodic",
+        "event_ts": null,
+        "actor": null,
+        "created_at": 1791380331,
+        "updated_at": 1791380331,
+        "location_json": null,
+        "citation": "[mem:11]",
+        "score": 0.5,
+        "lexical_score": 0.45,
+        "lexical_relevance": 0.5,
+        "semantic_score": 0.272133,
+        "neighbors": []
+      }
+    ],
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3-embed-1b",
+    "retrieval_status": "ok",
+    "backend_errors": [],
+    "score_space": "hybrid"
+  },
+  "result": "Selected failed tool result chapter 13 is now visible as navigation from the named attempt, within the unchanged 1500-token pack budget.",
+  "cost_limit": "This focused reader check did not instrument embedding token usage. It made no narration/review call; unknown provider token usage is not zero.",
+  "qualification": "Focused retrieval regression only, not natural or three-pass stage-two qualification."
+}

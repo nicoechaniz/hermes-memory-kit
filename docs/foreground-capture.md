@@ -115,6 +115,23 @@ permitted; readiness does not prove answer quality. Applied/omitted events purge
 temporary source payloads. Compact hashes/outcomes remain; snapshots have their
 own retention policy.
 
+## Capture-fragment navigation
+
+One capture decision can select several records: for example, an attributed
+collaborator account, an authorized handover attempt and a separate tool result.
+The latter may not repeat the person's name. Pack/expand offer at most three
+additional navigation neighbors when retained native capture records share the
+same nonempty source instance, event ID, source version and selection version.
+This uses retained provenance; no payload is reingested and no links or canon
+are written. Explicit authored links take precedence over a duplicate target.
+
+These neighbors are marked `same-capture-source`, with an explicit note that
+they are navigation rather than independent corroboration. Similar names,
+missing provenance, other versions/instances or file/signed-projection sources
+do not create this group. The ordinary pack budget still includes the returned
+metadata and hints. A selected attempt can therefore lead to its selected tool
+result without claiming success, receipt, identity equivalence or current truth.
+
 ## Dream proposals
 
 Select native episodes, inspect the full preview and propose accounts/learnings.
