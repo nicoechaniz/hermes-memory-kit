@@ -774,7 +774,7 @@ def add_text(shelf_name, title, raw, tags=None, importance=0.5, source_path=None
             embed_disabled = 1
             embed_disable_reason = f"source_kind={source_kind}"
         if embed_disabled == 0 and scan_content_for_secrets:
-            secret_reason = scan_content_for_secrets(raw)
+            secret_reason = scan_content_for_secrets(f'{title}\n{spr}\n{raw}')
             if secret_reason:
                 embed_disabled = 1
                 embed_disable_reason = secret_reason
@@ -2230,7 +2230,7 @@ def update_chapter(chapter_id, content=None, title=None, tags=None, importance=N
         embed_disabled_new = old.get("embed_disabled", 0)
         embed_disable_reason_new = old.get("embed_disable_reason")
         if content_changed and scan_content_for_secrets:
-            secret_reason = scan_content_for_secrets(new_raw)
+            secret_reason = scan_content_for_secrets(f'{new_title}\n{new_spr}\n{new_raw}')
             if secret_reason:
                 embed_disabled_new = 1
                 embed_disable_reason_new = secret_reason

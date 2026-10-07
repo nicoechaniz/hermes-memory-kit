@@ -241,7 +241,7 @@ errors propagate. ENGRAM reuses one query embedding and only records final picks
 Budget estimates include source and neighbor metadata. Provider previews retain
 attribution and distinguish unavailable retrieval from absence.
 
-The complete suite passes 176 tests. The original diagnostic runner now observes
+The complete suite passes 177 tests. The original diagnostic runner now observes
 preserved WAL contents, acquired skills and distinct names/events; maintained
 episodic metadata, incoming links, historical lookup, indexed backfill and
 qualified outage/relevance behavior. These are synthetic mechanical results.

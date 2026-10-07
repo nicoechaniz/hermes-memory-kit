@@ -114,8 +114,9 @@ For native records with today's API:
 2. Take and verify the deployment's required database backup before mutation.
 3. Add an independently intelligible episode with a unique title when new
    experience or a correction deserves a historical record.
-4. Update the existing current account by chapter ID only after any meaningful
-   history that would be lost is preserved. Retain uncertainty and a dated
+4. Update the current account by chapter ID and observed expected revision.
+   Native pre-images are retained, but meaningful encounters still deserve
+   independently intelligible episodes. Retain uncertainty and a dated
    “last observed” qualifier.
 5. Add explicit links for supported relations, with a useful note. Existing
    `chapter_links` accepts types such as `participated_in`, `concerns`,
@@ -126,10 +127,12 @@ For native records with today's API:
    provider when permitted, and test recall by a likely question. A stored row
    alone does not prove that retrieval can find it.
 
-`add-text` currently replaces chapters under a matching same-shelf book title,
-which can also remove links. `update` replaces content in place and has no native
-revision ledger. Unique episode titles and preserved history are essential;
-neither command should be described as automatically retaining prior versions.
+Single-chapter `add-text` replacement and `update` retain stable native IDs,
+links and searchable revision pre-images. Multi-chapter replacement requires
+explicit updates. Use `--if-revision` for expected-version writes; retrieve again
+after a conflict. Use `history --id` or `history-search --query` for earlier
+accounts and qualify historical results. Current search remains current-only.
+Explicit native deletion removes its revisions too; backups are separate.
 
 Protected Matrix projections must be corrected through their authoritative
 event path, not these native steps. LLM Wiki indexes must be refreshed from their
@@ -143,11 +146,11 @@ proposal, reason for interest and result in ordinary language. Add source and
 provenance after that account. A URL, native-session ID or “see the discussion”
 alone cannot preserve an experience when the source is gone.
 
-HMK's current `simple_spr` uses the first eight nonempty lines and truncates plain
-lines to 140 characters; the provider's preview is shorter still. Lead with the
-experience rather than a metadata header. Check the resulting SPR, full expanded
-record and embedding input when a case fails. Do not assume the preview alone
-contains every detail.
+Short selected records keep their full recall text. For long sources, provide an
+authored `--summary` preserving recognition and meaning. Automatic long previews
+are marked incomplete. Provider previews retain the selected SPR and attribution;
+expand for missing details. Check the SPR, full record and embedding input when
+a case fails. Embedding input remains bounded and is not a full-document reader.
 
 Distinguish occurrence time, report time and recording time. Use explicit
 approximations or “unknown” when needed; database creation time is not evidence
