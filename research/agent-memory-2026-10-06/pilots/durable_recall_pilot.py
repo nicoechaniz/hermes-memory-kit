@@ -571,8 +571,23 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
                         question=query, evidence=list(evidence.values())), ensure_ascii=False))]
             for attempt in range(2):
                 if getattr(args, 'narrative', False):
-                    answer = narrative_recall.answer(args.model, query, evidence, receiving_binding,
-                        trace, pending, pending_path, chat, save)
+                    try:
+                        answer = narrative_recall.answer(args.model, query, evidence, receiving_binding,
+                            trace, pending, pending_path, chat, save)
+                    except narrative_recall.NarrativeRejected:
+                        if not getattr(args, 'complete_diagnostics', False):
+                            raise
+                        # Retain the actual candidate/review, not an empty fallback or pass.
+                        state = pending['narrative']
+                        candidate = state['generations'][-1]
+                        narrative_recall.validate(candidate, evidence, receiving_binding)
+                        failed = out/'rejected-recall'
+                        failed.mkdir(exist_ok=True)
+                        save(failed/(digest([case['id'], query])+'.json'), pending)
+                        answer = dict(candidate, text=' '.join(c['text'] for c in candidate['claims']),
+                            used_ids=list(dict.fromkeys(cid for c in candidate['claims'] for cid in c['support'])),
+                            semantic_review=state['reviews'][-1]['review'], review_is_proof=False,
+                            operational_status='rejected', error=state['error'])
                 else:
                     answer = chat(args.model, answer_messages, trace)
                 pending.setdefault('answer_attempts', []).append(answer)
@@ -657,6 +672,7 @@ reflection. Keep the same account's purpose rather than creating more events.'''
                 llm_calls=len(trace), schema='hmk-synthetic-model-pilot/v2',
                 source_loss=True, retrieval_clock=captured_at + round(10*365.25*86400),
                 embedding_config=memory.embeddings_runtime_config(),
+                rejected_narratives=sum(a['answer'].get('operational_status') == 'rejected' for a in answers),
                 all_retrieval_statuses=sorted({p['retrieval_status'] for a in answers for p in a['packs']}))
 
 
@@ -685,6 +701,8 @@ def main():
                         help='Generate natural narrative with clause support and bounded semantic review')
     parser.add_argument('--narrative-reasoning-effort', choices=('low','high'), default='high',
                         help='Receiving narration/review effort; formation and planning remain low')
+    parser.add_argument('--complete-diagnostics', action='store_true',
+                        help='Archive rejected narrative candidates and evaluate remaining questions; never count rejection as success')
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
@@ -715,9 +733,10 @@ def main():
     conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
     if args.narrative:
-        conditions['recall_contract'] = 'natural-claims/v4-source-anchors'
+        conditions['recall_contract'] = 'natural-claims/v6-faceted-diagnostics'
         conditions['narrative_reasoning_effort'] = args.narrative_reasoning_effort
         conditions['narrative_sha256'] = hashlib.sha256(Path(narrative_recall.__file__).read_bytes()).hexdigest()
+    conditions['complete_diagnostics'] = args.complete_diagnostics
     conditions['recall_cases'] = args.recall_case
     conditions['review_capture'] = args.review_capture
     conditions['source_blocks'] = args.source_blocks
@@ -738,7 +757,7 @@ def main():
         for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
                       'consolidate', 'retrieval_threshold', 'pack_budget', 'pack_limit',
                       'embedding_config', 'rerank_provider', 'retrieval_profile', 'retrieval_sha256',
-                      'recall_contract', 'recall_cases', 'review_capture', 'source_blocks'):
+                      'recall_contract', 'recall_cases', 'review_capture', 'source_blocks', 'complete_diagnostics'):
             if previous.get(field, False) != conditions[field]:
                 parser.error('resume cannot change frozen model, guidance or fixtures')
         if args.narrative and any(previous.get(field) != conditions[field]

@@ -10,9 +10,24 @@ spec=importlib.util.spec_from_file_location('narrative_fixture',
 nr=importlib.util.module_from_spec(spec);spec.loader.exec_module(nr)
 
 
+def account(text, support):
+    claims=[{'text':text, 'support':support, 'basis':'memory', 'facet':'outcome'}]
+    for facet in ('identification','context','meaning','limits'):
+        claims.append({'text':'No further detail is supplied in this test packet.',
+                       'support':[], 'basis':'unknown', 'facet':facet})
+    return {'receiving_body':'voice', 'claims':claims}
+
+
+def verdict(status, reason, missing=None):
+    return {'missing':missing or [], 'claims':[
+        {'index':index,'verdict':status if index==0 else 'supported',
+         'reason':reason if index==0 else 'Scoped to this test packet.'} for index in range(5)]}
+
+
+
 def test_claim_support_and_complete_review_are_required():
     body={'receiving_body':'voice'}
-    candidate={'receiving_body':'voice','claims':[{'text':'Jo was invited.', 'support':[1],'basis':'memory'}]}
+    candidate=account('Jo was invited.',[1])
     assert nr.validate(candidate,{1:{}},body)==candidate
     candidate['claims'][0]['support']=[99]
     with pytest.raises(ValueError):nr.validate(candidate,{1:{}},body)
@@ -24,10 +39,10 @@ def test_claim_support_and_complete_review_are_required():
 
 def test_false_nonreceipt_is_revised_and_cost_phases_and_originals_stay(tmp_path):
     body={'receiving_body':'voice'}
-    unsupported={'receiving_body':'voice','claims':[{'text':'Jo did not receive it.','support':[1],'basis':'memory'}]}
-    corrected={'receiving_body':'voice','claims':[{'text':'Delivery failed; no reply was observed.','support':[1],'basis':'memory'}]}
-    responses=iter([unsupported,{'missing':[], 'claims':[{'index':0,'verdict':'unsupported','reason':'Unobserved receipt is not non-receipt.'}]},
-        corrected,{'missing':[], 'claims':[{'index':0,'verdict':'supported','reason':'Preserves observed failure and uncertainty.'}]}])
+    unsupported=account('Jo did not receive it.',[1])
+    corrected=account('Delivery failed; no reply was observed.',[1])
+    responses=iter([unsupported,verdict('unsupported','Unobserved receipt is not non-receipt.'),
+        corrected,verdict('supported','Preserves observed failure and uncertainty.')])
     phases=[];trace=SimpleNamespace(phase='recall')
     def chat(model,messages,trace):
         assert 'SECRET_RUBRIC' not in json.dumps(messages)
@@ -36,7 +51,7 @@ def test_false_nonreceipt_is_revised_and_cost_phases_and_originals_stay(tmp_path
     save=lambda path,value:path.write_text(json.dumps(value))
     value=nr.answer('fixture','Did Jo get it?',{1:{'text':'Delivery failed; no reply observed.'}},
         body,trace,pending,path,chat,save)
-    assert value['text']==corrected['claims'][0]['text']
+    assert value['text'].startswith(corrected['claims'][0]['text'])
     assert value['review_is_proof'] is False
     assert pending['narrative']['generations'][0]==unsupported
     assert phases==['narrative_generation','narrative_review','narrative_revision','narrative_review']
@@ -45,17 +60,18 @@ def test_false_nonreceipt_is_revised_and_cost_phases_and_originals_stay(tmp_path
     assert nr.answer('fixture','Did Jo get it?',{1:{}},body,trace,pending,path,chat,save)==value
 
 
-def test_twice_unsupported_narrative_preserves_pending_instead_of_claiming_success(tmp_path):
+def test_bounded_unsupported_narrative_preserves_pending_instead_of_claiming_success(tmp_path):
     body={'receiving_body':'voice'}
-    candidate={'receiving_body':'voice','claims':[{'text':'Jo received it.','support':[1],'basis':'memory'}]}
-    responses=iter([candidate,{'missing':[], 'claims':[{'index':0,'verdict':'unsupported','reason':'No receipt.'}]},
-                    candidate,{'missing':[], 'claims':[{'index':0,'verdict':'unsupported','reason':'Still no receipt.'}]}])
+    candidate=account('Jo received it.',[1])
+    responses=iter([candidate,verdict('unsupported','No receipt.'),
+                    candidate,verdict('unsupported','Still no receipt.'),
+                    candidate,verdict('unsupported','Still no receipt.')])
     pending={};path=tmp_path/'pending.json';trace=SimpleNamespace(phase='recall')
     with pytest.raises(ValueError,match='remained unsupported'):
         nr.answer('fixture','Did Jo get it?',{1:{}},body,trace,pending,path,
                   lambda *args:next(responses),lambda path,value:path.write_text(json.dumps(value)))
     saved=json.loads(path.read_text())
-    assert len(saved['narrative']['generations'])==2
+    assert len(saved['narrative']['generations'])==3
     assert 'accepted' not in saved['narrative']
     assert trace.phase=='recall'
 
@@ -75,15 +91,14 @@ def test_nested_envelopes_keep_human_speaker_separate_from_receiving_mobile_body
 
 def test_supported_but_incomplete_answer_is_revised_without_hidden_rubric(tmp_path):
     body={'receiving_body':'voice'}
-    first={'receiving_body':'voice','claims':[{'text':'Reed told us.','support':[1],'basis':'memory'}]}
-    final={'receiving_body':'voice','claims':[{'text':'Reed reported a reversed connector; we were not there.','support':[1],'basis':'memory'}]}
-    responses=iter([first,{'missing':['Reported connector lesson.'], 'claims':[
-        {'index':0,'verdict':'supported','reason':'Supported but incomplete.'}]},
-        final,{'missing':[], 'claims':[{'index':0,'verdict':'supported','reason':'Includes lesson.'}]}])
+    first=account('Reed told us.',[1])
+    final=account('Reed reported a reversed connector; we were not there.',[1])
+    responses=iter([first,verdict('supported','Supported but incomplete.',['Reported connector lesson.']),
+        final,verdict('supported','Includes lesson.')])
     value=nr.answer('fixture','What happened?',{1:{'text':'Reed reported a reversed connector; you were not there.'}},
         body,SimpleNamespace(phase='recall'),{},tmp_path/'pending.json',
         lambda *args:next(responses),lambda p,v:p.write_text(json.dumps(v)))
-    assert value['text']==final['claims'][0]['text']
+    assert value['text'].startswith(final['claims'][0]['text'])
 
 
 def test_literal_source_anchors_detect_omitted_report_date_and_current_state_pointer():
