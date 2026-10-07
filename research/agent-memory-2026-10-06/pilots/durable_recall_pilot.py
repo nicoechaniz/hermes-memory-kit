@@ -542,6 +542,11 @@ the question: participant identifiers and world pointers; source/body and dates;
 substance and significance; actual action stages/results; uncertainty, reported
 knowledge, corrections and last-known versus current state. Empty arrays mean
 unsupported in the supplied evidence, not that an event never happened.
+An explicit unknown or uncertainty in a relevant source is useful evidence:
+select that source for limits and context rather than dropping its known
+participant, attribution and qualifications merely because the requested
+detail is unknown. Empty support is appropriate when no supplied source
+supports or explicitly qualifies the requested fact.
 used_ids must be the union of the five facets. The adapter returns the selected
 exact blocks, keeping speaker attribution and qualifications, without adopting
 a quoted human's I/we as the receiving body or inventing effects. Current body
@@ -682,7 +687,7 @@ def main():
     conditions['rerank_provider'] = configuration.rerank_provider_default()
     conditions['retrieval_profile'] = configuration.read_env_key('HMK_RETRIEVAL_PROFILE') or 'general'
     conditions['retrieval_sha256'] = hashlib.sha256(Path(configuration.__file__).read_bytes()).hexdigest()
-    conditions['recall_contract'] = ('five-field-support/v5-null-refinement' if args.evidence_answers
+    conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
     conditions['recall_cases'] = args.recall_case
     conditions['review_capture'] = args.review_capture
