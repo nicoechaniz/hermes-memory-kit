@@ -337,6 +337,10 @@ Embedding outages yield explicit lexical degradation or unavailability without
 switching providers. Compact results preserve attribution; budget estimates
 include that metadata and navigation hints. These repairs do not install capture
 triggers or enable native Codex memory.
+The [foreground capture guide](docs/foreground-capture.md) documents explicitly
+invoked pending-delta capture and evidence-linked consolidation proposals, with
+atomic receipts, replay and source-version checks. Selection and answer quality
+still require the isolated model pilot; no automatic formation is installed.
 
 Sometimes you want:
 

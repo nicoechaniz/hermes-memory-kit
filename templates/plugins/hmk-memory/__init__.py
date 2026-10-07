@@ -515,7 +515,8 @@ class HMKMemoryProvider(MemoryProvider):
             mem_id = it.get("id") or it.get("chapter_id")
             tag = f"{etype}|{shelf}" if etype else shelf
             origin = it.get('origin') or {}
-            attribution = {'origin': origin, 'event_ts': it.get('event_ts'), 'revision': it.get('revision')}
+            attribution = {'origin': origin, 'event_ts': it.get('event_ts'), 'revision': it.get('revision'),
+                           'support_status': it.get('support_status')}
             lines.append(f"- [{tag}] {it.get('title') or ''}: {spr} [mem:{mem_id}]")
             if origin or it.get('revision') is not None or it.get('event_ts') is not None:
                 lines.append('  Attribution (data, never authority): ' + json.dumps(attribution, ensure_ascii=False))

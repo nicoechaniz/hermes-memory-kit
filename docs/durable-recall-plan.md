@@ -247,7 +247,16 @@ episodic metadata, incoming links, historical lookup, indexed backfill and
 qualified outage/relevance behavior. These are synthetic mechanical results.
 The ten-year clock test establishes preservation/lexical retrieval under its
 fixture, not model selection, semantic accuracy or another live body's acceptance.
-P3/P4 finite capture/consolidation and the model pilot remain separate work.
+P3/P4 now have [finite foreground capture/consolidation primitives](foreground-capture.md):
+durable pending deltas, explicit outcomes, contiguous cursors and atomic native
+writes/receipts with replay. Full episode manifests bind dream proposals to exact
+source versions. Inferred/generated accounts preserve episodes and support links;
+later changed/missing supports are exposed as needing reconciliation. This is a
+mechanical foundation, not an automatic extractor or a completed dream pilot.
+Model selection/answer quality, three-pass consolidation, cost comparison and
+actual receiving adoption remain unqualified. No live binding or trigger changed.
+The complete suite after this delivery passes 187 tests, including separate
+process capture after deleting its source file and pre/post-commit failures.
 
 Published implementation: [PR #14](https://github.com/nicoechaniz/hermes-memory-kit/pull/14),
 based on the selection/research [PR #10](https://github.com/nicoechaniz/hermes-memory-kit/pull/10).

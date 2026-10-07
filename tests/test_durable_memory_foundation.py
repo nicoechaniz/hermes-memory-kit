@@ -301,6 +301,195 @@ def test_native_upgrade_snapshot_precedes_ddl_and_recovers_legacy_record(mc):
     assert mc.expand(cid)['record_uid']
 
 
+def event(sequence=1, content='Mara proposed a replay queue.', version='1'):
+    return {'stream_id': 'fixture:issue', 'sequence': sequence, 'event_id': f'comment:{sequence}',
+            'source_version': version, 'content': content,
+            'metadata': {'mode': 'reported', 'source_instance': 'fixture:body'}}
+
+
+def selection(title='Mara encounter'):
+    return {'outcome': 'applied', 'reason': 'Significant proposal in our own project',
+            'selection_version': 'fixture:policy:v1', 'records': [
+                {'key': 'episode', 'operation': 'add', 'shelf': 'episodes', 'title': title,
+                 'raw': 'Mara proposed a replay queue for HarborMesh in an issue; it may enable offline work. Outcome unknown.',
+                 'importance': 0.9}]}
+
+
+def test_capture_survives_source_loss_and_replay_without_duplicate_events(mc):
+    from capturectl import CaptureLedger
+    ledger = CaptureLedger(mc)
+    staged = ledger.stage(event())
+    assert staged['state'] == 'pending' and staged['processed_through'] == 0
+    # A fresh reader gets durable pending source text without the original session.
+    restored = CaptureLedger(mc)
+    assert restored.pending('fixture:issue')[0]['event']['content'] == event()['content']
+    decision = selection()
+    receipt = restored.assess(staged['event_key'], decision)
+    assert receipt['processed_through'] == 1 and receipt['state'] == 'applied'
+    assert receipt['records']['episode']['embedding_status'] == 'pending'
+    assert receipt['records']['episode']['lexical_ready']
+    assert receipt == restored.assess(staged['event_key'], decision)
+    assert receipt == restored.stage(event())
+    assert restored.pending('fixture:issue') == []
+    assert len(mc.search('HarborMesh')) == 1
+    assert mc.history(receipt['records']['episode']['chapter_id']) == []
+
+
+def test_capture_does_not_skip_missing_deferred_failed_events_or_retain_noise(mc):
+    from capturectl import CaptureLedger
+    ledger = CaptureLedger(mc)
+    later = ledger.stage(event(2))
+    assert ledger.assess(later['event_key'], selection())['processed_through'] == 0
+    first = ledger.stage(event(1, 'Working status'))
+    omitted = {'outcome': 'omitted', 'reason': 'mechanical-status', 'selection_version': 'fixture:policy:v1'}
+    assert ledger.assess(first['event_key'], omitted)['processed_through'] == 2
+    con = mc.connect()
+    assert con.execute('SELECT payload_json FROM capture_events WHERE event_key=?', (first['event_key'],)).fetchone()[0] is None
+    con.close()
+    third = ledger.stage(event(3))
+    assert ledger.assess(third['event_key'], dict(omitted, outcome='deferred'))['processed_through'] == 2
+    with pytest.raises(ValueError, match='different content'):
+        ledger.stage(event(3, 'Different source under reused version'))
+    assert len(ledger.pending('fixture:issue')) == 1
+
+
+@pytest.mark.parametrize('boundary', ['before_commit','after_commit'])
+def test_capture_failure_boundaries_are_atomic_and_replayable(mc, boundary):
+    from capturectl import CaptureLedger
+    ledger = CaptureLedger(mc)
+    key = ledger.stage(event())['event_key']
+    def crash(point):
+        if point == boundary:
+            raise RuntimeError('synthetic interruption')
+    with pytest.raises(RuntimeError):
+        ledger.assess(key, selection(), _fault_hook=crash)
+    assert bool(mc.search('HarborMesh')) == (boundary == 'after_commit')
+    receipt = CaptureLedger(mc).assess(key, selection())
+    assert receipt['processed_through'] == 1
+    assert len(mc.search('HarborMesh')) == 1
+
+
+def test_capture_batch_rolls_back_prior_writes_on_stale_update(mc):
+    from capturectl import CaptureLedger
+    target = mc.add_text('library', 'HarborMesh', 'Current account')
+    mc.update_chapter(target, content='Fresh account')
+    ledger = CaptureLedger(mc)
+    key = ledger.stage(event())['event_key']
+    decision = selection()
+    decision['records'].append({'key':'account', 'operation':'update', 'chapter_id':target,
+                                'expected_revision':1, 'raw':'Stale account'})
+    with pytest.raises(SystemExit, match='revision conflict'):
+        ledger.assess(key, decision)
+    assert not mc.search('Mara')
+    assert mc.expand(target)['raw'] == 'Fresh account'
+    assert len(mc.history(target)) == 1
+    assert ledger.pending('fixture:issue')[0]['state'] == 'failed'
+    assert ledger.pending('fixture:issue')[0]['processed_through'] == 0
+    decision['records'][-1]['expected_revision'] = 2
+    assert ledger.assess(key, decision)['state'] == 'applied'
+
+
+def test_consolidation_preserves_full_sources_and_original_encounters(mc):
+    from consolidationctl import preview, apply
+    first = mc.add_text('episodes', 'First encounter', 'Context.\n' * 100 + 'Mara proposed replay for HarborMesh.', metadata={'mode':'reported'})
+    second = mc.add_text('episodes', 'Second encounter', 'Ivo tested recovery and identified duplicate writes.')
+    original = {cid: mc.expand(cid)['raw'] for cid in (first,second)}
+    manifest = preview([first,second], mc)
+    assert 'Mara proposed' in manifest['supports'][0]['raw']
+    decision = {'outcome':'applied', 'reason':'Proposed supported lesson', 'records':[
+        {'operation':'add','key':'lesson','shelf':'library','title':'HarborMesh recovery lesson',
+         'raw':'The HarborMesh encounters suggest that replay should be idempotent; this is an inferred lesson.'}]}
+    options = {'stream_id':'fixture:dream','sequence':1,'event_id':'dream:1','selection_version':'fixture:policy:v1','memory':mc}
+    receipt = apply(manifest, decision, **options)
+    assert receipt == apply(manifest, decision, **options)
+    lesson = receipt['records']['lesson']['chapter_id']
+    assert mc.expand(lesson)['origin']['source']['mode'] == 'inferred'
+    assert len(mc.expand(lesson)['origin']['source']['evidence']) == 2
+    assert {row['id'] for row in mc.expand(lesson)['neighbors']} == {first,second}
+    assert {cid: mc.expand(cid)['raw'] for cid in original} == original
+    assert all(mc.expand(cid)['revision'] == 1 for cid in original)
+    assert mc.expand(lesson)['support_status'] == 'current'
+    mc.update_chapter(first, content='Mara withdrew the replay proposal.')
+    assert mc.pack('recovery lesson', threshold=0, budget_tokens=1500)['items'][0]['support_status'] == 'needs_reconciliation'
+    assert mc.expand(lesson)['support_checks'][0]['status'] == 'changed'
+    mc.delete_chapter(first)
+    assert mc.expand(lesson)['support_checks'][0]['status'] == 'missing'
+
+
+def test_consolidation_rejects_stale_sources_and_episode_overwrites(mc):
+    from consolidationctl import preview, apply
+    cid = mc.add_text('episodes', 'Mara encounter', 'Mara proposed a queue.')
+    manifest = preview([cid], mc)
+    mc.update_chapter(cid, content='Mara corrected the proposal.')
+    decision = {'outcome':'applied','reason':'Lesson','records':[{
+        'operation':'add','key':'lesson','shelf':'library','title':'A lesson','raw':'This is an inferred lesson.'}]}
+    options = {'stream_id':'fixture:dream','sequence':1,'event_id':'dream:1','selection_version':'fixture:policy:v1','memory':mc}
+    with pytest.raises(ValueError, match='support changed'):
+        apply(manifest, decision, **options)
+    assert not mc.search('lesson')
+    decision['records'][0] = {'operation':'update','key':'lesson','chapter_id':cid,'expected_revision':2,'raw':'Overwrite original episode'}
+    with pytest.raises(ValueError, match='cannot overwrite'):
+        apply(preview([cid],mc), decision, **dict(options, sequence=2, event_id='dream:2'))
+    assert mc.expand(cid)['raw'] == 'Mara corrected the proposal.'
+
+
+def test_late_capture_correction_preserves_attribution_and_history(mc):
+    from capturectl import CaptureLedger
+    ledger = CaptureLedger(mc)
+    first = ledger.stage(event())
+    initial = ledger.assess(first['event_key'], selection())
+    cid = initial['records']['episode']['chapter_id']
+    corrected = event(2, 'The proposer was Ivo, not Mara.', version='2')
+    corrected['event_id'] = event()['event_id']
+    key = ledger.stage(corrected)['event_key']
+    decision = {'outcome':'applied','reason':'Reported attribution correction', 'selection_version':'fixture:policy:v1', 'records':[
+        {'key':'episode','operation':'update','chapter_id':cid,'expected_revision':1,
+         'raw':'Ivo (@ivo-test) proposed replay for HarborMesh; Mara was an earlier, superseded attribution.',
+         'metadata':{'correction_of':event()['event_id']}}]}
+    ledger.assess(key, decision)
+    assert mc.expand(cid)['origin']['source']['source_version'] == '2'
+    assert 'Mara proposed' in mc.history(cid)[0]['raw']
+    assert mc.expand(cid)['origin']['source']['mode'] == 'reported'
+
+
+def test_capture_keeps_embedding_failure_separate_from_persistence(mc, monkeypatch):
+    from capturectl import CaptureLedger
+    ledger = CaptureLedger(mc)
+    key = ledger.stage(event())['event_key']
+    monkeypatch.setattr(mc, 'embeddings_runtime_config', lambda *args, **kwargs: (_ for _ in ()).throw(ValueError('synthetic config error')))
+    receipt = ledger.assess(key, selection())
+    assert receipt['records']['episode']['embedding_status'] == 'configuration_unavailable'
+    assert receipt['records']['episode']['lexical_ready']
+    assert mc.search('HarborMesh')
+
+
+def test_selected_summary_is_scanned_for_embedding_eligibility(mc, monkeypatch):
+    monkeypatch.setattr(mc, 'scan_content_for_secrets', lambda text: 'synthetic-secret' if 'fixture-secret' in text else None)
+    cid = mc.add_text('episodes','An account','Ordinary text',summary='fixture-secret')
+    assert mc.expand(cid)['embed_disabled'] == 1
+    cid = mc.add_text('episodes','Another account','Ordinary text')
+    mc.update_chapter(cid, summary='fixture-secret')
+    assert mc.expand(cid)['embed_disabled'] == 1
+
+
+def test_finite_capture_cli_persists_across_processes_without_a_listener(mc, tmp_path):
+    source = tmp_path / 'event.json'
+    source.write_text(json.dumps(event()))
+    decision = tmp_path / 'selection.json'
+    decision.write_text(json.dumps(selection()))
+    def command(*args):
+        result = subprocess.run([sys.executable, str(SCRIPTS / 'capturectl.py'), *args], check=True,
+                                capture_output=True, text=True, timeout=10)
+        return json.loads(result.stdout)
+    key = command('stage', '--file', str(source))['event_key']
+    source.unlink()  # source/session loss before curation resumes
+    assert command('pending', '--stream', 'fixture:issue')[0]['event']['content']
+    receipt = command('assess', '--event-key', key, '--file', str(decision))
+    assert receipt['state'] == 'applied'
+    assert command('pending', '--stream', 'fixture:issue') == []
+    assert mc.search('HarborMesh')
+
+
 def test_kind_date_and_attribution_survive_revision_and_unknown_date(mc):
     cid = mc.add_text('episodes', 'An encounter', 'Mara commented on the issue.',
                       event_ts=1200, actor='Mara', metadata={'mode':'reported','source_event_id':'fixture:issue:1',

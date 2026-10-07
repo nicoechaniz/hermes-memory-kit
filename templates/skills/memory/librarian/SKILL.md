@@ -100,6 +100,16 @@ pass `--summary` with the participant, event, significance and uncertainty that
 must survive recall. Automatic previews are marked incomplete; expand before
 answering details absent from them. Lexical search covers the full source text.
 
+When explicitly authorized to process a finite source delta, `capturectl.py`
+can stage pending input, list a selected stream and apply/omit/defer a supplied
+selection. It commits supported writes and the processing receipt together;
+replay does not create another encounter. `consolidationctl.py preview --ids ...`
+supplies full selected episodes; reviewed apply proposals retain those episodes
+and versioned support. These commands install no automatic attention or triggers.
+If a derived account has `support_status=needs_reconciliation`, inspect changed
+or missing evidence before using it as a current conclusion. Version currency is
+not a truth score. Selection quality still requires the isolated model pilot.
+
 ```bash
 ./scripts/hmk memoryctl.py add-text \
   --shelf episodes \
