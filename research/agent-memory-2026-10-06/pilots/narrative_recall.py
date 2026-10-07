@@ -47,12 +47,35 @@ def source_blocks(text, depth=0):
 def supplied_context(query, evidence, binding):
     rows = []
     for cid, item in evidence.items():
-        row = dict(item, id=cid, attributed_blocks=source_blocks(item.get('text', '')))
+        row = dict(item, id=cid, attributed_blocks=source_blocks(item.get('text', '')),
+                   literal_source_anchors=source_anchors(item))
         # Exact duplicate envelopes are navigation copies, not corroboration.
         row['attributed_blocks'] = list({json.dumps(block, sort_keys=True): block
                                         for block in row['attributed_blocks']}.values())
         rows.append(row)
     return dict(question=query, receiving_binding=binding, evidence=rows)
+
+
+def source_anchors(item):
+    """Literal date/pointer anchors from supplied support, not a hidden rubric.
+
+    This check cannot establish semantic truth or completeness. The external
+    grader still checks each assertion and requirement. Literal anchors make
+    silently dropping supplied report dates/world entry points detectable.
+    """
+    blocks = source_blocks(item.get('text', ''))
+    dates = {block['reported_at'] for block in blocks
+             if block.get('reported_at') and re.fullmatch(r'\d{4}-\d{2}-\d{2}', block['reported_at'])}
+    pointers = set(re.findall(r'https?://[^\s"<>]+|\bdocs/[\w./-]+\.md', item.get('text', '')))
+    return sorted(dates | {pointer.rstrip('.,;:') for pointer in pointers})
+
+
+def missing_anchors(candidate, evidence):
+    text = ' '.join(claim['text'] for claim in candidate['claims'])
+    cited = {cid for claim in candidate['claims'] if claim['basis'] == 'memory'
+             for cid in claim['support']}
+    return [f'Retain the supplied date/world pointer {anchor} from cited memory {cid}.'
+            for cid in sorted(cited) for anchor in source_anchors(evidence[cid]) if anchor not in text]
 
 
 def validate(value, evidence, binding):
@@ -121,6 +144,10 @@ Write a substantial answer, normally four to eight sentences when an encounter
 is supported. Answer the direct question AND give the relevant context, known
 identifiers and dates, meaning, outcome and evidence limits in connected prose.
 For a wholly unsupported event, a bounded unknown is sufficient.
+If citing a source, retain its literal_source_anchors in connected prose
+(report dates in YYYY-MM-DD form and supplied world URLs/docs paths verbatim).
+Anchors are context, not an answer: preserve participants, meaning, outcomes
+and uncertainty too. Do not cite unrelated sources just to decorate the answer.
 Before finishing, check that the answer retains relevant known identifiers,
 world pointers, occurrence/report dates and qualifications from its support.
 For a recalled encounter, name the source speaker and date of the report as
@@ -242,6 +269,10 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                     review_messages.extend([dict(role='assistant', content=json.dumps(review)),
                         dict(role='user', content='Invalid review shape: '+str(error)+'. Repair only shape.')])
                 else: break
+            anchors = missing_anchors(candidate, evidence)
+            state.setdefault('anchor_checks', []).append(dict(candidate=candidate, missing=anchors))
+            if anchors:
+                review = dict(review, missing=review['missing'] + anchors)
             if not review['missing'] and all(row['verdict'] == 'supported' for row in review['claims']):
                 state['accepted'] = candidate
                 state['accepted_review'] = review

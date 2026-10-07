@@ -84,3 +84,15 @@ def test_supported_but_incomplete_answer_is_revised_without_hidden_rubric(tmp_pa
         body,SimpleNamespace(phase='recall'),{},tmp_path/'pending.json',
         lambda *args:next(responses),lambda p,v:p.write_text(json.dumps(v)))
     assert value['text']==final['claims'][0]['text']
+
+
+def test_literal_source_anchors_detect_omitted_report_date_and_current_state_pointer():
+    source='foreground_work; source work; received 2026-04-16 through code:\n'+json.dumps(
+        'We authored the scheduler. Repository https://forge.example.invalid/p. Check docs/STATUS.md.')
+    evidence={1:{'text':source}}
+    candidate={'claims':[{'text':'We authored the scheduler.', 'support':[1], 'basis':'memory'}]}
+    assert len(nr.missing_anchors(candidate,evidence))==3
+    candidate['claims'][0]['text']='On 2026-04-16 our code body recorded scheduler authorship at https://forge.example.invalid/p, with present work to check in docs/STATUS.md.'
+    assert nr.missing_anchors(candidate,evidence)==[]
+    # Uncited retrieval distractors impose no fabricated coverage obligation.
+    assert nr.missing_anchors({'claims':[{'text':'Unknown here.','support':[],'basis':'unknown'}]}, evidence)==[]

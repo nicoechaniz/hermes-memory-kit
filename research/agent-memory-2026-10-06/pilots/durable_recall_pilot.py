@@ -715,7 +715,7 @@ def main():
     conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
     if args.narrative:
-        conditions['recall_contract'] = 'natural-claims/v3-attributed-coverage'
+        conditions['recall_contract'] = 'natural-claims/v4-source-anchors'
         conditions['narrative_reasoning_effort'] = args.narrative_reasoning_effort
         conditions['narrative_sha256'] = hashlib.sha256(Path(narrative_recall.__file__).read_bytes()).hexdigest()
     conditions['recall_cases'] = args.recall_case
