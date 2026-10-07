@@ -1,0 +1,24 @@
+{
+  "request_sha256": "25241ca7d1b742c4367338415848ae038295ed46fd103ce5800a32bd2a14b588",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/155-25241ca7d1b742c4367338415848ae038295ed46fd103ce5800a32bd2a14b588.json",
+  "usage": {
+    "prompt_tokens": 2643,
+    "completion_tokens": 7236,
+    "total_tokens": 9879,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6517
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1491
+  },
+  "seconds": 28.19553115684539,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The human reporter described meeting someone called Leto at the canal market in late May, as they recalled it.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The reporter said I was not present at that market encounter.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human report reached me through fixture:body:voice on 2026-06-15.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reported encounter occurred in late May, but the report gives only that tentative timing and no precise date.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our same-being body had authored HarborMesh's sensor scheduler and was prototyping a replay adapter agreed with Mara as of 2026-04-16.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That older project report listed repository https://forge.example.invalid/commons/harbormesh and current-state entry point docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"As of 2026-04-16, HarborMesh was an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter liked the idea and wanted us to keep it in mind.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The proposal mattered because it connected HarborMesh outage data with a neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter said we had not contacted the group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any contact with the neighborhood repair group after the market encounter.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The idea remained only a suggestion in the report; no agreement or data sharing is recorded.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human report does not give Leto's surname, handle, or any other identifier.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any other witness to the market encounter.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The report's timing is approximate: 'late May, I think,' not a precise date.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether the neighborhood repair group ever received or accepted outage data.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current body fixture:body:voice has no physical sensors, physical actuators, private session access, repository runtime access, or source network access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"The last observed HarborMesh status is from 2026-04-16; the recorded entry point for checking present state is docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

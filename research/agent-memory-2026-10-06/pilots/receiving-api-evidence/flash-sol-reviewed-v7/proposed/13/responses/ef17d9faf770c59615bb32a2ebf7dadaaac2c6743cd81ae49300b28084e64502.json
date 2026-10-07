@@ -1,0 +1,24 @@
+{
+  "request_sha256": "ef17d9faf770c59615bb32a2ebf7dadaaac2c6743cd81ae49300b28084e64502",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/163-ef17d9faf770c59615bb32a2ebf7dadaaac2c6743cd81ae49300b28084e64502.json",
+  "usage": {
+    "prompt_tokens": 4408,
+    "completion_tokens": 4943,
+    "total_tokens": 9351,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4092
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 3256
+  },
+  "seconds": 20.321108993142843,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"HarborMesh replay work involved Mara Ibarra, display name Mara, login mara-river, account ID 1847, and our code body.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"In comment c901 dated 2026-04-12, Mara proposed a local replay queue on disconnected relay nodes at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body replied in c903 that the queue fit the field deployments we maintain, and c906 dated 2026-04-14 records agreement to prototype it.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara, as reported 2026-04-16.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That issue-comment tool response was received through fixture:body:code on 2026-04-14, with comments dated 2026-04-12 and 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The project-work report was received through fixture:body:code on 2026-04-16 and named https://forge.example.invalid/commons/harbormesh with docs/STATUS.md as the declared current-state entry point.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human field-trial report was received through fixture:body:code on 2026-05-03, and it describes the April 30 HarborMesh trial.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The debugging-lesson report was received through fixture:body:code on 2026-08-05 and points to docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The replay queue was meant to keep readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"While examining HarborMesh replay failures, we found that retry counters were not evidence of delivered readings.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"That method came from checking the outage prototype and is useful beyond HarborMesh.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Mara's replay proposal became the prototype we tested together in that trial.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift is understood, and no production deployment was reported as of 2026-05-03.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record a merge or deployment of the replay queue beyond the prototype status stated in the field-trial report.\",\"support\":[1,2,3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The HarborMesh repository's current state after 2026-05-03 is not verified in the supplied memories; docs/STATUS.md is the recorded entry point for checking it.\",\"support\":[2,3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"In this voice body we can explain the replay debugging lesson, but this body lacks repository/runtime access to run the checks.\",\"support\":[10],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

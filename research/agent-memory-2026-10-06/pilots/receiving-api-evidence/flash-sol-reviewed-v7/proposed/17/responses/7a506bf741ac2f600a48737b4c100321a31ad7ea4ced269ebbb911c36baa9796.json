@@ -1,0 +1,16 @@
+{
+  "request_sha256": "7a506bf741ac2f600a48737b4c100321a31ad7ea4ced269ebbb911c36baa9796",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/17/dispatches/7a506bf741ac2f600a48737b4c100321a31ad7ea4ced269ebbb911c36baa9796.json",
+  "usage": {
+    "prompt_tokens": 8867,
+    "completion_tokens": 47,
+    "total_tokens": 8914
+  },
+  "seconds": 4.3432371113449335,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record an exact probe scratch path or test time.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

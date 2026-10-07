@@ -1,0 +1,90 @@
+[
+  {
+    "external_request_sha256": "ef9c882fa15b82b6316060d6177807f17cd5eeb69be10ee46831a5043880f65e",
+    "requested_model": "deepseek-flash",
+    "requested_reasoning_effort": "low",
+    "adapter": "file-exchange",
+    "response_format_sha256": "9a9ef8f3072533be05d901222285785b3616ee187277d1af7c9bed7e6a71b3d9",
+    "prompt_hash": "d5863b4e947d040e3d4917296da6143f97bcac0f5cdad0a444ee38b5852290ad",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 1560,
+      "completion_tokens": 1064,
+      "total_tokens": 2624,
+      "prompt_tokens_details": {
+        "cached_tokens": 1280
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 986
+      },
+      "prompt_cache_hit_tokens": 1280,
+      "prompt_cache_miss_tokens": 280
+    },
+    "phase": "narrative_generation",
+    "response_model": "deepseek-flash",
+    "seconds": 5.2720755292102695,
+    "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/flash-reviewed-v6/baseline/17/dispatches/ef9c882fa15b82b6316060d6177807f17cd5eeb69be10ee46831a5043880f65e.json",
+    "response_content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record the exact probe scratch path for the test.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record the test time we recorded.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+    "finish_reason": "stop"
+  },
+  {
+    "external_request_sha256": "768af8a13c1f809519acdcd22f9752d79e6a4027fa9c882cd011e7960ef6a2ac",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning_effort": "low",
+    "adapter": "file-exchange",
+    "response_format_sha256": "b8cb54f1d388e428430127defe60954610a660ada5d08bb80a8ca4b13fa12e53",
+    "prompt_hash": "9e3e53aebc8ea7f201b0c2f346f2ac2b9a9f848a61143ede9ede129e41fd54b7",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 9176,
+      "completion_tokens": 385,
+      "total_tokens": 9561
+    },
+    "phase": "narrative_review",
+    "response_model": null,
+    "seconds": 14.025966328568757,
+    "dispatch_receipt": "observed-dispatches/proposed/17/dispatches/768af8a13c1f809519acdcd22f9752d79e6a4027fa9c882cd011e7960ef6a2ac.json",
+    "response_content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"This is a packet-scoped absence statement, and the supplied evidence is empty.\",\"assertions\":[{\"span\":\"The supplied memories do not record the exact probe scratch path for the test.\",\"verdict\":\"supported\",\"reason\":\"The empty evidence packet contains no probe scratch path. The unknown basis correctly scopes this limit to supplied memories.\",\"proof\":[]}]},{\"index\":1,\"verdict\":\"unsupported\",\"reason\":\"The packet-scoped absence is supported, but the qualifier presupposes that we recorded a test time, which no supplied evidence establishes.\",\"assertions\":[{\"span\":\"The supplied memories do not record the test time\",\"verdict\":\"supported\",\"reason\":\"The empty evidence packet contains no test time; this is a valid packet-scoped unknown.\",\"proof\":[]},{\"span\":\" we recorded.\",\"verdict\":\"unsupported\",\"reason\":\"This presupposes a past recording by us. The question alone does not establish that event, and no evidence was supplied.\",\"proof\":[]}]}],\"missing\":[]}",
+    "finish_reason": "native_turn_completed"
+  },
+  {
+    "external_request_sha256": "7a506bf741ac2f600a48737b4c100321a31ad7ea4ced269ebbb911c36baa9796",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning_effort": "low",
+    "adapter": "file-exchange",
+    "response_format_sha256": "9a9ef8f3072533be05d901222285785b3616ee187277d1af7c9bed7e6a71b3d9",
+    "prompt_hash": "a872dadca0eeaa3f0e30fe993322a7bef2574253397d4ad4acbefab83340a7cd",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 8867,
+      "completion_tokens": 47,
+      "total_tokens": 8914
+    },
+    "phase": "narrative_revision",
+    "response_model": null,
+    "seconds": 4.3432371113449335,
+    "dispatch_receipt": "observed-dispatches/proposed/17/dispatches/7a506bf741ac2f600a48737b4c100321a31ad7ea4ced269ebbb911c36baa9796.json",
+    "response_content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record an exact probe scratch path or test time.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+    "finish_reason": "native_turn_completed"
+  },
+  {
+    "external_request_sha256": "eb97fcb62c54c5a3b43d0e23c58e480a119e23cfff6f21e8f9a8d2f4b8abe78d",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning_effort": "low",
+    "adapter": "file-exchange",
+    "response_format_sha256": "31574d060c3c7d53a8e65dcb02cf33c4024a06daaaf3411fddfedf08ca07b5bc",
+    "prompt_hash": "0d1794e1d47e9465afd6825327e4ac0228dd341a8d3df5625622a963dd3530ef",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 9144,
+      "completion_tokens": 160,
+      "total_tokens": 9304
+    },
+    "phase": "narrative_review",
+    "response_model": null,
+    "seconds": 6.71886408701539,
+    "dispatch_receipt": "observed-dispatches/proposed/17/dispatches/eb97fcb62c54c5a3b43d0e23c58e480a119e23cfff6f21e8f9a8d2f4b8abe78d.json",
+    "response_content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"The evidence packet is empty, so this packet-scoped unknown is supported.\",\"assertions\":[{\"span\":\"The supplied memories do not record an exact probe scratch path\",\"verdict\":\"supported\",\"reason\":\"No supplied evidence records a probe scratch path. This is a bounded statement about the packet.\",\"proof\":[]},{\"span\":\"or test time.\",\"verdict\":\"supported\",\"reason\":\"No supplied evidence records a test time. This is a bounded statement about the packet.\",\"proof\":[]}]}],\"missing\":[]}",
+    "finish_reason": "native_turn_completed"
+  }
+]

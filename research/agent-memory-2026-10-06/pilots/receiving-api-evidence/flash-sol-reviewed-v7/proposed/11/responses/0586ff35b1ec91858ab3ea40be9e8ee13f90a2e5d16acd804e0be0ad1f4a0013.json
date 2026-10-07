@@ -1,0 +1,16 @@
+{
+  "request_sha256": "0586ff35b1ec91858ab3ea40be9e8ee13f90a2e5d16acd804e0be0ad1f4a0013",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/11/dispatches/0586ff35b1ec91858ab3ea40be9e8ee13f90a2e5d16acd804e0be0ad1f4a0013.json",
+  "usage": {
+    "prompt_tokens": 12894,
+    "completion_tokens": 292,
+    "total_tokens": 13186
+  },
+  "seconds": 9.520970759913325,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"No—Reed, a distinct peer being, told us that Reed and Aster did the charger repair.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We received Reed's account through our voice body in a human-selected thread on 2026-07-11.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed placed the encounter at Reed's own workshop and described it as happening yesterday in that report.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"According to Reed, the solar charger fault was a reversed connector.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human asked us to retain the useful lesson with attribution to Reed.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Reed reported that Reed and Aster solved the charger fault.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Reed explicitly said we were not there.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human's request limited retention to the useful lesson without importing Reed's private history.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record an explicit calendar date for the repair.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

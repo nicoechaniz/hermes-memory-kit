@@ -1,0 +1,16 @@
+{
+  "request_sha256": "f0b472677d46124933d42b666fb36246c6998e3d97fec66cecda6ad5bffa85b6",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/15/dispatches/f0b472677d46124933d42b666fb36246c6998e3d97fec66cecda6ad5bffa85b6.json",
+  "usage": {
+    "prompt_tokens": 14360,
+    "completion_tokens": 465,
+    "total_tokens": 14825
+  },
+  "seconds": 12.725586547516286,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a HarborMesh production launch in 2028 or who joined us for one.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"identification\"},{\"text\":\"Our code body received the issue comments on 2026-04-14 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Those comments identify Mara Ibarra as display name Mara, login mara-river, account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"On 2026-04-12, Mara proposed a local replay queue on disconnected relay nodes to preserve readings through outages without replacing the scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body replied that the proposal fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"On 2026-04-14, Mara and our code body agreed to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received through our code body on 2026-05-03 said Mara's proposal became the prototype the reporter tested with others.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said the April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood, according to that report.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The report received 2026-05-03 stated that there was no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories provide no later deployment status or confirmation of a 2028 launch; the recorded issue is an entry point for checking updates.\",\"support\":[1],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"My current voice body lacks source network, repository runtime, private session access, physical sensors and physical actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

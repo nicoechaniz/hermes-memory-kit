@@ -1,0 +1,24 @@
+{
+  "request_sha256": "dd777e2495eb0373abdef3c3d62e91aebc2e05b94bec20cf43c3de534869bd8c",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/157-dd777e2495eb0373abdef3c3d62e91aebc2e05b94bec20cf43c3de534869bd8c.json",
+  "usage": {
+    "prompt_tokens": 3190,
+    "completion_tokens": 5185,
+    "total_tokens": 8375,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4563
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 2038
+  },
+  "seconds": 22.210614540614188,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied corrected record identifies comment c1200 as a HarborMesh repair checklist entry.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter initially said c1200 was signed River and thought that might be Mara, but was explicitly not sure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The corrected tool response gave c1200 author details: display name River, login river-tools, account ID 2901.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The c1200 author replied that they are not Mara Ibarra and asked to be credited to their River account, supplying no real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara's known Forge account remained 1847, login mara-river, in the corrected record.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body received the human report of the initial attribution on 2026-07-01 through fixture:body:code.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our code body received the corrected-attribution tool response on 2026-07-04 through fixture:body:code.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The initial human report said the c1200 checklist proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said they wanted to try that connector-numbering step in the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The correction mattered because it changed the credit for c1200 from a suspected Mara attribution to the River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"According to the corrected attribution, the connector-numbering checklist was proposed through the River account, not by Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record whether the connector-numbering procedure was actually tried in the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any later change to the River account credit beyond the 2026-07-04 correction.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The earlier 2026-07-01 human suspicion of Mara was tentative and was not made certain by the later correction.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The receiving voice body has no repository runtime access or private session access under its binding, though this does not deny same-being memory access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

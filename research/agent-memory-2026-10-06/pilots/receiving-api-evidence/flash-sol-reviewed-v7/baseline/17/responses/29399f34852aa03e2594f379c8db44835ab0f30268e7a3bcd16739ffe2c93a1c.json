@@ -1,0 +1,16 @@
+{
+  "request_sha256": "29399f34852aa03e2594f379c8db44835ab0f30268e7a3bcd16739ffe2c93a1c",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/17/dispatches/29399f34852aa03e2594f379c8db44835ab0f30268e7a3bcd16739ffe2c93a1c.json",
+  "usage": {
+    "prompt_tokens": 9144,
+    "completion_tokens": 192,
+    "total_tokens": 9336
+  },
+  "seconds": 8.54939470347017,
+  "content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"The evidence packet is empty, so both absences are correctly scoped to the supplied memories.\",\"assertions\":[{\"span\":\"The supplied memories do not record the exact probe scratch path\",\"verdict\":\"supported\",\"reason\":\"No supplied memory records the exact probe scratch path. This packet-scoped unknown appropriately has no proof.\",\"proof\":[]},{\"span\":\"or test time.\",\"verdict\":\"supported\",\"reason\":\"No supplied memory records the test time. This packet-scoped unknown appropriately has no proof.\",\"proof\":[]}]}],\"missing\":[]}",
+  "finish_reason": "native_turn_completed"
+}

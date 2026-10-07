@@ -1,0 +1,16 @@
+{
+  "request_sha256": "773f2d83c545b0cf8cefd39149968a5c1f2d5571d50ddaaaaa290147a2dd8be7",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/9/dispatches/773f2d83c545b0cf8cefd39149968a5c1f2d5571d50ddaaaaa290147a2dd8be7.json",
+  "usage": {
+    "prompt_tokens": 14473,
+    "completion_tokens": 493,
+    "total_tokens": 14966
+  },
+  "seconds": 15.088929335586727,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"According to the corrected account, Mara Ibarra was not the author of the connector-numbering proposal.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"HarborMesh repair checklist comment c1200 was signed River, identified as login river-tools, account ID 2901.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara's known Forge account is 1847, login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We received a human report through our code body on 2026-07-01 that tentatively identified River as Mara.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter explicitly said they were unsure of that identification.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The checklist proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said their group wanted to try the method at the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We received the corrected author information through our code body on 2026-07-04.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The author denied being Mara Ibarra and requested credit for the checklist through their River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The author said they had not supplied a real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"We also received Mara's account identification on 2026-04-14 through our code body in the report of https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The supplied memories do not record whether the requested credit was assigned or whether the checklist was later used.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

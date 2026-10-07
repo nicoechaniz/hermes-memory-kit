@@ -1,0 +1,16 @@
+{
+  "request_sha256": "eaae34001a94c2d3124b0a7fc59c6fafcfcdca4cadd8ccdfdd3a7704388f3888",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/15/dispatches/eaae34001a94c2d3124b0a7fc59c6fafcfcdca4cadd8ccdfdd3a7704388f3888.json",
+  "usage": {
+    "prompt_tokens": 13086,
+    "completion_tokens": 391,
+    "total_tokens": 13477
+  },
+  "seconds": 10.748302870430052,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a HarborMesh production launch in 2028 or identify anyone who joined us for it.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"identification\"},{\"text\":\"On 2026-04-16, our code body recorded that we had authored HarborMesh's sensor scheduler.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We were then prototyping the replay adapter agreed with Mara, awaiting an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"A human field-trial report received 2026-05-03 through our code body described the April 30 trial.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said Mara's replay proposal became the prototype the reporter and their collaborators tested together.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"According to that report, the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the report received 2026-05-03, there was no production deployment yet; that does not establish the project's status in 2028.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Our 2026-04-16 project report named docs/STATUS.md at https://forge.example.invalid/commons/harbormesh as the entry point for checking current state.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current voice body has no source network or repository runtime access to check later project status.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

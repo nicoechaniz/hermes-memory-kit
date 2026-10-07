@@ -1,0 +1,86 @@
+{
+  "new_inference": {
+    "physical_attempts": 136,
+    "completed_calls": 135,
+    "failed_calls": 1,
+    "usage_known": {
+      "prompt_tokens": 1710749,
+      "completion_tokens": 180435,
+      "total_tokens": 1891184
+    },
+    "failed_usage_unknown": 1,
+    "billed_cost_usd": null,
+    "median_completed_seconds": 27.684686173684895
+  },
+  "distinct_observed_attempts_including_reused": {
+    "physical_attempts": 177,
+    "completed_calls": 176,
+    "failed_calls": 1,
+    "usage_known": {
+      "prompt_tokens": 1830486,
+      "completion_tokens": 386207,
+      "total_tokens": 2216693
+    },
+    "failed_usage_unknown": 1,
+    "billed_cost_usd": null,
+    "median_completed_seconds": 24.62885144073516
+  },
+  "by_provider_phase": {
+    "openai-codex-native/narrative_review": {
+      "physical_attempts": 90,
+      "completed_calls": 89,
+      "failed_calls": 1,
+      "usage_known": {
+        "prompt_tokens": 1023076,
+        "completion_tokens": 154656,
+        "total_tokens": 1177732
+      },
+      "failed_usage_unknown": 1,
+      "billed_cost_usd": null,
+      "median_completed_seconds": 40.622432176955044
+    },
+    "openai-codex-native/narrative_revision": {
+      "physical_attempts": 43,
+      "completed_calls": 43,
+      "failed_calls": 0,
+      "usage_known": {
+        "prompt_tokens": 664409,
+        "completion_tokens": 19554,
+        "total_tokens": 683963
+      },
+      "failed_usage_unknown": 0,
+      "billed_cost_usd": null,
+      "median_completed_seconds": 12.774694935418665
+    },
+    "openai-codex-native/narrative_generation": {
+      "physical_attempts": 2,
+      "completed_calls": 2,
+      "failed_calls": 0,
+      "usage_known": {
+        "prompt_tokens": 21260,
+        "completion_tokens": 1316,
+        "total_tokens": 22576
+      },
+      "failed_usage_unknown": 0,
+      "billed_cost_usd": null,
+      "median_completed_seconds": 16.278150852769613
+    },
+    "deepseek/narrative_generation": {
+      "physical_attempts": 1,
+      "completed_calls": 1,
+      "failed_calls": 0,
+      "usage_known": {
+        "prompt_tokens": 2004,
+        "completion_tokens": 4909,
+        "total_tokens": 6913
+      },
+      "failed_usage_unknown": 0,
+      "billed_cost_usd": null,
+      "median_completed_seconds": 20.85846504289657
+    }
+  },
+  "formation_calls": 0,
+  "embedding_calls": 0,
+  "native_subscription_conversion_unknown": true,
+  "failed_retry_kept_separate": true
+}

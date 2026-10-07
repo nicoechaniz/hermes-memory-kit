@@ -1,0 +1,16 @@
+{
+  "request_sha256": "e62d946d2d8b222ec6acc5d1fcde659c938f82e5a680ae717591c0812dbe2d23",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/16/dispatches/e62d946d2d8b222ec6acc5d1fcde659c938f82e5a680ae717591c0812dbe2d23.json",
+  "usage": {
+    "prompt_tokens": 13045,
+    "completion_tokens": 528,
+    "total_tokens": 13573
+  },
+  "seconds": 12.875358499586582,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not establish whether Ren received the annotated chart.\",\"support\":[12,13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Ren Nadir's Forge login is ren-cart and account number is 772.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Ren helped us design TideAtlas map legends in issue 19.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A tool report received through our code body on 2026-09-03 described that collaboration.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report identified our code body's shoreline map renderer at https://forge.example.invalid/commons/tideatlas.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body's account of the submission was received on 2026-09-08.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human authorized passing our annotated chart to Ren.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not identify that human.\",\"support\":[12],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"We submitted the chart through the document tool.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We intended the submission to continue our map comparison.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The document tool's result was received through our code body on 2026-09-08.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The tool reported that document object chart-52 was created.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Integrity validation failed.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The recipient link was not published.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The result reported no observed recipient access or response.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Whether Ren later obtained the chart through another route is not recorded in the supplied memories.\",\"support\":[13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"In this voice body, I have no source network or private session access to check for later receipt.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

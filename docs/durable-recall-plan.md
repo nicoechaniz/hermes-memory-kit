@@ -188,7 +188,15 @@ now finishes all 44 questions: 669 claims assessed, three unsupported clauses,
 one partial positive requirement and ten operational rejections. It fails
 qualification. The next frozen candidate keeps Flash initial narration and uses
 native Codex Sol low for review/corrections; all roles, budgets and raw responses
-remain explicit. Its four-case smoke completed; full outside grading is pending.
+remain explicit. The [completed mixed-role comparison](../research/agent-memory-2026-10-06/pilots/2026-10-07-flash-native-reviewed-comparison.md)
+now covers both 22-question arms and all 571 claims. Proposed formation meets all
+51 positive requirements without unsupported clauses; the control still has four
+unsupported human-group participation clauses accepted by automatic review. This
+closes the proposed frozen-packet receiving gate only. The exact continuation is
+a new full two-arm Flash formation/planning comparison with unchanged embeddings
+and these explicit narrator/review/correction roles, then the stage-two passes.
+Known additional consumption is 1,891,184 tokens over 135 completed calls plus
+one failed 503 with unknown usage; native billing conversion remains unknown.
 The formation and stage-two gates remain unchanged.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;

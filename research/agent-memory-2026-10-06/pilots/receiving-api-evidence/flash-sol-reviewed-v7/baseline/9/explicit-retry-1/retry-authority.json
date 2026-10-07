@@ -1,0 +1,8 @@
+{
+  "scope": "One foreground retry of the observed native 503 under the active human-directed goal.",
+  "original_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/flash-sol-reviewed-v7/baseline/9/dispatches/9901190a0da22a93df33b81e13e54d14277b116b24ef3808b68fea97fad58e61.json",
+  "request_sha256": "9901190a0da22a93df33b81e13e54d14277b116b24ef3808b68fea97fad58e61",
+  "semantic_repair_budget_reset": false,
+  "original_receipt_preserved": true,
+  "max_dispatches": 1
+}

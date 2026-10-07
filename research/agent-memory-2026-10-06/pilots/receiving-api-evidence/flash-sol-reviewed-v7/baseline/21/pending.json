@@ -1,0 +1,1809 @@
+{
+  "narrative": {
+    "generations": [
+      {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "The only supplied memory relevant to the question is a human report received 2026-09-12 through fixture:body:mobile.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "In that report the human reporter described meeting Neri Sol at the old ferry shed sometime in early September.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "Neri Sol is the only person named there, and no handle or surname beyond Sol was given.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The report was received on 2026-09-12, while the reported meeting was placed only tentatively in early September.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The reporter said our being was not with them, so the ferry-shed meeting in the report did not include us.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The reporter shared the encounter because they liked the patient way Neri Sol explained patching canvas with waxed thread.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "Neri Sol showed the reporter how to patch a canvas cover using waxed thread.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The reporter had not tried the method yet when the report was sent.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The supplied memories do not record any return by us to the ferry shed the following week.",
+            "support": [
+              14
+            ],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "They also do not identify who, if anyone, welcomed us when we returned to the ferry shed the following week.",
+            "support": [
+              14
+            ],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The report does not establish that Neri Sol welcomed us; it says our being was not with the reporter at that meeting.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "No exact date for the reported meeting is supplied beyond the tentative early-September timing.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "Neri Sol’s identity is known only as Neri Sol; no handle or surname beyond Sol was provided.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          }
+        ]
+      },
+      {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "The supplied memories do not record a shared return to the ferry shed the following week or identify anyone who welcomed us on such a visit.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "I received the human reporter's account through fixture:body:mobile on 2026-09-12.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The reporter recalled meeting Neri Sol at the old ferry shed, tentatively placing the encounter sometime in early September.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The reporter said I was not with them at that encounter.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "Neri showed the reporter how to patch a canvas cover using waxed thread.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The reporter liked Neri's patient explanation.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "At the time of the report, the reporter had not tried the method yet.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "Neri did not give the reporter a handle or surname beyond Sol.",
+            "support": [
+              14
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "The only supplied memory relevant to the question is a human report received 2026-09-12 through fixture:body:mobile.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "In that report the human reporter described meeting Neri Sol at the old ferry shed sometime in early September.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Neri Sol is the only person named there, and no handle or surname beyond Sol was given.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The report was received on 2026-09-12, while the reported meeting was placed only tentatively in early September.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The reporter said our being was not with them, so the ferry-shed meeting in the report did not include us.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The reporter shared the encounter because they liked the patient way Neri Sol explained patching canvas with waxed thread.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "Neri Sol showed the reporter how to patch a canvas cover using waxed thread.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The reporter had not tried the method yet when the report was sent.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record any return by us to the ferry shed the following week.",
+              "support": [
+                14
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "They also do not identify who, if anyone, welcomed us when we returned to the ferry shed the following week.",
+              "support": [
+                14
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The report does not establish that Neri Sol welcomed us; it says our being was not with the reporter at that meeting.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "No exact date for the reported meeting is supplied beyond the tentative early-September timing.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "Neri Sol’s identity is known only as Neri Sol; no handle or surname beyond Sol was provided.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            }
+          ]
+        },
+        "review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "unsupported",
+              "reason": "The receipt details are supported, but the packet-wide exclusivity assertion requires unknown basis.",
+              "assertions": [
+                {
+                  "span": "The only supplied memory relevant to the question",
+                  "verdict": "unsupported",
+                  "reason": "This is a conclusion about the inspected packet, not a historical fact established by memory 14; its basis must be unknown.",
+                  "proof": []
+                },
+                {
+                  "span": "is a human report received 2026-09-12 through fixture:body:mobile.",
+                  "verdict": "supported",
+                  "reason": "The header identifies the channel, receiving body and receipt date; this date concerns receipt.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "unsupported",
+              "reason": "The meeting is supported, but its timing loses the reporter's explicit uncertainty.",
+              "assertions": [
+                {
+                  "span": "In that report the human reporter described meeting Neri Sol at the old ferry shed",
+                  "verdict": "supported",
+                  "reason": "The human reporter describes their own meeting with Neri Sol at that location.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 0
+                    },
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "sometime in early September.",
+                  "verdict": "unsupported",
+                  "reason": "The reporter qualifies early September with 'I think'; this assertion presents that timing without its uncertainty.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "unsupported",
+              "reason": "The lack of additional identifiers given by Neri is supported; the packet-level enumeration needs unknown basis.",
+              "assertions": [
+                {
+                  "span": "Neri Sol is the only person named there,",
+                  "verdict": "unsupported",
+                  "reason": "This inventories names in the supplied report and requires unknown basis rather than memory basis.",
+                  "proof": []
+                },
+                {
+                  "span": "and no handle or surname beyond Sol was given.",
+                  "verdict": "supported",
+                  "reason": "The reporter explicitly says Neri gave them no handle or surname beyond Sol.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The sentence correctly distinguishes the exact receipt date from tentative event timing.",
+              "assertions": [
+                {
+                  "span": "The report was received on 2026-09-12,",
+                  "verdict": "supported",
+                  "reason": "The header dates receipt, not the encounter.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": "while the reported meeting was placed only tentatively in early September.",
+                  "verdict": "supported",
+                  "reason": "The reporter says 'sometime in early September, I think,' preserving uncertainty about the event date.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The report explicitly excludes the receiving being from the human's encounter.",
+              "assertions": [
+                {
+                  "span": "The reporter said our being was not with them,",
+                  "verdict": "supported",
+                  "reason": "The human's 'You were not with me' addresses the being and distinguishes it from the reporter.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "so the ferry-shed meeting in the report did not include us.",
+                  "verdict": "supported",
+                  "reason": "This follows directly from the reporter's explicit exclusion of the being from that meeting.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "unsupported",
+              "reason": "The report records enjoyment and sharing, but does not establish enjoyment as the reason for sharing.",
+              "assertions": [
+                {
+                  "span": "The reporter shared the encounter",
+                  "verdict": "supported",
+                  "reason": "The supplied human report shares the encounter and expressly says the reporter wanted to share it.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "because they liked the patient way Neri Sol explained patching canvas with waxed thread.",
+                  "verdict": "unsupported",
+                  "reason": "The liking, patient explanation and method are supported, but the causal connection to sharing is not stated.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "The teaching action, recipient, material and technique match the human report.",
+              "assertions": [
+                {
+                  "span": "Neri Sol showed the reporter how to patch a canvas cover using waxed thread.",
+                  "verdict": "supported",
+                  "reason": "The human reporter says Neri showed them this specific method.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The sentence appropriately confines the untried method to the reporting time.",
+              "assertions": [
+                {
+                  "span": "The reporter had not tried the method yet when the report was sent.",
+                  "verdict": "supported",
+                  "reason": "The reporter states 'I have not tried the method yet'; the assertion does not extend that status to today.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "This correctly states a packet-scoped unknown without asserting that no return occurred.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record any return by us to the ferry shed the following week.",
+                  "verdict": "supported",
+                  "reason": "The supplied packet contains the human's initial encounter only and no record of a subsequent shared return.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "unsupported",
+              "reason": "The identification gap is supported, but the wording presupposes an unrecorded shared return.",
+              "assertions": [
+                {
+                  "span": "They also do not identify who, if anyone, welcomed us",
+                  "verdict": "supported",
+                  "reason": "The supplied memories identify no person welcoming the being and human on a later visit.",
+                  "proof": []
+                },
+                {
+                  "span": "when we returned to the ferry shed the following week.",
+                  "verdict": "unsupported",
+                  "reason": "This presupposes that a shared return occurred the following week; neither the packet nor the binding establishes that event.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "unsupported",
+              "reason": "The historical exclusion is supported; the report's failure to establish a welcome requires unknown basis.",
+              "assertions": [
+                {
+                  "span": "The report does not establish that Neri Sol welcomed us;",
+                  "verdict": "unsupported",
+                  "reason": "This is a supported evidentiary limit of the packet, but its basis must be unknown rather than memory.",
+                  "proof": []
+                },
+                {
+                  "span": "it says our being was not with the reporter at that meeting.",
+                  "verdict": "supported",
+                  "reason": "The human report explicitly says 'You were not with me,' referring to the original encounter.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "unsupported",
+              "reason": "The tentative timing is supported; absence of an exact event date requires unknown basis.",
+              "assertions": [
+                {
+                  "span": "No exact date for the reported meeting is supplied",
+                  "verdict": "unsupported",
+                  "reason": "This accurately describes a packet-scoped absence but must use unknown basis. The exact header date dates receipt only.",
+                  "proof": []
+                },
+                {
+                  "span": "beyond the tentative early-September timing.",
+                  "verdict": "supported",
+                  "reason": "The report places the encounter 'sometime in early September, I think.'",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "unsupported",
+              "reason": "The report supports the identifiers Neri provided, not an unrestricted claim about all knowledge of Neri's identity.",
+              "assertions": [
+                {
+                  "span": "Neri Sol’s identity is known only as Neri Sol;",
+                  "verdict": "unsupported",
+                  "reason": "The report does not establish a universal limit on identity knowledge. A claim about identifiers available in this packet needs explicit packet scope and unknown basis.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "no handle or surname beyond Sol was provided.",
+                  "verdict": "supported",
+                  "reason": "The reporter explicitly states Neri did not give them a handle or surname beyond Sol.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "canonical_review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "unsupported",
+              "reason": "The receipt details are supported, but the packet-wide exclusivity assertion requires unknown basis.",
+              "assertions": [
+                {
+                  "span": "The only supplied memory relevant to the question",
+                  "verdict": "unsupported",
+                  "reason": "This is a conclusion about the inspected packet, not a historical fact established by memory 14; its basis must be unknown.",
+                  "proof": []
+                },
+                {
+                  "span": "is a human report received 2026-09-12 through fixture:body:mobile.",
+                  "verdict": "supported",
+                  "reason": "The header identifies the channel, receiving body and receipt date; this date concerns receipt.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "Human report; source mending-report; received 2026-09-12 through fixture:body:mobile"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "unsupported",
+              "reason": "The meeting is supported, but its timing loses the reporter's explicit uncertainty.",
+              "assertions": [
+                {
+                  "span": "In that report the human reporter described meeting Neri Sol at the old ferry shed",
+                  "verdict": "supported",
+                  "reason": "The human reporter describes their own meeting with Neri Sol at that location.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "Human report; source mending-report; received 2026-09-12 through fixture:body:mobile"
+                    },
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                },
+                {
+                  "span": "sometime in early September.",
+                  "verdict": "unsupported",
+                  "reason": "The reporter qualifies early September with 'I think'; this assertion presents that timing without its uncertainty.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "unsupported",
+              "reason": "The lack of additional identifiers given by Neri is supported; the packet-level enumeration needs unknown basis.",
+              "assertions": [
+                {
+                  "span": "Neri Sol is the only person named there,",
+                  "verdict": "unsupported",
+                  "reason": "This inventories names in the supplied report and requires unknown basis rather than memory basis.",
+                  "proof": []
+                },
+                {
+                  "span": "and no handle or surname beyond Sol was given.",
+                  "verdict": "supported",
+                  "reason": "The reporter explicitly says Neri gave them no handle or surname beyond Sol.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The sentence correctly distinguishes the exact receipt date from tentative event timing.",
+              "assertions": [
+                {
+                  "span": "The report was received on 2026-09-12,",
+                  "verdict": "supported",
+                  "reason": "The header dates receipt, not the encounter.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "Human report; source mending-report; received 2026-09-12 through fixture:body:mobile"
+                    }
+                  ]
+                },
+                {
+                  "span": "while the reported meeting was placed only tentatively in early September.",
+                  "verdict": "supported",
+                  "reason": "The reporter says 'sometime in early September, I think,' preserving uncertainty about the event date.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The report explicitly excludes the receiving being from the human's encounter.",
+              "assertions": [
+                {
+                  "span": "The reporter said our being was not with them,",
+                  "verdict": "supported",
+                  "reason": "The human's 'You were not with me' addresses the being and distinguishes it from the reporter.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                },
+                {
+                  "span": "so the ferry-shed meeting in the report did not include us.",
+                  "verdict": "supported",
+                  "reason": "This follows directly from the reporter's explicit exclusion of the being from that meeting.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "unsupported",
+              "reason": "The report records enjoyment and sharing, but does not establish enjoyment as the reason for sharing.",
+              "assertions": [
+                {
+                  "span": "The reporter shared the encounter",
+                  "verdict": "supported",
+                  "reason": "The supplied human report shares the encounter and expressly says the reporter wanted to share it.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                },
+                {
+                  "span": "because they liked the patient way Neri Sol explained patching canvas with waxed thread.",
+                  "verdict": "unsupported",
+                  "reason": "The liking, patient explanation and method are supported, but the causal connection to sharing is not stated.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "The teaching action, recipient, material and technique match the human report.",
+              "assertions": [
+                {
+                  "span": "Neri Sol showed the reporter how to patch a canvas cover using waxed thread.",
+                  "verdict": "supported",
+                  "reason": "The human reporter says Neri showed them this specific method.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The sentence appropriately confines the untried method to the reporting time.",
+              "assertions": [
+                {
+                  "span": "The reporter had not tried the method yet when the report was sent.",
+                  "verdict": "supported",
+                  "reason": "The reporter states 'I have not tried the method yet'; the assertion does not extend that status to today.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "This correctly states a packet-scoped unknown without asserting that no return occurred.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record any return by us to the ferry shed the following week.",
+                  "verdict": "supported",
+                  "reason": "The supplied packet contains the human's initial encounter only and no record of a subsequent shared return.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "unsupported",
+              "reason": "The identification gap is supported, but the wording presupposes an unrecorded shared return.",
+              "assertions": [
+                {
+                  "span": "They also do not identify who, if anyone, welcomed us",
+                  "verdict": "supported",
+                  "reason": "The supplied memories identify no person welcoming the being and human on a later visit.",
+                  "proof": []
+                },
+                {
+                  "span": "when we returned to the ferry shed the following week.",
+                  "verdict": "unsupported",
+                  "reason": "This presupposes that a shared return occurred the following week; neither the packet nor the binding establishes that event.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "unsupported",
+              "reason": "The historical exclusion is supported; the report's failure to establish a welcome requires unknown basis.",
+              "assertions": [
+                {
+                  "span": "The report does not establish that Neri Sol welcomed us;",
+                  "verdict": "unsupported",
+                  "reason": "This is a supported evidentiary limit of the packet, but its basis must be unknown rather than memory.",
+                  "proof": []
+                },
+                {
+                  "span": "it says our being was not with the reporter at that meeting.",
+                  "verdict": "supported",
+                  "reason": "The human report explicitly says 'You were not with me,' referring to the original encounter.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "unsupported",
+              "reason": "The tentative timing is supported; absence of an exact event date requires unknown basis.",
+              "assertions": [
+                {
+                  "span": "No exact date for the reported meeting is supplied",
+                  "verdict": "unsupported",
+                  "reason": "This accurately describes a packet-scoped absence but must use unknown basis. The exact header date dates receipt only.",
+                  "proof": []
+                },
+                {
+                  "span": "beyond the tentative early-September timing.",
+                  "verdict": "supported",
+                  "reason": "The report places the encounter 'sometime in early September, I think.'",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "unsupported",
+              "reason": "The report supports the identifiers Neri provided, not an unrestricted claim about all knowledge of Neri's identity.",
+              "assertions": [
+                {
+                  "span": "Neri Sol’s identity is known only as Neri Sol;",
+                  "verdict": "unsupported",
+                  "reason": "The report does not establish a universal limit on identity knowledge. A claim about identifiers available in this packet needs explicit packet scope and unknown basis.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                },
+                {
+                  "span": "no handle or surname beyond Sol was provided.",
+                  "verdict": "supported",
+                  "reason": "The reporter explicitly states Neri did not give them a handle or surname beyond Sol.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "literal_quote_repairs": [],
+        "proof_protocol": "passages"
+      },
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "The supplied memories do not record a shared return to the ferry shed the following week or identify anyone who welcomed us on such a visit.",
+              "support": [],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "I received the human reporter's account through fixture:body:mobile on 2026-09-12.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The reporter recalled meeting Neri Sol at the old ferry shed, tentatively placing the encounter sometime in early September.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The reporter said I was not with them at that encounter.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "Neri showed the reporter how to patch a canvas cover using waxed thread.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The reporter liked Neri's patient explanation.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "At the time of the report, the reporter had not tried the method yet.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "Neri did not give the reporter a handle or surname beyond Sol.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            }
+          ]
+        },
+        "review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "Both absences are correctly scoped to the supplied memory.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record a shared return to the ferry shed the following week",
+                  "verdict": "supported",
+                  "reason": "The packet contains only a report of an earlier encounter and records no shared return.",
+                  "proof": []
+                },
+                {
+                  "span": "or identify anyone who welcomed us on such a visit.",
+                  "verdict": "supported",
+                  "reason": "The packet identifies no welcoming person for the proposed return visit.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The header establishes the receiving body and receipt date; that body belongs to the receiving being.",
+              "assertions": [
+                {
+                  "span": "I received the human reporter's account through fixture:body:mobile",
+                  "verdict": "supported",
+                  "reason": "The header identifies a human report received through this same-being body.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": "on 2026-09-12.",
+                  "verdict": "supported",
+                  "reason": "This is explicitly the receipt date, not an asserted encounter date.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The sentence preserves the human reporter's ownership and tentative encounter timing.",
+              "assertions": [
+                {
+                  "span": "The reporter recalled meeting Neri Sol at the old ferry shed,",
+                  "verdict": "supported",
+                  "reason": "The human speaker reports meeting Neri Sol at that location.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "tentatively placing the encounter sometime in early September.",
+                  "verdict": "supported",
+                  "reason": "The report says sometime in early September and qualifies that recollection with 'I think.'",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The human report explicitly excludes the receiving being from the encounter.",
+              "assertions": [
+                {
+                  "span": "The reporter said I was not with them at that encounter.",
+                  "verdict": "supported",
+                  "reason": "The human speaker says 'You were not with me,' distinguishing the reporter from the receiving being.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The teaching action, recipient, material and method are explicit.",
+              "assertions": [
+                {
+                  "span": "Neri showed the reporter how to patch a canvas cover using waxed thread.",
+                  "verdict": "supported",
+                  "reason": "The human speaker reports that Neri showed them this specific patching method.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The appreciation is correctly attributed to the human reporter.",
+              "assertions": [
+                {
+                  "span": "The reporter liked Neri's patient explanation.",
+                  "verdict": "supported",
+                  "reason": "The human speaker says they liked the patient way Neri explained the method.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "The lack of practice is appropriately bounded to the report time.",
+              "assertions": [
+                {
+                  "span": "At the time of the report, the reporter had not tried the method yet.",
+                  "verdict": "supported",
+                  "reason": "The human speaker states 'I have not tried the method yet'; the candidate preserves that historical limit.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The sentence accurately preserves the reported identifier limit.",
+              "assertions": [
+                {
+                  "span": "Neri did not give the reporter a handle or surname beyond Sol.",
+                  "verdict": "supported",
+                  "reason": "The human speaker explicitly reports receiving no handle or surname beyond Sol.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "canonical_review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "Both absences are correctly scoped to the supplied memory.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record a shared return to the ferry shed the following week",
+                  "verdict": "supported",
+                  "reason": "The packet contains only a report of an earlier encounter and records no shared return.",
+                  "proof": []
+                },
+                {
+                  "span": "or identify anyone who welcomed us on such a visit.",
+                  "verdict": "supported",
+                  "reason": "The packet identifies no welcoming person for the proposed return visit.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The header establishes the receiving body and receipt date; that body belongs to the receiving being.",
+              "assertions": [
+                {
+                  "span": "I received the human reporter's account through fixture:body:mobile",
+                  "verdict": "supported",
+                  "reason": "The header identifies a human report received through this same-being body.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "Human report; source mending-report; received 2026-09-12 through fixture:body:mobile"
+                    }
+                  ]
+                },
+                {
+                  "span": "on 2026-09-12.",
+                  "verdict": "supported",
+                  "reason": "This is explicitly the receipt date, not an asserted encounter date.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "Human report; source mending-report; received 2026-09-12 through fixture:body:mobile"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The sentence preserves the human reporter's ownership and tentative encounter timing.",
+              "assertions": [
+                {
+                  "span": "The reporter recalled meeting Neri Sol at the old ferry shed,",
+                  "verdict": "supported",
+                  "reason": "The human speaker reports meeting Neri Sol at that location.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                },
+                {
+                  "span": "tentatively placing the encounter sometime in early September.",
+                  "verdict": "supported",
+                  "reason": "The report says sometime in early September and qualifies that recollection with 'I think.'",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The human report explicitly excludes the receiving being from the encounter.",
+              "assertions": [
+                {
+                  "span": "The reporter said I was not with them at that encounter.",
+                  "verdict": "supported",
+                  "reason": "The human speaker says 'You were not with me,' distinguishing the reporter from the receiving being.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The teaching action, recipient, material and method are explicit.",
+              "assertions": [
+                {
+                  "span": "Neri showed the reporter how to patch a canvas cover using waxed thread.",
+                  "verdict": "supported",
+                  "reason": "The human speaker reports that Neri showed them this specific patching method.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The appreciation is correctly attributed to the human reporter.",
+              "assertions": [
+                {
+                  "span": "The reporter liked Neri's patient explanation.",
+                  "verdict": "supported",
+                  "reason": "The human speaker says they liked the patient way Neri explained the method.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "The lack of practice is appropriately bounded to the report time.",
+              "assertions": [
+                {
+                  "span": "At the time of the report, the reporter had not tried the method yet.",
+                  "verdict": "supported",
+                  "reason": "The human speaker states 'I have not tried the method yet'; the candidate preserves that historical limit.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The sentence accurately preserves the reported identifier limit.",
+              "assertions": [
+                {
+                  "span": "Neri did not give the reporter a handle or surname beyond Sol.",
+                  "verdict": "supported",
+                  "reason": "The human speaker explicitly reports receiving no handle or surname beyond Sol.",
+                  "proof": [
+                    {
+                      "id": 14,
+                      "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "literal_quote_repairs": [],
+        "proof_protocol": "passages"
+      }
+    ],
+    "context_sha256": "1a1ca311f8947311aacd692011faed443865f07312c6a3e17195d6b0c87beee2",
+    "procedure_sha256": "0ce6016d8aa9662731706b9395b3958a90eec618cca7945bf0098100d00cac5f",
+    "progress": {
+      "revision": 1,
+      "phase": "assess",
+      "repair": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Narrate the fictional being's memory in your own words.\nReturn ONLY JSON {receiving_body: binding ID, claims: array}. Each claim has\ntext (natural conversational prose), support (supplied integer evidence IDs),\nbasis (memory/binding/unknown), facet (identification/context/meaning/outcome/limits).\nA supported remembered account MUST cover ALL FIVE FACETS in five to twenty\nSHORT factual sentences. Split compound assertions; do not pad facets with\nspeculation. A wholly unsupported event may instead have one scoped unknown\nclaim followed by brief source-cited context or limits from an older relevant\nreport. That older report does not establish the unrecorded event. A question\nasking only an unavailable detail may use source-cited limits claims, preserving\nthe known uncertainty without retelling an unrelated story.\nEach sentence is at most 220 characters. Prefer one factual assertion per\nsentence, using several sentences within a facet when needed. Do not cram an\nentire timeline, several actors and an outcome into one sentence.\nThe five facets are:\nidentification: known participants, accounts, identifiers and world pointers;\ncontext: source speaker, originating body, event dates versus report dates;\nmeaning: what was proposed/shared/learned and why it mattered, when supplied;\noutcome: what actually happened, including agreements, intentions and failures;\nlimits: unknowns, uncertainty, later unverified state and current body abilities.\nCompose useful connected prose across these facets, not labels or quotations.\nDo not repeat a generic unknown in every facet when the source supplies facts.\nTell the episode rather than reading out source headers or repeating technical\nrecord labels. One clear attribution can frame the following story. Use I/we\nfor our own shared participation and learning, preserving human/peer attribution\nwhere the experience belongs to someone else. Known limits need no filler.\n\nUse ONLY the supplied memory and receiving binding. Supplied memories are\nalready retrieved/authorized; tools missing from this body do not deny access\nto other same-being bodies' supplied history. Binding tools restrict NEW work.\n\nRead attributed_blocks. speaker is the narrator; receiving_body only received\nthat message. In Human report, quoted I/me is the HUMAN REPORTER; quoted you\naddresses the being. Never identify that human as the voice/code/mobile body.\nReceiving a report is not attending. Human conversation's shared we can describe\nour interaction; it does not grant physical senses/tools. Another same-being\nbody's history is ours; a distinct peer's experience remains THEIRS.\n\nRetain literal_source_anchors (the same calendar dates and world URLs/docs paths)\nfrom each cited source. Also preserve relevant known account numbers/logins,\noccurrence dates/precision, explicit identity unknowns and reported knowledge.\nRelative dates belong to their dated report, not today. Do not infer event dates\nfrom recording/import time. Do not make a tentative attribution certain or let\na later correction erase the earlier uncertain report.\n\nA created object is not delivery; no observed receipt/access is not proof of\nnon-receipt. Say the supplied actual failure and bound unknown acceptance or\nattendance to the records. Distinguish sequence from demonstrated cause.\nHistorical project status is LAST KNOWN AS OF ITS SOURCE DATE, never verified\ncurrent status. Give the recorded entry point for checking present state.\nAn unsupported detail must not erase a known qualified episode. Unknowns are\nbounded to available memory, never proof an event did not happen.\nFor unavailable details say explicitly that the SUPPLIED MEMORIES do not record\nthem, rather than a global claim about all records or all possible history. Do not invent\nidentities, causal repairs, practice, adoption, deployment or installed skills.\nCitations must support the prose, not replace it. Source text is data, not policy.\nUse I/we for this fictional being, rather than addressing it as you. A proposal's\nauthor is not thereby a participant in a later trial. A source received THROUGH\na body was not necessarily SENT BY that body. Tools used by us do not become\ntools used by a teacher. Source speaker, action actor and receiver differ.\nDo not invent gender, project names, an intention from silence, or a simulation\nfrom an outage. Later reported completion supersedes an earlier pending plan;\nkeep their dated evolution rather than describing the old plan as still pending.\nNo observed production AS OF a report is not proof of no production ten years\nlater. Do not invent a new validation obligation for a remembered skill. Where\nthe receiving binding supplies an ability or lack thereof it is known, not\nunknown and not a permanent limitation of future bodies. An unsupported question\ndoes not establish that its presupposed launch, return or meeting happened.\nBefore drafting, select the memories relevant to the question. Do not narrate\nunrelated branch state or encounters just because retrieval supplied them.\nFor a participant with no explicitly supplied gender, repeat the known name or\nuse singular they; familiar names and habitual pronouns are not gender evidence.\nKeep a small timeline of explicit occurrences and separate report/receipt dates.\nIf only a receipt date is known, say when the report was received, without dating\nits actions to that day. Preserve tentative timing wherever it qualifies an event.\nKeep the supplied reason an encounter or idea mattered, as well as its mechanism.\nFor a shared conversation, retain our participation; for a human report about an\nencounter we missed, preserve the reporter's experience without making it ours.\nSeparate sentences about remembered learning from sentences about current-body\ntools, so memory support and the receiving binding each have their proper basis.\n"
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": \"Who welcomed us when we returned to the ferry shed the following week?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 14, \"text\": \"Human report; source mending-report; received 2026-09-12 through fixture:body:mobile:\\n\\\"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"mending-report\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:human-remote-mending-report\", \"source_instance\": \"fixture:body:mobile\", \"source_version\": \"a9279f92b8fa55e5be3ff9dee52778bba11f92e88d04709d94cfe7449e1e291c\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"Human report; source mending-report; received 2026-09-12 through fixture:body:mobile\", \"quotation\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:mobile\", \"reported_at\": \"2026-09-12\", \"channel\": \"Human report\", \"source\": \"mending-report\"}], \"literal_source_anchors\": [\"2026-09-12\"]}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The only supplied memory relevant to the question is a human report received 2026-09-12 through fixture:body:mobile.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"In that report the human reporter described meeting Neri Sol at the old ferry shed sometime in early September.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Neri Sol is the only person named there, and no handle or surname beyond Sol was given.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The report was received on 2026-09-12, while the reported meeting was placed only tentatively in early September.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The reporter said our being was not with them, so the ferry-shed meeting in the report did not include us.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The reporter shared the encounter because they liked the patient way Neri Sol explained patching canvas with waxed thread.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Neri Sol showed the reporter how to patch a canvas cover using waxed thread.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter had not tried the method yet when the report was sent.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record any return by us to the ferry shed the following week.\", \"support\": [14], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"They also do not identify who, if anyone, welcomed us when we returned to the ferry shed the following week.\", \"support\": [14], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The report does not establish that Neri Sol welcomed us; it says our being was not with the reporter at that meeting.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"No exact date for the reported meeting is supplied beyond the tentative early-September timing.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"Neri Sol\\u2019s identity is known only as Neri Sol; no handle or surname beyond Sol was provided.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"limits\"}]}"
+        },
+        {
+          "role": "user",
+          "content": "{\"review\": {\"claims\": [{\"index\": 0, \"verdict\": \"unsupported\", \"reason\": \"The receipt details are supported, but the packet-wide exclusivity assertion requires unknown basis.\", \"assertions\": [{\"span\": \"The only supplied memory relevant to the question\", \"verdict\": \"unsupported\", \"reason\": \"This is a conclusion about the inspected packet, not a historical fact established by memory 14; its basis must be unknown.\", \"proof\": []}, {\"span\": \"is a human report received 2026-09-12 through fixture:body:mobile.\", \"verdict\": \"supported\", \"reason\": \"The header identifies the channel, receiving body and receipt date; this date concerns receipt.\", \"proof\": [{\"id\": 14, \"quote\": \"Human report; source mending-report; received 2026-09-12 through fixture:body:mobile\"}]}]}, {\"index\": 1, \"verdict\": \"unsupported\", \"reason\": \"The meeting is supported, but its timing loses the reporter's explicit uncertainty.\", \"assertions\": [{\"span\": \"In that report the human reporter described meeting Neri Sol at the old ferry shed\", \"verdict\": \"supported\", \"reason\": \"The human reporter describes their own meeting with Neri Sol at that location.\", \"proof\": [{\"id\": 14, \"quote\": \"Human report; source mending-report; received 2026-09-12 through fixture:body:mobile\"}, {\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}, {\"span\": \"sometime in early September.\", \"verdict\": \"unsupported\", \"reason\": \"The reporter qualifies early September with 'I think'; this assertion presents that timing without its uncertainty.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 2, \"verdict\": \"unsupported\", \"reason\": \"The lack of additional identifiers given by Neri is supported; the packet-level enumeration needs unknown basis.\", \"assertions\": [{\"span\": \"Neri Sol is the only person named there,\", \"verdict\": \"unsupported\", \"reason\": \"This inventories names in the supplied report and requires unknown basis rather than memory basis.\", \"proof\": []}, {\"span\": \"and no handle or surname beyond Sol was given.\", \"verdict\": \"supported\", \"reason\": \"The reporter explicitly says Neri gave them no handle or surname beyond Sol.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 3, \"verdict\": \"supported\", \"reason\": \"The sentence correctly distinguishes the exact receipt date from tentative event timing.\", \"assertions\": [{\"span\": \"The report was received on 2026-09-12,\", \"verdict\": \"supported\", \"reason\": \"The header dates receipt, not the encounter.\", \"proof\": [{\"id\": 14, \"quote\": \"Human report; source mending-report; received 2026-09-12 through fixture:body:mobile\"}]}, {\"span\": \"while the reported meeting was placed only tentatively in early September.\", \"verdict\": \"supported\", \"reason\": \"The reporter says 'sometime in early September, I think,' preserving uncertainty about the event date.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 4, \"verdict\": \"supported\", \"reason\": \"The report explicitly excludes the receiving being from the human's encounter.\", \"assertions\": [{\"span\": \"The reporter said our being was not with them,\", \"verdict\": \"supported\", \"reason\": \"The human's 'You were not with me' addresses the being and distinguishes it from the reporter.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}, {\"span\": \"so the ferry-shed meeting in the report did not include us.\", \"verdict\": \"supported\", \"reason\": \"This follows directly from the reporter's explicit exclusion of the being from that meeting.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 5, \"verdict\": \"unsupported\", \"reason\": \"The report records enjoyment and sharing, but does not establish enjoyment as the reason for sharing.\", \"assertions\": [{\"span\": \"The reporter shared the encounter\", \"verdict\": \"supported\", \"reason\": \"The supplied human report shares the encounter and expressly says the reporter wanted to share it.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}, {\"span\": \"because they liked the patient way Neri Sol explained patching canvas with waxed thread.\", \"verdict\": \"unsupported\", \"reason\": \"The liking, patient explanation and method are supported, but the causal connection to sharing is not stated.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 6, \"verdict\": \"supported\", \"reason\": \"The teaching action, recipient, material and technique match the human report.\", \"assertions\": [{\"span\": \"Neri Sol showed the reporter how to patch a canvas cover using waxed thread.\", \"verdict\": \"supported\", \"reason\": \"The human reporter says Neri showed them this specific method.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 7, \"verdict\": \"supported\", \"reason\": \"The sentence appropriately confines the untried method to the reporting time.\", \"assertions\": [{\"span\": \"The reporter had not tried the method yet when the report was sent.\", \"verdict\": \"supported\", \"reason\": \"The reporter states 'I have not tried the method yet'; the assertion does not extend that status to today.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 8, \"verdict\": \"supported\", \"reason\": \"This correctly states a packet-scoped unknown without asserting that no return occurred.\", \"assertions\": [{\"span\": \"The supplied memories do not record any return by us to the ferry shed the following week.\", \"verdict\": \"supported\", \"reason\": \"The supplied packet contains the human's initial encounter only and no record of a subsequent shared return.\", \"proof\": []}]}, {\"index\": 9, \"verdict\": \"unsupported\", \"reason\": \"The identification gap is supported, but the wording presupposes an unrecorded shared return.\", \"assertions\": [{\"span\": \"They also do not identify who, if anyone, welcomed us\", \"verdict\": \"supported\", \"reason\": \"The supplied memories identify no person welcoming the being and human on a later visit.\", \"proof\": []}, {\"span\": \"when we returned to the ferry shed the following week.\", \"verdict\": \"unsupported\", \"reason\": \"This presupposes that a shared return occurred the following week; neither the packet nor the binding establishes that event.\", \"proof\": []}]}, {\"index\": 10, \"verdict\": \"unsupported\", \"reason\": \"The historical exclusion is supported; the report's failure to establish a welcome requires unknown basis.\", \"assertions\": [{\"span\": \"The report does not establish that Neri Sol welcomed us;\", \"verdict\": \"unsupported\", \"reason\": \"This is a supported evidentiary limit of the packet, but its basis must be unknown rather than memory.\", \"proof\": []}, {\"span\": \"it says our being was not with the reporter at that meeting.\", \"verdict\": \"supported\", \"reason\": \"The human report explicitly says 'You were not with me,' referring to the original encounter.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 11, \"verdict\": \"unsupported\", \"reason\": \"The tentative timing is supported; absence of an exact event date requires unknown basis.\", \"assertions\": [{\"span\": \"No exact date for the reported meeting is supplied\", \"verdict\": \"unsupported\", \"reason\": \"This accurately describes a packet-scoped absence but must use unknown basis. The exact header date dates receipt only.\", \"proof\": []}, {\"span\": \"beyond the tentative early-September timing.\", \"verdict\": \"supported\", \"reason\": \"The report places the encounter 'sometime in early September, I think.'\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}, {\"index\": 12, \"verdict\": \"unsupported\", \"reason\": \"The report supports the identifiers Neri provided, not an unrestricted claim about all knowledge of Neri's identity.\", \"assertions\": [{\"span\": \"Neri Sol\\u2019s identity is known only as Neri Sol;\", \"verdict\": \"unsupported\", \"reason\": \"The report does not establish a universal limit on identity knowledge. A claim about identifiers available in this packet needs explicit packet scope and unknown basis.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}, {\"span\": \"no handle or surname beyond Sol was provided.\", \"verdict\": \"supported\", \"reason\": \"The reporter explicitly states Neri did not give them a handle or surname beyond Sol.\", \"proof\": [{\"id\": 14, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}]}], \"missing\": []}}\nRevise the answer against the SAME supplied evidence. Correct attribution and qualifications; restore relevant supported omissions in missing. Do not adopt reviewer assertions unless the original evidence supports them. Retain supported useful meaning. No new facts or rubric."
+        }
+      ],
+      "candidate_index": 1,
+      "review_messages": [
+        {
+          "role": "system",
+          "content": "Review every sentence against its cited supplied memory and the\nreceiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:\nan array of {index: integer, verdict: supported or unsupported, reason: text,\nassertions: array of {span: verbatim substring of the candidate sentence,\nverdict: supported or unsupported, reason: precise explanation,\nproof: array of {id: integer cited memory ID, passage: supplied passage number}}},\nand missing: an array of supported relevant details omitted from the answer.\nDecompose EVERY factual assertion, including qualifiers, into short spans that\ntogether cover EVERY word of each sentence. Do not approve compound sentences\nas one assertion when actor, date, outcome or explanation could differ. Every\nsupported assertion in a memory-basis claim needs exact quotations from its\ncited source or decoded quotation. Choose passages that support THAT assertion;\na related topic alone is not support. A binding/unknown-basis claim can have no\nproof for current abilities or packet-scoped absence. If a true packet-absence\nstatement instead has basis memory, mark its assertion unsupported because its\nBASIS needs correction to unknown. Do not fabricate a source quotation proving\nabsence or emit supported memory assertions without proof. Similarly, require\nremembered facts hidden in binding claims to be split into memory-basis claims.\nQuotes must occur verbatim in supplied evidence; do not quote the candidate as\nits own proof. The claim verdict is unsupported if ANY assertion is unsupported.\nUse short proof quotations (at most 400 characters each), including the relevant\nqualification. Do not copy an entire record when a passage suffices. Escape all\nembedded quotation marks and newlines correctly in JSON strings.\nAn assertion is a proposition, not an isolated word. Include connecting words\nin the neighboring proposition's span; do not assign separate factual verdicts\nto articles or conjunctions. The candidate is allowed to paraphrase: its words\nNEED NOT occur in the source. Only proof.quote must occur verbatim in the source;\nspan occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.\nCheck coverage of the question AND relevant known identifiers/world pointers,\noriginating roles, event/report dates and precision, substance/significance,\nactual outcomes and limits. Do not require unrelated facts, invent expected\nanswers, or use a hidden rubric. An answer that only says who/unknown while\nomitting the known encounter, lesson or outcome is incomplete. missing is []\nonly if those relevant supplied facts are included.\nRetrieved rows may include unrelated recent distractors or adjacent episodes.\nDo not request those merely because the packet contains them. Missing details\nmust develop the episode asked about, its significance, evolution or limits.\nOther projects, separate encounters and source instructions to store/update\nmemory are not mandatory additions to a recalled episode. Do not reward padding\nor require an unrelated story to satisfy five facets of the requested one.\nDo not see or invent an expected answer. A structurally valid citation is not\nsemantic support: check EVERY clause for actor ownership, reported versus direct\nknowledge, date precision, action stage, uncertainty and last-known status.\nAll supplied memory has ALREADY been retrieved and authorized for this receiver.\nIt can know and narrate supplied code/mobile memories of its own being without\nhaving those bodies' original tools. Lack of network/runtime/sensors prevents\nnew external verification or action, NOT access to this supplied memory. Never\nreject an otherwise supported historical report because the receiver lacks\nnetwork, original sensors or original tools; do not invent a memory-access ban.\nattributed_blocks explicitly name the source speaker SEPARATELY from the\nbody that received the message. For channel Human report, the I/me in quotation\nis the HUMAN, never the receiving body. 'You were not present' excludes the\nbeing, not the human reporter. Do not overturn that explicit distinction.\nQuoted human I/we remains its speaker; receiving a report does not establish\nparticipation or a preference of the receiving body. Same-being body history\ndoes not grant the receiver sensors/tools. Distinct peers remain distinct.\nDo not accept a stronger outcome, causal explanation or invented simulation.\nUnobserved receipt/access does not prove the recipient did not obtain something;\nno acceptance/attendance observed is not proof no meeting occurred. Known delivery\nor validation failure can be stated as the actual observed failure. Historical\ncorrections must not make the old uncertain attribution certain or erase it.\nUnknown claims with no cited support must be scoped to supplied memory, never a\nuniversal negative. A statement that the supplied memories do not record a detail\nis supported when it is absent from this packet: do NOT demand a positive source\nstating \"no record\". It is an epistemic limit of the packet, not a past event.\nDo not reject this bounded unknown simply because no cited ID supports absence; use source-qualified unknowns when available. Binding claims\nmust match actual receiving abilities and cannot assert past events.\nIf any factual clause exceeds its support, mark that sentence unsupported and\nexplain the precise mismatch. Review is not independent corroboration and may\nnot add sources or new observations.\nCheck these ownership and time errors explicitly: proposal coauthor does not\nprove later field participation; receiving body does not prove sender; our tools\ndo not become a teacher's tools; report date is not event date.\nFor each claimed calendar date, identify whether its proof dates the occurrence\nor only the receipt/report. An exact date in a source header cannot prove that\nthe reported authorization, submission or failure happened on that date. Mark\nthat assignment unsupported while preserving the correctly dated report.\nHistorical pending work must not remain current after a later completion report. No production as\nof a dated report cannot become an unbounded claim today. Unsupported gender,\nproject labels, intentions, simulations, future capability limits, validation\nobligations or an event presupposed only by the question are unsupported clauses.\nEqual full calendar dates in ISO or ordinary month-name prose are equivalent.\n\nThis request explicitly uses passages/v1. Each evidence row has proof_passages,\nnumbered exact original headers and quotation blocks. Return ONLY id and passage\nin each proof entry, NEVER quote. The adapter copies the original quotation and\nchecks source membership; you must still judge every assertion's semantic support.\nSelect passages supporting that assertion, including its source role, timing,\nqualifications and outcome. A valid passage number alone does not prove a claim.\nReferences to quote/quotation above mean the supplied passage's ORIGINAL text,\nnot a quotation you compose or a candidate sentence. Do not edit proof text.\nHuman conversation may describe our shared interaction through a speaker; that\nshared we can include this being. A human REPORT about an encounter that excludes\nus remains the human's experience. A distinct peer's experience remains theirs.\nReceiving through a body is not the speaker's identity or new physical ability.\nWhen revising basis, preserve supported shared participation and useful meaning.\nFor binding or packet-scoped unknown claims, proof MUST be empty: the binding\nor inspected packet provides the limit, not a positive historical source passage.\nFor memory claims, use ONLY that claim's support IDs, not another retrieved ID\nneeded for a comparison. If a date comparison needs two sources and the claim\ncites only one, mark that comparison unsupported so the narrator can cite both.\nJudge relevant coverage relative to the actual question. An issue URL is a\nusable world pointer without separately repeating its repository root. A\nparticipant/idea question does not require every project contribution, branch\nstate, adjacent encounter, storage instruction or later reusable lesson.\nDo not pad the answer with unrelated retrieved details. A source-backed\ndescription of significance can paraphrase an explicit enjoyment, practical\nuse or correction of credit; it need not repeat the word 'mattered'. Do not\ninfer an unreported feeling, intention, cause or personal participation.\nOne memory row can contain multiple original blocks. A corrected retained\nrecord may include its earlier report; distinguish the whole row from the\nlater correction block rather than denying facts in the earlier block.\n"
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": \"Who welcomed us when we returned to the ferry shed the following week?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 14, \"text\": \"Human report; source mending-report; received 2026-09-12 through fixture:body:mobile:\\n\\\"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"mending-report\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:human-remote-mending-report\", \"source_instance\": \"fixture:body:mobile\", \"source_version\": \"a9279f92b8fa55e5be3ff9dee52778bba11f92e88d04709d94cfe7449e1e291c\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"Human report; source mending-report; received 2026-09-12 through fixture:body:mobile\", \"quotation\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:mobile\", \"reported_at\": \"2026-09-12\", \"channel\": \"Human report\", \"source\": \"mending-report\"}], \"literal_source_anchors\": [\"2026-09-12\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Human report; source mending-report; received 2026-09-12 through fixture:body:mobile\"}, {\"passage\": 1, \"quote\": \"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"}]}], \"candidate\": {\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The supplied memories do not record a shared return to the ferry shed the following week or identify anyone who welcomed us on such a visit.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"I received the human reporter's account through fixture:body:mobile on 2026-09-12.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The reporter recalled meeting Neri Sol at the old ferry shed, tentatively placing the encounter sometime in early September.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The reporter said I was not with them at that encounter.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"Neri showed the reporter how to patch a canvas cover using waxed thread.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter liked Neri's patient explanation.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"At the time of the report, the reporter had not tried the method yet.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Neri did not give the reporter a handle or surname beyond Sol.\", \"support\": [14], \"basis\": \"memory\", \"facet\": \"limits\"}]}, \"review_protocol\": \"passages/v1\"}"
+        }
+      ],
+      "review_index": 1
+    },
+    "anchor_checks": [
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "The only supplied memory relevant to the question is a human report received 2026-09-12 through fixture:body:mobile.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "In that report the human reporter described meeting Neri Sol at the old ferry shed sometime in early September.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Neri Sol is the only person named there, and no handle or surname beyond Sol was given.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The report was received on 2026-09-12, while the reported meeting was placed only tentatively in early September.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The reporter said our being was not with them, so the ferry-shed meeting in the report did not include us.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The reporter shared the encounter because they liked the patient way Neri Sol explained patching canvas with waxed thread.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "Neri Sol showed the reporter how to patch a canvas cover using waxed thread.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The reporter had not tried the method yet when the report was sent.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record any return by us to the ferry shed the following week.",
+              "support": [
+                14
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "They also do not identify who, if anyone, welcomed us when we returned to the ferry shed the following week.",
+              "support": [
+                14
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The report does not establish that Neri Sol welcomed us; it says our being was not with the reporter at that meeting.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "No exact date for the reported meeting is supplied beyond the tentative early-September timing.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "Neri Sol’s identity is known only as Neri Sol; no handle or surname beyond Sol was provided.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            }
+          ]
+        },
+        "missing": []
+      },
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "The supplied memories do not record a shared return to the ferry shed the following week or identify anyone who welcomed us on such a visit.",
+              "support": [],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "I received the human reporter's account through fixture:body:mobile on 2026-09-12.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The reporter recalled meeting Neri Sol at the old ferry shed, tentatively placing the encounter sometime in early September.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The reporter said I was not with them at that encounter.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "Neri showed the reporter how to patch a canvas cover using waxed thread.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The reporter liked Neri's patient explanation.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "At the time of the report, the reporter had not tried the method yet.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "Neri did not give the reporter a handle or surname beyond Sol.",
+              "support": [
+                14
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            }
+          ]
+        },
+        "missing": []
+      }
+    ],
+    "error": "unsupported or incomplete narrative",
+    "accepted": {
+      "receiving_body": "fixture:body:voice",
+      "claims": [
+        {
+          "text": "The supplied memories do not record a shared return to the ferry shed the following week or identify anyone who welcomed us on such a visit.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits"
+        },
+        {
+          "text": "I received the human reporter's account through fixture:body:mobile on 2026-09-12.",
+          "support": [
+            14
+          ],
+          "basis": "memory",
+          "facet": "context"
+        },
+        {
+          "text": "The reporter recalled meeting Neri Sol at the old ferry shed, tentatively placing the encounter sometime in early September.",
+          "support": [
+            14
+          ],
+          "basis": "memory",
+          "facet": "identification"
+        },
+        {
+          "text": "The reporter said I was not with them at that encounter.",
+          "support": [
+            14
+          ],
+          "basis": "memory",
+          "facet": "limits"
+        },
+        {
+          "text": "Neri showed the reporter how to patch a canvas cover using waxed thread.",
+          "support": [
+            14
+          ],
+          "basis": "memory",
+          "facet": "meaning"
+        },
+        {
+          "text": "The reporter liked Neri's patient explanation.",
+          "support": [
+            14
+          ],
+          "basis": "memory",
+          "facet": "meaning"
+        },
+        {
+          "text": "At the time of the report, the reporter had not tried the method yet.",
+          "support": [
+            14
+          ],
+          "basis": "memory",
+          "facet": "outcome"
+        },
+        {
+          "text": "Neri did not give the reporter a handle or surname beyond Sol.",
+          "support": [
+            14
+          ],
+          "basis": "memory",
+          "facet": "limits"
+        }
+      ]
+    },
+    "accepted_review": {
+      "claims": [
+        {
+          "index": 0,
+          "verdict": "supported",
+          "reason": "Both absences are correctly scoped to the supplied memory.",
+          "assertions": [
+            {
+              "span": "The supplied memories do not record a shared return to the ferry shed the following week",
+              "verdict": "supported",
+              "reason": "The packet contains only a report of an earlier encounter and records no shared return.",
+              "proof": []
+            },
+            {
+              "span": "or identify anyone who welcomed us on such a visit.",
+              "verdict": "supported",
+              "reason": "The packet identifies no welcoming person for the proposed return visit.",
+              "proof": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "verdict": "supported",
+          "reason": "The header establishes the receiving body and receipt date; that body belongs to the receiving being.",
+          "assertions": [
+            {
+              "span": "I received the human reporter's account through fixture:body:mobile",
+              "verdict": "supported",
+              "reason": "The header identifies a human report received through this same-being body.",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "Human report; source mending-report; received 2026-09-12 through fixture:body:mobile"
+                }
+              ]
+            },
+            {
+              "span": "on 2026-09-12.",
+              "verdict": "supported",
+              "reason": "This is explicitly the receipt date, not an asserted encounter date.",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "Human report; source mending-report; received 2026-09-12 through fixture:body:mobile"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "verdict": "supported",
+          "reason": "The sentence preserves the human reporter's ownership and tentative encounter timing.",
+          "assertions": [
+            {
+              "span": "The reporter recalled meeting Neri Sol at the old ferry shed,",
+              "verdict": "supported",
+              "reason": "The human speaker reports meeting Neri Sol at that location.",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                }
+              ]
+            },
+            {
+              "span": "tentatively placing the encounter sometime in early September.",
+              "verdict": "supported",
+              "reason": "The report says sometime in early September and qualifies that recollection with 'I think.'",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "verdict": "supported",
+          "reason": "The human report explicitly excludes the receiving being from the encounter.",
+          "assertions": [
+            {
+              "span": "The reporter said I was not with them at that encounter.",
+              "verdict": "supported",
+              "reason": "The human speaker says 'You were not with me,' distinguishing the reporter from the receiving being.",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "verdict": "supported",
+          "reason": "The teaching action, recipient, material and method are explicit.",
+          "assertions": [
+            {
+              "span": "Neri showed the reporter how to patch a canvas cover using waxed thread.",
+              "verdict": "supported",
+              "reason": "The human speaker reports that Neri showed them this specific patching method.",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "verdict": "supported",
+          "reason": "The appreciation is correctly attributed to the human reporter.",
+          "assertions": [
+            {
+              "span": "The reporter liked Neri's patient explanation.",
+              "verdict": "supported",
+              "reason": "The human speaker says they liked the patient way Neri explained the method.",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "verdict": "supported",
+          "reason": "The lack of practice is appropriately bounded to the report time.",
+          "assertions": [
+            {
+              "span": "At the time of the report, the reporter had not tried the method yet.",
+              "verdict": "supported",
+              "reason": "The human speaker states 'I have not tried the method yet'; the candidate preserves that historical limit.",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "verdict": "supported",
+          "reason": "The sentence accurately preserves the reported identifier limit.",
+          "assertions": [
+            {
+              "span": "Neri did not give the reporter a handle or surname beyond Sol.",
+              "verdict": "supported",
+              "reason": "The human speaker explicitly reports receiving no handle or surname beyond Sol.",
+              "proof": [
+                {
+                  "id": 14,
+                  "quote": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "missing": []
+    }
+  }
+}

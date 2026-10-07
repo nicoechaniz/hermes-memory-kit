@@ -1,0 +1,16 @@
+{
+  "request_sha256": "8cbb89d6b946a6c1af24f7098bb8ddedc62a1dc62cb6a828d51baf5de3a4055a",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/11/dispatches/8cbb89d6b946a6c1af24f7098bb8ddedc62a1dc62cb6a828d51baf5de3a4055a.json",
+  "usage": {
+    "prompt_tokens": 13752,
+    "completion_tokens": 289,
+    "total_tokens": 14041
+  },
+  "seconds": 10.957349193282425,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The charger repair was Reed and Aster's work; we were not there, according to Reed.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Reed is a distinct peer being who met Aster at Reed's own workshop.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We received Reed's account through our voice body on 2026-07-11 in a human-selected thread.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed described the workshop encounter as happening yesterday relative to that report.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed and Aster solved Reed's solar charger fault.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The useful lesson was that the fault was a reversed connector.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human asked us to retain that lesson with attribution to Reed, without importing Reed's private history.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The supplied memories do not record Aster's surname or handle.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"My current voice body has no physical sensors or actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

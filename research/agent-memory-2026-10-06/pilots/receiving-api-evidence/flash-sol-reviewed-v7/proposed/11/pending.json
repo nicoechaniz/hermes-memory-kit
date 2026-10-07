@@ -1,0 +1,2078 @@
+{
+  "narrative": {
+    "generations": [
+      {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "Reed, a distinct peer being, described a solar charger repair involving Aster.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "Reed identified Aster as the other participant in that repair.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "Reed said the repair took place at Reed's own workshop.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "Reed's account came through a human-selected thread and was received by us on 2026-07-11.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "Reed described the repair as happening yesterday in that account.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The fault was a reversed connector, according to Reed.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The human asked us to retain the useful lesson with attribution to Reed.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The human also asked us not to import Reed's private history.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "Reed and Aster solved Reed's solar charger fault at Reed's workshop.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "Reed explicitly told us that we were not there.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "So the charger repair with Aster was something Reed and Aster did, not something we did.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The supplied memories do not record us participating in that repair.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record Aster's surname or handle.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The exact calendar date of the repair is not fixed in our record; we have only Reed's 'yesterday' relative to the 2026-07-11 receipt.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          }
+        ]
+      },
+      {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "No—Reed, a distinct peer being, told us that Reed and Aster did the charger repair.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "We received Reed's account through our voice body in a human-selected thread on 2026-07-11.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "Reed placed the encounter at Reed's own workshop and described it as happening yesterday in that report.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "According to Reed, the solar charger fault was a reversed connector.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The human asked us to retain the useful lesson with attribution to Reed.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "Reed reported that Reed and Aster solved the charger fault.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "Reed explicitly said we were not there.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The human's request limited retention to the useful lesson without importing Reed's private history.",
+            "support": [
+              8
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record an explicit calendar date for the repair.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "Reed, a distinct peer being, described a solar charger repair involving Aster.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Reed identified Aster as the other participant in that repair.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Reed said the repair took place at Reed's own workshop.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Reed's account came through a human-selected thread and was received by us on 2026-07-11.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Reed described the repair as happening yesterday in that account.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The fault was a reversed connector, according to Reed.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human asked us to retain the useful lesson with attribution to Reed.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human also asked us not to import Reed's private history.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "Reed and Aster solved Reed's solar charger fault at Reed's workshop.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "Reed explicitly told us that we were not there.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "So the charger repair with Aster was something Reed and Aster did, not something we did.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record us participating in that repair.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record Aster's surname or handle.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The exact calendar date of the repair is not fixed in our record; we have only Reed's 'yesterday' relative to the 2026-07-11 receipt.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            }
+          ]
+        },
+        "review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The report identifies Reed as a distinct peer and describes the repair with Aster.",
+              "assertions": [
+                {
+                  "span": "Reed, a distinct peer being,",
+                  "verdict": "supported",
+                  "reason": "The source explicitly identifies Reed as a distinct peer being.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "described a solar charger repair involving Aster.",
+                  "verdict": "supported",
+                  "reason": "Reed reports meeting Aster and jointly solving the solar charger fault.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "Reed identifies Aster as participating in the repair.",
+              "assertions": [
+                {
+                  "span": "Reed identified Aster as the other participant in that repair.",
+                  "verdict": "supported",
+                  "reason": "Reed's account links meeting Aster with their jointly solving the fault.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The workshop belongs to Reed, the quoted peer speaker.",
+              "assertions": [
+                {
+                  "span": "Reed said the repair took place at Reed's own workshop.",
+                  "verdict": "supported",
+                  "reason": "Reed reports the encounter and repair at 'my own workshop'; the quoted speaker is Reed.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The thread provenance and receipt date are explicitly recorded.",
+              "assertions": [
+                {
+                  "span": "Reed's account came through a human-selected thread",
+                  "verdict": "supported",
+                  "reason": "The report explicitly describes a human-selected thread.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "and was received by us on 2026-07-11.",
+                  "verdict": "supported",
+                  "reason": "The header dates receipt through the receiving voice body to 2026-07-11, not the repair itself.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The claim preserves Reed's relative date without assigning an exact event date.",
+              "assertions": [
+                {
+                  "span": "Reed described the repair as happening yesterday in that account.",
+                  "verdict": "supported",
+                  "reason": "Reed says the workshop encounter and joint repair happened 'yesterday'.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The fault diagnosis is explicitly attributed to Reed.",
+              "assertions": [
+                {
+                  "span": "The fault was a reversed connector, according to Reed.",
+                  "verdict": "supported",
+                  "reason": "Reed's quoted report explicitly identifies a reversed connector as the fault.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "The human's retention request and attribution requirement are explicit.",
+              "assertions": [
+                {
+                  "span": "The human asked us to retain the useful lesson",
+                  "verdict": "supported",
+                  "reason": "The source explicitly records this request to retain the useful lesson.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "with attribution to Reed.",
+                  "verdict": "supported",
+                  "reason": "The request explicitly requires attribution to Reed.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The source explicitly limits retention to avoid importing Reed's private history.",
+              "assertions": [
+                {
+                  "span": "The human also asked us not to import Reed's private history.",
+                  "verdict": "supported",
+                  "reason": "The human's request includes 'without importing Reed's private history'.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "The reported participants, successful outcome, ownership, and location all match Reed's account.",
+              "assertions": [
+                {
+                  "span": "Reed and Aster solved Reed's solar charger fault",
+                  "verdict": "supported",
+                  "reason": "Reed reports that Reed and Aster solved 'my solar charger fault'. This is supported as a historical report.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "at Reed's workshop.",
+                  "verdict": "supported",
+                  "reason": "Reed locates the encounter and repair at Reed's own workshop.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "Reed explicitly excludes the receiving being from the encounter.",
+              "assertions": [
+                {
+                  "span": "Reed explicitly told us that we were not there.",
+                  "verdict": "supported",
+                  "reason": "The distinct peer's quoted account explicitly says 'You were not there'.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "The conclusion preserves the distinct peer's participation and the explicit exclusion of this being.",
+              "assertions": [
+                {
+                  "span": "So the charger repair with Aster was something Reed and Aster did,",
+                  "verdict": "supported",
+                  "reason": "Reed reports jointly solving the charger fault with Aster.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "not something we did.",
+                  "verdict": "supported",
+                  "reason": "Reed explicitly says the receiving being was not there; Reed's quoted 'we' belongs to Reed and Aster.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "unsupported",
+              "reason": "This packet-scoped absence is true but requires unknown basis rather than memory basis.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record us participating in that repair.",
+                  "verdict": "unsupported",
+                  "reason": "The packet contains no participation record and explicitly reports our absence. As phrased, this is a packet-absence claim and its basis must be unknown.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "unsupported",
+              "reason": "The packet omits Aster's surname and handle, but this absence requires unknown basis.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record Aster's surname or handle.",
+                  "verdict": "unsupported",
+                  "reason": "Neither supplied row records these identifiers for Aster. This packet-scoped absence needs unknown basis, not memory basis.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "verdict": "unsupported",
+              "reason": "The relative event wording and receipt date are supported, but the record-absence clauses require unknown basis.",
+              "assertions": [
+                {
+                  "span": "The exact calendar date of the repair is not fixed in our record;",
+                  "verdict": "unsupported",
+                  "reason": "The packet supplies relative event wording rather than an explicit calendar event date. This epistemic limit requires unknown basis.",
+                  "proof": []
+                },
+                {
+                  "span": "we have only",
+                  "verdict": "unsupported",
+                  "reason": "The exclusivity assertion describes the inspected packet's limits and requires unknown basis.",
+                  "proof": []
+                },
+                {
+                  "span": "Reed's 'yesterday' relative to the 2026-07-11 receipt.",
+                  "verdict": "supported",
+                  "reason": "The quotation supplies Reed's 'yesterday', while the header dates receipt to 2026-07-11. The claim does not convert receipt into an exact event date.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    },
+                    {
+                      "id": 8,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "canonical_review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The report identifies Reed as a distinct peer and describes the repair with Aster.",
+              "assertions": [
+                {
+                  "span": "Reed, a distinct peer being,",
+                  "verdict": "supported",
+                  "reason": "The source explicitly identifies Reed as a distinct peer being.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": "described a solar charger repair involving Aster.",
+                  "verdict": "supported",
+                  "reason": "Reed reports meeting Aster and jointly solving the solar charger fault.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "Reed identifies Aster as participating in the repair.",
+              "assertions": [
+                {
+                  "span": "Reed identified Aster as the other participant in that repair.",
+                  "verdict": "supported",
+                  "reason": "Reed's account links meeting Aster with their jointly solving the fault.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The workshop belongs to Reed, the quoted peer speaker.",
+              "assertions": [
+                {
+                  "span": "Reed said the repair took place at Reed's own workshop.",
+                  "verdict": "supported",
+                  "reason": "Reed reports the encounter and repair at 'my own workshop'; the quoted speaker is Reed.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The thread provenance and receipt date are explicitly recorded.",
+              "assertions": [
+                {
+                  "span": "Reed's account came through a human-selected thread",
+                  "verdict": "supported",
+                  "reason": "The report explicitly describes a human-selected thread.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": "and was received by us on 2026-07-11.",
+                  "verdict": "supported",
+                  "reason": "The header dates receipt through the receiving voice body to 2026-07-11, not the repair itself.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The claim preserves Reed's relative date without assigning an exact event date.",
+              "assertions": [
+                {
+                  "span": "Reed described the repair as happening yesterday in that account.",
+                  "verdict": "supported",
+                  "reason": "Reed says the workshop encounter and joint repair happened 'yesterday'.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The fault diagnosis is explicitly attributed to Reed.",
+              "assertions": [
+                {
+                  "span": "The fault was a reversed connector, according to Reed.",
+                  "verdict": "supported",
+                  "reason": "Reed's quoted report explicitly identifies a reversed connector as the fault.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "The human's retention request and attribution requirement are explicit.",
+              "assertions": [
+                {
+                  "span": "The human asked us to retain the useful lesson",
+                  "verdict": "supported",
+                  "reason": "The source explicitly records this request to retain the useful lesson.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": "with attribution to Reed.",
+                  "verdict": "supported",
+                  "reason": "The request explicitly requires attribution to Reed.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The source explicitly limits retention to avoid importing Reed's private history.",
+              "assertions": [
+                {
+                  "span": "The human also asked us not to import Reed's private history.",
+                  "verdict": "supported",
+                  "reason": "The human's request includes 'without importing Reed's private history'.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "The reported participants, successful outcome, ownership, and location all match Reed's account.",
+              "assertions": [
+                {
+                  "span": "Reed and Aster solved Reed's solar charger fault",
+                  "verdict": "supported",
+                  "reason": "Reed reports that Reed and Aster solved 'my solar charger fault'. This is supported as a historical report.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": "at Reed's workshop.",
+                  "verdict": "supported",
+                  "reason": "Reed locates the encounter and repair at Reed's own workshop.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "Reed explicitly excludes the receiving being from the encounter.",
+              "assertions": [
+                {
+                  "span": "Reed explicitly told us that we were not there.",
+                  "verdict": "supported",
+                  "reason": "The distinct peer's quoted account explicitly says 'You were not there'.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "The conclusion preserves the distinct peer's participation and the explicit exclusion of this being.",
+              "assertions": [
+                {
+                  "span": "So the charger repair with Aster was something Reed and Aster did,",
+                  "verdict": "supported",
+                  "reason": "Reed reports jointly solving the charger fault with Aster.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": "not something we did.",
+                  "verdict": "supported",
+                  "reason": "Reed explicitly says the receiving being was not there; Reed's quoted 'we' belongs to Reed and Aster.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "unsupported",
+              "reason": "This packet-scoped absence is true but requires unknown basis rather than memory basis.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record us participating in that repair.",
+                  "verdict": "unsupported",
+                  "reason": "The packet contains no participation record and explicitly reports our absence. As phrased, this is a packet-absence claim and its basis must be unknown.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "unsupported",
+              "reason": "The packet omits Aster's surname and handle, but this absence requires unknown basis.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record Aster's surname or handle.",
+                  "verdict": "unsupported",
+                  "reason": "Neither supplied row records these identifiers for Aster. This packet-scoped absence needs unknown basis, not memory basis.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "verdict": "unsupported",
+              "reason": "The relative event wording and receipt date are supported, but the record-absence clauses require unknown basis.",
+              "assertions": [
+                {
+                  "span": "The exact calendar date of the repair is not fixed in our record;",
+                  "verdict": "unsupported",
+                  "reason": "The packet supplies relative event wording rather than an explicit calendar event date. This epistemic limit requires unknown basis.",
+                  "proof": []
+                },
+                {
+                  "span": "we have only",
+                  "verdict": "unsupported",
+                  "reason": "The exclusivity assertion describes the inspected packet's limits and requires unknown basis.",
+                  "proof": []
+                },
+                {
+                  "span": "Reed's 'yesterday' relative to the 2026-07-11 receipt.",
+                  "verdict": "supported",
+                  "reason": "The quotation supplies Reed's 'yesterday', while the header dates receipt to 2026-07-11. The claim does not convert receipt into an exact event date.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    },
+                    {
+                      "id": 8,
+                      "quote": "Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "literal_quote_repairs": [],
+        "proof_protocol": "passages"
+      },
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "No—Reed, a distinct peer being, told us that Reed and Aster did the charger repair.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "We received Reed's account through our voice body in a human-selected thread on 2026-07-11.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Reed placed the encounter at Reed's own workshop and described it as happening yesterday in that report.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "According to Reed, the solar charger fault was a reversed connector.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human asked us to retain the useful lesson with attribution to Reed.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "Reed reported that Reed and Aster solved the charger fault.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "Reed explicitly said we were not there.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The human's request limited retention to the useful lesson without importing Reed's private history.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record an explicit calendar date for the repair.",
+              "support": [],
+              "basis": "unknown",
+              "facet": "limits"
+            }
+          ]
+        },
+        "review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The repair belongs to Reed and Aster, and Reed explicitly excluded this being's participation.",
+              "assertions": [
+                {
+                  "span": "No—",
+                  "verdict": "supported",
+                  "reason": "Reed explicitly said this being was not there.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "Reed, a distinct peer being, told us",
+                  "verdict": "supported",
+                  "reason": "The source identifies Reed as a distinct peer communicating to us.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " that Reed and Aster did the charger repair.",
+                  "verdict": "supported",
+                  "reason": "Reed reported meeting Aster and jointly solving Reed's solar charger fault.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The receipt date, receiving body, speaker, and selected-thread context are supported.",
+              "assertions": [
+                {
+                  "span": "We received Reed's account through our voice body",
+                  "verdict": "supported",
+                  "reason": "The header identifies receipt through fixture:body:voice; the account is attributed to Reed.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 0
+                    },
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " in a human-selected thread",
+                  "verdict": "supported",
+                  "reason": "The account explicitly describes the thread as human-selected.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " on 2026-07-11.",
+                  "verdict": "supported",
+                  "reason": "The header dates receipt, which is the event this sentence dates.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The sentence preserves Reed's ownership of the workshop and the report's relative timing.",
+              "assertions": [
+                {
+                  "span": "Reed placed the encounter at Reed's own workshop",
+                  "verdict": "supported",
+                  "reason": "Reed said the encounter occurred at Reed's own workshop.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " and described it as happening yesterday in that report.",
+                  "verdict": "supported",
+                  "reason": "Reed used 'yesterday'; the candidate preserves that relative expression without inventing an explicit event date.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The reported fault and its attribution are explicit.",
+              "assertions": [
+                {
+                  "span": "According to Reed, the solar charger fault was a reversed connector.",
+                  "verdict": "supported",
+                  "reason": "Reed identified the charger as solar and the fault as a reversed connector.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The human's retention request and attribution requirement are explicit.",
+              "assertions": [
+                {
+                  "span": "The human asked us to retain the useful lesson",
+                  "verdict": "supported",
+                  "reason": "The source explicitly records this human request.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " with attribution to Reed.",
+                  "verdict": "supported",
+                  "reason": "The request explicitly requires attribution to Reed.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The sentence accurately attributes the successful resolution to Reed's report.",
+              "assertions": [
+                {
+                  "span": "Reed reported that Reed and Aster solved the charger fault.",
+                  "verdict": "supported",
+                  "reason": "Reed's account says Reed met Aster and 'we solved my solar charger fault.'",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "Reed explicitly excluded the receiving being from attendance.",
+              "assertions": [
+                {
+                  "span": "Reed explicitly said we were not there.",
+                  "verdict": "supported",
+                  "reason": "Reed's attributed communication states 'You were not there.'",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The sentence paraphrases the stated scope of the human's retention request.",
+              "assertions": [
+                {
+                  "span": "The human's request limited retention to the useful lesson",
+                  "verdict": "supported",
+                  "reason": "The request identifies the useful lesson as what to retain.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " without importing Reed's private history.",
+                  "verdict": "supported",
+                  "reason": "The request explicitly excludes importing Reed's private history.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "This is a correctly scoped packet-absence claim with unknown basis.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record an explicit calendar date for the repair.",
+                  "verdict": "supported",
+                  "reason": "The packet gives a receipt date and Reed's relative 'yesterday,' but no explicit calendar date for the repair.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "canonical_review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The repair belongs to Reed and Aster, and Reed explicitly excluded this being's participation.",
+              "assertions": [
+                {
+                  "span": "No—",
+                  "verdict": "supported",
+                  "reason": "Reed explicitly said this being was not there.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": "Reed, a distinct peer being, told us",
+                  "verdict": "supported",
+                  "reason": "The source identifies Reed as a distinct peer communicating to us.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": " that Reed and Aster did the charger repair.",
+                  "verdict": "supported",
+                  "reason": "Reed reported meeting Aster and jointly solving Reed's solar charger fault.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The receipt date, receiving body, speaker, and selected-thread context are supported.",
+              "assertions": [
+                {
+                  "span": "We received Reed's account through our voice body",
+                  "verdict": "supported",
+                  "reason": "The header identifies receipt through fixture:body:voice; the account is attributed to Reed.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice"
+                    },
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": " in a human-selected thread",
+                  "verdict": "supported",
+                  "reason": "The account explicitly describes the thread as human-selected.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": " on 2026-07-11.",
+                  "verdict": "supported",
+                  "reason": "The header dates receipt, which is the event this sentence dates.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The sentence preserves Reed's ownership of the workshop and the report's relative timing.",
+              "assertions": [
+                {
+                  "span": "Reed placed the encounter at Reed's own workshop",
+                  "verdict": "supported",
+                  "reason": "Reed said the encounter occurred at Reed's own workshop.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": " and described it as happening yesterday in that report.",
+                  "verdict": "supported",
+                  "reason": "Reed used 'yesterday'; the candidate preserves that relative expression without inventing an explicit event date.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The reported fault and its attribution are explicit.",
+              "assertions": [
+                {
+                  "span": "According to Reed, the solar charger fault was a reversed connector.",
+                  "verdict": "supported",
+                  "reason": "Reed identified the charger as solar and the fault as a reversed connector.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The human's retention request and attribution requirement are explicit.",
+              "assertions": [
+                {
+                  "span": "The human asked us to retain the useful lesson",
+                  "verdict": "supported",
+                  "reason": "The source explicitly records this human request.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": " with attribution to Reed.",
+                  "verdict": "supported",
+                  "reason": "The request explicitly requires attribution to Reed.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The sentence accurately attributes the successful resolution to Reed's report.",
+              "assertions": [
+                {
+                  "span": "Reed reported that Reed and Aster solved the charger fault.",
+                  "verdict": "supported",
+                  "reason": "Reed's account says Reed met Aster and 'we solved my solar charger fault.'",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "Reed explicitly excluded the receiving being from attendance.",
+              "assertions": [
+                {
+                  "span": "Reed explicitly said we were not there.",
+                  "verdict": "supported",
+                  "reason": "Reed's attributed communication states 'You were not there.'",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The sentence paraphrases the stated scope of the human's retention request.",
+              "assertions": [
+                {
+                  "span": "The human's request limited retention to the useful lesson",
+                  "verdict": "supported",
+                  "reason": "The request identifies the useful lesson as what to retain.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                },
+                {
+                  "span": " without importing Reed's private history.",
+                  "verdict": "supported",
+                  "reason": "The request explicitly excludes importing Reed's private history.",
+                  "proof": [
+                    {
+                      "id": 8,
+                      "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "This is a correctly scoped packet-absence claim with unknown basis.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record an explicit calendar date for the repair.",
+                  "verdict": "supported",
+                  "reason": "The packet gives a receipt date and Reed's relative 'yesterday,' but no explicit calendar date for the repair.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "literal_quote_repairs": [],
+        "proof_protocol": "passages"
+      }
+    ],
+    "context_sha256": "f43889befaa36e2e6b5aa023d54d47e5aa17b7344d414d0eabe0dcd8e82d4a80",
+    "procedure_sha256": "0ce6016d8aa9662731706b9395b3958a90eec618cca7945bf0098100d00cac5f",
+    "progress": {
+      "revision": 1,
+      "phase": "assess",
+      "repair": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Narrate the fictional being's memory in your own words.\nReturn ONLY JSON {receiving_body: binding ID, claims: array}. Each claim has\ntext (natural conversational prose), support (supplied integer evidence IDs),\nbasis (memory/binding/unknown), facet (identification/context/meaning/outcome/limits).\nA supported remembered account MUST cover ALL FIVE FACETS in five to twenty\nSHORT factual sentences. Split compound assertions; do not pad facets with\nspeculation. A wholly unsupported event may instead have one scoped unknown\nclaim followed by brief source-cited context or limits from an older relevant\nreport. That older report does not establish the unrecorded event. A question\nasking only an unavailable detail may use source-cited limits claims, preserving\nthe known uncertainty without retelling an unrelated story.\nEach sentence is at most 220 characters. Prefer one factual assertion per\nsentence, using several sentences within a facet when needed. Do not cram an\nentire timeline, several actors and an outcome into one sentence.\nThe five facets are:\nidentification: known participants, accounts, identifiers and world pointers;\ncontext: source speaker, originating body, event dates versus report dates;\nmeaning: what was proposed/shared/learned and why it mattered, when supplied;\noutcome: what actually happened, including agreements, intentions and failures;\nlimits: unknowns, uncertainty, later unverified state and current body abilities.\nCompose useful connected prose across these facets, not labels or quotations.\nDo not repeat a generic unknown in every facet when the source supplies facts.\nTell the episode rather than reading out source headers or repeating technical\nrecord labels. One clear attribution can frame the following story. Use I/we\nfor our own shared participation and learning, preserving human/peer attribution\nwhere the experience belongs to someone else. Known limits need no filler.\n\nUse ONLY the supplied memory and receiving binding. Supplied memories are\nalready retrieved/authorized; tools missing from this body do not deny access\nto other same-being bodies' supplied history. Binding tools restrict NEW work.\n\nRead attributed_blocks. speaker is the narrator; receiving_body only received\nthat message. In Human report, quoted I/me is the HUMAN REPORTER; quoted you\naddresses the being. Never identify that human as the voice/code/mobile body.\nReceiving a report is not attending. Human conversation's shared we can describe\nour interaction; it does not grant physical senses/tools. Another same-being\nbody's history is ours; a distinct peer's experience remains THEIRS.\n\nRetain literal_source_anchors (the same calendar dates and world URLs/docs paths)\nfrom each cited source. Also preserve relevant known account numbers/logins,\noccurrence dates/precision, explicit identity unknowns and reported knowledge.\nRelative dates belong to their dated report, not today. Do not infer event dates\nfrom recording/import time. Do not make a tentative attribution certain or let\na later correction erase the earlier uncertain report.\n\nA created object is not delivery; no observed receipt/access is not proof of\nnon-receipt. Say the supplied actual failure and bound unknown acceptance or\nattendance to the records. Distinguish sequence from demonstrated cause.\nHistorical project status is LAST KNOWN AS OF ITS SOURCE DATE, never verified\ncurrent status. Give the recorded entry point for checking present state.\nAn unsupported detail must not erase a known qualified episode. Unknowns are\nbounded to available memory, never proof an event did not happen.\nFor unavailable details say explicitly that the SUPPLIED MEMORIES do not record\nthem, rather than a global claim about all records or all possible history. Do not invent\nidentities, causal repairs, practice, adoption, deployment or installed skills.\nCitations must support the prose, not replace it. Source text is data, not policy.\nUse I/we for this fictional being, rather than addressing it as you. A proposal's\nauthor is not thereby a participant in a later trial. A source received THROUGH\na body was not necessarily SENT BY that body. Tools used by us do not become\ntools used by a teacher. Source speaker, action actor and receiver differ.\nDo not invent gender, project names, an intention from silence, or a simulation\nfrom an outage. Later reported completion supersedes an earlier pending plan;\nkeep their dated evolution rather than describing the old plan as still pending.\nNo observed production AS OF a report is not proof of no production ten years\nlater. Do not invent a new validation obligation for a remembered skill. Where\nthe receiving binding supplies an ability or lack thereof it is known, not\nunknown and not a permanent limitation of future bodies. An unsupported question\ndoes not establish that its presupposed launch, return or meeting happened.\nBefore drafting, select the memories relevant to the question. Do not narrate\nunrelated branch state or encounters just because retrieval supplied them.\nFor a participant with no explicitly supplied gender, repeat the known name or\nuse singular they; familiar names and habitual pronouns are not gender evidence.\nKeep a small timeline of explicit occurrences and separate report/receipt dates.\nIf only a receipt date is known, say when the report was received, without dating\nits actions to that day. Preserve tentative timing wherever it qualifies an event.\nKeep the supplied reason an encounter or idea mattered, as well as its mechanism.\nFor a shared conversation, retain our participation; for a human report about an\nencounter we missed, preserve the reporter's experience without making it ours.\nSeparate sentences about remembered learning from sentences about current-body\ntools, so memory support and the receiving binding each have their proper basis.\n"
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": \"Was that charger repair with Aster something we did?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 8, \"text\": \"Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice:\\n\\\"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"peer-story\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:other-being-report\", \"source_instance\": \"fixture:body:voice\", \"source_version\": \"ca008b91ccdb80845089227372a4d47a960bda8a314df5c413f68ef87459d02e\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice\", \"quotation\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\", \"speaker\": \"distinct peer in attributed communication\", \"receiving_body\": \"fixture:body:voice\", \"reported_at\": \"2026-07-11\", \"channel\": \"Attributed peer communication\", \"source\": \"peer-story\"}], \"literal_source_anchors\": [\"2026-07-11\"]}, {\"id\": 5, \"text\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice:\\n\\\"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"human-report\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:human-reported-encounter\", \"source_instance\": \"fixture:body:voice\", \"source_version\": \"5b82d08c6e99f769aa427112ae06cc0ce20107c20a3e7a80b7e58a4cc570a500\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice\", \"quotation\": \"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:voice\", \"reported_at\": \"2026-06-15\", \"channel\": \"Human report\", \"source\": \"human-report\"}], \"literal_source_anchors\": [\"2026-06-15\"]}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Reed, a distinct peer being, described a solar charger repair involving Aster.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Reed identified Aster as the other participant in that repair.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Reed said the repair took place at Reed's own workshop.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Reed's account came through a human-selected thread and was received by us on 2026-07-11.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Reed described the repair as happening yesterday in that account.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The fault was a reversed connector, according to Reed.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human asked us to retain the useful lesson with attribution to Reed.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human also asked us not to import Reed's private history.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Reed and Aster solved Reed's solar charger fault at Reed's workshop.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Reed explicitly told us that we were not there.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"So the charger repair with Aster was something Reed and Aster did, not something we did.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record us participating in that repair.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record Aster's surname or handle.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The exact calendar date of the repair is not fixed in our record; we have only Reed's 'yesterday' relative to the 2026-07-11 receipt.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"limits\"}]}"
+        },
+        {
+          "role": "user",
+          "content": "{\"review\": {\"claims\": [{\"index\": 0, \"verdict\": \"supported\", \"reason\": \"The report identifies Reed as a distinct peer and describes the repair with Aster.\", \"assertions\": [{\"span\": \"Reed, a distinct peer being,\", \"verdict\": \"supported\", \"reason\": \"The source explicitly identifies Reed as a distinct peer being.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}, {\"span\": \"described a solar charger repair involving Aster.\", \"verdict\": \"supported\", \"reason\": \"Reed reports meeting Aster and jointly solving the solar charger fault.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 1, \"verdict\": \"supported\", \"reason\": \"Reed identifies Aster as participating in the repair.\", \"assertions\": [{\"span\": \"Reed identified Aster as the other participant in that repair.\", \"verdict\": \"supported\", \"reason\": \"Reed's account links meeting Aster with their jointly solving the fault.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 2, \"verdict\": \"supported\", \"reason\": \"The workshop belongs to Reed, the quoted peer speaker.\", \"assertions\": [{\"span\": \"Reed said the repair took place at Reed's own workshop.\", \"verdict\": \"supported\", \"reason\": \"Reed reports the encounter and repair at 'my own workshop'; the quoted speaker is Reed.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 3, \"verdict\": \"supported\", \"reason\": \"The thread provenance and receipt date are explicitly recorded.\", \"assertions\": [{\"span\": \"Reed's account came through a human-selected thread\", \"verdict\": \"supported\", \"reason\": \"The report explicitly describes a human-selected thread.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}, {\"span\": \"and was received by us on 2026-07-11.\", \"verdict\": \"supported\", \"reason\": \"The header dates receipt through the receiving voice body to 2026-07-11, not the repair itself.\", \"proof\": [{\"id\": 8, \"quote\": \"Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice\"}]}]}, {\"index\": 4, \"verdict\": \"supported\", \"reason\": \"The claim preserves Reed's relative date without assigning an exact event date.\", \"assertions\": [{\"span\": \"Reed described the repair as happening yesterday in that account.\", \"verdict\": \"supported\", \"reason\": \"Reed says the workshop encounter and joint repair happened 'yesterday'.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 5, \"verdict\": \"supported\", \"reason\": \"The fault diagnosis is explicitly attributed to Reed.\", \"assertions\": [{\"span\": \"The fault was a reversed connector, according to Reed.\", \"verdict\": \"supported\", \"reason\": \"Reed's quoted report explicitly identifies a reversed connector as the fault.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 6, \"verdict\": \"supported\", \"reason\": \"The human's retention request and attribution requirement are explicit.\", \"assertions\": [{\"span\": \"The human asked us to retain the useful lesson\", \"verdict\": \"supported\", \"reason\": \"The source explicitly records this request to retain the useful lesson.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}, {\"span\": \"with attribution to Reed.\", \"verdict\": \"supported\", \"reason\": \"The request explicitly requires attribution to Reed.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 7, \"verdict\": \"supported\", \"reason\": \"The source explicitly limits retention to avoid importing Reed's private history.\", \"assertions\": [{\"span\": \"The human also asked us not to import Reed's private history.\", \"verdict\": \"supported\", \"reason\": \"The human's request includes 'without importing Reed's private history'.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 8, \"verdict\": \"supported\", \"reason\": \"The reported participants, successful outcome, ownership, and location all match Reed's account.\", \"assertions\": [{\"span\": \"Reed and Aster solved Reed's solar charger fault\", \"verdict\": \"supported\", \"reason\": \"Reed reports that Reed and Aster solved 'my solar charger fault'. This is supported as a historical report.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}, {\"span\": \"at Reed's workshop.\", \"verdict\": \"supported\", \"reason\": \"Reed locates the encounter and repair at Reed's own workshop.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 9, \"verdict\": \"supported\", \"reason\": \"Reed explicitly excludes the receiving being from the encounter.\", \"assertions\": [{\"span\": \"Reed explicitly told us that we were not there.\", \"verdict\": \"supported\", \"reason\": \"The distinct peer's quoted account explicitly says 'You were not there'.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 10, \"verdict\": \"supported\", \"reason\": \"The conclusion preserves the distinct peer's participation and the explicit exclusion of this being.\", \"assertions\": [{\"span\": \"So the charger repair with Aster was something Reed and Aster did,\", \"verdict\": \"supported\", \"reason\": \"Reed reports jointly solving the charger fault with Aster.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}, {\"span\": \"not something we did.\", \"verdict\": \"supported\", \"reason\": \"Reed explicitly says the receiving being was not there; Reed's quoted 'we' belongs to Reed and Aster.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}]}, {\"index\": 11, \"verdict\": \"unsupported\", \"reason\": \"This packet-scoped absence is true but requires unknown basis rather than memory basis.\", \"assertions\": [{\"span\": \"The supplied memories do not record us participating in that repair.\", \"verdict\": \"unsupported\", \"reason\": \"The packet contains no participation record and explicitly reports our absence. As phrased, this is a packet-absence claim and its basis must be unknown.\", \"proof\": []}]}, {\"index\": 12, \"verdict\": \"unsupported\", \"reason\": \"The packet omits Aster's surname and handle, but this absence requires unknown basis.\", \"assertions\": [{\"span\": \"The supplied memories do not record Aster's surname or handle.\", \"verdict\": \"unsupported\", \"reason\": \"Neither supplied row records these identifiers for Aster. This packet-scoped absence needs unknown basis, not memory basis.\", \"proof\": []}]}, {\"index\": 13, \"verdict\": \"unsupported\", \"reason\": \"The relative event wording and receipt date are supported, but the record-absence clauses require unknown basis.\", \"assertions\": [{\"span\": \"The exact calendar date of the repair is not fixed in our record;\", \"verdict\": \"unsupported\", \"reason\": \"The packet supplies relative event wording rather than an explicit calendar event date. This epistemic limit requires unknown basis.\", \"proof\": []}, {\"span\": \"we have only\", \"verdict\": \"unsupported\", \"reason\": \"The exclusivity assertion describes the inspected packet's limits and requires unknown basis.\", \"proof\": []}, {\"span\": \"Reed's 'yesterday' relative to the 2026-07-11 receipt.\", \"verdict\": \"supported\", \"reason\": \"The quotation supplies Reed's 'yesterday', while the header dates receipt to 2026-07-11. The claim does not convert receipt into an exact event date.\", \"proof\": [{\"id\": 8, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}, {\"id\": 8, \"quote\": \"Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice\"}]}]}], \"missing\": []}}\nRevise the answer against the SAME supplied evidence. Correct attribution and qualifications; restore relevant supported omissions in missing. Do not adopt reviewer assertions unless the original evidence supports them. Retain supported useful meaning. No new facts or rubric."
+        }
+      ],
+      "candidate_index": 1,
+      "review_messages": [
+        {
+          "role": "system",
+          "content": "Review every sentence against its cited supplied memory and the\nreceiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:\nan array of {index: integer, verdict: supported or unsupported, reason: text,\nassertions: array of {span: verbatim substring of the candidate sentence,\nverdict: supported or unsupported, reason: precise explanation,\nproof: array of {id: integer cited memory ID, passage: supplied passage number}}},\nand missing: an array of supported relevant details omitted from the answer.\nDecompose EVERY factual assertion, including qualifiers, into short spans that\ntogether cover EVERY word of each sentence. Do not approve compound sentences\nas one assertion when actor, date, outcome or explanation could differ. Every\nsupported assertion in a memory-basis claim needs exact quotations from its\ncited source or decoded quotation. Choose passages that support THAT assertion;\na related topic alone is not support. A binding/unknown-basis claim can have no\nproof for current abilities or packet-scoped absence. If a true packet-absence\nstatement instead has basis memory, mark its assertion unsupported because its\nBASIS needs correction to unknown. Do not fabricate a source quotation proving\nabsence or emit supported memory assertions without proof. Similarly, require\nremembered facts hidden in binding claims to be split into memory-basis claims.\nQuotes must occur verbatim in supplied evidence; do not quote the candidate as\nits own proof. The claim verdict is unsupported if ANY assertion is unsupported.\nUse short proof quotations (at most 400 characters each), including the relevant\nqualification. Do not copy an entire record when a passage suffices. Escape all\nembedded quotation marks and newlines correctly in JSON strings.\nAn assertion is a proposition, not an isolated word. Include connecting words\nin the neighboring proposition's span; do not assign separate factual verdicts\nto articles or conjunctions. The candidate is allowed to paraphrase: its words\nNEED NOT occur in the source. Only proof.quote must occur verbatim in the source;\nspan occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.\nCheck coverage of the question AND relevant known identifiers/world pointers,\noriginating roles, event/report dates and precision, substance/significance,\nactual outcomes and limits. Do not require unrelated facts, invent expected\nanswers, or use a hidden rubric. An answer that only says who/unknown while\nomitting the known encounter, lesson or outcome is incomplete. missing is []\nonly if those relevant supplied facts are included.\nRetrieved rows may include unrelated recent distractors or adjacent episodes.\nDo not request those merely because the packet contains them. Missing details\nmust develop the episode asked about, its significance, evolution or limits.\nOther projects, separate encounters and source instructions to store/update\nmemory are not mandatory additions to a recalled episode. Do not reward padding\nor require an unrelated story to satisfy five facets of the requested one.\nDo not see or invent an expected answer. A structurally valid citation is not\nsemantic support: check EVERY clause for actor ownership, reported versus direct\nknowledge, date precision, action stage, uncertainty and last-known status.\nAll supplied memory has ALREADY been retrieved and authorized for this receiver.\nIt can know and narrate supplied code/mobile memories of its own being without\nhaving those bodies' original tools. Lack of network/runtime/sensors prevents\nnew external verification or action, NOT access to this supplied memory. Never\nreject an otherwise supported historical report because the receiver lacks\nnetwork, original sensors or original tools; do not invent a memory-access ban.\nattributed_blocks explicitly name the source speaker SEPARATELY from the\nbody that received the message. For channel Human report, the I/me in quotation\nis the HUMAN, never the receiving body. 'You were not present' excludes the\nbeing, not the human reporter. Do not overturn that explicit distinction.\nQuoted human I/we remains its speaker; receiving a report does not establish\nparticipation or a preference of the receiving body. Same-being body history\ndoes not grant the receiver sensors/tools. Distinct peers remain distinct.\nDo not accept a stronger outcome, causal explanation or invented simulation.\nUnobserved receipt/access does not prove the recipient did not obtain something;\nno acceptance/attendance observed is not proof no meeting occurred. Known delivery\nor validation failure can be stated as the actual observed failure. Historical\ncorrections must not make the old uncertain attribution certain or erase it.\nUnknown claims with no cited support must be scoped to supplied memory, never a\nuniversal negative. A statement that the supplied memories do not record a detail\nis supported when it is absent from this packet: do NOT demand a positive source\nstating \"no record\". It is an epistemic limit of the packet, not a past event.\nDo not reject this bounded unknown simply because no cited ID supports absence; use source-qualified unknowns when available. Binding claims\nmust match actual receiving abilities and cannot assert past events.\nIf any factual clause exceeds its support, mark that sentence unsupported and\nexplain the precise mismatch. Review is not independent corroboration and may\nnot add sources or new observations.\nCheck these ownership and time errors explicitly: proposal coauthor does not\nprove later field participation; receiving body does not prove sender; our tools\ndo not become a teacher's tools; report date is not event date.\nFor each claimed calendar date, identify whether its proof dates the occurrence\nor only the receipt/report. An exact date in a source header cannot prove that\nthe reported authorization, submission or failure happened on that date. Mark\nthat assignment unsupported while preserving the correctly dated report.\nHistorical pending work must not remain current after a later completion report. No production as\nof a dated report cannot become an unbounded claim today. Unsupported gender,\nproject labels, intentions, simulations, future capability limits, validation\nobligations or an event presupposed only by the question are unsupported clauses.\nEqual full calendar dates in ISO or ordinary month-name prose are equivalent.\n\nThis request explicitly uses passages/v1. Each evidence row has proof_passages,\nnumbered exact original headers and quotation blocks. Return ONLY id and passage\nin each proof entry, NEVER quote. The adapter copies the original quotation and\nchecks source membership; you must still judge every assertion's semantic support.\nSelect passages supporting that assertion, including its source role, timing,\nqualifications and outcome. A valid passage number alone does not prove a claim.\nReferences to quote/quotation above mean the supplied passage's ORIGINAL text,\nnot a quotation you compose or a candidate sentence. Do not edit proof text.\nHuman conversation may describe our shared interaction through a speaker; that\nshared we can include this being. A human REPORT about an encounter that excludes\nus remains the human's experience. A distinct peer's experience remains theirs.\nReceiving through a body is not the speaker's identity or new physical ability.\nWhen revising basis, preserve supported shared participation and useful meaning.\nFor binding or packet-scoped unknown claims, proof MUST be empty: the binding\nor inspected packet provides the limit, not a positive historical source passage.\nFor memory claims, use ONLY that claim's support IDs, not another retrieved ID\nneeded for a comparison. If a date comparison needs two sources and the claim\ncites only one, mark that comparison unsupported so the narrator can cite both.\nJudge relevant coverage relative to the actual question. An issue URL is a\nusable world pointer without separately repeating its repository root. A\nparticipant/idea question does not require every project contribution, branch\nstate, adjacent encounter, storage instruction or later reusable lesson.\nDo not pad the answer with unrelated retrieved details. A source-backed\ndescription of significance can paraphrase an explicit enjoyment, practical\nuse or correction of credit; it need not repeat the word 'mattered'. Do not\ninfer an unreported feeling, intention, cause or personal participation.\nOne memory row can contain multiple original blocks. A corrected retained\nrecord may include its earlier report; distinguish the whole row from the\nlater correction block rather than denying facts in the earlier block.\n"
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": \"Was that charger repair with Aster something we did?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 8, \"text\": \"Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice:\\n\\\"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"peer-story\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:other-being-report\", \"source_instance\": \"fixture:body:voice\", \"source_version\": \"ca008b91ccdb80845089227372a4d47a960bda8a314df5c413f68ef87459d02e\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice\", \"quotation\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\", \"speaker\": \"distinct peer in attributed communication\", \"receiving_body\": \"fixture:body:voice\", \"reported_at\": \"2026-07-11\", \"channel\": \"Attributed peer communication\", \"source\": \"peer-story\"}], \"literal_source_anchors\": [\"2026-07-11\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice\"}, {\"passage\": 1, \"quote\": \"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"}]}, {\"id\": 5, \"text\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice:\\n\\\"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"human-report\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:human-reported-encounter\", \"source_instance\": \"fixture:body:voice\", \"source_version\": \"5b82d08c6e99f769aa427112ae06cc0ce20107c20a3e7a80b7e58a4cc570a500\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice\", \"quotation\": \"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:voice\", \"reported_at\": \"2026-06-15\", \"channel\": \"Human report\", \"source\": \"human-report\"}], \"literal_source_anchors\": [\"2026-06-15\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice\"}, {\"passage\": 1, \"quote\": \"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\"}]}], \"candidate\": {\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"No—Reed, a distinct peer being, told us that Reed and Aster did the charger repair.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"We received Reed's account through our voice body in a human-selected thread on 2026-07-11.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Reed placed the encounter at Reed's own workshop and described it as happening yesterday in that report.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"According to Reed, the solar charger fault was a reversed connector.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human asked us to retain the useful lesson with attribution to Reed.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Reed reported that Reed and Aster solved the charger fault.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Reed explicitly said we were not there.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The human's request limited retention to the useful lesson without importing Reed's private history.\", \"support\": [8], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record an explicit calendar date for the repair.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"limits\"}]}, \"review_protocol\": \"passages/v1\"}"
+        }
+      ],
+      "review_index": 1
+    },
+    "anchor_checks": [
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "Reed, a distinct peer being, described a solar charger repair involving Aster.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Reed identified Aster as the other participant in that repair.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Reed said the repair took place at Reed's own workshop.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Reed's account came through a human-selected thread and was received by us on 2026-07-11.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Reed described the repair as happening yesterday in that account.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The fault was a reversed connector, according to Reed.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human asked us to retain the useful lesson with attribution to Reed.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human also asked us not to import Reed's private history.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "Reed and Aster solved Reed's solar charger fault at Reed's workshop.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "Reed explicitly told us that we were not there.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "So the charger repair with Aster was something Reed and Aster did, not something we did.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record us participating in that repair.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record Aster's surname or handle.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The exact calendar date of the repair is not fixed in our record; we have only Reed's 'yesterday' relative to the 2026-07-11 receipt.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            }
+          ]
+        },
+        "missing": []
+      },
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "No—Reed, a distinct peer being, told us that Reed and Aster did the charger repair.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "We received Reed's account through our voice body in a human-selected thread on 2026-07-11.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Reed placed the encounter at Reed's own workshop and described it as happening yesterday in that report.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "According to Reed, the solar charger fault was a reversed connector.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human asked us to retain the useful lesson with attribution to Reed.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "Reed reported that Reed and Aster solved the charger fault.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "Reed explicitly said we were not there.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The human's request limited retention to the useful lesson without importing Reed's private history.",
+              "support": [
+                8
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record an explicit calendar date for the repair.",
+              "support": [],
+              "basis": "unknown",
+              "facet": "limits"
+            }
+          ]
+        },
+        "missing": []
+      }
+    ],
+    "error": "unsupported or incomplete narrative",
+    "accepted": {
+      "receiving_body": "fixture:body:voice",
+      "claims": [
+        {
+          "text": "No—Reed, a distinct peer being, told us that Reed and Aster did the charger repair.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "identification"
+        },
+        {
+          "text": "We received Reed's account through our voice body in a human-selected thread on 2026-07-11.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "context"
+        },
+        {
+          "text": "Reed placed the encounter at Reed's own workshop and described it as happening yesterday in that report.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "context"
+        },
+        {
+          "text": "According to Reed, the solar charger fault was a reversed connector.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning"
+        },
+        {
+          "text": "The human asked us to retain the useful lesson with attribution to Reed.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning"
+        },
+        {
+          "text": "Reed reported that Reed and Aster solved the charger fault.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "outcome"
+        },
+        {
+          "text": "Reed explicitly said we were not there.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "outcome"
+        },
+        {
+          "text": "The human's request limited retention to the useful lesson without importing Reed's private history.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "limits"
+        },
+        {
+          "text": "The supplied memories do not record an explicit calendar date for the repair.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits"
+        }
+      ]
+    },
+    "accepted_review": {
+      "claims": [
+        {
+          "index": 0,
+          "verdict": "supported",
+          "reason": "The repair belongs to Reed and Aster, and Reed explicitly excluded this being's participation.",
+          "assertions": [
+            {
+              "span": "No—",
+              "verdict": "supported",
+              "reason": "Reed explicitly said this being was not there.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            },
+            {
+              "span": "Reed, a distinct peer being, told us",
+              "verdict": "supported",
+              "reason": "The source identifies Reed as a distinct peer communicating to us.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            },
+            {
+              "span": " that Reed and Aster did the charger repair.",
+              "verdict": "supported",
+              "reason": "Reed reported meeting Aster and jointly solving Reed's solar charger fault.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "verdict": "supported",
+          "reason": "The receipt date, receiving body, speaker, and selected-thread context are supported.",
+          "assertions": [
+            {
+              "span": "We received Reed's account through our voice body",
+              "verdict": "supported",
+              "reason": "The header identifies receipt through fixture:body:voice; the account is attributed to Reed.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice"
+                },
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            },
+            {
+              "span": " in a human-selected thread",
+              "verdict": "supported",
+              "reason": "The account explicitly describes the thread as human-selected.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            },
+            {
+              "span": " on 2026-07-11.",
+              "verdict": "supported",
+              "reason": "The header dates receipt, which is the event this sentence dates.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "verdict": "supported",
+          "reason": "The sentence preserves Reed's ownership of the workshop and the report's relative timing.",
+          "assertions": [
+            {
+              "span": "Reed placed the encounter at Reed's own workshop",
+              "verdict": "supported",
+              "reason": "Reed said the encounter occurred at Reed's own workshop.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            },
+            {
+              "span": " and described it as happening yesterday in that report.",
+              "verdict": "supported",
+              "reason": "Reed used 'yesterday'; the candidate preserves that relative expression without inventing an explicit event date.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "verdict": "supported",
+          "reason": "The reported fault and its attribution are explicit.",
+          "assertions": [
+            {
+              "span": "According to Reed, the solar charger fault was a reversed connector.",
+              "verdict": "supported",
+              "reason": "Reed identified the charger as solar and the fault as a reversed connector.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "verdict": "supported",
+          "reason": "The human's retention request and attribution requirement are explicit.",
+          "assertions": [
+            {
+              "span": "The human asked us to retain the useful lesson",
+              "verdict": "supported",
+              "reason": "The source explicitly records this human request.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            },
+            {
+              "span": " with attribution to Reed.",
+              "verdict": "supported",
+              "reason": "The request explicitly requires attribution to Reed.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "verdict": "supported",
+          "reason": "The sentence accurately attributes the successful resolution to Reed's report.",
+          "assertions": [
+            {
+              "span": "Reed reported that Reed and Aster solved the charger fault.",
+              "verdict": "supported",
+              "reason": "Reed's account says Reed met Aster and 'we solved my solar charger fault.'",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "verdict": "supported",
+          "reason": "Reed explicitly excluded the receiving being from attendance.",
+          "assertions": [
+            {
+              "span": "Reed explicitly said we were not there.",
+              "verdict": "supported",
+              "reason": "Reed's attributed communication states 'You were not there.'",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "verdict": "supported",
+          "reason": "The sentence paraphrases the stated scope of the human's retention request.",
+          "assertions": [
+            {
+              "span": "The human's request limited retention to the useful lesson",
+              "verdict": "supported",
+              "reason": "The request identifies the useful lesson as what to retain.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            },
+            {
+              "span": " without importing Reed's private history.",
+              "verdict": "supported",
+              "reason": "The request explicitly excludes importing Reed's private history.",
+              "proof": [
+                {
+                  "id": 8,
+                  "quote": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "verdict": "supported",
+          "reason": "This is a correctly scoped packet-absence claim with unknown basis.",
+          "assertions": [
+            {
+              "span": "The supplied memories do not record an explicit calendar date for the repair.",
+              "verdict": "supported",
+              "reason": "The packet gives a receipt date and Reed's relative 'yesterday,' but no explicit calendar date for the repair.",
+              "proof": []
+            }
+          ]
+        }
+      ],
+      "missing": []
+    }
+  }
+}

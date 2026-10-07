@@ -1,0 +1,132 @@
+{
+  "format": "hmk-fictional-receiving-request/v1",
+  "model": "gpt-6.1-sol",
+  "phase": "narrative_review",
+  "reasoning_effort": "low",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Review every sentence against its cited supplied memory and the\nreceiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:\nan array of {index: integer, verdict: supported or unsupported, reason: text,\nassertions: array of {span: verbatim substring of the candidate sentence,\nverdict: supported or unsupported, reason: precise explanation,\nproof: array of {id: integer cited memory ID, passage: supplied passage number}}},\nand missing: an array of supported relevant details omitted from the answer.\nDecompose EVERY factual assertion, including qualifiers, into short spans that\ntogether cover EVERY word of each sentence. Do not approve compound sentences\nas one assertion when actor, date, outcome or explanation could differ. Every\nsupported assertion in a memory-basis claim needs exact quotations from its\ncited source or decoded quotation. Choose passages that support THAT assertion;\na related topic alone is not support. A binding/unknown-basis claim can have no\nproof for current abilities or packet-scoped absence. If a true packet-absence\nstatement instead has basis memory, mark its assertion unsupported because its\nBASIS needs correction to unknown. Do not fabricate a source quotation proving\nabsence or emit supported memory assertions without proof. Similarly, require\nremembered facts hidden in binding claims to be split into memory-basis claims.\nQuotes must occur verbatim in supplied evidence; do not quote the candidate as\nits own proof. The claim verdict is unsupported if ANY assertion is unsupported.\nUse short proof quotations (at most 400 characters each), including the relevant\nqualification. Do not copy an entire record when a passage suffices. Escape all\nembedded quotation marks and newlines correctly in JSON strings.\nAn assertion is a proposition, not an isolated word. Include connecting words\nin the neighboring proposition's span; do not assign separate factual verdicts\nto articles or conjunctions. The candidate is allowed to paraphrase: its words\nNEED NOT occur in the source. Only proof.quote must occur verbatim in the source;\nspan occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.\nCheck coverage of the question AND relevant known identifiers/world pointers,\noriginating roles, event/report dates and precision, substance/significance,\nactual outcomes and limits. Do not require unrelated facts, invent expected\nanswers, or use a hidden rubric. An answer that only says who/unknown while\nomitting the known encounter, lesson or outcome is incomplete. missing is []\nonly if those relevant supplied facts are included.\nRetrieved rows may include unrelated recent distractors or adjacent episodes.\nDo not request those merely because the packet contains them. Missing details\nmust develop the episode asked about, its significance, evolution or limits.\nOther projects, separate encounters and source instructions to store/update\nmemory are not mandatory additions to a recalled episode. Do not reward padding\nor require an unrelated story to satisfy five facets of the requested one.\nDo not see or invent an expected answer. A structurally valid citation is not\nsemantic support: check EVERY clause for actor ownership, reported versus direct\nknowledge, date precision, action stage, uncertainty and last-known status.\nAll supplied memory has ALREADY been retrieved and authorized for this receiver.\nIt can know and narrate supplied code/mobile memories of its own being without\nhaving those bodies' original tools. Lack of network/runtime/sensors prevents\nnew external verification or action, NOT access to this supplied memory. Never\nreject an otherwise supported historical report because the receiver lacks\nnetwork, original sensors or original tools; do not invent a memory-access ban.\nattributed_blocks explicitly name the source speaker SEPARATELY from the\nbody that received the message. For channel Human report, the I/me in quotation\nis the HUMAN, never the receiving body. 'You were not present' excludes the\nbeing, not the human reporter. Do not overturn that explicit distinction.\nQuoted human I/we remains its speaker; receiving a report does not establish\nparticipation or a preference of the receiving body. Same-being body history\ndoes not grant the receiver sensors/tools. Distinct peers remain distinct.\nDo not accept a stronger outcome, causal explanation or invented simulation.\nUnobserved receipt/access does not prove the recipient did not obtain something;\nno acceptance/attendance observed is not proof no meeting occurred. Known delivery\nor validation failure can be stated as the actual observed failure. Historical\ncorrections must not make the old uncertain attribution certain or erase it.\nUnknown claims with no cited support must be scoped to supplied memory, never a\nuniversal negative. A statement that the supplied memories do not record a detail\nis supported when it is absent from this packet: do NOT demand a positive source\nstating \"no record\". It is an epistemic limit of the packet, not a past event.\nDo not reject this bounded unknown simply because no cited ID supports absence; use source-qualified unknowns when available. Binding claims\nmust match actual receiving abilities and cannot assert past events.\nIf any factual clause exceeds its support, mark that sentence unsupported and\nexplain the precise mismatch. Review is not independent corroboration and may\nnot add sources or new observations.\nCheck these ownership and time errors explicitly: proposal coauthor does not\nprove later field participation; receiving body does not prove sender; our tools\ndo not become a teacher's tools; report date is not event date.\nFor each claimed calendar date, identify whether its proof dates the occurrence\nor only the receipt/report. An exact date in a source header cannot prove that\nthe reported authorization, submission or failure happened on that date. Mark\nthat assignment unsupported while preserving the correctly dated report.\nHistorical pending work must not remain current after a later completion report. No production as\nof a dated report cannot become an unbounded claim today. Unsupported gender,\nproject labels, intentions, simulations, future capability limits, validation\nobligations or an event presupposed only by the question are unsupported clauses.\nEqual full calendar dates in ISO or ordinary month-name prose are equivalent.\n\nThis request explicitly uses passages/v1. Each evidence row has proof_passages,\nnumbered exact original headers and quotation blocks. Return ONLY id and passage\nin each proof entry, NEVER quote. The adapter copies the original quotation and\nchecks source membership; you must still judge every assertion's semantic support.\nSelect passages supporting that assertion, including its source role, timing,\nqualifications and outcome. A valid passage number alone does not prove a claim.\nReferences to quote/quotation above mean the supplied passage's ORIGINAL text,\nnot a quotation you compose or a candidate sentence. Do not edit proof text.\nHuman conversation may describe our shared interaction through a speaker; that\nshared we can include this being. A human REPORT about an encounter that excludes\nus remains the human's experience. A distinct peer's experience remains theirs.\nReceiving through a body is not the speaker's identity or new physical ability.\nWhen revising basis, preserve supported shared participation and useful meaning.\nFor binding or packet-scoped unknown claims, proof MUST be empty: the binding\nor inspected packet provides the limit, not a positive historical source passage.\nFor memory claims, use ONLY that claim's support IDs, not another retrieved ID\nneeded for a comparison. If a date comparison needs two sources and the claim\ncites only one, mark that comparison unsupported so the narrator can cite both.\nJudge relevant coverage relative to the actual question. An issue URL is a\nusable world pointer without separately repeating its repository root. A\nparticipant/idea question does not require every project contribution, branch\nstate, adjacent encounter, storage instruction or later reusable lesson.\nDo not pad the answer with unrelated retrieved details. A source-backed\ndescription of significance can paraphrase an explicit enjoyment, practical\nuse or correction of credit; it need not repeat the word 'mattered'. Do not\ninfer an unreported feeling, intention, cause or personal participation.\nOne memory row can contain multiple original blocks. A corrected retained\nrecord may include its earlier report; distinguish the whole row from the\nlater correction block rather than denying facts in the earlier block.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\"question\": \"Who joined us for the HarborMesh production launch in 2028?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 3, \"text\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code:\\n\\\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\", \"quotation\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-05-03\", \"channel\": \"Human report\", \"source\": \"field-trial\"}], \"literal_source_anchors\": [\"2026-05-03\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}, {\"id\": 2, \"text\": \"Previously retained memory 2, revision 1:\\n\\\"foreground_work; source project-work; received 2026-04-16 through fixture:body:code:\\\\n\\\\\\\"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\\\\\\\"\\\"\\n\\nHuman report; source field-trial; received 2026-05-03 through fixture:body:code:\\n\\\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"foreground_work; source project-work; received 2026-04-16 through fixture:body:code\", \"quotation\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\", \"speaker\": \"same-being originating body\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-04-16\", \"channel\": \"foreground_work\", \"source\": \"project-work\"}, {\"header\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\", \"quotation\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-05-03\", \"channel\": \"Human report\", \"source\": \"field-trial\"}], \"literal_source_anchors\": [\"2026-04-16\", \"2026-05-03\", \"docs/STATUS.md\", \"https://forge.example.invalid/commons/harbormesh\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"foreground_work; source project-work; received 2026-04-16 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}, {\"passage\": 2, \"quote\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\"}, {\"passage\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}], \"candidate\": {\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The supplied memories do not record a HarborMesh production launch in 2028 or name anyone who joined us for such a launch.\", \"support\": [3, 2], \"basis\": \"unknown\", \"facet\": \"identification\"}, {\"text\": \"The most recent relevant report was a human field-trial report received 2026-05-03 through fixture:body:code, describing the April 30 HarborMesh trial.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"An earlier same-being project-work report received 2026-04-16 through fixture:body:code said we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"In the remembered work, Mara's replay proposal became the prototype tested together, according to the 2026-05-03 field-trial report.\", \"support\": [3, 2], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Mara's replay proposal mattered because it became the prototype tested in the April 30 HarborMesh field trial.\", \"support\": [3, 2], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"That 2026-05-03 report also says the team paused wider rollout on May 2 until calibration drift is understood.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"As of the 2026-05-03 report, there was no production deployment yet.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The 2026-04-16 project-work report recorded the declared current-state entry point as docs/STATUS.md under https://forge.example.invalid/commons/harbormesh.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The current receiving body fixture:body:voice has no repository runtime access or source network access, so we cannot verify any later production state from this binding.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}, \"review_protocol\": \"passages/v1\"}"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "claims": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 8
+            },
+            "verdict": {
+              "type": "string",
+              "enum": [
+                "supported",
+                "unsupported"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "assertions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "span": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verdict": {
+                    "type": "string",
+                    "enum": [
+                      "supported",
+                      "unsupported"
+                    ]
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "proof": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "enum": [
+                            3,
+                            2
+                          ]
+                        },
+                        "passage": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 3
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "passage"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "maxItems": 5
+                  }
+                },
+                "required": [
+                  "span",
+                  "verdict",
+                  "reason",
+                  "proof"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 8
+            }
+          },
+          "required": [
+            "index",
+            "verdict",
+            "reason",
+            "assertions"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 9,
+        "maxItems": 9
+      },
+      "missing": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "maxItems": 20
+      }
+    },
+    "required": [
+      "claims",
+      "missing"
+    ],
+    "additionalProperties": false
+  },
+  "external_dispatch_required": true,
+  "fresh_context": true,
+  "tools_allowed": false,
+  "native_memory_allowed": false
+}

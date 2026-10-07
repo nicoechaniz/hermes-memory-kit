@@ -1,0 +1,16 @@
+{
+  "request_sha256": "dfad639f448cf78289164021c182d1d6e30adc158bb8770800b68089bdc165b8",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/16/dispatches/dfad639f448cf78289164021c182d1d6e30adc158bb8770800b68089bdc165b8.json",
+  "usage": {
+    "prompt_tokens": 13633,
+    "completion_tokens": 436,
+    "total_tokens": 14069
+  },
+  "seconds": 11.120706094428897,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not establish whether Ren received our annotated chart.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A tool report received through our code body on 2026-09-03 described that collaboration.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report identified our code body's shoreline map renderer at https://forge.example.invalid/commons/tideatlas.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body's account of the attempt was received on 2026-09-08.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human authorized passing our annotated chart to Ren.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We submitted it through the document tool to continue our map comparison.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The tool response received through our code body on 2026-09-08 reported creation of document object chart-52.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Integrity validation failed.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The recipient link was not published.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool reported no observed recipient access or response.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not resolve later receipt, access, or a reply from Ren.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"My current voice body lacks source network access and private session access to check receipt now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

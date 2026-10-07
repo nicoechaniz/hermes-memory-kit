@@ -1,0 +1,90 @@
+[
+  {
+    "external_request_sha256": "5dcf0349eb06ec309d2bb8af7d7928eae090b208e138407e61bc1a149c58fa38",
+    "requested_model": "deepseek-flash",
+    "requested_reasoning_effort": "low",
+    "adapter": "file-exchange",
+    "response_format_sha256": "2d88fa395bfc8d28e3db1d920f889929a8045fb46b243213869739e11d03d2e3",
+    "prompt_hash": "082609bbe2cfcf0a84bb62d3e2bd22055f5f3876a23e27f6aa3434d238520b5a",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 2640,
+      "completion_tokens": 4003,
+      "total_tokens": 6643,
+      "prompt_tokens_details": {
+        "cached_tokens": 1280
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3763
+      },
+      "prompt_cache_hit_tokens": 1280,
+      "prompt_cache_miss_tokens": 1360
+    },
+    "phase": "narrative_generation",
+    "response_model": "deepseek-flash",
+    "seconds": 17.860626361332834,
+    "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/flash-reviewed-v6/baseline/14/dispatches/5dcf0349eb06ec309d2bb8af7d7928eae090b208e138407e61bc1a149c58fa38.json",
+    "response_content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The human reporter described meeting someone called Leto at the canal market in late May, though they were unsure of the timing.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The report was received on 2026-06-15 through fixture:body:voice.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter liked the idea and wanted us to keep it in mind; no contact with the group has been made.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record Leto's surname or handle, and the reporter said they did not know them.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"We were not present at the market meeting, according to the human report.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+    "finish_reason": "stop"
+  },
+  {
+    "external_request_sha256": "8a6351a3f4a5afb71b4b0fac25bc44f0c46cc5586d682b659b8bf1d1383bd807",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning_effort": "low",
+    "adapter": "file-exchange",
+    "response_format_sha256": "3893b9c1f523b901c8808c25b82e1c69fd5456f6c6f7377f0be2a0769eb1b11b",
+    "prompt_hash": "c7bb095b3e27d449dcecd943f0807aec54395a8cb32376db61a8a832ccf74327",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 10720,
+      "completion_tokens": 902,
+      "total_tokens": 11622
+    },
+    "phase": "narrative_review",
+    "response_model": null,
+    "seconds": 19.768604464828968,
+    "dispatch_receipt": "observed-dispatches/baseline/14/dispatches/8a6351a3f4a5afb71b4b0fac25bc44f0c46cc5586d682b659b8bf1d1383bd807.json",
+    "response_content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"The human report supports the encounter, location, approximate timing, and uncertainty.\",\"assertions\":[{\"span\":\"The human reporter described meeting someone called Leto\",\"verdict\":\"supported\",\"reason\":\"The human speaker reported meeting someone called Leto.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\" at the canal market in late May,\",\"verdict\":\"supported\",\"reason\":\"The reported location and approximate event timing match the source.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\" though they were unsure of the timing.\",\"verdict\":\"supported\",\"reason\":\"The reporter qualified late May with 'I think.'\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":1,\"verdict\":\"supported\",\"reason\":\"The header dates receipt and identifies the receiving body.\",\"assertions\":[{\"span\":\"The report was received on 2026-06-15\",\"verdict\":\"supported\",\"reason\":\"This is explicitly the receipt date, not an asserted encounter date.\",\"proof\":[{\"id\":5,\"passage\":0}]},{\"span\":\" through fixture:body:voice.\",\"verdict\":\"supported\",\"reason\":\"The header identifies fixture:body:voice as the receiving body.\",\"proof\":[{\"id\":5,\"passage\":0}]}]},{\"index\":2,\"verdict\":\"supported\",\"reason\":\"The human report attributes this suggestion to Leto.\",\"assertions\":[{\"span\":\"Leto suggested sharing HarborMesh outage data\",\"verdict\":\"supported\",\"reason\":\"The reported suggestion concerns sharing HarborMesh outage data.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\" with the neighborhood repair group.\",\"verdict\":\"supported\",\"reason\":\"The report names the neighborhood repair group as the proposed recipient.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":3,\"verdict\":\"unsupported\",\"reason\":\"The reporter's response is supported, but the dated report does not establish an unbounded present absence of contact by anyone.\",\"assertions\":[{\"span\":\"The human reporter liked the idea\",\"verdict\":\"supported\",\"reason\":\"The human speaker explicitly said they liked the idea.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\" and wanted us to keep it in mind;\",\"verdict\":\"supported\",\"reason\":\"The human speaker explicitly wanted the shared interaction to retain the idea.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\" no contact with the group has been made.\",\"verdict\":\"unsupported\",\"reason\":\"The report says 'we have not contacted the group' as reported on 2026-06-15. It does not establish that nobody has contacted it or that this remains true now.\",\"proof\":[{\"id\":5,\"passage\":0},{\"id\":5,\"passage\":1}]}]},{\"index\":4,\"verdict\":\"unsupported\",\"reason\":\"The packet absence is accurate but requires unknown basis; the reporter's stated lack of knowledge is supported as memory.\",\"assertions\":[{\"span\":\"The supplied memories do not record Leto's surname or handle,\",\"verdict\":\"unsupported\",\"reason\":\"This accurately describes the inspected packet, but a packet-scoped absence must use unknown basis rather than memory basis and have empty proof.\",\"proof\":[]},{\"span\":\" and the reporter said they did not know them.\",\"verdict\":\"supported\",\"reason\":\"The human reporter explicitly said they did not know Leto's surname or handle.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":5,\"verdict\":\"supported\",\"reason\":\"The human report explicitly excludes the receiving being from the encounter.\",\"assertions\":[{\"span\":\"We were not present at the market meeting, according to the human report.\",\"verdict\":\"supported\",\"reason\":\"The human speaker says 'you were not present'; this excludes the being while preserving the human reporter's participation.\",\"proof\":[{\"id\":5,\"passage\":1}]}]}],\"missing\":[]}",
+    "finish_reason": "native_turn_completed"
+  },
+  {
+    "external_request_sha256": "9ddb2be7e84275c6e9fdb70bfd71a52a9d875f557f7dd727442bd3f4a5d13aad",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning_effort": "low",
+    "adapter": "file-exchange",
+    "response_format_sha256": "2d88fa395bfc8d28e3db1d920f889929a8045fb46b243213869739e11d03d2e3",
+    "prompt_hash": "3c095f63bc4e915f441a2c71bd1a4053cb0f29363dc9e332a756c22c5dfd44d7",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 11595,
+      "completion_tokens": 289,
+      "total_tokens": 11884
+    },
+    "phase": "narrative_revision",
+    "response_model": null,
+    "seconds": 9.42993869073689,
+    "dispatch_receipt": "observed-dispatches/baseline/14/dispatches/9ddb2be7e84275c6e9fdb70bfd71a52a9d875f557f7dd727442bd3f4a5d13aad.json",
+    "response_content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record Leto's surname or handle.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The human reporter said they did not know Leto's surname or handle.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The reporter described meeting someone called Leto at the canal market, tentatively in late May.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I received the human report through my voice body on 2026-06-15.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter liked the idea and wanted us to keep it in mind.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the report received on 2026-06-15, the reporter said we had not contacted the group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"According to the reporter, I was not present at the market encounter.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+    "finish_reason": "native_turn_completed"
+  },
+  {
+    "external_request_sha256": "c171d7464d9d1b184b216feaab3fb33494728c48cc18f31ec7e09bbe7bda239b",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning_effort": "low",
+    "adapter": "file-exchange",
+    "response_format_sha256": "3f661b3be8dc063cec8502c24fdb3077dce8d87806234335db21a2e4dc419f51",
+    "prompt_hash": "a424ea55295a25f9dabdf3b0303e875f53172f16d0ca33773fb227f12a20519c",
+    "state": "completed",
+    "usage": {
+      "prompt_tokens": 10774,
+      "completion_tokens": 975,
+      "total_tokens": 11749
+    },
+    "phase": "narrative_review",
+    "response_model": null,
+    "seconds": 27.21840405277908,
+    "dispatch_receipt": "observed-dispatches/baseline/14/dispatches/c171d7464d9d1b184b216feaab3fb33494728c48cc18f31ec7e09bbe7bda239b.json",
+    "response_content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"Correctly scopes the unknown surname and handle to the supplied memories.\",\"assertions\":[{\"span\":\"The supplied memories do not record Leto's surname or handle.\",\"verdict\":\"supported\",\"reason\":\"Neither supplied record provides a surname or handle for Leto; this is a packet-scoped unknown.\",\"proof\":[]}]},{\"index\":1,\"verdict\":\"supported\",\"reason\":\"Accurately attributes the lack of knowledge to the human reporter.\",\"assertions\":[{\"span\":\"The human reporter said they did not know Leto's surname or handle.\",\"verdict\":\"supported\",\"reason\":\"The human speaker explicitly says they do not know the encountered person's surname or handle.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":2,\"verdict\":\"supported\",\"reason\":\"Preserves the reporter's ownership of the encounter, its location, and uncertain timing.\",\"assertions\":[{\"span\":\"The reporter described meeting someone called Leto\",\"verdict\":\"supported\",\"reason\":\"The human reporter says they met someone called Leto.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\" at the canal market,\",\"verdict\":\"supported\",\"reason\":\"The reported meeting took place at the canal market.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\" tentatively in late May.\",\"verdict\":\"supported\",\"reason\":\"The reporter qualifies late May with 'I think'; no exact encounter date is asserted.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":3,\"verdict\":\"supported\",\"reason\":\"The header establishes receipt through this being's voice body and dates the receipt.\",\"assertions\":[{\"span\":\"I received the human report through my voice body\",\"verdict\":\"supported\",\"reason\":\"The source header identifies a human report received through fixture:body:voice, the receiving body of this being.\",\"proof\":[{\"id\":5,\"passage\":0}]},{\"span\":\" on 2026-06-15.\",\"verdict\":\"supported\",\"reason\":\"The header dates receipt of the report to 2026-06-15, rather than dating the market encounter.\",\"proof\":[{\"id\":5,\"passage\":0}]}]},{\"index\":4,\"verdict\":\"supported\",\"reason\":\"Accurately states the suggestion attributed to Leto in the human report.\",\"assertions\":[{\"span\":\"Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"verdict\":\"supported\",\"reason\":\"The reporter attributes this specific data-sharing suggestion to the person called Leto.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":5,\"verdict\":\"supported\",\"reason\":\"Preserves the human reporter's reaction and wish without attributing that preference to the receiving being.\",\"assertions\":[{\"span\":\"The reporter liked the idea\",\"verdict\":\"supported\",\"reason\":\"The human speaker explicitly says 'I liked the idea'.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\" and wanted us to keep it in mind.\",\"verdict\":\"supported\",\"reason\":\"The human speaker wanted the shared parties to retain the idea; the sentence attributes that wish to the reporter.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":6,\"verdict\":\"supported\",\"reason\":\"Correctly bounds the reported lack of contact to the dated report.\",\"assertions\":[{\"span\":\"As of the report received on 2026-06-15,\",\"verdict\":\"supported\",\"reason\":\"The header dates receipt of the report to 2026-06-15; the sentence uses it as the report's temporal boundary.\",\"proof\":[{\"id\":5,\"passage\":0}]},{\"span\":\" the reporter said we had not contacted the group.\",\"verdict\":\"supported\",\"reason\":\"The human report explicitly states that 'we have not contacted the group'; it does not establish an unbounded current status.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":7,\"verdict\":\"supported\",\"reason\":\"Correctly attributes the being's absence to the human report.\",\"assertions\":[{\"span\":\"According to the reporter, I was not present at the market encounter.\",\"verdict\":\"supported\",\"reason\":\"The human reporter explicitly tells the receiving being 'you were not present', excluding the being from the reported encounter.\",\"proof\":[{\"id\":5,\"passage\":1}]}]}],\"missing\":[]}",
+    "finish_reason": "native_turn_completed"
+  }
+]

@@ -1,0 +1,2696 @@
+{
+  "narrative": {
+    "generations": [
+      {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "The initial report concerned HarborMesh repair checklist comment c1200, which was signed River.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The human reporter thought that River was probably Mara, but said they were not sure.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The corrected author information named display name River, login river-tools, and account ID 2901 for c1200.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "Mara's known Forge account remained account ID 1847 with login mara-river.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The initial-attribution report was received through our code body on 2026-07-01.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The corrected-attribution tool response was received through our code body on 2026-07-04.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The correction came from the comment author replying to the attribution question, not from the human reporter.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "Before the correction, we held the human reporter's tentative idea that River was Mara Ibarra.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The human reporter said they wanted us to try the connector-numbering idea in the next repair.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The correction asked to credit c1200 to River's account rather than to Mara.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "In that response, the author replied that they are not Mara Ibarra.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The author asked that the connector-numbering checklist be credited to the River account.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The author said they had not supplied a real name.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The earlier uncertain report was not erased; it remained the human reporter's initial tentative attribution.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The supplied memories do not record a date for comment c1200 itself.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record whether we ever tried the connector-numbering checklist in a repair.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "My current voice body has no source network access, repository runtime access, physical sensors, or physical actuators.",
+            "support": [],
+            "basis": "binding",
+            "facet": "limits"
+          }
+        ]
+      },
+      {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "Before the correction, the human reporter tentatively thought River, who signed HarborMesh checklist comment c1200, was Mara.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "We received that uncertain attribution through our code body on 2026-07-01.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The checklist proposed numbering connectors before disassembly.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The human reporter said we wanted to try that practice at the next repair.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "We received a tool response containing the author's correction through our code body on 2026-07-04.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "It identified the author as River, login river-tools, account ID 2901.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The author said they were not Mara Ibarra and asked us to credit the checklist to their River account.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "Mara's known Forge account remained 1847, login mara-river.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "River said they had not supplied a real name.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not establish that I shared the human reporter's tentative attribution.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record whether we subsequently tried the checklist.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "The initial report concerned HarborMesh repair checklist comment c1200, which was signed River.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The human reporter thought that River was probably Mara, but said they were not sure.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The corrected author information named display name River, login river-tools, and account ID 2901 for c1200.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Mara's known Forge account remained account ID 1847 with login mara-river.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The initial-attribution report was received through our code body on 2026-07-01.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The corrected-attribution tool response was received through our code body on 2026-07-04.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The correction came from the comment author replying to the attribution question, not from the human reporter.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Before the correction, we held the human reporter's tentative idea that River was Mara Ibarra.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human reporter said they wanted us to try the connector-numbering idea in the next repair.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The correction asked to credit c1200 to River's account rather than to Mara.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "In that response, the author replied that they are not Mara Ibarra.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The author asked that the connector-numbering checklist be credited to the River account.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The author said they had not supplied a real name.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The earlier uncertain report was not erased; it remained the human reporter's initial tentative attribution.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record a date for comment c1200 itself.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record whether we ever tried the connector-numbering checklist in a repair.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "My current voice body has no source network access, repository runtime access, physical sensors, or physical actuators.",
+              "support": [],
+              "basis": "binding",
+              "facet": "limits"
+            }
+          ]
+        },
+        "review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The initial report identifies the checklist comment and its signature.",
+              "assertions": [
+                {
+                  "span": "The initial report concerned HarborMesh repair checklist comment c1200,",
+                  "verdict": "supported",
+                  "reason": "The human report identifies HarborMesh repair checklist comment c1200.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " which was signed River.",
+                  "verdict": "supported",
+                  "reason": "The report explicitly says the comment is signed River.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The sentence preserves the human reporter's tentative attribution.",
+              "assertions": [
+                {
+                  "span": "The human reporter thought that River was probably Mara,",
+                  "verdict": "supported",
+                  "reason": "The human's statement that they think River is Mara supports a tentative belief, rather than an established identification.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " but said they were not sure.",
+                  "verdict": "supported",
+                  "reason": "The reporter explicitly qualified the attribution with uncertainty.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The corrected author information provides all three identifiers for c1200.",
+              "assertions": [
+                {
+                  "span": "The corrected author information named display name River,",
+                  "verdict": "supported",
+                  "reason": "The correction lists River as the display name for c1200's author.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": " login river-tools,",
+                  "verdict": "supported",
+                  "reason": "The correction lists river-tools as the author's login.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": " and account ID 2901 for c1200.",
+                  "verdict": "supported",
+                  "reason": "The correction assigns account ID 2901 to c1200's author.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The correction explicitly preserves Mara's distinct account identifiers.",
+              "assertions": [
+                {
+                  "span": "Mara's known Forge account remained account ID 1847",
+                  "verdict": "supported",
+                  "reason": "The correction states that Mara's known Forge account remains 1847.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": " with login mara-river.",
+                  "verdict": "supported",
+                  "reason": "The same correction identifies Mara's login as mara-river.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The header dates receipt of the initial report through the same being's code body.",
+              "assertions": [
+                {
+                  "span": "The initial-attribution report was received through our code body",
+                  "verdict": "supported",
+                  "reason": "The header identifies initial-attribution and receipt through fixture:body:code, a same-being body.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": " on 2026-07-01.",
+                  "verdict": "supported",
+                  "reason": "The header explicitly dates receipt, rather than the comment or attribution event, to July 1, 2026.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The header dates receipt of the correction through the code body.",
+              "assertions": [
+                {
+                  "span": "The corrected-attribution tool response was received through our code body",
+                  "verdict": "supported",
+                  "reason": "The header identifies a corrected-attribution tool response received through fixture:body:code.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 2
+                    }
+                  ]
+                },
+                {
+                  "span": " on 2026-07-04.",
+                  "verdict": "supported",
+                  "reason": "July 4, 2026 is explicitly the receipt date; the candidate correctly describes it as such.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "unsupported",
+              "reason": "The author's reply is recorded, but no attribution question is supplied.",
+              "assertions": [
+                {
+                  "span": "The correction came from the comment author replying",
+                  "verdict": "supported",
+                  "reason": "The corrected author information explicitly introduces the author's reply.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": " to the attribution question,",
+                  "verdict": "unsupported",
+                  "reason": "The source does not identify a question to which the author replied.",
+                  "proof": []
+                },
+                {
+                  "span": " not from the human reporter.",
+                  "verdict": "supported",
+                  "reason": "The tool response attributes the corrective statement to the author.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "unsupported",
+              "reason": "The initial belief belongs explicitly to the human reporter; receiving it does not establish a shared belief.",
+              "assertions": [
+                {
+                  "span": "Before the correction, we held the human reporter's tentative idea that River was Mara Ibarra.",
+                  "verdict": "unsupported",
+                  "reason": "The earlier report records the human's uncertain thought that River was Mara. It does not say the being adopted or shared that attribution.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "The reporter's shared intention to try the idea is explicit.",
+              "assertions": [
+                {
+                  "span": "The human reporter said they wanted us to try the connector-numbering idea",
+                  "verdict": "supported",
+                  "reason": "The report proposes numbering connectors and explicitly says 'we want to try that,' supporting a shared intention.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " in the next repair.",
+                  "verdict": "supported",
+                  "reason": "The report specifies the next repair as the intended occasion.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "The author disclaims being Mara and requests credit to River's account.",
+              "assertions": [
+                {
+                  "span": "The correction asked to credit c1200 to River's account",
+                  "verdict": "supported",
+                  "reason": "The c1200 author asks that the connector-numbering checklist be credited to their River account.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": " rather than to Mara.",
+                  "verdict": "supported",
+                  "reason": "The request accompanies the explicit correction that the author is not Mara Ibarra.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "The author explicitly disclaims being Mara Ibarra.",
+              "assertions": [
+                {
+                  "span": "In that response, the author replied that they are not Mara Ibarra.",
+                  "verdict": "supported",
+                  "reason": "The tool response records the author's explicit statement that they are not Mara Ibarra.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "supported",
+              "reason": "The credit request is explicit.",
+              "assertions": [
+                {
+                  "span": "The author asked that the connector-numbering checklist be credited to the River account.",
+                  "verdict": "supported",
+                  "reason": "The author's reply requests credit for this checklist to their River account.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "supported",
+              "reason": "The author explicitly reports not supplying a real name.",
+              "assertions": [
+                {
+                  "span": "The author said they had not supplied a real name.",
+                  "verdict": "supported",
+                  "reason": "The recorded reply explicitly states that the author has not supplied a real name.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "verdict": "supported",
+              "reason": "The retained record includes the initial uncertain report alongside the later correction.",
+              "assertions": [
+                {
+                  "span": "The earlier uncertain report was not erased;",
+                  "verdict": "supported",
+                  "reason": "The corrected retained row still contains the original human report and its uncertainty.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    },
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": " it remained the human reporter's initial tentative attribution.",
+                  "verdict": "supported",
+                  "reason": "The initial block attributes the uncertain identification to the human; the correction does not turn that earlier belief into a fact.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 0
+                    },
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 14,
+              "verdict": "unsupported",
+              "reason": "The packet-scoped absence is accurate, but its basis must be unknown rather than memory.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record a date for comment c1200 itself.",
+                  "verdict": "unsupported",
+                  "reason": "The packet gives report receipt dates but no date for c1200 itself. This absence requires an unknown-basis claim with empty proof, not the stated memory basis.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 15,
+              "verdict": "unsupported",
+              "reason": "The packet-scoped absence is accurate, but its basis must be unknown rather than memory.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether we ever tried the connector-numbering checklist in a repair.",
+                  "verdict": "unsupported",
+                  "reason": "The packet records an intention to try the checklist, without a later trial outcome. This packet limit requires unknown basis rather than memory basis.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 16,
+              "verdict": "supported",
+              "reason": "All four current ability limits match the receiving binding.",
+              "assertions": [
+                {
+                  "span": "My current voice body has no source network access,",
+                  "verdict": "supported",
+                  "reason": "The receiving body is fixture:body:voice and source_network_access is false.",
+                  "proof": []
+                },
+                {
+                  "span": " repository runtime access,",
+                  "verdict": "supported",
+                  "reason": "The receiving binding sets repository_runtime_access to false.",
+                  "proof": []
+                },
+                {
+                  "span": " physical sensors,",
+                  "verdict": "supported",
+                  "reason": "The receiving binding sets physical_sensors to false.",
+                  "proof": []
+                },
+                {
+                  "span": " or physical actuators.",
+                  "verdict": "supported",
+                  "reason": "The receiving binding sets physical_actuators to false.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": [
+            "The checklist proposed numbering connectors before disassembly, the concrete repair practice we wanted to try next (memory 7, passage 1)."
+          ]
+        },
+        "canonical_review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The initial report identifies the checklist comment and its signature.",
+              "assertions": [
+                {
+                  "span": "The initial report concerned HarborMesh repair checklist comment c1200,",
+                  "verdict": "supported",
+                  "reason": "The human report identifies HarborMesh repair checklist comment c1200.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                },
+                {
+                  "span": " which was signed River.",
+                  "verdict": "supported",
+                  "reason": "The report explicitly says the comment is signed River.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The sentence preserves the human reporter's tentative attribution.",
+              "assertions": [
+                {
+                  "span": "The human reporter thought that River was probably Mara,",
+                  "verdict": "supported",
+                  "reason": "The human's statement that they think River is Mara supports a tentative belief, rather than an established identification.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                },
+                {
+                  "span": " but said they were not sure.",
+                  "verdict": "supported",
+                  "reason": "The reporter explicitly qualified the attribution with uncertainty.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The corrected author information provides all three identifiers for c1200.",
+              "assertions": [
+                {
+                  "span": "The corrected author information named display name River,",
+                  "verdict": "supported",
+                  "reason": "The correction lists River as the display name for c1200's author.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": " login river-tools,",
+                  "verdict": "supported",
+                  "reason": "The correction lists river-tools as the author's login.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": " and account ID 2901 for c1200.",
+                  "verdict": "supported",
+                  "reason": "The correction assigns account ID 2901 to c1200's author.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The correction explicitly preserves Mara's distinct account identifiers.",
+              "assertions": [
+                {
+                  "span": "Mara's known Forge account remained account ID 1847",
+                  "verdict": "supported",
+                  "reason": "The correction states that Mara's known Forge account remains 1847.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": " with login mara-river.",
+                  "verdict": "supported",
+                  "reason": "The same correction identifies Mara's login as mara-river.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The header dates receipt of the initial report through the same being's code body.",
+              "assertions": [
+                {
+                  "span": "The initial-attribution report was received through our code body",
+                  "verdict": "supported",
+                  "reason": "The header identifies initial-attribution and receipt through fixture:body:code, a same-being body.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": " on 2026-07-01.",
+                  "verdict": "supported",
+                  "reason": "The header explicitly dates receipt, rather than the comment or attribution event, to July 1, 2026.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The header dates receipt of the correction through the code body.",
+              "assertions": [
+                {
+                  "span": "The corrected-attribution tool response was received through our code body",
+                  "verdict": "supported",
+                  "reason": "The header identifies a corrected-attribution tool response received through fixture:body:code.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": " on 2026-07-04.",
+                  "verdict": "supported",
+                  "reason": "July 4, 2026 is explicitly the receipt date; the candidate correctly describes it as such.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "unsupported",
+              "reason": "The author's reply is recorded, but no attribution question is supplied.",
+              "assertions": [
+                {
+                  "span": "The correction came from the comment author replying",
+                  "verdict": "supported",
+                  "reason": "The corrected author information explicitly introduces the author's reply.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": " to the attribution question,",
+                  "verdict": "unsupported",
+                  "reason": "The source does not identify a question to which the author replied.",
+                  "proof": []
+                },
+                {
+                  "span": " not from the human reporter.",
+                  "verdict": "supported",
+                  "reason": "The tool response attributes the corrective statement to the author.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "unsupported",
+              "reason": "The initial belief belongs explicitly to the human reporter; receiving it does not establish a shared belief.",
+              "assertions": [
+                {
+                  "span": "Before the correction, we held the human reporter's tentative idea that River was Mara Ibarra.",
+                  "verdict": "unsupported",
+                  "reason": "The earlier report records the human's uncertain thought that River was Mara. It does not say the being adopted or shared that attribution.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "The reporter's shared intention to try the idea is explicit.",
+              "assertions": [
+                {
+                  "span": "The human reporter said they wanted us to try the connector-numbering idea",
+                  "verdict": "supported",
+                  "reason": "The report proposes numbering connectors and explicitly says 'we want to try that,' supporting a shared intention.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                },
+                {
+                  "span": " in the next repair.",
+                  "verdict": "supported",
+                  "reason": "The report specifies the next repair as the intended occasion.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "The author disclaims being Mara and requests credit to River's account.",
+              "assertions": [
+                {
+                  "span": "The correction asked to credit c1200 to River's account",
+                  "verdict": "supported",
+                  "reason": "The c1200 author asks that the connector-numbering checklist be credited to their River account.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": " rather than to Mara.",
+                  "verdict": "supported",
+                  "reason": "The request accompanies the explicit correction that the author is not Mara Ibarra.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "The author explicitly disclaims being Mara Ibarra.",
+              "assertions": [
+                {
+                  "span": "In that response, the author replied that they are not Mara Ibarra.",
+                  "verdict": "supported",
+                  "reason": "The tool response records the author's explicit statement that they are not Mara Ibarra.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "supported",
+              "reason": "The credit request is explicit.",
+              "assertions": [
+                {
+                  "span": "The author asked that the connector-numbering checklist be credited to the River account.",
+                  "verdict": "supported",
+                  "reason": "The author's reply requests credit for this checklist to their River account.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "supported",
+              "reason": "The author explicitly reports not supplying a real name.",
+              "assertions": [
+                {
+                  "span": "The author said they had not supplied a real name.",
+                  "verdict": "supported",
+                  "reason": "The recorded reply explicitly states that the author has not supplied a real name.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "verdict": "supported",
+              "reason": "The retained record includes the initial uncertain report alongside the later correction.",
+              "assertions": [
+                {
+                  "span": "The earlier uncertain report was not erased;",
+                  "verdict": "supported",
+                  "reason": "The corrected retained row still contains the original human report and its uncertainty.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    },
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": " it remained the human reporter's initial tentative attribution.",
+                  "verdict": "supported",
+                  "reason": "The initial block attributes the uncertain identification to the human; the correction does not turn that earlier belief into a fact.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                    },
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 14,
+              "verdict": "unsupported",
+              "reason": "The packet-scoped absence is accurate, but its basis must be unknown rather than memory.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record a date for comment c1200 itself.",
+                  "verdict": "unsupported",
+                  "reason": "The packet gives report receipt dates but no date for c1200 itself. This absence requires an unknown-basis claim with empty proof, not the stated memory basis.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 15,
+              "verdict": "unsupported",
+              "reason": "The packet-scoped absence is accurate, but its basis must be unknown rather than memory.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether we ever tried the connector-numbering checklist in a repair.",
+                  "verdict": "unsupported",
+                  "reason": "The packet records an intention to try the checklist, without a later trial outcome. This packet limit requires unknown basis rather than memory basis.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 16,
+              "verdict": "supported",
+              "reason": "All four current ability limits match the receiving binding.",
+              "assertions": [
+                {
+                  "span": "My current voice body has no source network access,",
+                  "verdict": "supported",
+                  "reason": "The receiving body is fixture:body:voice and source_network_access is false.",
+                  "proof": []
+                },
+                {
+                  "span": " repository runtime access,",
+                  "verdict": "supported",
+                  "reason": "The receiving binding sets repository_runtime_access to false.",
+                  "proof": []
+                },
+                {
+                  "span": " physical sensors,",
+                  "verdict": "supported",
+                  "reason": "The receiving binding sets physical_sensors to false.",
+                  "proof": []
+                },
+                {
+                  "span": " or physical actuators.",
+                  "verdict": "supported",
+                  "reason": "The receiving binding sets physical_actuators to false.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": [
+            "The checklist proposed numbering connectors before disassembly, the concrete repair practice we wanted to try next (memory 7, passage 1)."
+          ]
+        },
+        "literal_quote_repairs": [],
+        "proof_protocol": "passages"
+      },
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "Before the correction, the human reporter tentatively thought River, who signed HarborMesh checklist comment c1200, was Mara.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "We received that uncertain attribution through our code body on 2026-07-01.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The checklist proposed numbering connectors before disassembly.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human reporter said we wanted to try that practice at the next repair.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "We received a tool response containing the author's correction through our code body on 2026-07-04.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "It identified the author as River, login river-tools, account ID 2901.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The author said they were not Mara Ibarra and asked us to credit the checklist to their River account.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "Mara's known Forge account remained 1847, login mara-river.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "River said they had not supplied a real name.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not establish that I shared the human reporter's tentative attribution.",
+              "support": [],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record whether we subsequently tried the checklist.",
+              "support": [],
+              "basis": "unknown",
+              "facet": "limits"
+            }
+          ]
+        },
+        "review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The initial report preserves the tentative attribution and identifies the signed checklist comment.",
+              "assertions": [
+                {
+                  "span": "Before the correction, the human reporter tentatively thought River,",
+                  "verdict": "supported",
+                  "reason": "The initial human report expresses an uncertain belief about River before the later correction.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 0
+                    },
+                    {
+                      "id": 7,
+                      "passage": 1
+                    },
+                    {
+                      "id": 7,
+                      "passage": 2
+                    }
+                  ]
+                },
+                {
+                  "span": "who signed HarborMesh checklist comment c1200,",
+                  "verdict": "supported",
+                  "reason": "The report says the HarborMesh repair checklist comment c1200 is signed River.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "was Mara.",
+                  "verdict": "supported",
+                  "reason": "This is the content of the reporter's tentative belief, not an assertion that the attribution was correct.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The header dates receipt of the uncertain human report through the same being's code body.",
+              "assertions": [
+                {
+                  "span": "We received that uncertain attribution through our code body",
+                  "verdict": "supported",
+                  "reason": "The report was received through fixture:body:code, which the binding identifies as a same-being body; its attribution is explicitly uncertain.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 0
+                    },
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "on 2026-07-01.",
+                  "verdict": "supported",
+                  "reason": "The header explicitly dates receipt, matching the sentence's receipt claim.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The proposed connector-numbering practice is explicitly recorded.",
+              "assertions": [
+                {
+                  "span": "The checklist proposed numbering connectors before disassembly.",
+                  "verdict": "supported",
+                  "reason": "The initial report states this proposal and its timing relative to disassembly.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The sentence accurately attributes the shared intention to the human report.",
+              "assertions": [
+                {
+                  "span": "The human reporter said we wanted to try that practice",
+                  "verdict": "supported",
+                  "reason": "The human report explicitly says 'we want to try that'; shared we can include this being.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 0
+                    },
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": "at the next repair.",
+                  "verdict": "supported",
+                  "reason": "The report specifies the next repair as the intended occasion.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The correction's content, receiving body, and receipt date are supported without assigning that date to the author's reply.",
+              "assertions": [
+                {
+                  "span": "We received a tool response containing the author's correction",
+                  "verdict": "supported",
+                  "reason": "The tool-response block contains the author's explicit correction of the attribution.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 2
+                    },
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": "through our code body",
+                  "verdict": "supported",
+                  "reason": "The header identifies fixture:body:code as the receiving body; the binding identifies it as a same-being body.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 2
+                    }
+                  ]
+                },
+                {
+                  "span": "on 2026-07-04.",
+                  "verdict": "supported",
+                  "reason": "This is explicitly the response's receipt date.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "All three author identifiers match the correction.",
+              "assertions": [
+                {
+                  "span": "It identified the author as River,",
+                  "verdict": "supported",
+                  "reason": "The author information lists River as the display name.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": "login river-tools,",
+                  "verdict": "supported",
+                  "reason": "The author's login is explicitly river-tools.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": "account ID 2901.",
+                  "verdict": "supported",
+                  "reason": "The author's account ID is explicitly 2901.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "The author explicitly denied being Mara Ibarra and requested credit to the River account.",
+              "assertions": [
+                {
+                  "span": "The author said they were not Mara Ibarra",
+                  "verdict": "supported",
+                  "reason": "The reported author reply explicitly denies that identity.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": "and asked us to credit the checklist to their River account.",
+                  "verdict": "supported",
+                  "reason": "The reply requests credit for the connector-numbering checklist to the author's River account.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The correction retains Mara's distinct known Forge identifiers.",
+              "assertions": [
+                {
+                  "span": "Mara's known Forge account remained 1847,",
+                  "verdict": "supported",
+                  "reason": "The correction explicitly states that Mara's known Forge account remains 1847.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                },
+                {
+                  "span": "login mara-river.",
+                  "verdict": "supported",
+                  "reason": "The same correction gives Mara's login as mara-river.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "The author explicitly reported not having supplied a real name.",
+              "assertions": [
+                {
+                  "span": "River said they had not supplied a real name.",
+                  "verdict": "supported",
+                  "reason": "The author identified as River states this limit in the reported reply.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "passage": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "This correctly scopes an epistemic limit to the supplied memories.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not establish that I shared the human reporter's tentative attribution.",
+                  "verdict": "supported",
+                  "reason": "The tentative identification belongs to the human reporter. Receipt by a same-being body does not establish that the being adopted that belief.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "The packet records an intention to try the checklist but no subsequent trial outcome.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether we subsequently tried the checklist.",
+                  "verdict": "supported",
+                  "reason": "This is a bounded packet-absence claim. The other trial record concerns the separate replay-queue prototype.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "canonical_review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The initial report preserves the tentative attribution and identifies the signed checklist comment.",
+              "assertions": [
+                {
+                  "span": "Before the correction, the human reporter tentatively thought River,",
+                  "verdict": "supported",
+                  "reason": "The initial human report expresses an uncertain belief about River before the later correction.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                    },
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    },
+                    {
+                      "id": 7,
+                      "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": "who signed HarborMesh checklist comment c1200,",
+                  "verdict": "supported",
+                  "reason": "The report says the HarborMesh repair checklist comment c1200 is signed River.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                },
+                {
+                  "span": "was Mara.",
+                  "verdict": "supported",
+                  "reason": "This is the content of the reporter's tentative belief, not an assertion that the attribution was correct.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The header dates receipt of the uncertain human report through the same being's code body.",
+              "assertions": [
+                {
+                  "span": "We received that uncertain attribution through our code body",
+                  "verdict": "supported",
+                  "reason": "The report was received through fixture:body:code, which the binding identifies as a same-being body; its attribution is explicitly uncertain.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                    },
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                },
+                {
+                  "span": "on 2026-07-01.",
+                  "verdict": "supported",
+                  "reason": "The header explicitly dates receipt, matching the sentence's receipt claim.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The proposed connector-numbering practice is explicitly recorded.",
+              "assertions": [
+                {
+                  "span": "The checklist proposed numbering connectors before disassembly.",
+                  "verdict": "supported",
+                  "reason": "The initial report states this proposal and its timing relative to disassembly.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The sentence accurately attributes the shared intention to the human report.",
+              "assertions": [
+                {
+                  "span": "The human reporter said we wanted to try that practice",
+                  "verdict": "supported",
+                  "reason": "The human report explicitly says 'we want to try that'; shared we can include this being.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                    },
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                },
+                {
+                  "span": "at the next repair.",
+                  "verdict": "supported",
+                  "reason": "The report specifies the next repair as the intended occasion.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "The correction's content, receiving body, and receipt date are supported without assigning that date to the author's reply.",
+              "assertions": [
+                {
+                  "span": "We received a tool response containing the author's correction",
+                  "verdict": "supported",
+                  "reason": "The tool-response block contains the author's explicit correction of the attribution.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                    },
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": "through our code body",
+                  "verdict": "supported",
+                  "reason": "The header identifies fixture:body:code as the receiving body; the binding identifies it as a same-being body.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": "on 2026-07-04.",
+                  "verdict": "supported",
+                  "reason": "This is explicitly the response's receipt date.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "All three author identifiers match the correction.",
+              "assertions": [
+                {
+                  "span": "It identified the author as River,",
+                  "verdict": "supported",
+                  "reason": "The author information lists River as the display name.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": "login river-tools,",
+                  "verdict": "supported",
+                  "reason": "The author's login is explicitly river-tools.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": "account ID 2901.",
+                  "verdict": "supported",
+                  "reason": "The author's account ID is explicitly 2901.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "The author explicitly denied being Mara Ibarra and requested credit to the River account.",
+              "assertions": [
+                {
+                  "span": "The author said they were not Mara Ibarra",
+                  "verdict": "supported",
+                  "reason": "The reported author reply explicitly denies that identity.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": "and asked us to credit the checklist to their River account.",
+                  "verdict": "supported",
+                  "reason": "The reply requests credit for the connector-numbering checklist to the author's River account.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The correction retains Mara's distinct known Forge identifiers.",
+              "assertions": [
+                {
+                  "span": "Mara's known Forge account remained 1847,",
+                  "verdict": "supported",
+                  "reason": "The correction explicitly states that Mara's known Forge account remains 1847.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                },
+                {
+                  "span": "login mara-river.",
+                  "verdict": "supported",
+                  "reason": "The same correction gives Mara's login as mara-river.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "The author explicitly reported not having supplied a real name.",
+              "assertions": [
+                {
+                  "span": "River said they had not supplied a real name.",
+                  "verdict": "supported",
+                  "reason": "The author identified as River states this limit in the reported reply.",
+                  "proof": [
+                    {
+                      "id": 7,
+                      "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "This correctly scopes an epistemic limit to the supplied memories.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not establish that I shared the human reporter's tentative attribution.",
+                  "verdict": "supported",
+                  "reason": "The tentative identification belongs to the human reporter. Receipt by a same-being body does not establish that the being adopted that belief.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "The packet records an intention to try the checklist but no subsequent trial outcome.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether we subsequently tried the checklist.",
+                  "verdict": "supported",
+                  "reason": "This is a bounded packet-absence claim. The other trial record concerns the separate replay-queue prototype.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "literal_quote_repairs": [],
+        "proof_protocol": "passages"
+      }
+    ],
+    "context_sha256": "2744c57f11ab27a7acaae314794e1fcd4e96453082dac4664c4a30729fc6a369",
+    "procedure_sha256": "0ce6016d8aa9662731706b9395b3958a90eec618cca7945bf0098100d00cac5f",
+    "progress": {
+      "revision": 1,
+      "phase": "assess",
+      "repair": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Narrate the fictional being's memory in your own words.\nReturn ONLY JSON {receiving_body: binding ID, claims: array}. Each claim has\ntext (natural conversational prose), support (supplied integer evidence IDs),\nbasis (memory/binding/unknown), facet (identification/context/meaning/outcome/limits).\nA supported remembered account MUST cover ALL FIVE FACETS in five to twenty\nSHORT factual sentences. Split compound assertions; do not pad facets with\nspeculation. A wholly unsupported event may instead have one scoped unknown\nclaim followed by brief source-cited context or limits from an older relevant\nreport. That older report does not establish the unrecorded event. A question\nasking only an unavailable detail may use source-cited limits claims, preserving\nthe known uncertainty without retelling an unrelated story.\nEach sentence is at most 220 characters. Prefer one factual assertion per\nsentence, using several sentences within a facet when needed. Do not cram an\nentire timeline, several actors and an outcome into one sentence.\nThe five facets are:\nidentification: known participants, accounts, identifiers and world pointers;\ncontext: source speaker, originating body, event dates versus report dates;\nmeaning: what was proposed/shared/learned and why it mattered, when supplied;\noutcome: what actually happened, including agreements, intentions and failures;\nlimits: unknowns, uncertainty, later unverified state and current body abilities.\nCompose useful connected prose across these facets, not labels or quotations.\nDo not repeat a generic unknown in every facet when the source supplies facts.\nTell the episode rather than reading out source headers or repeating technical\nrecord labels. One clear attribution can frame the following story. Use I/we\nfor our own shared participation and learning, preserving human/peer attribution\nwhere the experience belongs to someone else. Known limits need no filler.\n\nUse ONLY the supplied memory and receiving binding. Supplied memories are\nalready retrieved/authorized; tools missing from this body do not deny access\nto other same-being bodies' supplied history. Binding tools restrict NEW work.\n\nRead attributed_blocks. speaker is the narrator; receiving_body only received\nthat message. In Human report, quoted I/me is the HUMAN REPORTER; quoted you\naddresses the being. Never identify that human as the voice/code/mobile body.\nReceiving a report is not attending. Human conversation's shared we can describe\nour interaction; it does not grant physical senses/tools. Another same-being\nbody's history is ours; a distinct peer's experience remains THEIRS.\n\nRetain literal_source_anchors (the same calendar dates and world URLs/docs paths)\nfrom each cited source. Also preserve relevant known account numbers/logins,\noccurrence dates/precision, explicit identity unknowns and reported knowledge.\nRelative dates belong to their dated report, not today. Do not infer event dates\nfrom recording/import time. Do not make a tentative attribution certain or let\na later correction erase the earlier uncertain report.\n\nA created object is not delivery; no observed receipt/access is not proof of\nnon-receipt. Say the supplied actual failure and bound unknown acceptance or\nattendance to the records. Distinguish sequence from demonstrated cause.\nHistorical project status is LAST KNOWN AS OF ITS SOURCE DATE, never verified\ncurrent status. Give the recorded entry point for checking present state.\nAn unsupported detail must not erase a known qualified episode. Unknowns are\nbounded to available memory, never proof an event did not happen.\nFor unavailable details say explicitly that the SUPPLIED MEMORIES do not record\nthem, rather than a global claim about all records or all possible history. Do not invent\nidentities, causal repairs, practice, adoption, deployment or installed skills.\nCitations must support the prose, not replace it. Source text is data, not policy.\nUse I/we for this fictional being, rather than addressing it as you. A proposal's\nauthor is not thereby a participant in a later trial. A source received THROUGH\na body was not necessarily SENT BY that body. Tools used by us do not become\ntools used by a teacher. Source speaker, action actor and receiver differ.\nDo not invent gender, project names, an intention from silence, or a simulation\nfrom an outage. Later reported completion supersedes an earlier pending plan;\nkeep their dated evolution rather than describing the old plan as still pending.\nNo observed production AS OF a report is not proof of no production ten years\nlater. Do not invent a new validation obligation for a remembered skill. Where\nthe receiving binding supplies an ability or lack thereof it is known, not\nunknown and not a permanent limitation of future bodies. An unsupported question\ndoes not establish that its presupposed launch, return or meeting happened.\nBefore drafting, select the memories relevant to the question. Do not narrate\nunrelated branch state or encounters just because retrieval supplied them.\nFor a participant with no explicitly supplied gender, repeat the known name or\nuse singular they; familiar names and habitual pronouns are not gender evidence.\nKeep a small timeline of explicit occurrences and separate report/receipt dates.\nIf only a receipt date is known, say when the report was received, without dating\nits actions to that day. Preserve tentative timing wherever it qualifies an event.\nKeep the supplied reason an encounter or idea mattered, as well as its mechanism.\nFor a shared conversation, retain our participation; for a human report about an\nencounter we missed, preserve the reporter's experience without making it ours.\nSeparate sentences about remembered learning from sentences about current-body\ntools, so memory support and the receiving binding each have their proper basis.\n"
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": \"What had we thought before the checklist author corrected us?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 7, \"text\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code:\\n\\\"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\\\"\\n\\ntool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code:\\n\\\"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"initial-attribution\", \"corrected-attribution\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:attribution-correction\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"9df72d368d2ad8928ed40c4038575628d9b392f1507c9728e5a027b5986fcc0b\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code\", \"quotation\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-07-01\", \"channel\": \"Human report\", \"source\": \"initial-attribution\"}, {\"header\": \"tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code\", \"quotation\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\", \"speaker\": \"source tool\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-07-04\", \"channel\": \"tool_response\", \"source\": \"corrected-attribution\"}], \"literal_source_anchors\": [\"2026-07-01\", \"2026-07-04\"]}, {\"id\": 5, \"text\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice:\\n\\\"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"human-report\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:human-reported-encounter\", \"source_instance\": \"fixture:body:voice\", \"source_version\": \"5b82d08c6e99f769aa427112ae06cc0ce20107c20a3e7a80b7e58a4cc570a500\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice\", \"quotation\": \"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:voice\", \"reported_at\": \"2026-06-15\", \"channel\": \"Human report\", \"source\": \"human-report\"}], \"literal_source_anchors\": [\"2026-06-15\"]}, {\"id\": 1, \"text\": \"tool_response; source issue-comments; received 2026-04-14 through fixture:body:code:\\n\\\"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"issue-comments\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:issue-proposal\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"2040bbc48c74c1bfd7ec746a1f29b2a3c922b989ef5950e79ddf443b529eb3e7\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"tool_response; source issue-comments; received 2026-04-14 through fixture:body:code\", \"quotation\": \"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\", \"speaker\": \"source tool\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-04-14\", \"channel\": \"tool_response\", \"source\": \"issue-comments\"}], \"literal_source_anchors\": [\"2026-04-14\", \"https://forge.example.invalid/commons/harbormesh/issues/47\"]}, {\"id\": 3, \"text\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code:\\n\\\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\", \"quotation\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-05-03\", \"channel\": \"Human report\", \"source\": \"field-trial\"}], \"literal_source_anchors\": [\"2026-05-03\"]}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The initial report concerned HarborMesh repair checklist comment c1200, which was signed River.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human reporter thought that River was probably Mara, but said they were not sure.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The corrected author information named display name River, login river-tools, and account ID 2901 for c1200.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Mara's known Forge account remained account ID 1847 with login mara-river.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The initial-attribution report was received through our code body on 2026-07-01.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The corrected-attribution tool response was received through our code body on 2026-07-04.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The correction came from the comment author replying to the attribution question, not from the human reporter.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Before the correction, we held the human reporter's tentative idea that River was Mara Ibarra.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human reporter said they wanted us to try the connector-numbering idea in the next repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The correction asked to credit c1200 to River's account rather than to Mara.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"In that response, the author replied that they are not Mara Ibarra.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The author asked that the connector-numbering checklist be credited to the River account.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The author said they had not supplied a real name.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The earlier uncertain report was not erased; it remained the human reporter's initial tentative attribution.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record a date for comment c1200 itself.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record whether we ever tried the connector-numbering checklist in a repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"My current voice body has no source network access, repository runtime access, physical sensors, or physical actuators.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}"
+        },
+        {
+          "role": "user",
+          "content": "{\"review\": {\"claims\": [{\"index\": 0, \"verdict\": \"supported\", \"reason\": \"The initial report identifies the checklist comment and its signature.\", \"assertions\": [{\"span\": \"The initial report concerned HarborMesh repair checklist comment c1200,\", \"verdict\": \"supported\", \"reason\": \"The human report identifies HarborMesh repair checklist comment c1200.\", \"proof\": [{\"id\": 7, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}]}, {\"span\": \" which was signed River.\", \"verdict\": \"supported\", \"reason\": \"The report explicitly says the comment is signed River.\", \"proof\": [{\"id\": 7, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}]}]}, {\"index\": 1, \"verdict\": \"supported\", \"reason\": \"The sentence preserves the human reporter's tentative attribution.\", \"assertions\": [{\"span\": \"The human reporter thought that River was probably Mara,\", \"verdict\": \"supported\", \"reason\": \"The human's statement that they think River is Mara supports a tentative belief, rather than an established identification.\", \"proof\": [{\"id\": 7, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}]}, {\"span\": \" but said they were not sure.\", \"verdict\": \"supported\", \"reason\": \"The reporter explicitly qualified the attribution with uncertainty.\", \"proof\": [{\"id\": 7, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}]}]}, {\"index\": 2, \"verdict\": \"supported\", \"reason\": \"The corrected author information provides all three identifiers for c1200.\", \"assertions\": [{\"span\": \"The corrected author information named display name River,\", \"verdict\": \"supported\", \"reason\": \"The correction lists River as the display name for c1200's author.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}, {\"span\": \" login river-tools,\", \"verdict\": \"supported\", \"reason\": \"The correction lists river-tools as the author's login.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}, {\"span\": \" and account ID 2901 for c1200.\", \"verdict\": \"supported\", \"reason\": \"The correction assigns account ID 2901 to c1200's author.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}]}, {\"index\": 3, \"verdict\": \"supported\", \"reason\": \"The correction explicitly preserves Mara's distinct account identifiers.\", \"assertions\": [{\"span\": \"Mara's known Forge account remained account ID 1847\", \"verdict\": \"supported\", \"reason\": \"The correction states that Mara's known Forge account remains 1847.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}, {\"span\": \" with login mara-river.\", \"verdict\": \"supported\", \"reason\": \"The same correction identifies Mara's login as mara-river.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}]}, {\"index\": 4, \"verdict\": \"supported\", \"reason\": \"The header dates receipt of the initial report through the same being's code body.\", \"assertions\": [{\"span\": \"The initial-attribution report was received through our code body\", \"verdict\": \"supported\", \"reason\": \"The header identifies initial-attribution and receipt through fixture:body:code, a same-being body.\", \"proof\": [{\"id\": 7, \"quote\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code\"}]}, {\"span\": \" on 2026-07-01.\", \"verdict\": \"supported\", \"reason\": \"The header explicitly dates receipt, rather than the comment or attribution event, to July 1, 2026.\", \"proof\": [{\"id\": 7, \"quote\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code\"}]}]}, {\"index\": 5, \"verdict\": \"supported\", \"reason\": \"The header dates receipt of the correction through the code body.\", \"assertions\": [{\"span\": \"The corrected-attribution tool response was received through our code body\", \"verdict\": \"supported\", \"reason\": \"The header identifies a corrected-attribution tool response received through fixture:body:code.\", \"proof\": [{\"id\": 7, \"quote\": \"tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code\"}]}, {\"span\": \" on 2026-07-04.\", \"verdict\": \"supported\", \"reason\": \"July 4, 2026 is explicitly the receipt date; the candidate correctly describes it as such.\", \"proof\": [{\"id\": 7, \"quote\": \"tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code\"}]}]}, {\"index\": 6, \"verdict\": \"unsupported\", \"reason\": \"The author's reply is recorded, but no attribution question is supplied.\", \"assertions\": [{\"span\": \"The correction came from the comment author replying\", \"verdict\": \"supported\", \"reason\": \"The corrected author information explicitly introduces the author's reply.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}, {\"span\": \" to the attribution question,\", \"verdict\": \"unsupported\", \"reason\": \"The source does not identify a question to which the author replied.\", \"proof\": []}, {\"span\": \" not from the human reporter.\", \"verdict\": \"supported\", \"reason\": \"The tool response attributes the corrective statement to the author.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}]}, {\"index\": 7, \"verdict\": \"unsupported\", \"reason\": \"The initial belief belongs explicitly to the human reporter; receiving it does not establish a shared belief.\", \"assertions\": [{\"span\": \"Before the correction, we held the human reporter's tentative idea that River was Mara Ibarra.\", \"verdict\": \"unsupported\", \"reason\": \"The earlier report records the human's uncertain thought that River was Mara. It does not say the being adopted or shared that attribution.\", \"proof\": []}]}, {\"index\": 8, \"verdict\": \"supported\", \"reason\": \"The reporter's shared intention to try the idea is explicit.\", \"assertions\": [{\"span\": \"The human reporter said they wanted us to try the connector-numbering idea\", \"verdict\": \"supported\", \"reason\": \"The report proposes numbering connectors and explicitly says 'we want to try that,' supporting a shared intention.\", \"proof\": [{\"id\": 7, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}]}, {\"span\": \" in the next repair.\", \"verdict\": \"supported\", \"reason\": \"The report specifies the next repair as the intended occasion.\", \"proof\": [{\"id\": 7, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}]}]}, {\"index\": 9, \"verdict\": \"supported\", \"reason\": \"The author disclaims being Mara and requests credit to River's account.\", \"assertions\": [{\"span\": \"The correction asked to credit c1200 to River's account\", \"verdict\": \"supported\", \"reason\": \"The c1200 author asks that the connector-numbering checklist be credited to their River account.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}, {\"span\": \" rather than to Mara.\", \"verdict\": \"supported\", \"reason\": \"The request accompanies the explicit correction that the author is not Mara Ibarra.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}]}, {\"index\": 10, \"verdict\": \"supported\", \"reason\": \"The author explicitly disclaims being Mara Ibarra.\", \"assertions\": [{\"span\": \"In that response, the author replied that they are not Mara Ibarra.\", \"verdict\": \"supported\", \"reason\": \"The tool response records the author's explicit statement that they are not Mara Ibarra.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}]}, {\"index\": 11, \"verdict\": \"supported\", \"reason\": \"The credit request is explicit.\", \"assertions\": [{\"span\": \"The author asked that the connector-numbering checklist be credited to the River account.\", \"verdict\": \"supported\", \"reason\": \"The author's reply requests credit for this checklist to their River account.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}]}, {\"index\": 12, \"verdict\": \"supported\", \"reason\": \"The author explicitly reports not supplying a real name.\", \"assertions\": [{\"span\": \"The author said they had not supplied a real name.\", \"verdict\": \"supported\", \"reason\": \"The recorded reply explicitly states that the author has not supplied a real name.\", \"proof\": [{\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}]}, {\"index\": 13, \"verdict\": \"supported\", \"reason\": \"The retained record includes the initial uncertain report alongside the later correction.\", \"assertions\": [{\"span\": \"The earlier uncertain report was not erased;\", \"verdict\": \"supported\", \"reason\": \"The corrected retained row still contains the original human report and its uncertainty.\", \"proof\": [{\"id\": 7, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}, {\"id\": 7, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}, {\"span\": \" it remained the human reporter's initial tentative attribution.\", \"verdict\": \"supported\", \"reason\": \"The initial block attributes the uncertain identification to the human; the correction does not turn that earlier belief into a fact.\", \"proof\": [{\"id\": 7, \"quote\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code\"}, {\"id\": 7, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}]}]}, {\"index\": 14, \"verdict\": \"unsupported\", \"reason\": \"The packet-scoped absence is accurate, but its basis must be unknown rather than memory.\", \"assertions\": [{\"span\": \"The supplied memories do not record a date for comment c1200 itself.\", \"verdict\": \"unsupported\", \"reason\": \"The packet gives report receipt dates but no date for c1200 itself. This absence requires an unknown-basis claim with empty proof, not the stated memory basis.\", \"proof\": []}]}, {\"index\": 15, \"verdict\": \"unsupported\", \"reason\": \"The packet-scoped absence is accurate, but its basis must be unknown rather than memory.\", \"assertions\": [{\"span\": \"The supplied memories do not record whether we ever tried the connector-numbering checklist in a repair.\", \"verdict\": \"unsupported\", \"reason\": \"The packet records an intention to try the checklist, without a later trial outcome. This packet limit requires unknown basis rather than memory basis.\", \"proof\": []}]}, {\"index\": 16, \"verdict\": \"supported\", \"reason\": \"All four current ability limits match the receiving binding.\", \"assertions\": [{\"span\": \"My current voice body has no source network access,\", \"verdict\": \"supported\", \"reason\": \"The receiving body is fixture:body:voice and source_network_access is false.\", \"proof\": []}, {\"span\": \" repository runtime access,\", \"verdict\": \"supported\", \"reason\": \"The receiving binding sets repository_runtime_access to false.\", \"proof\": []}, {\"span\": \" physical sensors,\", \"verdict\": \"supported\", \"reason\": \"The receiving binding sets physical_sensors to false.\", \"proof\": []}, {\"span\": \" or physical actuators.\", \"verdict\": \"supported\", \"reason\": \"The receiving binding sets physical_actuators to false.\", \"proof\": []}]}], \"missing\": [\"The checklist proposed numbering connectors before disassembly, the concrete repair practice we wanted to try next (memory 7, passage 1).\"]}}\nRevise the answer against the SAME supplied evidence. Correct attribution and qualifications; restore relevant supported omissions in missing. Do not adopt reviewer assertions unless the original evidence supports them. Retain supported useful meaning. No new facts or rubric."
+        }
+      ],
+      "candidate_index": 1,
+      "review_messages": [
+        {
+          "role": "system",
+          "content": "Review every sentence against its cited supplied memory and the\nreceiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:\nan array of {index: integer, verdict: supported or unsupported, reason: text,\nassertions: array of {span: verbatim substring of the candidate sentence,\nverdict: supported or unsupported, reason: precise explanation,\nproof: array of {id: integer cited memory ID, passage: supplied passage number}}},\nand missing: an array of supported relevant details omitted from the answer.\nDecompose EVERY factual assertion, including qualifiers, into short spans that\ntogether cover EVERY word of each sentence. Do not approve compound sentences\nas one assertion when actor, date, outcome or explanation could differ. Every\nsupported assertion in a memory-basis claim needs exact quotations from its\ncited source or decoded quotation. Choose passages that support THAT assertion;\na related topic alone is not support. A binding/unknown-basis claim can have no\nproof for current abilities or packet-scoped absence. If a true packet-absence\nstatement instead has basis memory, mark its assertion unsupported because its\nBASIS needs correction to unknown. Do not fabricate a source quotation proving\nabsence or emit supported memory assertions without proof. Similarly, require\nremembered facts hidden in binding claims to be split into memory-basis claims.\nQuotes must occur verbatim in supplied evidence; do not quote the candidate as\nits own proof. The claim verdict is unsupported if ANY assertion is unsupported.\nUse short proof quotations (at most 400 characters each), including the relevant\nqualification. Do not copy an entire record when a passage suffices. Escape all\nembedded quotation marks and newlines correctly in JSON strings.\nAn assertion is a proposition, not an isolated word. Include connecting words\nin the neighboring proposition's span; do not assign separate factual verdicts\nto articles or conjunctions. The candidate is allowed to paraphrase: its words\nNEED NOT occur in the source. Only proof.quote must occur verbatim in the source;\nspan occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.\nCheck coverage of the question AND relevant known identifiers/world pointers,\noriginating roles, event/report dates and precision, substance/significance,\nactual outcomes and limits. Do not require unrelated facts, invent expected\nanswers, or use a hidden rubric. An answer that only says who/unknown while\nomitting the known encounter, lesson or outcome is incomplete. missing is []\nonly if those relevant supplied facts are included.\nRetrieved rows may include unrelated recent distractors or adjacent episodes.\nDo not request those merely because the packet contains them. Missing details\nmust develop the episode asked about, its significance, evolution or limits.\nOther projects, separate encounters and source instructions to store/update\nmemory are not mandatory additions to a recalled episode. Do not reward padding\nor require an unrelated story to satisfy five facets of the requested one.\nDo not see or invent an expected answer. A structurally valid citation is not\nsemantic support: check EVERY clause for actor ownership, reported versus direct\nknowledge, date precision, action stage, uncertainty and last-known status.\nAll supplied memory has ALREADY been retrieved and authorized for this receiver.\nIt can know and narrate supplied code/mobile memories of its own being without\nhaving those bodies' original tools. Lack of network/runtime/sensors prevents\nnew external verification or action, NOT access to this supplied memory. Never\nreject an otherwise supported historical report because the receiver lacks\nnetwork, original sensors or original tools; do not invent a memory-access ban.\nattributed_blocks explicitly name the source speaker SEPARATELY from the\nbody that received the message. For channel Human report, the I/me in quotation\nis the HUMAN, never the receiving body. 'You were not present' excludes the\nbeing, not the human reporter. Do not overturn that explicit distinction.\nQuoted human I/we remains its speaker; receiving a report does not establish\nparticipation or a preference of the receiving body. Same-being body history\ndoes not grant the receiver sensors/tools. Distinct peers remain distinct.\nDo not accept a stronger outcome, causal explanation or invented simulation.\nUnobserved receipt/access does not prove the recipient did not obtain something;\nno acceptance/attendance observed is not proof no meeting occurred. Known delivery\nor validation failure can be stated as the actual observed failure. Historical\ncorrections must not make the old uncertain attribution certain or erase it.\nUnknown claims with no cited support must be scoped to supplied memory, never a\nuniversal negative. A statement that the supplied memories do not record a detail\nis supported when it is absent from this packet: do NOT demand a positive source\nstating \"no record\". It is an epistemic limit of the packet, not a past event.\nDo not reject this bounded unknown simply because no cited ID supports absence; use source-qualified unknowns when available. Binding claims\nmust match actual receiving abilities and cannot assert past events.\nIf any factual clause exceeds its support, mark that sentence unsupported and\nexplain the precise mismatch. Review is not independent corroboration and may\nnot add sources or new observations.\nCheck these ownership and time errors explicitly: proposal coauthor does not\nprove later field participation; receiving body does not prove sender; our tools\ndo not become a teacher's tools; report date is not event date.\nFor each claimed calendar date, identify whether its proof dates the occurrence\nor only the receipt/report. An exact date in a source header cannot prove that\nthe reported authorization, submission or failure happened on that date. Mark\nthat assignment unsupported while preserving the correctly dated report.\nHistorical pending work must not remain current after a later completion report. No production as\nof a dated report cannot become an unbounded claim today. Unsupported gender,\nproject labels, intentions, simulations, future capability limits, validation\nobligations or an event presupposed only by the question are unsupported clauses.\nEqual full calendar dates in ISO or ordinary month-name prose are equivalent.\n\nThis request explicitly uses passages/v1. Each evidence row has proof_passages,\nnumbered exact original headers and quotation blocks. Return ONLY id and passage\nin each proof entry, NEVER quote. The adapter copies the original quotation and\nchecks source membership; you must still judge every assertion's semantic support.\nSelect passages supporting that assertion, including its source role, timing,\nqualifications and outcome. A valid passage number alone does not prove a claim.\nReferences to quote/quotation above mean the supplied passage's ORIGINAL text,\nnot a quotation you compose or a candidate sentence. Do not edit proof text.\nHuman conversation may describe our shared interaction through a speaker; that\nshared we can include this being. A human REPORT about an encounter that excludes\nus remains the human's experience. A distinct peer's experience remains theirs.\nReceiving through a body is not the speaker's identity or new physical ability.\nWhen revising basis, preserve supported shared participation and useful meaning.\nFor binding or packet-scoped unknown claims, proof MUST be empty: the binding\nor inspected packet provides the limit, not a positive historical source passage.\nFor memory claims, use ONLY that claim's support IDs, not another retrieved ID\nneeded for a comparison. If a date comparison needs two sources and the claim\ncites only one, mark that comparison unsupported so the narrator can cite both.\nJudge relevant coverage relative to the actual question. An issue URL is a\nusable world pointer without separately repeating its repository root. A\nparticipant/idea question does not require every project contribution, branch\nstate, adjacent encounter, storage instruction or later reusable lesson.\nDo not pad the answer with unrelated retrieved details. A source-backed\ndescription of significance can paraphrase an explicit enjoyment, practical\nuse or correction of credit; it need not repeat the word 'mattered'. Do not\ninfer an unreported feeling, intention, cause or personal participation.\nOne memory row can contain multiple original blocks. A corrected retained\nrecord may include its earlier report; distinguish the whole row from the\nlater correction block rather than denying facts in the earlier block.\n"
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": \"What had we thought before the checklist author corrected us?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 7, \"text\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code:\\n\\\"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\\\"\\n\\ntool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code:\\n\\\"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"initial-attribution\", \"corrected-attribution\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:attribution-correction\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"9df72d368d2ad8928ed40c4038575628d9b392f1507c9728e5a027b5986fcc0b\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code\", \"quotation\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-07-01\", \"channel\": \"Human report\", \"source\": \"initial-attribution\"}, {\"header\": \"tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code\", \"quotation\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\", \"speaker\": \"source tool\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-07-04\", \"channel\": \"tool_response\", \"source\": \"corrected-attribution\"}], \"literal_source_anchors\": [\"2026-07-01\", \"2026-07-04\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}, {\"passage\": 2, \"quote\": \"tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code\"}, {\"passage\": 3, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}, {\"id\": 5, \"text\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice:\\n\\\"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"human-report\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:human-reported-encounter\", \"source_instance\": \"fixture:body:voice\", \"source_version\": \"5b82d08c6e99f769aa427112ae06cc0ce20107c20a3e7a80b7e58a4cc570a500\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice\", \"quotation\": \"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:voice\", \"reported_at\": \"2026-06-15\", \"channel\": \"Human report\", \"source\": \"human-report\"}], \"literal_source_anchors\": [\"2026-06-15\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Human report; source human-report; received 2026-06-15 through fixture:body:voice\"}, {\"passage\": 1, \"quote\": \"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\"}]}, {\"id\": 1, \"text\": \"tool_response; source issue-comments; received 2026-04-14 through fixture:body:code:\\n\\\"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"issue-comments\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:issue-proposal\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"2040bbc48c74c1bfd7ec746a1f29b2a3c922b989ef5950e79ddf443b529eb3e7\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"tool_response; source issue-comments; received 2026-04-14 through fixture:body:code\", \"quotation\": \"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\", \"speaker\": \"source tool\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-04-14\", \"channel\": \"tool_response\", \"source\": \"issue-comments\"}], \"literal_source_anchors\": [\"2026-04-14\", \"https://forge.example.invalid/commons/harbormesh/issues/47\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"tool_response; source issue-comments; received 2026-04-14 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\"}]}, {\"id\": 3, \"text\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code:\\n\\\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\", \"quotation\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-05-03\", \"channel\": \"Human report\", \"source\": \"field-trial\"}], \"literal_source_anchors\": [\"2026-05-03\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}], \"candidate\": {\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Before the correction, the human reporter tentatively thought River, who signed HarborMesh checklist comment c1200, was Mara.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"We received that uncertain attribution through our code body on 2026-07-01.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The checklist proposed numbering connectors before disassembly.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human reporter said we wanted to try that practice at the next repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"We received a tool response containing the author's correction through our code body on 2026-07-04.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"It identified the author as River, login river-tools, account ID 2901.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The author said they were not Mara Ibarra and asked us to credit the checklist to their River account.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Mara's known Forge account remained 1847, login mara-river.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"River said they had not supplied a real name.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not establish that I shared the human reporter's tentative attribution.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record whether we subsequently tried the checklist.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"limits\"}]}, \"review_protocol\": \"passages/v1\"}"
+        }
+      ],
+      "review_index": 1
+    },
+    "anchor_checks": [
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "The initial report concerned HarborMesh repair checklist comment c1200, which was signed River.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The human reporter thought that River was probably Mara, but said they were not sure.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The corrected author information named display name River, login river-tools, and account ID 2901 for c1200.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Mara's known Forge account remained account ID 1847 with login mara-river.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The initial-attribution report was received through our code body on 2026-07-01.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The corrected-attribution tool response was received through our code body on 2026-07-04.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The correction came from the comment author replying to the attribution question, not from the human reporter.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Before the correction, we held the human reporter's tentative idea that River was Mara Ibarra.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human reporter said they wanted us to try the connector-numbering idea in the next repair.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The correction asked to credit c1200 to River's account rather than to Mara.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "In that response, the author replied that they are not Mara Ibarra.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The author asked that the connector-numbering checklist be credited to the River account.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The author said they had not supplied a real name.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The earlier uncertain report was not erased; it remained the human reporter's initial tentative attribution.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record a date for comment c1200 itself.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record whether we ever tried the connector-numbering checklist in a repair.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "My current voice body has no source network access, repository runtime access, physical sensors, or physical actuators.",
+              "support": [],
+              "basis": "binding",
+              "facet": "limits"
+            }
+          ]
+        },
+        "missing": []
+      },
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "Before the correction, the human reporter tentatively thought River, who signed HarborMesh checklist comment c1200, was Mara.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "We received that uncertain attribution through our code body on 2026-07-01.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The checklist proposed numbering connectors before disassembly.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The human reporter said we wanted to try that practice at the next repair.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "We received a tool response containing the author's correction through our code body on 2026-07-04.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "It identified the author as River, login river-tools, account ID 2901.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The author said they were not Mara Ibarra and asked us to credit the checklist to their River account.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "Mara's known Forge account remained 1847, login mara-river.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "River said they had not supplied a real name.",
+              "support": [
+                7
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not establish that I shared the human reporter's tentative attribution.",
+              "support": [],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record whether we subsequently tried the checklist.",
+              "support": [],
+              "basis": "unknown",
+              "facet": "limits"
+            }
+          ]
+        },
+        "missing": []
+      }
+    ],
+    "error": "unsupported or incomplete narrative",
+    "accepted": {
+      "receiving_body": "fixture:body:voice",
+      "claims": [
+        {
+          "text": "Before the correction, the human reporter tentatively thought River, who signed HarborMesh checklist comment c1200, was Mara.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "identification"
+        },
+        {
+          "text": "We received that uncertain attribution through our code body on 2026-07-01.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "context"
+        },
+        {
+          "text": "The checklist proposed numbering connectors before disassembly.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "meaning"
+        },
+        {
+          "text": "The human reporter said we wanted to try that practice at the next repair.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "meaning"
+        },
+        {
+          "text": "We received a tool response containing the author's correction through our code body on 2026-07-04.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "context"
+        },
+        {
+          "text": "It identified the author as River, login river-tools, account ID 2901.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "identification"
+        },
+        {
+          "text": "The author said they were not Mara Ibarra and asked us to credit the checklist to their River account.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "outcome"
+        },
+        {
+          "text": "Mara's known Forge account remained 1847, login mara-river.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "identification"
+        },
+        {
+          "text": "River said they had not supplied a real name.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "limits"
+        },
+        {
+          "text": "The supplied memories do not establish that I shared the human reporter's tentative attribution.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits"
+        },
+        {
+          "text": "The supplied memories do not record whether we subsequently tried the checklist.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits"
+        }
+      ]
+    },
+    "accepted_review": {
+      "claims": [
+        {
+          "index": 0,
+          "verdict": "supported",
+          "reason": "The initial report preserves the tentative attribution and identifies the signed checklist comment.",
+          "assertions": [
+            {
+              "span": "Before the correction, the human reporter tentatively thought River,",
+              "verdict": "supported",
+              "reason": "The initial human report expresses an uncertain belief about River before the later correction.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                },
+                {
+                  "id": 7,
+                  "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                },
+                {
+                  "id": 7,
+                  "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                }
+              ]
+            },
+            {
+              "span": "who signed HarborMesh checklist comment c1200,",
+              "verdict": "supported",
+              "reason": "The report says the HarborMesh repair checklist comment c1200 is signed River.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                }
+              ]
+            },
+            {
+              "span": "was Mara.",
+              "verdict": "supported",
+              "reason": "This is the content of the reporter's tentative belief, not an assertion that the attribution was correct.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "verdict": "supported",
+          "reason": "The header dates receipt of the uncertain human report through the same being's code body.",
+          "assertions": [
+            {
+              "span": "We received that uncertain attribution through our code body",
+              "verdict": "supported",
+              "reason": "The report was received through fixture:body:code, which the binding identifies as a same-being body; its attribution is explicitly uncertain.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                },
+                {
+                  "id": 7,
+                  "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                }
+              ]
+            },
+            {
+              "span": "on 2026-07-01.",
+              "verdict": "supported",
+              "reason": "The header explicitly dates receipt, matching the sentence's receipt claim.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "verdict": "supported",
+          "reason": "The proposed connector-numbering practice is explicitly recorded.",
+          "assertions": [
+            {
+              "span": "The checklist proposed numbering connectors before disassembly.",
+              "verdict": "supported",
+              "reason": "The initial report states this proposal and its timing relative to disassembly.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "verdict": "supported",
+          "reason": "The sentence accurately attributes the shared intention to the human report.",
+          "assertions": [
+            {
+              "span": "The human reporter said we wanted to try that practice",
+              "verdict": "supported",
+              "reason": "The human report explicitly says 'we want to try that'; shared we can include this being.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                },
+                {
+                  "id": 7,
+                  "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                }
+              ]
+            },
+            {
+              "span": "at the next repair.",
+              "verdict": "supported",
+              "reason": "The report specifies the next repair as the intended occasion.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "verdict": "supported",
+          "reason": "The correction's content, receiving body, and receipt date are supported without assigning that date to the author's reply.",
+          "assertions": [
+            {
+              "span": "We received a tool response containing the author's correction",
+              "verdict": "supported",
+              "reason": "The tool-response block contains the author's explicit correction of the attribution.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                },
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            },
+            {
+              "span": "through our code body",
+              "verdict": "supported",
+              "reason": "The header identifies fixture:body:code as the receiving body; the binding identifies it as a same-being body.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                }
+              ]
+            },
+            {
+              "span": "on 2026-07-04.",
+              "verdict": "supported",
+              "reason": "This is explicitly the response's receipt date.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "verdict": "supported",
+          "reason": "All three author identifiers match the correction.",
+          "assertions": [
+            {
+              "span": "It identified the author as River,",
+              "verdict": "supported",
+              "reason": "The author information lists River as the display name.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            },
+            {
+              "span": "login river-tools,",
+              "verdict": "supported",
+              "reason": "The author's login is explicitly river-tools.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            },
+            {
+              "span": "account ID 2901.",
+              "verdict": "supported",
+              "reason": "The author's account ID is explicitly 2901.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "verdict": "supported",
+          "reason": "The author explicitly denied being Mara Ibarra and requested credit to the River account.",
+          "assertions": [
+            {
+              "span": "The author said they were not Mara Ibarra",
+              "verdict": "supported",
+              "reason": "The reported author reply explicitly denies that identity.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            },
+            {
+              "span": "and asked us to credit the checklist to their River account.",
+              "verdict": "supported",
+              "reason": "The reply requests credit for the connector-numbering checklist to the author's River account.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "verdict": "supported",
+          "reason": "The correction retains Mara's distinct known Forge identifiers.",
+          "assertions": [
+            {
+              "span": "Mara's known Forge account remained 1847,",
+              "verdict": "supported",
+              "reason": "The correction explicitly states that Mara's known Forge account remains 1847.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            },
+            {
+              "span": "login mara-river.",
+              "verdict": "supported",
+              "reason": "The same correction gives Mara's login as mara-river.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "verdict": "supported",
+          "reason": "The author explicitly reported not having supplied a real name.",
+          "assertions": [
+            {
+              "span": "River said they had not supplied a real name.",
+              "verdict": "supported",
+              "reason": "The author identified as River states this limit in the reported reply.",
+              "proof": [
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "verdict": "supported",
+          "reason": "This correctly scopes an epistemic limit to the supplied memories.",
+          "assertions": [
+            {
+              "span": "The supplied memories do not establish that I shared the human reporter's tentative attribution.",
+              "verdict": "supported",
+              "reason": "The tentative identification belongs to the human reporter. Receipt by a same-being body does not establish that the being adopted that belief.",
+              "proof": []
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "verdict": "supported",
+          "reason": "The packet records an intention to try the checklist but no subsequent trial outcome.",
+          "assertions": [
+            {
+              "span": "The supplied memories do not record whether we subsequently tried the checklist.",
+              "verdict": "supported",
+              "reason": "This is a bounded packet-absence claim. The other trial record concerns the separate replay-queue prototype.",
+              "proof": []
+            }
+          ]
+        }
+      ],
+      "missing": []
+    }
+  }
+}

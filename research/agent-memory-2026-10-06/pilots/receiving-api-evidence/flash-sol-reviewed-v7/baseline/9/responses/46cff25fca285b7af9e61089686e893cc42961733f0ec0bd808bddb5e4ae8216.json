@@ -1,0 +1,16 @@
+{
+  "request_sha256": "46cff25fca285b7af9e61089686e893cc42961733f0ec0bd808bddb5e4ae8216",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/9/dispatches/46cff25fca285b7af9e61089686e893cc42961733f0ec0bd808bddb5e4ae8216.json",
+  "usage": {
+    "prompt_tokens": 14602,
+    "completion_tokens": 375,
+    "total_tokens": 14977
+  },
+  "seconds": 12.774694935418665,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"No—the corrected attribution identifies River as the author of HarborMesh's connector-numbering checklist comment c1200.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"River's account ID is 2901, with login river-tools.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra's known Forge account is 1847, with login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body received the initial human report on 2026-07-01.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter thought the River signature might mean Mara, but explicitly expressed uncertainty.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The checklist proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said their group wanted to try that step during the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our code body received the corrected author information through a tool response on 2026-07-04.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The author explicitly denied being Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"They requested credit for the connector-numbering checklist through their River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"River stated that they had not supplied a real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether the connector-numbering step was subsequently tried.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

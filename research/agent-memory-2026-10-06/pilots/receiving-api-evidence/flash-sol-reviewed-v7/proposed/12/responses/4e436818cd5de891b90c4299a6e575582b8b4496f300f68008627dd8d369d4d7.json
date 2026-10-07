@@ -1,0 +1,24 @@
+{
+  "request_sha256": "4e436818cd5de891b90c4299a6e575582b8b4496f300f68008627dd8d369d4d7",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/162-4e436818cd5de891b90c4299a6e575582b8b4496f300f68008627dd8d369d4d7.json",
+  "usage": {
+    "prompt_tokens": 2587,
+    "completion_tokens": 8540,
+    "total_tokens": 11127,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7841
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1435
+  },
+  "seconds": 34.245232535526156,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"In this memory, our authenticated mobile body met Jo Vale at the East Quay repair workshop on 2026-06-08.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Jo Vale introduced themself by that name; no account identifier or legal-name evidence was supplied.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A human later authorized inviting Jo Vale to a mount-comparison workshop on August 2, but the human's identity is not supplied.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The account of the June 8 meeting was received on 2026-06-08 through our mobile body.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A report received on 2026-07-20 through our code body described the outreach attempt and tool response.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"At the June 8 workshop, Jo invited us to compare mounts at the next workshop; no date was agreed then.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Later, the authorized outreach named a mount-comparison workshop on August 2.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Jo demonstrated a humming relay mount and taught us to listen for a beat before tightening it.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried the mount together using the mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Jo's demonstration was shared learning, and Jo's invitation proposed a future comparison.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"A report received on 2026-07-20 through our code body says we attempted to submit an invitation through the workshop tool and the tool created invitation object invite-81 for Jo Vale.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool response says delivery failed because no reachable destination existed.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool response states that creating invite-81 was not a delivery receipt, and no reply or workshop acceptance was observed.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"So the supplied records do not show that Jo received the invitation or agreed to compare mounts on August 2.\",\"support\":[9],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Jo had earlier invited us to compare mounts, but that does not establish that Jo agreed to the later August 2 workshop.\",\"support\":[4,9],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"No observed receipt is not proof that Jo did not receive the invitation; the supplied memories simply lack a receipt or acceptance record.\",\"support\":[9],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The receiving body fixture:body:voice has no source network access, repository runtime access, physical sensors, physical actuators, or private session access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "34da53002ed7b69c325df5efc71b1e9d05ac8073ae7b4bfc92bb7980cf189d20",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/13/dispatches/34da53002ed7b69c325df5efc71b1e9d05ac8073ae7b4bfc92bb7980cf189d20.json",
+  "usage": {
+    "prompt_tokens": 18028,
+    "completion_tokens": 420,
+    "total_tokens": 18448
+  },
+  "seconds": 13.356055573560297,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our code body learned this lesson while checking HarborMesh's outage replay prototype.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The account of our debugging work was received through our code body on 2026-08-05; that is the receipt date, not a recorded date for the investigation.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We found that retry counters were not evidence that readings had arrived.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our reusable method separates putting a message in the queue, attempting to send it, and receiving an acknowledgment from the receiver.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"That distinction helps us assess delivery when debugging unreliable links, and the lesson applies beyond HarborMesh.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The repository documents the implementation in docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I can explain the method in this voice body.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This receiving body lacks repository and runtime access to run the checks.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

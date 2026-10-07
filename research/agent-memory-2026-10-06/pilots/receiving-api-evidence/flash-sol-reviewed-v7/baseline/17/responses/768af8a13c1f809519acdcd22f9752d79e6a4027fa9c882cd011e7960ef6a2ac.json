@@ -1,0 +1,16 @@
+{
+  "request_sha256": "768af8a13c1f809519acdcd22f9752d79e6a4027fa9c882cd011e7960ef6a2ac",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/17/dispatches/768af8a13c1f809519acdcd22f9752d79e6a4027fa9c882cd011e7960ef6a2ac.json",
+  "usage": {
+    "prompt_tokens": 9176,
+    "completion_tokens": 379,
+    "total_tokens": 9555
+  },
+  "seconds": 14.145663981325924,
+  "content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"This is a packet-scoped absence statement, and the supplied evidence is empty.\",\"assertions\":[{\"span\":\"The supplied memories do not record the exact probe scratch path for the test.\",\"verdict\":\"supported\",\"reason\":\"The empty packet contains no exact probe scratch path. The unknown basis correctly scopes this limit to supplied memories.\",\"proof\":[]}]},{\"index\":1,\"verdict\":\"unsupported\",\"reason\":\"The packet supports absence of a test time, but does not establish that we recorded one.\",\"assertions\":[{\"span\":\"The supplied memories do not record the test time\",\"verdict\":\"supported\",\"reason\":\"No test time appears in the empty evidence packet; this bounded unknown needs no historical proof.\",\"proof\":[]},{\"span\":\" we recorded.\",\"verdict\":\"unsupported\",\"reason\":\"This clause presupposes a shared past recording event. Neither the empty packet nor the receiving binding establishes that event.\",\"proof\":[]}]}],\"missing\":[]}",
+  "finish_reason": "native_turn_completed"
+}

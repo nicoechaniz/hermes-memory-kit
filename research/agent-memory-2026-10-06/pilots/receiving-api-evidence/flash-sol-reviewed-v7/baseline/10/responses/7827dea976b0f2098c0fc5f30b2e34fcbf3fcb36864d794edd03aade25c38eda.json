@@ -1,0 +1,16 @@
+{
+  "request_sha256": "7827dea976b0f2098c0fc5f30b2e34fcbf3fcb36864d794edd03aade25c38eda",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/10/dispatches/7827dea976b0f2098c0fc5f30b2e34fcbf3fcb36864d794edd03aade25c38eda.json",
+  "usage": {
+    "prompt_tokens": 15114,
+    "completion_tokens": 357,
+    "total_tokens": 15471
+  },
+  "seconds": 10.47587706334889,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Before the correction, the human reporter tentatively thought River, who signed HarborMesh checklist comment c1200, was Mara.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We received that uncertain attribution through our code body on 2026-07-01.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The checklist proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said we wanted to try that practice at the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We received a tool response containing the author's correction through our code body on 2026-07-04.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"It identified the author as River, login river-tools, account ID 2901.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The author said they were not Mara Ibarra and asked us to credit the checklist to their River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Mara's known Forge account remained 1847, login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"River said they had not supplied a real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not establish that I shared the human reporter's tentative attribution.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether we subsequently tried the checklist.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}
