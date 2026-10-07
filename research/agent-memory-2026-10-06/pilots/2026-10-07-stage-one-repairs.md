@@ -36,3 +36,20 @@ checks cover age without timestamp edits, weak embeddings, unrelated null recall
 pack thresholds/budgets, invalid plans and resumption preserving completed
 capture and the pending question, and cost persistence for rejected model JSON.
 These mechanical checks are not a completed model-quality result.
+
+## Observed correction after the first new run
+
+The first new run recovered the old lexical encounter, but proposed selection
+still omitted the failed invitation and falsely attributed that omission to the
+guide. Its pending recall plans also selected IDs from supplied neighbor hints;
+the validator had unnecessarily restricted them to primary rows. Both stopped
+questions and all completed captures remain preserved, not reset in place.
+
+The correction places a significance-before-success decision check at the end
+of the guide and admits only IDs actually visible in primary rows or supplied
+one-hop hints. Arbitrary and deeper unseen IDs remain refused. The answer
+contract requests enough identifying meaning for recognition, applied equally
+to both arms without case-specific facts. A new main run is required; changing
+an answer prompt is not a comparable continuation of earlier answers. A separate
+predeclared fictional chart-handover case and 100 repeated transport lines check
+generalization and noise selection, not just the invitation wording.

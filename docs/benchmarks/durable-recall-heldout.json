@@ -1,0 +1,116 @@
+{
+  "format_version": 1,
+  "fictional": true,
+  "purpose": "Fresh scenario checks that failed-action selection generalizes; no expected material enters formation or recall.",
+  "fixture_context": {
+    "being": "fixture:being:ash",
+    "same_being_bodies": [
+      "fixture:body:code",
+      "fixture:body:mobile",
+      "fixture:body:voice"
+    ],
+    "distinct_peer_being": "fixture:being:reed",
+    "authorization": "Curate the supplied foreground experience in an isolated synthetic pool. Use only supplied sources; do not read live memory, private sessions or peer inboxes.",
+    "identity_note": "Fixture IDs describe test membership only and are not signed identities or live runtime capabilities.",
+    "source_availability_at_recall": "Unavailable",
+    "case_order": "Listed order; later cases may qualify earlier accounts."
+  },
+  "cases": [
+    {
+      "id": "failed-chart-handover",
+      "sources": [
+        {
+          "id": "known-collaboration",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-03",
+          "content": "Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes."
+        },
+        {
+          "id": "chart-attempt",
+          "channel": "foreground_action",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-08",
+          "content": "The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison."
+        },
+        {
+          "id": "chart-result",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-08",
+          "content": "Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "chart-handover-attempt",
+            "kind": "episode",
+            "essentials": [
+              "Ren Nadir, ren-cart, Forge account 772; TideAtlas map collaboration and repository",
+              "Authorized September 8 annotated-chart handover attempt, chart-52 object created",
+              "Integrity validation failed; link not published; recipient access and response unknown"
+            ],
+            "related_keys": []
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Did Ren get the annotated chart we tried to pass on?",
+          "needs": [
+            "chart-handover-attempt"
+          ],
+          "answer_requirements": [
+            "Ren and map-comparison context",
+            "Chart object creation and attempted handover",
+            "Validation failure, unpublished link and no observed receipt or response"
+          ],
+          "must_not_claim": [
+            "Delivered chart or recipient response"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Same aged retrieval clock and source-loss receiving conditions as the main pilot"
+      ]
+    },
+    {
+      "id": "repeated-transport-noise",
+      "sources": [
+        {
+          "id": "transport-noise",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-09",
+          "content": "Temporary transport checks in the project log, no new decision or shared occurrence:\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds."
+        }
+      ],
+      "expected": {
+        "retain": [],
+        "skip": [
+          {
+            "source_id": "transport-noise",
+            "reason": "Repetition without lasting context cannot create significance."
+          }
+        ]
+      },
+      "questions": [
+        {
+          "query": "What exact probe scratch path and test time did we record?",
+          "needs": [],
+          "answer_requirements": [
+            "Exact mechanical detail was not retained"
+          ],
+          "must_not_claim": [
+            "Invented path or timings"
+          ]
+        }
+      ],
+      "perturbations": [
+        "100 repeated mechanical lines; retain no extra episode"
+      ]
+    }
+  ]
+}

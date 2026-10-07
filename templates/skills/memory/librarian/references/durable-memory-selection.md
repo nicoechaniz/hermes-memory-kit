@@ -208,3 +208,20 @@ shared. Record “they told me” rather than adopting it as personal autobiogra
 An authorized being-level binding and authoritative provenance establish
 membership and access; matching names, shared models, species or copied memory
 do not. Curation adds no permission to pool private memories between beings.
+
+## Check the selection decision
+
+Decide lasting significance before evaluating success. When we attempt to
+continue an existing relationship or shared undertaking, retain that occurrence
+and its actual outcome together. An authorized outreach to a known collaborator
+can therefore be applied as a compact episode even when delivery fails: the
+attempt happened, and the failure is its observed result. A new encounter,
+relationship change, successful effect or novel lesson is not required.
+
+Before returning an omitted decision, check whether it would lose a significant
+occurrence, unresolved shared intention or relationship history. If so, select
+the smallest qualified account and link the prior encounter; do not discard it
+as mere transport status. Mechanical retries without this lasting context can
+still be omitted. Explain omission by lack of lasting significance or redundancy,
+never by failure alone. Keep intended participation distinct from observed
+attendance, and object creation distinct from delivery.
