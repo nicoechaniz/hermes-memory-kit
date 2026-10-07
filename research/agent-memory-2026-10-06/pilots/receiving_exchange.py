@@ -124,15 +124,16 @@ class ResponsePending(RuntimeError):
 
 class FileExchange:
     """A response transport, never a dispatcher or a semantic verifier."""
-    def __init__(self,root,effort):
-        self.root=root;self.effort=effort
+    def __init__(self,root,effort,review_effort=None):
+        self.root=root;self.effort=effort;self.review_effort=review_effort or effort
         (root/'requests').mkdir(exist_ok=True)
         (root/'responses').mkdir(exist_ok=True)
 
     def __call__(self,model,messages,trace):
         schema=narrative.response_schema(trace.phase,messages)
+        effort = self.review_effort if trace.phase == 'narrative_review' else self.effort
         request=dict(format='hmk-fictional-receiving-request/v1',model=model,phase=trace.phase,
-            reasoning_effort=self.effort,messages=messages,response_schema=schema,
+            reasoning_effort=effort,messages=messages,response_schema=schema,
             external_dispatch_required=True,fresh_context=True,tools_allowed=False,
             native_memory_allowed=False)
         request_hash=pilot.digest(request)
@@ -162,7 +163,7 @@ class FileExchange:
         call=next((i for i,v in enumerate(trace) if v.get('external_request_sha256')==request_hash),None)
         if call is None:
             call=trace.begin(dict(external_request_sha256=request_hash,requested_model=model,
-                requested_reasoning_effort=self.effort,adapter='file-exchange',
+                requested_reasoning_effort=effort,adapter='file-exchange',
                 response_format_sha256=pilot.digest(schema),prompt_hash=pilot.digest(messages)))
         trace.finish(call,dict(state='completed',response_model=response.get('response_model'),
             usage=response.get('usage'),seconds=response.get('seconds'),
@@ -177,7 +178,9 @@ class FileExchange:
             return {'_invalid_json':content}
 
 
-def receive(packet_root,out,model,effort='xhigh',resume=False):
+def receive(packet_root,out,model,effort='xhigh',resume=False,review_model=None,review_effort=None):
+    review_model = review_model or model
+    review_effort = review_effort or effort
     conditions=json.loads((packet_root/'conditions.json').read_text())
     if conditions.get('fictional') is not True or conditions['packets_sha256']!=checksum(packet_root/'packets.json'):
         raise ValueError('frozen packet bytes changed or were not fictional')
@@ -185,12 +188,14 @@ def receive(packet_root,out,model,effort='xhigh',resume=False):
     frozen=dict(model=model,reasoning_effort=effort,packets_sha256=conditions['packets_sha256'],
         exchange_sha256=checksum(Path(__file__)),narrative_sha256=checksum(Path(narrative.__file__)),
         qualification=False,dispatch='external; this process executes no model requests')
+    if review_model != model or review_effort != effort:
+        frozen.update(review_model=review_model,review_reasoning_effort=review_effort)
     out.mkdir(mode=0o700,parents=True,exist_ok=resume)
     if resume:
         if json.loads((out/'conditions.json').read_text())!=frozen:
             raise ValueError('receiving comparison conditions changed; preserve pending work')
     else:pilot.save(out/'conditions.json',frozen)
-    exchange=FileExchange(out,effort);trace=pilot.Trace(out/'trace.json');trace.phase='recall'
+    exchange=FileExchange(out,effort,review_effort);trace=pilot.Trace(out/'trace.json');trace.phase='recall'
     answers=json.loads((out/'answers.json').read_text()) if (out/'answers.json').exists() else []
     for packet in packets[len(answers):]:
         checkpoint=out/'pending.json'
@@ -200,7 +205,7 @@ def receive(packet_root,out,model,effort='xhigh',resume=False):
         if context!=packet['context']:raise ValueError('receiving source adapter changed the frozen context')
         try:
             value=narrative.answer(model,packet['question'],evidence,packet['binding'],
-                trace,pending,checkpoint,exchange,pilot.save)
+                trace,pending,checkpoint,exchange,pilot.save,review_model=review_model)
         except ResponsePending as error:
             return dict(state='prepared',request=str(error),model_requests_executed_by_this_process=0,
                         completed_candidates=len(answers),qualification=False)
@@ -229,10 +234,13 @@ def main():
     receiving.add_argument('--out',type=Path,required=True)
     receiving.add_argument('--model',required=True)
     receiving.add_argument('--reasoning-effort',default='xhigh')
+    receiving.add_argument('--review-model',help='Reviewer only; generation/revisions keep --model')
+    receiving.add_argument('--review-reasoning-effort',help='Reviewer effort only; frozen on resume')
     receiving.add_argument('--resume',action='store_true')
     args=parser.parse_args()
     if args.command=='freeze':freeze(args.source_run,args.corpus,args.out,args.reader_upgrade)
-    else:print(json.dumps(receive(args.packets,args.out,args.model,args.reasoning_effort,args.resume)))
+    else:print(json.dumps(receive(args.packets,args.out,args.model,args.reasoning_effort,args.resume,
+                                args.review_model,args.review_reasoning_effort)))
 
 
 if __name__=='__main__':main()

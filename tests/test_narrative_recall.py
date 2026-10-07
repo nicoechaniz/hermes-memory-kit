@@ -316,3 +316,44 @@ def test_changed_model_and_legacy_unfinished_state_preserve_work(tmp_path):
     with pytest.raises(ValueError,match='legacy narrative checkpoint'):
         nr.answer('fixture','What happened?',evidence,body,trace,legacy,checkpoint,chat,save)
     assert checkpoint.read_bytes()==original and legacy['narrative']['generations']==[candidate]
+
+
+def test_distinct_reviewer_resumes_timeout_without_changing_narrator_or_budget(tmp_path):
+    candidate=account('Delivery failed.',[1]);evidence={1:{'text':'Delivery failed.'}}
+    body={'receiving_body':'voice'};path=tmp_path/'pending.json';pending={};calls=[]
+    save=lambda p,v:p.write_text(json.dumps(v));trace=SimpleNamespace(phase='recall')
+    def chat(model,messages,trace):
+        calls.append((model,trace.phase))
+        if trace.phase=='narrative_generation':return candidate
+        if len(calls)==2:raise TimeoutError('review pending')
+        return verdict('supported','Actual failure.',candidate,'Delivery failed.')
+    with pytest.raises(TimeoutError):
+        nr.answer('narrator','What happened?',evidence,body,trace,pending,path,chat,save,
+                  review_model='reviewer')
+    original=path.read_bytes();saved=json.loads(original)
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('narrator','What happened?',evidence,body,trace,saved,path,chat,save,
+                  review_model='changed-reviewer')
+    assert path.read_bytes()==original and len(calls)==2
+    result=nr.answer('narrator','What happened?',evidence,body,trace,saved,path,chat,save,
+                     review_model='reviewer')
+    assert result['claims']==candidate['claims']
+    assert calls==[('narrator','narrative_generation'),('reviewer','narrative_review'),
+                   ('reviewer','narrative_review')]
+
+
+def test_reviewer_critique_returns_revisions_to_original_narrator(tmp_path):
+    bad=account('Jo received it.',[1]);good=account('Delivery failed.',[1]);calls=[]
+    def chat(model,messages,trace):
+        calls.append((model,trace.phase))
+        if trace.phase=='narrative_generation':return bad
+        if trace.phase=='narrative_revision':return good
+        candidate=json.loads(messages[1]['content'])['candidate']
+        return verdict('unsupported','No receipt.',candidate) if candidate==bad else verdict(
+            'supported','Actual failure.',candidate,'Delivery failed.')
+    value=nr.answer('narrator','What happened?',{1:{'text':'Delivery failed.'}},
+        {'receiving_body':'voice'},SimpleNamespace(phase='recall'),{},tmp_path/'pending.json',
+        chat,lambda p,v:p.write_text(json.dumps(v)),review_model='reviewer')
+    assert value['claims']==good['claims']
+    assert calls==[('narrator','narrative_generation'),('reviewer','narrative_review'),
+                   ('narrator','narrative_revision'),('reviewer','narrative_review')]
