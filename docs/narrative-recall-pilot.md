@@ -66,6 +66,15 @@ quote membership and decomposition, not semantic entailment. Quoting a related
 passage can still be wrong, so independent grading remains mandatory. A question
 asking only an unavailable detail may cite source-qualified limits without five
 irrelevant filler facets; a positive remembered account still needs all five.
+An answer led by a packet-scoped unknown may also retain brief cited context
+from an older relevant report. That context does not establish the question's
+presupposed event. This exception permits only context/limits facets after the
+leading unknown; it does not replace semantic review or positive requirements.
+Validation protocol `narrative-shape/v2` is frozen in the phase fingerprint, so
+historical accepted or pending work cannot silently acquire new qualification.
+The prior Flash procedure remains resumable with its preserved implementation
+from commit `eb08e32`; its nine completed candidates and pending review are
+retained separately from the corrected comparison.
 The receiving API requests a closed JSON schema, with sentences bounded to 220
 characters and short proof quotations (at most 400 characters each). This
 reduces malformed review output and compound-claim overload without certifying
