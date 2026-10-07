@@ -15,11 +15,11 @@ A workspace is a single directory that contains everything an agent needs:
     hermes-home/                  HERMES_HOME (Hermes Agent reads this)
       config.yaml                 gateway config
       SOUL.md                     identity / style
-      memories/                   MEMORY.md, USER.md (per-turn injections)
-      plugins/                    plugins (dialogue-handoff comes bundled)
+      memories/                   reserved; native file stores disabled by default
+      plugins/                    hmk-memory; dialogue plugin independently managed
       skills/                     skills (optional)
     agent-memory/                 durable memory layer
-      state/                      ALWAYS-CONTEXT, DIALOGUE-HANDOFF, NOW, ACTIVE-CONTEXT
+      state/                      engineering notes (NOW, optional ACTIVE-CONTEXT)
       plans/, episodes/, index/, evidence/, identity/, library/
       library.db                  FTS5 + embeddings (created on `memoryctl init`)
     wiki/                         optional canonical projection
@@ -251,24 +251,14 @@ def bootstrap(agent_dir: Path, name: str, with_wiki_templates: bool) -> None:
             hh / "SOUL.md",
             values,
         )
-    if not (hh / "memories" / "MEMORY.md").exists():
-        render_template(
-            TEMPLATES / "hermes-home" / "memories" / "MEMORY.md.template",
-            hh / "memories" / "MEMORY.md",
-            values,
-        )
-    if not (hh / "memories" / "USER.md").exists():
-        render_template(
-            TEMPLATES / "hermes-home" / "memories" / "USER.md.template",
-            hh / "memories" / "USER.md",
-            values,
-        )
-
-    # Plugins (dialogue-handoff + whatever else is under templates/plugins)
+    # HMK plugins only. The vendored dialogue plugin is a standalone compatibility
+    # artifact, never installed/reinstalled by bootstrap. Existing opt-ins keep
+    # their own config and plugin code (which may be newer than the kit vendor).
     plugins_src = TEMPLATES / "plugins"
     if plugins_src.exists():
         for plugin_dir in plugins_src.iterdir():
-            if plugin_dir.is_dir() and not plugin_dir.name.startswith("__"):
+            if (plugin_dir.is_dir() and not plugin_dir.name.startswith("__")
+                    and plugin_dir.name != "dialogue-handoff"):
                 copy_if_missing(plugin_dir, hh / "plugins" / plugin_dir.name)
 
     # plugin-backups/ README: explain the convention so no one drops .bak
@@ -282,10 +272,9 @@ def bootstrap(agent_dir: Path, name: str, with_wiki_templates: bool) -> None:
             "Hermes does NOT scan this directory, so stale plugin versions here\n"
             "will not register hooks and will not override the live plugin.\n\n"
             "Do NOT place `.bak` copies inside `hermes-home/plugins/` — Hermes\n"
-            "loads every directory with a valid `plugin.yaml` under `plugins/`,\n"
-            "regardless of `config.yaml: plugins.enabled`. A stale sibling runs\n"
-            "its hooks alongside the live one and the last writer wins — silent\n"
-            "source of state corruption. See docs/migration-v3.md.\n"
+            "can discover stale copies there. Modern Hermes honors explicit\n"
+            "plugins.disabled; older loaders can also register backup siblings.\n"
+            "Keep backups outside discovery. See docs/migration-v3.md.\n"
         )
 
     # Skills copy (template skills into hermes-home/skills/)
@@ -301,26 +290,15 @@ def bootstrap(agent_dir: Path, name: str, with_wiki_templates: bool) -> None:
     for sub in AGENT_MEMORY_SUBDIRS:
         (am / sub).mkdir(exist_ok=True)
 
-    # State templates (ALWAYS-CONTEXT, NOW, DIALOGUE-HANDOFF placeholders)
+    # Engineering notes only, never shared dialogue/always-context placeholders.
     mem_tpl = TEMPLATES / "memory"
     if mem_tpl.exists():
-        for rel in ("state/ALWAYS-CONTEXT.md", "state/NOW.md",
+        for rel in ("state/NOW.md",
                     "episodes/HERMES-LOG.md", "index/INDEX.md",
                     "plans/MEMORY-ARCHITECTURE.md"):
             src = mem_tpl / rel
             if src.exists():
                 copy_if_missing(src, am / rel)
-        # DIALOGUE-HANDOFF.md starts from template if present, else empty
-        handoff_src = mem_tpl / "state" / "DIALOGUE-HANDOFF.md"
-        handoff_dst = am / "state" / "DIALOGUE-HANDOFF.md"
-        if handoff_src.exists():
-            copy_if_missing(handoff_src, handoff_dst)
-        if handoff_dst.exists():
-            try:
-                os.chmod(handoff_dst, 0o600)
-            except Exception:
-                pass
-
     # Wiki
     wiki = agent_dir / "wiki"
     wiki.mkdir(exist_ok=True)
@@ -416,9 +394,10 @@ def upgrade(agent_dir: Path) -> None:
 
     # Refresh plugins inside hermes-home (not config.yaml / SOUL.md).
     # Rotate any existing plugin dir to hermes-home/plugin-backups/ BEFORE the
-    # overwrite. Never leave the old version as a sibling under plugins/: Hermes
-    # loads every valid plugin.yaml regardless of `enabled`, so a stale sibling
-    # silently runs its hooks and overrides the refreshed plugin.
+    # overwrite. Keep backups outside plugin discovery. The standalone dialogue
+    # plugin is deliberately excluded, whether enabled, disabled, or absent:
+    # do not resurrect a removed copy or downgrade a separately maintained one.
+    # Config, native-memory choices, and existing dialogue opt-ins are preserved.
     import datetime as _dt
     plugins_src = TEMPLATES / "plugins"
     hh_plugins = agent_dir / "hermes-home" / "plugins"
@@ -427,7 +406,8 @@ def upgrade(agent_dir: Path) -> None:
         hh_backups.mkdir(exist_ok=True)
         ts = _dt.datetime.now().strftime("%Y%m%d-%H%M%S")
         for plugin_dir in plugins_src.iterdir():
-            if plugin_dir.is_dir() and not plugin_dir.name.startswith("__"):
+            if (plugin_dir.is_dir() and not plugin_dir.name.startswith("__")
+                    and plugin_dir.name != "dialogue-handoff"):
                 target = hh_plugins / plugin_dir.name
                 if target.exists():
                     backup = hh_backups / f"{plugin_dir.name}.{ts}.bak"

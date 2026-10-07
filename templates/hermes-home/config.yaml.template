@@ -40,8 +40,9 @@ compression:
   protect_last_n: 20
 
 memory:
-  memory_enabled: true
-  user_profile_enabled: true
+  provider: hmk-memory
+  memory_enabled: false
+  user_profile_enabled: false
   memory_char_limit: 3000
   user_char_limit: 2200
   nudge_interval: 10
@@ -67,5 +68,7 @@ agent:
 
 # Plugin system
 plugins:
-  enabled:
+  disabled:
     - dialogue-handoff
+  enabled:
+    - hmk-memory

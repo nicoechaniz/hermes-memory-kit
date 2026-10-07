@@ -55,7 +55,7 @@ Always use the wrapper:
 ./scripts/hmk memoryctl.py init
 ./scripts/hmk memoryctl.py add-text --shelf library --title foo --raw "content" --tags t1
 ./scripts/hmk memoryctl.py hybrid-pack --query "something" --budget 1800
-./scripts/hmk continuityctl.py rehydrate
+./scripts/hmk continuityctl.py show  # engineering notes only, not dialogue
 ./scripts/hmk export_obsidian.py --ids 1 2 3
 ```
 
@@ -72,19 +72,18 @@ pip install -r requirements.txt
 pip install -r requirements-local-embeddings.txt
 ```
 
-## Optional: install the dialogue-handoff plugin into Hermes Agent
+## Native continuity and optional dialogue compatibility
 
-If you also run Hermes Agent, the plugin auto-injects conversational continuity on new sessions. Full instructions in [dialogue-handoff.md](dialogue-handoff.md). Short version:
+New workspaces select `hmk-memory`, native file stores disabled, and explicit
+`plugins.disabled: [dialogue-handoff]`. Use Hermes `/resume`, selected native
+history and `/goal` for conversational re-entry. No dialogue plugin is needed
+for HMK prefetch or librarian. See [native-continuity.md](native-continuity.md)
+for targeted migration and deprecated `rehydrate` behavior.
 
-```bash
-cp -r /path/to/workspace/plugins/dialogue-handoff "$HERMES_HOME/plugins/"
-# then add plugins.enabled: [dialogue-handoff] to $HERMES_HOME/config.yaml
-# and set HMK_AGENT_MEMORY_BASE + HMK_HERMES_HOME in the Hermes systemd unit
-systemctl --user daemon-reload && systemctl --user restart hermes-gateway
-hermes plugins list | grep dialogue-handoff   # verify: enabled 2.0.0
-```
-
-The plugin is pinned against **Hermes Agent v0.10.0** (upstream commit `e710bb1f`). See the plugin doc for details.
+Existing standalone dialogue opt-ins are preserved, but no longer installed or
+upgraded by HMK bootstrap. [dialogue-handoff.md](dialogue-handoff.md) describes
+explicit compatibility installation. Do not blindly restart a shared gateway
+or overwrite an independently repaired plugin as part of HMK setup.
 
 ## Smoke test
 

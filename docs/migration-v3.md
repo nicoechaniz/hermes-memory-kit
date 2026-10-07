@@ -1,5 +1,12 @@
 # Migration playbook: v2.x → v3.0
 
+> Historical v2→v3 layout migration. Its dialogue-plugin install/verification
+> examples describe the former default, not the current recommendation. For a
+> new install or continuity retirement, follow [native-continuity.md](native-continuity.md):
+> HMK stays active; native file stores and dialogue hooks are independently
+> disabled. Do not copy this guide's old dialogue vendor over a maintained repair.
+
+
 v3.0 re-positions the kit from "memory layer for an agent" to "scaffold for a full self-contained agent". An agent's workspace now *includes* `hermes-home/` (the HERMES_HOME the Hermes Agent upstream expects) and a consolidated `.env`. The memory subsystem is still there, just one layer inside a larger layout.
 
 ## What changed between v2.x and v3.0
