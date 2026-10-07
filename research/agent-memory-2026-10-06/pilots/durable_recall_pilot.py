@@ -61,13 +61,17 @@ def chat(model, messages, trace):
         raise ValueError('configured NVIDIA inference key required for this pilot')
     effort = (getattr(trace, 'narrative_reasoning_effort', 'low')
               if trace.phase.startswith('narrative_') else 'low')
+    budget = getattr(trace, 'narrative_reasoning_budget', 2048) if trace.phase.startswith('narrative_') else None
+    parameters = dict(model=model, messages=messages, temperature=0,
+                      reasoning_effort=effort, max_tokens=6000)
+    if budget is not None:
+        parameters['reasoning_budget'] = budget
     request = urllib.request.Request(
         'https://integrate.api.nvidia.com/v1/chat/completions',
-        data=json.dumps(dict(model=model, messages=messages, temperature=0,
-                             reasoning_effort=effort, max_tokens=6000)).encode(),
+        data=json.dumps(parameters).encode(),
         headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
     started = time.monotonic()
-    attempt = trace.begin(dict(requested_model=model, requested_reasoning_effort=effort,
+    attempt = trace.begin(dict(requested_model=model, requested_reasoning_effort=effort, requested_reasoning_budget=budget,
                                prompt_hash=digest(messages)))
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
@@ -80,7 +84,11 @@ def chat(model, messages, trace):
     trace.finish(attempt, dict(state='completed', response_model=result.get('model'),
                       seconds=time.monotonic() - started, usage=result.get('usage'),
                       finish_reason=result['choices'][0].get('finish_reason')))
-    content = result['choices'][0]['message']['content'].strip()
+    raw_content = result['choices'][0]['message'].get('content')
+    if not isinstance(raw_content, str) or result['choices'][0].get('finish_reason') == 'length':
+        trace.finish(attempt, dict(parse_error='incomplete_response', response_content=raw_content))
+        return {'_invalid_json': raw_content, '_finish_reason': result['choices'][0].get('finish_reason')}
+    content = raw_content.strip()
     if content.startswith('```'):
         content = content.split('\n', 1)[1].rsplit('```', 1)[0].strip()
     try:
@@ -294,6 +302,7 @@ def run_variant(name, guidance, args, corpus):
     ledger = CaptureLedger(memory)
     trace = Trace(out/'trace.json')
     trace.narrative_reasoning_effort = getattr(args, 'narrative_reasoning_effort', 'high')
+    trace.narrative_reasoning_budget = getattr(args, 'narrative_reasoning_budget', 2048)
     captures = json.loads((out/'capture.json').read_text()) if (out/'capture.json').exists() else []
     selection = f'pilot:{name}:{args.model}'
     contract = '''You curate only the supplied fictional foreground experience.
@@ -701,9 +710,13 @@ def main():
                         help='Generate natural narrative with clause support and bounded semantic review')
     parser.add_argument('--narrative-reasoning-effort', choices=('low','high'), default='high',
                         help='Receiving narration/review effort; formation and planning remain low')
+    parser.add_argument('--narrative-reasoning-budget', type=int, default=2048,
+                        help='Receiving reasoning token budget within the 6000-token total output limit')
     parser.add_argument('--complete-diagnostics', action='store_true',
                         help='Archive rejected narrative candidates and evaluate remaining questions; never count rejection as success')
     args = parser.parse_args()
+    if not 1 <= args.narrative_reasoning_budget <= 4000:
+        parser.error('narrative reasoning budget must leave room for the JSON answer: 1..4000')
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
         parser.error('--out must be new; preserve previous pilot evidence')
@@ -735,6 +748,7 @@ def main():
     if args.narrative:
         conditions['recall_contract'] = 'natural-claims/v6-faceted-diagnostics'
         conditions['narrative_reasoning_effort'] = args.narrative_reasoning_effort
+        conditions['narrative_reasoning_budget'] = args.narrative_reasoning_budget
         conditions['narrative_sha256'] = hashlib.sha256(Path(narrative_recall.__file__).read_bytes()).hexdigest()
     conditions['complete_diagnostics'] = args.complete_diagnostics
     conditions['recall_cases'] = args.recall_case
@@ -761,7 +775,7 @@ def main():
             if previous.get(field, False) != conditions[field]:
                 parser.error('resume cannot change frozen model, guidance or fixtures')
         if args.narrative and any(previous.get(field) != conditions[field]
-                                 for field in ('narrative_sha256', 'narrative_reasoning_effort')):
+                                 for field in ('narrative_sha256', 'narrative_reasoning_effort', 'narrative_reasoning_budget')):
             parser.error('resume cannot change the frozen semantic narrative procedure')
         resumed = previous.get('resumes', [])
         resumed.append(conditions)

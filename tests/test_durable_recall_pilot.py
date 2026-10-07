@@ -208,3 +208,26 @@ def test_only_all_empty_facet_array_has_an_unambiguous_normalization(pilot):
     assert value['answer']==[[],[],[],[],[]]
     value['answer']=[[1],[],[],[],[]]
     with pytest.raises(ValueError):pilot.supported_answer(value,{1:{}},binding)
+
+
+@pytest.mark.parametrize('content', [None, '{"claims":[]'])
+def test_truncated_response_preserves_usage_bytes_and_explicit_reasoning_budget(pilot,tmp_path,monkeypatch,content):
+    class Response:
+        def __enter__(self):return self
+        def __exit__(self,*args):pass
+        def read(self,*args):
+            return json.dumps({'model':'fixture', 'usage':{'total_tokens':6000},
+                'choices':[{'message':{'content':content},'finish_reason':'length'}]}).encode()
+    requests=[]
+    def receive(request,**kwargs):
+        requests.append(json.loads(request.data));return Response()
+    monkeypatch.setattr(pilot.configuration,'read_env_key',lambda key:'fictional-key')
+    monkeypatch.setattr(pilot.urllib.request,'urlopen',receive)
+    trace=pilot.Trace(tmp_path/'trace.json');trace.phase='narrative_review'
+    trace.narrative_reasoning_effort='high';trace.narrative_reasoning_budget=2048
+    value=pilot.chat('fixture',[],trace)
+    assert value=={'_invalid_json':content,'_finish_reason':'length'}
+    assert requests[0]['reasoning_budget']==2048 and requests[0]['max_tokens']==6000
+    row=json.loads(trace.path.read_text())[0]
+    assert row['usage']['total_tokens']==6000 and row['response_content']==content
+    assert row['parse_error']=='incomplete_response' and row['requested_reasoning_budget']==2048
