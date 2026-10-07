@@ -19,9 +19,13 @@ MODELS = {'deepseek': {'deepseek-flash'}, 'nous': {'openai/gpt-6.1-sol'}}
 
 
 def parameters(request, provider, generation_limit=12000, review_limit=32768):
+    receiving = (request.get('format') == 'hmk-fictional-receiving-request/v1'
+                 and request.get('phase') in {'narrative_generation','narrative_revision','narrative_review'})
+    operation = (provider == 'deepseek' and request.get('fictional') is True
+                 and request.get('format') == 'hmk-fictional-memory-operation/v1'
+                 and request.get('phase') in {'capture','capture_review','recall','consolidation','consolidation_review'})
     if (provider not in MODELS or request.get('model') not in MODELS[provider]
-            or request.get('format') != 'hmk-fictional-receiving-request/v1'
-            or request.get('phase') not in {'narrative_generation', 'narrative_revision', 'narrative_review'}
+            or not (receiving or operation)
             or request.get('reasoning_effort') not in (
                 {'low', 'high', 'none'} if provider == 'deepseek' else {'low', 'high'})
             or request.get('fresh_context') is not True

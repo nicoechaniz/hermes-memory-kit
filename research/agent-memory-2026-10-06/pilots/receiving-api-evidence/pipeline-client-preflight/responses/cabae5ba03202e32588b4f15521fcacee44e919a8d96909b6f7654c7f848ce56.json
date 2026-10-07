@@ -1,0 +1,24 @@
+{
+  "request_sha256": "cabae5ba03202e32588b4f15521fcacee44e919a8d96909b6f7654c7f848ce56",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/cabae5ba03202e32588b4f15521fcacee44e919a8d96909b6f7654c7f848ce56.json",
+  "usage": {
+    "prompt_tokens": 310,
+    "completion_tokens": 524,
+    "total_tokens": 834,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 468
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 310
+  },
+  "seconds": 3.1623939080163836,
+  "content": "{\"outcome\":\"omitted\",\"reason\":\"Source content is temporary test-rerun bookkeeping and a trivial acknowledgment; it contains no significant participant, interaction, project, experience, learning, decision, milestone, or durable outcome.\",\"records\":[],\"links\":[]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,18 @@
+{
+  "format": "hmk-fictional-model-client/v1",
+  "fixture_sha256": "974deed4a12ef19d30ada6f39b19d462dea09c97460225c699e0b3e81ce99828",
+  "operation_model": "deepseek-flash",
+  "operation_effort": "low",
+  "generation_model": "deepseek-flash",
+  "review_model": "gpt-6.1-sol",
+  "revision_model": "gpt-6.1-sol",
+  "narrative_effort": "low",
+  "review_protocol": "passages",
+  "client_sha256": "d21d31a74d43a68f749a6094acb217113a09b69b6dd60bf4e24a0e5a2df675d4",
+  "api_sha256": "29ef618724cc791ce5a125fbdfaef11446f741fee500835c36f893d9c723c4dc",
+  "native_sha256": "83194e1ff4a7f69f6d44d2a5f09c9fc535da278c84ba480ba1d06fdf3f7ecda8",
+  "narrative_sha256": "566f93662c1357c48e1e05aa58e671b7243569efc6dd0345227f1f491d9dcead",
+  "catalog_sha256": "8b233bf29afafdc298c0486c7b44aea957a3c4f1dea0de314794b3933c9f68c5",
+  "tools_allowed": false,
+  "native_memory_allowed": false
+}

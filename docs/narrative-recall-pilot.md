@@ -219,3 +219,24 @@ text-only dispatcher with unchanged local criteria. Its actual baseline candidat
 still has narrative gaps; review timed out and its explicit retry returned 503.
 Raw output, unknown costs and the saved review phase remain preserved. This is
 not a complete receiving comparison or stage-two qualification.
+
+## Fresh formation transport
+
+`fictional_model_client.Client` freezes a direct Flash operation model/effort,
+Flash first narration and native Codex Sol low review/corrections before calling
+anything. It reads the fixture only to require explicit fictional scope and pin
+its hash; fixture/rubric bytes never enter prompts automatically. The caller
+supplies scoped capture, planning and consolidation messages. A separate
+`hmk-fictional-memory-operation/v1` request profile permits only those finite
+DeepSeek operations, without changing the historical receiving profile.
+
+Actual request/response/parameter receipts survive failures and resumption.
+Response content must match its observed completed receipt; the same request
+can be consumed again with zero additional calls. Failed/unresolved attempts
+are preserved and cannot be repeated implicitly. Native roles must match the
+frozen phase; no private instructions, tools or native memory enter a receiver.
+
+The [single capture preflight](../research/agent-memory-2026-10-06/pilots/receiving-api-evidence/pipeline-client-preflight/costs.json)
+omitted fictional temporary build bookkeeping: one low-effort Flash call, 834
+tokens and 3.16 seconds. This verifies transport and that example's omission,
+not full selection, narrative or stage-two quality. Embeddings stay unchanged.
