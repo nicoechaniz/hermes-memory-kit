@@ -240,3 +240,28 @@ The [single capture preflight](../research/agent-memory-2026-10-06/pilots/receiv
 omitted fictional temporary build bookkeeping: one low-effort Flash call, 834
 tokens and 3.16 seconds. This verifies transport and that example's omission,
 not full selection, narrative or stage-two quality. Embeddings stay unchanged.
+
+## Finite organization pilot operations
+
+`durable_organization_pilot.py` prepares full native support manifests separately
+from proposed model prose and its outside inspection. Its current bounded
+fixture work maintains a compact HarborMesh account and a dependent procedural
+understanding, using existing capture/consolidation APIs. The observed originals
+and all available native history remain preserved. This is an evaluation helper,
+not an installed production organizer or a closed taxonomy of durable memory.
+
+Opening a canon requires the explicitly fictional corpus, matching formation
+hash, complete capture and outside fresh-formation qualification. A proposal is
+applied only with the hash of the inspected actual candidate. This hash binds
+inspection; it does not prove semantic truth. The helper snapshots before writes,
+verifies a separate restore and actual lexical lookup, records per-account
+supports, and checks immediate replay has no canonical effect. Full capture
+replay reuses exact inputs/decisions with zero model calls and compares both
+canonical and ledger state.
+
+An attributed source correction preserves prior text and native revision
+history, requires both direct and transitive dependent accounts to become stale,
+and verifies stale input is refused for new synthesis. Reconciliation must
+proceed in dependency order. These mechanical checks are not model-quality or
+stage-two qualification. Actual three-pass model proposals, independently graded
+recall after each transformation and the later correction remain required.
