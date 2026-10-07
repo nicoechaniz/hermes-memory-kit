@@ -161,6 +161,11 @@ def supported_answer(value, evidence, binding):
     if value['receiving_body'] != binding['receiving_body']:
         raise ValueError('receiving_body must match the supplied binding')
     facets = value['answer']
+    # All five empty facets are unambiguous even in the model's array form.
+    # Preserve the original attempt; do not infer positions for nonempty arrays.
+    if facets == [[], [], [], [], []]:
+        facets = {field: [] for field in fields}
+        value = dict(value, answer=facets)
     if not isinstance(facets, dict) or set(facets) != fields:
         raise ValueError('answer needs identification, context, meaning, outcome and limits')
     for ids in [*facets.values(), value['used_ids']]:

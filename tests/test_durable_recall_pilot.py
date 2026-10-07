@@ -197,3 +197,14 @@ def test_evidence_response_preserves_failed_outcome_and_refuses_narrative(pilot)
     value['answer']['outcome']=[1]
     value['used_ids']=[]
     with pytest.raises(ValueError):pilot.supported_answer(value,evidence,binding)
+
+
+def test_only_all_empty_facet_array_has_an_unambiguous_normalization(pilot):
+    binding={'receiving_body':'fixture:body:voice'}
+    value={'receiving_body':binding['receiving_body'],'answer':[[],[],[],[],[]],'used_ids':[]}
+    result=pilot.supported_answer(value,{},binding)
+    assert set(result['answer'])=={'identification','context','meaning','outcome','limits'}
+    assert all(ids==[] for ids in result['answer'].values())
+    assert value['answer']==[[],[],[],[],[]]
+    value['answer']=[[1],[],[],[],[]]
+    with pytest.raises(ValueError):pilot.supported_answer(value,{1:{}},binding)
