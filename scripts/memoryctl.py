@@ -631,6 +631,31 @@ def simple_spr(text, max_lines=8):
     return "\n".join(bullets) + "\n[Incomplete preview; expand full record or supply an authored summary.]"
 
 
+def _qualify_support(row):
+    """Version currency of known native supports, never factual corroboration."""
+    source = row.get('origin', {}).get('source', {})
+    refs = []
+    for ref in source.get('evidence', []):
+        match = re.fullmatch(r'mem:([0-9a-f-]{36})@(\d+)', ref)
+        if match:
+            refs.append((match[1], int(match[2])))
+    if row.get('source_kind') == 'auto' and source.get('source_version', '').isdigit():
+        refs.append((source.get('source_event_id', ''), int(source['source_version'])))
+    if not refs:
+        return
+    con = connect()
+    try:
+        checks = []
+        for uid, revision in dict.fromkeys(refs):
+            current = con.execute('SELECT revision FROM chapters WHERE record_uid=?', (uid,)).fetchone()
+            status = 'missing' if not current else 'current' if current[0] == revision else 'changed'
+            checks.append({'record_uid': uid, 'revision': revision, 'status': status})
+        row['support_status'] = 'current' if all(check['status'] == 'current' for check in checks) else 'needs_reconciliation'
+        row['support_checks'] = checks
+    finally:
+        con.close()
+
+
 def shelf_id(con, shelf_name):
     row = con.execute("SELECT id FROM shelves WHERE name=?", (shelf_name,)).fetchone()
     if not row:
@@ -638,7 +663,7 @@ def shelf_id(con, shelf_name):
     return row["id"]
 
 
-def upsert_book(con, shelf_name, title, source_path=None, source_kind="file"):
+def upsert_book(con, shelf_name, title, source_path=None, source_kind="file", *, update_existing=True):
     if source_kind == "daimon-projection":
         raise SystemExit("Daimon projections require the versioned projection API")
     sid = shelf_id(con, shelf_name)
@@ -668,10 +693,11 @@ def upsert_book(con, shelf_name, title, source_path=None, source_kind="file"):
             raise SystemExit(
                 "projection-managed books cannot be changed through generic ingest"
             )
-        con.execute(
-            "UPDATE books SET title=?, source_path=?, source_kind=?, updated_at=? WHERE id=?",
-            (title, source_path, source_kind, now_ts(), row["id"]),
-        )
+        if update_existing:
+            con.execute(
+                "UPDATE books SET title=?, source_path=?, source_kind=?, updated_at=? WHERE id=?",
+                (title, source_path, source_kind, now_ts(), row["id"]),
+            )
         return row["id"]
     cur = con.execute(
         """
@@ -726,10 +752,12 @@ def delete_chapter_fts(con, row):
 
 
 def add_text(shelf_name, title, raw, tags=None, importance=0.5, source_path=None, source_kind=None, replace=True,
-             engram_type=None, event_ts=None, actor=None, location=None, metadata=None, expected_revision=None, summary=None):
+             engram_type=None, event_ts=None, actor=None, location=None, metadata=None, expected_revision=None, summary=None, _con=None):
     if source_kind == "daimon-projection" or shelf_name == "daimon-projection":
         raise SystemExit("Daimon projections require the versioned projection API")
-    init_db()
+    own_connection = _con is None
+    if own_connection:
+        init_db()
     raw = normalize_text(raw)
     tags = tags or []
     spr = normalize_text(summary) if summary is not None else simple_spr(raw)
@@ -741,30 +769,27 @@ def add_text(shelf_name, title, raw, tags=None, importance=0.5, source_path=None
     source_meta = native_records.metadata(metadata)
     if event_ts is not None and (not isinstance(event_ts, int) or isinstance(event_ts, bool)):
         raise ValueError("event_ts must be an integer timestamp or unknown")
-    con = connect()
+    con = connect() if own_connection else _con
     try:
-        con.execute("BEGIN IMMEDIATE")
-        book_id = upsert_book(con, shelf_name, title, source_path=source_path, source_kind=source_kind or "text")
+        if own_connection:
+            con.execute("BEGIN IMMEDIATE")
+        book_id = upsert_book(con, shelf_name, title, source_path=source_path, source_kind=source_kind or "text", update_existing=False)
         existing = con.execute("SELECT * FROM chapters WHERE book_id=? ORDER BY ordinal,id", (book_id,)).fetchall() if replace else []
         if len(existing) > 1:
-            con.rollback()
-            con.close()
             raise SystemExit("multi-chapter replacement requires explicit chapter updates; existing history preserved")
         old = dict(existing[0]) if existing else None
         if expected_revision is not None and (old is None or old['revision'] != expected_revision):
-            con.rollback()
-            con.close()
             raise SystemExit("native revision conflict; existing record preserved")
         # Replacing an account preserves its ID, links and historical pre-image.
         if old:
-            con.rollback()
-            con.close()
             update_chapter(old['id'], content=raw, tags=tags, importance=importance,
                            engram_type=engram_type, event_ts=event_ts if event_ts is not None else _UNSET,
                            actor=actor if actor is not None else _UNSET,
                            location=location if location is not None else _UNSET,
                            metadata=metadata, expected_revision=old['revision'],
-                           source_path=source_path if source_path is not None else _UNSET, source_kind=source_kind, summary=summary)
+                           source_path=source_path if source_path is not None else _UNSET, source_kind=source_kind, summary=summary, _con=con)
+            if own_connection:
+                con.commit()
             return old['id']
 
         # v3.9.0 — determine embed_disabled from content scan + source kind
@@ -803,12 +828,13 @@ def add_text(shelf_name, title, raw, tags=None, importance=0.5, source_path=None
         )
         chapter_id = cur.lastrowid
         insert_chapter_fts(con, chapter_id, title, spr, raw, json.dumps(tags))
-        con.commit()
-        con.close()
+        if own_connection:
+            con.commit()
         return chapter_id
 
     finally:
-        con.close()
+        if own_connection:
+            con.close()
 
 
 def add_file(path, shelf_name, title=None, tags=None, importance=0.5, replace=True):
@@ -1379,6 +1405,7 @@ def search(query, limit=12, shelves=None, exclude_shelves=None,
         row["score"] = round(score, 4)
         row["tags"] = json.loads(row["tags_json"] or "[]")
         _attach_daimon_origin(row)
+        _qualify_support(row)
         out.append(row)
     return out[:limit]
 
@@ -1643,6 +1670,7 @@ def semantic_search(query, limit=8, provider=None, model=None, use_binary=None,
         data.pop("embedding_json", None)
         data.pop("embedding_bin", None)
         _attach_daimon_origin(data)
+        _qualify_support(data)
         scored.append(data)
     scored.sort(key=lambda r: r["semantic_score"], reverse=True)
     return scored[:limit]
@@ -1651,7 +1679,7 @@ def semantic_search(query, limit=8, provider=None, model=None, use_binary=None,
 def _compact_record(row):
     fields = ('id', 'shelf', 'book_title', 'title', 'spr', 'source_path', 'origin',
               'record_uid', 'revision', 'engram_type', 'event_ts', 'actor',
-              'created_at', 'updated_at', 'location_json')
+              'created_at', 'updated_at', 'location_json', 'support_status', 'support_checks')
     result = {key: row[key] for key in fields if key in row}
     result['citation'] = f"[mem:{row['id']}]"
     return result
@@ -1918,6 +1946,7 @@ def _read_chapter(chapter_id):
     data = dict(row)
     data["tags"] = json.loads(data["tags_json"] or "[]")
     _attach_daimon_origin(data)
+    _qualify_support(data)
     return data
 
 
@@ -1930,28 +1959,34 @@ def expand(chapter_id):
     return out
 
 
-def add_link(src_id, dst_id, link_type, weight=1.0, note=None):
-    init_db()
-    con = connect()
-    protected = con.execute(
-        "SELECT 1 FROM daimon_projections WHERE chapter_id IN (?, ?) LIMIT 1",
-        (src_id, dst_id),
-    ).fetchone()
-    if protected:
-        con.close()
-        raise SystemExit("projection-managed chapters cannot receive generic links")
-    con.execute(
-        """
-        INSERT OR REPLACE INTO chapter_links(src_chapter_id, dst_chapter_id, link_type, weight, note, created_at)
-        VALUES(?, ?, ?, ?, ?, ?)
-        """,
-        (src_id, dst_id, link_type, weight, note, now_ts()),
-    )
-    con.commit()
-    con.close()
+def add_link(src_id, dst_id, link_type, weight=1.0, note=None, _con=None):
+    own_connection = _con is None
+    if own_connection:
+        init_db()
+    con = connect() if own_connection else _con
+    try:
+        protected = con.execute(
+            "SELECT 1 FROM daimon_projections WHERE chapter_id IN (?, ?) LIMIT 1",
+            (src_id, dst_id),
+        ).fetchone()
+        if protected:
+            raise SystemExit("projection-managed chapters cannot receive generic links")
+        con.execute(
+            """
+            INSERT OR REPLACE INTO chapter_links(src_chapter_id, dst_chapter_id, link_type, weight, note, created_at)
+            VALUES(?, ?, ?, ?, ?, ?)
+            """,
+            (src_id, dst_id, link_type, weight, note, now_ts()),
+        )
+        if own_connection:
+            con.commit()
 
 
-# --- suggest-links (v3.9.0) ---
+    # --- suggest-links (v3.9.0) ---
+
+    finally:
+        if own_connection:
+            con.close()
 
 
 def suggest_links(chapter_id=None, limit=8, min_score=0.0, provider=None,
@@ -2145,7 +2180,7 @@ def review_link_suggestion(suggestion_id, action, note=None):
 
 def update_chapter(chapter_id, content=None, title=None, tags=None, importance=None,
                    engram_type=None, event_ts=_UNSET, actor=_UNSET, location=_UNSET,
-                   metadata=None, expected_revision=None, source_path=_UNSET, source_kind=None, summary=None):
+                   metadata=None, expected_revision=None, source_path=_UNSET, source_kind=None, summary=None, _con=None):
     """Update a chapter in place (v3.8.0+).
 
     Only the fields explicitly passed are changed; the rest are preserved.
@@ -2164,39 +2199,32 @@ def update_chapter(chapter_id, content=None, title=None, tags=None, importance=N
             and engram_type is None and event_ts is _UNSET and actor is _UNSET
             and location is _UNSET and metadata is None and source_path is _UNSET and source_kind is None and summary is None):
         raise SystemExit("update_chapter: nothing to update (pass content, title, tags, and/or importance)")
-    init_db()
-    con = connect()
+    own_connection = _con is None
+    if own_connection:
+        init_db()
+    con = connect() if own_connection else _con
     try:
-        con.execute("BEGIN IMMEDIATE")
+        if own_connection:
+            con.execute("BEGIN IMMEDIATE")
         row = con.execute("SELECT * FROM chapters WHERE id=?", (chapter_id,)).fetchone()
         if not row:
-            con.close()
             raise SystemExit(f"chapter not found: {chapter_id}")
         if con.execute(
             "SELECT 1 FROM daimon_projections WHERE chapter_id=?", (chapter_id,)
         ).fetchone():
-            con.close()
             raise SystemExit(
                 "projection-managed chapters cannot be changed through generic update"
             )
         old = dict(row)
         if expected_revision is not None and old['revision'] != expected_revision:
-            con.rollback()
-            con.close()
             raise SystemExit("native revision conflict; existing record preserved")
         if source_kind == 'daimon-projection':
-            con.rollback()
-            con.close()
             raise SystemExit("Daimon projections require the versioned projection API")
         new_kind = engram_type or old['engram_type']
         if new_kind not in {'episodic', 'semantic', 'procedural'}:
-            con.rollback()
-            con.close()
             raise ValueError("invalid memory type")
         new_event = old['event_ts'] if event_ts is _UNSET else event_ts
         if new_event is not None and (not isinstance(new_event, int) or isinstance(new_event, bool)):
-            con.rollback()
-            con.close()
             raise ValueError("event_ts must be an integer timestamp or unknown")
         new_actor = old['actor'] if actor is _UNSET else actor
         new_location = old['location_json'] if location is _UNSET else (None if location is None else json.dumps(location))
@@ -2220,8 +2248,6 @@ def update_chapter(chapter_id, content=None, title=None, tags=None, importance=N
                      and new_location == old['location_json']
                      and json.loads(new_metadata) == json.loads(old['source_metadata_json']) and not source_changed)
         if unchanged:
-            con.rollback()
-            con.close()
             return {'chapter_id': chapter_id, 'record_uid': old['record_uid'], 'revision': old['revision'],
                     'content_changed': False, 'embeddings_dropped': 0, 'title': new_title,
                     'tags': new_tags, 'importance': new_importance, 'noop': True}
@@ -2250,7 +2276,6 @@ def update_chapter(chapter_id, content=None, title=None, tags=None, importance=N
                 (old["book_id"], new_slug, old["book_id"]),
             ).fetchone()
             if collision:
-                con.close()
                 raise SystemExit(
                     f"update_chapter: title slug '{new_slug}' already used by book {collision['id']} "
                     f"on the same shelf; choose a different title"
@@ -2294,8 +2319,8 @@ def update_chapter(chapter_id, content=None, title=None, tags=None, importance=N
             cur = con.execute("DELETE FROM chapter_embeddings WHERE chapter_id=?", (chapter_id,))
             embeddings_dropped = cur.rowcount
 
-        con.commit()
-        con.close()
+        if own_connection:
+            con.commit()
         return {
             "chapter_id": chapter_id,
             "content_changed": content_changed,
@@ -2310,7 +2335,8 @@ def update_chapter(chapter_id, content=None, title=None, tags=None, importance=N
         }
 
     finally:
-        con.close()
+        if own_connection:
+            con.close()
 
 
 def history(chapter_id):
