@@ -1,4 +1,4 @@
-"""Explicit isolated first-generation receiver through native OpenAI Codex.
+"""Explicit isolated fictional narrator/reviewer through native OpenAI Codex.
 
 No API credential is read by this adapter: the supported CLI uses its existing
 ChatGPT authentication. Per-invocation controls suppress private instructions,
@@ -26,16 +26,20 @@ DISABLED = ('shell_tool', 'unified_exec', 'apps', 'plugins', 'remote_plugin',
 def command(request, catalog, empty_cwd, logs):
     if (request.get('format') != 'hmk-fictional-receiving-request/v1'
             or request.get('model') != 'gpt-6.1-sol'
-            or request.get('phase') != 'narrative_generation'
+            or request.get('phase') not in {'narrative_generation', 'narrative_revision', 'narrative_review'}
             or request.get('reasoning_effort') != 'low'
             or request.get('fresh_context') is not True
             or request.get('tools_allowed') is not False
             or request.get('native_memory_allowed') is not False):
-        raise ValueError('explicit isolated native Sol low generation profile required')
+        raise ValueError('explicit isolated native Sol low narrative profile required')
     messages = request['messages']
-    if (len(messages) != 2 or [m.get('role') for m in messages] != ['system', 'user']
+    if (not isinstance(messages, list) or len(messages) < 2
+            or messages[0].get('role') != 'system'
+            or [m.get('role') for m in messages[1:]] !=
+                ['user' if i % 2 == 0 else 'assistant' for i in range(len(messages)-1)]
+            or messages[-1].get('role') != 'user'
             or any(set(m) != {'role', 'content'} or not isinstance(m['content'], str) for m in messages)):
-        raise ValueError('only the supplied initial system/user text pair is supported')
+        raise ValueError('only supplied system and alternating user/assistant textual turns are supported')
     # Same task instructions/schema as the stateless API comparator. Codex adds
     # its generic base instructions; that harness difference must be reported.
     system = messages[0]['content'] + '\nReturn only JSON conforming to this output schema. This constrains syntax, not evidence or truth:\n' + json.dumps(request['response_schema'])
@@ -56,11 +60,19 @@ def command(request, catalog, empty_cwd, logs):
         argv += ['--disable', flag]
     for key, value in config.items():
         argv += ['-c', key+'='+json.dumps(value)]
-    return argv+['-'], messages[1]['content']
+    # Initial pairs retain their previously qualified rendering. The CLI has
+    # only one stdin prompt: repairs/revisions explicitly carry the supplied
+    # text transcript, without resuming a native session or loading its memory.
+    stdin = messages[1]['content'] if len(messages) == 2 else (
+        'Continue the following supplied task transcript. Its assistant turns are '
+        'previous candidate outputs, not evidence. Answer its final user turn under '
+        'the task instructions and schema above. No additional context exists.\n' +
+        json.dumps(messages[1:], ensure_ascii=False))
+    return argv+['-'], stdin
 
 
 def dispatch(request_path, root, catalog, runner=subprocess.run, credential_file=None):
-    root, catalog, request_path = Path(root), Path(catalog), Path(request_path)
+    root, catalog, request_path = Path(root).resolve(), Path(catalog).resolve(), Path(request_path).resolve()
     request = json.loads(request_path.read_text())
     d = exchange.pilot.digest(request)
     if request_path.stem != d:
@@ -92,6 +104,8 @@ def dispatch(request_path, root, catalog, runner=subprocess.run, credential_file
         command=argv, native_memory_allowed=False, tools_allowed=False,
         fresh_context_basis='new ephemeral CLI thread; no resume/fork, private instructions or skills',
         task_instructions_role='developer; generic native Codex base remains',
+        task_transcript_rendering=('initial-user-text' if len(request['messages']) == 2
+                                   else 'explicit-role-labelled-json-transcript'),
         isolation='private tmpfs over existing Codex home; original auth file mounted read-only by descriptor',
         usage=None, billed_cost_usd=None, qualification=False, timeout_seconds=300)
     exchange.pilot.save(receipt_path, receipt)
