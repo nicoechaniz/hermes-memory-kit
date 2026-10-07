@@ -119,6 +119,12 @@ DeepSeek, Qwen, OpenAI, Google, Nous and specialist retrieval providers. Select
 and qualify each processing role independently; preserve local history and
 parallel embedding indexes. This research is not a resumption, completed model
 benchmark or replacement of the narrative and stage-two exit criteria.
+The separately authorized [DeepSeek Flash low diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-deepseek-generation-diagnostic.md)
+returned eight fictional first generations with unchanged frozen retrieval.
+All positive requirements were met, but three unsupported clauses and one
+source-date omission keep qualification open. No reviewer or consolidation pass
+ran. DeepSeek is the first inexpensive consolidation candidate; the goal remains
+paused until explicitly resumed, with all full-comparison/stage-two gates intact.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

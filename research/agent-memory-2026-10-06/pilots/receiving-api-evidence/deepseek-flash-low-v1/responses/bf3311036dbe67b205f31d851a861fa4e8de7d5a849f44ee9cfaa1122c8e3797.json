@@ -1,0 +1,24 @@
+{
+  "request_sha256": "bf3311036dbe67b205f31d851a861fa4e8de7d5a849f44ee9cfaa1122c8e3797",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/deepseek-generation-probe-v1/dispatches/bf3311036dbe67b205f31d851a861fa4e8de7d5a849f44ee9cfaa1122c8e3797.json",
+  "usage": {
+    "prompt_tokens": 1752,
+    "completion_tokens": 3695,
+    "total_tokens": 5447,
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3159
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 472
+  },
+  "seconds": 16.506342077627778,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"In a human report from source mending-report, the human reporter described meeting Neri Sol at the old ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter said Neri Sol showed them how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter knew Neri only as Sol and reported no handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The report was received on 2026-09-12 through our mobile body, fixture:body:mobile.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The meeting occurred sometime in early September, according to the reporter's uncertain recollection.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human reporter said I was not with them at the old ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter liked the patient way Neri explained the canvas-mending method.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter wanted to share this encounter with me.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The canvas-mending lesson was not something the human reporter and I tried together.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reported event was the human reporter's encounter and instruction from Neri Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human reporter had not tried the mending method yet when they sent the report.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record a surname or handle for Neri beyond Sol.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The exact date in early September is not recorded with precision in the supplied memories.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether the human reporter later tried the canvas-mending method.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The report states I was not present, so the supplied memories record no attendance by me at that lesson.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}
