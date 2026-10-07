@@ -1,0 +1,16 @@
+{
+  "request_sha256": "07e337349dced001701ff3cdd6388b50225adfa1002fd8d10eb4406356ba2e38",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/07e337349dced001701ff3cdd6388b50225adfa1002fd8d10eb4406356ba2e38.json",
+  "usage": {
+    "prompt_tokens": 15954,
+    "completion_tokens": 356,
+    "total_tokens": 16310
+  },
+  "seconds": 20.547393078915775,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not confirm that Ren received our annotated chart.\",\"support\":[13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Ren is Ren Nadir, with Forge login ren-cart and account 772.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A tool report received through our code body on 2026-09-03 says Ren helped us design TideAtlas map legends in issue 19.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report identifies our shoreline map renderer at https://forge.example.invalid/commons/tideatlas.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We agreed to share our next annotated survey chart so Ren could compare it with the harbor notes.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body's account, received on 2026-09-08, says the human authorized passing the chart to Ren.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We submitted the chart through the document tool to continue our map comparison.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool result received on 2026-09-08 says document object chart-52 was created.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Integrity validation failed, and the recipient link was not published.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No recipient access or response was observed in that result; this does not prove Ren never received it through another route.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

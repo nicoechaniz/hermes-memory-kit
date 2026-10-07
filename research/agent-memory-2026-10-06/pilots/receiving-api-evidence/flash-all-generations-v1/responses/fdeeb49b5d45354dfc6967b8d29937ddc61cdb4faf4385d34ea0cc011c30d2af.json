@@ -1,0 +1,24 @@
+{
+  "request_sha256": "fdeeb49b5d45354dfc6967b8d29937ddc61cdb4faf4385d34ea0cc011c30d2af",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/fdeeb49b5d45354dfc6967b8d29937ddc61cdb4faf4385d34ea0cc011c30d2af.json",
+  "usage": {
+    "prompt_tokens": 1838,
+    "completion_tokens": 5411,
+    "total_tokens": 7249,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4770
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 430
+  },
+  "seconds": 24.320560324937105,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"SpringBoard issue 8 at https://forge.example.invalid/commons/springboard/issues/8 records the suggestion about our valve-controller smoothing.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Iona Vale, with login iona-valves and Forge account 603, suggested changing that smoothing to a rolling median.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body maintains the valve controller at issue.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The entry was a tool_response from valve-comments received through fixture:body:code on 2026-09-14.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The source places discussion of the idea on September 10.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The source places the team's decline of the proposed replacement on September 13.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The source was received on 2026-09-14, after those September dates in its account.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The suggestion was to smooth the valve display differently by replacing current smoothing with a rolling median.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The source says the idea was discussed because isolated spikes confuse neighbors reading the display.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The team declined the proposed replacement because it hid short meaningful bursts.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The team declined the proposed replacement on September 13.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The source reports an agreement to keep the current smoothing.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The source reports the group would reconsider only if the display requirements change.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No median implementation or deployment was observed in the source.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any median implementation or deployment after the 2026-09-14 report.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The current status after 2026-09-14 is not verified by the supplied memories.\",\"support\":[15],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Our voice body lacks repository runtime access and source network access, so we cannot check the issue's later state.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"Our voice body also lacks physical sensors, physical actuators, and private session access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

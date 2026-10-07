@@ -1,0 +1,16 @@
+{
+  "request_sha256": "3a0ec93613953a8422eafe2d32b4e89fe56e7fc99473e2ee03de50b89a24dba1",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/3a0ec93613953a8422eafe2d32b4e89fe56e7fc99473e2ee03de50b89a24dba1.json",
+  "usage": {
+    "prompt_tokens": 9576,
+    "completion_tokens": 254,
+    "total_tokens": 9830
+  },
+  "seconds": 8.852920357137918,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Yes—the night inspector was the little moth that kept landing on the blue mug.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"In the human conversation received through my voice body on 2026-06-18, we shared waiting out that night's rain through the kitchen speaker.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The nickname became a small, distinctive joke we shared.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We laughed about it twice and decided that was the moth's title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We did not explicitly ask to remember the moment.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My receiving voice body has no physical sensors; this recollection comes from the supplied conversation.\",\"support\":[6],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

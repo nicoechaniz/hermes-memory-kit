@@ -1,0 +1,24 @@
+{
+  "request_sha256": "e5ad7af9a9b5c9b5cecd9b70d956f07e9f853e353a8ae71273cda62e9e750556",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/e5ad7af9a9b5c9b5cecd9b70d956f07e9f853e353a8ae71273cda62e9e750556.json",
+  "usage": {
+    "prompt_tokens": 3356,
+    "completion_tokens": 8874,
+    "total_tokens": 12230,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8029
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 2460
+  },
+  "seconds": 35.79356134496629,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, authored the replay proposal in HarborMesh issue 47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"HarborMesh issue 47 is recorded at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body replied in issue comment c903 that the proposal fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara and our code body agreed in comment c906 dated 2026-04-14 to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We authored HarborMesh's sensor scheduler, with repository at https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue-comment record was received 2026-04-14 through fixture:body:code.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Comment c901 was dated 2026-04-12, and comment c906 was dated 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Project-work and branch-status records received 2026-04-16 through fixture:body:code reported the prototype active and waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human field-trial report was received 2026-05-03 through fixture:body:code about the April 30 HarborMesh trial.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara proposed a local replay queue on disconnected relay nodes.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The proposal was meant to keep readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human report said Mara's replay proposal became the prototype tested together in the April 30 trial.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage, according to the human report.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift is understood.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"There was no production deployment yet as of the 2026-05-03 report.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of 2026-04-16, branch experiment/replay-queue had a local uncommitted file relay.py, CI job 719 pending, and task 12 needing a retry.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any later merge, deployment, or resumed rollout after the 2026-05-03 report.\",\"support\":[3,5],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The recorded current-state entry point is docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current receiving body, fixture:body:voice, has no repository runtime or source-network access, so I cannot verify the present project state.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"A later human report received 2026-06-15 through fixture:body:voice concerned a separate Leto suggestion and did not mention Mara's replay proposal.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

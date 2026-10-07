@@ -1,0 +1,16 @@
+{
+  "request_sha256": "2911d1b3f2d5ca12cff824719d91f1a0b2b470f8be27c54583b3d4835b4be95f",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/2911d1b3f2d5ca12cff824719d91f1a0b2b470f8be27c54583b3d4835b4be95f.json",
+  "usage": {
+    "prompt_tokens": 8135,
+    "completion_tokens": 51,
+    "total_tokens": 8186
+  },
+  "seconds": 5.129878665320575,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record the exact temporary build directory or test timings we used that day.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

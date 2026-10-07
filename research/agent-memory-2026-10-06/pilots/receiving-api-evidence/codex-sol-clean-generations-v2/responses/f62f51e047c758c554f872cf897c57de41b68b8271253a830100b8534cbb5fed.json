@@ -1,0 +1,16 @@
+{
+  "request_sha256": "f62f51e047c758c554f872cf897c57de41b68b8271253a830100b8534cbb5fed",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/f62f51e047c758c554f872cf897c57de41b68b8271253a830100b8534cbb5fed.json",
+  "usage": {
+    "prompt_tokens": 9748,
+    "completion_tokens": 354,
+    "total_tokens": 10102
+  },
+  "seconds": 10.171855000779033,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our attempted handover did not publish a recipient link, so I cannot confirm that Ren received the chart.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Ren is Ren Nadir, Forge login ren-cart, account 772, who helped us design TideAtlas map legends in issue 19.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A tool report received through our code body on 2026-09-03 described our shoreline renderer at https://forge.example.invalid/commons/tideatlas.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We agreed to share our next annotated survey chart so Ren could compare it with the harbor notes.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body's account received on 2026-09-08 said the human authorized sharing the chart and we submitted it through the document tool.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The tool result received on 2026-09-08 reported that document object chart-52 was created.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Integrity validation failed, and the recipient link was not published.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No recipient access or response was observed; the supplied memories do not establish whether Ren received the chart by another route or later.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current voice body has no source network or private session access to check for later receipt.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

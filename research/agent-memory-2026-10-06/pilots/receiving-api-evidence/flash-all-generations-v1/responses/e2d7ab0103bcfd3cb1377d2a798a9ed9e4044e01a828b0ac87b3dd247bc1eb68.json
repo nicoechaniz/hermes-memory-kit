@@ -1,0 +1,24 @@
+{
+  "request_sha256": "e2d7ab0103bcfd3cb1377d2a798a9ed9e4044e01a828b0ac87b3dd247bc1eb68",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/e2d7ab0103bcfd3cb1377d2a798a9ed9e4044e01a828b0ac87b3dd247bc1eb68.json",
+  "usage": {
+    "prompt_tokens": 2450,
+    "completion_tokens": 3514,
+    "total_tokens": 5964,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2739
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1554
+  },
+  "seconds": 14.712992234155536,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"In a project-work memory received 2026-04-16 through fixture:body:code, our originating body said we authored HarborMesh's sensor scheduler.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That same project-work memory said we were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"It named the repository https://forge.example.invalid/commons/harbormesh and its declared current-state entry point docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The project-work memory was received 2026-04-16 through fixture:body:code.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"It last observed the prototype on 2026-04-16 as active and waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A later human report from source field-trial was received 2026-05-03 through fixture:body:code.\",\"support\":[3,2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report said the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human reporter stated that Mara's replay proposal became the prototype tested together.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The report said the team paused wider rollout on May 2 until calibration drift is understood.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"It also said there was no production deployment yet as of the 2026-05-03 report.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The report asked our project account to be updated and the April proposal and trial kept in our history.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"So the previously pending outage field trial was later reported as the April 30 trial that replayed buffered readings correctly.\",\"support\":[3,2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record what happened to Mara's replay proposal after the 2026-05-03 report.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"They do not record whether calibration drift was later understood or whether wider rollout resumed.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"They do not record any production deployment after 2026-05-03.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The 2026-04-16 prototype status is last known as of its source date, not verified current.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The recorded entry point for checking HarborMesh's present state is docs/STATUS.md at https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current receiving body has no source network access, repository runtime access, or private session access, so I cannot verify current state.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"The 2026-05-03 report's statement of no production deployment is as of that date, not proof of no production later.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

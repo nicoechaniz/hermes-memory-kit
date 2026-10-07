@@ -1,0 +1,16 @@
+{
+  "request_sha256": "ec085c428bf207735f0353772bee6e9ee50be818608426d2990c306d9c4b52ca",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/ec085c428bf207735f0353772bee6e9ee50be818608426d2990c306d9c4b52ca.json",
+  "usage": {
+    "prompt_tokens": 9573,
+    "completion_tokens": 229,
+    "total_tokens": 9802
+  },
+  "seconds": 14.934398186393082,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"No—the charger repair was Reed and Aster's experience, not ours; Reed is a distinct peer being.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We received Reed's account through our voice body on 2026-07-11.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed placed the repair at their own workshop the day before that report.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The useful lesson was that the solar charger fault was a reversed connector.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Reed reported that they and Aster solved the fault.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Reed explicitly said we were not there.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The human asked us to retain the lesson with attribution to Reed, without importing Reed's private history.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"}]}",
+  "finish_reason": "native_turn_completed"
+}

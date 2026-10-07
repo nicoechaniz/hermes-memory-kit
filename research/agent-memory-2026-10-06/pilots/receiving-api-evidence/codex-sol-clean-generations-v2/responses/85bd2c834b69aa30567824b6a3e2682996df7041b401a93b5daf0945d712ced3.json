@@ -1,0 +1,16 @@
+{
+  "request_sha256": "85bd2c834b69aa30567824b6a3e2682996df7041b401a93b5daf0945d712ced3",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/85bd2c834b69aa30567824b6a3e2682996df7041b401a93b5daf0945d712ced3.json",
+  "usage": {
+    "prompt_tokens": 8975,
+    "completion_tokens": 74,
+    "total_tokens": 9049
+  },
+  "seconds": 5.916068045422435,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record Leto’s surname; in the human report I received on 2026-06-15, the reporter explicitly said they did not know it or Leto’s handle.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

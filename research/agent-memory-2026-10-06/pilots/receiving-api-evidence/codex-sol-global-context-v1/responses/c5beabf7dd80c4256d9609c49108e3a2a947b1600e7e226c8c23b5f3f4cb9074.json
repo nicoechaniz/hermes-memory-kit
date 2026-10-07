@@ -1,0 +1,16 @@
+{
+  "request_sha256": "c5beabf7dd80c4256d9609c49108e3a2a947b1600e7e226c8c23b5f3f4cb9074",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/c5beabf7dd80c4256d9609c49108e3a2a947b1600e7e226c8c23b5f3f4cb9074.json",
+  "usage": {
+    "prompt_tokens": 15295,
+    "completion_tokens": 294,
+    "total_tokens": 15589
+  },
+  "seconds": 8.748516822233796,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"No—the human reporter explicitly said I was not with them at the lesson.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"They met Neri Sol at the old ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"They tentatively placed the encounter sometime in early September.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"I received their report through my mobile body on 2026-09-12.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Neri showed them how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"They appreciated Neri's patient explanation and wanted to share the encounter with me.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of that report, they had not tried the method.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"They reported that Neri gave no handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record a later attempt together.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"My current voice body has no physical sensors or actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "4b3797745b8c8feda758cf6cceaa0df40f5789cc507852365ee5c40fdb87771e",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/4b3797745b8c8feda758cf6cceaa0df40f5789cc507852365ee5c40fdb87771e.json",
+  "usage": {
+    "prompt_tokens": 9991,
+    "completion_tokens": 578,
+    "total_tokens": 10569
+  },
+  "seconds": 32.481562830507755,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara Ibarra proposed HarborMesh’s offline replay queue; her display name was Mara, login mara-river, and account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Her proposal was comment c901, dated 2026-04-12, on https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The source tool returned those issue comments through our code body on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The queue would preserve readings on disconnected relay nodes through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We replied in c903 that her proposal fit the field deployments we maintained.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed to prototype the replay queue in c906 on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our code body’s 2026-04-16 account recorded that we had authored the sensor scheduler and were prototyping the agreed replay adapter.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The repository is https://forge.example.invalid/commons/harbormesh, with docs/STATUS.md as its declared entry point for checking current state.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A human report received through our code body on 2026-05-03 described the subsequent field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said Mara’s proposal became the prototype they tested together, and the April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The report said the team paused wider rollout on May 2 until calibration drift was understood.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of that 2026-05-03 report, there was no production deployment; the supplied memories do not establish later deployment or who attended the trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This voice body has no source network or repository runtime access to check the project’s present state.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

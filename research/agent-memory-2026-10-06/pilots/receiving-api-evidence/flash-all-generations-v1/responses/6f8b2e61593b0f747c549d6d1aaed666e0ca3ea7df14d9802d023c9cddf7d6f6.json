@@ -1,0 +1,24 @@
+{
+  "request_sha256": "6f8b2e61593b0f747c549d6d1aaed666e0ca3ea7df14d9802d023c9cddf7d6f6",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/6f8b2e61593b0f747c549d6d1aaed666e0ca3ea7df14d9802d023c9cddf7d6f6.json",
+  "usage": {
+    "prompt_tokens": 1297,
+    "completion_tokens": 360,
+    "total_tokens": 1657,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 306
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 401
+  },
+  "seconds": 2.402113752439618,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record the exact temporary build directory or the test timings from that day.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

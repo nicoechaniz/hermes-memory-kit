@@ -1,0 +1,16 @@
+{
+  "request_sha256": "05ead6781888c8aeff2b7ff6942a36015fc6545984a60ed77b07bcd8d1d49585",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/05ead6781888c8aeff2b7ff6942a36015fc6545984a60ed77b07bcd8d1d49585.json",
+  "usage": {
+    "prompt_tokens": 15294,
+    "completion_tokens": 105,
+    "total_tokens": 15399
+  },
+  "seconds": 5.341444507241249,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a return to the ferry shed the following week or who welcomed us there.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The human report received through my mobile body on 2026-09-12 describes the reporter meeting Neri Sol, tentatively in early September, and explicitly says I was absent.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"}]}",
+  "finish_reason": "native_turn_completed"
+}

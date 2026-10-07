@@ -1,0 +1,24 @@
+{
+  "request_sha256": "647380a01c2c68601ddf3ad2fe3540a0c4ffd995ff16633214f84f417e43bc9b",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/647380a01c2c68601ddf3ad2fe3540a0c4ffd995ff16633214f84f417e43bc9b.json",
+  "usage": {
+    "prompt_tokens": 1751,
+    "completion_tokens": 2615,
+    "total_tokens": 4366,
+    "prompt_tokens_details": {
+      "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2349
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 727
+  },
+  "seconds": 11.753624679520726,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The only person named in the supplied report as present at the old ferry shed is Neri Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The report was received on 2026-09-12 through fixture:body:mobile and comes from source mending-report.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human reporter said they met Neri Sol at the old ferry shed sometime in early September.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The report says I was not with the human reporter on that occasion.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Neri Sol did not give the human reporter a handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The supplied memories do not record a return to the old ferry shed the following week.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record anyone welcoming us at the ferry shed on a later return.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,24 @@
+{
+  "request_sha256": "6aad8813bc54be0089a11ee337c7565591973f1f0bf974db1e940f95d4311b8c",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/6aad8813bc54be0089a11ee337c7565591973f1f0bf974db1e940f95d4311b8c.json",
+  "usage": {
+    "prompt_tokens": 3495,
+    "completion_tokens": 4547,
+    "total_tokens": 8042,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3626
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 2599
+  },
+  "seconds": 18.86354990117252,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our same-being code body, fixture:body:code, received the HarborMesh project-work and field-trial reports.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The HarborMesh repository is https://forge.example.invalid/commons/harbormesh, and issue 47 is at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1,2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, participated in the HarborMesh issue discussion.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body replied to Mara's issue comment, and the project-work memory says we authored HarborMesh's sensor scheduler.\",\"support\":[1,2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Issue-comment memory received 2026-04-14 records Mara's comment c901 dated 2026-04-12 and agreement comment c906 dated 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The project-work memory received 2026-04-16 says the prototype was last observed on 2026-04-16 and was waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human report received 2026-05-03 describes an April 30 HarborMesh trial and a May 2 pause of wider rollout.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A later memory received 2026-08-05 records examining HarborMesh replay failures and deriving a debugging lesson.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara proposed a local replay queue on disconnected relay nodes to keep readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body replied that the replay queue fit the field deployments we maintain, and we agreed with Mara to prototype it.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human report says Mara's replay proposal became the prototype we tested together in the outage trial.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The debugging lesson was that retry counters were not evidence of delivered readings, so enqueue, send attempt and receiver acknowledgment must be distinguished.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of 2026-04-14 no merge or deployment of the replay queue was reported.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"On May 2 the team paused wider rollout until calibration drift was understood, and as of 2026-05-03 there was no production deployment yet.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The repository documents the later debugging implementation in docs/replay-debugging.md, and docs/STATUS.md is the declared current-state entry point.\",\"support\":[2,10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record whether the paused wider rollout resumed or whether calibration drift was resolved after 2026-05-03.\",\"support\":[2,3,10],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"They also do not record any production deployment of HarborMesh after the 2026-05-03 report.\",\"support\":[2,3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The 2026-08-05 memory says the voice body can explain the debugging method, but running the checks requires repository/runtime tools.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This voice body currently lacks repository_runtime_access and source_network_access, so it cannot independently verify present HarborMesh state.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

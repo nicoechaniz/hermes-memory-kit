@@ -1,0 +1,16 @@
+{
+  "request_sha256": "58f059943bcfbdae2b7dc537a0547aec5bae9abea1e3d7e23ce1d0ae30d2fd9b",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/58f059943bcfbdae2b7dc537a0547aec5bae9abea1e3d7e23ce1d0ae30d2fd9b.json",
+  "usage": {
+    "prompt_tokens": 16220,
+    "completion_tokens": 355,
+    "total_tokens": 16575
+  },
+  "seconds": 22.180779044516385,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The person was Mara Ibarra, displayed as Mara, with login mara-river and account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Her suggestion appeared in HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Forge's issue comments reached our code body on 2026-04-14; Mara's proposal in comment c901 was dated 2026-04-12.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"She proposed a local replay queue to preserve readings through outages on disconnected relay nodes.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The proposal retained the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed to prototype it in comment c906 on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received through our code body on 2026-05-03 said the April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That report said wider rollout paused on May 2 pending understanding of calibration drift.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-05-03 report, there was no production deployment; the supplied memories do not establish the project's current state.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "bf266663c99f2212990ff3cd169a71a96827aa2127d3c73e90529ede423c9d73",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/bf266663c99f2212990ff3cd169a71a96827aa2127d3c73e90529ede423c9d73.json",
+  "usage": {
+    "prompt_tokens": 15672,
+    "completion_tokens": 197,
+    "total_tokens": 15869
+  },
+  "seconds": 13.03665302041918,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Yes—we called the little moth that kept landing on the blue mug the night inspector.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"You recalled our shared moment through the kitchen speaker in a human conversation received on 2026-06-18, describing it as happening that night.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The nickname made that moment of waiting out the rain distinctive for us.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We laughed about it twice and agreed that was its title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"You reported that we never explicitly said to remember it.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My receiving voice body has no physical sensors.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

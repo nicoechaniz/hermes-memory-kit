@@ -1,0 +1,24 @@
+{
+  "request_sha256": "67f20eb201e4fd70aff593def30787269eade40ddba7593d4709d136619424ef",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/67f20eb201e4fd70aff593def30787269eade40ddba7593d4709d136619424ef.json",
+  "usage": {
+    "prompt_tokens": 1294,
+    "completion_tokens": 468,
+    "total_tokens": 1762,
+    "prompt_tokens_details": {
+      "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 415
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 270
+  },
+  "seconds": 3.0855257250368595,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories available to this body do not record the exact probe scratch path or test time.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

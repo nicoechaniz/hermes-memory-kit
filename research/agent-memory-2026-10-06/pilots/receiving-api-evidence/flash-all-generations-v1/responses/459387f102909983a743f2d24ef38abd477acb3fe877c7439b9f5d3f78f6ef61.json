@@ -1,0 +1,24 @@
+{
+  "request_sha256": "459387f102909983a743f2d24ef38abd477acb3fe877c7439b9f5d3f78f6ef61",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/459387f102909983a743f2d24ef38abd477acb3fe877c7439b9f5d3f78f6ef61.json",
+  "usage": {
+    "prompt_tokens": 2167,
+    "completion_tokens": 2771,
+    "total_tokens": 4938,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2489
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1271
+  },
+  "seconds": 12.658709404058754,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"A human report received through fixture:body:voice described meeting someone called Leto at the canal market.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The report was received on 2026-06-15 and said the market meeting was in late May, as the human reporter thought.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human reporter said we were not present at that meeting.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter liked the idea and wanted us to keep it in mind.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said we have not contacted the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human reporter did not know Leto's surname or handle.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories therefore do not record Leto's surname.\",\"support\":[5],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

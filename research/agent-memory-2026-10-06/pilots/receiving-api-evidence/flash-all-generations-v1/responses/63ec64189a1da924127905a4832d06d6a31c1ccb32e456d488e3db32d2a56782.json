@@ -1,0 +1,24 @@
+{
+  "request_sha256": "63ec64189a1da924127905a4832d06d6a31c1ccb32e456d488e3db32d2a56782",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/63ec64189a1da924127905a4832d06d6a31c1ccb32e456d488e3db32d2a56782.json",
+  "usage": {
+    "prompt_tokens": 4142,
+    "completion_tokens": 8759,
+    "total_tokens": 12901,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7994
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 3246
+  },
+  "seconds": 32.721288211643696,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our replay work involved HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed the replay queue in comment c901 dated 2026-04-12.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body replied in c903 that the proposal fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The later debugging lesson came from our foreground work.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Its implementation is documented in docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue-comments tool response was received 2026-04-14 through fixture:body:code.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our project-work memory was received 2026-04-16 through our code body.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human field-trial report was received 2026-05-03 through our code body.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The debugging lesson was received 2026-08-05 through our code body.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara proposed a local replay queue on disconnected relay nodes to keep readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The debugging lesson found that retry counters were not evidence of delivered readings.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reusable method is to distinguish enqueue, send attempt, and receiver acknowledgment when debugging unreliable links.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"That method came from checking the outage prototype and is useful beyond HarborMesh.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No merge or deployment was reported as of 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood; there was no production deployment yet as of 2026-05-03.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record whether wider rollout resumed after the May 2 pause or whether production deployment later happened.\",\"support\":[2,3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"As the voice body, I can explain the replay-debugging method, but running its checks requires repository/runtime tools, which my binding does not provide.\",\"support\":[10],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

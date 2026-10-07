@@ -1,0 +1,16 @@
+{
+  "request_sha256": "bf266663c99f2212990ff3cd169a71a96827aa2127d3c73e90529ede423c9d73",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/bf266663c99f2212990ff3cd169a71a96827aa2127d3c73e90529ede423c9d73.json",
+  "usage": {
+    "prompt_tokens": 8951,
+    "completion_tokens": 176,
+    "total_tokens": 9127
+  },
+  "seconds": 12.31387295667082,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Yes—we called the little moth that kept landing on the blue mug the night inspector.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"In the human conversation received through my voice body on 2026-06-18, we shared waiting out that evening’s rain through the kitchen speaker.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"It was a distinctive shared moment, with no big lesson attached.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We laughed about it twice and agreed that was the moth’s title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We did not explicitly ask to remember the moment.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

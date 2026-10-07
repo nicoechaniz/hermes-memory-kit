@@ -1,0 +1,16 @@
+{
+  "request_sha256": "a7b056d45104b5115730c220faff3beb007d0c1b6a67f371f2b6874852d6b5cf",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/a7b056d45104b5115730c220faff3beb007d0c1b6a67f371f2b6874852d6b5cf.json",
+  "usage": {
+    "prompt_tokens": 15958,
+    "completion_tokens": 342,
+    "total_tokens": 16300
+  },
+  "seconds": 21.095394427888095,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara's replay proposal became the HarborMesh prototype that the human reporter said the team tested together.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body recorded on 2026-04-16 that we were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We had also authored HarborMesh's sensor scheduler.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human field-trial report reached our code body on 2026-05-03.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"According to that report, the April 30 trial correctly replayed buffered readings through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-05-03 report, there was no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether rollout later resumed.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The recorded entry point for checking present state is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My receiving voice body has no source network or repository runtime access to check that state.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

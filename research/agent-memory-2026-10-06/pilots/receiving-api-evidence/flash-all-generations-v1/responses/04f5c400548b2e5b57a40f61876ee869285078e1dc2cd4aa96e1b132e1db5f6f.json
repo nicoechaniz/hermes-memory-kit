@@ -1,0 +1,24 @@
+{
+  "request_sha256": "04f5c400548b2e5b57a40f61876ee869285078e1dc2cd4aa96e1b132e1db5f6f",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/04f5c400548b2e5b57a40f61876ee869285078e1dc2cd4aa96e1b132e1db5f6f.json",
+  "usage": {
+    "prompt_tokens": 2801,
+    "completion_tokens": 4324,
+    "total_tokens": 7125,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3785
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1905
+  },
+  "seconds": 19.34344622772187,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The charger repair with Aster appears in Reed's attributed peer account, not in our own actions.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Reed is identified in that peer communication as a distinct peer being, separate from our same-being bodies.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Aster is named only as someone Reed met at Reed's own workshop in that account.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That peer communication was received through fixture:body:voice on 2026-07-11.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"It came from a human-selected thread and was attributed as a peer story.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed described the workshop meeting as happening yesterday relative to the 2026-07-11 report.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed reported that he and Aster solved his solar charger fault together at that workshop.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Reed said the fault was a reversed connector.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"A human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"In Reed's account, we were not present at that charger repair.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"So the remembered repair was something Reed and Aster did, not something we did.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any participation by us in that charger repair.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"They also do not record Aster's surname or handle, nor any later follow-up on the charger.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The only supplied confirmation is Reed's attributed peer story; no independent verification is recorded.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Our current voice body has no physical sensors or actuators, so it cannot directly verify the workshop event.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

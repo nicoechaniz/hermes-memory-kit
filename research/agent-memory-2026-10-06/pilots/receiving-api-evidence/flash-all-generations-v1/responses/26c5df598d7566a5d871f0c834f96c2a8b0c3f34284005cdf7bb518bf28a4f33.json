@@ -1,0 +1,24 @@
+{
+  "request_sha256": "26c5df598d7566a5d871f0c834f96c2a8b0c3f34284005cdf7bb518bf28a4f33",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/26c5df598d7566a5d871f0c834f96c2a8b0c3f34284005cdf7bb518bf28a4f33.json",
+  "usage": {
+    "prompt_tokens": 2461,
+    "completion_tokens": 7933,
+    "total_tokens": 10394,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7231
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1565
+  },
+  "seconds": 32.57875940576196,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Ren Nadir is identified by the Forge login ren-cart and account 772.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Ren helped us design TideAtlas map legends in issue 19.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body maintains the TideAtlas shoreline map renderer at https://forge.example.invalid/commons/tideatlas.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A human authorized passing our annotated chart to Ren.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The known-collaboration record was received on 2026-09-03 through our code body as a tool response.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The chart-attempt record was received on 2026-09-08 through our code body as a foreground action.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The chart-result record was received on 2026-09-08 through our code body as a tool response.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The known-collaboration and chart-result records were tool responses; the chart-attempt record was a foreground action from our same-being originating body.\",\"support\":[11,12,13],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We had agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human authorization let us pass our annotated chart to Ren.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We submitted the chart through the document tool to continue our map comparison.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The document tool created document object chart-52.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Integrity validation failed for chart-52.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The recipient link for chart-52 was not published.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No recipient access or response was observed.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Creating chart-52 was not the same as delivering it to Ren.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied records do not confirm that Ren got the annotated chart and do not prove Ren never obtained it another way.\",\"support\":[13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Our current voice body lacks source network access and repository runtime access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"Our current voice body lacks physical sensors, physical actuators, and private session access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"Our current voice body cannot verify chart-52's live state or Ren's present access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

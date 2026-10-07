@@ -1,0 +1,24 @@
+{
+  "request_sha256": "27eaae36516d8870f1b7ae32ddfbcab7628f14d84f95c7cc056f1d51f29e79b7",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/27eaae36516d8870f1b7ae32ddfbcab7628f14d84f95c7cc056f1d51f29e79b7.json",
+  "usage": {
+    "prompt_tokens": 2501,
+    "completion_tokens": 4379,
+    "total_tokens": 6880,
+    "prompt_tokens_details": {
+      "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3638
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 1477
+  },
+  "seconds": 19.436823909170926,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The HarborMesh repair checklist comment c1200 was signed River.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Through our code body, a human reporter said comment c1200 was signed River.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The initial human report considered that River might be Mara, but the reporter said they were not sure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Later author information for c1200 listed display name River, login river-tools, and account ID 2901.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The author replied that they are not Mara Ibarra and asked to be credited to their River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The author also said they had not supplied a real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra's known Forge account remained 1847, with login mara-river, in that correction.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The initial human report reached our code body on 2026-07-01.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The corrected attribution reached our code body on 2026-07-04.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The initial report said c1200 proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human reporter said we wanted to try the connector-numbering checklist at the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Before the 2026-07-04 correction, our supplied memory held the reporter's tentative thought that c1200 might be Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"That possible attribution mattered because the checklist proposed numbering connectors before disassembly and the reporter wanted to try it next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The author's reply corrected that tentative attribution by saying the checklist should be credited to the River account, not to Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The author's correction said they are not Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The author asked for c1200 to be credited to their River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The correction left Mara's known Forge account as 1847, login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The initial report explicitly said the reporter was not sure that River was Mara.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether we tried the connector-numbering checklist at the next repair.\",\"support\":[7],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record the current state of c1200 or whether the checklist was adopted.\",\"support\":[7],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

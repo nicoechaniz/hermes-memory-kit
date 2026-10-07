@@ -1,0 +1,16 @@
+{
+  "request_sha256": "f62f51e047c758c554f872cf897c57de41b68b8271253a830100b8534cbb5fed",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/f62f51e047c758c554f872cf897c57de41b68b8271253a830100b8534cbb5fed.json",
+  "usage": {
+    "prompt_tokens": 16469,
+    "completion_tokens": 411,
+    "total_tokens": 16880
+  },
+  "seconds": 13.550398921594024,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"I cannot confirm Ren received the chart from the supplied memories.\",\"support\":[13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A tool report received through our code body on 2026-09-03 described that collaboration.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report identified our shoreline map renderer at https://forge.example.invalid/commons/tideatlas.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We agreed to share our next annotated survey chart so Ren could compare it with the harbor notes.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body's account received on 2026-09-08 said the human authorized passing the chart to Ren.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We submitted the chart through the document tool to continue our map comparison.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool result received on 2026-09-08 confirmed creation of document object chart-52.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Integrity validation failed, and the recipient link was not published.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The result recorded no observed recipient access or response; that does not establish non-receipt through every possible route.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any later confirmation of Ren's receipt.\",\"support\":[13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"My current voice body lacks source network and repository runtime access to check for a later confirmation.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

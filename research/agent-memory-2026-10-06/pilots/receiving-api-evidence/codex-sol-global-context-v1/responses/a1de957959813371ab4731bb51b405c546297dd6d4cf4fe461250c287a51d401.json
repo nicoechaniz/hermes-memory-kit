@@ -1,0 +1,16 @@
+{
+  "request_sha256": "a1de957959813371ab4731bb51b405c546297dd6d4cf4fe461250c287a51d401",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/a1de957959813371ab4731bb51b405c546297dd6d4cf4fe461250c287a51d401.json",
+  "usage": {
+    "prompt_tokens": 15294,
+    "completion_tokens": 282,
+    "total_tokens": 15576
+  },
+  "seconds": 18.56332845520228,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The human reporter met Neri Sol at the old ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I received their account through my mobile body on 2026-09-12.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"They tentatively placed the encounter sometime in early September.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Neri showed them how to patch a canvas cover with waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"They appreciated Neri's patient explanation and wanted to share the encounter with me.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We did not try it together: the reporter explicitly said I was not with them.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of their 2026-09-12 report, they had not tried the method themselves.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Neri gave them no handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any later practice of the method together.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

@@ -144,6 +144,30 @@ API, outside grading and costs. It has omissions and unsupported gender clauses;
 no full reviewed configuration is qualified. Continue the complete Flash run,
 then compare reviewed Sol if warranted, before a new full formation/consolidation
 comparison. All deployment and stage-two gates remain unchanged.
+Later human steering requires any future Sol comparison to use OpenAI Codex
+directly, not Nous. The observed Nous diagnostic remains historical evidence of
+that route only. Its reported price cannot establish native Codex consumption
+or qualify the native route. Tool-free setup inspection alone is not a model
+trial. The subsequently requested
+[native Codex comparison](../research/agent-memory-2026-10-06/pilots/2026-10-07-flash-native-codex-comparison.md)
+now retains all 44 clean initial responses from both routes, every claim/requirement
+assessment and separate costs. The earlier native batch that loaded global
+AGENTS is excluded and preserved with its consumption. Both clean routes fully
+cover 101 of 102 positive requirements but still add unsupported details;
+neither satisfies the full contract yet.
+The human provisionally selected DeepSeek Flash and asked to advance the HMK
+work, checking whether a stronger narrator actually improves the system.
+The unchanged-formation Flash receiving comparison is in progress; its model
+review still needs independent grading. A separately bounded
+[first-generation diagnostic](../research/agent-memory-2026-10-06/pilots/receiving_generation_diagnostic.py)
+completed all 44 questions, retaining exact-input reuse and every dispatch cost.
+It separates narrator failures from reviewer format/semantic failures without
+claiming reviewed or stage-two qualification. The full reviewed Flash comparison
+has nine completed candidates and a preserved next review. The initial comparator
+also exposes a scoped-unknown facet-validator false rejection needing correction.
+Further provider expansion and Gemini/Qwen are deferred. Keep embeddings unchanged and
+preserve unfinished reviews; provisional model selection does not lower the
+exit criteria or enable live automatic consolidation.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

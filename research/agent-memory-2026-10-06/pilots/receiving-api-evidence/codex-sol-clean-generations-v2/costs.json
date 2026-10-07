@@ -1,0 +1,26 @@
+{
+  "questions": 44,
+  "distinct_observed_generations": 42,
+  "known_usage_attempts": 42,
+  "unknown_usage_attempts": 0,
+  "usage": {
+    "prompt_tokens": 395166,
+    "completion_tokens": 13774,
+    "total_tokens": 408940,
+    "cached_input_tokens": 142848,
+    "reasoning_output_tokens": 1112
+  },
+  "latency_seconds": {
+    "median": 16.076331132091582,
+    "sum_of_request_seconds": 698.3385472409427,
+    "min": 3.6024859538301826,
+    "max": 36.495280692353845
+  },
+  "reviewer_calls": 0,
+  "embedding_calls": 0,
+  "billed_cost_usd": null,
+  "qualification": false,
+  "isolation_valid": true,
+  "basis": "Native Codex token usage, not an API invoice or known subscription/quota conversion.",
+  "duplicate_inputs_reused": 2
+}

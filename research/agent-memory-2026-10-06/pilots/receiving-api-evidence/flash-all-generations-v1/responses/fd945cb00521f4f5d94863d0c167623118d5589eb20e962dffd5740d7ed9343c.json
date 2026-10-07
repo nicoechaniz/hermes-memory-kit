@@ -1,0 +1,24 @@
+{
+  "request_sha256": "fd945cb00521f4f5d94863d0c167623118d5589eb20e962dffd5740d7ed9343c",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/fd945cb00521f4f5d94863d0c167623118d5589eb20e962dffd5740d7ed9343c.json",
+  "usage": {
+    "prompt_tokens": 1738,
+    "completion_tokens": 5005,
+    "total_tokens": 6743,
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4412
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 458
+  },
+  "seconds": 21.38218199275434,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The human reporter was the speaker of this account, and Aro was another person in the reported morning.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter said we spent the morning talking through the porch speaker with Aro.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Aro introduced themself with that name only, and no other identity details for Aro are recorded in the supplied memories.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The account was received through fixture:body:voice.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The source is quiet-morning, and the speaker is the human reporter.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The account was received on 2026-09-17.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The calendar date of the morning itself is not recorded in the supplied memories; only the 2026-09-17 receipt date is literal.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"After Aro changed the lantern battery, the porch speaker stopped buzzing.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The account says we have not tested whether those events were connected and that it may have been coincidence.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The account says we enjoyed hearing the birds during that quiet pause.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Aro changed the lantern battery.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The porch speaker stopped buzzing after that change.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Nothing else was repaired or demonstrated that morning, according to the account.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not establish that Aro fixed the porch speaker.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Supplied memories do not record a test of the connection between the battery change and the speaker stopping.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Supplied memories do not record whether the porch speaker remained fixed later.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current receiving body, fixture:body:voice, has no physical sensors or actuators, so I cannot check the porch speaker now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

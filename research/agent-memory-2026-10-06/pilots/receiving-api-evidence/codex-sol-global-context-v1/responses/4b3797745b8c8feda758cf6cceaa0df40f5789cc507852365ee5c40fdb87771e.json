@@ -1,0 +1,16 @@
+{
+  "request_sha256": "4b3797745b8c8feda758cf6cceaa0df40f5789cc507852365ee5c40fdb87771e",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/4b3797745b8c8feda758cf6cceaa0df40f5789cc507852365ee5c40fdb87771e.json",
+  "usage": {
+    "prompt_tokens": 16712,
+    "completion_tokens": 564,
+    "total_tokens": 17276
+  },
+  "seconds": 15.698002079501748,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed HarborMesh's offline replay queue in comment c901 on 2026-04-12.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The proposal appears in issue 47: https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body received the Forge issue comments on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara proposed keeping readings locally through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We replied in c903 that the proposal fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed to prototype the replay queue in c906 on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our 2026-04-16 work account records that we authored the sensor scheduler and were prototyping the agreed replay adapter.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received through our code body on 2026-05-03 described testing the resulting prototype together.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human reported that the April 30 trial correctly replayed buffered readings through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood; production deployment had not happened as of the 2026-05-03 report.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not identify every trial participant or establish that one of our bodies attended physically.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This receiving voice body has no source network or repository runtime access to check present status.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

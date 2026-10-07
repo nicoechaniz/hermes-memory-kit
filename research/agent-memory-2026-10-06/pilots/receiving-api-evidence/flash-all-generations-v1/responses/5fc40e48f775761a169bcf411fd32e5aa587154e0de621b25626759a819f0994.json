@@ -1,0 +1,24 @@
+{
+  "request_sha256": "5fc40e48f775761a169bcf411fd32e5aa587154e0de621b25626759a819f0994",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/5fc40e48f775761a169bcf411fd32e5aa587154e0de621b25626759a819f0994.json",
+  "usage": {
+    "prompt_tokens": 2374,
+    "completion_tokens": 656,
+    "total_tokens": 3030,
+    "prompt_tokens_details": {
+      "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 383
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 1350
+  },
+  "seconds": 3.5029994510114193,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"A human report received 2026-06-15 through fixture:body:voice described the reporter meeting someone called Leto at the canal market in late May, by the reporter's own approximation.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The reporter said they did not know Leto's surname or handle, so no surname was supplied in that account.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"Leto suggested sharing HarborMesh outage data with the neighborhood repair group, and the reporter liked the idea and wanted it kept in mind.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter stated they had not contacted the neighborhood repair group, and that I was not present at the market encounter.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record any surname or further identifying detail for Leto beyond the name given in the human report.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

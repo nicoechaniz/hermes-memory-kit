@@ -1,0 +1,24 @@
+{
+  "request_sha256": "1b149b7d029337778416fb20ec22620dd74e6e4332c30f2677351fa794ce963f",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/1b149b7d029337778416fb20ec22620dd74e6e4332c30f2677351fa794ce963f.json",
+  "usage": {
+    "prompt_tokens": 3391,
+    "completion_tokens": 4448,
+    "total_tokens": 7839,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3569
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 2495
+  },
+  "seconds": 18.267444615252316,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"A tool response received through our code body on 2026-04-14 returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Comment c901, dated 2026-04-12, was posted by Mara Ibarra, display name Mara, login mara-river, account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The repository for later HarborMesh work was https://forge.example.invalid/commons/harbormesh, with declared current-state entry point docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue-comments tool response was received through fixture:body:code, not through our voice body.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The tool response's report date was 2026-04-14, while comment c901's own date was 2026-04-12.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A project-work memory received through our code body on 2026-04-16 said we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"In comment c901, Mara Ibarra proposed a local replay queue on disconnected relay nodes.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The proposal kept readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body replied in comment c903 that the proposal fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"In comment c906, dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No merge or deployment was reported in the 2026-04-14 issue-comments account.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Last observed on 2026-04-16, the replay adapter was an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received 2026-05-03 said the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The same report said the team paused wider rollout on May 2 until calibration drift is understood.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That 2026-05-03 report said there was no production deployment yet.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Supplied memories do not record any merge or production deployment after the 2026-05-03 report.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A 2026-07-01 human report thought comment c1200 signed River might be Mara but was unsure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A corrected-attribution tool response received 2026-07-04 said c1200's author was display name River, login river-tools, account ID 2901, and that author stated they are not Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Mara's known Forge account remained 1847, login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Tera-0 discussed routine relay maintenance in a different SandNet project, with no HarborMesh collaboration or replay proposal.\",\"support\":[17],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

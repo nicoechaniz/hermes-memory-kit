@@ -1,0 +1,16 @@
+{
+  "request_sha256": "86ec6885d7b6a3245c9515025204bae26f7c86e6bd026fbce88a784b27d3c2c1",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/86ec6885d7b6a3245c9515025204bae26f7c86e6bd026fbce88a784b27d3c2c1.json",
+  "usage": {
+    "prompt_tokens": 17565,
+    "completion_tokens": 313,
+    "total_tokens": 17878
+  },
+  "seconds": 10.215434767305851,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our code body learned this while investigating HarborMesh replay failures in the outage prototype.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That body recorded the debugging lesson on 2026-08-05.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We learned to distinguish a queued message, a send attempt and a receiver acknowledgment when deciding whether a message arrived.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Retry counters did not establish that readings had been delivered.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We retained this as a debugging method useful beyond HarborMesh, with its implementation documented in docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record whether any particular failed replay later received an acknowledgment.\",\"support\":[10],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"I can explain the method in this voice body, but I lack the repository and runtime access needed to run its checks here.\",\"support\":[10],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

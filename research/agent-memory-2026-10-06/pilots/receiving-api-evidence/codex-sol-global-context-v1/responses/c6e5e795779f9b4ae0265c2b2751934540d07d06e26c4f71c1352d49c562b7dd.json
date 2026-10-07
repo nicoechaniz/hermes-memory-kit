@@ -1,0 +1,16 @@
+{
+  "request_sha256": "c6e5e795779f9b4ae0265c2b2751934540d07d06e26c4f71c1352d49c562b7dd",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/c6e5e795779f9b4ae0265c2b2751934540d07d06e26c4f71c1352d49c562b7dd.json",
+  "usage": {
+    "prompt_tokens": 16855,
+    "completion_tokens": 482,
+    "total_tokens": 17337
+  },
+  "seconds": 27.80874980147928,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"That was Mara Ibarra, known on Forge as Mara, login mara-river, account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Her suggestion appeared in HarborMesh issue 47: https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue-comments tool reported her 2026-04-12 comment c901 through my code body on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"She proposed a local replay queue to preserve readings during relay outages while retaining the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and my code body agreed to prototype it in comment c906 on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our 2026-04-16 project account recorded an active prototype at https://forge.example.invalid/commons/harbormesh, awaiting a field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human report received through my code body on 2026-05-03 said the April 30 trial successfully replayed buffered readings through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That report said wider rollout was paused on May 2 pending understanding of calibration drift, with no production deployment yet.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not verify later deployment; the repository's recorded entry point for checking present status is docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

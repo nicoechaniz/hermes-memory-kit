@@ -1,0 +1,48 @@
+{
+  "questions": 44,
+  "distinct_observed_generations": 42,
+  "known_usage_attempts": 42,
+  "unknown_usage_attempts": 0,
+  "usage": {
+    "prompt_tokens": 110569,
+    "completion_tokens": 208399,
+    "total_tokens": 318968,
+    "cache_hit_tokens": 39040,
+    "cache_miss_tokens": 71529,
+    "reasoning_tokens": 183486
+  },
+  "latency_seconds": {
+    "median": 19.514912689570338,
+    "sum_of_request_seconds": 881.64544323273,
+    "min": 2.402113752439618,
+    "max": 35.79356134496629
+  },
+  "reviewer_calls": 0,
+  "embedding_calls": 0,
+  "billed_cost_usd": null,
+  "qualification": false,
+  "generation_tariff_estimate_usd": {
+    "off_peak": 0.13588587,
+    "peak": 0.27177174
+  },
+  "basis": "Published hit/miss/output tariffs including reasoning; invoice and actual peak/off-peak tariff unknown. Original imported calls are counted once in the workload, not charged again by reuse.",
+  "new_inference_calls": 28,
+  "imported_distinct_generations": 14,
+  "tariff_source": {
+    "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "checked_date": "2026-10-07",
+    "retrieval": "Direct primary-page HTTPS; web tool timed out.",
+    "html_sha256": "210f102275ccf1a6542f08a3bc9e4b4c7c83278cb74b35217bffa112df6363b2",
+    "model_version": "DeepSeek-V4.1-Flash",
+    "off_peak_usd_per_million": {
+      "cache_hit": 0.003,
+      "cache_miss": 0.15,
+      "output": 0.6
+    },
+    "peak_usd_per_million": {
+      "cache_hit": 0.006,
+      "cache_miss": 0.3,
+      "output": 1.2
+    }
+  }
+}

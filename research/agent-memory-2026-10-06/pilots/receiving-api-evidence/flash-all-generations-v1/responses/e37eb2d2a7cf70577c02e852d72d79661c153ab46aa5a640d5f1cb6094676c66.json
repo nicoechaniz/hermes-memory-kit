@@ -1,0 +1,24 @@
+{
+  "request_sha256": "e37eb2d2a7cf70577c02e852d72d79661c153ab46aa5a640d5f1cb6094676c66",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/e37eb2d2a7cf70577c02e852d72d79661c153ab46aa5a640d5f1cb6094676c66.json",
+  "usage": {
+    "prompt_tokens": 2321,
+    "completion_tokens": 6986,
+    "total_tokens": 9307,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6211
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1425
+  },
+  "seconds": 28.202508250251412,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our authenticated mobile body met Jo Vale at the East Quay repair workshop on 2026-06-08.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Jo Vale introduced themself by that name; no account identifier or legal-name evidence was supplied for Jo.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The 2026-06-08 encounter was reported by our same-being originating body and received through fixture:body:mobile.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"On 2026-07-20, our code body received an outreach attempt from our same-being originating body and a tool response from the source tool.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human authorized inviting Jo Vale to a mount-comparison workshop on August 2, per the 2026-07-20 report.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"At the East Quay workshop, Jo demonstrated a humming relay mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Jo taught us to listen for a beat before tightening the relay mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried the mount together using the mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The later human authorization concerned inviting Jo to a mount-comparison workshop.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Jo invited us to compare mounts at the next workshop, but no date was agreed.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"On 2026-07-20, we attempted to submit the invitation through the workshop tool.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool reported that invitation object invite-81 was created for Jo Vale.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool reported delivery failed because no reachable destination was found.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool stated that creating the invitation object was not a delivery receipt.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No reply or workshop acceptance was observed in the supplied records.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"So the supplied records show the July 20 invitation was not delivered by that attempt and do not show Jo agreeing to compare mounts.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record whether Jo received the invitation by another channel, any reply to invite-81, or agreement to the August 2 workshop.\",\"support\":[9],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The receiving voice body lacks source-network, repository-runtime, physical-sensor, physical-actuator, and private-session access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"Because of those lacks, this voice body cannot independently verify delivery or attendance through such tools.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"Jo's earlier invitation to compare mounts had no agreed date and came before the July 20 attempt, not as a reply to it.\",\"support\":[4,9],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}
