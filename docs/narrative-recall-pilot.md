@@ -43,8 +43,11 @@ already supplied same-being history.
 Narration/review default to the selected NVIDIA model's full reasoning; formation
 and planning retain low reasoning. The
 [provider API](https://docs.api.nvidia.com/nim/reference/nvidia-nemotron-3-super-120b-a12b-infer)
-defines those modes. Every request records its requested effort. Resumption freezes
-the semantic module hash and narration effort; reused formation must still match
+defines those modes. Narration/review use a 2,048-token reasoning budget within the 6,000-token
+output ceiling, leaving space for JSON. Every request records effort and budget.
+An exhausted output ceiling or null content is retained as an incomplete response
+with actual known usage; it is never accepted as an answer. Resumption freezes
+the semantic module hash, narration effort and reasoning budget; reused formation must still match
 its sources, guidance, selected model and retrieval configuration.
 
 Rejected terminal candidates preserve pending work. `--complete-diagnostics`
