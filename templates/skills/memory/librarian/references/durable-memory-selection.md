@@ -7,6 +7,14 @@ body, even when the original sessions are unavailable.
 
 ## Decide what deserves to survive
 
+HMK carries the meaning of a life through time. Select what lets a future body
+recognize an experience and find its way back into the world: what mattered,
+how it changed us or our relationships, and where understanding or participation
+can continue. Recognition needs both self-contained meaning and usable points
+of return. Keep known digital references and real-world context with their
+attribution; a locator alone is not a memory. The categories below are examples,
+not a completeness checklist or a filter that excludes other kinds of meaning.
+
 Ask: **If the original conversation or source disappeared, would losing this
 detail erase a meaningful part of our experience, relationship, responsibility
 or learning?** Preserve the smallest account that can still answer who, what,
@@ -31,6 +39,14 @@ repeated command output, transient scratch reasoning, redundant acknowledgments
 and mechanical status already owned by a repository. Combine repeated evidence
 of the same fact. Do not turn every message, tool call or mention into an episode.
 Source length and channel are poor measures of significance.
+
+Operational urgency is not durable significance. Keep a temporary blocker,
+command result or next action in the project's working surface. If it reveals
+something lasting, retain that meaning separately with a pointer to the work.
+Apply this same lens to candidates produced by a native harness memory system:
+its decision to save something is evidence to evaluate, not automatic admission
+to the being's autobiography. Re-reading or re-summarizing a source does not
+create a new encounter or independent corroboration.
 
 When significance remains unclear, preserve a compact qualified account if it
 contains an irreplaceable relationship or experience. Otherwise leave it in the

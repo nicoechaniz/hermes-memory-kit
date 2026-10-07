@@ -229,11 +229,14 @@ When new documentation enters the system, classify its authority first.
 
 HMK-native flow:
 
-1. normalize and ingest the source into canonical memory
+1. normalize the authorized source outside the canonical pool
 2. retrieve related context with `hybrid-pack`
-3. inspect the wiki only as a conceptual map layer
-4. decide the curation outcome
-5. write HMK first, optional isolated HMK projection second
+3. apply the durable selection policy; route operational detail to project state
+4. persist only selected self-contained meaning and its evidence references
+5. verify recall, then optionally refresh the isolated HMK projection
+
+An explicitly requested source archive is a separate purpose. Availability of
+`add-file` or `ingest_any` does not make every document durable autobiography.
 
 LLM Wiki flow:
 
@@ -244,7 +247,10 @@ LLM Wiki flow:
 
 ### Minimal curation loop
 
-#### A. Normalize and ingest
+#### A. Select before ingesting
+
+The command below stores an explicitly selected source. Normalize and inspect
+it first; omit routine working state or keep it in the owning project.
 
 ```bash
 ./scripts/hmk ingest_any.py \

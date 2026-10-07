@@ -2379,6 +2379,9 @@ def delete_chapter(chapter_id, prune_book=True):
     """
     init_db()
     con = connect()
+    # Read the exact pre-image under the writer lock: another curator must not
+    # update the chapter between the FTS deletion values and the row deletion.
+    con.execute('BEGIN IMMEDIATE')
     row = con.execute(
         "SELECT id, book_id, title, spr, raw, tags_json,record_uid FROM chapters WHERE id=?",
         (chapter_id,),
@@ -2490,10 +2493,11 @@ def stats():
 
 
 def bootstrap():
+    _require_config('bootstrap')
     fd = _lock_maintenance()
     try:
         if DB_PATH.exists():
-            DB_PATH.unlink()
+            raise SystemExit('bootstrap requires a new database; use init for an existing pool')
         init_db()
         bootstrap_docs = load_bootstrap_docs()
         loaded = []

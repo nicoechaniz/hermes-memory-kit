@@ -8,6 +8,11 @@ conversations do not become shared memory merely through capture.
 
 The [selection policy](../templates/skills/memory/librarian/references/durable-memory-selection.md)
 decides what matters; these tools make a supplied decision durable and replayable.
+An applied decision's `reason` should explain why its selected meaning remains
+worth carrying after the current task ends. Operational urgency or a native
+harness having saved the text is insufficient. Stage source material separately;
+select lasting meaning before writing chapters. The ledger validates structure
+and atomicity, so semantic selection quality must be evaluated independently.
 Mechanical acceptance is separate from the [model capture/recall pilot](durable-recall-plan.md#run-a-capture-and-recall-pilot).
 Verify the deployment's required recovery snapshot before using a live pool.
 First ledger use on a populated pool snapshots before adding its schema.
