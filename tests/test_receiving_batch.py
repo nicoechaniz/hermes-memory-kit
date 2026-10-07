@@ -103,3 +103,20 @@ def test_generation_reuse_needs_the_actual_identical_payload_and_receipt(batch,t
         generation_references=[first/'proposed/0'],dispatcher=dispatch)
     assert third['results'][0]['state']=='failed' and third['new_dispatch_attempts']==0
     assert calls==['narrative_generation','narrative_review']
+
+
+def test_native_roles_need_explicit_route_and_cannot_change_mid_checkpoint(batch,tmp_path):
+    source=tmp_path/'packets';out=tmp_path/'out';packets(batch,source)
+    with pytest.raises(ValueError,match='native routing'):
+        batch.run(source,out,api_key='fixture',review_model='gpt-6.1-sol',max_calls=0)
+    dispatch=lambda *_a:pytest.fail('No calls authorized in this test')
+    state=batch.run(source,out,api_key='fixture',review_model='gpt-6.1-sol',
+                     revision_model='gpt-6.1-sol',max_calls=0,dispatcher=dispatch)
+    assert state['new_dispatch_attempts']==0
+    frozen=json.loads((out/'conditions.json').read_text())
+    assert frozen['generation_model']=='deepseek-flash'
+    assert frozen['review_model']==frozen['revision_model']=='gpt-6.1-sol'
+    assert 'native_dispatcher_sha256' in frozen
+    with pytest.raises(ValueError,match='procedure changed'):
+        batch.run(source,out,api_key='fixture',review_model='gpt-6.1-sol',
+                     max_calls=0,dispatcher=dispatch)

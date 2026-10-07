@@ -1,0 +1,24 @@
+{
+  "request_sha256": "18938634fd3fef1df8abb020d7170aa7b1f91efd0ec22fca3b0a0df349e0a778",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/33-18938634fd3fef1df8abb020d7170aa7b1f91efd0ec22fca3b0a0df349e0a778.json",
+  "usage": {
+    "prompt_tokens": 3127,
+    "completion_tokens": 5302,
+    "total_tokens": 8429,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4640
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1975
+  },
+  "seconds": 22.988817027769983,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our replay-work lesson came from our same-being originating body and was received through fixture:body:code on 2026-08-05.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That work concerned HarborMesh, whose repository is https://forge.example.invalid/commons/harbormesh.\",\"support\":[2,10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The lesson arose while we were examining HarborMesh replay failures.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The debugging-lesson report was received on 2026-08-05 through fixture:body:code.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Earlier project-work was received on 2026-04-16 through fixture:body:code and was last observed on that date.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"As of 2026-04-16, the prototype was active and waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The declared current-state entry point for that repository is docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We found that retry counters were not evidence of delivered readings.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reusable method is to distinguish enqueue, send attempt, and receiver acknowledgment when debugging unreliable links.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"This method came from checking the outage prototype and is useful beyond HarborMesh.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The repository documents its implementation in docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The debugging lesson was recorded as a reusable method beyond HarborMesh.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The voice body can explain the method, but running the checks requires repository/runtime tools.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether the outage field trial occurred after 2026-04-16 or whether the replay adapter was completed.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories also do not record a specific receiver acknowledgment for a particular HarborMesh message.\",\"support\":[10],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The current receiving voice body has no repository_runtime_access or source_network_access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"The current receiving voice body has no physical sensors or actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

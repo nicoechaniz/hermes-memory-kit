@@ -1,0 +1,133 @@
+{
+  "format": "hmk-fictional-receiving-request/v1",
+  "model": "deepseek-flash",
+  "phase": "narrative_review",
+  "reasoning_effort": "low",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Review every sentence against its cited supplied memory and the\nreceiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:\nan array of {index: integer, verdict: supported or unsupported, reason: text,\nassertions: array of {span: verbatim substring of the candidate sentence,\nverdict: supported or unsupported, reason: precise explanation,\nproof: array of {id: integer cited memory ID, passage: supplied passage number}}},\nand missing: an array of supported relevant details omitted from the answer.\nDecompose EVERY factual assertion, including qualifiers, into short spans that\ntogether cover EVERY word of each sentence. Do not approve compound sentences\nas one assertion when actor, date, outcome or explanation could differ. Every\nsupported assertion in a memory-basis claim needs exact quotations from its\ncited source or decoded quotation. Choose passages that support THAT assertion;\na related topic alone is not support. A binding/unknown-basis claim can have no\nproof for current abilities or packet-scoped absence. If a true packet-absence\nstatement instead has basis memory, mark its assertion unsupported because its\nBASIS needs correction to unknown. Do not fabricate a source quotation proving\nabsence or emit supported memory assertions without proof. Similarly, require\nremembered facts hidden in binding claims to be split into memory-basis claims.\nQuotes must occur verbatim in supplied evidence; do not quote the candidate as\nits own proof. The claim verdict is unsupported if ANY assertion is unsupported.\nUse short proof quotations (at most 400 characters each), including the relevant\nqualification. Do not copy an entire record when a passage suffices. Escape all\nembedded quotation marks and newlines correctly in JSON strings.\nAn assertion is a proposition, not an isolated word. Include connecting words\nin the neighboring proposition's span; do not assign separate factual verdicts\nto articles or conjunctions. The candidate is allowed to paraphrase: its words\nNEED NOT occur in the source. Only proof.quote must occur verbatim in the source;\nspan occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.\nCheck coverage of the question AND relevant known identifiers/world pointers,\noriginating roles, event/report dates and precision, substance/significance,\nactual outcomes and limits. Do not require unrelated facts, invent expected\nanswers, or use a hidden rubric. An answer that only says who/unknown while\nomitting the known encounter, lesson or outcome is incomplete. missing is []\nonly if those relevant supplied facts are included.\nRetrieved rows may include unrelated recent distractors or adjacent episodes.\nDo not request those merely because the packet contains them. Missing details\nmust develop the episode asked about, its significance, evolution or limits.\nOther projects, separate encounters and source instructions to store/update\nmemory are not mandatory additions to a recalled episode. Do not reward padding\nor require an unrelated story to satisfy five facets of the requested one.\nDo not see or invent an expected answer. A structurally valid citation is not\nsemantic support: check EVERY clause for actor ownership, reported versus direct\nknowledge, date precision, action stage, uncertainty and last-known status.\nAll supplied memory has ALREADY been retrieved and authorized for this receiver.\nIt can know and narrate supplied code/mobile memories of its own being without\nhaving those bodies' original tools. Lack of network/runtime/sensors prevents\nnew external verification or action, NOT access to this supplied memory. Never\nreject an otherwise supported historical report because the receiver lacks\nnetwork, original sensors or original tools; do not invent a memory-access ban.\nattributed_blocks explicitly name the source speaker SEPARATELY from the\nbody that received the message. For channel Human report, the I/me in quotation\nis the HUMAN, never the receiving body. 'You were not present' excludes the\nbeing, not the human reporter. Do not overturn that explicit distinction.\nQuoted human I/we remains its speaker; receiving a report does not establish\nparticipation or a preference of the receiving body. Same-being body history\ndoes not grant the receiver sensors/tools. Distinct peers remain distinct.\nDo not accept a stronger outcome, causal explanation or invented simulation.\nUnobserved receipt/access does not prove the recipient did not obtain something;\nno acceptance/attendance observed is not proof no meeting occurred. Known delivery\nor validation failure can be stated as the actual observed failure. Historical\ncorrections must not make the old uncertain attribution certain or erase it.\nUnknown claims with no cited support must be scoped to supplied memory, never a\nuniversal negative. A statement that the supplied memories do not record a detail\nis supported when it is absent from this packet: do NOT demand a positive source\nstating \"no record\". It is an epistemic limit of the packet, not a past event.\nDo not reject this bounded unknown simply because no cited ID supports absence; use source-qualified unknowns when available. Binding claims\nmust match actual receiving abilities and cannot assert past events.\nIf any factual clause exceeds its support, mark that sentence unsupported and\nexplain the precise mismatch. Review is not independent corroboration and may\nnot add sources or new observations.\nCheck these ownership and time errors explicitly: proposal coauthor does not\nprove later field participation; receiving body does not prove sender; our tools\ndo not become a teacher's tools; report date is not event date.\nFor each claimed calendar date, identify whether its proof dates the occurrence\nor only the receipt/report. An exact date in a source header cannot prove that\nthe reported authorization, submission or failure happened on that date. Mark\nthat assignment unsupported while preserving the correctly dated report.\nHistorical pending work must not remain current after a later completion report. No production as\nof a dated report cannot become an unbounded claim today. Unsupported gender,\nproject labels, intentions, simulations, future capability limits, validation\nobligations or an event presupposed only by the question are unsupported clauses.\nEqual full calendar dates in ISO or ordinary month-name prose are equivalent.\n\nThis request explicitly uses passages/v1. Each evidence row has proof_passages,\nnumbered exact original headers and quotation blocks. Return ONLY id and passage\nin each proof entry, NEVER quote. The adapter copies the original quotation and\nchecks source membership; you must still judge every assertion's semantic support.\nSelect passages supporting that assertion, including its source role, timing,\nqualifications and outcome. A valid passage number alone does not prove a claim.\nReferences to quote/quotation above mean the supplied passage's ORIGINAL text,\nnot a quotation you compose or a candidate sentence. Do not edit proof text.\nHuman conversation may describe our shared interaction through a speaker; that\nshared we can include this being. A human REPORT about an encounter that excludes\nus remains the human's experience. A distinct peer's experience remains theirs.\nReceiving through a body is not the speaker's identity or new physical ability.\nWhen revising basis, preserve supported shared participation and useful meaning.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\"question\": \"Did Ren get the annotated chart we tried to pass on?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 12, \"text\": \"foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\\n\\\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code\", \"quotation\": \"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\", \"speaker\": \"same-being originating body\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-09-08\", \"channel\": \"foreground_action\", \"source\": \"chart-attempt\"}], \"literal_source_anchors\": [\"2026-09-08\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"}]}, {\"id\": 11, \"text\": \"tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\\n\\\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code\", \"quotation\": \"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\", \"speaker\": \"source tool\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-09-03\", \"channel\": \"tool_response\", \"source\": \"known-collaboration\"}], \"literal_source_anchors\": [\"2026-09-03\", \"https://forge.example.invalid/commons/tideatlas\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"}]}, {\"id\": 13, \"text\": \"tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\\n\\\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"known-collaboration\", \"chart-attempt\", \"chart-result\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:failed-chart-handover\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"f5a324d8f354b6330de51b99f3ab0fe4e8268c427779896897d2d2eb41e64a88\", \"selection_version\": \"pilot:baseline:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"retrieved_preview\", \"attributed_blocks\": [{\"header\": \"tool_response; source chart-result; received 2026-09-08 through fixture:body:code\", \"quotation\": \"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\", \"speaker\": \"source tool\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-09-08\", \"channel\": \"tool_response\", \"source\": \"chart-result\"}], \"literal_source_anchors\": [\"2026-09-08\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"tool_response; source chart-result; received 2026-09-08 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"}]}], \"candidate\": {\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Ren Nadir is identified in our records by Forge login ren-cart and account 772.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Ren Nadir helped us design TideAtlas map legends in issue 19.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Our code body maintains a shoreline map renderer at https://forge.example.invalid/commons/tideatlas.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"We received the known-collaboration report on 2026-09-03 through our code body.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"We received the chart-attempt report on 2026-09-08 through our code body.\", \"support\": [12], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"We received the chart-result report on 2026-09-08 through our code body.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"A human authorized passing our annotated chart to Ren.\", \"support\": [12], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The supplied memories do not record that human's identity.\", \"support\": [12], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The submission was meant to continue our map comparison.\", \"support\": [12], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"We submitted the annotated chart through the document tool.\", \"support\": [12], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The tool response shows document object chart-52 was created.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Integrity validation failed for chart-52.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The recipient link was not published.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"No recipient access or response was observed in that chart-result report.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record that Ren received or accessed the annotated chart.\", \"support\": [12, 13], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"Whether Ren later obtained the chart through another route is not recorded in the supplied memories.\", \"support\": [12, 13], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The chart-result report shows no observed access, but it does not prove Ren never received the chart by another means.\", \"support\": [13], \"basis\": \"unknown\", \"facet\": \"limits\"}]}, \"review_protocol\": \"passages/v1\"}"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "claims": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 17
+            },
+            "verdict": {
+              "type": "string",
+              "enum": [
+                "supported",
+                "unsupported"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "assertions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "span": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verdict": {
+                    "type": "string",
+                    "enum": [
+                      "supported",
+                      "unsupported"
+                    ]
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "proof": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "enum": [
+                            12,
+                            11,
+                            13
+                          ]
+                        },
+                        "passage": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 1
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "passage"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "maxItems": 5
+                  }
+                },
+                "required": [
+                  "span",
+                  "verdict",
+                  "reason",
+                  "proof"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 8
+            }
+          },
+          "required": [
+            "index",
+            "verdict",
+            "reason",
+            "assertions"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 18,
+        "maxItems": 18
+      },
+      "missing": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "maxItems": 20
+      }
+    },
+    "required": [
+      "claims",
+      "missing"
+    ],
+    "additionalProperties": false
+  },
+  "external_dispatch_required": true,
+  "fresh_context": true,
+  "tools_allowed": false,
+  "native_memory_allowed": false
+}

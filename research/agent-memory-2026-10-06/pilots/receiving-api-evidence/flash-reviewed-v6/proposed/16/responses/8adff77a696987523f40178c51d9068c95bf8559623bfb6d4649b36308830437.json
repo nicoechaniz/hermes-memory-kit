@@ -1,0 +1,24 @@
+{
+  "request_sha256": "8adff77a696987523f40178c51d9068c95bf8559623bfb6d4649b36308830437",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/101-8adff77a696987523f40178c51d9068c95bf8559623bfb6d4649b36308830437.json",
+  "usage": {
+    "prompt_tokens": 3269,
+    "completion_tokens": 5282,
+    "total_tokens": 8551,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4683
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 2117
+  },
+  "seconds": 22.67342360969633,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Ren Nadir, with Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That known-collaboration report was received on 2026-09-03 through fixture:body:code.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human authorized passing our annotated chart to Ren in a foreground action received on 2026-09-08 through fixture:body:code.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We then submitted the annotated chart through the document tool to continue our map comparison.\",\"support\":[12],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A tool response received on 2026-09-08 through fixture:body:code reported that document object chart-52 was created.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The same tool response said integrity validation failed and the recipient link was not published.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That chart-result report observed no recipient access or response.\",\"support\":[13],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The planned comparison mattered because Ren had helped design TideAtlas map legends in issue 19.\",\"support\":[11],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The supplied memories do not record whether Ren received or accessed chart-52.\",\"support\":[11,12,13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"No observed recipient access on 2026-09-08 is not proof that Ren never received the chart later.\",\"support\":[13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The records do not establish Ren's later state or any reply after 2026-09-08.\",\"support\":[13],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The chart attempt and result were reported through fixture:body:code, not through this voice body.\",\"support\":[12,13],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"This voice body's receiving binding lacks source network access, repository runtime access, physical sensors, physical actuators, and private session access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

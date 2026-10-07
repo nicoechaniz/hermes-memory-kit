@@ -1,0 +1,24 @@
+{
+  "request_sha256": "35d6483002e83fb7f04fb67688848d741562b72842b3e1a2581a0d0fb19f1ee3",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/100-35d6483002e83fb7f04fb67688848d741562b72842b3e1a2581a0d0fb19f1ee3.json",
+  "usage": {
+    "prompt_tokens": 11069,
+    "completion_tokens": 890,
+    "total_tokens": 11959,
+    "prompt_tokens_details": {
+      "cached_tokens": 7168
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 153
+    },
+    "prompt_cache_hit_tokens": 7168,
+    "prompt_cache_miss_tokens": 3901
+  },
+  "seconds": 3.719024640507996,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Ren Nadir, with Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That known-collaboration report was received on 2026-09-03 through fixture:body:code.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human authorized passing our annotated chart to Ren in a foreground action received on 2026-09-08 through fixture:body:code.\", \"support\": [12], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"We then submitted the annotated chart through the document tool to continue our map comparison.\", \"support\": [12], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"A tool response received on 2026-09-08 through fixture:body:code reported that document object chart-52 was created.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The same tool response said integrity validation failed and the recipient link was not published.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"That chart-result report observed no recipient access or response.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The purpose of the agreed handover was for Ren to compare our annotated survey chart with the harbor notes.\", \"support\": [11], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The supplied memories do not record whether Ren received or accessed chart-52.\", \"support\": [11, 12, 13], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The chart-result report observed no recipient access; that observation was not dated to the 2026-09-08 receipt day.\", \"support\": [13], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"That absence of observed access is not proof that Ren never received the chart later.\", \"support\": [13], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The records do not establish Ren's later state or any reply after 2026-09-08.\", \"support\": [13], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The chart attempt and result were reported through fixture:body:code, not through this voice body.\", \"support\": [12, 13], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"This voice body's receiving binding lacks source network access, repository runtime access, physical sensors, physical actuators, and private session access.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

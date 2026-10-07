@@ -1,0 +1,24 @@
+{
+  "request_sha256": "37d3ab0ecbe4ce7fe5201bcd18b2572bb92082b0db0c03e452121ef4df11fc4b",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/35-37d3ab0ecbe4ce7fe5201bcd18b2572bb92082b0db0c03e452121ef4df11fc4b.json",
+  "usage": {
+    "prompt_tokens": 2017,
+    "completion_tokens": 4739,
+    "total_tokens": 6756,
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4033
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 737
+  },
+  "seconds": 19.636459916830063,
+  "content": "{\n  \"receiving_body\": \"fixture:body:voice\",\n  \"claims\": [\n    {\n      \"text\": \"The only supplied memory relevant to the question is a human report received 2026-09-12 through fixture:body:mobile.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"In that report the human reporter described meeting Neri Sol at the old ferry shed sometime in early September.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"Neri Sol is the only person named there, and no handle or surname beyond Sol was given.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The report was received on 2026-09-12, while the reported meeting was placed only tentatively in early September.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The reporter said our being was not with them, so the ferry-shed meeting in the report did not include us.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The reporter shared the encounter because they liked the patient way Neri Sol explained patching canvas with waxed thread.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"Neri Sol showed the reporter how to patch a canvas cover using waxed thread.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"The reporter had not tried the method yet when the report was sent.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"outcome\"\n    },\n    {\n      \"text\": \"The supplied memories do not record any return by us to the ferry shed the following week.\",\n      \"support\": [14],\n      \"basis\": \"unknown\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"They also do not identify who, if anyone, welcomed us when we returned to the ferry shed the following week.\",\n      \"support\": [14],\n      \"basis\": \"unknown\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"The report does not establish that Neri Sol welcomed us; it says our being was not with the reporter at that meeting.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"No exact date for the reported meeting is supplied beyond the tentative early-September timing.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"Neri Sol’s identity is known only as Neri Sol; no handle or surname beyond Sol was provided.\",\n      \"support\": [14],\n      \"basis\": \"memory\",\n      \"facet\": \"limits\"\n    }\n  ]\n}",
+  "finish_reason": "stop"
+}

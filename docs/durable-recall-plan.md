@@ -183,6 +183,13 @@ low returns valid passage review and catches real attribution changes, but still
 needs relevance adjudication; it is not full narrative qualification. Native
 review/repair transport preserves explicit task turns without loading history.
 Qwen is deferred under the current quota constraint.
+The [complete Flash passage comparison](../research/agent-memory-2026-10-06/pilots/2026-10-07-flash-passage-comparison.md)
+now finishes all 44 questions: 669 claims assessed, four unsupported clauses,
+one partial positive requirement and ten operational rejections. It fails
+qualification. The next frozen candidate keeps Flash initial narration and uses
+native Codex Sol low for review/corrections; all roles, budgets and raw responses
+remain explicit. Its four-case smoke completed; full outside grading is pending.
+The formation and stage-two gates remain unchanged.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

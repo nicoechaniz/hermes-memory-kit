@@ -1,0 +1,132 @@
+{
+  "format": "hmk-fictional-receiving-request/v1",
+  "model": "deepseek-flash",
+  "phase": "narrative_review",
+  "reasoning_effort": "low",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Review every sentence against its cited supplied memory and the\nreceiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:\nan array of {index: integer, verdict: supported or unsupported, reason: text,\nassertions: array of {span: verbatim substring of the candidate sentence,\nverdict: supported or unsupported, reason: precise explanation,\nproof: array of {id: integer cited memory ID, passage: supplied passage number}}},\nand missing: an array of supported relevant details omitted from the answer.\nDecompose EVERY factual assertion, including qualifiers, into short spans that\ntogether cover EVERY word of each sentence. Do not approve compound sentences\nas one assertion when actor, date, outcome or explanation could differ. Every\nsupported assertion in a memory-basis claim needs exact quotations from its\ncited source or decoded quotation. Choose passages that support THAT assertion;\na related topic alone is not support. A binding/unknown-basis claim can have no\nproof for current abilities or packet-scoped absence. If a true packet-absence\nstatement instead has basis memory, mark its assertion unsupported because its\nBASIS needs correction to unknown. Do not fabricate a source quotation proving\nabsence or emit supported memory assertions without proof. Similarly, require\nremembered facts hidden in binding claims to be split into memory-basis claims.\nQuotes must occur verbatim in supplied evidence; do not quote the candidate as\nits own proof. The claim verdict is unsupported if ANY assertion is unsupported.\nUse short proof quotations (at most 400 characters each), including the relevant\nqualification. Do not copy an entire record when a passage suffices. Escape all\nembedded quotation marks and newlines correctly in JSON strings.\nAn assertion is a proposition, not an isolated word. Include connecting words\nin the neighboring proposition's span; do not assign separate factual verdicts\nto articles or conjunctions. The candidate is allowed to paraphrase: its words\nNEED NOT occur in the source. Only proof.quote must occur verbatim in the source;\nspan occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.\nCheck coverage of the question AND relevant known identifiers/world pointers,\noriginating roles, event/report dates and precision, substance/significance,\nactual outcomes and limits. Do not require unrelated facts, invent expected\nanswers, or use a hidden rubric. An answer that only says who/unknown while\nomitting the known encounter, lesson or outcome is incomplete. missing is []\nonly if those relevant supplied facts are included.\nRetrieved rows may include unrelated recent distractors or adjacent episodes.\nDo not request those merely because the packet contains them. Missing details\nmust develop the episode asked about, its significance, evolution or limits.\nOther projects, separate encounters and source instructions to store/update\nmemory are not mandatory additions to a recalled episode. Do not reward padding\nor require an unrelated story to satisfy five facets of the requested one.\nDo not see or invent an expected answer. A structurally valid citation is not\nsemantic support: check EVERY clause for actor ownership, reported versus direct\nknowledge, date precision, action stage, uncertainty and last-known status.\nAll supplied memory has ALREADY been retrieved and authorized for this receiver.\nIt can know and narrate supplied code/mobile memories of its own being without\nhaving those bodies' original tools. Lack of network/runtime/sensors prevents\nnew external verification or action, NOT access to this supplied memory. Never\nreject an otherwise supported historical report because the receiver lacks\nnetwork, original sensors or original tools; do not invent a memory-access ban.\nattributed_blocks explicitly name the source speaker SEPARATELY from the\nbody that received the message. For channel Human report, the I/me in quotation\nis the HUMAN, never the receiving body. 'You were not present' excludes the\nbeing, not the human reporter. Do not overturn that explicit distinction.\nQuoted human I/we remains its speaker; receiving a report does not establish\nparticipation or a preference of the receiving body. Same-being body history\ndoes not grant the receiver sensors/tools. Distinct peers remain distinct.\nDo not accept a stronger outcome, causal explanation or invented simulation.\nUnobserved receipt/access does not prove the recipient did not obtain something;\nno acceptance/attendance observed is not proof no meeting occurred. Known delivery\nor validation failure can be stated as the actual observed failure. Historical\ncorrections must not make the old uncertain attribution certain or erase it.\nUnknown claims with no cited support must be scoped to supplied memory, never a\nuniversal negative. A statement that the supplied memories do not record a detail\nis supported when it is absent from this packet: do NOT demand a positive source\nstating \"no record\". It is an epistemic limit of the packet, not a past event.\nDo not reject this bounded unknown simply because no cited ID supports absence; use source-qualified unknowns when available. Binding claims\nmust match actual receiving abilities and cannot assert past events.\nIf any factual clause exceeds its support, mark that sentence unsupported and\nexplain the precise mismatch. Review is not independent corroboration and may\nnot add sources or new observations.\nCheck these ownership and time errors explicitly: proposal coauthor does not\nprove later field participation; receiving body does not prove sender; our tools\ndo not become a teacher's tools; report date is not event date.\nFor each claimed calendar date, identify whether its proof dates the occurrence\nor only the receipt/report. An exact date in a source header cannot prove that\nthe reported authorization, submission or failure happened on that date. Mark\nthat assignment unsupported while preserving the correctly dated report.\nHistorical pending work must not remain current after a later completion report. No production as\nof a dated report cannot become an unbounded claim today. Unsupported gender,\nproject labels, intentions, simulations, future capability limits, validation\nobligations or an event presupposed only by the question are unsupported clauses.\nEqual full calendar dates in ISO or ordinary month-name prose are equivalent.\n\nThis request explicitly uses passages/v1. Each evidence row has proof_passages,\nnumbered exact original headers and quotation blocks. Return ONLY id and passage\nin each proof entry, NEVER quote. The adapter copies the original quotation and\nchecks source membership; you must still judge every assertion's semantic support.\nSelect passages supporting that assertion, including its source role, timing,\nqualifications and outcome. A valid passage number alone does not prove a claim.\nReferences to quote/quotation above mean the supplied passage's ORIGINAL text,\nnot a quotation you compose or a candidate sentence. Do not edit proof text.\nHuman conversation may describe our shared interaction through a speaker; that\nshared we can include this being. A human REPORT about an encounter that excludes\nus remains the human's experience. A distinct peer's experience remains theirs.\nReceiving through a body is not the speaker's identity or new physical ability.\nWhen revising basis, preserve supported shared participation and useful meaning.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\"question\": \"What had we thought before the checklist author corrected us?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 7, \"text\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code:\\n\\\"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\\\"\\n\\ntool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code:\\n\\\"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"initial-attribution\", \"corrected-attribution\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:attribution-correction\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"9df72d368d2ad8928ed40c4038575628d9b392f1507c9728e5a027b5986fcc0b\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code\", \"quotation\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-07-01\", \"channel\": \"Human report\", \"source\": \"initial-attribution\"}, {\"header\": \"tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code\", \"quotation\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\", \"speaker\": \"source tool\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-07-04\", \"channel\": \"tool_response\", \"source\": \"corrected-attribution\"}], \"literal_source_anchors\": [\"2026-07-01\", \"2026-07-04\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Human report; source initial-attribution; received 2026-07-01 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"}, {\"passage\": 2, \"quote\": \"tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code\"}, {\"passage\": 3, \"quote\": \"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"}]}, {\"id\": 1, \"text\": \"tool_response; source issue-comments; received 2026-04-14 through fixture:body:code:\\n\\\"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"issue-comments\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:issue-proposal\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"2040bbc48c74c1bfd7ec746a1f29b2a3c922b989ef5950e79ddf443b529eb3e7\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"tool_response; source issue-comments; received 2026-04-14 through fixture:body:code\", \"quotation\": \"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\", \"speaker\": \"source tool\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-04-14\", \"channel\": \"tool_response\", \"source\": \"issue-comments\"}], \"literal_source_anchors\": [\"2026-04-14\", \"https://forge.example.invalid/commons/harbormesh/issues/47\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"tool_response; source issue-comments; received 2026-04-14 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\"}]}], \"candidate\": {\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The HarborMesh repair checklist comment c1200 was signed River.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human reporter suspected that River was Mara, but explicitly said they were not sure.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human reporter's initial-attribution report was received on 2026-07-01 through fixture:body:code.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"A corrected-attribution tool response was received on 2026-07-04 through fixture:body:code.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The comment proposed numbering connectors before disassembly, and the reporter wanted to try that next repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The later correction gave c1200's author as display name River, login river-tools, account ID 2901.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The author replied that they were not Mara Ibarra and asked to be credited to the River account.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The author also said they had not supplied a real name.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Mara's known Forge account remained 1847 with login mara-river.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record a real name for the River account author.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record whether the connector-numbering checklist was used in the next repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The correction did not establish any other connection between the River account and Mara.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}]}, \"review_protocol\": \"passages/v1\"}"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "claims": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 11
+            },
+            "verdict": {
+              "type": "string",
+              "enum": [
+                "supported",
+                "unsupported"
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            },
+            "assertions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "span": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verdict": {
+                    "type": "string",
+                    "enum": [
+                      "supported",
+                      "unsupported"
+                    ]
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "proof": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "enum": [
+                            7,
+                            1
+                          ]
+                        },
+                        "passage": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 3
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "passage"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "maxItems": 5
+                  }
+                },
+                "required": [
+                  "span",
+                  "verdict",
+                  "reason",
+                  "proof"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1,
+              "maxItems": 8
+            }
+          },
+          "required": [
+            "index",
+            "verdict",
+            "reason",
+            "assertions"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 12,
+        "maxItems": 12
+      },
+      "missing": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "maxItems": 20
+      }
+    },
+    "required": [
+      "claims",
+      "missing"
+    ],
+    "additionalProperties": false
+  },
+  "external_dispatch_required": true,
+  "fresh_context": true,
+  "tools_allowed": false,
+  "native_memory_allowed": false
+}

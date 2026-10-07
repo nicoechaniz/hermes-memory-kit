@@ -1,0 +1,24 @@
+{
+  "request_sha256": "042f4588b59b15b51361594c338bdbc05d3418bdf2fb837914c27b218168e6f2",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/68-042f4588b59b15b51361594c338bdbc05d3418bdf2fb837914c27b218168e6f2.json",
+  "usage": {
+    "prompt_tokens": 9612,
+    "completion_tokens": 717,
+    "total_tokens": 10329,
+    "prompt_tokens_details": {
+      "cached_tokens": 5504
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_cache_hit_tokens": 5504,
+    "prompt_cache_miss_tokens": 4108
+  },
+  "seconds": 3.027548641897738,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The human reporter said that we spent the morning talking through the porch speaker with Aro.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Aro introduced themself with that name only.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The report came from a human conversation, source quiet-morning, and was received 2026-09-17 through fixture:body:voice.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The report describes a morning conversation.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The supplied memories do not record a separate calendar date for that morning.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"context\"}, {\"text\": \"The morning mattered because we enjoyed hearing the birds during a quiet pause.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The shared morning was remembered as time spent talking with Aro.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"After Aro changed the lantern battery, the porch speaker stopped buzzing.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The human reporter said that they had not tested whether the battery change and the speaker stopping were connected.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The report said the speaker stopping may just have been coincidence.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The report said nothing else was repaired or demonstrated.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The report therefore does not establish that Aro fixed the porch speaker.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record a later test of the porch speaker after that morning.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record any other repair or demonstration by Aro.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not give any fuller identity for Aro beyond the name they introduced.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"Whether Aro actually fixed the porch speaker remains unverified in the supplied memories.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

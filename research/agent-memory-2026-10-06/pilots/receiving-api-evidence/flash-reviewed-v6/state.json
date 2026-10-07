@@ -1,0 +1,237 @@
+{
+  "questions": 44,
+  "completed_candidates": 44,
+  "new_dispatch_attempts": 23,
+  "invocation_max_calls": 48,
+  "results": [
+    {
+      "arm": "baseline",
+      "answer_index": 0,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 1,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 2,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 3,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 4,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 5,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 6,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 7,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 8,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 9,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 10,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 11,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 12,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 13,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 14,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 15,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 16,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 17,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 18,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 19,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 20,
+      "state": "saved"
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 21,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 0,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 1,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 2,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 3,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 4,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 5,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 6,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 7,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 8,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 9,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 10,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 11,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 12,
+      "state": "completed",
+      "rejected": false
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 13,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 14,
+      "state": "saved"
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 15,
+      "state": "completed",
+      "rejected": false
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 16,
+      "state": "completed",
+      "rejected": true
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 17,
+      "state": "completed",
+      "rejected": false
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 18,
+      "state": "completed",
+      "rejected": false
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 19,
+      "state": "completed",
+      "rejected": false
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 20,
+      "state": "completed",
+      "rejected": false
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 21,
+      "state": "completed",
+      "rejected": false
+    }
+  ],
+  "qualification": false
+}

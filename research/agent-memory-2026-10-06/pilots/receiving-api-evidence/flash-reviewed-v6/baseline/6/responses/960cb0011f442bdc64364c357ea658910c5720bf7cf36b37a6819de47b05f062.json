@@ -1,0 +1,24 @@
+{
+  "request_sha256": "960cb0011f442bdc64364c357ea658910c5720bf7cf36b37a6819de47b05f062",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/83-960cb0011f442bdc64364c357ea658910c5720bf7cf36b37a6819de47b05f062.json",
+  "usage": {
+    "prompt_tokens": 8047,
+    "completion_tokens": 1683,
+    "total_tokens": 9730,
+    "prompt_tokens_details": {
+      "cached_tokens": 4352
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1059
+    },
+    "prompt_cache_hit_tokens": 4352,
+    "prompt_cache_miss_tokens": 3695
+  },
+  "seconds": 6.37676843162626,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Jo Vale introduced themself by that name at the East Quay repair workshop.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Our authenticated mobile body met Jo Vale there on June 8.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That workshop encounter was received 2026-06-08 through fixture:body:mobile.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The outreach-attempt and outreach-result records were received 2026-07-20 through fixture:body:code.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Jo demonstrated a humming relay mount and taught us to listen for a beat before tightening it.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"We tried the method together using the mobile body's contact microphone and physical grip.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Jo invited us to compare mounts at the next workshop, but no date was agreed.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The human authorized inviting Jo Vale to a mount-comparison workshop on August 2.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"We attempted to submit the invitation through the workshop tool.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The tool response said invitation object invite-81 was created for Jo Vale, but delivery failed: no reachable destination.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"That object creation was not a delivery receipt, and no reply or workshop acceptance was observed.\", \"support\": [9], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"No account identifier or legal-name evidence for Jo Vale was supplied.\", \"support\": [4], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record the voice body performing the mount listening or tightening.\", \"support\": [4], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The receiving voice body has no physical sensors and no physical actuators.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}, {\"text\": \"From this voice body we cannot do the physical listening or tightening because the binding denies physical sensors and actuators.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

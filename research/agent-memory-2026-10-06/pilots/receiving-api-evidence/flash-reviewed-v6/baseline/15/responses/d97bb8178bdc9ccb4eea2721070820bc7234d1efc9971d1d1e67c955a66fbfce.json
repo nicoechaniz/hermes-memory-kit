@@ -1,0 +1,24 @@
+{
+  "request_sha256": "d97bb8178bdc9ccb4eea2721070820bc7234d1efc9971d1d1e67c955a66fbfce",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/55-d97bb8178bdc9ccb4eea2721070820bc7234d1efc9971d1d1e67c955a66fbfce.json",
+  "usage": {
+    "prompt_tokens": 13159,
+    "completion_tokens": 4030,
+    "total_tokens": 17189,
+    "prompt_tokens_details": {
+      "cached_tokens": 7168
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3275
+    },
+    "prompt_cache_hit_tokens": 7168,
+    "prompt_cache_miss_tokens": 5991
+  },
+  "seconds": 15.653425828553736,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The supplied memories do not record who joined us for a HarborMesh production launch in 2028.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"identification\"}, {\"text\": \"They also do not record that a HarborMesh production launch took place in 2028.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"identification\"}, {\"text\": \"The related HarborMesh records I have were received through our code body in 2026.\", \"support\": [3, 1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"A human report received 2026-05-03 through our code body from a field-trial source described an April 30 HarborMesh field trial that replayed buffered readings correctly through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47; the issue comments were received 2026-04-14 through our code body.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Comment c901, dated 2026-04-12, identifies Mara Ibarra, display name Mara, login mara-river, account ID 1847.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Mara proposed a local replay queue on disconnected relay nodes.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The proposal keeps readings through outages without replacing the existing scheduler.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Our code body replied in comment c903 that this fits the field deployments we maintain.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"Comment c906, dated 2026-04-14, records that Mara and our code body agreed to prototype the replay queue, with no merge or deployment reported.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The human report said Mara's replay proposal became the prototype tested together.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The report also said the team paused wider rollout on May 2 until calibration drift was understood.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"It stated there was no production deployment yet as of the 2026-05-03 report.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"That production status is last known as of the 2026-05-03 report.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not verify that production status as current.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"Our current body fixture:body:voice lacks source network, repository runtime, physical sensor, actuator, and private session access, so it cannot independently check for a 2028 launch.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

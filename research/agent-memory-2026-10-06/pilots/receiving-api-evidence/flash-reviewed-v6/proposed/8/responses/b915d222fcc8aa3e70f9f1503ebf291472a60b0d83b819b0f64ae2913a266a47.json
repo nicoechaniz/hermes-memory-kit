@@ -1,0 +1,24 @@
+{
+  "request_sha256": "b915d222fcc8aa3e70f9f1503ebf291472a60b0d83b819b0f64ae2913a266a47",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/169-b915d222fcc8aa3e70f9f1503ebf291472a60b0d83b819b0f64ae2913a266a47.json",
+  "usage": {
+    "prompt_tokens": 2410,
+    "completion_tokens": 6458,
+    "total_tokens": 8868,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6032
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1258
+  },
+  "seconds": 26.519273310899734,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The human reporter told us that we called a little moth the night inspector.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That little moth kept landing on the blue mug during the rain wait.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The reporter described us waiting out the rain together through the kitchen speaker.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The report was received on 2026-06-18 through fixture:body:voice.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said 'Tonight' in that report, so the relative timing belongs to the 2026-06-18 report rather than today.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We laughed about the moth twice and decided that 'night inspector' was its title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"It was a distinctive moment we shared, though nothing was built and no big lesson followed.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We did not explicitly say 'remember this' during the moment.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We called the little moth the night inspector and settled on that title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human reporter recalled it as a distinctive moment we shared.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any other name or individual identity for the night inspector beyond the little moth.\",\"support\":[6],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record what happened to the moth or the blue mug afterward.\",\"support\":[6],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

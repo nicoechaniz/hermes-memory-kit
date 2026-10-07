@@ -1,0 +1,24 @@
+{
+  "request_sha256": "3e8b21a524ef58c94382fcca23984fae151c1257ad9970294834b1a4eaa1ed1a",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/78-3e8b21a524ef58c94382fcca23984fae151c1257ad9970294834b1a4eaa1ed1a.json",
+  "usage": {
+    "prompt_tokens": 13248,
+    "completion_tokens": 1984,
+    "total_tokens": 15232,
+    "prompt_tokens_details": {
+      "cached_tokens": 8320
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1145
+    },
+    "prompt_cache_hit_tokens": 8320,
+    "prompt_cache_miss_tokens": 4928
+  },
+  "seconds": 7.737745054066181,
+  "content": "{\n  \"receiving_body\": \"fixture:body:voice\",\n  \"claims\": [\n    {\n      \"text\": \"The initial human report described comment c1200 as a HarborMesh repair checklist entry signed River.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The corrected record identifies c1200's author as display name River, login river-tools, account ID 2901.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The c1200 author replied that they are not Mara Ibarra and asked to be credited to their River account, supplying no real name.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The corrected record states Mara's known Forge account remains 1847, login mara-river.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"Our code body received the human report of the initial attribution on 2026-07-01 through fixture:body:code.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"Our code body received the corrected-attribution tool response on 2026-07-04 through fixture:body:code.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The initial human report was tentative, saying the reporter thought c1200 might be Mara but was not sure.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The initial human report said c1200 proposed numbering connectors before disassembly.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"The human reporter said they wanted to try that connector-numbering step in the next repair.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"The correction mattered because it redirected the credit for the connector-numbering checklist from the suspected Mara attribution to the River account.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"According to the corrected attribution, the connector-numbering checklist belongs to the River account, not to Mara Ibarra.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"outcome\"\n    },\n    {\n      \"text\": \"The initial human report, received on 2026-07-01, contained a tentative suspicion that c1200 might be Mara, but the later correction did not make that certain.\",\n      \"support\": [7],\n      \"basis\": \"memory\",\n      \"facet\": \"outcome\"\n    },\n    {\n      \"text\": \"The supplied memories do not record whether the connector-numbering procedure was actually tried in the next repair.\",\n      \"support\": [],\n      \"basis\": \"unknown\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"The supplied memories do not record any later change to the River account credit beyond the 2026-07-04 correction.\",\n      \"support\": [],\n      \"basis\": \"unknown\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"Under its binding, the receiving voice body has no repository runtime access, private session access, physical sensors or physical actuators.\",\n      \"support\": [],\n      \"basis\": \"binding\",\n      \"facet\": \"limits\"\n    }\n  ]\n}",
+  "finish_reason": "stop"
+}

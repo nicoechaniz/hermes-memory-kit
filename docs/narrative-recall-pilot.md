@@ -102,7 +102,16 @@ response reuse retains its original receipt and incurs no new inference call.
 Generation and reviewer effort are frozen separately. The direct DeepSeek
 `none` option explicitly disables thinking and omits reasoning_effort; low/high
 profiles remain unchanged. The four-case non-thinking reviewer smoke failed and
-is not adopted. The current complete trial uses low effort for both roles.
+is not adopted. The completed Flash low trial failed. The next candidate keeps Flash initial
+narration and uses native OpenAI Codex Sol low for review and corrections.
+`receiving_batch.run` freezes `generation_model`, `review_model` and
+`revision_model` separately. Corrections include semantic revisions and an
+initial structural repair. Native roles require an explicit native dispatcher
+and low effort; the direct DeepSeek adapter cannot silently route Sol through
+Nous. Changing a correction role refuses the existing checkpoint.
+The expanded passage instructions keep bounded unknown/binding proof empty,
+require same-claim citation membership and judge significance/relevance from
+supplied evidence. They do not expose expected answers or certify semantics.
 
 Two evidence-grounded revisions are permitted. Actual candidates, reviewers,
 anchor checks, phases and known provider usage remain recorded separately.

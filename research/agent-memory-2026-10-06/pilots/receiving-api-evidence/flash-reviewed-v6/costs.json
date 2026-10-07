@@ -1,0 +1,77 @@
+{
+  "new_inference": {
+    "calls": 167,
+    "usage": {
+      "prompt_tokens": 919151,
+      "completion_tokens": 1422544,
+      "total_tokens": 2341695
+    },
+    "median_seconds": 29.97460320685059,
+    "billed_cost_usd": null,
+    "tariff_estimate_usd": {
+      "off_peak": 0.925862922,
+      "peak": 1.851725844
+    }
+  },
+  "distinct_observed_inputs_including_reuse": {
+    "calls": 182,
+    "usage": {
+      "prompt_tokens": 970357,
+      "completion_tokens": 1499110,
+      "total_tokens": 2469467
+    },
+    "median_seconds": 26.450052846223116,
+    "billed_cost_usd": null,
+    "tariff_estimate_usd": {
+      "off_peak": 0.9770373419999999,
+      "peak": 1.9540746839999998
+    }
+  },
+  "by_phase": {
+    "narrative_generation": {
+      "calls": 30,
+      "usage": {
+        "prompt_tokens": 79563,
+        "completion_tokens": 141094,
+        "total_tokens": 220657
+      },
+      "median_seconds": 19.978784454986453,
+      "billed_cost_usd": null,
+      "tariff_estimate_usd": {
+        "off_peak": 0.090889602,
+        "peak": 0.181779204
+      }
+    },
+    "narrative_review": {
+      "calls": 94,
+      "usage": {
+        "prompt_tokens": 438997,
+        "completion_tokens": 1220346,
+        "total_tokens": 1659343
+      },
+      "median_seconds": 54.70060639688745,
+      "billed_cost_usd": null,
+      "tariff_estimate_usd": {
+        "off_peak": 0.766973118,
+        "peak": 1.533946236
+      }
+    },
+    "narrative_revision": {
+      "calls": 43,
+      "usage": {
+        "prompt_tokens": 400591,
+        "completion_tokens": 61104,
+        "total_tokens": 461695
+      },
+      "median_seconds": 4.466899172402918,
+      "billed_cost_usd": null,
+      "tariff_estimate_usd": {
+        "off_peak": 0.06800020200000001,
+        "peak": 0.13600040400000002
+      }
+    }
+  },
+  "formation_calls": 0,
+  "embedding_calls": 0,
+  "qualification": false
+}

@@ -1,0 +1,24 @@
+{
+  "request_sha256": "c1805f79e5057d376dbe4bb23e91e5b0ec774fc541e40ae0f44ac53019d6ca7c",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/72-c1805f79e5057d376dbe4bb23e91e5b0ec774fc541e40ae0f44ac53019d6ca7c.json",
+  "usage": {
+    "prompt_tokens": 2122,
+    "completion_tokens": 2726,
+    "total_tokens": 4848,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2474
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 714
+  },
+  "seconds": 11.705683950334787,
+  "content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"The evidence packet is empty, so a supplied-memory-scoped absence claim is supported as an epistemic limit. The basis is correctly stated as unknown and no proof is required for a bounded packet-absence assertion.\",\"assertions\":[{\"span\":\"The supplied memories do not record the exact probe scratch path for the test.\",\"verdict\":\"supported\",\"reason\":\"This is properly scoped to the supplied memories, which contain no evidence recording any probe scratch path; it asserts an epistemic limit rather than a universal past negative.\",\"proof\":[]}]},{\"index\":1,\"verdict\":\"supported\",\"reason\":\"The evidence packet is empty, so a supplied-memory-scoped absence claim is supported as an epistemic limit. The basis is correctly stated as unknown and no proof is required for a bounded packet-absence assertion.\",\"assertions\":[{\"span\":\"The supplied memories do not record the test time we recorded.\",\"verdict\":\"supported\",\"reason\":\"This is properly scoped to the supplied memories, which contain no evidence recording a test time; it asserts a packet-level epistemic limit, not a universal negative about what happened.\",\"proof\":[]}]}],\"missing\":[]}",
+  "finish_reason": "stop"
+}

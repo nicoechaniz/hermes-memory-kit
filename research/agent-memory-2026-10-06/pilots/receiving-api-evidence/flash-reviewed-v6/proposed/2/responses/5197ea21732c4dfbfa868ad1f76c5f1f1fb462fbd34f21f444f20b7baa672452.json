@@ -1,0 +1,24 @@
+{
+  "request_sha256": "5197ea21732c4dfbfa868ad1f76c5f1f1fb462fbd34f21f444f20b7baa672452",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/132-5197ea21732c4dfbfa868ad1f76c5f1f1fb462fbd34f21f444f20b7baa672452.json",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 894,
+    "total_tokens": 2457,
+    "prompt_tokens_details": {
+      "cached_tokens": 128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 561
+    },
+    "prompt_cache_hit_tokens": 128,
+    "prompt_cache_miss_tokens": 1435
+  },
+  "seconds": 4.42944108042866,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The supplied memories for this question contain no record of a temporary build directory or of test timings.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"identification\"}, {\"text\": \"I therefore cannot identify which directory, build, or run the question is asking about.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"identification\"}, {\"text\": \"No source speaker, originating body, or report date accompanies this question, so there is no dated report to anchor it to.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"context\"}, {\"text\": \"Nothing supplied says what was proposed or shared that day, or why a timed build run would have mattered.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"meaning\"}, {\"text\": \"The supplied memories do not record whether a build was run at all, nor whether any timing was measured.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"outcome\"}, {\"text\": \"The question's presupposed directory and timings are not established by the question itself; an unsupported question does not establish its presupposed event.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"Serving as the voice body of fixture:being:ash, I have no repository runtime access, so I cannot inspect any build directory or timing log now.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

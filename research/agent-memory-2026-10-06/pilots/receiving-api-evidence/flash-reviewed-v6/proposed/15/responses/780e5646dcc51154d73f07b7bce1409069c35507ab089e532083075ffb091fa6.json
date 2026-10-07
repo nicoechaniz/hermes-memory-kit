@@ -1,0 +1,24 @@
+{
+  "request_sha256": "780e5646dcc51154d73f07b7bce1409069c35507ab089e532083075ffb091fa6",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/143-780e5646dcc51154d73f07b7bce1409069c35507ab089e532083075ffb091fa6.json",
+  "usage": {
+    "prompt_tokens": 2721,
+    "completion_tokens": 4192,
+    "total_tokens": 6913,
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3747
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 1441
+  },
+  "seconds": 18.07034718710929,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a HarborMesh production launch in 2028 or name anyone who joined us for such a launch.\",\"support\":[3,2],\"basis\":\"unknown\",\"facet\":\"identification\"},{\"text\":\"The most recent relevant report was a human field-trial report received 2026-05-03 through fixture:body:code, describing the April 30 HarborMesh trial.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"An earlier same-being project-work report received 2026-04-16 through fixture:body:code said we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"In the remembered work, Mara's replay proposal became the prototype tested together, according to the 2026-05-03 field-trial report.\",\"support\":[3,2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara's replay proposal mattered because it became the prototype tested in the April 30 HarborMesh field trial.\",\"support\":[3,2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"That 2026-05-03 report also says the team paused wider rollout on May 2 until calibration drift is understood.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-05-03 report, there was no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The 2026-04-16 project-work report recorded the declared current-state entry point as docs/STATUS.md under https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The current receiving body fixture:body:voice has no repository runtime access or source network access, so we cannot verify any later production state from this binding.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

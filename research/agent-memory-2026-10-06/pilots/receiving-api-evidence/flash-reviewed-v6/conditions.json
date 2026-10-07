@@ -1,0 +1,20 @@
+{
+  "qualification": false,
+  "packets_sha256": "189360a87b057c7430d44ea5cf6689e17f3fbf7bc7bf786d1949dce25a7b162f",
+  "generation_model": "deepseek-flash",
+  "review_model": "deepseek-flash",
+  "generation_effort": "low",
+  "review_effort": "low",
+  "review_protocol": "passages",
+  "generation_limit": 12000,
+  "review_limit": 32768,
+  "workers": 3,
+  "runner_sha256": "ce4cd217838d24791bce8ef7f1307a301eb966cf5231eadaa330333fb9c76664",
+  "dispatcher_sha256": "a144f054ad5c17d97601a8f4a12f8a1d1518ecbae129aed40eb0008ebecfc545",
+  "exchange_sha256": "5329f6ecb617943025ea08d88baa4f2946b1e956874aa488dcb6b2e5b3f7340c",
+  "narrative_sha256": "7b63157e877515c46b898b39af497d5a6558505e2c3c166dd54023ab867c656c",
+  "independent_grading_required": true,
+  "source_access": false,
+  "tools_allowed": false,
+  "native_memory_allowed": false
+}

@@ -1,0 +1,24 @@
+{
+  "request_sha256": "49646782aa0616b37a01fc2f64ee4fae1e94962f7fbc3522b6924092d8b90b13",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/160-49646782aa0616b37a01fc2f64ee4fae1e94962f7fbc3522b6924092d8b90b13.json",
+  "usage": {
+    "prompt_tokens": 2091,
+    "completion_tokens": 1443,
+    "total_tokens": 3534,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1327
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 683
+  },
+  "seconds": 6.959704245440662,
+  "content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"With no evidence supplied, the packet contains no record of the exact probe scratch path or test time, and the claim is correctly scoped to supplied memory with unknown basis.\",\"assertions\":[{\"span\":\"The supplied memories do not record the exact probe scratch path or test time asked about.\",\"verdict\":\"supported\",\"reason\":\"The evidence list is empty, so the supplied memories indeed do not contain the requested probe scratch path or test time.\",\"proof\":[]}]}],\"missing\":[]}",
+  "finish_reason": "stop"
+}
