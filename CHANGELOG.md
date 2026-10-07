@@ -1,5 +1,30 @@
 ## [Unreleased]
 
+### Durable memory foundation and foreground consolidation
+
+- Verified SQLite online snapshots preserve committed WAL data before schema
+  changes. Bootstrap refuses an existing database; upgrade preserves acquired
+  skills and overwritten pre-images. Unicode title collisions no longer merge
+  distinct records.
+- Native records retain stable UUIDs, searchable revision pre-images, expected-
+  revision updates, explicit event/source metadata and authored summaries.
+  Generic delete reads its pre-image under a writer lock. Protected projections
+  retain their owning correction path.
+- General recall uses neutral corpus priors, complete Unicode query cues,
+  distinct episode IDs, bidirectional links and provenance-bearing packs.
+  Relevance gates apply before quotas/budgets; embedding outages return qualified
+  lexical fallback without provider substitution. Backfill maintains indexes and
+  source-version evidence. Custom graph relations survive Obsidian projection.
+- Explicit finite `capturectl` journals pending source deltas separately from
+  canonical memory, with atomic decisions/cursors and replay. `consolidationctl`
+  binds inferred/generated accounts to complete selected episode manifests,
+  preserves episodes and exposes changed/missing support versions. No automatic
+  extractor, native-memory observer, timer or session hook is installed.
+- Durable selection keeps lasting meaning and world references together,
+  including non-instrumental experience. Select before ingesting; transient
+  project state and native harness suggestions do not enter autobiography by
+  default. Model quality and receiving adoption have separate acceptance gates.
+
 ### Native-first continuity migration
 
 - New workspaces select `hmk-memory`, explicitly disable `dialogue-handoff`, and

@@ -24,6 +24,11 @@ This workspace uses Hermes Memory Kit as its durable memory layer.
 
 ## Remembering experience
 
+HMK preserves what allows a future body to recognize our history and return to
+our affairs after the sessions are gone. Retain enduring meaning and useful
+world references together. Temporary operational relevance alone is insufficient;
+native harness memory candidates need the same judgment before entering HMK.
+
 Within authorized foreground work, consider meaningful experience from human
 conversation, tool responses, actions and embodied encounters. Follow this
 body's actual memory-access policy; this guidance adds no background attention

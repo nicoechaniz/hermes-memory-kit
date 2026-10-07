@@ -274,8 +274,9 @@ def render_frontmatter(chapter, projection, mapping):
         yaml_list(chapter["tags"], indent=2),
         "memory_links:",
     ]
-    for key in LINK_TYPES:
-        lines.append(f"  {key}:")
+    # Custom relations are part of the memory graph, not a closed vocabulary.
+    for key in dict.fromkeys([*LINK_TYPES, *sorted(link_map)]):
+        lines.append(f"  {json.dumps(key, ensure_ascii=False)}:")
         lines.append(yaml_list(link_map.get(key, []), indent=4))
     lines.extend([
         "source_paths:",
