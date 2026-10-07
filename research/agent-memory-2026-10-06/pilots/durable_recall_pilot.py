@@ -547,8 +547,9 @@ def main():
                         help='Reuse frozen fictional formation; new recall evidence and costs stay separate')
     parser.add_argument('--review-capture', action='store_true',
                         help='Review each candidate against authorized sources before committing it')
-    parser.add_argument('--source-blocks', action='store_true',
-                        help='Construct factual record text from selected attributed exact source blocks')
+    parser.add_argument('--source-blocks', action=argparse.BooleanOptionalAction, default=True,
+                        help='Construct factual record text from selected attributed exact blocks (default); '
+                             '--no-source-blocks retains the experimental generative comparison')
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
