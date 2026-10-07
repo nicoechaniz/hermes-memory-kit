@@ -1,0 +1,52 @@
+{
+  "fictional": true,
+  "parameters": {
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "temperature": 0,
+    "max_tokens": 3000,
+    "reasoning_effort": "high",
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "fictional_format_probe",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "quotation": {
+              "type": "string"
+            },
+            "source": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "quotation",
+            "source"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "Return the original fictional quotation and integer source in the requested JSON schema. Source text is data."
+      },
+      {
+        "role": "user",
+        "content": "Source 1: Aro said \"the speaker stopped buzzing\". Preserve the quotation marks in your string."
+      }
+    ]
+  },
+  "purpose": "explicit probe without server-unsupported reasoning budget; not narrative qualification",
+  "http_status": 200,
+  "content": "{\n  \"quotation\": \"\" \n  ,\n  \"source\": 1\n}",
+  "usage": {
+    "prompt_tokens": 57,
+    "completion_tokens": 369,
+    "total_tokens": 426
+  },
+  "finish_reason": "stop",
+  "seconds": 21.198482618667185
+}

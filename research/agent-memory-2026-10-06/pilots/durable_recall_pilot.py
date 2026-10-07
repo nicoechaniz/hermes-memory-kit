@@ -316,6 +316,7 @@ def instrument_embeddings(memory, path):
 
 
 def run_variant(name, guidance, args, corpus):
+    receiving_model = getattr(args, 'receiving_model', None) or args.model
     out = args.out / name
     out.mkdir(mode=0o700, exist_ok=args.resume)
     if getattr(args, 'reuse_capture', None) and not (out/'capture.json').exists():
@@ -534,7 +535,7 @@ participants, dates or outcomes to make a query.'''),
             planner = pending.get('validated_plan')
             if planner is None:
                 for attempt in range(2):
-                    value = chat(args.model, messages, trace)
+                    value = chat(receiving_model, messages, trace)
                     pending['plans'].append(value)
                     save(pending_path, pending)
                     try:
@@ -618,7 +619,7 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
             for attempt in range(2):
                 if getattr(args, 'narrative', False):
                     try:
-                        answer = narrative_recall.answer(args.model, query, evidence, receiving_binding,
+                        answer = narrative_recall.answer(receiving_model, query, evidence, receiving_binding,
                             trace, pending, pending_path, chat, save)
                     except narrative_recall.NarrativeRejected:
                         if not getattr(args, 'complete_diagnostics', False):
@@ -635,7 +636,7 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
                             semantic_review=state['reviews'][-1]['review'], review_is_proof=False,
                             operational_status='rejected', error=state['error'])
                 else:
-                    answer = chat(args.model, answer_messages, trace)
+                    answer = chat(receiving_model, answer_messages, trace)
                 pending.setdefault('answer_attempts', []).append(answer)
                 save(pending_path, pending)
                 try:
@@ -722,10 +723,15 @@ reflection. Keep the same account's purpose rather than creating more events.'''
                 all_retrieval_statuses=sorted({p['retrieval_status'] for a in answers for p in a['packs']}))
 
 
+def optional_reasoning_budget(value):
+    return None if value == 'none' else int(value)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, required=True, help='New synthetic directory; never a live pool')
-    parser.add_argument('--model', required=True, help='Explicit NVIDIA chat model; embeddings stay configured')
+    parser.add_argument('--model', required=True, help='Formation NVIDIA chat model; receiving defaults to it; embeddings stay configured')
+    parser.add_argument('--receiving-model', help='Explicit NVIDIA planner/narrator/reviewer model for both receiving arms; formation remains frozen')
     parser.add_argument('--baseline-commit', default='5926a9d1c120e2d5fcc53e0ef3dd692e2b90da5d')
     parser.add_argument('--resume', action='store_true', help='Resume only this synthetic pilot and retain its evidence')
     parser.add_argument('--consolidate', action='store_true', help='Stage 2 only: run three consolidation passes')
@@ -749,16 +755,17 @@ def main():
                         help='Generate natural narrative with clause support and bounded semantic review')
     parser.add_argument('--narrative-reasoning-effort', choices=('low','high'), default='high',
                         help='Receiving narration/review effort; formation and planning remain low')
-    parser.add_argument('--narrative-reasoning-budget', type=int, default=2048,
-                        help='Receiving reasoning token budget; leave room for answer/review JSON')
+    parser.add_argument('--narrative-reasoning-budget', type=optional_reasoning_budget, default=2048,
+                        help='Receiving reasoning token budget, or none to omit an unsupported provider parameter; output ceiling still applies')
     parser.add_argument('--narrative-max-tokens', type=int, default=12000,
                         help='Receiving output ceiling including reasoning and atomic review; formation remains 6000')
     parser.add_argument('--complete-diagnostics', action='store_true',
                         help='Archive rejected narrative candidates and evaluate remaining questions; never count rejection as success')
     args = parser.parse_args()
-    if not 1 <= args.narrative_reasoning_budget <= 4000:
+    if args.narrative_reasoning_budget is not None and not 1 <= args.narrative_reasoning_budget <= 4000:
         parser.error('narrative reasoning budget must leave room for the JSON answer: 1..4000')
-    if not args.narrative_reasoning_budget < args.narrative_max_tokens <= 32768:
+    if not 1 <= args.narrative_max_tokens <= 32768 or (args.narrative_reasoning_budget is not None
+            and args.narrative_max_tokens <= args.narrative_reasoning_budget):
         parser.error('narrative output ceiling must exceed reasoning budget and be at most 32768')
     if args.reuse_with_retrieval_upgrade and not args.reuse_capture:
         parser.error('--reuse-with-retrieval-upgrade needs --reuse-capture')
@@ -783,6 +790,7 @@ def main():
                       reasoning_effort='low',
                       guidance_hashes=dict(baseline=digest(baseline), proposed=digest(proposed)),
                       fixture_hash=digest(corpus), retrieval_threshold=0.4, pack_budget=1500, pack_limit=5)
+    conditions['receiving_model'] = args.receiving_model or args.model
     conditions['consolidate'] = args.consolidate
     conditions['embedding_config'] = configuration.embeddings_runtime_config()
     conditions['rerank_provider'] = configuration.rerank_provider_default()
@@ -816,7 +824,7 @@ def main():
         conditions['formation_origin_conditions'] = source
     if args.resume:
         previous = json.loads((args.out/'conditions.json').read_text())
-        for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
+        for field in ('model','receiving_model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
                       'consolidate', 'retrieval_threshold', 'pack_budget', 'pack_limit',
                       'embedding_config', 'rerank_provider', 'retrieval_profile', 'retrieval_sha256',
                       'backend_dependencies',

@@ -1,0 +1,18 @@
+{
+  "fictional": true,
+  "qualification": false,
+  "files": {
+    "provider-ultra-availability-probe.json": {
+      "bytes": 1262,
+      "sha256": "d100fdaf9770c1042081e14fc314ca36630589525305fc7497a74d8f7d101a9e"
+    },
+    "provider-ultra-availability-recheck.json": {
+      "bytes": 1462,
+      "sha256": "2496e2c6182360c114c7b6a534881c6f9afd437057e321634fe929535c62df24"
+    },
+    "provider-ultra-no-budget-probe.json": {
+      "bytes": 1402,
+      "sha256": "ca7d5d5d3cd2e66f953b60ce06a42f16fb747a0586176bb49b5e9041f44fcd58"
+    }
+  }
+}
