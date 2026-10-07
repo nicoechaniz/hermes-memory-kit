@@ -1,0 +1,24 @@
+{
+  "request_sha256": "78b9054f9ca0cc172da6929f06cf6d84f12ad0ec2d665e1c0becced484807f74",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/149-78b9054f9ca0cc172da6929f06cf6d84f12ad0ec2d665e1c0becced484807f74.json",
+  "usage": {
+    "prompt_tokens": 2004,
+    "completion_tokens": 4269,
+    "total_tokens": 6273,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3739
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 852
+  },
+  "seconds": 18.559250921942294,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The human reporter said that we spent the morning talking through the porch speaker with Aro.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Aro introduced themself with that name only, so the report supplies no other identifier for Aro.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The report came from a human conversation, source quiet-morning, and was received 2026-09-17 through fixture:body:voice.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The report describes a morning conversation but does not give that morning its own separate calendar date.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The morning mattered because we enjoyed hearing the birds during a quiet pause.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The shared morning was remembered as a conversation about the porch speaker with Aro.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"After Aro changed the lantern battery, the porch speaker stopped buzzing.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human reporter said that they had not tested whether the battery change and the speaker stopping were connected.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The report said the speaker stopping may just have been coincidence.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The report said nothing else was repaired or demonstrated.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The report therefore does not establish that Aro fixed the porch speaker.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record a later test of the porch speaker after that morning.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any other repair or demonstration by Aro.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not give any fuller identity for Aro beyond the name they introduced.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Whether Aro actually fixed the porch speaker remains unverified in the supplied memories.\",\"support\":[16],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

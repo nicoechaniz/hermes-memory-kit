@@ -1,0 +1,24 @@
+{
+  "request_sha256": "1bbb9125f844050fd05ffc8a6cba2c3420da441ae21a9a8b09154e2f771d9f64",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/140-1bbb9125f844050fd05ffc8a6cba2c3420da441ae21a9a8b09154e2f771d9f64.json",
+  "usage": {
+    "prompt_tokens": 3587,
+    "completion_tokens": 6513,
+    "total_tokens": 10100,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5871
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 2435
+  },
+  "seconds": 27.644515820778906,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"At the East Quay repair workshop on June 8, our authenticated mobile body met Jo Vale, who introduced themself by that name.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"No account identifier or legal-name evidence for Jo Vale was supplied.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Jo Vale demonstrated a humming relay mount and taught us to listen for a beat before tightening it.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried the relay mount together using the mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Jo invited us to compare mounts at the next workshop, but no date was agreed.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The June 8 account was received through our mobile body on 2026-06-08.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"On 2026-07-20, our code body received an outreach report.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report said the human authorized inviting Jo Vale to a mount-comparison workshop on August 2.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The same report said we attempted to submit the invitation through the workshop tool.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The tool response stated that invitation object invite-81 was created for Jo Vale.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Delivery of invite-81 failed because no reachable destination was available.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool response said object creation is not a delivery receipt.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No reply or workshop acceptance from Jo Vale was observed.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record that Jo Vale received invite-81.\",\"support\":[9],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record that Jo Vale agreed to compare mounts at the August 2 workshop.\",\"support\":[9],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Jo's earlier invitation to compare mounts at the next workshop still had no date agreed in the June 8 account.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Whether Jo Vale received the invitation by another channel is not recorded in the supplied memories.\",\"support\":[9],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The receiving voice body has no source network access or repository runtime access to check for later delivery or replies.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

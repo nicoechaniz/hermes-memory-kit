@@ -1,0 +1,16 @@
+{
+  "request_sha256": "63118b7db5ff3011b8ba01b753c6bf46f4ea169604711e88c3a6172ae9490744",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/13/dispatches/63118b7db5ff3011b8ba01b753c6bf46f4ea169604711e88c3a6172ae9490744.json",
+  "usage": {
+    "prompt_tokens": 20352,
+    "completion_tokens": 299,
+    "total_tokens": 20651
+  },
+  "seconds": 6.6088056126609445,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our code body learned this lesson while checking HarborMesh's outage replay prototype.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The account of our debugging work was received through our code body on 2026-08-05.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The supplied memories do not record the investigation's date.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"We found that retry counters were not evidence that readings had arrived.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our reusable method distinguishes putting a message in the queue, attempting to send it, and receiving an acknowledgment from the receiver.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"That distinction helps us assess delivery when debugging unreliable links.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The lesson is useful beyond HarborMesh.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The repository documents the implementation in docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I can explain the method in this voice body.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This receiving body lacks repository and runtime access to run the checks.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

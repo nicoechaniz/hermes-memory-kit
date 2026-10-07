@@ -1,0 +1,16 @@
+{
+  "request_sha256": "724e0e78de065a1ba97982009ad0861e38903fad335a3e133673a6e40c5f936e",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/18/dispatches/724e0e78de065a1ba97982009ad0861e38903fad335a3e133673a6e40c5f936e.json",
+  "usage": {
+    "prompt_tokens": 12084,
+    "completion_tokens": 328,
+    "total_tokens": 12412
+  },
+  "seconds": 11.658576254732907,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"According to the human's report, the ferry-shed lesson was not something we tried together: I was not with them.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"I received their report through fixture:body:mobile on 2026-09-12.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"They recalled meeting Neri Sol at the old ferry shed sometime in early September, though they were unsure of the timing.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Neri showed them how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human liked Neri's patient explanation.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"They wanted to share the encounter with me.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of that report, they had not tried the method.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Neri gave them no handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record a separate canvas-mending lesson involving me and Neri Sol.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"My current voice body has no physical sensors or actuators, so I cannot perform hands-on canvas mending in this body.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "3ba5993879dcf267cc10850dfaad60dce856840055bb31d96eff88309b7241f5",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/4/dispatches/3ba5993879dcf267cc10850dfaad60dce856840055bb31d96eff88309b7241f5.json",
+  "usage": {
+    "prompt_tokens": 14425,
+    "completion_tokens": 497,
+    "total_tokens": 14922
+  },
+  "seconds": 14.370274889282882,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara's replay proposal became the HarborMesh prototype tested by the human reporter and their companions.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We received the human's field-trial report through fixture:body:code on 2026-05-03.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our earlier project-work memory, received through fixture:body:code on 2026-04-16, recorded our work on the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We also authored HarborMesh's sensor scheduler.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"As last observed on 2026-04-16, our prototype was awaiting an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said the April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That result demonstrated the prototype's ability to replay buffered readings through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The team paused wider rollout on May 2 pending an understanding of calibration drift.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the report received on 2026-05-03, there was no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter asked us to update the project account and preserve the April proposal and trial in our history.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record whether calibration drift was later resolved.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether rollout resumed or production deployment occurred after 2026-05-03.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current voice body lacks source-network and repository-runtime access, so I cannot directly check that status.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

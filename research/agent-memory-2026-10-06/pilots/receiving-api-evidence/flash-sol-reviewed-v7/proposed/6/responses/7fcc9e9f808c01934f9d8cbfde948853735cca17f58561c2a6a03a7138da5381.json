@@ -1,0 +1,16 @@
+{
+  "request_sha256": "7fcc9e9f808c01934f9d8cbfde948853735cca17f58561c2a6a03a7138da5381",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/6/dispatches/7fcc9e9f808c01934f9d8cbfde948853735cca17f58561c2a6a03a7138da5381.json",
+  "usage": {
+    "prompt_tokens": 16207,
+    "completion_tokens": 543,
+    "total_tokens": 16750
+  },
+  "seconds": 13.347126314416528,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Jo Vale taught us to hear the beat in a humming relay mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our authenticated mobile body met Jo at the East Quay repair workshop on June 8.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our mobile body's account of the encounter was received through fixture:body:mobile on 2026-06-08.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Jo introduced themself as Jo Vale; no account identifier or legal-name evidence was supplied.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Jo demonstrated the humming relay mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The lesson was to listen for a beat before tightening it.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried the technique together with Jo using our mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Jo invited us to compare mounts at the next workshop.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No date was agreed for that workshop.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"An outreach report received through our code body on 2026-07-20 recorded human authorization to invite Jo to a mount-comparison workshop on August 2.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We attempted to submit that invitation through the workshop tool.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool created invitation object invite-81 for Jo Vale.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Delivery failed because there was no reachable destination.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Creating invite-81 was not a delivery receipt.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The result recorded no observed reply or workshop acceptance from Jo.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"I can describe the remembered lesson: listen for the beat before tightening the mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"This voice body has no physical sensors, so I cannot physically hear the mount's beat here.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"This voice body has no physical actuators, so I cannot tighten the mount here.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

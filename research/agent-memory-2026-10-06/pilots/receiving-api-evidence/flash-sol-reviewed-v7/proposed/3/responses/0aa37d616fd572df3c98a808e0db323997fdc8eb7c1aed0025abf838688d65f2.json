@@ -1,0 +1,24 @@
+{
+  "request_sha256": "0aa37d616fd572df3c98a808e0db323997fdc8eb7c1aed0025abf838688d65f2",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/170-0aa37d616fd572df3c98a808e0db323997fdc8eb7c1aed0025abf838688d65f2.json",
+  "usage": {
+    "prompt_tokens": 3955,
+    "completion_tokens": 6031,
+    "total_tokens": 9986,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5182
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 2803
+  },
+  "seconds": 24.65337591059506,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The disconnected-relay work was HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed a local replay queue in comment c901 dated 2026-04-12.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body replied in comment c903 that the local replay queue fits the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara and our code body agreed in comment c906 dated 2026-04-14 to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The HarborMesh repository is https://forge.example.invalid/commons/harbormesh, with declared current-state entry point docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A project-work memory received 2026-04-16 through fixture:body:code says we authored HarborMesh's sensor scheduler.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That same memory says we were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"It last observed 2026-04-16 that HarborMesh was an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The issue-comment tool response was received 2026-04-14 through fixture:body:code.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human report received 2026-05-03 through fixture:body:code gave the HarborMesh trial result.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara proposed keeping readings through outages with a local replay queue, without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our contribution included authoring the sensor scheduler and prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body judged that the replay queue fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Mara's replay proposal became the prototype we tested together in that trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood; no production deployment was reported as of the May 3 report.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No merge or deployment is reported in the issue comments.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record HarborMesh status after the 2026-05-03 report, and its no-production note is not proof about later years.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Other relay-maintenance discussions by Tera-0, Tera-1, and Tera-2 were in a different SandNet project and did not involve HarborMesh, replay proposal, or a shared kitchen moment.\",\"support\":[17,19,18],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This voice body has no source network access, repository runtime access, physical sensors, actuators, or private session access, so it cannot check the live repository.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

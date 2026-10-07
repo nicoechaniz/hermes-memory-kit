@@ -1,0 +1,16 @@
+{
+  "request_sha256": "dc53a8975caaeef3c9b26d35a179622a0df51ace05e90a35c6cec145eba92126",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/21/dispatches/dc53a8975caaeef3c9b26d35a179622a0df51ace05e90a35c6cec145eba92126.json",
+  "usage": {
+    "prompt_tokens": 12716,
+    "completion_tokens": 353,
+    "total_tokens": 13069
+  },
+  "seconds": 14.610565292648971,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a shared return to the ferry shed the following week or identify anyone who welcomed us on such a visit.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"I received the human reporter's account through fixture:body:mobile on 2026-09-12.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter recalled meeting Neri Sol at the old ferry shed, tentatively placing the encounter sometime in early September.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The reporter said I was not with them at that encounter.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Neri showed the reporter how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter liked Neri's patient explanation.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"At the time of the report, the reporter had not tried the method yet.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Neri did not give the reporter a handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

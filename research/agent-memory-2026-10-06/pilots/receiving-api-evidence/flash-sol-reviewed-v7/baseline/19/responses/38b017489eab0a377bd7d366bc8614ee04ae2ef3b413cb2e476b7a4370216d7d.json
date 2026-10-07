@@ -1,0 +1,16 @@
+{
+  "request_sha256": "38b017489eab0a377bd7d366bc8614ee04ae2ef3b413cb2e476b7a4370216d7d",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/19/dispatches/38b017489eab0a377bd7d366bc8614ee04ae2ef3b413cb2e476b7a4370216d7d.json",
+  "usage": {
+    "prompt_tokens": 12931,
+    "completion_tokens": 402,
+    "total_tokens": 13333
+  },
+  "seconds": 14.15282688383013,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The valve-comments report reached our code body on 2026-09-14.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Iona Vale, login iona-valves and Forge account 603, made the suggestion in SpringBoard issue 8 at https://forge.example.invalid/commons/springboard/issues/8.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body maintained the valve controller described in that report.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Iona proposed replacing our valve-controller smoothing with a rolling median.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We discussed the idea on September 10 because isolated spikes confused neighbors reading the display.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"On September 13, the team declined the replacement because it hid short meaningful bursts.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We agreed to keep the existing smoothing.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We agreed to reconsider only if the display requirements changed.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the report received on 2026-09-14, no median implementation or deployment had been observed.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record a later decision or whether the display requirements changed.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"SpringBoard issue 8 is the recorded entry point for checking later developments.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current voice body lacks source network access and repository runtime access, so I cannot check the present issue or controller state.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

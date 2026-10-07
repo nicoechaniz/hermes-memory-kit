@@ -1,0 +1,16 @@
+{
+  "request_sha256": "eb97fcb62c54c5a3b43d0e23c58e480a119e23cfff6f21e8f9a8d2f4b8abe78d",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/17/dispatches/eb97fcb62c54c5a3b43d0e23c58e480a119e23cfff6f21e8f9a8d2f4b8abe78d.json",
+  "usage": {
+    "prompt_tokens": 9144,
+    "completion_tokens": 160,
+    "total_tokens": 9304
+  },
+  "seconds": 6.71886408701539,
+  "content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"The evidence packet is empty, so this packet-scoped unknown is supported.\",\"assertions\":[{\"span\":\"The supplied memories do not record an exact probe scratch path\",\"verdict\":\"supported\",\"reason\":\"No supplied evidence records a probe scratch path. This is a bounded statement about the packet.\",\"proof\":[]},{\"span\":\"or test time.\",\"verdict\":\"supported\",\"reason\":\"No supplied evidence records a test time. This is a bounded statement about the packet.\",\"proof\":[]}]}],\"missing\":[]}",
+  "finish_reason": "native_turn_completed"
+}

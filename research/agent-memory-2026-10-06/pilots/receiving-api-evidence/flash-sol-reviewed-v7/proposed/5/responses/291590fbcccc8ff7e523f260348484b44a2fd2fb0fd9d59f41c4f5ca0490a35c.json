@@ -1,0 +1,24 @@
+{
+  "request_sha256": "291590fbcccc8ff7e523f260348484b44a2fd2fb0fd9d59f41c4f5ca0490a35c",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/172-291590fbcccc8ff7e523f260348484b44a2fd2fb0fd9d59f41c4f5ca0490a35c.json",
+  "usage": {
+    "prompt_tokens": 3761,
+    "completion_tokens": 7465,
+    "total_tokens": 11226,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6583
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 2609
+  },
+  "seconds": 29.97460320685059,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"HarborMesh is our project with repository https://forge.example.invalid/commons/harbormesh and declared current-state entry point docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, opened HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Issue 47 comment c901 dated 2026-04-12 proposed a local replay queue on disconnected relay nodes; our code body replied in c903 that it fits the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Comment c906 dated 2026-04-14 records that Mara and our code body agreed to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The issue-comments tool response was received 2026-04-14 through fixture:body:code and reported no merge or deployment.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our project-work note received 2026-04-16 through fixture:body:code last observed HarborMesh on 2026-04-16 as an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human field-trial report was received 2026-05-03 through fixture:body:code.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report dates the HarborMesh trial to April 30 and the wider-rollout pause to May 2.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara's replay proposal kept readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"By the 2026-05-03 report, Mara's April replay proposal had become the prototype the team tested together.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift is understood.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-05-03 report, there was no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The debugging-lesson report was received 2026-08-05 through fixture:body:code.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"While examining HarborMesh replay failures, we found that retry counters were not evidence of delivered readings.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reusable method distinguishes enqueue, send attempt and receiver acknowledgment when debugging unreliable links.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The repository documents that method in docs/replay-debugging.md, the method is useful beyond HarborMesh, and the voice body can explain it.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The supplied memories do not record whether the wider rollout resumed after the May 2 pause or whether calibration drift was resolved.\",\"support\":[3,10],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Our latest supplied project-status report is the 2026-05-03 human report; the later 2026-08-05 report adds a debugging lesson but no new rollout status.\",\"support\":[3,10],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This voice receiving body lacks repository/runtime access, so it cannot run the replay-debugging checks itself.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

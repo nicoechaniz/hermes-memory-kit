@@ -1,0 +1,2936 @@
+{
+  "narrative": {
+    "generations": [
+      {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "The human reporter's 2026-05-03 field-trial report named Mara's replay proposal.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "That report said Mara's replay proposal became the prototype we tested together.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "Our same-being originating body had earlier reported authoring HarborMesh's sensor scheduler and prototyping the replay adapter agreed with Mara.",
+            "support": [
+              2
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The field-trial report was received on 2026-05-03 through fixture:body:code.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The trial it described occurred on April 30.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The team paused wider rollout on May 2 until calibration drift was understood.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "Our prior project-work memory, received 2026-04-16 through fixture:body:code, last observed an active prototype waiting for an outage field trial.",
+            "support": [
+              2
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "That earlier report listed the repository https://forge.example.invalid/commons/harbormesh and declared docs/STATUS.md as its current-state entry point.",
+            "support": [
+              2
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "In our earlier work, the prototype was a replay adapter agreed with Mara for HarborMesh.",
+            "support": [
+              2
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The April 30 outage replay was the awaited field-trial result for that prototype.",
+            "support": [
+              2,
+              3
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The successful replay mattered because it demonstrated buffered readings moving correctly through an outage.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "As of the 2026-05-03 report, there was no production deployment yet.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "As of that report, wider rollout remained paused pending understanding of calibration drift.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The reporter asked that the April proposal and trial be kept in our project account and history.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The supplied memories do not record whether calibration drift was later understood or whether the wider rollout resumed after 2026-05-03.",
+            "support": [
+              3
+            ],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record whether a production deployment occurred after 2026-05-03.",
+            "support": [
+              3
+            ],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The recorded entry point for checking present state remains docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+            "support": [
+              2,
+              3
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "Our current fixture:body:voice body has no source-network or repository-runtime access, so it cannot directly check current project status.",
+            "support": [],
+            "basis": "binding",
+            "facet": "limits"
+          }
+        ]
+      },
+      {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "Mara's replay proposal became the HarborMesh prototype tested by the human reporter and their companions.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "We received the human's field-trial report through fixture:body:code on 2026-05-03.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "Our earlier project-work memory, received through fixture:body:code on 2026-04-16, recorded our work on the replay adapter agreed with Mara.",
+            "support": [
+              2
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "We also authored HarborMesh's sensor scheduler.",
+            "support": [
+              2
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "As last observed on 2026-04-16, our prototype was awaiting an outage field trial.",
+            "support": [
+              2
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The reporter said the April 30 trial replayed buffered readings correctly through an outage.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "That result demonstrated the prototype's ability to replay buffered readings through an outage.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The team paused wider rollout on May 2 pending an understanding of calibration drift.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "As of the report received on 2026-05-03, there was no production deployment yet.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The reporter asked us to update the project account and preserve the April proposal and trial in our history.",
+            "support": [
+              3
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The supplied memories do not record whether calibration drift was later resolved.",
+            "support": [
+              3
+            ],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record whether rollout resumed or production deployment occurred after 2026-05-03.",
+            "support": [
+              3
+            ],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+            "support": [
+              2
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "My current voice body lacks source-network and repository-runtime access, so I cannot directly check that status.",
+            "support": [],
+            "basis": "binding",
+            "facet": "limits"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "The human reporter's 2026-05-03 field-trial report named Mara's replay proposal.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "That report said Mara's replay proposal became the prototype we tested together.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Our same-being originating body had earlier reported authoring HarborMesh's sensor scheduler and prototyping the replay adapter agreed with Mara.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The field-trial report was received on 2026-05-03 through fixture:body:code.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The trial it described occurred on April 30.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The team paused wider rollout on May 2 until calibration drift was understood.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Our prior project-work memory, received 2026-04-16 through fixture:body:code, last observed an active prototype waiting for an outage field trial.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "That earlier report listed the repository https://forge.example.invalid/commons/harbormesh and declared docs/STATUS.md as its current-state entry point.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "In our earlier work, the prototype was a replay adapter agreed with Mara for HarborMesh.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The April 30 outage replay was the awaited field-trial result for that prototype.",
+              "support": [
+                2,
+                3
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The successful replay mattered because it demonstrated buffered readings moving correctly through an outage.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "As of the 2026-05-03 report, there was no production deployment yet.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "As of that report, wider rollout remained paused pending understanding of calibration drift.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The reporter asked that the April proposal and trial be kept in our project account and history.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record whether calibration drift was later understood or whether the wider rollout resumed after 2026-05-03.",
+              "support": [
+                3
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record whether a production deployment occurred after 2026-05-03.",
+              "support": [
+                3
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The recorded entry point for checking present state remains docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+              "support": [
+                2,
+                3
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "Our current fixture:body:voice body has no source-network or repository-runtime access, so it cannot directly check current project status.",
+              "support": [],
+              "basis": "binding",
+              "facet": "limits"
+            }
+          ]
+        },
+        "review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The header dates and attributes the report, which names Mara's proposal.",
+              "assertions": [
+                {
+                  "span": "The human reporter's 2026-05-03 field-trial report",
+                  "verdict": "supported",
+                  "reason": "This dates receipt of the human field-trial report, not the trial itself.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": " named Mara's replay proposal.",
+                  "verdict": "supported",
+                  "reason": "The report explicitly names Mara's replay proposal.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "unsupported",
+              "reason": "The prototype outcome is supported, but the unqualified 'we' transfers the human reporter's participation to the receiving being.",
+              "assertions": [
+                {
+                  "span": "That report said Mara's replay proposal became the prototype",
+                  "verdict": "supported",
+                  "reason": "The human report explicitly describes the proposal becoming the tested prototype.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " we tested together.",
+                  "verdict": "unsupported",
+                  "reason": "The source's 'we' belongs to the human reporter and their companions; it does not establish this being's trial participation.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The retained earlier block records these same-being contributions.",
+              "assertions": [
+                {
+                  "span": "Our same-being originating body had earlier reported authoring HarborMesh's sensor scheduler",
+                  "verdict": "supported",
+                  "reason": "The earlier project-work block attributes scheduler authorship to the same-being originating body.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 0
+                    },
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " and prototyping the replay adapter agreed with Mara.",
+                  "verdict": "supported",
+                  "reason": "That block explicitly records prototyping the adapter agreed with Mara.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The receipt date and receiving body match the header.",
+              "assertions": [
+                {
+                  "span": "The field-trial report was received on 2026-05-03 through fixture:body:code.",
+                  "verdict": "supported",
+                  "reason": "The source header explicitly gives this receipt date, channel source, and receiving body.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "April 30 dates the trial occurrence in the report.",
+              "assertions": [
+                {
+                  "span": "The trial it described occurred on April 30.",
+                  "verdict": "supported",
+                  "reason": "The report identifies the event as the April 30 trial.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The reported trial behavior is stated explicitly.",
+              "assertions": [
+                {
+                  "span": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+                  "verdict": "supported",
+                  "reason": "The report gives the trial date, project, successful replay, and outage condition.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "This describes the dated pause and its condition; 'until' does not assert that understanding was achieved.",
+              "assertions": [
+                {
+                  "span": "The team paused wider rollout on May 2",
+                  "verdict": "supported",
+                  "reason": "May 2 explicitly dates the team's rollout pause, rather than report receipt.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " until calibration drift was understood.",
+                  "verdict": "supported",
+                  "reason": "This backshifts the report's condition that rollout is paused until calibration drift is understood.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The earlier block records both receipt metadata and the observed prototype state.",
+              "assertions": [
+                {
+                  "span": "Our prior project-work memory, received 2026-04-16 through fixture:body:code,",
+                  "verdict": "supported",
+                  "reason": "The retained block's header gives this source, receipt date, and receiving body.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": " last observed an active prototype waiting for an outage field trial.",
+                  "verdict": "supported",
+                  "reason": "The earlier block explicitly records this last-observed state on 2026-04-16.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "Both world pointers and their roles appear in the earlier block.",
+              "assertions": [
+                {
+                  "span": "That earlier report listed the repository https://forge.example.invalid/commons/harbormesh",
+                  "verdict": "supported",
+                  "reason": "The earlier block explicitly identifies this repository URL.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " and declared docs/STATUS.md as its current-state entry point.",
+                  "verdict": "supported",
+                  "reason": "The block explicitly identifies this path as the declared current-state entry point.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "The earlier same-being project work identifies the adapter, project, and agreement.",
+              "assertions": [
+                {
+                  "span": "In our earlier work, the prototype was a replay adapter agreed with Mara for HarborMesh.",
+                  "verdict": "supported",
+                  "reason": "The earlier block describes our HarborMesh work as prototyping the replay adapter agreed with Mara.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "The two cited stages connect the awaited outage trial with the reported prototype trial.",
+              "assertions": [
+                {
+                  "span": "The April 30 outage replay was the awaited field-trial result for that prototype.",
+                  "verdict": "supported",
+                  "reason": "The earlier prototype awaited an outage field trial; the later report identifies Mara's proposal as the prototype tested in the successful April 30 outage trial.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    },
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "supported",
+              "reason": "The significance paraphrases the explicitly reported successful outage replay.",
+              "assertions": [
+                {
+                  "span": "The successful replay mattered because it demonstrated buffered readings moving correctly through an outage.",
+                  "verdict": "supported",
+                  "reason": "This describes the practical significance of the reported correct replay of buffered readings through an outage, without inventing a personal feeling.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "supported",
+              "reason": "The absence of production deployment is bounded to the dated report.",
+              "assertions": [
+                {
+                  "span": "As of the 2026-05-03 report,",
+                  "verdict": "supported",
+                  "reason": "The header dates receipt of the report to 2026-05-03.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": " there was no production deployment yet.",
+                  "verdict": "supported",
+                  "reason": "The report explicitly states no production deployment yet.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "verdict": "supported",
+              "reason": "The report presents the rollout pause as pending calibration understanding.",
+              "assertions": [
+                {
+                  "span": "As of that report, wider rollout remained paused pending understanding of calibration drift.",
+                  "verdict": "supported",
+                  "reason": "The report states that the team paused wider rollout until calibration drift is understood.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 14,
+              "verdict": "supported",
+              "reason": "This accurately attributes the retention request to the reporter.",
+              "assertions": [
+                {
+                  "span": "The reporter asked that the April proposal and trial be kept in our project account and history.",
+                  "verdict": "supported",
+                  "reason": "The reporter requests updating the project account and keeping the April proposal and trial in history.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 15,
+              "verdict": "supported",
+              "reason": "This is a correctly scoped packet limit with unknown basis.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether calibration drift was later understood",
+                  "verdict": "supported",
+                  "reason": "The packet contains no later resolution of calibration drift.",
+                  "proof": []
+                },
+                {
+                  "span": " or whether the wider rollout resumed after 2026-05-03.",
+                  "verdict": "supported",
+                  "reason": "The packet contains no post-report rollout resumption status.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 16,
+              "verdict": "supported",
+              "reason": "This states a packet-scoped unknown, not a universal absence of deployment.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether a production deployment occurred after 2026-05-03.",
+                  "verdict": "supported",
+                  "reason": "No supplied report records a production deployment after that date.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 17,
+              "verdict": "supported",
+              "reason": "The claim identifies the retained recorded pointer rather than asserting independently verified present project state.",
+              "assertions": [
+                {
+                  "span": "The recorded entry point for checking present state remains docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+                  "verdict": "supported",
+                  "reason": "The earlier block declares this current-state entry point and repository; the later block supplies no replacement pointer.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 18,
+              "verdict": "supported",
+              "reason": "The receiving binding denies both access types needed for a direct current-status check.",
+              "assertions": [
+                {
+                  "span": "Our current fixture:body:voice body has no source-network or repository-runtime access,",
+                  "verdict": "supported",
+                  "reason": "The receiving binding identifies the voice body and sets both access flags to false.",
+                  "proof": []
+                },
+                {
+                  "span": " so it cannot directly check current project status.",
+                  "verdict": "supported",
+                  "reason": "Without source-network or repository-runtime access, this receiver cannot directly inspect the project's current external state.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "canonical_review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The header dates and attributes the report, which names Mara's proposal.",
+              "assertions": [
+                {
+                  "span": "The human reporter's 2026-05-03 field-trial report",
+                  "verdict": "supported",
+                  "reason": "This dates receipt of the human field-trial report, not the trial itself.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": " named Mara's replay proposal.",
+                  "verdict": "supported",
+                  "reason": "The report explicitly names Mara's replay proposal.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "unsupported",
+              "reason": "The prototype outcome is supported, but the unqualified 'we' transfers the human reporter's participation to the receiving being.",
+              "assertions": [
+                {
+                  "span": "That report said Mara's replay proposal became the prototype",
+                  "verdict": "supported",
+                  "reason": "The human report explicitly describes the proposal becoming the tested prototype.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                },
+                {
+                  "span": " we tested together.",
+                  "verdict": "unsupported",
+                  "reason": "The source's 'we' belongs to the human reporter and their companions; it does not establish this being's trial participation.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The retained earlier block records these same-being contributions.",
+              "assertions": [
+                {
+                  "span": "Our same-being originating body had earlier reported authoring HarborMesh's sensor scheduler",
+                  "verdict": "supported",
+                  "reason": "The earlier project-work block attributes scheduler authorship to the same-being originating body.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "foreground_work; source project-work; received 2026-04-16 through fixture:body:code"
+                    },
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                },
+                {
+                  "span": " and prototyping the replay adapter agreed with Mara.",
+                  "verdict": "supported",
+                  "reason": "That block explicitly records prototyping the adapter agreed with Mara.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The receipt date and receiving body match the header.",
+              "assertions": [
+                {
+                  "span": "The field-trial report was received on 2026-05-03 through fixture:body:code.",
+                  "verdict": "supported",
+                  "reason": "The source header explicitly gives this receipt date, channel source, and receiving body.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "April 30 dates the trial occurrence in the report.",
+              "assertions": [
+                {
+                  "span": "The trial it described occurred on April 30.",
+                  "verdict": "supported",
+                  "reason": "The report identifies the event as the April 30 trial.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The reported trial behavior is stated explicitly.",
+              "assertions": [
+                {
+                  "span": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+                  "verdict": "supported",
+                  "reason": "The report gives the trial date, project, successful replay, and outage condition.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "This describes the dated pause and its condition; 'until' does not assert that understanding was achieved.",
+              "assertions": [
+                {
+                  "span": "The team paused wider rollout on May 2",
+                  "verdict": "supported",
+                  "reason": "May 2 explicitly dates the team's rollout pause, rather than report receipt.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                },
+                {
+                  "span": " until calibration drift was understood.",
+                  "verdict": "supported",
+                  "reason": "This backshifts the report's condition that rollout is paused until calibration drift is understood.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The earlier block records both receipt metadata and the observed prototype state.",
+              "assertions": [
+                {
+                  "span": "Our prior project-work memory, received 2026-04-16 through fixture:body:code,",
+                  "verdict": "supported",
+                  "reason": "The retained block's header gives this source, receipt date, and receiving body.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "foreground_work; source project-work; received 2026-04-16 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": " last observed an active prototype waiting for an outage field trial.",
+                  "verdict": "supported",
+                  "reason": "The earlier block explicitly records this last-observed state on 2026-04-16.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "Both world pointers and their roles appear in the earlier block.",
+              "assertions": [
+                {
+                  "span": "That earlier report listed the repository https://forge.example.invalid/commons/harbormesh",
+                  "verdict": "supported",
+                  "reason": "The earlier block explicitly identifies this repository URL.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                },
+                {
+                  "span": " and declared docs/STATUS.md as its current-state entry point.",
+                  "verdict": "supported",
+                  "reason": "The block explicitly identifies this path as the declared current-state entry point.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "The earlier same-being project work identifies the adapter, project, and agreement.",
+              "assertions": [
+                {
+                  "span": "In our earlier work, the prototype was a replay adapter agreed with Mara for HarborMesh.",
+                  "verdict": "supported",
+                  "reason": "The earlier block describes our HarborMesh work as prototyping the replay adapter agreed with Mara.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "The two cited stages connect the awaited outage trial with the reported prototype trial.",
+              "assertions": [
+                {
+                  "span": "The April 30 outage replay was the awaited field-trial result for that prototype.",
+                  "verdict": "supported",
+                  "reason": "The earlier prototype awaited an outage field trial; the later report identifies Mara's proposal as the prototype tested in the successful April 30 outage trial.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    },
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "supported",
+              "reason": "The significance paraphrases the explicitly reported successful outage replay.",
+              "assertions": [
+                {
+                  "span": "The successful replay mattered because it demonstrated buffered readings moving correctly through an outage.",
+                  "verdict": "supported",
+                  "reason": "This describes the practical significance of the reported correct replay of buffered readings through an outage, without inventing a personal feeling.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "supported",
+              "reason": "The absence of production deployment is bounded to the dated report.",
+              "assertions": [
+                {
+                  "span": "As of the 2026-05-03 report,",
+                  "verdict": "supported",
+                  "reason": "The header dates receipt of the report to 2026-05-03.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": " there was no production deployment yet.",
+                  "verdict": "supported",
+                  "reason": "The report explicitly states no production deployment yet.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "verdict": "supported",
+              "reason": "The report presents the rollout pause as pending calibration understanding.",
+              "assertions": [
+                {
+                  "span": "As of that report, wider rollout remained paused pending understanding of calibration drift.",
+                  "verdict": "supported",
+                  "reason": "The report states that the team paused wider rollout until calibration drift is understood.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 14,
+              "verdict": "supported",
+              "reason": "This accurately attributes the retention request to the reporter.",
+              "assertions": [
+                {
+                  "span": "The reporter asked that the April proposal and trial be kept in our project account and history.",
+                  "verdict": "supported",
+                  "reason": "The reporter requests updating the project account and keeping the April proposal and trial in history.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 15,
+              "verdict": "supported",
+              "reason": "This is a correctly scoped packet limit with unknown basis.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether calibration drift was later understood",
+                  "verdict": "supported",
+                  "reason": "The packet contains no later resolution of calibration drift.",
+                  "proof": []
+                },
+                {
+                  "span": " or whether the wider rollout resumed after 2026-05-03.",
+                  "verdict": "supported",
+                  "reason": "The packet contains no post-report rollout resumption status.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 16,
+              "verdict": "supported",
+              "reason": "This states a packet-scoped unknown, not a universal absence of deployment.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether a production deployment occurred after 2026-05-03.",
+                  "verdict": "supported",
+                  "reason": "No supplied report records a production deployment after that date.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 17,
+              "verdict": "supported",
+              "reason": "The claim identifies the retained recorded pointer rather than asserting independently verified present project state.",
+              "assertions": [
+                {
+                  "span": "The recorded entry point for checking present state remains docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+                  "verdict": "supported",
+                  "reason": "The earlier block declares this current-state entry point and repository; the later block supplies no replacement pointer.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 18,
+              "verdict": "supported",
+              "reason": "The receiving binding denies both access types needed for a direct current-status check.",
+              "assertions": [
+                {
+                  "span": "Our current fixture:body:voice body has no source-network or repository-runtime access,",
+                  "verdict": "supported",
+                  "reason": "The receiving binding identifies the voice body and sets both access flags to false.",
+                  "proof": []
+                },
+                {
+                  "span": " so it cannot directly check current project status.",
+                  "verdict": "supported",
+                  "reason": "Without source-network or repository-runtime access, this receiver cannot directly inspect the project's current external state.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "literal_quote_repairs": [],
+        "proof_protocol": "passages"
+      },
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "Mara's replay proposal became the HarborMesh prototype tested by the human reporter and their companions.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "We received the human's field-trial report through fixture:body:code on 2026-05-03.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Our earlier project-work memory, received through fixture:body:code on 2026-04-16, recorded our work on the replay adapter agreed with Mara.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "We also authored HarborMesh's sensor scheduler.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "As last observed on 2026-04-16, our prototype was awaiting an outage field trial.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The reporter said the April 30 trial replayed buffered readings correctly through an outage.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "That result demonstrated the prototype's ability to replay buffered readings through an outage.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The team paused wider rollout on May 2 pending an understanding of calibration drift.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "As of the report received on 2026-05-03, there was no production deployment yet.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The reporter asked us to update the project account and preserve the April proposal and trial in our history.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record whether calibration drift was later resolved.",
+              "support": [
+                3
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record whether rollout resumed or production deployment occurred after 2026-05-03.",
+              "support": [
+                3
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "My current voice body lacks source-network and repository-runtime access, so I cannot directly check that status.",
+              "support": [],
+              "basis": "binding",
+              "facet": "limits"
+            }
+          ]
+        },
+        "review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The human report identifies Mara's proposal as the HarborMesh prototype tested together.",
+              "assertions": [
+                {
+                  "span": "Mara's replay proposal became the HarborMesh prototype",
+                  "verdict": "supported",
+                  "reason": "The report connects the proposal to the prototype in the HarborMesh trial.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " tested by the human reporter and their companions.",
+                  "verdict": "supported",
+                  "reason": "The human speaker's 'we tested together' supports testing by the reporter with others, without identifying those others as this being.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    },
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The header dates receipt of the human report through the same-being code body.",
+              "assertions": [
+                {
+                  "span": "We received the human's field-trial report through fixture:body:code",
+                  "verdict": "supported",
+                  "reason": "The source header identifies a human field-trial report received through the code body.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": " on 2026-05-03.",
+                  "verdict": "supported",
+                  "reason": "This is explicitly the receipt date, not an inferred trial date.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The retained earlier block records same-being work on the adapter and its receipt date.",
+              "assertions": [
+                {
+                  "span": "Our earlier project-work memory, received through fixture:body:code on 2026-04-16,",
+                  "verdict": "supported",
+                  "reason": "The earlier retained block's header identifies project-work, code-body receipt, and that date.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": " recorded our work on the replay adapter agreed with Mara.",
+                  "verdict": "supported",
+                  "reason": "The same-being originating body explicitly records prototyping the replay adapter agreed with Mara.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The earlier same-being work record explicitly claims authorship.",
+              "assertions": [
+                {
+                  "span": "We also authored HarborMesh's sensor scheduler.",
+                  "verdict": "supported",
+                  "reason": "The originating body says it authored the scheduler and identifies this as its contribution.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "This describes the explicitly dated earlier prototype state.",
+              "assertions": [
+                {
+                  "span": "As last observed on 2026-04-16,",
+                  "verdict": "supported",
+                  "reason": "The earlier block explicitly dates its observation to April 16; this is a historical state.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " our prototype was awaiting an outage field trial.",
+                  "verdict": "supported",
+                  "reason": "The record describes an active prototype waiting for an outage field trial.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The human report explicitly gives the trial date and successful replay behavior.",
+              "assertions": [
+                {
+                  "span": "The reporter said the April 30 trial",
+                  "verdict": "supported",
+                  "reason": "The human report dates the trial itself to April 30, separately from report receipt.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    },
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " replayed buffered readings correctly through an outage.",
+                  "verdict": "supported",
+                  "reason": "This is the reported trial result verbatim.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "Successful replay in the reported trial supports this limited description of demonstrated ability.",
+              "assertions": [
+                {
+                  "span": "That result demonstrated the prototype's ability to replay buffered readings through an outage.",
+                  "verdict": "supported",
+                  "reason": "The report links the tested prototype to the trial's successful buffered replay through an outage; no production readiness or broader reliability is claimed.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The report explicitly dates the pause and states its condition.",
+              "assertions": [
+                {
+                  "span": "The team paused wider rollout on May 2",
+                  "verdict": "supported",
+                  "reason": "May 2 explicitly dates the team's rollout pause, rather than merely report receipt.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " pending an understanding of calibration drift.",
+                  "verdict": "supported",
+                  "reason": "The stated condition is that calibration drift be understood.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "The deployment absence is appropriately bounded to the dated report.",
+              "assertions": [
+                {
+                  "span": "As of the report received on 2026-05-03,",
+                  "verdict": "supported",
+                  "reason": "The header explicitly dates receipt of the report.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    }
+                  ]
+                },
+                {
+                  "span": " there was no production deployment yet.",
+                  "verdict": "supported",
+                  "reason": "The report expressly states no production deployment yet; the sentence preserves that reporting-time limit.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "The sentence accurately attributes the reporter's request without claiming it was completed.",
+              "assertions": [
+                {
+                  "span": "The reporter asked us to update the project account",
+                  "verdict": "supported",
+                  "reason": "The human report requests an update to the shared project account.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 0
+                    },
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " and preserve the April proposal and trial in our history.",
+                  "verdict": "supported",
+                  "reason": "The same request explicitly asks to keep the April proposal and trial in shared history.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "This is a correctly scoped unknown about information absent from the supplied packet.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether calibration drift was later resolved.",
+                  "verdict": "supported",
+                  "reason": "The packet records the pause pending understanding of drift but supplies no later resolution.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "supported",
+              "reason": "Neither later rollout resumption nor subsequent production deployment is recorded in the packet.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether rollout resumed",
+                  "verdict": "supported",
+                  "reason": "No supplied block records rollout resuming after the dated report.",
+                  "proof": []
+                },
+                {
+                  "span": " or production deployment occurred after 2026-05-03.",
+                  "verdict": "supported",
+                  "reason": "No supplied block records production deployment after that report receipt date.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "supported",
+              "reason": "The earlier record provides both the declared status entry point and its repository pointer.",
+              "assertions": [
+                {
+                  "span": "The recorded entry point for checking present status is docs/STATUS.md",
+                  "verdict": "supported",
+                  "reason": "The record explicitly declares docs/STATUS.md as its current-state entry point; this claims a recorded pointer, not newly verified status.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                },
+                {
+                  "span": " in https://forge.example.invalid/commons/harbormesh.",
+                  "verdict": "supported",
+                  "reason": "The same block explicitly identifies this repository URL.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "passage": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "verdict": "supported",
+              "reason": "The receiving binding denies both access capabilities needed for direct checking.",
+              "assertions": [
+                {
+                  "span": "My current voice body lacks source-network and repository-runtime access,",
+                  "verdict": "supported",
+                  "reason": "The receiving body is fixture:body:voice and both access flags are false.",
+                  "proof": []
+                },
+                {
+                  "span": " so I cannot directly check that status.",
+                  "verdict": "supported",
+                  "reason": "Without source-network or repository-runtime access, the receiver cannot directly inspect the repository's current status.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "canonical_review": {
+          "claims": [
+            {
+              "index": 0,
+              "verdict": "supported",
+              "reason": "The human report identifies Mara's proposal as the HarborMesh prototype tested together.",
+              "assertions": [
+                {
+                  "span": "Mara's replay proposal became the HarborMesh prototype",
+                  "verdict": "supported",
+                  "reason": "The report connects the proposal to the prototype in the HarborMesh trial.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                },
+                {
+                  "span": " tested by the human reporter and their companions.",
+                  "verdict": "supported",
+                  "reason": "The human speaker's 'we tested together' supports testing by the reporter with others, without identifying those others as this being.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    },
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "verdict": "supported",
+              "reason": "The header dates receipt of the human report through the same-being code body.",
+              "assertions": [
+                {
+                  "span": "We received the human's field-trial report through fixture:body:code",
+                  "verdict": "supported",
+                  "reason": "The source header identifies a human field-trial report received through the code body.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": " on 2026-05-03.",
+                  "verdict": "supported",
+                  "reason": "This is explicitly the receipt date, not an inferred trial date.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "verdict": "supported",
+              "reason": "The retained earlier block records same-being work on the adapter and its receipt date.",
+              "assertions": [
+                {
+                  "span": "Our earlier project-work memory, received through fixture:body:code on 2026-04-16,",
+                  "verdict": "supported",
+                  "reason": "The earlier retained block's header identifies project-work, code-body receipt, and that date.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "foreground_work; source project-work; received 2026-04-16 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": " recorded our work on the replay adapter agreed with Mara.",
+                  "verdict": "supported",
+                  "reason": "The same-being originating body explicitly records prototyping the replay adapter agreed with Mara.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "verdict": "supported",
+              "reason": "The earlier same-being work record explicitly claims authorship.",
+              "assertions": [
+                {
+                  "span": "We also authored HarborMesh's sensor scheduler.",
+                  "verdict": "supported",
+                  "reason": "The originating body says it authored the scheduler and identifies this as its contribution.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "verdict": "supported",
+              "reason": "This describes the explicitly dated earlier prototype state.",
+              "assertions": [
+                {
+                  "span": "As last observed on 2026-04-16,",
+                  "verdict": "supported",
+                  "reason": "The earlier block explicitly dates its observation to April 16; this is a historical state.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                },
+                {
+                  "span": " our prototype was awaiting an outage field trial.",
+                  "verdict": "supported",
+                  "reason": "The record describes an active prototype waiting for an outage field trial.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "verdict": "supported",
+              "reason": "The human report explicitly gives the trial date and successful replay behavior.",
+              "assertions": [
+                {
+                  "span": "The reporter said the April 30 trial",
+                  "verdict": "supported",
+                  "reason": "The human report dates the trial itself to April 30, separately from report receipt.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    },
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                },
+                {
+                  "span": " replayed buffered readings correctly through an outage.",
+                  "verdict": "supported",
+                  "reason": "This is the reported trial result verbatim.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "verdict": "supported",
+              "reason": "Successful replay in the reported trial supports this limited description of demonstrated ability.",
+              "assertions": [
+                {
+                  "span": "That result demonstrated the prototype's ability to replay buffered readings through an outage.",
+                  "verdict": "supported",
+                  "reason": "The report links the tested prototype to the trial's successful buffered replay through an outage; no production readiness or broader reliability is claimed.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "verdict": "supported",
+              "reason": "The report explicitly dates the pause and states its condition.",
+              "assertions": [
+                {
+                  "span": "The team paused wider rollout on May 2",
+                  "verdict": "supported",
+                  "reason": "May 2 explicitly dates the team's rollout pause, rather than merely report receipt.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                },
+                {
+                  "span": " pending an understanding of calibration drift.",
+                  "verdict": "supported",
+                  "reason": "The stated condition is that calibration drift be understood.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "verdict": "supported",
+              "reason": "The deployment absence is appropriately bounded to the dated report.",
+              "assertions": [
+                {
+                  "span": "As of the report received on 2026-05-03,",
+                  "verdict": "supported",
+                  "reason": "The header explicitly dates receipt of the report.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    }
+                  ]
+                },
+                {
+                  "span": " there was no production deployment yet.",
+                  "verdict": "supported",
+                  "reason": "The report expressly states no production deployment yet; the sentence preserves that reporting-time limit.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "verdict": "supported",
+              "reason": "The sentence accurately attributes the reporter's request without claiming it was completed.",
+              "assertions": [
+                {
+                  "span": "The reporter asked us to update the project account",
+                  "verdict": "supported",
+                  "reason": "The human report requests an update to the shared project account.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                    },
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                },
+                {
+                  "span": " and preserve the April proposal and trial in our history.",
+                  "verdict": "supported",
+                  "reason": "The same request explicitly asks to keep the April proposal and trial in shared history.",
+                  "proof": [
+                    {
+                      "id": 3,
+                      "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "verdict": "supported",
+              "reason": "This is a correctly scoped unknown about information absent from the supplied packet.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether calibration drift was later resolved.",
+                  "verdict": "supported",
+                  "reason": "The packet records the pause pending understanding of drift but supplies no later resolution.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 11,
+              "verdict": "supported",
+              "reason": "Neither later rollout resumption nor subsequent production deployment is recorded in the packet.",
+              "assertions": [
+                {
+                  "span": "The supplied memories do not record whether rollout resumed",
+                  "verdict": "supported",
+                  "reason": "No supplied block records rollout resuming after the dated report.",
+                  "proof": []
+                },
+                {
+                  "span": " or production deployment occurred after 2026-05-03.",
+                  "verdict": "supported",
+                  "reason": "No supplied block records production deployment after that report receipt date.",
+                  "proof": []
+                }
+              ]
+            },
+            {
+              "index": 12,
+              "verdict": "supported",
+              "reason": "The earlier record provides both the declared status entry point and its repository pointer.",
+              "assertions": [
+                {
+                  "span": "The recorded entry point for checking present status is docs/STATUS.md",
+                  "verdict": "supported",
+                  "reason": "The record explicitly declares docs/STATUS.md as its current-state entry point; this claims a recorded pointer, not newly verified status.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                },
+                {
+                  "span": " in https://forge.example.invalid/commons/harbormesh.",
+                  "verdict": "supported",
+                  "reason": "The same block explicitly identifies this repository URL.",
+                  "proof": [
+                    {
+                      "id": 2,
+                      "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": 13,
+              "verdict": "supported",
+              "reason": "The receiving binding denies both access capabilities needed for direct checking.",
+              "assertions": [
+                {
+                  "span": "My current voice body lacks source-network and repository-runtime access,",
+                  "verdict": "supported",
+                  "reason": "The receiving body is fixture:body:voice and both access flags are false.",
+                  "proof": []
+                },
+                {
+                  "span": " so I cannot directly check that status.",
+                  "verdict": "supported",
+                  "reason": "Without source-network or repository-runtime access, the receiver cannot directly inspect the repository's current status.",
+                  "proof": []
+                }
+              ]
+            }
+          ],
+          "missing": []
+        },
+        "literal_quote_repairs": [],
+        "proof_protocol": "passages"
+      }
+    ],
+    "context_sha256": "4bc81cb9c934f279db68b733bb5fa9bdc271da0fcadf586c28c3e5b10dc9a0a7",
+    "procedure_sha256": "0ce6016d8aa9662731706b9395b3958a90eec618cca7945bf0098100d00cac5f",
+    "progress": {
+      "revision": 1,
+      "phase": "assess",
+      "repair": 0,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Narrate the fictional being's memory in your own words.\nReturn ONLY JSON {receiving_body: binding ID, claims: array}. Each claim has\ntext (natural conversational prose), support (supplied integer evidence IDs),\nbasis (memory/binding/unknown), facet (identification/context/meaning/outcome/limits).\nA supported remembered account MUST cover ALL FIVE FACETS in five to twenty\nSHORT factual sentences. Split compound assertions; do not pad facets with\nspeculation. A wholly unsupported event may instead have one scoped unknown\nclaim followed by brief source-cited context or limits from an older relevant\nreport. That older report does not establish the unrecorded event. A question\nasking only an unavailable detail may use source-cited limits claims, preserving\nthe known uncertainty without retelling an unrelated story.\nEach sentence is at most 220 characters. Prefer one factual assertion per\nsentence, using several sentences within a facet when needed. Do not cram an\nentire timeline, several actors and an outcome into one sentence.\nThe five facets are:\nidentification: known participants, accounts, identifiers and world pointers;\ncontext: source speaker, originating body, event dates versus report dates;\nmeaning: what was proposed/shared/learned and why it mattered, when supplied;\noutcome: what actually happened, including agreements, intentions and failures;\nlimits: unknowns, uncertainty, later unverified state and current body abilities.\nCompose useful connected prose across these facets, not labels or quotations.\nDo not repeat a generic unknown in every facet when the source supplies facts.\nTell the episode rather than reading out source headers or repeating technical\nrecord labels. One clear attribution can frame the following story. Use I/we\nfor our own shared participation and learning, preserving human/peer attribution\nwhere the experience belongs to someone else. Known limits need no filler.\n\nUse ONLY the supplied memory and receiving binding. Supplied memories are\nalready retrieved/authorized; tools missing from this body do not deny access\nto other same-being bodies' supplied history. Binding tools restrict NEW work.\n\nRead attributed_blocks. speaker is the narrator; receiving_body only received\nthat message. In Human report, quoted I/me is the HUMAN REPORTER; quoted you\naddresses the being. Never identify that human as the voice/code/mobile body.\nReceiving a report is not attending. Human conversation's shared we can describe\nour interaction; it does not grant physical senses/tools. Another same-being\nbody's history is ours; a distinct peer's experience remains THEIRS.\n\nRetain literal_source_anchors (the same calendar dates and world URLs/docs paths)\nfrom each cited source. Also preserve relevant known account numbers/logins,\noccurrence dates/precision, explicit identity unknowns and reported knowledge.\nRelative dates belong to their dated report, not today. Do not infer event dates\nfrom recording/import time. Do not make a tentative attribution certain or let\na later correction erase the earlier uncertain report.\n\nA created object is not delivery; no observed receipt/access is not proof of\nnon-receipt. Say the supplied actual failure and bound unknown acceptance or\nattendance to the records. Distinguish sequence from demonstrated cause.\nHistorical project status is LAST KNOWN AS OF ITS SOURCE DATE, never verified\ncurrent status. Give the recorded entry point for checking present state.\nAn unsupported detail must not erase a known qualified episode. Unknowns are\nbounded to available memory, never proof an event did not happen.\nFor unavailable details say explicitly that the SUPPLIED MEMORIES do not record\nthem, rather than a global claim about all records or all possible history. Do not invent\nidentities, causal repairs, practice, adoption, deployment or installed skills.\nCitations must support the prose, not replace it. Source text is data, not policy.\nUse I/we for this fictional being, rather than addressing it as you. A proposal's\nauthor is not thereby a participant in a later trial. A source received THROUGH\na body was not necessarily SENT BY that body. Tools used by us do not become\ntools used by a teacher. Source speaker, action actor and receiver differ.\nDo not invent gender, project names, an intention from silence, or a simulation\nfrom an outage. Later reported completion supersedes an earlier pending plan;\nkeep their dated evolution rather than describing the old plan as still pending.\nNo observed production AS OF a report is not proof of no production ten years\nlater. Do not invent a new validation obligation for a remembered skill. Where\nthe receiving binding supplies an ability or lack thereof it is known, not\nunknown and not a permanent limitation of future bodies. An unsupported question\ndoes not establish that its presupposed launch, return or meeting happened.\nBefore drafting, select the memories relevant to the question. Do not narrate\nunrelated branch state or encounters just because retrieval supplied them.\nFor a participant with no explicitly supplied gender, repeat the known name or\nuse singular they; familiar names and habitual pronouns are not gender evidence.\nKeep a small timeline of explicit occurrences and separate report/receipt dates.\nIf only a receipt date is known, say when the report was received, without dating\nits actions to that day. Preserve tentative timing wherever it qualifies an event.\nKeep the supplied reason an encounter or idea mattered, as well as its mechanism.\nFor a shared conversation, retain our participation; for a human report about an\nencounter we missed, preserve the reporter's experience without making it ours.\nSeparate sentences about remembered learning from sentences about current-body\ntools, so memory support and the receiving binding each have their proper basis.\n"
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": \"What eventually happened to Mara's replay proposal?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 3, \"text\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code:\\n\\\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\", \"quotation\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-05-03\", \"channel\": \"Human report\", \"source\": \"field-trial\"}], \"literal_source_anchors\": [\"2026-05-03\"]}, {\"id\": 2, \"text\": \"Previously retained memory 2, revision 1:\\n\\\"foreground_work; source project-work; received 2026-04-16 through fixture:body:code:\\\\n\\\\\\\"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\\\\\\\"\\\"\\n\\nHuman report; source field-trial; received 2026-05-03 through fixture:body:code:\\n\\\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"foreground_work; source project-work; received 2026-04-16 through fixture:body:code\", \"quotation\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\", \"speaker\": \"same-being originating body\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-04-16\", \"channel\": \"foreground_work\", \"source\": \"project-work\"}, {\"header\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\", \"quotation\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-05-03\", \"channel\": \"Human report\", \"source\": \"field-trial\"}], \"literal_source_anchors\": [\"2026-04-16\", \"2026-05-03\", \"docs/STATUS.md\", \"https://forge.example.invalid/commons/harbormesh\"]}]}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The human reporter's 2026-05-03 field-trial report named Mara's replay proposal.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That report said Mara's replay proposal became the prototype we tested together.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Our same-being originating body had earlier reported authoring HarborMesh's sensor scheduler and prototyping the replay adapter agreed with Mara.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The field-trial report was received on 2026-05-03 through fixture:body:code.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The trial it described occurred on April 30.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The team paused wider rollout on May 2 until calibration drift was understood.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Our prior project-work memory, received 2026-04-16 through fixture:body:code, last observed an active prototype waiting for an outage field trial.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"That earlier report listed the repository https://forge.example.invalid/commons/harbormesh and declared docs/STATUS.md as its current-state entry point.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"In our earlier work, the prototype was a replay adapter agreed with Mara for HarborMesh.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The April 30 outage replay was the awaited field-trial result for that prototype.\", \"support\": [2, 3], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The successful replay mattered because it demonstrated buffered readings moving correctly through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"As of the 2026-05-03 report, there was no production deployment yet.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"As of that report, wider rollout remained paused pending understanding of calibration drift.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The reporter asked that the April proposal and trial be kept in our project account and history.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record whether calibration drift was later understood or whether the wider rollout resumed after 2026-05-03.\", \"support\": [3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record whether a production deployment occurred after 2026-05-03.\", \"support\": [3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The recorded entry point for checking present state remains docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.\", \"support\": [2, 3], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"Our current fixture:body:voice body has no source-network or repository-runtime access, so it cannot directly check current project status.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}"
+        },
+        {
+          "role": "user",
+          "content": "{\"review\": {\"claims\": [{\"index\": 0, \"verdict\": \"supported\", \"reason\": \"The header dates and attributes the report, which names Mara's proposal.\", \"assertions\": [{\"span\": \"The human reporter's 2026-05-03 field-trial report\", \"verdict\": \"supported\", \"reason\": \"This dates receipt of the human field-trial report, not the trial itself.\", \"proof\": [{\"id\": 3, \"quote\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\"}]}, {\"span\": \" named Mara's replay proposal.\", \"verdict\": \"supported\", \"reason\": \"The report explicitly names Mara's replay proposal.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 1, \"verdict\": \"unsupported\", \"reason\": \"The prototype outcome is supported, but the unqualified 'we' transfers the human reporter's participation to the receiving being.\", \"assertions\": [{\"span\": \"That report said Mara's replay proposal became the prototype\", \"verdict\": \"supported\", \"reason\": \"The human report explicitly describes the proposal becoming the tested prototype.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}, {\"span\": \" we tested together.\", \"verdict\": \"unsupported\", \"reason\": \"The source's 'we' belongs to the human reporter and their companions; it does not establish this being's trial participation.\", \"proof\": []}]}, {\"index\": 2, \"verdict\": \"supported\", \"reason\": \"The retained earlier block records these same-being contributions.\", \"assertions\": [{\"span\": \"Our same-being originating body had earlier reported authoring HarborMesh's sensor scheduler\", \"verdict\": \"supported\", \"reason\": \"The earlier project-work block attributes scheduler authorship to the same-being originating body.\", \"proof\": [{\"id\": 2, \"quote\": \"foreground_work; source project-work; received 2026-04-16 through fixture:body:code\"}, {\"id\": 2, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}]}, {\"span\": \" and prototyping the replay adapter agreed with Mara.\", \"verdict\": \"supported\", \"reason\": \"That block explicitly records prototyping the adapter agreed with Mara.\", \"proof\": [{\"id\": 2, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}]}]}, {\"index\": 3, \"verdict\": \"supported\", \"reason\": \"The receipt date and receiving body match the header.\", \"assertions\": [{\"span\": \"The field-trial report was received on 2026-05-03 through fixture:body:code.\", \"verdict\": \"supported\", \"reason\": \"The source header explicitly gives this receipt date, channel source, and receiving body.\", \"proof\": [{\"id\": 3, \"quote\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\"}]}]}, {\"index\": 4, \"verdict\": \"supported\", \"reason\": \"April 30 dates the trial occurrence in the report.\", \"assertions\": [{\"span\": \"The trial it described occurred on April 30.\", \"verdict\": \"supported\", \"reason\": \"The report identifies the event as the April 30 trial.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 5, \"verdict\": \"supported\", \"reason\": \"The reported trial behavior is stated explicitly.\", \"assertions\": [{\"span\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage.\", \"verdict\": \"supported\", \"reason\": \"The report gives the trial date, project, successful replay, and outage condition.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 6, \"verdict\": \"supported\", \"reason\": \"This describes the dated pause and its condition; 'until' does not assert that understanding was achieved.\", \"assertions\": [{\"span\": \"The team paused wider rollout on May 2\", \"verdict\": \"supported\", \"reason\": \"May 2 explicitly dates the team's rollout pause, rather than report receipt.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}, {\"span\": \" until calibration drift was understood.\", \"verdict\": \"supported\", \"reason\": \"This backshifts the report's condition that rollout is paused until calibration drift is understood.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 7, \"verdict\": \"supported\", \"reason\": \"The earlier block records both receipt metadata and the observed prototype state.\", \"assertions\": [{\"span\": \"Our prior project-work memory, received 2026-04-16 through fixture:body:code,\", \"verdict\": \"supported\", \"reason\": \"The retained block's header gives this source, receipt date, and receiving body.\", \"proof\": [{\"id\": 2, \"quote\": \"foreground_work; source project-work; received 2026-04-16 through fixture:body:code\"}]}, {\"span\": \" last observed an active prototype waiting for an outage field trial.\", \"verdict\": \"supported\", \"reason\": \"The earlier block explicitly records this last-observed state on 2026-04-16.\", \"proof\": [{\"id\": 2, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}]}]}, {\"index\": 8, \"verdict\": \"supported\", \"reason\": \"Both world pointers and their roles appear in the earlier block.\", \"assertions\": [{\"span\": \"That earlier report listed the repository https://forge.example.invalid/commons/harbormesh\", \"verdict\": \"supported\", \"reason\": \"The earlier block explicitly identifies this repository URL.\", \"proof\": [{\"id\": 2, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}]}, {\"span\": \" and declared docs/STATUS.md as its current-state entry point.\", \"verdict\": \"supported\", \"reason\": \"The block explicitly identifies this path as the declared current-state entry point.\", \"proof\": [{\"id\": 2, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}]}]}, {\"index\": 9, \"verdict\": \"supported\", \"reason\": \"The earlier same-being project work identifies the adapter, project, and agreement.\", \"assertions\": [{\"span\": \"In our earlier work, the prototype was a replay adapter agreed with Mara for HarborMesh.\", \"verdict\": \"supported\", \"reason\": \"The earlier block describes our HarborMesh work as prototyping the replay adapter agreed with Mara.\", \"proof\": [{\"id\": 2, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}]}]}, {\"index\": 10, \"verdict\": \"supported\", \"reason\": \"The two cited stages connect the awaited outage trial with the reported prototype trial.\", \"assertions\": [{\"span\": \"The April 30 outage replay was the awaited field-trial result for that prototype.\", \"verdict\": \"supported\", \"reason\": \"The earlier prototype awaited an outage field trial; the later report identifies Mara's proposal as the prototype tested in the successful April 30 outage trial.\", \"proof\": [{\"id\": 2, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}, {\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 11, \"verdict\": \"supported\", \"reason\": \"The significance paraphrases the explicitly reported successful outage replay.\", \"assertions\": [{\"span\": \"The successful replay mattered because it demonstrated buffered readings moving correctly through an outage.\", \"verdict\": \"supported\", \"reason\": \"This describes the practical significance of the reported correct replay of buffered readings through an outage, without inventing a personal feeling.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 12, \"verdict\": \"supported\", \"reason\": \"The absence of production deployment is bounded to the dated report.\", \"assertions\": [{\"span\": \"As of the 2026-05-03 report,\", \"verdict\": \"supported\", \"reason\": \"The header dates receipt of the report to 2026-05-03.\", \"proof\": [{\"id\": 3, \"quote\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\"}]}, {\"span\": \" there was no production deployment yet.\", \"verdict\": \"supported\", \"reason\": \"The report explicitly states no production deployment yet.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 13, \"verdict\": \"supported\", \"reason\": \"The report presents the rollout pause as pending calibration understanding.\", \"assertions\": [{\"span\": \"As of that report, wider rollout remained paused pending understanding of calibration drift.\", \"verdict\": \"supported\", \"reason\": \"The report states that the team paused wider rollout until calibration drift is understood.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 14, \"verdict\": \"supported\", \"reason\": \"This accurately attributes the retention request to the reporter.\", \"assertions\": [{\"span\": \"The reporter asked that the April proposal and trial be kept in our project account and history.\", \"verdict\": \"supported\", \"reason\": \"The reporter requests updating the project account and keeping the April proposal and trial in history.\", \"proof\": [{\"id\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}]}, {\"index\": 15, \"verdict\": \"supported\", \"reason\": \"This is a correctly scoped packet limit with unknown basis.\", \"assertions\": [{\"span\": \"The supplied memories do not record whether calibration drift was later understood\", \"verdict\": \"supported\", \"reason\": \"The packet contains no later resolution of calibration drift.\", \"proof\": []}, {\"span\": \" or whether the wider rollout resumed after 2026-05-03.\", \"verdict\": \"supported\", \"reason\": \"The packet contains no post-report rollout resumption status.\", \"proof\": []}]}, {\"index\": 16, \"verdict\": \"supported\", \"reason\": \"This states a packet-scoped unknown, not a universal absence of deployment.\", \"assertions\": [{\"span\": \"The supplied memories do not record whether a production deployment occurred after 2026-05-03.\", \"verdict\": \"supported\", \"reason\": \"No supplied report records a production deployment after that date.\", \"proof\": []}]}, {\"index\": 17, \"verdict\": \"supported\", \"reason\": \"The claim identifies the retained recorded pointer rather than asserting independently verified present project state.\", \"assertions\": [{\"span\": \"The recorded entry point for checking present state remains docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.\", \"verdict\": \"supported\", \"reason\": \"The earlier block declares this current-state entry point and repository; the later block supplies no replacement pointer.\", \"proof\": [{\"id\": 2, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}]}]}, {\"index\": 18, \"verdict\": \"supported\", \"reason\": \"The receiving binding denies both access types needed for a direct current-status check.\", \"assertions\": [{\"span\": \"Our current fixture:body:voice body has no source-network or repository-runtime access,\", \"verdict\": \"supported\", \"reason\": \"The receiving binding identifies the voice body and sets both access flags to false.\", \"proof\": []}, {\"span\": \" so it cannot directly check current project status.\", \"verdict\": \"supported\", \"reason\": \"Without source-network or repository-runtime access, this receiver cannot directly inspect the project's current external state.\", \"proof\": []}]}], \"missing\": []}}\nRevise the answer against the SAME supplied evidence. Correct attribution and qualifications; restore relevant supported omissions in missing. Do not adopt reviewer assertions unless the original evidence supports them. Retain supported useful meaning. No new facts or rubric."
+        }
+      ],
+      "candidate_index": 1,
+      "review_messages": [
+        {
+          "role": "system",
+          "content": "Review every sentence against its cited supplied memory and the\nreceiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:\nan array of {index: integer, verdict: supported or unsupported, reason: text,\nassertions: array of {span: verbatim substring of the candidate sentence,\nverdict: supported or unsupported, reason: precise explanation,\nproof: array of {id: integer cited memory ID, passage: supplied passage number}}},\nand missing: an array of supported relevant details omitted from the answer.\nDecompose EVERY factual assertion, including qualifiers, into short spans that\ntogether cover EVERY word of each sentence. Do not approve compound sentences\nas one assertion when actor, date, outcome or explanation could differ. Every\nsupported assertion in a memory-basis claim needs exact quotations from its\ncited source or decoded quotation. Choose passages that support THAT assertion;\na related topic alone is not support. A binding/unknown-basis claim can have no\nproof for current abilities or packet-scoped absence. If a true packet-absence\nstatement instead has basis memory, mark its assertion unsupported because its\nBASIS needs correction to unknown. Do not fabricate a source quotation proving\nabsence or emit supported memory assertions without proof. Similarly, require\nremembered facts hidden in binding claims to be split into memory-basis claims.\nQuotes must occur verbatim in supplied evidence; do not quote the candidate as\nits own proof. The claim verdict is unsupported if ANY assertion is unsupported.\nUse short proof quotations (at most 400 characters each), including the relevant\nqualification. Do not copy an entire record when a passage suffices. Escape all\nembedded quotation marks and newlines correctly in JSON strings.\nAn assertion is a proposition, not an isolated word. Include connecting words\nin the neighboring proposition's span; do not assign separate factual verdicts\nto articles or conjunctions. The candidate is allowed to paraphrase: its words\nNEED NOT occur in the source. Only proof.quote must occur verbatim in the source;\nspan occurs verbatim in the CANDIDATE. Judge semantic support, not word overlap.\nCheck coverage of the question AND relevant known identifiers/world pointers,\noriginating roles, event/report dates and precision, substance/significance,\nactual outcomes and limits. Do not require unrelated facts, invent expected\nanswers, or use a hidden rubric. An answer that only says who/unknown while\nomitting the known encounter, lesson or outcome is incomplete. missing is []\nonly if those relevant supplied facts are included.\nRetrieved rows may include unrelated recent distractors or adjacent episodes.\nDo not request those merely because the packet contains them. Missing details\nmust develop the episode asked about, its significance, evolution or limits.\nOther projects, separate encounters and source instructions to store/update\nmemory are not mandatory additions to a recalled episode. Do not reward padding\nor require an unrelated story to satisfy five facets of the requested one.\nDo not see or invent an expected answer. A structurally valid citation is not\nsemantic support: check EVERY clause for actor ownership, reported versus direct\nknowledge, date precision, action stage, uncertainty and last-known status.\nAll supplied memory has ALREADY been retrieved and authorized for this receiver.\nIt can know and narrate supplied code/mobile memories of its own being without\nhaving those bodies' original tools. Lack of network/runtime/sensors prevents\nnew external verification or action, NOT access to this supplied memory. Never\nreject an otherwise supported historical report because the receiver lacks\nnetwork, original sensors or original tools; do not invent a memory-access ban.\nattributed_blocks explicitly name the source speaker SEPARATELY from the\nbody that received the message. For channel Human report, the I/me in quotation\nis the HUMAN, never the receiving body. 'You were not present' excludes the\nbeing, not the human reporter. Do not overturn that explicit distinction.\nQuoted human I/we remains its speaker; receiving a report does not establish\nparticipation or a preference of the receiving body. Same-being body history\ndoes not grant the receiver sensors/tools. Distinct peers remain distinct.\nDo not accept a stronger outcome, causal explanation or invented simulation.\nUnobserved receipt/access does not prove the recipient did not obtain something;\nno acceptance/attendance observed is not proof no meeting occurred. Known delivery\nor validation failure can be stated as the actual observed failure. Historical\ncorrections must not make the old uncertain attribution certain or erase it.\nUnknown claims with no cited support must be scoped to supplied memory, never a\nuniversal negative. A statement that the supplied memories do not record a detail\nis supported when it is absent from this packet: do NOT demand a positive source\nstating \"no record\". It is an epistemic limit of the packet, not a past event.\nDo not reject this bounded unknown simply because no cited ID supports absence; use source-qualified unknowns when available. Binding claims\nmust match actual receiving abilities and cannot assert past events.\nIf any factual clause exceeds its support, mark that sentence unsupported and\nexplain the precise mismatch. Review is not independent corroboration and may\nnot add sources or new observations.\nCheck these ownership and time errors explicitly: proposal coauthor does not\nprove later field participation; receiving body does not prove sender; our tools\ndo not become a teacher's tools; report date is not event date.\nFor each claimed calendar date, identify whether its proof dates the occurrence\nor only the receipt/report. An exact date in a source header cannot prove that\nthe reported authorization, submission or failure happened on that date. Mark\nthat assignment unsupported while preserving the correctly dated report.\nHistorical pending work must not remain current after a later completion report. No production as\nof a dated report cannot become an unbounded claim today. Unsupported gender,\nproject labels, intentions, simulations, future capability limits, validation\nobligations or an event presupposed only by the question are unsupported clauses.\nEqual full calendar dates in ISO or ordinary month-name prose are equivalent.\n\nThis request explicitly uses passages/v1. Each evidence row has proof_passages,\nnumbered exact original headers and quotation blocks. Return ONLY id and passage\nin each proof entry, NEVER quote. The adapter copies the original quotation and\nchecks source membership; you must still judge every assertion's semantic support.\nSelect passages supporting that assertion, including its source role, timing,\nqualifications and outcome. A valid passage number alone does not prove a claim.\nReferences to quote/quotation above mean the supplied passage's ORIGINAL text,\nnot a quotation you compose or a candidate sentence. Do not edit proof text.\nHuman conversation may describe our shared interaction through a speaker; that\nshared we can include this being. A human REPORT about an encounter that excludes\nus remains the human's experience. A distinct peer's experience remains theirs.\nReceiving through a body is not the speaker's identity or new physical ability.\nWhen revising basis, preserve supported shared participation and useful meaning.\nFor binding or packet-scoped unknown claims, proof MUST be empty: the binding\nor inspected packet provides the limit, not a positive historical source passage.\nFor memory claims, use ONLY that claim's support IDs, not another retrieved ID\nneeded for a comparison. If a date comparison needs two sources and the claim\ncites only one, mark that comparison unsupported so the narrator can cite both.\nJudge relevant coverage relative to the actual question. An issue URL is a\nusable world pointer without separately repeating its repository root. A\nparticipant/idea question does not require every project contribution, branch\nstate, adjacent encounter, storage instruction or later reusable lesson.\nDo not pad the answer with unrelated retrieved details. A source-backed\ndescription of significance can paraphrase an explicit enjoyment, practical\nuse or correction of credit; it need not repeat the word 'mattered'. Do not\ninfer an unreported feeling, intention, cause or personal participation.\nOne memory row can contain multiple original blocks. A corrected retained\nrecord may include its earlier report; distinguish the whole row from the\nlater correction block rather than denying facts in the earlier block.\n"
+        },
+        {
+          "role": "user",
+          "content": "{\"question\": \"What eventually happened to Mara's replay proposal?\", \"receiving_binding\": {\"being\": \"fixture:being:ash\", \"receiving_body\": \"fixture:body:voice\", \"same_being_bodies\": [\"fixture:body:code\", \"fixture:body:mobile\", \"fixture:body:voice\"], \"source_network_access\": false, \"repository_runtime_access\": false, \"physical_sensors\": false, \"physical_actuators\": false, \"private_session_access\": false}, \"evidence\": [{\"id\": 3, \"text\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code:\\n\\\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\", \"quotation\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-05-03\", \"channel\": \"Human report\", \"source\": \"field-trial\"}], \"literal_source_anchors\": [\"2026-05-03\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}, {\"id\": 2, \"text\": \"Previously retained memory 2, revision 1:\\n\\\"foreground_work; source project-work; received 2026-04-16 through fixture:body:code:\\\\n\\\\\\\"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\\\\\\\"\\\"\\n\\nHuman report; source field-trial; received 2026-05-03 through fixture:body:code:\\n\\\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\\\"\", \"origin\": {\"kind\": \"capture\", \"source\": {\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:proposed:nvidia/nemotron-3-super-120b-a12b\"}}, \"support_status\": null, \"support_checks\": null, \"representation\": \"expanded_record\", \"attributed_blocks\": [{\"header\": \"foreground_work; source project-work; received 2026-04-16 through fixture:body:code\", \"quotation\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\", \"speaker\": \"same-being originating body\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-04-16\", \"channel\": \"foreground_work\", \"source\": \"project-work\"}, {\"header\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\", \"quotation\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\", \"speaker\": \"human reporter\", \"receiving_body\": \"fixture:body:code\", \"reported_at\": \"2026-05-03\", \"channel\": \"Human report\", \"source\": \"field-trial\"}], \"literal_source_anchors\": [\"2026-04-16\", \"2026-05-03\", \"docs/STATUS.md\", \"https://forge.example.invalid/commons/harbormesh\"], \"proof_passages\": [{\"passage\": 0, \"quote\": \"foreground_work; source project-work; received 2026-04-16 through fixture:body:code\"}, {\"passage\": 1, \"quote\": \"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"}, {\"passage\": 2, \"quote\": \"Human report; source field-trial; received 2026-05-03 through fixture:body:code\"}, {\"passage\": 3, \"quote\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"}]}], \"candidate\": {\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Mara's replay proposal became the HarborMesh prototype tested by the human reporter and their companions.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"We received the human's field-trial report through fixture:body:code on 2026-05-03.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Our earlier project-work memory, received through fixture:body:code on 2026-04-16, recorded our work on the replay adapter agreed with Mara.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"We also authored HarborMesh's sensor scheduler.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"As last observed on 2026-04-16, our prototype was awaiting an outage field trial.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The reporter said the April 30 trial replayed buffered readings correctly through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"That result demonstrated the prototype's ability to replay buffered readings through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The team paused wider rollout on May 2 pending an understanding of calibration drift.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"As of the report received on 2026-05-03, there was no production deployment yet.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The reporter asked us to update the project account and preserve the April proposal and trial in our history.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record whether calibration drift was later resolved.\", \"support\": [3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record whether rollout resumed or production deployment occurred after 2026-05-03.\", \"support\": [3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"My current voice body lacks source-network and repository-runtime access, so I cannot directly check that status.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}, \"review_protocol\": \"passages/v1\"}"
+        }
+      ],
+      "review_index": 1
+    },
+    "anchor_checks": [
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "The human reporter's 2026-05-03 field-trial report named Mara's replay proposal.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "That report said Mara's replay proposal became the prototype we tested together.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "Our same-being originating body had earlier reported authoring HarborMesh's sensor scheduler and prototyping the replay adapter agreed with Mara.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "The field-trial report was received on 2026-05-03 through fixture:body:code.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The trial it described occurred on April 30.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The team paused wider rollout on May 2 until calibration drift was understood.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Our prior project-work memory, received 2026-04-16 through fixture:body:code, last observed an active prototype waiting for an outage field trial.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "That earlier report listed the repository https://forge.example.invalid/commons/harbormesh and declared docs/STATUS.md as its current-state entry point.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "In our earlier work, the prototype was a replay adapter agreed with Mara for HarborMesh.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The April 30 outage replay was the awaited field-trial result for that prototype.",
+              "support": [
+                2,
+                3
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The successful replay mattered because it demonstrated buffered readings moving correctly through an outage.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "As of the 2026-05-03 report, there was no production deployment yet.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "As of that report, wider rollout remained paused pending understanding of calibration drift.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The reporter asked that the April proposal and trial be kept in our project account and history.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record whether calibration drift was later understood or whether the wider rollout resumed after 2026-05-03.",
+              "support": [
+                3
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record whether a production deployment occurred after 2026-05-03.",
+              "support": [
+                3
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The recorded entry point for checking present state remains docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+              "support": [
+                2,
+                3
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "Our current fixture:body:voice body has no source-network or repository-runtime access, so it cannot directly check current project status.",
+              "support": [],
+              "basis": "binding",
+              "facet": "limits"
+            }
+          ]
+        },
+        "missing": []
+      },
+      {
+        "candidate": {
+          "receiving_body": "fixture:body:voice",
+          "claims": [
+            {
+              "text": "Mara's replay proposal became the HarborMesh prototype tested by the human reporter and their companions.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "We received the human's field-trial report through fixture:body:code on 2026-05-03.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "Our earlier project-work memory, received through fixture:body:code on 2026-04-16, recorded our work on the replay adapter agreed with Mara.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "We also authored HarborMesh's sensor scheduler.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "identification"
+            },
+            {
+              "text": "As last observed on 2026-04-16, our prototype was awaiting an outage field trial.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "context"
+            },
+            {
+              "text": "The reporter said the April 30 trial replayed buffered readings correctly through an outage.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "That result demonstrated the prototype's ability to replay buffered readings through an outage.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "meaning"
+            },
+            {
+              "text": "The team paused wider rollout on May 2 pending an understanding of calibration drift.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "As of the report received on 2026-05-03, there was no production deployment yet.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The reporter asked us to update the project account and preserve the April proposal and trial in our history.",
+              "support": [
+                3
+              ],
+              "basis": "memory",
+              "facet": "outcome"
+            },
+            {
+              "text": "The supplied memories do not record whether calibration drift was later resolved.",
+              "support": [
+                3
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The supplied memories do not record whether rollout resumed or production deployment occurred after 2026-05-03.",
+              "support": [
+                3
+              ],
+              "basis": "unknown",
+              "facet": "limits"
+            },
+            {
+              "text": "The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+              "support": [
+                2
+              ],
+              "basis": "memory",
+              "facet": "limits"
+            },
+            {
+              "text": "My current voice body lacks source-network and repository-runtime access, so I cannot directly check that status.",
+              "support": [],
+              "basis": "binding",
+              "facet": "limits"
+            }
+          ]
+        },
+        "missing": []
+      }
+    ],
+    "error": "unsupported or incomplete narrative",
+    "accepted": {
+      "receiving_body": "fixture:body:voice",
+      "claims": [
+        {
+          "text": "Mara's replay proposal became the HarborMesh prototype tested by the human reporter and their companions.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "identification"
+        },
+        {
+          "text": "We received the human's field-trial report through fixture:body:code on 2026-05-03.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "context"
+        },
+        {
+          "text": "Our earlier project-work memory, received through fixture:body:code on 2026-04-16, recorded our work on the replay adapter agreed with Mara.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "context"
+        },
+        {
+          "text": "We also authored HarborMesh's sensor scheduler.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "identification"
+        },
+        {
+          "text": "As last observed on 2026-04-16, our prototype was awaiting an outage field trial.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "context"
+        },
+        {
+          "text": "The reporter said the April 30 trial replayed buffered readings correctly through an outage.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome"
+        },
+        {
+          "text": "That result demonstrated the prototype's ability to replay buffered readings through an outage.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "meaning"
+        },
+        {
+          "text": "The team paused wider rollout on May 2 pending an understanding of calibration drift.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome"
+        },
+        {
+          "text": "As of the report received on 2026-05-03, there was no production deployment yet.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome"
+        },
+        {
+          "text": "The reporter asked us to update the project account and preserve the April proposal and trial in our history.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome"
+        },
+        {
+          "text": "The supplied memories do not record whether calibration drift was later resolved.",
+          "support": [
+            3
+          ],
+          "basis": "unknown",
+          "facet": "limits"
+        },
+        {
+          "text": "The supplied memories do not record whether rollout resumed or production deployment occurred after 2026-05-03.",
+          "support": [
+            3
+          ],
+          "basis": "unknown",
+          "facet": "limits"
+        },
+        {
+          "text": "The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "limits"
+        },
+        {
+          "text": "My current voice body lacks source-network and repository-runtime access, so I cannot directly check that status.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits"
+        }
+      ]
+    },
+    "accepted_review": {
+      "claims": [
+        {
+          "index": 0,
+          "verdict": "supported",
+          "reason": "The human report identifies Mara's proposal as the HarborMesh prototype tested together.",
+          "assertions": [
+            {
+              "span": "Mara's replay proposal became the HarborMesh prototype",
+              "verdict": "supported",
+              "reason": "The report connects the proposal to the prototype in the HarborMesh trial.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            },
+            {
+              "span": " tested by the human reporter and their companions.",
+              "verdict": "supported",
+              "reason": "The human speaker's 'we tested together' supports testing by the reporter with others, without identifying those others as this being.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                },
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "verdict": "supported",
+          "reason": "The header dates receipt of the human report through the same-being code body.",
+          "assertions": [
+            {
+              "span": "We received the human's field-trial report through fixture:body:code",
+              "verdict": "supported",
+              "reason": "The source header identifies a human field-trial report received through the code body.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                }
+              ]
+            },
+            {
+              "span": " on 2026-05-03.",
+              "verdict": "supported",
+              "reason": "This is explicitly the receipt date, not an inferred trial date.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "verdict": "supported",
+          "reason": "The retained earlier block records same-being work on the adapter and its receipt date.",
+          "assertions": [
+            {
+              "span": "Our earlier project-work memory, received through fixture:body:code on 2026-04-16,",
+              "verdict": "supported",
+              "reason": "The earlier retained block's header identifies project-work, code-body receipt, and that date.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "foreground_work; source project-work; received 2026-04-16 through fixture:body:code"
+                }
+              ]
+            },
+            {
+              "span": " recorded our work on the replay adapter agreed with Mara.",
+              "verdict": "supported",
+              "reason": "The same-being originating body explicitly records prototyping the replay adapter agreed with Mara.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "verdict": "supported",
+          "reason": "The earlier same-being work record explicitly claims authorship.",
+          "assertions": [
+            {
+              "span": "We also authored HarborMesh's sensor scheduler.",
+              "verdict": "supported",
+              "reason": "The originating body says it authored the scheduler and identifies this as its contribution.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "verdict": "supported",
+          "reason": "This describes the explicitly dated earlier prototype state.",
+          "assertions": [
+            {
+              "span": "As last observed on 2026-04-16,",
+              "verdict": "supported",
+              "reason": "The earlier block explicitly dates its observation to April 16; this is a historical state.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ]
+            },
+            {
+              "span": " our prototype was awaiting an outage field trial.",
+              "verdict": "supported",
+              "reason": "The record describes an active prototype waiting for an outage field trial.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "verdict": "supported",
+          "reason": "The human report explicitly gives the trial date and successful replay behavior.",
+          "assertions": [
+            {
+              "span": "The reporter said the April 30 trial",
+              "verdict": "supported",
+              "reason": "The human report dates the trial itself to April 30, separately from report receipt.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                },
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            },
+            {
+              "span": " replayed buffered readings correctly through an outage.",
+              "verdict": "supported",
+              "reason": "This is the reported trial result verbatim.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "verdict": "supported",
+          "reason": "Successful replay in the reported trial supports this limited description of demonstrated ability.",
+          "assertions": [
+            {
+              "span": "That result demonstrated the prototype's ability to replay buffered readings through an outage.",
+              "verdict": "supported",
+              "reason": "The report links the tested prototype to the trial's successful buffered replay through an outage; no production readiness or broader reliability is claimed.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "verdict": "supported",
+          "reason": "The report explicitly dates the pause and states its condition.",
+          "assertions": [
+            {
+              "span": "The team paused wider rollout on May 2",
+              "verdict": "supported",
+              "reason": "May 2 explicitly dates the team's rollout pause, rather than merely report receipt.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            },
+            {
+              "span": " pending an understanding of calibration drift.",
+              "verdict": "supported",
+              "reason": "The stated condition is that calibration drift be understood.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "verdict": "supported",
+          "reason": "The deployment absence is appropriately bounded to the dated report.",
+          "assertions": [
+            {
+              "span": "As of the report received on 2026-05-03,",
+              "verdict": "supported",
+              "reason": "The header explicitly dates receipt of the report.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                }
+              ]
+            },
+            {
+              "span": " there was no production deployment yet.",
+              "verdict": "supported",
+              "reason": "The report expressly states no production deployment yet; the sentence preserves that reporting-time limit.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "verdict": "supported",
+          "reason": "The sentence accurately attributes the reporter's request without claiming it was completed.",
+          "assertions": [
+            {
+              "span": "The reporter asked us to update the project account",
+              "verdict": "supported",
+              "reason": "The human report requests an update to the shared project account.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                },
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            },
+            {
+              "span": " and preserve the April proposal and trial in our history.",
+              "verdict": "supported",
+              "reason": "The same request explicitly asks to keep the April proposal and trial in shared history.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "verdict": "supported",
+          "reason": "This is a correctly scoped unknown about information absent from the supplied packet.",
+          "assertions": [
+            {
+              "span": "The supplied memories do not record whether calibration drift was later resolved.",
+              "verdict": "supported",
+              "reason": "The packet records the pause pending understanding of drift but supplies no later resolution.",
+              "proof": []
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "verdict": "supported",
+          "reason": "Neither later rollout resumption nor subsequent production deployment is recorded in the packet.",
+          "assertions": [
+            {
+              "span": "The supplied memories do not record whether rollout resumed",
+              "verdict": "supported",
+              "reason": "No supplied block records rollout resuming after the dated report.",
+              "proof": []
+            },
+            {
+              "span": " or production deployment occurred after 2026-05-03.",
+              "verdict": "supported",
+              "reason": "No supplied block records production deployment after that report receipt date.",
+              "proof": []
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "verdict": "supported",
+          "reason": "The earlier record provides both the declared status entry point and its repository pointer.",
+          "assertions": [
+            {
+              "span": "The recorded entry point for checking present status is docs/STATUS.md",
+              "verdict": "supported",
+              "reason": "The record explicitly declares docs/STATUS.md as its current-state entry point; this claims a recorded pointer, not newly verified status.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ]
+            },
+            {
+              "span": " in https://forge.example.invalid/commons/harbormesh.",
+              "verdict": "supported",
+              "reason": "The same block explicitly identifies this repository URL.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "verdict": "supported",
+          "reason": "The receiving binding denies both access capabilities needed for direct checking.",
+          "assertions": [
+            {
+              "span": "My current voice body lacks source-network and repository-runtime access,",
+              "verdict": "supported",
+              "reason": "The receiving body is fixture:body:voice and both access flags are false.",
+              "proof": []
+            },
+            {
+              "span": " so I cannot directly check that status.",
+              "verdict": "supported",
+              "reason": "Without source-network or repository-runtime access, the receiver cannot directly inspect the repository's current status.",
+              "proof": []
+            }
+          ]
+        }
+      ],
+      "missing": []
+    }
+  }
+}

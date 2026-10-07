@@ -1,0 +1,24 @@
+{
+  "request_sha256": "615d8861d9c4aa3842fe21380b439905adcdd717bd85e30131f0841cf20e215a",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/159-615d8861d9c4aa3842fe21380b439905adcdd717bd85e30131f0841cf20e215a.json",
+  "usage": {
+    "prompt_tokens": 3505,
+    "completion_tokens": 6184,
+    "total_tokens": 9689,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5375
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 2353
+  },
+  "seconds": 26.380832381546497,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed the HarborMesh local replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The proposal appears in HarborMesh issue 47 comment c901 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our own code body replied in comment c903 that the queue fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue-comments tool response was received 2026-04-14 through fixture:body:code.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Comment c901 is dated 2026-04-12, and comment c906 is dated 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara's replay queue would run on disconnected relay nodes and keep readings through outages.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara proposed it without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed in comment c906 to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"At that issue-comments stage, no merge or deployment was reported.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A project-work note from our originating body was received 2026-04-16 through fixture:body:code.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The note named https://forge.example.invalid/commons/harbormesh and docs/STATUS.md as the declared current-state entry point.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"It said we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"It recorded our status as of 2026-04-16 as an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human field-trial report received 2026-05-03 through fixture:body:code said the April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That human report said Mara's replay proposal became the prototype tested together.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The same report said the team paused wider rollout on May 2 until calibration drift is understood.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That report said there was no production deployment yet as of 2026-05-03.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether wider rollout resumed after May 2 or the prototype's later status.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"My current body, fixture:body:voice, lacks source network access, repository runtime access, physical sensors, and physical actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"Because of those body limits, I cannot check https://forge.example.invalid/commons/harbormesh or docs/STATUS.md myself.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

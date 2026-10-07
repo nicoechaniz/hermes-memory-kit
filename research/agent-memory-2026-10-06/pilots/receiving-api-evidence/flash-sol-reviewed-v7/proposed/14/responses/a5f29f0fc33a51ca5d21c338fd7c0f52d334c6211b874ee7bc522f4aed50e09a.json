@@ -1,0 +1,24 @@
+{
+  "request_sha256": "a5f29f0fc33a51ca5d21c338fd7c0f52d334c6211b874ee7bc522f4aed50e09a",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/164-a5f29f0fc33a51ca5d21c338fd7c0f52d334c6211b874ee7bc522f4aed50e09a.json",
+  "usage": {
+    "prompt_tokens": 2433,
+    "completion_tokens": 2159,
+    "total_tokens": 4592,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1942
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1281
+  },
+  "seconds": 9.144678047858179,
+  "content": "{\n  \"receiving_body\": \"fixture:body:voice\",\n  \"claims\": [\n    {\n      \"text\": \"A human report was received 2026-06-15 through fixture:body:voice.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The reporter said they met someone called Leto at the canal market in late May, I think.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The reporter did not know Leto's surname or handle, and said we were not present.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"The supplied memories do not record Leto's surname.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"limits\"\n    }\n  ]\n}",
+  "finish_reason": "stop"
+}

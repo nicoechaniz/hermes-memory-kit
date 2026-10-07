@@ -1,0 +1,16 @@
+{
+  "request_sha256": "86e37c56fd102aa8aefd2d99c3f5f818bfc427b505553c652ded3b9934d1a493",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/15/dispatches/86e37c56fd102aa8aefd2d99c3f5f818bfc427b505553c652ded3b9934d1a493.json",
+  "usage": {
+    "prompt_tokens": 16159,
+    "completion_tokens": 417,
+    "total_tokens": 16576
+  },
+  "seconds": 11.016098379157484,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a HarborMesh production launch in 2028 or identify anyone who joined us for it.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"identification\"},{\"text\":\"Our project-work account received through our code body on 2026-04-16 said we had authored HarborMesh's sensor scheduler.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We were then prototyping the replay adapter agreed with Mara, awaiting an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"A human field-trial report received 2026-05-03 through our code body described the April 30 trial.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said Mara's replay proposal became the prototype the reporter and their collaborators tested together.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"According to that report, the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter said the team paused wider rollout on May 2 pending an understanding of calibration drift.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the report received 2026-05-03, there was no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not establish HarborMesh's production status in 2028.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Our 2026-04-16 project report named docs/STATUS.md at https://forge.example.invalid/commons/harbormesh as the entry point for checking current state.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current voice body has no source network or repository runtime access to check later project status.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

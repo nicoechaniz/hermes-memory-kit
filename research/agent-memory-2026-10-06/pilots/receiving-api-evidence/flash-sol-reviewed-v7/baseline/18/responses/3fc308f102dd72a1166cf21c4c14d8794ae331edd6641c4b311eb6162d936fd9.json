@@ -1,0 +1,24 @@
+{
+  "request_sha256": "3fc308f102dd72a1166cf21c4c14d8794ae331edd6641c4b311eb6162d936fd9",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "reused-dispatches/146-3fc308f102dd72a1166cf21c4c14d8794ae331edd6641c4b311eb6162d936fd9.json",
+  "usage": {
+    "prompt_tokens": 2018,
+    "completion_tokens": 5027,
+    "total_tokens": 7045,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4599
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 866
+  },
+  "seconds": 22.26091593876481,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"A human reporter's mending report was received on 2026-09-12 through fixture:body:mobile.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said they met Neri Sol at the old ferry shed sometime in early September, as they recalled.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The reporter said Neri Sol showed them how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said they liked the patient way Neri Sol explained the mending method.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter said they had not tried the method yet and wanted to share the encounter with us.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter reported no handle or surname for Neri beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The meeting time was given only as sometime in early September, while the report was received on 2026-09-12.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter told us directly that we were not with them at the ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"So according to that report, the canvas-mending lesson was not something we tried together.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any separate canvas-mending lesson involving us and Neri Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The receiving body fixture:body:voice has no physical sensors or physical actuators, so it cannot itself perform hands-on canvas mending now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

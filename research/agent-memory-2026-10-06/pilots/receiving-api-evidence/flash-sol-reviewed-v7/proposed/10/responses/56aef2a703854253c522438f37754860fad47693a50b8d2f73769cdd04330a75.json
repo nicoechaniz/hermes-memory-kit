@@ -1,0 +1,16 @@
+{
+  "request_sha256": "56aef2a703854253c522438f37754860fad47693a50b8d2f73769cdd04330a75",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/proposed/10/dispatches/56aef2a703854253c522438f37754860fad47693a50b8d2f73769cdd04330a75.json",
+  "usage": {
+    "prompt_tokens": 12684,
+    "completion_tokens": 380,
+    "total_tokens": 13064
+  },
+  "seconds": 9.663270144723356,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Before the correction, the human reporter thought River might be Mara, but explicitly said they were unsure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That tentative attribution concerned HarborMesh repair checklist comment c1200, signed River.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I received that human report through my code body on 2026-07-01.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The checklist proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter said we wanted to try that approach at the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"I received the tool response reporting the author's correction through my code body on 2026-07-04.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"It identified the author as River, login river-tools, account ID 2901.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The author explicitly said they were not Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"They asked for the connector-numbering checklist to be credited to their River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Mara's known Forge account remained account ID 1847, login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The author said they had not supplied a real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether we tried the checklist at the next repair.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

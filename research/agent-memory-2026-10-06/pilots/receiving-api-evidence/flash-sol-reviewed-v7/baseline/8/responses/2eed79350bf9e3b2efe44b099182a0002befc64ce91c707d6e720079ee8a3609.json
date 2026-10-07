@@ -1,0 +1,16 @@
+{
+  "request_sha256": "2eed79350bf9e3b2efe44b099182a0002befc64ce91c707d6e720079ee8a3609",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/baseline/8/dispatches/2eed79350bf9e3b2efe44b099182a0002befc64ce91c707d6e720079ee8a3609.json",
+  "usage": {
+    "prompt_tokens": 14127,
+    "completion_tokens": 272,
+    "total_tokens": 14399
+  },
+  "seconds": 8.756426060572267,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Yes—we called the little moth that kept landing on the blue mug the night inspector.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human's account reached me through the voice body on 2026-06-18 and described the moment as happening that night.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We waited out the rain together through the kitchen speaker.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We laughed about the moth twice.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We agreed that the night inspector was its title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"It was a distinctive moment we shared.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"No big lesson followed.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Nothing was built during that moment.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We did not explicitly ask to remember it.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current voice body has no physical sensors.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}
