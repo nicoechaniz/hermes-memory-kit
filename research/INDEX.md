@@ -3,3 +3,4 @@
 | Topic | Start date | State | Summary |
 |---|---|---|---|
 | [Lifelong agent memory and consolidation](agent-memory-2026-10-06/README.md) | 2026-10-06 | closed | Five primary-source research lanes; HMK upgrade mechanisms, continuity evaluation and component/replacement gates. Runtime implementation remains pending. |
+| [Codex native memory integration addendum](../docs/codex-native-memory-review.md) | 2026-10-07 | source review complete; experiment pending | Native session continuity and local durable learning, external import/backend seams, controlled coexistence and the existing #11/#12 experiment. |

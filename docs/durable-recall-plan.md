@@ -23,6 +23,15 @@ and [cross-report](../research/agent-memory-2026-10-06/CROSS_REPORT.md) support 
 work sequence below. Competing systems were not deployed or benchmarked; this
 evidence does not establish a necessary wholesale replacement.
 
+The [2026-10-07 Codex addendum](codex-native-memory-review.md) incorporates the
+explicitly supplied project handoff and pinned native implementation. Codex
+already implements both session continuity and cross-session extraction,
+consolidation and recall. Preserve useful native behavior while comparing a
+complete HMK adapter with controlled coexistence in
+[issue #11](https://github.com/nicoechaniz/hermes-memory-kit/issues/11). Native
+local persistence and its external-memory import are not yet evidence of a
+being-shared lifelong store or a configurable HMK backend.
+
 ## First delivery
 
 The first delivery adds:
@@ -209,6 +218,13 @@ perturbations rather than building a competing benchmark.
 
 Initial implementation is human-directed finite foreground work. This plan does
 not install hooks, timers, inbox attention, prefetch or another model/provider.
+On 2026-10-07, a separate explicit human request enabled the Codex hooks
+framework and established the bounded design in
+[issue #12](https://github.com/nicoechaniz/hermes-memory-kit/issues/12). That later
+authorization does not install a memory handler or activate native generation;
+qualify the native writer, source scope and receiving contract first. Reuse
+native extraction/consolidation where feasible rather than assuming every body
+needs a new implementation of sleep.
 Future daily, idle, step-count, compression or end triggers use the same contract
 only through each body's authorized harness/runtime integration. A source-loss
 boundary can occur before a daily pass; session end is an extra opportunity.
@@ -275,3 +291,9 @@ narrative, synthesis, deduplicated bibliography and research index. Runtime
 fixes, model capture/recall, consolidation, scale and live receiving acceptance
 remain unexecuted. Publish every coherent implementation and correction as it
 lands rather than waiting for the entire sequence.
+
+Codex integration update on 2026-10-07: the addendum distinguishes native thread
+continuity, cross-session local memory, external import and the compiled backend
+seam. It incorporates the existing #11/#12 work and specifies a fictional native
+versus coexistence experiment. This is source-verified integration design;
+capture/consolidation measurements and live activation remain pending.

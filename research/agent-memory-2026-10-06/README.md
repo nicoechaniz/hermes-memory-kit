@@ -60,3 +60,12 @@ content entered this public research archive.
 
 Publication belongs to the existing
 [fork PR #10](https://github.com/nicoechaniz/hermes-memory-kit/pull/10).
+
+## Subsequent evidence
+
+The [2026-10-07 Codex addendum](../../docs/codex-native-memory-review.md) adds a
+pinned native-harness comparison and integrates a project handoff explicitly
+provided by the human. Codex already has a cross-session memory lifecycle in
+addition to session continuity. The addendum reuses issues #11/#12 and leaves the
+five raw reports and their checksum record unchanged. It is source inspection,
+not a completed native/HMK model experiment or a live memory rollout.
