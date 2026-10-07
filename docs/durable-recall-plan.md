@@ -113,6 +113,12 @@ plain-text probe preserved the quote, but the first real candidate still has
 temporal/provenance gaps and its saved review failed by timeout then 503. There
 is no completed comparison. Continue with a stable explicitly selected receiver,
 preserving these failed calls and unknown costs; stage two remains pending.
+The human subsequently paused the goal and requested an open
+[provider/configuration comparison](memory-provider-selection.md), including
+DeepSeek, Qwen, OpenAI, Google, Nous and specialist retrieval providers. Select
+and qualify each processing role independently; preserve local history and
+parallel embedding indexes. This research is not a resumption, completed model
+benchmark or replacement of the narrative and stage-two exit criteria.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These
