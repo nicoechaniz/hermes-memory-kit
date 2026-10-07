@@ -20,7 +20,7 @@ Shelf to engram_type mapping (heuristic taxonomy applied as a UPDATE pass):
     semantic    : mc-social, mc-places, library, identity, evidence, state
                   (anything else stays default 'semantic')
 
-Backup written to <db>.bak.preengram.<unix_ts> before any DDL.
+Verified standalone backup written to <db>.bak.preengram.<time_ns> before DDL.
 
 Env vars (cascade, first match wins):
     HMK_DB_PATH                 # explicit path to library.db
@@ -32,10 +32,11 @@ Env vars (cascade, first match wins):
 from __future__ import annotations
 
 import os
-import shutil
 import sqlite3
 import sys
 import time
+
+from sqlite_snapshot import verified_snapshot
 
 
 def resolve_db_path() -> str:
@@ -77,8 +78,8 @@ def main() -> int:
         print(f"ERROR: db not found at {db_path}", file=sys.stderr)
         return 2
 
-    backup = f"{db_path}.bak.preengram.{int(time.time())}"
-    shutil.copy2(db_path, backup)
+    backup = f"{db_path}.bak.preengram.{time.time_ns()}"
+    verified_snapshot(db_path, backup)
     print(f"backup: {backup} ({os.path.getsize(backup)} bytes)")
 
     db = sqlite3.connect(db_path)
@@ -87,10 +88,12 @@ def main() -> int:
     cols = [r[1] for r in db.execute("PRAGMA table_info(chapters)").fetchall()]
     if "engram_type" in cols:
         print(f"already migrated, columns: {cols}")
+        db.close()
         return 0
 
     db.executescript(
         """
+        BEGIN IMMEDIATE;
         ALTER TABLE chapters ADD COLUMN engram_type TEXT NOT NULL DEFAULT 'semantic'
             CHECK (engram_type IN ('episodic', 'semantic', 'procedural'));
         ALTER TABLE chapters ADD COLUMN event_ts INTEGER NULL;
@@ -114,10 +117,8 @@ def main() -> int:
         ).rowcount
         print(f"  {shelf_name} → {etype}: {n} chapters updated")
 
-    db.execute(
-        "UPDATE chapters SET event_ts=created_at "
-        "WHERE engram_type='episodic' AND event_ts IS NULL"
-    )
+    # Recording time is not evidence of occurrence time. Existing unknown
+    # event dates remain NULL; callers can supply known dates explicitly.
 
     db.commit()
 

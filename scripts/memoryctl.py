@@ -10,6 +10,7 @@ import re
 import sqlite3
 import sys
 import time
+import unicodedata
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -536,8 +537,9 @@ def init_db():
 
 
 def slugify(text):
-    slug = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
-    return slug or "item"
+    normalized = unicodedata.normalize("NFKC", text).casefold()
+    slug = re.sub(r"[\W_]+", "-", normalized).strip("-")
+    return slug or "item-" + hashlib.sha256(text.encode()).hexdigest()[:16]
 
 
 def token_estimate(text):
@@ -615,10 +617,26 @@ def upsert_book(con, shelf_name, title, source_path=None, source_kind="file"):
         raise SystemExit("Daimon projections require the versioned projection API")
     sid = shelf_id(con, shelf_name)
     slug = slugify(title)
+    # Keep existing IDs/slugs when an older ASCII slug represents this title.
     row = con.execute(
-        "SELECT id, source_kind FROM books WHERE shelf_id=? AND slug=?",
-        (sid, slug),
+        "SELECT id, title, source_kind FROM books WHERE shelf_id=? AND title=?",
+        (sid, title),
     ).fetchone()
+    if not row:
+        row = con.execute(
+            "SELECT id, title, source_kind FROM books WHERE shelf_id=? AND slug=?",
+            (sid, slug),
+        ).fetchone()
+        if row and row["title"] != title:
+            # Punctuation-equivalent titles can describe distinct records.
+            suffix = hashlib.sha256(title.encode()).hexdigest()
+            slug += "-" + suffix
+            row = con.execute(
+                "SELECT id, title, source_kind FROM books WHERE shelf_id=? AND slug=?",
+                (sid, slug),
+            ).fetchone()
+            if row and row["title"] != title:
+                raise SystemExit("book slug collision; existing record preserved")
     if row:
         if "daimon-projection" in {row["source_kind"], source_kind}:
             raise SystemExit(

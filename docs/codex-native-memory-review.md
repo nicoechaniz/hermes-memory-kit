@@ -138,6 +138,27 @@ The bounded continuity/candidate hook design stays in
 [`PreCompact`](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/hooks/src/events/compact.rs)
 is a compaction event, not an established native-consolidation-completed event.
 
+The human's October 7 follow-up selects HMK health repairs under
+[issue #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13) before the
+native coexistence experiment. A later adapter may observe supported native
+memory operations and submit candidates for being-level selection. Distinguish
+read/use, new extraction, consolidated publication, correction and retraction;
+each has a different evidence contract. Repeated reads do not create new lived
+events or independent corroboration. Candidate acceptance preserves originating
+record/version, body/session scope, selected sufficient evidence and uncertainty.
+
+The official [hooks interface](https://learn.chatgpt.com/docs/hooks) exposes
+`PostToolUse` for supported local tool paths, with tool identity, input and
+response. The pinned [hook registry](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/hooks/src/registry.rs)
+and [event modules](https://github.com/openai/codex/blob/rust-v0.160.0/codex-rs/hooks/src/events/mod.rs)
+do not establish a dedicated memory-consolidation-completed event. Tool coverage
+also has exceptions. Qualification must prove the actual native memory path's
+hook coverage; automatic context injection and the separate background writer
+cannot be assumed to produce `PostToolUse`. Where no suitable event exists,
+propose an explicit committed-memory notification/adapter in the owning harness,
+with idempotent deltas and receiving receipts, rather than promising observation
+of every memory action through a tool hook. No observer or hook is installed here.
+
 ## Receiving state and evidence limits
 
 The human authorized enabling the Codex hooks framework in the other project

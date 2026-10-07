@@ -204,6 +204,23 @@ that force the loss of meaningful people, projects or irreplaceable episodes.
 
 ## Next decision
 
+Implementation now proceeds under
+[health issue #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13),
+which links this plan, the source reviews, research index and the later Codex
+issues #11/#12. The human selected repairing HMK first, then testing native
+coexistence once the baseline is healthy. This order supersedes any reading of
+the earlier smallest Codex experiment as the immediate implementation task.
+
+P0 repair on 2026-10-07: migration uses a verified standalone SQLite online
+snapshot including committed WAL data; unknown occurrence time stays unknown.
+Upgrades merge shipped skills and preserve custom files plus overwritten
+pre-images outside skill discovery. Native titles preserve Unicode and resolve
+slug collisions without replacing differently titled records; legacy exact-title
+books keep their existing IDs/slugs. Thirty-two targeted regression/compatibility
+tests passed, including isolated snapshot retrieval and repeated migration.
+Native revisions, normal-write metadata and retrieval repairs are still pending.
+This is code/test evidence; no live being pool was migrated or deployed.
+
 First fix the review's confirmed preservation hazards: incomplete WAL migration
 backup, acquired-skill loss during upgrade and silent native title collisions.
 Publish each fix with the relevant regression evidence. These observations are
