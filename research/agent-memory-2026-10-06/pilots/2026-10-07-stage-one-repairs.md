@@ -87,3 +87,19 @@ ownership and correction history. Both comparison arms use the same extra
 procedure; its separate capture_review calls and costs are recorded. This is
 finite foreground qualification, not a hook or an autonomous memory writer.
 Changed formation requires fresh pools; the previous frozen run stays intact.
+
+## Verifiable source-block capture
+
+The source-review trial still produced a first-person voice-body market visit
+from a human report. Its evidence is retained as a failed procedure, not a pass.
+The finite pilot adds `--source-blocks`: models select meaningful source IDs,
+operations and links; the adapter constructs raw text from exact attributed
+blocks. Generated factual raw/summary and unknown IDs are refused. Recognition
+titles must occur in selected text. Existing memory blocks preserve ID/revision
+attribution; the native writer's closed API remains unchanged. Source-block
+capture is a separately frozen fresh formation condition in both arms.
+
+This favors verifiable compact support before interpretive synthesis, which
+belongs to stage 2. It does not archive every source: mechanical blocks remain
+subject to selection and omitted blocks stay absent. The receiving contract
+explicitly separates the quoted human speaker from its receiving body.

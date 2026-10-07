@@ -238,3 +238,10 @@ result, not an invented simulation, stronger validation, deployment or receipt.
 Label who reported it and when; retain occurrence time separately. Recheck title
 and summary as well as full text: a qualified raw record cannot make an incorrect
 title safe. If an inference is useful, label it and its support explicitly.
+
+When a paraphrase cannot preserve fidelity, retain compact selected source
+blocks as exact quotations with speaker/channel, report date and receiving
+body explicit. The quoted human's “I” is not the receiving body's identity.
+Selection still decides lasting meaning; quoting does not admit routine logs
+or require a whole source archive. Keep qualified factual support available
+before deriving a shorter account or interpreting it as learning.

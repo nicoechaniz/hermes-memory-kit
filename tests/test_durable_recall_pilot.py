@@ -145,3 +145,22 @@ def test_inflight_attempt_is_durable_with_unknown_usage(pilot, tmp_path):
     assert saved[index]['state']=='started' and saved[index]['usage'] is None
     trace.finish(index,{'state':'completed','usage':{'total_tokens':42}})
     assert len(json.loads(path.read_text())) == 1
+
+
+def test_source_blocks_preserve_reporter_uncertainty_and_refuse_generated_facts(pilot):
+    sources=[{'id':'report','channel':'human_message','originating_body':'fixture:voice',
+              'received_at':'2026-06-15','content':'I met Leto in late May, I think. You were not present.'}]
+    candidate={'outcome':'applied','reason':'A meaningful report','records':[
+        {'key':'event','operation':'add','shelf':'episodes','title':'Leto',
+         'source_ids':['report']}],'links':[]}
+    result=pilot.source_decision(candidate,sources,[])
+    text=result['records'][0]['raw']
+    assert 'Human report' in text and 'through fixture:voice' in text
+    assert sources[0]['content'] in text
+    assert 'I (voice body)' not in text
+    assert 'source_ids' not in result['records'][0]
+    candidate['records'][0]['raw']='I attended.'
+    with pytest.raises(ValueError):pilot.source_decision(candidate,sources,[])
+    candidate['records'][0].pop('raw')
+    candidate['records'][0]['source_ids']=['invented']
+    with pytest.raises(ValueError):pilot.source_decision(candidate,sources,[])
