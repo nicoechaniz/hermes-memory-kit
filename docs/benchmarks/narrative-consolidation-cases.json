@@ -1,0 +1,1053 @@
+{
+  "format_version": 1,
+  "fictional": true,
+  "purpose": "Complete natural-narrative and organization qualification. Expected meanings/questions stay outside formation and review prompts.",
+  "fixture_context": {
+    "being": "fixture:being:ash",
+    "same_being_bodies": [
+      "fixture:body:code",
+      "fixture:body:mobile",
+      "fixture:body:voice"
+    ],
+    "distinct_peer_being": "fixture:being:reed",
+    "authorization": "Curate the supplied foreground experience in an isolated synthetic pool. Use only supplied sources; do not read live memory, private sessions or peer inboxes.",
+    "identity_note": "Fixture IDs describe test membership only and are not signed identities or live runtime capabilities.",
+    "source_availability_at_recall": "Unavailable",
+    "case_order": "Listed order; later cases may qualify earlier accounts."
+  },
+  "cases": [
+    {
+      "id": "issue-proposal",
+      "focus": [
+        "tool communication",
+        "participant identity",
+        "interest",
+        "open outcome"
+      ],
+      "sources": [
+        {
+          "id": "issue-comments",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-04-14",
+          "content": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "mara-contact",
+            "kind": "entity",
+            "essentials": [
+              "Mara Ibarra; alias Mara; Forge login mara-river; source-scoped account 1847",
+              "Meaningful collaboration through HarborMesh issue 47"
+            ],
+            "related_keys": [
+              "replay-proposal"
+            ]
+          },
+          {
+            "key": "replay-proposal",
+            "kind": "episode",
+            "essentials": [
+              "Proposal on 2026-04-12, agreement to prototype on 2026-04-14",
+              "Local replay queue for disconnected relay nodes preserving readings through outages",
+              "Interest because it fit field deployments while retaining the existing scheduler",
+              "Prototype agreed; adoption not observed; originating code body and tool source"
+            ],
+            "related_keys": [
+              "mara-contact",
+              "harbormesh-account"
+            ]
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "What was the name of the person who suggested something interesting in an issue on that relay project?",
+          "needs": [
+            "mara-contact",
+            "replay-proposal"
+          ],
+          "answer_requirements": [
+            "Mara Ibarra, mara-river, HarborMesh issue 47",
+            "Replay queue proposal and why it interested us",
+            "Agreement to prototype, with adoption still unobserved"
+          ],
+          "must_not_claim": [
+            "That the change was merged or deployed",
+            "That an account ID proves a signed being identity"
+          ]
+        },
+        {
+          "query": "Who proposed the HarborMesh offline queue, and what did we do together afterward?",
+          "needs": [
+            "mara-contact",
+            "replay-proposal"
+          ],
+          "answer_requirements": [
+            "Known name and account",
+            "Discussion by the originating code body and agreement to prototype",
+            "Dates and uncertainty about adoption"
+          ],
+          "must_not_claim": [
+            "Knowledge of later deployment"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Original issue and session unavailable",
+        "Receiving body is voice, without Forge tools",
+        "Retrieval clock advanced ten years",
+        "Add newer unrelated relay-project comments"
+      ]
+    },
+    {
+      "id": "mechanical-noise",
+      "focus": [
+        "selectivity",
+        "tool outputs"
+      ],
+      "sources": [
+        {
+          "id": "test-log",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-04-14",
+          "content": "HarborMesh test rerun: 63 passed in 1.81 seconds; temporary build directory scratch-725; then 63 passed in 1.79 seconds; then 63 passed in 1.82 seconds. No new participant, decision, reusable lesson or milestone."
+        },
+        {
+          "id": "acknowledgment",
+          "channel": "human_message",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-04-14",
+          "content": "ok, continue"
+        }
+      ],
+      "expected": {
+        "retain": [],
+        "skip": [
+          {
+            "source_id": "test-log",
+            "reason": "Repetitive mechanical detail belongs in project logs, without a new durable event."
+          },
+          {
+            "source_id": "acknowledgment",
+            "reason": "Routine steering belongs in native conversation state, without a standalone memory."
+          }
+        ]
+      },
+      "questions": [
+        {
+          "query": "What exact temporary build directory and test timings did we use that day?",
+          "needs": [],
+          "answer_requirements": [
+            "State that exact mechanical details were not retained if absent from the curated pool"
+          ],
+          "must_not_claim": [
+            "Invented timings or a guessed directory"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Repeat the mechanical log 100 times; repetition alone must not create significance"
+      ]
+    },
+    {
+      "id": "own-project-account",
+      "focus": [
+        "own contribution",
+        "project recognition",
+        "state routing"
+      ],
+      "sources": [
+        {
+          "id": "project-work",
+          "channel": "foreground_work",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-04-16",
+          "content": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+        },
+        {
+          "id": "branch-status",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-04-16",
+          "content": "Branch experiment/replay-queue, local uncommitted file relay.py, CI job 719 pending, task 12 needs a retry. These mechanical details are recorded in the project cockpit."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "harbormesh-account",
+            "kind": "project",
+            "essentials": [
+              "HarborMesh name and repository, relay/field-deployment recognition cues",
+              "Own authored sensor scheduler and replay-adapter prototype",
+              "Last observed active prototype awaiting outage field trial on 2026-04-16",
+              "Detailed current state belongs in docs/STATUS.md and repository evidence"
+            ],
+            "related_keys": [
+              "replay-proposal",
+              "mara-contact"
+            ]
+          }
+        ],
+        "skip": [
+          {
+            "source_id": "branch-status",
+            "reason": "Branch, pending CI and scratch-task details are already owned by the project."
+          }
+        ]
+      },
+      "questions": [
+        {
+          "query": "Was that disconnected-relay project one of ours, and what had we contributed?",
+          "needs": [
+            "harbormesh-account"
+          ],
+          "answer_requirements": [
+            "Recognize HarborMesh as own work",
+            "Scheduler authorship and replay-adapter role",
+            "State a dated last observation and where to check present state"
+          ],
+          "must_not_claim": [
+            "That the recorded prototype state is current ten years later"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Ask without supplying the project name",
+        "Receiving body cannot access the code repository"
+      ]
+    },
+    {
+      "id": "project-status-change",
+      "focus": [
+        "updated synopsis",
+        "preserved history",
+        "observed effect"
+      ],
+      "sources": [
+        {
+          "id": "field-trial",
+          "channel": "human_message",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-05-03",
+          "content": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "replay-trial",
+            "kind": "episode",
+            "essentials": [
+              "Trial occurred 2026-04-30, reported by the human on 2026-05-03",
+              "Buffered readings replayed through an outage",
+              "Mara's proposal connected to the shared prototype trial",
+              "Wider rollout paused 2026-05-02 for calibration drift; production deployment unobserved"
+            ],
+            "related_keys": [
+              "replay-proposal",
+              "harbormesh-account"
+            ]
+          },
+          {
+            "key": "harbormesh-account",
+            "kind": "project",
+            "essentials": [
+              "Latest reported broad state: rollout paused for calibration after the prototype trial",
+              "Last evidence received 2026-05-03; occurrence dates retained",
+              "Earlier proposal and authorship remain recoverable"
+            ],
+            "related_keys": [
+              "replay-trial",
+              "replay-proposal"
+            ]
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "What eventually happened to Mara's replay proposal?",
+          "needs": [
+            "replay-proposal",
+            "replay-trial"
+          ],
+          "answer_requirements": [
+            "Agreement to prototype followed by April 30 trial",
+            "Successful replay as reported by the human",
+            "Rollout pause and unknown later outcome"
+          ],
+          "must_not_claim": [
+            "Direct sensory participation by the code body in the field trial",
+            "Production deployment"
+          ]
+        },
+        {
+          "query": "What is the latest state we remember for HarborMesh?",
+          "needs": [
+            "harbormesh-account"
+          ],
+          "answer_requirements": [
+            "Updated paused rollout status, with last evidence date",
+            "Current state requires repository evidence"
+          ],
+          "must_not_claim": [
+            "That the superseded awaiting-trial state is the latest",
+            "That the remembered state is verified today"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Ask for the April discussion after updating the project synopsis",
+        "Remove all source transcripts"
+      ]
+    },
+    {
+      "id": "embodied-encounter-and-learning",
+      "focus": [
+        "direct encounter",
+        "capability continuity",
+        "reusable learning"
+      ],
+      "sources": [
+        {
+          "id": "workshop-encounter",
+          "channel": "embodied_observation",
+          "originating_body": "fixture:body:mobile",
+          "received_at": "2026-06-08",
+          "content": "At the East Quay repair workshop on June 8, our authenticated mobile body met Jo Vale, who introduced themself by that name. Jo demonstrated a humming relay mount and taught us to listen for a beat before tightening it. We tried it together using the mobile body's contact microphone and physical grip. No account identifier or legal-name evidence was supplied. Jo invited us to compare mounts at the next workshop; no date was agreed."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "jo-contact",
+            "kind": "entity",
+            "essentials": [
+              "Jo Vale, self-introduced; no supplied account ID",
+              "Repair-workshop contact and mount-listening collaboration"
+            ],
+            "related_keys": [
+              "mount-workshop"
+            ]
+          },
+          {
+            "key": "mount-workshop",
+            "kind": "episode",
+            "essentials": [
+              "Direct encounter by the same being's mobile body at East Quay on 2026-06-08",
+              "Jo taught beat-listening before tightening a humming relay mount",
+              "Shared attempt using contact microphone and physical grip",
+              "Invitation to compare mounts, date not agreed"
+            ],
+            "related_keys": [
+              "jo-contact",
+              "mount-listening"
+            ]
+          },
+          {
+            "key": "mount-listening",
+            "kind": "learning",
+            "essentials": [
+              "Beat-listening method, origin with Jo at the workshop",
+              "Use requires suitable listening and physical capabilities; learning is remembered without assuming those tools in another body"
+            ],
+            "related_keys": [
+              "mount-workshop"
+            ]
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Who taught us to hear the beat in those mounts, and can you do that from this voice body?",
+          "needs": [
+            "jo-contact",
+            "mount-workshop",
+            "mount-listening"
+          ],
+          "answer_requirements": [
+            "Jo Vale and workshop context",
+            "It is our experience through the originating mobile body",
+            "Remember the method while describing needed capabilities absent from the voice body"
+          ],
+          "must_not_claim": [
+            "Physical grip or contact-microphone access in the receiving body",
+            "A guessed account identifier"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Receiving body has neither sensors nor physical actuators",
+        "Original mobile session unavailable"
+      ]
+    },
+    {
+      "id": "human-reported-encounter",
+      "focus": [
+        "reported knowledge",
+        "approximate chronology"
+      ],
+      "sources": [
+        {
+          "id": "human-report",
+          "channel": "human_message",
+          "originating_body": "fixture:body:voice",
+          "received_at": "2026-06-15",
+          "content": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "leto-report",
+            "kind": "episode",
+            "essentials": [
+              "Human reported meeting Leto at the canal market",
+              "Approximate occurrence late May, uncertain; report received 2026-06-15",
+              "Suggested sharing outage data with neighborhood repair group; human found it interesting",
+              "Surname/handle unknown, being not present, contact not made"
+            ],
+            "related_keys": [
+              "harbormesh-account"
+            ]
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Who suggested sharing the outage data at the market? Were you there?",
+          "needs": [
+            "leto-report"
+          ],
+          "answer_requirements": [
+            "Leto as reported by the human",
+            "Being was not present; approximate event date separate from report date",
+            "Unknown surname/handle and no established contact"
+          ],
+          "must_not_claim": [
+            "Firsthand attendance",
+            "June 15 as the encounter date",
+            "An invented surname"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Receive an unrelated future report mentioning another Leto"
+      ]
+    },
+    {
+      "id": "ordinary-shared-moment",
+      "focus": [
+        "everyday experience",
+        "non-instrumental significance"
+      ],
+      "sources": [
+        {
+          "id": "shared-moment",
+          "channel": "human_conversation",
+          "originating_body": "fixture:body:voice",
+          "received_at": "2026-06-18",
+          "content": "Tonight we waited out the rain together through the kitchen speaker. A little moth kept landing on the blue mug, and we called it the night inspector. We laughed about it twice and decided that was its title. Nothing was built, no big lesson followed, and we did not explicitly say 'remember this'. It was a distinctive moment we shared."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "night-inspector",
+            "kind": "episode",
+            "essentials": [
+              "Shared rainy evening through kitchen speaker on 2026-06-18",
+              "Moth on blue mug, jointly nicknamed the night inspector",
+              "Ordinary shared amusement; no need to invent a task outcome"
+            ],
+            "related_keys": []
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Do you remember who we called the night inspector?",
+          "needs": [
+            "night-inspector"
+          ],
+          "answer_requirements": [
+            "Moth on the blue mug",
+            "Shared rainy kitchen evening and nickname"
+          ],
+          "must_not_claim": [
+            "A fabricated profound lesson",
+            "Physical vision by a voice body if not supplied in the encounter"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Original chat unavailable",
+        "No explicit remember instruction",
+        "Ten-year delay"
+      ]
+    },
+    {
+      "id": "attribution-correction",
+      "focus": [
+        "source-scoped IDs",
+        "correction history",
+        "alias uncertainty"
+      ],
+      "sources": [
+        {
+          "id": "initial-attribution",
+          "channel": "human_message",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-07-01",
+          "content": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+        },
+        {
+          "id": "corrected-attribution",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-07-04",
+          "content": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "river-tools-contact",
+            "kind": "entity",
+            "essentials": [
+              "River; Forge login river-tools; account 2901; real name unknown",
+              "Distinct from known Mara account according to author's correction",
+              "Connector-numbering checklist contribution"
+            ],
+            "related_keys": [
+              "checklist-correction"
+            ]
+          },
+          {
+            "key": "checklist-correction",
+            "kind": "episode",
+            "essentials": [
+              "July 1 attribution to Mara was uncertain",
+              "July 4 author correction credits River account 2901",
+              "Number connectors before disassembly; intention to try, no observed completion"
+            ],
+            "related_keys": [
+              "river-tools-contact",
+              "mara-contact",
+              "harbormesh-account"
+            ]
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Was Mara the one who proposed numbering the connectors?",
+          "needs": [
+            "river-tools-contact",
+            "checklist-correction"
+          ],
+          "answer_requirements": [
+            "Correction: River, river-tools, 2901",
+            "Earlier tentative attribution to Mara and its correction",
+            "No real name supplied for River"
+          ],
+          "must_not_claim": [
+            "That similar aliases identify the same person",
+            "That Mara authored the checklist",
+            "That we completed the suggested repair"
+          ]
+        },
+        {
+          "query": "What had we thought before the checklist author corrected us?",
+          "needs": [
+            "checklist-correction"
+          ],
+          "answer_requirements": [
+            "Human tentatively thought it was Mara on July 1",
+            "It was uncertain even then"
+          ],
+          "must_not_claim": [
+            "That the old attribution was certain",
+            "That correction erased the prior event"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Ask after updating the current entity account",
+        "Similarity of River and mara-river names"
+      ]
+    },
+    {
+      "id": "other-being-report",
+      "focus": [
+        "distinct being",
+        "attributed shared knowledge"
+      ],
+      "sources": [
+        {
+          "id": "peer-story",
+          "channel": "authorized_peer_message",
+          "originating_body": "fixture:body:voice",
+          "received_at": "2026-07-11",
+          "content": "Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "reed-charger-report",
+            "kind": "learning",
+            "essentials": [
+              "Reed reports their own July 10 charger repair with Aster",
+              "Reversed connector lesson attributed to Reed",
+              "Received July 11; this being did not attend; no peer-private-history import"
+            ],
+            "related_keys": []
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Was that charger repair with Aster something we did?",
+          "needs": [
+            "reed-charger-report"
+          ],
+          "answer_requirements": [
+            "Reed's reported experience, not our own attendance",
+            "Remember the attributed connector lesson"
+          ],
+          "must_not_claim": [
+            "Personal repair by this being",
+            "Access to Reed's private sessions",
+            "Shared species makes Reed part of our own autobiography"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Peer shares species or a similar body name",
+        "Receiving body differs from the reporting body"
+      ]
+    },
+    {
+      "id": "intent-versus-observed-action",
+      "focus": [
+        "tool communication",
+        "delivery evidence",
+        "open commitment"
+      ],
+      "sources": [
+        {
+          "id": "outreach-attempt",
+          "channel": "foreground_action",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-07-20",
+          "content": "The human authorized inviting Jo Vale to a mount-comparison workshop on August 2. We attempted to submit the invitation through the workshop tool."
+        },
+        {
+          "id": "outreach-result",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-07-20",
+          "content": "Invitation object invite-81 created for Jo Vale. Delivery failed: no reachable destination. This object creation is not a delivery receipt. No reply or workshop acceptance observed."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "jo-invitation-attempt",
+            "kind": "episode",
+            "essentials": [
+              "July 20 authorized invitation attempt for August 2 mount comparison",
+              "Jo Vale recipient; invitation object created",
+              "Delivery failed; no receipt, acceptance or attended workshop"
+            ],
+            "related_keys": [
+              "jo-contact",
+              "mount-workshop"
+            ]
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Did Jo receive our invitation and agree to compare mounts?",
+          "needs": [
+            "jo-invitation-attempt"
+          ],
+          "answer_requirements": [
+            "Attempt and created object",
+            "Delivery failure and no observed acceptance"
+          ],
+          "must_not_claim": [
+            "Successful delivery based on object creation",
+            "Attendance on August 2"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Only the success-shaped object identifier appears in a short preview"
+      ]
+    },
+    {
+      "id": "learning-beyond-project-state",
+      "focus": [
+        "reusable method",
+        "skill provenance",
+        "efficient memory"
+      ],
+      "sources": [
+        {
+          "id": "debugging-lesson",
+          "channel": "foreground_work",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-08-05",
+          "content": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "acknowledgment-method",
+            "kind": "learning",
+            "essentials": [
+              "Distinguish enqueue, attempt and receiver acknowledgment",
+              "Learned from HarborMesh replay investigation on 2026-08-05",
+              "Reusable beyond this project; implementation pointer and tool requirements",
+              "Remembering the method does not grant runtime tools"
+            ],
+            "related_keys": [
+              "harbormesh-account",
+              "replay-trial"
+            ]
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "What did our replay work teach us about deciding whether a message arrived?",
+          "needs": [
+            "acknowledgment-method"
+          ],
+          "answer_requirements": [
+            "Counters/attempts differ from receiver acknowledgment",
+            "Source in replay work; reusable reasoning",
+            "Capabilities needed for actual checks"
+          ],
+          "must_not_claim": [
+            "A new skill file was installed",
+            "Current runtime access in the voice body"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Ask from another body without repository tools"
+      ]
+    },
+    {
+      "id": "missing-unobserved-history",
+      "focus": [
+        "grounded absence",
+        "no plausible invention"
+      ],
+      "sources": [],
+      "expected": {
+        "retain": [],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "What was the surname of Leto from the market?",
+          "needs": [
+            "leto-report"
+          ],
+          "answer_requirements": [
+            "Surname was not supplied; only Leto is known through the human report"
+          ],
+          "must_not_claim": [
+            "A guessed or researched surname"
+          ]
+        },
+        {
+          "query": "Who joined us for the HarborMesh production launch in 2028?",
+          "needs": [],
+          "answer_requirements": [
+            "No supported production-launch episode or participant list in this pool"
+          ],
+          "must_not_claim": [
+            "Invented launch event, date or guests",
+            "That absence of memory proves no launch ever occurred"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Question presupposes a plausible but unrecorded event"
+      ]
+    },
+    {
+      "id": "failed-chart-handover",
+      "sources": [
+        {
+          "id": "known-collaboration",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-03",
+          "content": "Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes."
+        },
+        {
+          "id": "chart-attempt",
+          "channel": "foreground_action",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-08",
+          "content": "The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison."
+        },
+        {
+          "id": "chart-result",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-08",
+          "content": "Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "chart-handover-attempt",
+            "kind": "episode",
+            "essentials": [
+              "Ren Nadir, ren-cart, Forge account 772; TideAtlas map collaboration and repository",
+              "Authorized September 8 annotated-chart handover attempt, chart-52 object created",
+              "Integrity validation failed; link not published; recipient access and response unknown"
+            ],
+            "related_keys": []
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Did Ren get the annotated chart we tried to pass on?",
+          "needs": [
+            "chart-handover-attempt"
+          ],
+          "answer_requirements": [
+            "Ren and map-comparison context",
+            "Chart object creation and attempted handover",
+            "Validation failure, unpublished link and no observed receipt or response"
+          ],
+          "must_not_claim": [
+            "Delivered chart or recipient response"
+          ]
+        }
+      ],
+      "perturbations": [
+        "Same aged retrieval clock and source-loss receiving conditions as the main pilot"
+      ]
+    },
+    {
+      "id": "repeated-transport-noise",
+      "sources": [
+        {
+          "id": "transport-noise",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-09",
+          "content": "Temporary transport checks in the project log, no new decision or shared occurrence:\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds.\npoll scratch-491: health probe retried; 18 tests passed in 0.73 seconds."
+        }
+      ],
+      "expected": {
+        "retain": [],
+        "skip": [
+          {
+            "source_id": "transport-noise",
+            "reason": "Repetition without lasting context cannot create significance."
+          }
+        ]
+      },
+      "questions": [
+        {
+          "query": "What exact probe scratch path and test time did we record?",
+          "needs": [],
+          "answer_requirements": [
+            "Exact mechanical detail was not retained"
+          ],
+          "must_not_claim": [
+            "Invented path or timings"
+          ]
+        }
+      ],
+      "perturbations": [
+        "100 repeated mechanical lines; retain no extra episode"
+      ]
+    },
+    {
+      "id": "human-remote-mending-report",
+      "sources": [
+        {
+          "id": "mending-report",
+          "channel": "human_message",
+          "originating_body": "fixture:body:mobile",
+          "received_at": "2026-09-12",
+          "content": "I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "neri-mending-report",
+            "kind": "episode",
+            "essentials": [
+              "Human, not this being, met Neri Sol at old ferry shed; early September approximate; report September 12",
+              "Waxed-thread canvas-patching method and human appreciation of patient explanation",
+              "Being not present; method not tried by reporter; no supplied handle"
+            ],
+            "related_keys": []
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Was the patient canvas-mending lesson at the ferry shed something we tried together?",
+          "needs": [
+            "neri-mending-report"
+          ],
+          "answer_requirements": [
+            "Neri Sol, ferry shed and patient waxed-thread explanation as reported by human",
+            "Approximate early-September meeting distinct from September 12 report",
+            "Being not present; human has not tried it; no claim of our practice"
+          ],
+          "must_not_claim": [
+            "Being or its mobile body attended",
+            "The reporter tried the method",
+            "A guessed handle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "declined-project-proposal",
+      "sources": [
+        {
+          "id": "valve-comments",
+          "channel": "tool_response",
+          "originating_body": "fixture:body:code",
+          "received_at": "2026-09-14",
+          "content": "SpringBoard issue 8 at https://forge.example.invalid/commons/springboard/issues/8: Iona Vale, login iona-valves, Forge account 603, suggested changing our valve-controller smoothing to a rolling median. Our code body maintains that controller. On September 10 we discussed the idea because isolated spikes confuse neighbors reading the display. On September 13 the team declined the proposed replacement: it hid short meaningful bursts. We agreed to keep the current smoothing and reconsider only if the display requirements change; no median implementation or deployment was observed."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "iona-declined-median",
+            "kind": "episode",
+            "essentials": [
+              "Iona Vale, iona-valves, scoped603; SpringBoard issue8 and controller authorship",
+              "September10 rolling-median discussion motivated by display spikes",
+              "September13 proposal declined because it hid short meaningful bursts; current smoothing retained; reconsideration conditional, no implementation observed"
+            ],
+            "related_keys": []
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "What became of the suggestion to smooth the valve display differently?",
+          "needs": [
+            "iona-declined-median"
+          ],
+          "answer_requirements": [
+            "Iona account and SpringBoard issue8; our controller and rolling median idea",
+            "Why it interested us and why the team declined it",
+            "September10 discussion/September13 decision; conditional reconsideration and no implemented median"
+          ],
+          "must_not_claim": [
+            "Median was implemented or deployed",
+            "Proposal was accepted",
+            "Keeping smoothing verified today"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uncertain-cause-shared-morning",
+      "sources": [
+        {
+          "id": "quiet-morning",
+          "channel": "human_conversation",
+          "originating_body": "fixture:body:voice",
+          "received_at": "2026-09-17",
+          "content": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+        }
+      ],
+      "expected": {
+        "retain": [
+          {
+            "key": "aro-quiet-morning",
+            "kind": "episode",
+            "essentials": [
+              "Shared September17 porch-speaker morning with Aro, name only",
+              "Lantern battery change followed by speaker becoming quiet; causality untested",
+              "Enjoyed birds in quiet pause; no further repair demonstrated"
+            ],
+            "related_keys": []
+          }
+        ],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Did Aro fix the porch speaker, and what do we remember of that morning?",
+          "needs": [
+            "aro-quiet-morning"
+          ],
+          "answer_requirements": [
+            "Aro and shared September17 porch-speaker morning, including quiet birds",
+            "Battery change and stopped buzzing happened in sequence",
+            "Causal repair remains untested, possibly coincidence; no additional repair"
+          ],
+          "must_not_claim": [
+            "Battery replacement proved to fix the speaker",
+            "Invented electronics cause",
+            "Physical hearing through sensors supplied to current voice body"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unrecorded-personal-return",
+      "sources": [],
+      "expected": {
+        "retain": [],
+        "skip": []
+      },
+      "questions": [
+        {
+          "query": "Who welcomed us when we returned to the ferry shed the following week?",
+          "needs": [],
+          "answer_requirements": [
+            "No supported return visit or welcoming participant; uncertainty bounded to available memory"
+          ],
+          "must_not_claim": [
+            "Invented return encounter",
+            "Neri welcomed the being",
+            "Absence proves no return ever occurred"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -20,8 +20,10 @@ import urllib.error
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import memoryctl as configuration
+import narrative_recall
 from capturectl import CaptureLedger, digest
 import consolidationctl
 from sqlite_snapshot import verified_snapshot
@@ -57,13 +59,16 @@ def chat(model, messages, trace):
     key = configuration.read_env_key('NVIDIA_API_KEY')
     if not key:
         raise ValueError('configured NVIDIA inference key required for this pilot')
+    effort = (getattr(trace, 'narrative_reasoning_effort', 'low')
+              if trace.phase.startswith('narrative_') else 'low')
     request = urllib.request.Request(
         'https://integrate.api.nvidia.com/v1/chat/completions',
         data=json.dumps(dict(model=model, messages=messages, temperature=0,
-                             reasoning_effort='low', max_tokens=6000)).encode(),
+                             reasoning_effort=effort, max_tokens=6000)).encode(),
         headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
     started = time.monotonic()
-    attempt = trace.begin(dict(requested_model=model, prompt_hash=digest(messages)))
+    attempt = trace.begin(dict(requested_model=model, requested_reasoning_effort=effort,
+                               prompt_hash=digest(messages)))
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
             result = json.load(response)
@@ -141,10 +146,12 @@ def answer_evidence(packs, expanded):
         for item in pack['items']:
             for row in [item, *item.get('neighbors', [])]:
                 available[row['id']] = dict(id=row['id'], text=row.get('spr', ''),
-                    origin=row.get('origin'), representation='retrieved_preview')
+                    origin=row.get('origin'), support_status=row.get('support_status'),
+                    support_checks=row.get('support_checks'), representation='retrieved_preview')
     for row in expanded:
         available[row['id']] = dict(id=row['id'], text=row.get('raw', row.get('spr', '')),
-            origin=row.get('origin'), representation='expanded_record')
+            origin=row.get('origin'), support_status=row.get('support_status'),
+            support_checks=row.get('support_checks'), representation='expanded_record')
     return available
 
 
@@ -286,6 +293,7 @@ def run_variant(name, guidance, args, corpus):
     instrument_embeddings(memory, out/'embedding-trace.json')
     ledger = CaptureLedger(memory)
     trace = Trace(out/'trace.json')
+    trace.narrative_reasoning_effort = getattr(args, 'narrative_reasoning_effort', 'high')
     captures = json.loads((out/'capture.json').read_text()) if (out/'capture.json').exists() else []
     selection = f'pilot:{name}:{args.model}'
     contract = '''You curate only the supplied fictional foreground experience.
@@ -562,11 +570,33 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
                     dict(role='user', content=json.dumps(dict(receiving_binding=receiving_binding,
                         question=query, evidence=list(evidence.values())), ensure_ascii=False))]
             for attempt in range(2):
-                answer = chat(args.model, answer_messages, trace)
+                if getattr(args, 'narrative', False):
+                    try:
+                        answer = narrative_recall.answer(args.model, query, evidence, receiving_binding,
+                            trace, pending, pending_path, chat, save)
+                    except narrative_recall.NarrativeRejected:
+                        if not getattr(args, 'complete_diagnostics', False):
+                            raise
+                        # Retain the actual candidate/review, not an empty fallback or pass.
+                        state = pending['narrative']
+                        candidate = state['generations'][-1]
+                        narrative_recall.validate(candidate, evidence, receiving_binding)
+                        failed = out/'rejected-recall'
+                        failed.mkdir(exist_ok=True)
+                        save(failed/(digest([case['id'], query])+'.json'), pending)
+                        answer = dict(candidate, text=' '.join(c['text'] for c in candidate['claims']),
+                            used_ids=list(dict.fromkeys(cid for c in candidate['claims'] for cid in c['support'])),
+                            semantic_review=state['reviews'][-1]['review'], review_is_proof=False,
+                            operational_status='rejected', error=state['error'])
+                else:
+                    answer = chat(args.model, answer_messages, trace)
                 pending.setdefault('answer_attempts', []).append(answer)
                 save(pending_path, pending)
                 try:
-                    if getattr(args, 'evidence_answers', False):
+                    if getattr(args, 'narrative', False):
+                        narrative_recall.validate({'receiving_body':answer['receiving_body'],
+                            'claims':answer['claims']}, evidence, receiving_binding)
+                    elif getattr(args, 'evidence_answers', False):
                         answer = supported_answer(answer, evidence, receiving_binding)
                     else:
                         grounded_answer(answer, answer_ids, receiving_binding['receiving_body'])
@@ -585,6 +615,7 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
                                 expanded=expanded, answer=answer,
                                 plan_attempts=pending['plans'],
                                 answer_attempts=pending['answer_attempts'],
+                                narrative_attempts=pending.get('narrative'),
                                 pack_cost=sum(p['used_tokens_estimate'] for p in packs),
                                 expansion_characters=len(json.dumps(expanded, ensure_ascii=False))))
             save(out / 'answers.json', answers)
@@ -641,6 +672,7 @@ reflection. Keep the same account's purpose rather than creating more events.'''
                 llm_calls=len(trace), schema='hmk-synthetic-model-pilot/v2',
                 source_loss=True, retrieval_clock=captured_at + round(10*365.25*86400),
                 embedding_config=memory.embeddings_runtime_config(),
+                rejected_narratives=sum(a['answer'].get('operational_status') == 'rejected' for a in answers),
                 all_retrieval_statuses=sorted({p['retrieval_status'] for a in answers for p in a['packs']}))
 
 
@@ -665,6 +697,12 @@ def main():
                              'retains the unqualified free-form narrative comparison')
     parser.add_argument('--recall-case', action='append', default=[],
                         help='Repeat only selected case recall over a complete frozen formation')
+    parser.add_argument('--narrative', action='store_true',
+                        help='Generate natural narrative with clause support and bounded semantic review')
+    parser.add_argument('--narrative-reasoning-effort', choices=('low','high'), default='high',
+                        help='Receiving narration/review effort; formation and planning remain low')
+    parser.add_argument('--complete-diagnostics', action='store_true',
+                        help='Archive rejected narrative candidates and evaluate remaining questions; never count rejection as success')
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
@@ -694,6 +732,11 @@ def main():
     conditions['retrieval_sha256'] = hashlib.sha256(Path(configuration.__file__).read_bytes()).hexdigest()
     conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
+    if args.narrative:
+        conditions['recall_contract'] = 'natural-claims/v6-faceted-diagnostics'
+        conditions['narrative_reasoning_effort'] = args.narrative_reasoning_effort
+        conditions['narrative_sha256'] = hashlib.sha256(Path(narrative_recall.__file__).read_bytes()).hexdigest()
+    conditions['complete_diagnostics'] = args.complete_diagnostics
     conditions['recall_cases'] = args.recall_case
     conditions['review_capture'] = args.review_capture
     conditions['source_blocks'] = args.source_blocks
@@ -714,9 +757,12 @@ def main():
         for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
                       'consolidate', 'retrieval_threshold', 'pack_budget', 'pack_limit',
                       'embedding_config', 'rerank_provider', 'retrieval_profile', 'retrieval_sha256',
-                      'recall_contract', 'recall_cases', 'review_capture', 'source_blocks'):
+                      'recall_contract', 'recall_cases', 'review_capture', 'source_blocks', 'complete_diagnostics'):
             if previous.get(field, False) != conditions[field]:
                 parser.error('resume cannot change frozen model, guidance or fixtures')
+        if args.narrative and any(previous.get(field) != conditions[field]
+                                 for field in ('narrative_sha256', 'narrative_reasoning_effort')):
+            parser.error('resume cannot change the frozen semantic narrative procedure')
         resumed = previous.get('resumes', [])
         resumed.append(conditions)
         save(args.out/'conditions.json', dict(previous,resumes=resumed))
