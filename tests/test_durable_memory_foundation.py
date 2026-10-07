@@ -529,3 +529,14 @@ def test_semantic_backfill_is_indexed_attributed_and_idempotent(mc, monkeypatch,
     assert results[0]['origin']['source']['source_event_id'] == mc.expand(source)['record_uid']
     assert mc.expand(results[0]['id'])['revision'] == 1
     assert mc.expand(results[0]['id'])['neighbors'][0]['id'] == source
+
+
+def test_summary_and_title_follow_embedding_eligibility_policy(mc, monkeypatch):
+    monkeypatch.setattr(mc, 'scan_content_for_secrets', lambda text: 'synthetic-secret' if 'fixture-secret' in text else None)
+    cid = mc.add_text('episodes','An account','Ordinary text',summary='fixture-secret')
+    assert mc.expand(cid)['embed_disabled'] == 1
+    cid = mc.add_text('episodes','Another account','Ordinary text')
+    mc.update_chapter(cid, summary='fixture-secret')
+    assert mc.expand(cid)['embed_disabled'] == 1
+    cid = mc.add_text('episodes','fixture-secret','Ordinary text')
+    assert mc.expand(cid)['embed_disabled'] == 1
