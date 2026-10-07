@@ -88,7 +88,7 @@ def chat(model, messages, trace):
         return {'_invalid_json': content}
 
 
-def recall_plan(value, candidates):
+def recall_plan(value, candidates, require_refinement=False):
     """Validate the entire plan before any follow-up tool is called."""
     if not isinstance(value, dict) or set(value) - {'queries', 'expand_ids'}:
         raise ValueError('plan must contain only queries and expand_ids')
@@ -102,6 +102,8 @@ def recall_plan(value, candidates):
         if not isinstance(query, str) or not query.strip():
             raise ValueError('queries must be nonempty strings (or {query: string})')
         normalized.append(query.strip())
+    if require_refinement and not normalized:
+        raise ValueError('an empty initial pack needs at least one focused question-derived query')
     if not isinstance(ids, list) or len(ids) > 5 or any(type(cid) is not int for cid in ids):
         raise ValueError('expand_ids must be an array of at most five integer IDs')
     if any(cid not in candidates for cid in ids):
@@ -440,6 +442,8 @@ Return the full corrected capture decision in the same allowed API shape.
         if any((a['case_id'], a['question']) == (pending['case_id'], pending['question']) for a in answers):
             (out/'pending-recall.json').unlink()
     for case in corpus['cases']:
+        if getattr(args, 'recall_case', []) and case['id'] not in args.recall_case:
+            continue
         for question in case['questions']:
             query = question['query']
             if any(a['question'] == query and a['case_id'] == case['id'] for a in answers):
@@ -459,7 +463,12 @@ are unavailable. Use only supplied memory. Return JSON with queries (up to two
 focused follow-up memory query strings) and expand_ids (up to five integer IDs
 visible in the pack, including supplied neighbors). No other fields.
 Do not infer facts from question wording. Current work must be checked at its
-world pointer; dated memory is not present status.'''),
+world pointer; dated memory is not present status. A broad retrieval miss is
+not proof of absence. If the initial pack is empty, issue at least one concise
+keyword query derived from the question, within the same two-query bound.
+Search terms are hypotheses for lookup, not factual assertions. Prefer focused
+keywords or ordinary synonyms over repeating the entire question; never invent
+participants, dates or outcomes to make a query.'''),
                           dict(role='user', content=json.dumps(dict(receiving_binding=receiving_binding,
                                                                   question=query, packs=packs[:1])))]
             candidates = visible_ids(packs[0])
@@ -470,7 +479,8 @@ world pointer; dated memory is not present status.'''),
                     pending['plans'].append(value)
                     save(pending_path, pending)
                     try:
-                        planner = recall_plan(value, candidates)
+                        planner = recall_plan(value, candidates,
+                                              require_refinement=packs[0]['null_retrieval'])
                     except ValueError as error:
                         pending['error'] = str(error)
                         save(pending_path, pending)
@@ -643,6 +653,8 @@ def main():
     parser.add_argument('--evidence-answers', action=argparse.BooleanOptionalAction, default=True,
                         help='Return selected exact retrieved support; --no-evidence-answers '
                              'retains the unqualified free-form narrative comparison')
+    parser.add_argument('--recall-case', action='append', default=[],
+                        help='Repeat only selected case recall over a complete frozen formation')
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
@@ -654,6 +666,8 @@ def main():
     repo = REPO_ROOT
     corpus = json.loads(args.corpus.read_text())
     assert corpus['fictional']
+    if set(args.recall_case)-{case['id'] for case in corpus['cases']}:
+        parser.error('recall-case must name an existing fictional case')
     baseline = subprocess.check_output(['git','show',args.baseline_commit + ':templates/skills/memory/librarian/SKILL.md'],
                                        cwd=repo, text=True)
     proposed = (repo / 'templates/skills/memory/librarian/references/durable-memory-selection.md').read_text()
@@ -668,8 +682,9 @@ def main():
     conditions['rerank_provider'] = configuration.rerank_provider_default()
     conditions['retrieval_profile'] = configuration.read_env_key('HMK_RETRIEVAL_PROFILE') or 'general'
     conditions['retrieval_sha256'] = hashlib.sha256(Path(configuration.__file__).read_bytes()).hexdigest()
-    conditions['recall_contract'] = ('five-field-support/v4-exact-evidence' if args.evidence_answers
-                                     else 'five-field-evidence/v3-bound-receiver')
+    conditions['recall_contract'] = ('five-field-support/v5-null-refinement' if args.evidence_answers
+                                     else 'five-field-evidence/v4-null-refinement')
+    conditions['recall_cases'] = args.recall_case
     conditions['review_capture'] = args.review_capture
     conditions['source_blocks'] = args.source_blocks
     if args.reuse_capture:
@@ -689,7 +704,7 @@ def main():
         for field in ('model','baseline_commit','guidance_hashes','fixture_hash','reasoning_effort',
                       'consolidate', 'retrieval_threshold', 'pack_budget', 'pack_limit',
                       'embedding_config', 'rerank_provider', 'retrieval_profile', 'retrieval_sha256',
-                      'recall_contract', 'review_capture', 'source_blocks'):
+                      'recall_contract', 'recall_cases', 'review_capture', 'source_blocks'):
             if previous.get(field, False) != conditions[field]:
                 parser.error('resume cannot change frozen model, guidance or fixtures')
         resumed = previous.get('resumes', [])

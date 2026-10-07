@@ -33,6 +33,10 @@ def test_equivalent_query_shapes_and_bounded_ids(pilot):
     pack = {'items':[{'id':1,'neighbors':[{'id':2,'neighbors':[{'id':99}]}]}]}
     assert pilot.visible_ids(pack) == {1,2}
     assert pilot.recall_plan({'expand_ids':[2]}, pilot.visible_ids(pack))['expand_ids'] == [2]
+    with pytest.raises(ValueError,match='empty initial pack'):
+        pilot.recall_plan({},set(),require_refinement=True)
+    assert pilot.recall_plan({'queries':['arrival evidence']},set(),require_refinement=True)=={
+        'queries':['arrival evidence'],'expand_ids':[]}
 
 
 def test_trace_survives_rejected_response(pilot, tmp_path, monkeypatch):
@@ -119,7 +123,7 @@ def test_source_review_precedes_commit_and_never_sees_hidden_rubric(pilot, tmp_p
          'raw':'We attended the encounter.'}], 'links':[]}
     corrected = json.loads(json.dumps(candidate))
     corrected['records'][0]['raw'] = 'The human reported an encounter; the receiving voice body did not attend.'
-    responses = iter([candidate, corrected, {'queries':[],'expand_ids':[]}, {'receiving_body':'fixture:body:voice','answer':{
+    responses = iter([candidate, corrected, {'queries':['encounter report'],'expand_ids':[]}, {'receiving_body':'fixture:body:voice','answer':{
         'identification':'Unknown','context':'A report','meaning':'Unknown','outcome':'Reported',
         'limits':'Not directly observed'},'used_ids':[]}])
     phases=[]
