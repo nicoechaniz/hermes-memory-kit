@@ -71,6 +71,20 @@ recorded and copied canonical records, UIDs, revisions, history and links must
 remain identical across reader initialization. This is a new receiving comparison,
 not retrospective qualification of the original procedure.
 
+The receiving checkpoint now also freezes the model/prompt procedure and records
+the unfinished phase, saved response, revision number, structural-repair count
+and critique messages. A timeout while reviewing a saved candidate resumes that
+review instead of generating the candidate again. A durable response written
+before an interruption is validated without repeating the provider call.
+Structural repair and the two semantic revisions retain their bounds across
+restarts; terminal rejection does not reset them. Changed context/model/procedure
+and historical checkpoints without the new phase cursor are rejected while
+preserving their files. Historical runs must use their frozen implementation
+or start a new explicitly versioned comparison, not silently migrate results.
+An unobserved provider response may still require a retry; its unknown usage is
+recorded as unknown, not assumed free. This persistence fix does not improve or
+certify the receiving model's semantic judgment.
+
 Rejected terminal candidates preserve pending work. `--complete-diagnostics`
 additionally archives that pending state and proceeds to later questions while
 labelling the actual rejected answer `operational_status: rejected`. It never
@@ -103,6 +117,12 @@ The complete v7 diagnostic compared all twenty-two questions in both arms but
 did not qualify natural narration. Operational acceptance and correct retrieval
 did not prevent participant, chronology and outcome errors. See the
 [preserved diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-narrative-diagnostic.md).
+The [completed v8 diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-narrative-atomic-diagnostic.md)
+adds outside review of all complete claims and individual answer requirements.
+It exposes both faithful paraphrases rejected for literal differences and copied
+peer speech accepted with changed autobiographical ownership. It also records
+the extra generation after an unfinished-review timeout that motivated the phase
+cursor. The new cursor contract is not retrospectively substituted into v8.
 
 An explicit fictional schema capability probe on the selected NVIDIA endpoint
 returned HTTP 200 and correctly escaped an embedded quotation, using 269 total

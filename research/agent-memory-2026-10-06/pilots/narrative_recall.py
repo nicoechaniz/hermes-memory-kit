@@ -365,7 +365,14 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     if state.get('context_sha256', fingerprint) != fingerprint:
         raise ValueError('narrative context changed; preserve pending work and start a new comparison')
+    procedure = hashlib.sha256(json.dumps(dict(model=model, generation=GENERATION,
+        review=REVIEW, protocol='receiving-phase/v1'), sort_keys=True).encode()).hexdigest()
+    if state.get('procedure_sha256', procedure) != procedure:
+        raise ValueError('narrative procedure/model changed; preserve pending work and start a new comparison')
+    if 'procedure_sha256' not in state and (state['generations'] or state['reviews'] or 'accepted' in state):
+        raise ValueError('legacy narrative checkpoint has no phase cursor; preserve it and start a new comparison')
     state['context_sha256'] = fingerprint
+    state['procedure_sha256'] = procedure
     def rendered(candidate, review):
         return dict(candidate, text=' '.join(claim['text'] for claim in candidate['claims']),
             used_ids=list(dict.fromkeys(cid for c in candidate['claims'] for cid in c['support'])),
@@ -375,58 +382,100 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         review_shape(state['accepted_review'], state['accepted'], evidence)
         return rendered(state['accepted'], state['accepted_review'])
     context = supplied_context(query, evidence, binding)
-    messages = [dict(role='system', content=GENERATION),
-                dict(role='user', content=json.dumps(context, ensure_ascii=False))]
+    if 'progress' not in state:
+        state['progress'] = dict(revision=0, phase='generation', repair=0, messages=[
+            dict(role='system', content=GENERATION),
+            dict(role='user', content=json.dumps(context, ensure_ascii=False))])
+        save(checkpoint, pending)
+    progress = state['progress']
+    def reject(message, failure_type):
+        state['error'] = message
+        progress.update(phase='rejected', failure_type=failure_type)
+        save(checkpoint, pending)
+    def raise_rejection():
+        if progress['failure_type'] == 'structure':
+            raise ValueError(state['error'])
+        raise NarrativeRejected(state['error'])
     previous_phase = trace.phase
     try:
-        for revision in range(3):
-            trace.phase = 'narrative_generation' if revision == 0 else 'narrative_revision'
-            for repair in range(2):
-                candidate = chat(model, messages, trace)
+        while True:
+            if progress['phase'] == 'rejected':
+                raise_rejection()
+            revision = progress['revision']
+            if revision not in range(3) or progress['repair'] not in range(2):
+                raise ValueError('invalid narrative phase cursor; preserve checkpoint')
+            if progress['phase'] == 'generation':
+                trace.phase = 'narrative_generation' if revision == 0 else 'narrative_revision'
+                candidate = chat(model, progress['messages'], trace)
                 state['generations'].append(candidate)
+                progress.update(phase='generation_validate', candidate_index=len(state['generations'])-1)
                 save(checkpoint, pending)
+            elif progress['phase'] == 'generation_validate':
+                candidate = state['generations'][progress['candidate_index']]
                 try:
                     validate(candidate, evidence, binding)
                 except ValueError as error:
-                    state['error'] = str(error); save(checkpoint, pending)
-                    if repair == 1: raise
-                    messages.extend([dict(role='assistant', content=json.dumps(candidate)),
+                    if progress['repair'] == 1:
+                        reject(str(error), 'structure')
+                        raise_rejection()
+                    state['error'] = str(error)
+                    progress['messages'].extend([dict(role='assistant', content=json.dumps(candidate)),
                         dict(role='user', content='Invalid structure: '+str(error)+
                             '. Repair API shape only; preserve supported meaning. No rubric.')])
-                else: break
-            trace.phase = 'narrative_review'
-            review_messages = [dict(role='system', content=REVIEW), dict(role='user',
-                content=json.dumps(dict(context, candidate=candidate), ensure_ascii=False))]
-            for repair in range(2):
-                review = chat(model, review_messages, trace)
-                state['reviews'].append(dict(candidate=candidate, review=review))
+                    progress.update(phase='generation', repair=1)
+                else:
+                    progress.update(phase='review', repair=0, review_messages=[
+                        dict(role='system', content=REVIEW), dict(role='user',
+                            content=json.dumps(dict(context, candidate=candidate), ensure_ascii=False))])
                 save(checkpoint, pending)
+            elif progress['phase'] == 'review':
+                candidate = state['generations'][progress['candidate_index']]
+                trace.phase = 'narrative_review'
+                review = chat(model, progress['review_messages'], trace)
+                state['reviews'].append(dict(candidate=candidate, review=review))
+                progress.update(phase='review_validate', review_index=len(state['reviews'])-1)
+                save(checkpoint, pending)
+            elif progress['phase'] == 'review_validate':
+                candidate = state['generations'][progress['candidate_index']]
+                review = state['reviews'][progress['review_index']]['review']
                 try:
                     review_shape(review, candidate, evidence)
                 except ValueError as error:
-                    state['error'] = str(error); save(checkpoint, pending)
-                    if repair == 1:
-                        raise NarrativeRejected('atomic review invalid after one structural repair: '+str(error)) from error
-                    review_messages.extend([dict(role='assistant', content=json.dumps(review)),
+                    if progress['repair'] == 1:
+                        reject('atomic review invalid after one structural repair: '+str(error), 'review')
+                        raise_rejection()
+                    state['error'] = str(error)
+                    progress['review_messages'].extend([dict(role='assistant', content=json.dumps(review)),
                         dict(role='user', content='Invalid review shape: '+str(error)+'. Repair only shape.')])
-                else: break
-            anchors = missing_anchors(candidate, evidence)
-            state.setdefault('anchor_checks', []).append(dict(candidate=candidate, missing=anchors))
-            if anchors:
-                review = dict(review, missing=review['missing'] + anchors)
-            if not review['missing'] and all(row['verdict'] == 'supported' for row in review['claims']):
-                state['accepted'] = candidate
-                state['accepted_review'] = review
+                    progress.update(phase='review', repair=1)
+                else:
+                    progress.update(phase='assess', repair=0)
                 save(checkpoint, pending)
-                return rendered(candidate, review)
-            state['error'] = 'unsupported or incomplete narrative'; save(checkpoint, pending)
-            if revision == 2:
-                raise NarrativeRejected('narrative remained unsupported or incomplete after two evidence-grounded revisions')
-            messages.extend([dict(role='assistant', content=json.dumps(candidate)),
-                dict(role='user', content=json.dumps(dict(review=review))+
-                    '\nRevise the answer against the SAME supplied evidence. Correct attribution '
-                    'and qualifications; restore relevant supported omissions in missing. Do not '
-                    'adopt reviewer assertions unless the original evidence supports them. '
-                    'Retain supported useful meaning. No new facts or rubric.')])
+            elif progress['phase'] == 'assess':
+                candidate = state['generations'][progress['candidate_index']]
+                review = state['reviews'][progress['review_index']]['review']
+                anchors = missing_anchors(candidate, evidence)
+                state.setdefault('anchor_checks', []).append(dict(candidate=candidate, missing=anchors))
+                if anchors:
+                    review = dict(review, missing=review['missing'] + anchors)
+                if not review['missing'] and all(row['verdict'] == 'supported' for row in review['claims']):
+                    state['accepted'] = candidate
+                    state['accepted_review'] = review
+                    save(checkpoint, pending)
+                    return rendered(candidate, review)
+                if revision == 2:
+                    reject('narrative remained unsupported or incomplete after two evidence-grounded revisions', 'semantic')
+                    raise_rejection()
+                state['error'] = 'unsupported or incomplete narrative'
+                progress['messages'].extend([dict(role='assistant', content=json.dumps(candidate)),
+                    dict(role='user', content=json.dumps(dict(review=review))+
+                        '\nRevise the answer against the SAME supplied evidence. Correct attribution '
+                        'and qualifications; restore relevant supported omissions in missing. Do not '
+                        'adopt reviewer assertions unless the original evidence supports them. '
+                        'Retain supported useful meaning. No new facts or rubric.')])
+                progress.update(phase='generation', repair=0, revision=revision+1)
+                save(checkpoint, pending)
+            else:
+                raise ValueError('invalid narrative phase cursor; preserve checkpoint')
     finally:
         trace.phase = previous_phase
