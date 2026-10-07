@@ -2,6 +2,13 @@
 
 Choose the authority before writing.
 
+For experience rather than document ingestion, use the librarian's
+[durable-memory selection policy](../templates/skills/memory/librarian/references/durable-memory-selection.md).
+It covers significant encounters, project accounts, shared episodes and learning
+from every authorized channel, including tool responses. Use the
+[durable-recall plan](durable-recall-plan.md) and its evaluation cases to assess
+what survives compression and can be found without the original session.
+
 For HMK-native memory:
 
 1. ingestion and normalization

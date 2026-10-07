@@ -29,7 +29,7 @@ Deleting or regenerating the LLM Wiki from HMK is forbidden.
 | Curated LLM Wiki note | File under `$WIKI_PATH` | HMK `library` chapter is a retrieval index |
 | HMK-native identity/state/plan/episode/atomic note | `library.db` | HMK projection vault is disposable navigation |
 | Live project branch/blocker/task state | Project `MEMORY.md` and GitHub | May be linked, never copied as durable wiki truth |
-| Dialogue continuity | Native Hermes session/goal state (`state.db`; optional session exports) | HMK retrieval may supplement, not replace it; shared handoff files are not authoritative |
+| Dialogue continuity | The originating harness's native session/goal history (Hermes `state.db`; Codex thread history and compaction state) | HMK retrieval may supplement it; shared handoffs are attributed project context, not the original history |
 | Daimon `/me` personal memory | Daimon Matrix signed/evented memory ledger | HMK `daimon-projection` row is a disposable retrieval view |
 
 An HMK `library` shelf can therefore contain both authoritative HMK-native
@@ -43,6 +43,14 @@ authority. The record's origin does:
 - a record created by `daimon_projection.py` has explicit Matrix source,
   subject/author, memory/head, classification, checkpoint and projector fields;
   its projection history is audit evidence but Matrix remains authoritative.
+
+Codex also has a separate local cross-session memory lifecycle. Its generated
+summaries, source resources and learned procedures must not be confused with
+native dialogue continuity or automatically treated as HMK-native records.
+The [Codex integration review](codex-native-memory-review.md) compares explicit
+ownership under coexistence with a full backend/writer adapter. No receiving
+adapter or additional machine-readable ownership class is activated by this
+documentation; the existing policy file remains scoped to its declared paths.
 
 Until HMK persists origin fields directly, the verified `wiki_publish` receipt,
 source path, file hash, tags, and `derived_from` edge are the provenance
