@@ -434,6 +434,14 @@ Hindsight, Letta, Honcho and other systems contribute mechanisms to test in HMK.
 [mechanism review](experience-consolidation-mechanisms.md) records this work,
 including the current OpenSouls source and additional local proposals.
 
+Matrix already has a [merged offline archive producer](https://github.com/AlterMundi/daimon-matrix/pull/261)
+and [receiving continuity issue #263](https://github.com/AlterMundi/daimon-matrix/issues/263).
+Reuse those artifacts rather than creating another exporter or continuity task.
+The producer's documented original-file/SQLite preservation does not by itself
+close external content references or its deferred Git-history adaptation. Those
+remaining properties belong in the preservation/receiving qualification. Matrix
+#262 owns a Telegram convergence pilot and is not the memory roadmap parent.
+
 Use the same hidden-rubric fictional corpus and actual formation lifecycles.
 Compare capture, historical correction, weak-cue recall after source loss,
 repeated consolidation, verified export/restore and a receiving context in a
