@@ -71,6 +71,22 @@ def test_observed_tool_use_is_preserved_but_cannot_enter_receiving(native, tmp_p
     assert not (tmp_path/'responses'/path.name).exists()
 
 
+def test_review_and_revision_preserve_only_explicit_task_transcript(native, tmp_path):
+    _path, request, catalog = inputs(native, tmp_path)
+    request['phase'] = 'narrative_review'
+    _argv, stdin = native.command(request, catalog, tmp_path, tmp_path)
+    assert stdin == request['messages'][1]['content']
+    request['phase'] = 'narrative_revision'
+    request['messages'] += [dict(role='assistant', content='A mistaken candidate.'),
+                            dict(role='user', content='Correct the source attribution.')]
+    _argv, stdin = native.command(request, catalog, tmp_path, tmp_path)
+    transcript = json.loads(stdin[stdin.index('\n')+1:])
+    assert transcript == request['messages'][1:]
+    request['messages'][2]['role'] = 'tool'
+    with pytest.raises(ValueError, match='alternating'):
+        native.command(request, catalog, tmp_path, tmp_path)
+
+
 def test_unsupported_model_or_tool_capable_catalog_never_dispatches(native, tmp_path):
     path, request, catalog = inputs(native, tmp_path)
     request['model'] = 'openai/gpt-6.1-sol'

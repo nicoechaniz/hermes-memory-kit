@@ -1,0 +1,506 @@
+{
+  "structure_valid": true,
+  "error": null,
+  "review": {
+    "claims": [
+      {
+        "index": 0,
+        "verdict": "supported",
+        "reason": "The human conversation reports this shared morning with Aro.",
+        "assertions": [
+          {
+            "span": "The human reporter said that",
+            "verdict": "supported",
+            "reason": "The header identifies the source as a human conversation.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 0
+              }
+            ]
+          },
+          {
+            "span": "we spent the morning talking through the porch speaker with Aro.",
+            "verdict": "supported",
+            "reason": "The reported shared conversation explicitly used the porch speaker and included Aro.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "verdict": "unsupported",
+        "reason": "The introduction is supported, but the packet-wide absence of another identifier requires unknown basis.",
+        "assertions": [
+          {
+            "span": "Aro introduced themself with that name only,",
+            "verdict": "supported",
+            "reason": "The source explicitly limits Aro's introduction to that name.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          },
+          {
+            "span": "so the report supplies no other identifier for Aro.",
+            "verdict": "unsupported",
+            "reason": "This accurately describes an absence in the supplied report, but its basis must be unknown rather than memory.",
+            "proof": []
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "verdict": "supported",
+        "reason": "The source header supports the provenance, receipt date, and receiving body.",
+        "assertions": [
+          {
+            "span": "The report came from a human conversation,",
+            "verdict": "supported",
+            "reason": "The header labels the channel Human conversation.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 0
+              }
+            ]
+          },
+          {
+            "span": "source quiet-morning,",
+            "verdict": "supported",
+            "reason": "The header names quiet-morning as the source.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 0
+              }
+            ]
+          },
+          {
+            "span": "and was received 2026-09-17",
+            "verdict": "supported",
+            "reason": "The date is explicitly the receipt date, not a claimed occurrence date.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 0
+              }
+            ]
+          },
+          {
+            "span": "through fixture:body:voice.",
+            "verdict": "supported",
+            "reason": "The header identifies this receiving body.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "verdict": "unsupported",
+        "reason": "The morning conversation is supported; the absence of a separate event date requires unknown basis.",
+        "assertions": [
+          {
+            "span": "The report describes a morning conversation",
+            "verdict": "supported",
+            "reason": "The source says the shared conversation occupied the morning.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          },
+          {
+            "span": "but does not give that morning its own separate calendar date.",
+            "verdict": "unsupported",
+            "reason": "This is a correct packet-scoped absence, but requires unknown basis. The header dates receipt only.",
+            "proof": []
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "verdict": "supported",
+        "reason": "The reported enjoyment supports the stated significance of the quiet pause.",
+        "assertions": [
+          {
+            "span": "The morning mattered because we enjoyed hearing the birds during a quiet pause.",
+            "verdict": "supported",
+            "reason": "This paraphrases the shared enjoyment explicitly reported during that quiet pause as the morning's significance.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "verdict": "unsupported",
+        "reason": "The source says the conversation was through the speaker, not about it.",
+        "assertions": [
+          {
+            "span": "The shared morning was remembered as a conversation",
+            "verdict": "supported",
+            "reason": "The human conversation reports a shared morning spent talking.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          },
+          {
+            "span": "about the porch speaker",
+            "verdict": "unsupported",
+            "reason": "The porch speaker was the medium of conversation. Its being the conversation's subject is not established.",
+            "proof": []
+          },
+          {
+            "span": "with Aro.",
+            "verdict": "supported",
+            "reason": "Aro is explicitly named as a participant in the conversation.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "verdict": "supported",
+        "reason": "The source supports the sequence without establishing causation.",
+        "assertions": [
+          {
+            "span": "After Aro changed the lantern battery,",
+            "verdict": "supported",
+            "reason": "The source attributes the lantern battery change to Aro and places it before the buzzing stopped.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          },
+          {
+            "span": "the porch speaker stopped buzzing.",
+            "verdict": "supported",
+            "reason": "The speaker in this porch conversation is reported to have stopped buzzing.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "verdict": "supported",
+        "reason": "The reporter explicitly describes the causal connection as untested.",
+        "assertions": [
+          {
+            "span": "The human reporter said that",
+            "verdict": "supported",
+            "reason": "The source channel identifies the report as human conversation.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 0
+              }
+            ]
+          },
+          {
+            "span": "they had not tested whether the battery change and the speaker stopping were connected.",
+            "verdict": "supported",
+            "reason": "The reporter's shared 'we' had not tested the connection between those events; this includes the reporter.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "verdict": "supported",
+        "reason": "The source explicitly preserves coincidence as a possibility.",
+        "assertions": [
+          {
+            "span": "The report said the speaker stopping may just have been coincidence.",
+            "verdict": "supported",
+            "reason": "The source says the relationship between the battery change and cessation of buzzing may have been coincidence.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "verdict": "supported",
+        "reason": "This accurately attributes the explicit limit on repairs and demonstrations to the report.",
+        "assertions": [
+          {
+            "span": "The report said nothing else was repaired",
+            "verdict": "supported",
+            "reason": "The source explicitly states that nothing else was repaired.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          },
+          {
+            "span": "or demonstrated.",
+            "verdict": "supported",
+            "reason": "The same explicit statement also excludes any other demonstration.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "verdict": "supported",
+        "reason": "The explicitly untested connection and possible coincidence prevent a confirmed repair conclusion.",
+        "assertions": [
+          {
+            "span": "The report therefore does not establish that Aro fixed the porch speaker.",
+            "verdict": "supported",
+            "reason": "This is a supported evidentiary conclusion from the report's explicit uncertainty about causation, rather than an invented historical failure.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 11,
+        "verdict": "unsupported",
+        "reason": "The packet does omit a later test, but this absence requires unknown basis.",
+        "assertions": [
+          {
+            "span": "The supplied memories do not record a later test of the porch speaker after that morning.",
+            "verdict": "unsupported",
+            "reason": "This is a true packet-scoped absence. Memory basis is incorrect; the historical statement that testing had not occurred does not prove the absence of later testing.",
+            "proof": []
+          }
+        ]
+      },
+      {
+        "index": 12,
+        "verdict": "unsupported",
+        "reason": "The packet-wide absence requires unknown basis; the explicit historical limit is narrower.",
+        "assertions": [
+          {
+            "span": "The supplied memories do not record any other repair or demonstration by Aro.",
+            "verdict": "unsupported",
+            "reason": "This accurately describes the packet's contents but requires unknown basis. The report's 'Nothing else' supports an episode-scoped historical limit, not a memory-basis inventory of all records.",
+            "proof": []
+          }
+        ]
+      },
+      {
+        "index": 13,
+        "verdict": "unsupported",
+        "reason": "The packet-wide identity absence requires unknown basis.",
+        "assertions": [
+          {
+            "span": "The supplied memories do not give any fuller identity for Aro",
+            "verdict": "unsupported",
+            "reason": "This is a true packet-scoped absence, requiring unknown basis rather than memory.",
+            "proof": []
+          },
+          {
+            "span": "beyond the name they introduced.",
+            "verdict": "supported",
+            "reason": "The source explicitly says Aro introduced themself with that name only.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "index": 14,
+        "verdict": "supported",
+        "reason": "The unknown claim is properly bounded to supplied memories and preserves causal uncertainty.",
+        "assertions": [
+          {
+            "span": "Whether Aro actually fixed the porch speaker remains unverified in the supplied memories.",
+            "verdict": "supported",
+            "reason": "The packet reports cessation of buzzing but expressly leaves its connection to Aro's battery change untested and possibly coincidental; no later verification is supplied.",
+            "proof": [
+              {
+                "id": 16,
+                "passage": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "missing": []
+  },
+  "candidate": {
+    "receiving_body": "fixture:body:voice",
+    "claims": [
+      {
+        "text": "The human reporter said that we spent the morning talking through the porch speaker with Aro.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "identification"
+      },
+      {
+        "text": "Aro introduced themself with that name only, so the report supplies no other identifier for Aro.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "identification"
+      },
+      {
+        "text": "The report came from a human conversation, source quiet-morning, and was received 2026-09-17 through fixture:body:voice.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "context"
+      },
+      {
+        "text": "The report describes a morning conversation but does not give that morning its own separate calendar date.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "context"
+      },
+      {
+        "text": "The morning mattered because we enjoyed hearing the birds during a quiet pause.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "meaning"
+      },
+      {
+        "text": "The shared morning was remembered as a conversation about the porch speaker with Aro.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "meaning"
+      },
+      {
+        "text": "After Aro changed the lantern battery, the porch speaker stopped buzzing.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "outcome"
+      },
+      {
+        "text": "The human reporter said that they had not tested whether the battery change and the speaker stopping were connected.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "outcome"
+      },
+      {
+        "text": "The report said the speaker stopping may just have been coincidence.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "outcome"
+      },
+      {
+        "text": "The report said nothing else was repaired or demonstrated.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "outcome"
+      },
+      {
+        "text": "The report therefore does not establish that Aro fixed the porch speaker.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "outcome"
+      },
+      {
+        "text": "The supplied memories do not record a later test of the porch speaker after that morning.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "limits"
+      },
+      {
+        "text": "The supplied memories do not record any other repair or demonstration by Aro.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "limits"
+      },
+      {
+        "text": "The supplied memories do not give any fuller identity for Aro beyond the name they introduced.",
+        "support": [
+          16
+        ],
+        "basis": "memory",
+        "facet": "limits"
+      },
+      {
+        "text": "Whether Aro actually fixed the porch speaker remains unverified in the supplied memories.",
+        "support": [
+          16
+        ],
+        "basis": "unknown",
+        "facet": "limits"
+      }
+    ]
+  }
+}

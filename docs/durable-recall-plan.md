@@ -177,6 +177,12 @@ all assertion/requirement checks and raw responses separate from exact source
 quotation materialization. A non-thinking reviewer smoke failed; low-effort Flash
 narration/review remains the selected complete-trial candidate. Complete outside
 grading and all three consolidation passes remain pending.
+The [native review-role diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-native-review-role-diagnostic.md)
+now compares four identical fictional candidates against Flash low. Native Sol
+low returns valid passage review and catches real attribution changes, but still
+needs relevance adjudication; it is not full narrative qualification. Native
+review/repair transport preserves explicit task turns without loading history.
+Qwen is deferred under the current quota constraint.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

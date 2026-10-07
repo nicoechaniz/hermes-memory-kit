@@ -1,0 +1,27 @@
+{
+  "native": {
+    "calls": 4,
+    "usage": {
+      "prompt_tokens": 46396,
+      "completion_tokens": 8533,
+      "total_tokens": 54929
+    },
+    "median_seconds": 45.60336832469329,
+    "sum_request_seconds": 191.2809819225222,
+    "billed_cost_usd": null
+  },
+  "deepseek_identical_candidates": {
+    "calls": 4,
+    "usage": {
+      "prompt_tokens": 19511,
+      "completion_tokens": 63123,
+      "total_tokens": 82634
+    },
+    "median_seconds": 63.05737724388018,
+    "sum_request_seconds": 246.11490972526371,
+    "billed_cost_usd": null
+  },
+  "failed_setup_attempts": 5,
+  "failed_setup_usage_unknown": 5,
+  "qualification": false
+}
