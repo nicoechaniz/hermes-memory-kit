@@ -9,6 +9,7 @@ import time
 
 import memoryctl as mc
 import native_records
+from capture_schema import RECORD_FIELDS, decision_schema
 from sqlite_snapshot import verified_snapshot
 
 
@@ -150,8 +151,12 @@ class CaptureLedger:
                     raise ValueError('invalid selected link')
                 def resolve(value):
                     if type(value) is int:
+                        if not con.execute('SELECT 1 FROM chapters WHERE id=?', (value,)).fetchone():
+                            raise ValueError('link references an unknown chapter ID')
                         return value
-                    return selected[value]['chapter_id']
+                    if isinstance(value, str) and value in selected:
+                        return selected[value]['chapter_id']
+                    raise ValueError('link reference must be a selected record key or an existing integer chapter ID')
                 self.mc.add_link(resolve(link['source']), resolve(link['target']), link['link_type'],
                                  weight=link.get('weight', 1.0), note=link.get('note'), _con=con)
             con.execute('UPDATE capture_events SET state=?,reason=?,decision_hash=?,receipt_json=?,payload_json=?,updated_at=? WHERE event_key=?',
@@ -178,9 +183,9 @@ class CaptureLedger:
         return receipt
 
     def _write_record(self, con, event, record, selection, selected):
-        allowed = {'key','operation','shelf','title','raw','summary','tags','importance','engram_type',
-                   'event_ts','actor','location','metadata','chapter_id','expected_revision'}
-        if not isinstance(record, dict) or set(record) - allowed or not isinstance(record.get('key'), str) or not record['key'] or record['key'] in selected:
+        if not isinstance(record, dict) or set(record) - RECORD_FIELDS:
+            raise ValueError('unsupported selected record fields; use capturectl decision-schema')
+        if not isinstance(record.get('key'), str) or not record['key'] or record['key'] in selected:
             raise ValueError('invalid or duplicate selected record key')
         source = {**event['metadata'], **native_records.metadata(record.get('metadata')), 'selection_version': selection}
         for field in ('source_instance', 'source_uri'):
@@ -215,10 +220,14 @@ class CaptureLedger:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='action', required=True)
+    sub.add_parser('decision-schema', help='Print the structural proposal schema without opening a pool')
     stage = sub.add_parser('stage'); stage.add_argument('--file', required=True)
     pending = sub.add_parser('pending'); pending.add_argument('--stream', required=True)
     assess = sub.add_parser('assess'); assess.add_argument('--event-key', required=True); assess.add_argument('--file', required=True)
     args = parser.parse_args()
+    if args.action == 'decision-schema':
+        print(json.dumps(decision_schema(), indent=2, ensure_ascii=False))
+        return
     ledger = CaptureLedger()
     if args.action == 'pending':
         result = ledger.pending(args.stream)

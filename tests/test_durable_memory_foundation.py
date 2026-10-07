@@ -83,6 +83,36 @@ def test_projection_preserves_open_relation_names_and_escapes_yaml(mc):
     assert metadata['memory_links']['place: "north"'] == ['`mem:3` Canal']
 
 
+def test_decision_schema_requires_no_pool_and_matches_writer_fields(tmp_path):
+    import os
+    env = dict(os.environ)
+    for key in ('HMK_AGENT_MEMORY_BASE','HMK_DB_PATH','AGENT_MEMORY_BASE','HMK_BASE_DIR'):
+        env.pop(key, None)
+    result = subprocess.run([sys.executable, str(SCRIPTS/'capturectl.py'), 'decision-schema'],
+                            cwd=tmp_path, env=env, capture_output=True, text=True, check=True)
+    schema = json.loads(result.stdout)
+    fields = schema['properties']['records']['items']['properties']
+    assert fields['metadata']['properties']['reported_at']['type'] == 'integer'
+    assert 'location' in fields and 'location_json' not in fields
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_invalid_selected_link_preserves_pending_source_and_rolls_back(mc):
+    capture = load('invalid_link_fixture', SCRIPTS/'capturectl.py')
+    ledger = capture.CaptureLedger(mc)
+    event = dict(stream_id='fixture:links', sequence=1, event_id='comment', source_version='1',
+                 content='Mara proposed a replay queue.', metadata={'mode':'reported'})
+    key = ledger.stage(event)['event_key']
+    decision = dict(outcome='applied', reason='Lasting collaboration', selection_version='fixture:v1',
+                    records=[dict(key='episode',operation='add',shelf='episodes',title='Mara proposal',raw=event['content'])],
+                    links=[dict(source='episode',target='1',link_type='concerns')])
+    with pytest.raises(ValueError, match='integer chapter ID'):
+        ledger.assess(key,decision)
+    assert not mc.search('Mara')
+    assert ledger.pending(event['stream_id'])[0]['event']['content'] == event['content']
+    assert ledger.pending(event['stream_id'])[0]['processed_through'] == 0
+
+
 def test_skill_upgrade_preserves_acquired_files_and_edited_preimages(tmp_path):
     bootstrap = load("bootstrap_fixture", SCRIPTS / "bootstrap_agent.py")
     workspace = tmp_path / "workspace"

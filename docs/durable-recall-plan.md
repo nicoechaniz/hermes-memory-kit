@@ -75,8 +75,8 @@ Validation on 2026-10-06: the corpus contains 12 cases, 14 distinct retained
 meanings and 16 recall questions; source IDs, expected connections and document
 links were checked. The kit's smoke test passed. A disposable bootstrap/upgrade
 check confirmed that the selection reference ships with the skill and that new
-AGENTS guidance is present in a fresh workspace. No live pool was changed and
-the model capture/recall pilot has not yet run. The Codex-only skill validator
+AGENTS guidance is present in a fresh workspace. That first validation changed no live pool and did not run a model pilot.
+The later adoption and partial model results are recorded below. The Codex-only skill validator
 rejects the template's existing Hermes frontmatter keys (`version`, `author`,
 `prerequisites`); YAML and packaging were checked without changing that format.
 
@@ -202,13 +202,59 @@ Compression quality means enough retained meaning per unit of storage and recall
 cost. Measure those costs before setting numerical size targets. Avoid quotas
 that force the loss of meaningful people, projects or irreplaceable episodes.
 
+## Current adoption and qualification — 2026-10-07
+
+PRs [#9](https://github.com/nicoechaniz/hermes-memory-kit/pull/9),
+[#10](https://github.com/nicoechaniz/hermes-memory-kit/pull/10),
+[#14](https://github.com/nicoechaniz/hermes-memory-kit/pull/14),
+[#15](https://github.com/nicoechaniz/hermes-memory-kit/pull/15) and
+[#16](https://github.com/nicoechaniz/hermes-memory-kit/pull/16) are merged.
+Published main `d58800e0d037e0d34956789b7c4c5ea670732b6f` was adopted in
+CompAII's existing being-bound pool and the actual Codex manual wrapper/Hermes
+provider surfaces. A verified pre-change SQLite restore, all 242 original
+chapters and original table values, foreign keys, distinct native UUIDs and
+installed source bytes were checked. Three configured-provider hybrid queries
+and an actual installed-provider query returned attributed results. The Hermes
+gateway was restarted and observed active; Codex session services were untouched.
+These checks establish receiving tool operation, not autobiographical recall
+by another conversational model.
+
+[AlterMundi/Skills #20](https://github.com/AlterMundi/Skills/pull/20) merged the
+neutral package at version 1.1.0. The supported selective updater was qualified
+from committed objects, then used to adopt the installed shared skill; rendered
+binding inventory and surface checks passed. The private identity dependency
+pin was independently published/merged without including unrelated staged work.
+A full rebirth archive refresh was not performed. No hooks, timers, native-memory
+feature or automatic capture/consolidation trigger was installed.
+
+The adopted code passed 189 tests and smoke validation. The subsequent capture
+proposal schema/link-error fix passes 191 tests. Mechanical safety is established
+for the covered cases; selected-meaning quality is not. The
+[partial model pilot](../research/agent-memory-2026-10-06/pilots/2026-10-07-model-pilot.md)
+completed capture for both policy variants but failed the mandatory old-issue
+weak-cue recall, and the proposed policy wrongly omitted a meaningful attempted
+communication. The runner stopped on an invalid model plan; no completed aggregate
+comparison or three-pass consolidation acceptance exists. These are real remaining
+P2/P3/P4 uncertainties, not a successful ten-year qualification.
+
+The human then clarified that native learned memory is itself part of the being's
+delta and reported Mariano's use of Codex plus collective-memory. The
+[lifelong-memory/portability review](lifelong-memory-portability-review.md) now
+compares that route with HMK and closer experience/portability candidates. It
+also adds LifeBench/LifeSide and actual interchange proposals. Preserve native
+learned artifacts, available history and provenance independently of a selected
+HMK projection. Backend retention is not the objective: choose a system or components
+from the same source-loss, history, cross-body, export/restore and meaning tests.
+MIF/AIMEM are promising exchange candidates, not established native ecosystem
+standards. Speculative HMK expansion should not precede that comparison.
+
 ## Next decision
 
 Implementation now proceeds under
 [health issue #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13),
 which links this plan, the source reviews, research index and the later Codex
-issues #11/#12. The human selected repairing HMK first, then testing native
-coexistence once the baseline is healthy. This order supersedes any reading of
+issues #11/#12. The initial sequence repaired HMK first; the later comparison above keeps
+replacement open while preserving the adopted corpus and rollback. This order supersedes any reading of
 the earlier smallest Codex experiment as the immediate implementation task.
 
 P0 repair on 2026-10-07: migration uses a verified standalone SQLite online
@@ -261,7 +307,8 @@ process capture after deleting its source file and pre/post-commit failures.
 
 Published implementation: [PR #14](https://github.com/nicoechaniz/hermes-memory-kit/pull/14),
 based on the selection/research [PR #10](https://github.com/nicoechaniz/hermes-memory-kit/pull/10).
-This is code/test evidence; no live being pool was migrated or deployed.
+This was code/test evidence at publication time; the later adoption below
+supersedes that deployment status.
 
 First fix the review's confirmed preservation hazards: incomplete WAL migration
 backup, acquired-skill loss during upgrade and silent native title collisions.
@@ -349,6 +396,16 @@ not the only memory or a source that confirms its own generated narration.
 
 ## Replacement gates
 
+The [local-first portability review](lifelong-memory-portability-review.md)
+updates the comparison order on October 7: Basic Memory and memU lead the
+alternative-backend shortlist under the human's files/SQLite preference.
+Hindsight's supported observations, Letta's MemFS/formation and related
+[experience-consolidation mechanisms](experience-consolidation-mechanisms.md)
+are reusable candidates independently of the chosen canon. MIF/AIMEM/AMP share
+a small transportable core, but this being's history/provenance requirements
+need an additional preservation profile and actual consumer round trips.
+No universal standard or fully qualified replacement has been selected.
+
 Prepare a versioned export/restore contract alongside these upgrades. Inventory
 available text, metadata, logical IDs, native revisions, source references,
 links, corrections/retractions, date precision and selected assets. Explicitly
@@ -373,13 +430,13 @@ dual-writing model inferences. Before cutover, verify the final checkpoint and
 critical queries, preserve rollback, and account for new writes made after it.
 Live rollout follows that evidence and the existing authorization of each body.
 
-Research delivery on 2026-10-06: five completed raw reports, cross-report,
+Historical research delivery on 2026-10-06: five completed raw reports, cross-report,
 narrative, synthesis, deduplicated bibliography and research index. Runtime
 fixes, model capture/recall, consolidation, scale and live receiving acceptance
 remain unexecuted. Publish every coherent implementation and correction as it
 lands rather than waiting for the entire sequence.
 
-Codex integration update on 2026-10-07: the addendum distinguishes native thread
+Historical Codex integration design on 2026-10-07: the addendum distinguishes native thread
 continuity, cross-session local memory, external import and the compiled backend
 seam. It incorporates the existing #11/#12 work and specifies a fictional native
 versus coexistence experiment. This is source-verified integration design;
