@@ -140,6 +140,8 @@ def test_unknown_channels_and_unlisted_bodies_cannot_acquire_same_being_ownershi
         2:{'text':source('foreground_work','peer')},3:{'text':source('foreground_work','code')}},binding)['evidence']
     assert [row['attributed_blocks'][0]['speaker'] for row in rows]==[
         'unknown','attributed originating body','same-being originating body']
+    action=nr.supplied_context('What did we try?',{1:{'text':source('foreground_action','code')}},binding)
+    assert action['evidence'][0]['attributed_blocks'][0]['speaker']=='same-being originating body'
 
 
 def test_atomic_review_cannot_hide_a_false_clause_or_forge_source_proof():

@@ -72,7 +72,7 @@ def source_blocks(text, depth=0):
                        else 'distinct peer in attributed communication' if
                        role == 'Attributed peer communication' else 'source tool' if
                        role == 'tool_response' else 'attributed originating body' if
-                       role in {'foreground_work', 'action', 'embodied_observation'} else 'unknown')
+                       role in {'foreground_work', 'foreground_action', 'action', 'embodied_observation'} else 'unknown')
             block.update(speaker=speaker, receiving_body=body, reported_at=date,
                          channel=role, source=source)
         blocks.append(block)

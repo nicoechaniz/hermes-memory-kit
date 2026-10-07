@@ -1422,6 +1422,50 @@ def linked_neighbors(chapter_id):
     return neighbors
 
 
+def capture_neighbors(chapter_id):
+    """Navigation between selected fragments of one attributed capture source.
+
+    Matching source/version/instance/selection is not independent corroboration,
+    participant identity or an asserted relation. No links or canon are written.
+    Missing provenance cannot acquire a group merely through similar names.
+    """
+    con = connect()
+    try:
+        source = con.execute('SELECT c.source_metadata_json,b.source_kind FROM chapters c '
+                             'JOIN books b ON b.id=c.book_id WHERE c.id=?', (chapter_id,)).fetchone()
+        if not source or source['source_kind'] != 'capture':
+            return []
+        try:
+            metadata = json.loads(source['source_metadata_json'] or '{}')
+        except ValueError:
+            return []
+        if not isinstance(metadata, dict):
+            return []
+        fields = ('source_instance','source_event_id','source_version','selection_version')
+        if any(not isinstance(metadata.get(field), str) or not metadata[field] for field in fields):
+            return []
+        clauses = ' AND '.join("json_extract(CASE WHEN json_valid(c.source_metadata_json) "
+                              "THEN c.source_metadata_json ELSE '{}' END,'$."+field+"')=?" for field in fields)
+        ids = [row[0] for row in con.execute('SELECT c.id FROM chapters c JOIN books b ON b.id=c.book_id '
+              "WHERE b.source_kind='capture' AND c.id!=? AND "+clauses+' ORDER BY c.id LIMIT 3',
+              (chapter_id, *(metadata[field] for field in fields)))]
+    finally:
+        con.close()
+    result = []
+    for cid in ids:
+        row = _read_chapter(cid)
+        if row is not None:
+            result.append(dict(_compact_record(row), direction='shared-source', link_type='same-capture-source',
+                weight=None, note='Same attributed capture source/version; navigation only, not independent corroboration.'))
+    return result
+
+
+def recall_neighbors(chapter_id):
+    linked = linked_neighbors(chapter_id)
+    ids = {row['id'] for row in linked}
+    return linked + [row for row in capture_neighbors(chapter_id) if row['id'] not in ids]
+
+
 # --- maintenance lock (v3.9.0, flock) ---
 
 
@@ -1696,7 +1740,7 @@ def _select_pack(query, candidates, budget_tokens, limit, threshold, *, record_a
         for field in ('score', 'lexical_score', 'lexical_relevance', 'semantic_score', 'rerank_score'):
             if field in row:
                 item[field] = row[field]
-        item['neighbors'] = linked_neighbors(row['id'])[:3]
+        item['neighbors'] = recall_neighbors(row['id'])[:3]
         cost = _item_cost(item)
         if used + cost > budget_tokens:
             # Neighbors are navigation hints; preserve the source-qualified
@@ -1952,7 +1996,7 @@ def expand(chapter_id):
     out = _read_chapter(chapter_id)
     if out is None:
         raise SystemExit(f"chapter not found: {chapter_id}")
-    out['neighbors'] = linked_neighbors(chapter_id)
+    out['neighbors'] = recall_neighbors(chapter_id)
     touch_access(chapter_id)
     return out
 

@@ -735,6 +735,49 @@ def test_retrieval_exposes_transitive_correction_until_all_accounts_reconcile(mc
     assert mc.expand(cycle)['support_status']=='needs_reconciliation'
 
 
+def test_capture_navigation_recovers_separated_action_result_without_writing_links(mc):
+    metadata=dict(mode='reported',source_instance='fixture:body:code',source_event_id='chart-handover',
+                  source_version='immutable-source-hash',selection_version='fictional-policy-v1')
+    attempt=mc.add_text('episodes','Ren chart attempt','The human authorized sending Ren the chart.',
+                        source_kind='capture',metadata=metadata)
+    result=mc.add_text('episodes','Chart validation result','Object chart-52 created; integrity validation failed; recipient link unpublished.',
+                       source_kind='capture',metadata=metadata)
+    original={cid:(mc.expand(cid)['raw'],mc.expand(cid)['revision']) for cid in (attempt,result)}
+    expanded=mc.expand(attempt)
+    assert expanded['neighbors'][0]['id']==result
+    assert expanded['neighbors'][0]['link_type']=='same-capture-source'
+    assert 'not independent corroboration' in expanded['neighbors'][0]['note']
+    # The result has no person's name; a query that finds only the attempt can
+    # still expose the selected outcome under the same bounded pack budget.
+    rows=mc.pack('Ren',threshold=0,budget_tokens=1500,limit=1)['items']
+    assert rows[0]['id']==attempt and rows[0]['neighbors'][0]['id']==result
+    assert 'validation failed' in rows[0]['neighbors'][0]['spr']
+    assert {cid:(mc.expand(cid)['raw'],mc.expand(cid)['revision']) for cid in original}==original
+    with mc.connect() as con:
+        assert not con.execute('SELECT 1 FROM chapter_links').fetchone()
+    # An authored relation takes precedence; the same target is not duplicated.
+    mc.add_link(attempt,result,'action-result',note='Explicit selected relation.')
+    assert len(mc.expand(attempt)['neighbors'])==1
+    assert mc.expand(attempt)['neighbors'][0]['link_type']=='action-result'
+
+
+def test_capture_navigation_requires_full_matching_native_source_provenance(mc):
+    metadata=dict(mode='reported',source_instance='fixture:body:code',source_event_id='event',
+                  source_version='source-v1',selection_version='policy-v1')
+    original=mc.add_text('episodes','Original event fragment','Selected meaningful context.',source_kind='capture',metadata=metadata)
+    for number,changed in enumerate(({'source_instance':'peer'},{'source_event_id':'other'},
+                                    {'source_version':'source-v2'},{'selection_version':'policy-v2'})):
+        mc.add_text('episodes',f'Unrelated capture {number}','Distinct source context.',source_kind='capture',metadata=dict(metadata,**changed))
+    mc.add_text('library','File-authoritative text','External source.',source_kind='file',metadata=metadata)
+    mc.add_text('library','Native text','Ordinary authored text.',metadata=metadata)
+    mc.add_text('episodes','Incomplete capture','Missing provenance.',source_kind='capture',metadata={'mode':'reported'})
+    assert mc.expand(original)['neighbors']==[]
+    # Even a large attributed event gives only three automatic navigation hints.
+    for number in range(5):
+        mc.add_text('episodes',f'Selected event fragment {number}','Distinct meaningful source part.',source_kind='capture',metadata=metadata)
+    assert len(mc.expand(original)['neighbors'])==3
+
+
 def test_consolidation_relabels_obsolete_support_edges_and_rejects_batch_stale_dependency(mc):
     from consolidationctl import preview,apply
     first=mc.add_text('episodes','Old encounter','An old proposal.')
