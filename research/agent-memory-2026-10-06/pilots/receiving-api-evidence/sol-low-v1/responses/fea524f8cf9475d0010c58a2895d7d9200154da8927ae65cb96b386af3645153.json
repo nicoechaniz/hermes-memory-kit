@@ -1,0 +1,33 @@
+{
+  "request_sha256": "fea524f8cf9475d0010c58a2895d7d9200154da8927ae65cb96b386af3645153",
+  "requested_model": "openai/gpt-6.1-sol",
+  "response_model": "openai/gpt-6.1-sol",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/sol-low-generation-probe-v1/dispatches/fea524f8cf9475d0010c58a2895d7d9200154da8927ae65cb96b386af3645153.json",
+  "usage": {
+    "prompt_tokens": 3218,
+    "completion_tokens": 293,
+    "total_tokens": 3511,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 3215,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 39,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "cost": 0.0109735,
+    "cost_details": {
+      "source": "openrouter_list",
+      "floor_applied": false,
+      "rate_source": "openrouter_catalog"
+    }
+  },
+  "seconds": 7.494594597257674,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The person was Mara Ibarra, displayed as Mara, with login mara-river and account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Her suggestion appears in HarborMesh issue 47: https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue tool response reached our code body on 2026-04-14; Mara's proposal in comment c901 was dated 2026-04-12.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"She proposed a local replay queue so disconnected relay nodes could retain readings through outages without replacing the scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"On 2026-04-14, Mara and our code body agreed to prototype the queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That issue response did not report a merge or deployment; it does not establish the project's present state.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

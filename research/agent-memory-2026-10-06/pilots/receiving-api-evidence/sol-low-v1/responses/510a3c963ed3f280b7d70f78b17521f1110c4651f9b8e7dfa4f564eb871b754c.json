@@ -1,0 +1,33 @@
+{
+  "request_sha256": "510a3c963ed3f280b7d70f78b17521f1110c4651f9b8e7dfa4f564eb871b754c",
+  "requested_model": "openai/gpt-6.1-sol",
+  "response_model": "openai/gpt-6.1-sol",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/sol-low-generation-probe-v1/dispatches/510a3c963ed3f280b7d70f78b17521f1110c4651f9b8e7dfa4f564eb871b754c.json",
+  "usage": {
+    "prompt_tokens": 1657,
+    "completion_tokens": 278,
+    "total_tokens": 1935,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1654,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "cost": 0.006921,
+    "cost_details": {
+      "source": "openrouter_list",
+      "floor_applied": false,
+      "rate_source": "openrouter_catalog"
+    }
+  },
+  "seconds": 6.875992589630187,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"No—the human reporter explicitly said I was not with them at the old ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter met Neri Sol there, though no handle or surname beyond Sol was supplied.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I received their account through my mobile body on 2026-09-12, from the source mending-report.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"They tentatively placed the encounter sometime in early September, rather than on the report date.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Neri showed the reporter how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter appreciated Neri’s patient explanation and wanted to share the encounter with me.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of that report, the reporter had not tried the method themselves.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record a later attempt together or a more precise encounter date.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

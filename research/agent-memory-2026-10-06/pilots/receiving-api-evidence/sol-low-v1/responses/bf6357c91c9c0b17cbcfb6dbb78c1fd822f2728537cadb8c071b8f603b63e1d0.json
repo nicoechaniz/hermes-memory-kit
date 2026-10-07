@@ -1,0 +1,33 @@
+{
+  "request_sha256": "bf6357c91c9c0b17cbcfb6dbb78c1fd822f2728537cadb8c071b8f603b63e1d0",
+  "requested_model": "openai/gpt-6.1-sol",
+  "response_model": "openai/gpt-6.1-sol",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/sol-low-generation-probe-v1/dispatches/bf6357c91c9c0b17cbcfb6dbb78c1fd822f2728537cadb8c071b8f603b63e1d0.json",
+  "usage": {
+    "prompt_tokens": 1658,
+    "completion_tokens": 277,
+    "total_tokens": 1935,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 1655,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "cost": 0.0069135,
+    "cost_details": {
+      "source": "openrouter_list",
+      "floor_applied": false,
+      "rate_source": "openrouter_catalog"
+    }
+  },
+  "seconds": 5.745201576501131,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"No—the human reporter said I was not with them for the lesson.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter met Neri Sol at the old ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"They thought the encounter happened sometime in early September, but were unsure.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"I received their report through my mobile body on 2026-09-12.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Neri showed the reporter how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter appreciated Neri's patient explanation and wanted to share the encounter with me.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of that report, the reporter had not tried the method.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Neri gave the reporter no handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record a later attempt together.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

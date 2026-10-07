@@ -1,0 +1,25 @@
+{
+  "attempts": 8,
+  "returned": 8,
+  "unknown_usage_attempts": 0,
+  "usage": {
+    "prompt_tokens": 21508,
+    "completion_tokens": 2334,
+    "total_tokens": 23842,
+    "reasoning_tokens": 39,
+    "cache_write_tokens": 21484
+  },
+  "provider_reported_cost_usd": 0.07709799999999999,
+  "cost_basis": "Sum of provider-reported usage.cost, including its cache write accounting; not an independent invoice.",
+  "price_provenance": "usage.cost_details identifies openrouter_list/openrouter_catalog; this is observed pricing metadata, not proof of actual upstream transport.",
+  "latency_seconds": {
+    "total": 55.77281282376498,
+    "median": 6.733019244857132,
+    "min": 5.745201576501131,
+    "max": 8.86411343794316
+  },
+  "new_embedding_calls": 0,
+  "reviewer_calls": 0,
+  "repair_calls": 0,
+  "qualification": false
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "arm": "baseline",
+    "answer_index": 0,
+    "case_id": "issue-proposal",
+    "context_sha256": "40d2b14ea0cbd08fb79cbe06552c32a9dcff48f61ffe1189db5bf154f772c414",
+    "request_sha256": "0b16369664968ee379d8770e958c4ce592e5cd6b8f9638b43d216f30323f2138",
+    "reference_request_sha256": "603326431b08ad647b0e7f3591273a63865c8e2513387a79e2382e5b4d279fb5"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 6,
+    "case_id": "embodied-encounter-and-learning",
+    "context_sha256": "b6ca2161677c298c7045ed9bca275471da0672e5e8780ef4cc9877050776ed93",
+    "request_sha256": "966a850053bf229e595597958f3ad8dc1815b10e79d0aac386a592c742534628",
+    "reference_request_sha256": "e4c9dafbb981dcb285338ffa1a5ea9c2af97d964f25ca1f62cb454954b81e655"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 16,
+    "case_id": "failed-chart-handover",
+    "context_sha256": "aadef88b9223dee1fe2d6e0bd89eb3a0d61d9366357102f2bb707a2339908a2d",
+    "request_sha256": "d1572e5acfec04e128aa8e150091a8b14053ed252b382700f9d2f322bb3c1639",
+    "reference_request_sha256": "26c5df598d7566a5d871f0c834f96c2a8b0c3f34284005cdf7bb518bf28a4f33"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 18,
+    "case_id": "human-remote-mending-report",
+    "context_sha256": "10325ea7638cbfc42e3d4f4094015d752186265afc126c80f768cea6bac6d669",
+    "request_sha256": "510a3c963ed3f280b7d70f78b17521f1110c4651f9b8e7dfa4f564eb871b754c",
+    "reference_request_sha256": "ccaf254f38f8a574d5e50f2c90bc2c7bacfde8eca2fb5fd57b027e5503e494a4"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 0,
+    "case_id": "issue-proposal",
+    "context_sha256": "25e7f0c509dfcfd71c06d7945dc2fe5b8d5f7235addb293a23af630f218f9d23",
+    "request_sha256": "fea524f8cf9475d0010c58a2895d7d9200154da8927ae65cb96b386af3645153",
+    "reference_request_sha256": "1b149b7d029337778416fb20ec22620dd74e6e4332c30f2677351fa794ce963f"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 6,
+    "case_id": "embodied-encounter-and-learning",
+    "context_sha256": "149ec3c9a1e646a3b0d7dec859da5ab02617afac3f4f4d32b35656be6d8a9694",
+    "request_sha256": "105fcae946078041f955463481590ce9904f3377ce5d036cf080136b8178cd17",
+    "reference_request_sha256": "9c9f567d5edd1464f311b849a4daa9eee17c807b351594dcc4fdfdb68b159bd4"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 16,
+    "case_id": "failed-chart-handover",
+    "context_sha256": "8e2f25e5b69daa4b20a53062e57179ca3d0559dd9f2da731b6a00813491e0da3",
+    "request_sha256": "20029d03c68eee4b9004b14a5d5f010dcf8cdda79716a8f91984c3eb8ec2d520",
+    "reference_request_sha256": "bbe75fbac15803687408fb2395080bb505b3e3e59b81a8f25b9ed4410ec7394b"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 18,
+    "case_id": "human-remote-mending-report",
+    "context_sha256": "5a1761126ad48f95fc143805e9546ebbf49e0d223a678141f7e268b6b7aa530b",
+    "request_sha256": "bf6357c91c9c0b17cbcfb6dbb78c1fd822f2728537cadb8c071b8f603b63e1d0",
+    "reference_request_sha256": "bf3311036dbe67b205f31d851a861fa4e8de7d5a849f44ee9cfaa1122c8e3797"
+  }
+]

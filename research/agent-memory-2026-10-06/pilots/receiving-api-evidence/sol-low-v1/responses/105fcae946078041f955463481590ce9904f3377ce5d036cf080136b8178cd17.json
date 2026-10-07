@@ -1,0 +1,33 @@
+{
+  "request_sha256": "105fcae946078041f955463481590ce9904f3377ce5d036cf080136b8178cd17",
+  "requested_model": "openai/gpt-6.1-sol",
+  "response_model": "openai/gpt-6.1-sol",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": ".telecodex/coordination/hmk-stage-two-2026-10-07/sol-low-generation-probe-v1/dispatches/105fcae946078041f955463481590ce9904f3377ce5d036cf080136b8178cd17.json",
+  "usage": {
+    "prompt_tokens": 3777,
+    "completion_tokens": 279,
+    "total_tokens": 4056,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 3774,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    },
+    "cost": 0.012231,
+    "cost_details": {
+      "source": "openrouter_list",
+      "floor_applied": false,
+      "rate_source": "openrouter_catalog"
+    }
+  },
+  "seconds": 6.590045900084078,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Jo Vale taught us to listen for the beat in a humming relay mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our mobile body's workshop account, received on 2026-06-08, places our meeting at the East Quay repair workshop on June 8.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Jo demonstrated listening for a beat before tightening the mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried it together using our mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Jo invited us to compare mounts at the next workshop, but no date was agreed.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Jo introduced themself by that name; the supplied memories provide no account identifier or legal-name evidence.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"I can explain the remembered technique from this voice body, but I cannot physically listen to or tighten a mount here.\",\"support\":[4],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"This voice body has neither physical sensors nor physical actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}
