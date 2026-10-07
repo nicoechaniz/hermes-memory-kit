@@ -33,6 +33,10 @@ def test_equivalent_query_shapes_and_bounded_ids(pilot):
     pack = {'items':[{'id':1,'neighbors':[{'id':2,'neighbors':[{'id':99}]}]}]}
     assert pilot.visible_ids(pack) == {1,2}
     assert pilot.recall_plan({'expand_ids':[2]}, pilot.visible_ids(pack))['expand_ids'] == [2]
+    with pytest.raises(ValueError,match='empty initial pack'):
+        pilot.recall_plan({},set(),require_refinement=True)
+    assert pilot.recall_plan({'queries':['arrival evidence']},set(),require_refinement=True)=={
+        'queries':['arrival evidence'],'expand_ids':[]}
 
 
 def test_trace_survives_rejected_response(pilot, tmp_path, monkeypatch):
@@ -119,7 +123,7 @@ def test_source_review_precedes_commit_and_never_sees_hidden_rubric(pilot, tmp_p
          'raw':'We attended the encounter.'}], 'links':[]}
     corrected = json.loads(json.dumps(candidate))
     corrected['records'][0]['raw'] = 'The human reported an encounter; the receiving voice body did not attend.'
-    responses = iter([candidate, corrected, {'queries':[],'expand_ids':[]}, {'receiving_body':'fixture:body:voice','answer':{
+    responses = iter([candidate, corrected, {'queries':['encounter report'],'expand_ids':[]}, {'receiving_body':'fixture:body:voice','answer':{
         'identification':'Unknown','context':'A report','meaning':'Unknown','outcome':'Reported',
         'limits':'Not directly observed'},'used_ids':[]}])
     phases=[]
@@ -193,3 +197,14 @@ def test_evidence_response_preserves_failed_outcome_and_refuses_narrative(pilot)
     value['answer']['outcome']=[1]
     value['used_ids']=[]
     with pytest.raises(ValueError):pilot.supported_answer(value,evidence,binding)
+
+
+def test_only_all_empty_facet_array_has_an_unambiguous_normalization(pilot):
+    binding={'receiving_body':'fixture:body:voice'}
+    value={'receiving_body':binding['receiving_body'],'answer':[[],[],[],[],[]],'used_ids':[]}
+    result=pilot.supported_answer(value,{},binding)
+    assert set(result['answer'])=={'identification','context','meaning','outcome','limits'}
+    assert all(ids==[] for ids in result['answer'].values())
+    assert value['answer']==[[],[],[],[],[]]
+    value['answer']=[[1],[],[],[],[]]
+    with pytest.raises(ValueError):pilot.supported_answer(value,{1:{}},binding)
