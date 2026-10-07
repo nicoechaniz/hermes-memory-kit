@@ -144,6 +144,36 @@ not a truth score. Inspect corrections before presenting a derived claim as
 current; no factual retraction or identity merge is inferred from a text edit.
 Extracted facts with known native source revisions use the same qualification.
 
+### Native accounts and selected support sets
+
+The default episode-only v1 preview remains available. `preview --profile native`
+creates a v2 manifest for native text/capture/auto records, including authored
+project knowledge and derived accounts. File-authoritative indexes and signed
+projections remain outside this generic writer. A v2 application requires
+`--record-supports supports.json`, a map from every proposal key to its nonempty,
+distinct subset of manifest IDs. Each output receives only those versioned
+references and support links; source count is still not corroboration.
+
+All manifest sources remain immutable preconditions, checked under the writer
+transaction. The output cannot support its own update or depend on an old revision being
+updated in that same batch, overwrite episodes or
+identity, or relabel an inference as observation. Native source snapshots are
+preserved; expected revisions and normal capture receipts/history still apply.
+Removed automatically generated support links become `formerly-supported-by` navigation; native revision
+evidence preserves the prior source versions. Link changes share the writer
+transaction and roll back on a target revision conflict. Replaying an identical
+decision returns its original receipt without new writes.
+An original receipt does not establish that its supports remain current today.
+
+Consolidation rejects stale dependent accounts even if the account's own revision
+has not changed: an upstream original can change underneath it. It checks the
+reachable source-version graph without recursive depth limits; missing/changed
+sources and cyclic dependencies remain unresolved. Reconcile from inspected
+current originals before publishing another dependent understanding. These are
+mechanical source/version checks, not semantic verification of proposed prose.
+Ordinary retrieval's existing status surface is separately qualified; these
+checks do not claim narrative or three-pass consolidation acceptance.
+
 ## Qualification and later integration
 
 Synthetic tests cover source loss, noise omission, gaps, deferred/failed work,
