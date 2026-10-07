@@ -23,9 +23,10 @@ def verified_snapshot(source, destination, *, timeout=30):
         if time.monotonic() - started > timeout:
             raise TimeoutError("SQLite snapshot exceeded its time budget")
 
-    src = sqlite3.connect(source.resolve().as_uri() + "?mode=ro", uri=True)
-    dst = sqlite3.connect(destination)
+    src = dst = None
     try:
+        src = sqlite3.connect(source.resolve().as_uri() + "?mode=ro", uri=True)
+        dst = sqlite3.connect(destination)
         src.backup(dst, pages=256, progress=progress, sleep=0.05)
         # A recovery snapshot is a standalone file. The source's WAL mode may
         # be copied by backup; normalize the destination before verifying it.
@@ -36,6 +37,8 @@ def verified_snapshot(source, destination, *, timeout=30):
         if dst.execute("PRAGMA foreign_key_check").fetchall():
             raise RuntimeError("SQLite snapshot has foreign-key violations")
     finally:
-        dst.close()
-        src.close()
+        if dst is not None:
+            dst.close()
+        if src is not None:
+            src.close()
     return destination

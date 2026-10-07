@@ -222,6 +222,8 @@ def test_project_advance_retract_replay_retrieval_and_generic_guards(runtime):
     }
     chapter_id = hits[0]["id"]
     assert memoryctl.expand(chapter_id)["origin"]["kind"] == "daimon-projection"
+    compact = memoryctl.pack('orchard', threshold=0, budget_tokens=1500)['items'][0]
+    assert compact['origin'] == hits[0]['origin']
 
     advance = _request(
         projection,

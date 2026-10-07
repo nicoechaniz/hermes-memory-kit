@@ -152,11 +152,12 @@ Provider config (effective env):
 
 `engram_pack` runs `hybrid_pack` three times (one per bucket), each of which
 does a binary-quantized prefilter, a float32 rescore, and a TinyBERT rerank.
-On a CPU-only host with `model2vec` embeddings (the kit's v3.4+ default),
-expect:
-
-- `engram_pack`: ~3-10s per turn on a fast laptop, ~10-30s on older CPUs.
-- `hybrid_pack` (single-pass fallback): ~1-3s per turn.
+The buckets reuse one query embedding per request. Actual latency depends on
+the configured model, corpus, device and reranking; measure the deployment.
+Without explicit settings, memoryctl defaults to local/BGE-M3, while the shipped
+environment template explicitly selects NVIDIA. Model2Vec remains an available
+CPU option. Inspect `hmk memoryctl.py embed-config` rather than inferring the
+provider from an old version description.
 
 If your hardware is the bottleneck and you need lower latency, set
 `HMK_PROVIDER_RETRIEVER=hybrid_pack` to skip the per-bucket fan-out at the
@@ -167,6 +168,12 @@ cost of bucket balance.
 If the DB has no chapters that score above `HMK_PROVIDER_THRESHOLD`, prefetch
 returns an empty string silently. The agent gets nothing instead of an error
 or a "no results" placeholder.
+Embedding outages instead return available lexical candidates with a degraded
+status, or an unavailable notice if there are no lexical candidates. Quotas
+never admit memories below the relevance threshold. Native and Matrix attribution
+survives machine results and rendered previews; memory content is not authority.
+Token estimates include the returned source and neighbor metadata. Long source
+records can use an authored `summary`; their automatic previews are incomplete.
 
 ## Troubleshooting
 

@@ -324,6 +324,20 @@ The repo also now includes:
 
 That matters because “memory” is not one homogeneous blob.
 
+The [durable recall plan](docs/durable-recall-plan.md) links research, repair
+issues and published changes. Native accounts retain stable IDs, links and
+searchable prior revisions (`history` / `history-search`), with optional
+expected-revision writes and explicit source/type/date metadata. Unknown event
+dates remain unknown. Short selected memories preserve complete recall text;
+long sources can supply an authored `--summary`.
+
+General retrieval uses neutral corpus priors; `HMK_RETRIEVAL_PROFILE=research`
+opts into research preferences. Relevance is checked before ENGRAM quotas/fusion.
+Embedding outages yield explicit lexical degradation or unavailability without
+switching providers. Compact results preserve attribution; budget estimates
+include that metadata and navigation hints. These repairs do not install capture
+triggers or enable native Codex memory.
+
 Sometimes you want:
 
 - all relevant context;

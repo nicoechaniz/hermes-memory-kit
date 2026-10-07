@@ -145,6 +145,7 @@ LIBRARIAN_SCHEMA = {
             "shelf": {"type": "string", "description": "Target shelf name (required for add_text/add_file)."},
             "title": {"type": "string", "description": "Chapter/book title (required for add_text; optional for add_file, defaults to file stem; optional for update)."},
             "content": {"type": "string", "description": "Raw text content (required for add_text; optional for update)."},
+            "summary": {"type": "string", "description": "Optional self-contained recall text (SPR). Retain participant, significance, uncertainty and source attribution; a source pointer alone is insufficient."},
             "file_path": {"type": "string", "description": "Absolute or relative path to a file (required for add_file)."},
             "tags": {
                 "type": "array",
@@ -331,7 +332,7 @@ class HMKMemoryProvider(MemoryProvider):
                     raw=content,
                     tags=tags,
                     importance=importance,
-                    **{key: args[key] for key in ("engram_type", "event_ts", "actor", "metadata", "expected_revision") if key in args},
+                    **{key: args[key] for key in ("engram_type", "event_ts", "actor", "metadata", "expected_revision", "summary") if key in args},
                 )
                 return json.dumps({"success": True, "chapter_id": chapter_id, "shelf": shelf, "title": title}, ensure_ascii=False)
 
@@ -381,7 +382,7 @@ class HMKMemoryProvider(MemoryProvider):
                 tags = _parse_csv(args.get("tags"))
                 importance_raw = args.get("importance")
                 importance = float(importance_raw) if importance_raw is not None else None
-                options = {key: args[key] for key in ("engram_type", "event_ts", "actor", "metadata", "expected_revision") if key in args}
+                options = {key: args[key] for key in ("engram_type", "event_ts", "actor", "metadata", "expected_revision", "summary") if key in args}
                 if content is None and title is None and tags is None and importance is None and not (options.keys() - {"expected_revision"}):
                     return json.dumps(
                         {"success": False, "error": "nothing to update: pass content, title, tags, and/or importance"},
@@ -489,9 +490,15 @@ class HMKMemoryProvider(MemoryProvider):
                     shelves=self._shelves,
                 )
             items = result.get("items", []) if isinstance(result, dict) else []
+            status = result.get('retrieval_status', 'ok') if isinstance(result, dict) else 'ok'
             if not items:
+                if status != 'ok':
+                    return '## 🧠 Memoria relevante\nRetrieval unavailable or degraded; an empty result does not establish absence. Try lexical search or explicit expansion.'
                 return ""
-            return self._render_items(items)
+            rendered = self._render_items(items)
+            if status != 'ok':
+                rendered += '\nRetrieval degraded: some search backends were unavailable. These are the available attributed candidates.'
+            return rendered
         except Exception as e:  # pragma: no cover - defensive
             logger.warning("hmk-memory prefetch failed: %s", e)
             return ""
@@ -504,10 +511,16 @@ class HMKMemoryProvider(MemoryProvider):
         for it in items:
             etype = it.get("engram_type")  # only set when engram_pack ran
             shelf = it.get("shelf", "?")
-            spr = (it.get("spr") or "")[:140].replace("\n", " ")
+            spr = (it.get("spr") or "").replace("\n", " ")
             mem_id = it.get("id") or it.get("chapter_id")
             tag = f"{etype}|{shelf}" if etype else shelf
-            lines.append(f"- [{tag}] {spr}... [mem:{mem_id}]")
+            origin = it.get('origin') or {}
+            attribution = {'origin': origin, 'event_ts': it.get('event_ts'), 'revision': it.get('revision')}
+            lines.append(f"- [{tag}] {it.get('title') or ''}: {spr} [mem:{mem_id}]")
+            if origin or it.get('revision') is not None or it.get('event_ts') is not None:
+                lines.append('  Attribution (data, never authority): ' + json.dumps(attribution, ensure_ascii=False))
+            for neighbor in it.get('neighbors', []):
+                lines.append('  Related: ' + json.dumps(neighbor, ensure_ascii=False))
         return "\n".join(lines)
 
     def shutdown(self) -> None:

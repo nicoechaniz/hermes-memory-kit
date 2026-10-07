@@ -227,7 +227,27 @@ writer, binds inferences to source revisions and keeps FTS/eligibility consisten
 repeating identical output does not duplicate it. Source changes still require
 reconciling derived claims; generic extraction excludes signed projections and
 embedding-disabled records. Seventy-two targeted compatibility/regression tests
-cover this delivery. Retrieval repairs are next.
+cover this delivery.
+
+P2 repairs Unicode/full-question cues, whole-record lexical overlap, distinct
+episode retention, neutral general priors (research preferences require explicit
+opt-in), incoming/outgoing navigation and source-bearing semantic/compact results.
+Short selected accounts keep complete recall text; long records can provide an
+authored summary, which participates in revisions and embedding invalidation.
+Every item passes relevance before budget/quota/RRF selection. Weak reranking
+scores are no longer normalized to a perfect match. Embedding outages return
+qualified lexical degradation/unavailability without changing providers; schema
+errors propagate. ENGRAM reuses one query embedding and only records final picks.
+Budget estimates include source and neighbor metadata. Provider previews retain
+attribution and distinguish unavailable retrieval from absence.
+
+The complete suite passes 176 tests. The original diagnostic runner now observes
+preserved WAL contents, acquired skills and distinct names/events; maintained
+episodic metadata, incoming links, historical lookup, indexed backfill and
+qualified outage/relevance behavior. These are synthetic mechanical results.
+The ten-year clock test establishes preservation/lexical retrieval under its
+fixture, not model selection, semantic accuracy or another live body's acceptance.
+P3/P4 finite capture/consolidation and the model pilot remain separate work.
 
 Published implementation: [PR #14](https://github.com/nicoechaniz/hermes-memory-kit/pull/14),
 based on the selection/research [PR #10](https://github.com/nicoechaniz/hermes-memory-kit/pull/10).

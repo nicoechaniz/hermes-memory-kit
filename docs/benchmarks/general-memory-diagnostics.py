@@ -109,6 +109,7 @@ def inspect(base: Path) -> dict:
         mc.update_chapter(project, content="We paused relay rollout pending calibration.")
         observations["native_history"] = {
             "old_project_text_searchable_after_update": bool(mc.search("maintain scheduler")),
+            "old_project_text_recoverable_in_history": bool(mc.history_search("maintain scheduler")) if hasattr(mc, 'history_search') else False,
             "current_project_text": mc.expand(project)["raw"],
         }
 
@@ -124,8 +125,8 @@ def inspect(base: Path) -> dict:
             raise mc.EmbeddingBackendError("synthetic embedding outage")
         with patch.object(mc, "semantic_search", unavailable):
             try:
-                mc.hybrid_pack("HarborMesh", provider="nvidia", model="fixture")
-                observations["hybrid_outage"] = "returned results"
+                degraded = mc.hybrid_pack("HarborMesh", provider="nvidia", model="fixture")
+                observations["hybrid_outage"] = {'status': degraded.get('retrieval_status'), 'items': len(degraded['items'])}
             except mc.EmbeddingBackendError:
                 observations["hybrid_outage"] = "raised despite existing lexical candidates"
         weak = {"id": episode, "spr": "Unrelated fixture", "score": 0.001, "shelf": "episodes"}

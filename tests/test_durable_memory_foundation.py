@@ -145,6 +145,162 @@ def test_provider_exposes_revision_conflicts_and_historical_recall(mc, provider_
     assert len(mc.history(cid)) == 1
 
 
+def test_full_unicode_question_reaches_late_name_and_raw_cue(mc):
+    cid = mc.add_text('episodes', 'A significant proposal', 'Context.\n' * 150 + 'Nicolás Echániz proposed a HarborMesh replay queue.')
+    question = 'Do you remember the person who once suggested something for HarborMesh, Nicolás Echániz?'
+    assert 'harbormesh' in mc.tokenize_query(question)
+    assert 'nicolás' in mc.tokenize_query(question)
+    assert mc.search(question)[0]['id'] == cid
+    assert mc.text_overlap_score('HarborMesh', mc.expand(cid)) == 1
+    assert mc.pack(question, threshold=0.6, budget_tokens=1500)['items'][0]['id'] == cid
+    assert mc.search('"***') == []
+
+
+def test_distinct_episodes_survive_common_openings_and_age(mc, monkeypatch):
+    ids = [mc.add_text('episodes', 'A meeting about our common relay project discussion ' + name,
+                       'A meeting about our common relay project discussion ' + name + ' proposed ' + idea, importance=0.9)
+           for name, idea in [('Mara', 'a queue'), ('Ivo', 'a checksum')]]
+    clock = mc.now_ts()
+    monkeypatch.setattr(mc, 'now_ts', lambda: clock + 10 * 365 * 86400)
+    result = mc.pack('relay project discussion', threshold=0.6, budget_tokens=1500)
+    assert {item['id'] for item in result['items']} == set(ids)
+    assert result['used_tokens_estimate'] <= 1500
+    assert all(item['event_ts'] is None for item in result['items'])
+
+
+def test_general_priors_are_neutral_and_research_prefix_must_be_nonempty(mc, monkeypatch):
+    monkeypatch.setenv('HMK_RETRIEVAL_PROFILE', 'general')
+    monkeypatch.setattr(mc, 'BIBLIOTECA_PREFIX', '/fixture/papers/')
+    assert mc.source_domain_prior('coupling', {'shelf': 'episodes', 'source_path': ''}) == 0
+    assert mc.source_domain_prior('coupling', {'shelf': 'evidence', 'source_path': '/fixture/papers/a'}) == 0
+    monkeypatch.setenv('HMK_RETRIEVAL_PROFILE', 'research')
+    assert mc.source_domain_prior('coupling', {'shelf': 'evidence', 'source_path': '/fixture/papers/a'}) == 0.14
+    monkeypatch.setattr(mc, 'BIBLIOTECA_PREFIX', '')
+    assert mc.source_domain_prior('coupling', {'shelf': 'library', 'source_path': '/fixture/papers/a'}) == 0
+
+
+def test_project_can_recover_attributed_incoming_episode(mc):
+    project = mc.add_text('library', 'HarborMesh', 'We maintain the scheduler.')
+    episode = mc.add_text('episodes', 'Mara encounter', 'Mara proposed replay.',
+                         metadata={'mode': 'reported', 'source_event_id': 'fixture:issue:7'})
+    mc.add_link(episode, project, 'concerns', note='Proposal for this project')
+    neighbor = mc.expand(project)['neighbors'][0]
+    assert neighbor['id'] == episode
+    assert neighbor['direction'] == 'incoming'
+    assert neighbor['note'] == 'Proposal for this project'
+    assert neighbor['origin']['source']['source_event_id'] == 'fixture:issue:7'
+
+
+def test_hybrid_outage_uses_lexical_without_provider_substitution(mc, monkeypatch):
+    cid = mc.add_text('episodes', 'HarborMesh proposal', 'Mara proposed replay.', importance=0.8,
+                      metadata={'mode': 'reported', 'source_instance': 'fixture:body'})
+    def unavailable(*args, **kwargs):
+        raise mc.EmbeddingBackendError('synthetic outage')
+    monkeypatch.setattr(mc, 'semantic_search', unavailable)
+    result = mc.hybrid_pack('HarborMesh', provider='nvidia', model='fixture-model')
+    assert result['items'][0]['id'] == cid
+    assert result['items'][0]['origin']['source']['source_instance'] == 'fixture:body'
+    assert result['retrieval_status'] == 'degraded'
+    assert result['provider'] == 'nvidia' and result['model'] == 'fixture-model'
+    absent = mc.hybrid_pack('absentneedle')
+    assert absent['null_retrieval'] and absent['reason'] == 'backend_unavailable'
+    assert absent['retrieval_status'] == 'unavailable'
+    def broken(*args, **kwargs):
+        raise sqlite3.DatabaseError('synthetic schema fault')
+    monkeypatch.setattr(mc, 'semantic_search', broken)
+    with pytest.raises(sqlite3.DatabaseError):
+        mc.engram_pack('HarborMesh')
+
+
+def test_threshold_applies_to_every_item_and_budget_includes_origin(mc, monkeypatch):
+    first = mc.add_text('episodes', 'First', 'Relevant marker', metadata={'evidence': ['fixture:' + 'x' * 800]})
+    second = mc.add_text('episodes', 'Second', 'Unrelated marker')
+    rows = [dict(mc.expand(first), score=0.95), dict(mc.expand(second), score=0.01)]
+    monkeypatch.setattr(mc, 'search', lambda *args, **kwargs: rows)
+    result = mc.pack('marker', threshold=0.5, budget_tokens=1500)
+    assert [item['id'] for item in result['items']] == [first]
+    assert result['used_tokens_estimate'] == sum(mc._item_cost(item) for item in result['items'])
+    exhausted = mc.pack('marker', threshold=0.5, budget_tokens=0)
+    assert exhausted['null_retrieval'] and exhausted['reason'] == 'budget_exhausted'
+
+
+def test_engram_relevance_precedes_quota_and_rrf(mc, monkeypatch):
+    cid = mc.add_text('episodes', 'Proposal', 'Mara proposed replay.')
+    item = dict(mc.expand(cid), score=0.001)
+    monkeypatch.setattr(mc, 'hybrid_pack', lambda *args, **kwargs: {'items': [item], 'retrieval_status': 'ok'})
+    assert mc.engram_pack('unrelated', threshold=0.3)['null_retrieval']
+    item['score'] = 0.9
+    relevant = mc.engram_pack('proposal', threshold=0.3, quotas={})
+    assert relevant['items'][0]['id'] == cid
+    assert relevant['items'][0]['score'] == 0.9
+    assert relevant['items'][0]['rrf_score'] < 0.3  # ordering and relevance are different spaces
+
+
+def test_weak_rerank_is_not_normalized_to_perfect_relevance(mc, monkeypatch):
+    cid = mc.add_text('episodes', 'A proposal', 'A marginally related marker.')
+    row = mc.expand(cid)
+    monkeypatch.setattr(mc, 'search', lambda *args, **kwargs: [])
+    monkeypatch.setattr(mc, 'semantic_search', lambda *args, **kwargs: [dict(row, semantic_score=0.001)])
+    monkeypatch.setattr(mc, 'rerank_provider_default', lambda: 'flashrank')
+    monkeypatch.setattr(mc, 'flashrank_rerank', lambda *args, **kwargs: [{'id': str(cid), 'score': 0.001}])
+    assert mc.hybrid_pack('Unrelated question', threshold=0.3)['null_retrieval']
+
+
+def test_semantic_and_provider_keep_attribution_and_full_preview(mc, monkeypatch, provider_module):
+    cid = mc.add_text('episodes', 'An account', 'A prefix ' + 'context ' * 30 + 'Mara proposed a relay.',
+                      metadata={'mode': 'inferred', 'source_instance': 'fixture:body', 'source_event_id': 'fixture:event'})
+    monkeypatch.setattr(mc, 'embed_texts', lambda *args, **kwargs: [[1.0, 0.0]])
+    con = mc.connect()
+    mc.upsert_embedding(con, cid, 'local', 'fixture-model', mc.embed_input_text(mc.expand(cid)), [1.0, 0.0])
+    con.commit()
+    con.close()
+    row = mc.semantic_search('relay', provider='local', model='fixture-model')[0]
+    assert row['origin']['source']['mode'] == 'inferred'
+    result = mc.hybrid_pack('relay', provider='local', model='fixture-model', budget_tokens=1500)
+    rendered = provider_module.HMKMemoryProvider()._render_items(result['items'])
+    assert 'fixture:body' in rendered
+    assert 'inferred' in rendered
+    # Preview currently exposes the selected SPR, not an additional 140-character cut.
+    assert result['items'][0]['spr'].replace('\n', ' ') in rendered
+    assert 'Mara proposed a relay.' in rendered
+
+
+def test_authored_summary_survives_metadata_updates_and_refreshes_vectors(mc):
+    cid = mc.add_text('episodes', 'Long source', 'Context.\n' * 300 + 'Mara proposed replay.',
+                      summary='Mara proposed a replay queue for HarborMesh; this is reported, outcome unknown.')
+    assert 'Mara' in mc.expand(cid)['spr']
+    con = mc.connect()
+    mc.upsert_embedding(con, cid, 'local', 'fixture-model', mc.embed_input_text(mc.expand(cid)), [1.0])
+    con.commit()
+    con.close()
+    mc.update_chapter(cid, metadata={'mode': 'reported'})
+    assert 'Mara' in mc.expand(cid)['spr']
+    changed = mc.update_chapter(cid, summary='Mara clarified that replay is a proposal, not an implemented feature.')
+    assert changed['embeddings_dropped'] == 1
+    assert 'outcome unknown' in mc.history(cid)[-1]['spr']
+
+
+def test_native_upgrade_snapshot_precedes_ddl_and_recovers_legacy_record(mc):
+    cid = mc.add_text('episodes', 'Legacy encounter', 'Mara proposed replay.')
+    con = mc.connect()
+    con.execute('DROP INDEX idx_chapters_record_uid')
+    for column in ('record_uid', 'revision', 'source_metadata_json'):
+        con.execute('ALTER TABLE chapters DROP COLUMN ' + column)
+    con.execute('DROP TABLE chapter_revisions')
+    con.execute('DROP TABLE chapter_revisions_fts')
+    con.commit()
+    con.close()
+    mc.init_db()
+    snapshots = list(mc.BASE_DIR.glob('library.db.bak.preupgrade.*'))
+    assert len(snapshots) == 1
+    con = sqlite3.connect(snapshots[0])
+    assert 'record_uid' not in {row[1] for row in con.execute('PRAGMA table_info(chapters)')}
+    assert con.execute('SELECT raw FROM chapters WHERE id=?', (cid,)).fetchone()[0] == 'Mara proposed replay.'
+    assert con.execute('PRAGMA integrity_check').fetchone()[0] == 'ok'
+    con.close()
+    assert mc.expand(cid)['record_uid']
+
+
 def test_kind_date_and_attribution_survive_revision_and_unknown_date(mc):
     cid = mc.add_text('episodes', 'An encounter', 'Mara commented on the issue.',
                       event_ts=1200, actor='Mara', metadata={'mode':'reported','source_event_id':'fixture:issue:1',

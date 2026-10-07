@@ -292,7 +292,7 @@ def _cmd_update(args) -> int:
 
 def _native_options(args):
     import json
-    options = {key: getattr(args, key) for key in ('engram_type', 'event_ts', 'actor', 'expected_revision')
+    options = {key: getattr(args, key) for key in ('engram_type', 'event_ts', 'actor', 'expected_revision', 'summary')
                if getattr(args, key, None) is not None}
     if getattr(args, 'clear_event_time', False):
         options['event_ts'] = None
@@ -459,4 +459,5 @@ def _add_native_args(parser, allow_clear=False):
         group.add_argument('--clear-event-time', action='store_true')
     parser.add_argument('--actor')
     parser.add_argument('--metadata-json')
+    parser.add_argument('--summary', help='Self-contained selected recall text')
     parser.add_argument('--expected-revision', type=int)

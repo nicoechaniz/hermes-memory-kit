@@ -95,6 +95,10 @@ authority. For past questions, use `history --id N` or `history-search --query
 "past cue"` and qualify the returned revision as historical. Current retrieval
 does not silently mix superseded accounts into present answers. Explicit native
 deletion also removes that record's revisions; snapshots require separate handling.
+Short selected memories retain their full text as SPR. For longer source records,
+pass `--summary` with the participant, event, significance and uncertainty that
+must survive recall. Automatic previews are marked incomplete; expand before
+answering details absent from them. Lexical search covers the full source text.
 
 ```bash
 ./scripts/hmk memoryctl.py add-text \

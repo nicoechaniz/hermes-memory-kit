@@ -93,6 +93,14 @@ tests asserting that these issues have been fixed.
 
 ## Additional source-confirmed gaps
 
+The P0–P2 [repair delivery](https://github.com/nicoechaniz/hermes-memory-kit/pull/14)
+addresses the reproduced findings plus source-bearing compact retrieval and
+authored summaries. The [maintained plan](durable-recall-plan.md#next-decision)
+records evidence and limits. The table above retains the reviewed baseline;
+native history now has explicit historical lookup, separate from current search.
+The diagnostic runner reports both. Remaining capture/answer, scale, chronology
+and receiving-adoption questions are not resolved by mechanical regression tests.
+
 **Native provenance and identity.** The native schema stores titles, text, tags,
 importance and storage timestamps, with book-level source path/kind. It does not
 provide a general structured record for originating body, source message/action,

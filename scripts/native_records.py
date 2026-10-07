@@ -36,7 +36,7 @@ def metadata(value):
     return result
 
 
-def ensure_schema(con, db_path):
+def ensure_schema(con, db_path, *, snapshot=True):
     columns = {r[1] for r in con.execute("PRAGMA table_info(chapters)")}
     additions = {
         "record_uid": "TEXT",
@@ -51,7 +51,7 @@ def ensure_schema(con, db_path):
     if not missing and con.execute("SELECT 1 FROM sqlite_master WHERE name='chapter_revisions'").fetchone():
         return
     con.commit()
-    if missing and con.execute("SELECT 1 FROM chapters LIMIT 1").fetchone():
+    if snapshot and missing and con.execute("SELECT 1 FROM chapters LIMIT 1").fetchone():
         verified_snapshot(db_path, f"{db_path}.bak.prenative.{time.time_ns()}")
     con.execute("BEGIN IMMEDIATE")
     try:
