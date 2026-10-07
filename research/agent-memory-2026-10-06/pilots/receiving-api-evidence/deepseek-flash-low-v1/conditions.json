@@ -1,0 +1,18 @@
+{
+  "qualification": false,
+  "scope": "eight initial generations only; no review, repair, retrieval or consolidation",
+  "packet_sha256": "189360a87b057c7430d44ea5cf6689e17f3fbf7bc7bf786d1949dce25a7b162f",
+  "script_sha256": "944e80c4b2363ce053ca86bca092933b564e9480cb950b0d1cb108d31583468e",
+  "narrative_sha256": "30ea1548be9aacf235454cc705b78e48cffb21a8a83cdad376aaa33455ef1abc",
+  "selected_answer_indices": [
+    0,
+    6,
+    16,
+    18
+  ],
+  "maximum_calls": 8,
+  "embeddings": "unchanged; frozen retrieval packets",
+  "reviewer": "not invoked",
+  "credential_resolution": "existing explicitly configured Hermes manual DeepSeek credential, read-only",
+  "source_network_access": false
+}

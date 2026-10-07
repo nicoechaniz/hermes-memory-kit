@@ -1,0 +1,29 @@
+{
+  "attempts": 8,
+  "returned": 8,
+  "unknown_usage_attempts": 0,
+  "usage": {
+    "prompt_tokens": 22738,
+    "completion_tokens": 43392,
+    "total_tokens": 66130,
+    "prompt_cache_hit_tokens": 6656,
+    "prompt_cache_miss_tokens": 16082,
+    "reasoning_tokens": 38267
+  },
+  "new_embedding_calls": 0,
+  "reviewer_calls": 0,
+  "repair_calls": 0,
+  "consolidation_passes": 0,
+  "latency_seconds": {
+    "total": 185.4491278929636,
+    "median": 24.44815473118797,
+    "min": 16.204702543094754,
+    "max": 32.57875940576196
+  },
+  "estimated_usd": {
+    "off_peak": 0.028467468,
+    "peak": 0.056934936
+  },
+  "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "estimate_basis": "published cache-hit/cache-miss/output rates, not an invoice; no wall-clock tariff claim; all provider completion tokens including reasoning counted"
+}

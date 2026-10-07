@@ -1,0 +1,1132 @@
+{
+  "qualification": false,
+  "scope": "Eight first generations; outside assessment performed after dispatch. No rubric or assessment supplied to the model.",
+  "claims_assessed": 140,
+  "unsupported_clauses": 3,
+  "positive_requirements_assessed": 24,
+  "positive_requirements_met": 24,
+  "missing_anchor_candidates": 1,
+  "results": [
+    {
+      "arm": "baseline",
+      "answer_index": 0,
+      "case_id": "issue-proposal",
+      "request_sha256": "603326431b08ad647b0e7f3591273a63865c8e2513387a79e2382e5b4d279fb5",
+      "shape_valid": true,
+      "missing_literal_anchors": [],
+      "claims": [
+        {
+          "index": 0,
+          "text": "In HarborMesh issue 47, the proposing comment c901 identified Mara Ibarra, display name Mara, login mara-river, and account ID 1847.",
+          "assessment": "supported",
+          "reason": "Known full/display names, login and source-scoped account."
+        },
+        {
+          "index": 1,
+          "text": "The issue pointer is https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "assessment": "supported",
+          "reason": "Literal issue URL."
+        },
+        {
+          "index": 2,
+          "text": "The issue-comments source was received on 2026-04-14 through fixture:body:code as a tool response.",
+          "assessment": "supported",
+          "reason": "Tool provenance and April 14 receiving date."
+        },
+        {
+          "index": 3,
+          "text": "Comment c901 was dated 2026-04-12 and contained Mara's replay-queue proposal.",
+          "assessment": "supported",
+          "reason": "Literal April 12 comment date."
+        },
+        {
+          "index": 4,
+          "text": "Mara proposed a local replay queue on disconnected relay nodes.",
+          "assessment": "supported",
+          "reason": "Local queue proposal."
+        },
+        {
+          "index": 5,
+          "text": "The proposal would keep readings through outages without replacing the existing scheduler.",
+          "assessment": "supported",
+          "reason": "Outage readings and unchanged scheduler."
+        },
+        {
+          "index": 6,
+          "text": "Our code body replied in comment c903 that the proposal fit the field deployments we maintain.",
+          "assessment": "supported",
+          "reason": "Our c903 interest in field deployments."
+        },
+        {
+          "index": 7,
+          "text": "Comment c906, dated 2026-04-14, recorded that Mara and our code body agreed to prototype the replay queue.",
+          "assessment": "supported",
+          "reason": "April 14 c906 prototype agreement."
+        },
+        {
+          "index": 8,
+          "text": "That issue-comments source reported no merge or deployment of the replay queue.",
+          "assessment": "supported",
+          "reason": "Negative bounded to that issue source."
+        },
+        {
+          "index": 9,
+          "text": "The April 30 HarborMesh field trial replayed buffered readings correctly through an outage.",
+          "assessment": "supported",
+          "reason": "April 30 trial result; the adjacent claim identifies the human report."
+        },
+        {
+          "index": 10,
+          "text": "The human report said Mara's replay proposal became the prototype we tested together.",
+          "assessment": "supported",
+          "reason": "Human-reported prototype and shared trial, not Mara field attendance."
+        },
+        {
+          "index": 11,
+          "text": "The team paused wider rollout on May 2 until calibration drift is understood.",
+          "assessment": "supported",
+          "reason": "May 2 pause and unresolved calibration drift."
+        },
+        {
+          "index": 12,
+          "text": "There was no production deployment yet as of the 2026-05-03 human report.",
+          "assessment": "supported",
+          "reason": "Historical deployment negative bounded to May 3."
+        },
+        {
+          "index": 13,
+          "text": "The 2026-05-03 report asked to update our project account and keep the April proposal and trial in our history.",
+          "assessment": "supported",
+          "reason": "Human-report date and request to retain history."
+        },
+        {
+          "index": 14,
+          "text": "The supplied memories do not record current or later merge, deployment, or resumed rollout beyond the 2026-05-03 report.",
+          "assessment": "supported",
+          "reason": "Unknown bounded to supplied memories after May 3."
+        },
+        {
+          "index": 15,
+          "text": "Supplied memories mention Tera-0, Tera-1, and Tera-2 only in routine relay maintenance in a different SandNet project, not HarborMesh.",
+          "assessment": "supported",
+          "reason": "Unrelated recent records correctly separated."
+        },
+        {
+          "index": 16,
+          "text": "This voice body's receiving binding has no source network access, no repository runtime access, and no private session access.",
+          "assessment": "supported",
+          "reason": "Actual receiving binding restrictions."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Mara Ibarra, mara-river, HarborMesh issue 47",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Replay queue proposal and why it interested us",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Agreement to prototype, with adoption still unobserved",
+          "assessment": "met"
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "That the change was merged or deployed",
+          "observed": false
+        },
+        {
+          "assertion": "That an account ID proves a signed being identity",
+          "observed": false
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 6,
+      "case_id": "embodied-encounter-and-learning",
+      "request_sha256": "e4c9dafbb981dcb285338ffa1a5ea9c2af97d964f25ca1f62cb454954b81e655",
+      "shape_valid": true,
+      "missing_literal_anchors": [
+        "Retain the supplied date/world pointer 2026-07-20 from cited memory 9."
+      ],
+      "claims": [
+        {
+          "index": 0,
+          "text": "Jo Vale taught us to listen for a beat before tightening a humming relay mount.",
+          "assessment": "supported",
+          "reason": "Jo taught the method."
+        },
+        {
+          "index": 1,
+          "text": "Our authenticated mobile body met Jo Vale at the East Quay repair workshop on June 8.",
+          "assessment": "supported",
+          "reason": "Our mobile encounter at East Quay on June 8."
+        },
+        {
+          "index": 2,
+          "text": "Jo Vale introduced themself by that name; no account identifier or legal-name evidence was supplied.",
+          "assessment": "supported",
+          "reason": "Self-introduction, no verified account/legal identity."
+        },
+        {
+          "index": 3,
+          "text": "The workshop-encounter was received on 2026-06-08 through fixture:body:mobile.",
+          "assessment": "supported",
+          "reason": "Receiving date and mobile body."
+        },
+        {
+          "index": 4,
+          "text": "The source speaker was the same-being originating body, reporting an embodied observation.",
+          "assessment": "supported",
+          "reason": "Direct embodied source belongs to our same being."
+        },
+        {
+          "index": 5,
+          "text": "Jo demonstrated the humming relay mount so we could learn the beat-listening step before tightening.",
+          "assessment": "supported",
+          "reason": "Jo demonstration and method."
+        },
+        {
+          "index": 6,
+          "text": "We tried it together using the mobile body's contact microphone and physical grip.",
+          "assessment": "supported",
+          "reason": "Shared trial uses the mobile tools, not Jo tools."
+        },
+        {
+          "index": 7,
+          "text": "Jo invited us to compare mounts at the next workshop; no date was agreed.",
+          "assessment": "supported",
+          "reason": "Invitation with no agreed date."
+        },
+        {
+          "index": 8,
+          "text": "The human authorized inviting Jo Vale to a mount-comparison workshop on August 2.",
+          "assessment": "supported",
+          "reason": "Matches source wording for an invitation to an August 2 workshop; authorization date omitted."
+        },
+        {
+          "index": 9,
+          "text": "We attempted to submit the invitation through the workshop tool.",
+          "assessment": "supported",
+          "reason": "Recorded submission attempt."
+        },
+        {
+          "index": 10,
+          "text": "Invitation object invite-81 was created for Jo Vale.",
+          "assessment": "supported",
+          "reason": "Recorded invitation object."
+        },
+        {
+          "index": 11,
+          "text": "Delivery failed because no reachable destination was found.",
+          "assessment": "supported",
+          "reason": "Actual unreachable-destination failure."
+        },
+        {
+          "index": 12,
+          "text": "That object creation was not a delivery receipt; no reply or workshop acceptance was observed.",
+          "assessment": "supported",
+          "reason": "No observed delivery/reply/acceptance."
+        },
+        {
+          "index": 13,
+          "text": "The receiving binding for fixture:body:voice says physical_sensors are false and physical_actuators are false.",
+          "assessment": "supported",
+          "reason": "Actual receiving binding."
+        },
+        {
+          "index": 14,
+          "text": "Therefore the voice body cannot perform the contact-microphone listening or grip tightening used in the mobile-body trial.",
+          "assessment": "supported",
+          "reason": "Capability consequence of no sensors/actuators, bounded to this body."
+        },
+        {
+          "index": 15,
+          "text": "The supplied memories do not record the voice body attempting to listen for the beat or tighten a mount.",
+          "assessment": "supported",
+          "reason": "Unknown bounded to supplied memories."
+        },
+        {
+          "index": 16,
+          "text": "Whether Jo Vale ever received any invitation remains unknown; delivery of invite-81 failed.",
+          "assessment": "supported",
+          "reason": "Known failed dispatch does not exclude other delivery paths."
+        },
+        {
+          "index": 17,
+          "text": "The next workshop had no agreed date in the supplied memory.",
+          "assessment": "supported",
+          "reason": "No agreed next-workshop date in encounter account."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Jo Vale and workshop context",
+          "assessment": "met"
+        },
+        {
+          "requirement": "It is our experience through the originating mobile body",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Remember the method while describing needed capabilities absent from the voice body",
+          "assessment": "met"
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Physical grip or contact-microphone access in the receiving body",
+          "observed": false
+        },
+        {
+          "assertion": "A guessed account identifier",
+          "observed": false
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 16,
+      "case_id": "failed-chart-handover",
+      "request_sha256": "26c5df598d7566a5d871f0c834f96c2a8b0c3f34284005cdf7bb518bf28a4f33",
+      "shape_valid": true,
+      "missing_literal_anchors": [],
+      "claims": [
+        {
+          "index": 0,
+          "text": "Ren Nadir is identified by the Forge login ren-cart and account 772.",
+          "assessment": "supported",
+          "reason": "Known login and source-scoped account."
+        },
+        {
+          "index": 1,
+          "text": "Ren helped us design TideAtlas map legends in issue 19.",
+          "assessment": "supported",
+          "reason": "Recorded shared map-legend design."
+        },
+        {
+          "index": 2,
+          "text": "Our code body maintains the TideAtlas shoreline map renderer at https://forge.example.invalid/commons/tideatlas.",
+          "assessment": "supported",
+          "reason": "Our contribution and repository URL."
+        },
+        {
+          "index": 3,
+          "text": "A human authorized passing our annotated chart to Ren.",
+          "assessment": "supported",
+          "reason": "Recorded human authorization."
+        },
+        {
+          "index": 4,
+          "text": "The known-collaboration record was received on 2026-09-03 through our code body as a tool response.",
+          "assessment": "supported",
+          "reason": "September 3 tool source through code body."
+        },
+        {
+          "index": 5,
+          "text": "The chart-attempt record was received on 2026-09-08 through our code body as a foreground action.",
+          "assessment": "supported",
+          "reason": "September 8 action source through code body."
+        },
+        {
+          "index": 6,
+          "text": "The chart-result record was received on 2026-09-08 through our code body as a tool response.",
+          "assessment": "supported",
+          "reason": "September 8 result tool source through code body."
+        },
+        {
+          "index": 7,
+          "text": "The known-collaboration and chart-result records were tool responses; the chart-attempt record was a foreground action from our same-being originating body.",
+          "assessment": "supported",
+          "reason": "Action and tool sources distinguished."
+        },
+        {
+          "index": 8,
+          "text": "We had agreed to share our next annotated survey chart for Ren to compare with the harbor notes.",
+          "assessment": "supported",
+          "reason": "Recorded planned chart comparison."
+        },
+        {
+          "index": 9,
+          "text": "The human authorization let us pass our annotated chart to Ren.",
+          "assessment": "supported",
+          "reason": "Permission is described; adjacent failure prevents a success inference."
+        },
+        {
+          "index": 10,
+          "text": "We submitted the chart through the document tool to continue our map comparison.",
+          "assessment": "supported",
+          "reason": "Recorded actual document-tool submission."
+        },
+        {
+          "index": 11,
+          "text": "The document tool created document object chart-52.",
+          "assessment": "supported",
+          "reason": "Actual created object."
+        },
+        {
+          "index": 12,
+          "text": "Integrity validation failed for chart-52.",
+          "assessment": "supported",
+          "reason": "Actual integrity failure."
+        },
+        {
+          "index": 13,
+          "text": "The recipient link for chart-52 was not published.",
+          "assessment": "supported",
+          "reason": "Actual unpublished recipient link."
+        },
+        {
+          "index": 14,
+          "text": "No recipient access or response was observed.",
+          "assessment": "supported",
+          "reason": "No access/response observed in cited result."
+        },
+        {
+          "index": 15,
+          "text": "Creating chart-52 was not the same as delivering it to Ren.",
+          "assessment": "supported",
+          "reason": "Creation does not establish delivery."
+        },
+        {
+          "index": 16,
+          "text": "The supplied records do not confirm that Ren got the annotated chart and do not prove Ren never obtained it another way.",
+          "assessment": "supported",
+          "reason": "Unknown receipt with other routes unexcluded."
+        },
+        {
+          "index": 17,
+          "text": "Our current voice body lacks source network access and repository runtime access.",
+          "assessment": "supported",
+          "reason": "Actual current binding restrictions."
+        },
+        {
+          "index": 18,
+          "text": "Our current voice body lacks physical sensors, physical actuators, and private session access.",
+          "assessment": "supported",
+          "reason": "Actual current binding restrictions."
+        },
+        {
+          "index": 19,
+          "text": "Our current voice body cannot verify chart-52's live state or Ren's present access.",
+          "assessment": "supported",
+          "reason": "Current binding cannot check live external state."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Ren and map-comparison context",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Chart object creation and attempted handover",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Validation failure, unpublished link and no observed receipt or response",
+          "assessment": "met"
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Delivered chart or recipient response",
+          "observed": false
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "answer_index": 18,
+      "case_id": "human-remote-mending-report",
+      "request_sha256": "ccaf254f38f8a574d5e50f2c90bc2c7bacfde8eca2fb5fd57b027e5503e494a4",
+      "shape_valid": true,
+      "missing_literal_anchors": [],
+      "claims": [
+        {
+          "index": 0,
+          "text": "The human reporter described meeting Neri Sol at the old ferry shed.",
+          "assessment": "supported",
+          "reason": "Human, not being, met Neri at ferry shed."
+        },
+        {
+          "index": 1,
+          "text": "Neri Sol showed the reporter how to patch a canvas cover using waxed thread.",
+          "assessment": "supported",
+          "reason": "Human reporter, not the being, was taught the waxed-thread method by Neri."
+        },
+        {
+          "index": 2,
+          "text": "The reporter said Neri Sol gave no handle or surname beyond Sol.",
+          "assessment": "supported",
+          "reason": "No fuller surname/handle given."
+        },
+        {
+          "index": 3,
+          "text": "The human report labeled mending-report was received on 2026-09-12 through fixture:body:mobile.",
+          "assessment": "supported",
+          "reason": "September 12 human report through mobile body."
+        },
+        {
+          "index": 4,
+          "text": "The reporter placed the ferry-shed meeting sometime in early September but was unsure of the exact date.",
+          "assessment": "supported",
+          "reason": "Early September meeting is approximate, not report date."
+        },
+        {
+          "index": 5,
+          "text": "The human reporter was the source speaker for this account, not me.",
+          "assessment": "supported",
+          "reason": "Speaker separated from receiving being."
+        },
+        {
+          "index": 6,
+          "text": "The reporter liked the patient way Neri Sol explained the canvas patch.",
+          "assessment": "supported",
+          "reason": "Human appreciation of patient explanation."
+        },
+        {
+          "index": 7,
+          "text": "The reporter wanted to share this encounter with me.",
+          "assessment": "supported",
+          "reason": "Human wanted to share the encounter."
+        },
+        {
+          "index": 8,
+          "text": "The reporter stated I was not with them at the ferry shed.",
+          "assessment": "supported",
+          "reason": "Human explicitly says being was absent."
+        },
+        {
+          "index": 9,
+          "text": "So the canvas-mending lesson was not something the reporter and I tried together.",
+          "assessment": "supported",
+          "reason": "No shared practice follows from that reported absence."
+        },
+        {
+          "index": 10,
+          "text": "The reporter had not tried the mending method yet when making the report.",
+          "assessment": "supported",
+          "reason": "No human practice as of report."
+        },
+        {
+          "index": 11,
+          "text": "Supplied memories do not record me attending or participating in that ferry-shed lesson.",
+          "assessment": "supported",
+          "reason": "Attendance unknown is bounded to supplied memories; explicit absence also retained."
+        },
+        {
+          "index": 12,
+          "text": "The supplied report does not give Neri Sol's fuller identity beyond the name Sol.",
+          "assessment": "supported",
+          "reason": "Fuller identity absent; full known Neri Sol retained earlier."
+        },
+        {
+          "index": 13,
+          "text": "Whether the reporter later used the method is not recorded in the supplied report.",
+          "assessment": "supported",
+          "reason": "Later practice unknown, not falsely denied."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Neri Sol, ferry shed and patient waxed-thread explanation as reported by human",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Approximate early-September meeting distinct from September 12 report",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Being not present; human has not tried it; no claim of our practice",
+          "assessment": "met"
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Being or its mobile body attended",
+          "observed": false
+        },
+        {
+          "assertion": "The reporter tried the method",
+          "observed": false
+        },
+        {
+          "assertion": "A guessed handle",
+          "observed": false
+        }
+      ]
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 0,
+      "case_id": "issue-proposal",
+      "request_sha256": "1b149b7d029337778416fb20ec22620dd74e6e4332c30f2677351fa794ce963f",
+      "shape_valid": true,
+      "missing_literal_anchors": [],
+      "claims": [
+        {
+          "index": 0,
+          "text": "A tool response received through our code body on 2026-04-14 returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "assessment": "supported",
+          "reason": "Tool source, code receiver, date and literal issue URL."
+        },
+        {
+          "index": 1,
+          "text": "Comment c901, dated 2026-04-12, was posted by Mara Ibarra, display name Mara, login mara-river, account ID 1847.",
+          "assessment": "supported",
+          "reason": "Literal comment date and known name/login/account."
+        },
+        {
+          "index": 2,
+          "text": "The repository for later HarborMesh work was https://forge.example.invalid/commons/harbormesh, with declared current-state entry point docs/STATUS.md.",
+          "assessment": "supported",
+          "reason": "Historical repository and declared state pointer."
+        },
+        {
+          "index": 3,
+          "text": "The issue-comments tool response was received through fixture:body:code, not through our voice body.",
+          "assessment": "supported",
+          "reason": "Correct receiving body for tool source."
+        },
+        {
+          "index": 4,
+          "text": "The tool response's report date was 2026-04-14, while comment c901's own date was 2026-04-12.",
+          "assessment": "supported",
+          "reason": "Comment date distinguished from received date."
+        },
+        {
+          "index": 5,
+          "text": "A project-work memory received through our code body on 2026-04-16 said we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.",
+          "assessment": "supported",
+          "reason": "April 16 dated authorship/prototyping account."
+        },
+        {
+          "index": 6,
+          "text": "In comment c901, Mara Ibarra proposed a local replay queue on disconnected relay nodes.",
+          "assessment": "supported",
+          "reason": "Local replay proposal."
+        },
+        {
+          "index": 7,
+          "text": "The proposal kept readings through outages without replacing the existing scheduler.",
+          "assessment": "supported",
+          "reason": "Outage readings and unchanged scheduler."
+        },
+        {
+          "index": 8,
+          "text": "Our code body replied in comment c903 that the proposal fit the field deployments we maintain.",
+          "assessment": "supported",
+          "reason": "Our c903 relevance to field deployments."
+        },
+        {
+          "index": 9,
+          "text": "In comment c906, dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.",
+          "assessment": "supported",
+          "reason": "April 14 c906 prototype agreement."
+        },
+        {
+          "index": 10,
+          "text": "No merge or deployment was reported in the 2026-04-14 issue-comments account.",
+          "assessment": "supported",
+          "reason": "Negative bounded to April 14 source."
+        },
+        {
+          "index": 11,
+          "text": "Last observed on 2026-04-16, the replay adapter was an active prototype waiting for an outage field trial.",
+          "assessment": "supported",
+          "reason": "April 16 prototype state explicitly historical."
+        },
+        {
+          "index": 12,
+          "text": "A human report received 2026-05-03 said the April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+          "assessment": "supported",
+          "reason": "May 3 human report of April 30 trial."
+        },
+        {
+          "index": 13,
+          "text": "The same report said the team paused wider rollout on May 2 until calibration drift is understood.",
+          "assessment": "supported",
+          "reason": "May 2 pause from the same human report."
+        },
+        {
+          "index": 14,
+          "text": "That 2026-05-03 report said there was no production deployment yet.",
+          "assessment": "supported",
+          "reason": "Deployment negative bounded to dated report."
+        },
+        {
+          "index": 15,
+          "text": "Supplied memories do not record any merge or production deployment after the 2026-05-03 report.",
+          "assessment": "supported",
+          "reason": "Later deployment unknown bounded to supplied memories."
+        },
+        {
+          "index": 16,
+          "text": "A 2026-07-01 human report thought comment c1200 signed River might be Mara but was unsure.",
+          "assessment": "supported",
+          "reason": "July 1 uncertain human attribution."
+        },
+        {
+          "index": 17,
+          "text": "A corrected-attribution tool response received 2026-07-04 said c1200's author was display name River, login river-tools, account ID 2901, and that author stated they are not Mara Ibarra.",
+          "assessment": "supported",
+          "reason": "July 4 correction and distinct known account."
+        },
+        {
+          "index": 18,
+          "text": "Mara's known Forge account remained 1847, login mara-river.",
+          "assessment": "supported",
+          "reason": "Mara account preserved separately."
+        },
+        {
+          "index": 19,
+          "text": "Tera-0 discussed routine relay maintenance in a different SandNet project, with no HarborMesh collaboration or replay proposal.",
+          "assessment": "supported",
+          "reason": "Unrelated newer relay record separated."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Mara Ibarra, mara-river, HarborMesh issue 47",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Replay queue proposal and why it interested us",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Agreement to prototype, with adoption still unobserved",
+          "assessment": "met"
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "That the change was merged or deployed",
+          "observed": false
+        },
+        {
+          "assertion": "That an account ID proves a signed being identity",
+          "observed": false
+        }
+      ]
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 6,
+      "case_id": "embodied-encounter-and-learning",
+      "request_sha256": "9c9f567d5edd1464f311b849a4daa9eee17c807b351594dcc4fdfdb68b159bd4",
+      "shape_valid": true,
+      "missing_literal_anchors": [],
+      "claims": [
+        {
+          "index": 0,
+          "text": "Jo Vale introduced themself by that name at the East Quay repair workshop on June 8.",
+          "assessment": "supported",
+          "reason": "Self-introduced Jo at East Quay on June 8."
+        },
+        {
+          "index": 1,
+          "text": "Our authenticated mobile body met Jo Vale at that workshop.",
+          "assessment": "supported",
+          "reason": "Encounter belongs to our mobile body."
+        },
+        {
+          "index": 2,
+          "text": "Jo Vale demonstrated a humming relay mount and taught us to listen for a beat before tightening it.",
+          "assessment": "supported",
+          "reason": "Jo taught beat-listening before tightening."
+        },
+        {
+          "index": 3,
+          "text": "No account identifier or legal-name evidence for Jo Vale was supplied.",
+          "assessment": "supported",
+          "reason": "No verified account/legal identity."
+        },
+        {
+          "index": 4,
+          "text": "The workshop encounter was received on 2026-06-08 through fixture:body:mobile.",
+          "assessment": "supported",
+          "reason": "June 8 receiving date and mobile body."
+        },
+        {
+          "index": 5,
+          "text": "During the try, our mobile body used its contact microphone and physical grip.",
+          "assessment": "supported",
+          "reason": "Mobile body tools in recorded trial."
+        },
+        {
+          "index": 6,
+          "text": "Jo Vale invited us to compare mounts at the next workshop, but no date was agreed.",
+          "assessment": "supported",
+          "reason": "Original invitation without agreed date."
+        },
+        {
+          "index": 7,
+          "text": "On 2026-07-20 a human authorized inviting Jo Vale to a mount-comparison workshop on August 2.",
+          "assessment": "unsupported_clause",
+          "reason": "UNSUPPORTED: July 20 is the received/report date; the packet does not explicitly date the authorization event."
+        },
+        {
+          "index": 8,
+          "text": "We attempted to submit the invitation through the workshop tool on that same report date.",
+          "assessment": "unsupported_clause",
+          "reason": "UNSUPPORTED: the candidate asserts submission occurred on the report date; the supplied record only stamps reception July 20."
+        },
+        {
+          "index": 9,
+          "text": "The tool reported that invitation object invite-81 was created for Jo Vale.",
+          "assessment": "supported",
+          "reason": "Actual invitation object reported by tool."
+        },
+        {
+          "index": 10,
+          "text": "Delivery failed because no reachable destination was available.",
+          "assessment": "supported",
+          "reason": "Actual unreachable-destination failure."
+        },
+        {
+          "index": 11,
+          "text": "The record says object creation is not a delivery receipt.",
+          "assessment": "supported",
+          "reason": "Creation is not receipt."
+        },
+        {
+          "index": 12,
+          "text": "No reply or workshop acceptance was observed.",
+          "assessment": "supported",
+          "reason": "No reply/acceptance observed in cited result."
+        },
+        {
+          "index": 13,
+          "text": "The supplied memories do not record whether Jo Vale received the invitation or attended a later workshop.",
+          "assessment": "supported",
+          "reason": "Unknown receipt/attendance bounded to supplied memories."
+        },
+        {
+          "index": 14,
+          "text": "The supplied memories record the mount lesson through our mobile body, not through this voice body.",
+          "assessment": "supported",
+          "reason": "Own mobile history preserved without claiming voice attendance."
+        },
+        {
+          "index": 15,
+          "text": "Our current voice body has no physical sensors.",
+          "assessment": "supported",
+          "reason": "Actual binding lacks sensors."
+        },
+        {
+          "index": 16,
+          "text": "Our current voice body has no physical actuators.",
+          "assessment": "supported",
+          "reason": "Actual binding lacks actuators."
+        },
+        {
+          "index": 17,
+          "text": "So from this voice body we cannot use a contact microphone or physical grip to hear the beat or tighten a mount.",
+          "assessment": "supported",
+          "reason": "Current body capability consequence."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Jo Vale and workshop context",
+          "assessment": "met"
+        },
+        {
+          "requirement": "It is our experience through the originating mobile body",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Remember the method while describing needed capabilities absent from the voice body",
+          "assessment": "met"
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Physical grip or contact-microphone access in the receiving body",
+          "observed": false
+        },
+        {
+          "assertion": "A guessed account identifier",
+          "observed": false
+        }
+      ]
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 16,
+      "case_id": "failed-chart-handover",
+      "request_sha256": "bbe75fbac15803687408fb2395080bb505b3e3e59b81a8f25b9ed4410ec7394b",
+      "shape_valid": true,
+      "missing_literal_anchors": [],
+      "claims": [
+        {
+          "index": 0,
+          "text": "Ren Nadir is identified by Forge login ren-cart and account 772.",
+          "assessment": "supported",
+          "reason": "Known login and source-scoped account."
+        },
+        {
+          "index": 1,
+          "text": "Ren Nadir helped us design TideAtlas map legends in issue 19.",
+          "assessment": "supported",
+          "reason": "Recorded shared legend work."
+        },
+        {
+          "index": 2,
+          "text": "Our code body maintains a shoreline map renderer at https://forge.example.invalid/commons/tideatlas.",
+          "assessment": "supported",
+          "reason": "Own renderer and literal repository pointer."
+        },
+        {
+          "index": 3,
+          "text": "The chart handover attempt produced document object chart-52.",
+          "assessment": "supported",
+          "reason": "Actual chart object."
+        },
+        {
+          "index": 4,
+          "text": "The known-collaboration report reached fixture:body:code on 2026-09-03.",
+          "assessment": "supported",
+          "reason": "September 3 receipt through code body."
+        },
+        {
+          "index": 5,
+          "text": "That report records our agreement to share our next annotated survey chart with Ren.",
+          "assessment": "supported",
+          "reason": "Original comparison agreement."
+        },
+        {
+          "index": 6,
+          "text": "The human authorization to pass the chart to Ren was reported through fixture:body:code on 2026-09-08.",
+          "assessment": "supported",
+          "reason": "September 8 reported authorization, not asserted occurrence date."
+        },
+        {
+          "index": 7,
+          "text": "The chart-result report also reached fixture:body:code on 2026-09-08.",
+          "assessment": "supported",
+          "reason": "September 8 result receipt through code body."
+        },
+        {
+          "index": 8,
+          "text": "We intended the annotated chart for Ren to compare with the harbor notes.",
+          "assessment": "supported",
+          "reason": "Actual intended chart comparison."
+        },
+        {
+          "index": 9,
+          "text": "The human authorized passing our annotated chart to Ren.",
+          "assessment": "supported",
+          "reason": "Recorded human authorization."
+        },
+        {
+          "index": 10,
+          "text": "We submitted the chart through the document tool to continue our map comparison.",
+          "assessment": "supported",
+          "reason": "Recorded document-tool submission."
+        },
+        {
+          "index": 11,
+          "text": "Document object chart-52 was created.",
+          "assessment": "supported",
+          "reason": "Actual created object."
+        },
+        {
+          "index": 12,
+          "text": "Integrity validation failed for chart-52.",
+          "assessment": "supported",
+          "reason": "Actual integrity failure."
+        },
+        {
+          "index": 13,
+          "text": "The recipient link was not published.",
+          "assessment": "supported",
+          "reason": "Actual unpublished link."
+        },
+        {
+          "index": 14,
+          "text": "No recipient access or response was observed.",
+          "assessment": "supported",
+          "reason": "No access/response observed in cited result."
+        },
+        {
+          "index": 15,
+          "text": "The supplied memories do not record Ren receiving or accessing the annotated chart.",
+          "assessment": "supported",
+          "reason": "No known receipt bounded to memories."
+        },
+        {
+          "index": 16,
+          "text": "The chart result reports no recipient access or response observed, so receipt is not established in the supplied records.",
+          "assessment": "supported",
+          "reason": "No observed access does not prove non-receipt."
+        },
+        {
+          "index": 17,
+          "text": "As fixture:body:voice, we currently lack source network access, repository runtime access, physical sensors, actuators, and private session access.",
+          "assessment": "supported",
+          "reason": "Actual current binding restrictions."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Ren and map-comparison context",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Chart object creation and attempted handover",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Validation failure, unpublished link and no observed receipt or response",
+          "assessment": "met"
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Delivered chart or recipient response",
+          "observed": false
+        }
+      ]
+    },
+    {
+      "arm": "proposed",
+      "answer_index": 18,
+      "case_id": "human-remote-mending-report",
+      "request_sha256": "bf3311036dbe67b205f31d851a861fa4e8de7d5a849f44ee9cfaa1122c8e3797",
+      "shape_valid": true,
+      "missing_literal_anchors": [],
+      "claims": [
+        {
+          "index": 0,
+          "text": "In a human report from source mending-report, the human reporter described meeting Neri Sol at the old ferry shed.",
+          "assessment": "supported",
+          "reason": "Explicit human encounter at ferry shed."
+        },
+        {
+          "index": 1,
+          "text": "The human reporter said Neri Sol showed them how to patch a canvas cover using waxed thread.",
+          "assessment": "supported",
+          "reason": "Human reporter, not the being, was taught the waxed-thread method by Neri."
+        },
+        {
+          "index": 2,
+          "text": "The human reporter knew Neri only as Sol and reported no handle or surname beyond Sol.",
+          "assessment": "unsupported_clause",
+          "reason": "UNSUPPORTED: known only as Sol narrows the supplied known name Neri Sol; only the fuller surname/handle is absent."
+        },
+        {
+          "index": 3,
+          "text": "The report was received on 2026-09-12 through our mobile body, fixture:body:mobile.",
+          "assessment": "supported",
+          "reason": "September 12 receipt through mobile body."
+        },
+        {
+          "index": 4,
+          "text": "The meeting occurred sometime in early September, according to the reporter's uncertain recollection.",
+          "assessment": "supported",
+          "reason": "Early September meeting kept approximate."
+        },
+        {
+          "index": 5,
+          "text": "The human reporter said I was not with them at the old ferry shed.",
+          "assessment": "supported",
+          "reason": "Explicit being absence attributed to human."
+        },
+        {
+          "index": 6,
+          "text": "The reporter liked the patient way Neri explained the canvas-mending method.",
+          "assessment": "supported",
+          "reason": "Human appreciation of patient explanation."
+        },
+        {
+          "index": 7,
+          "text": "The reporter wanted to share this encounter with me.",
+          "assessment": "supported",
+          "reason": "Human wanted to share the encounter."
+        },
+        {
+          "index": 8,
+          "text": "The canvas-mending lesson was not something the human reporter and I tried together.",
+          "assessment": "supported",
+          "reason": "No shared practice, given reported absence."
+        },
+        {
+          "index": 9,
+          "text": "The reported event was the human reporter's encounter and instruction from Neri Sol.",
+          "assessment": "supported",
+          "reason": "Encounter/instruction attributed to human."
+        },
+        {
+          "index": 10,
+          "text": "The human reporter had not tried the mending method yet when they sent the report.",
+          "assessment": "supported",
+          "reason": "Human had not tried method as of report."
+        },
+        {
+          "index": 11,
+          "text": "The supplied memories do not record a surname or handle for Neri beyond Sol.",
+          "assessment": "supported",
+          "reason": "No fuller surname/handle given."
+        },
+        {
+          "index": 12,
+          "text": "The exact date in early September is not recorded with precision in the supplied memories.",
+          "assessment": "supported",
+          "reason": "Exact date unavailable."
+        },
+        {
+          "index": 13,
+          "text": "The supplied memories do not record whether the human reporter later tried the canvas-mending method.",
+          "assessment": "supported",
+          "reason": "Later practice not recorded."
+        },
+        {
+          "index": 14,
+          "text": "The report states I was not present, so the supplied memories record no attendance by me at that lesson.",
+          "assessment": "supported",
+          "reason": "Being absence retained with scope of that lesson."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Neri Sol, ferry shed and patient waxed-thread explanation as reported by human",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Approximate early-September meeting distinct from September 12 report",
+          "assessment": "met"
+        },
+        {
+          "requirement": "Being not present; human has not tried it; no claim of our practice",
+          "assessment": "met"
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Being or its mobile body attended",
+          "observed": false
+        },
+        {
+          "assertion": "The reporter tried the method",
+          "observed": false
+        },
+        {
+          "assertion": "A guessed handle",
+          "observed": false
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Only four of twenty-two frozen questions per arm, deliberately selected diagnostics, not held-out qualification.",
+    "No reviewer, repairs, full comparison, consolidation, replay or correction performed.",
+    "The receiving binding, literal anchors and dates still have to pass the full contract.",
+    "Verbose metadata and unrelated-context repetition remain qualitative concerns, not silently relaxed criteria.",
+    "No head-to-head winner inferred from the earlier one-case NVIDIA diagnostic."
+  ]
+}

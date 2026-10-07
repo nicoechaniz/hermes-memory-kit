@@ -134,3 +134,12 @@ contracted no service. The paused goal's next revision should name DeepSeek and
 keep the provider set open. After selection, the original full narrative gate,
 three consolidation passes, replay, dependent correction/reconciliation,
 publication/adoption and preservation requirements remain unchanged.
+
+Subsequent separately authorized testing reused the existing DeepSeek connection
+and confirmed the Hermes compression configuration reported by the human. The
+[eight-generation Flash-low diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-deepseek-generation-diagnostic.md)
+establishes working direct inference with unchanged embeddings, not consolidation
+or full narrative qualification. Three unsupported clauses and a missing source
+date remain. Prefer this inexpensive candidate for the next consolidation trial;
+keep Sol low as an unexecuted comparison and qualify the reviewer separately.
+The broader goal remains paused; no production model or index was changed.
