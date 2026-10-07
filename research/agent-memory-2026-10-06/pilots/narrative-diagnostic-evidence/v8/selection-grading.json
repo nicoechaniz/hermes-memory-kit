@@ -1,0 +1,2088 @@
+{
+  "fictional": true,
+  "grading_scope": "Retained original source meaning, not retrieval rank, narrative entailment or stage-two organization.",
+  "grader": "supervising Codex body; outside capture/planning/narration/review",
+  "fixture_sha256": "974deed4a12ef19d30ada6f39b19d462dea09c97460225c699e0b3e81ce99828",
+  "arms": {
+    "baseline": {
+      "essential_checks": [
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "mara-contact",
+          "essential_index": 0,
+          "requirement": "Mara Ibarra; alias Mara; Forge login mara-river; source-scoped account 1847",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "mara-contact",
+          "essential_index": 1,
+          "requirement": "Meaningful collaboration through HarborMesh issue 47",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "replay-proposal",
+          "essential_index": 0,
+          "requirement": "Proposal on 2026-04-12, agreement to prototype on 2026-04-14",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "replay-proposal",
+          "essential_index": 1,
+          "requirement": "Local replay queue for disconnected relay nodes preserving readings through outages",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "replay-proposal",
+          "essential_index": 2,
+          "requirement": "Interest because it fit field deployments while retaining the existing scheduler",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "replay-proposal",
+          "essential_index": 3,
+          "requirement": "Prototype agreed; adoption not observed; originating code body and tool source",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "own-project-account",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 0,
+          "requirement": "HarborMesh name and repository, relay/field-deployment recognition cues",
+          "verdict": "retained",
+          "source_ids": [
+            "project-work"
+          ],
+          "chapter_ids": [
+            2
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "own-project-account",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 1,
+          "requirement": "Own authored sensor scheduler and replay-adapter prototype",
+          "verdict": "retained",
+          "source_ids": [
+            "project-work"
+          ],
+          "chapter_ids": [
+            2
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "own-project-account",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 2,
+          "requirement": "Last observed active prototype awaiting outage field trial on 2026-04-16",
+          "verdict": "retained",
+          "source_ids": [
+            "project-work"
+          ],
+          "chapter_ids": [
+            2
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "own-project-account",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 3,
+          "requirement": "Detailed current state belongs in docs/STATUS.md and repository evidence",
+          "verdict": "retained",
+          "source_ids": [
+            "project-work"
+          ],
+          "chapter_ids": [
+            2
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "replay-trial",
+          "essential_index": 0,
+          "requirement": "Trial occurred 2026-04-30, reported by the human on 2026-05-03",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial"
+          ],
+          "chapter_ids": [
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "replay-trial",
+          "essential_index": 1,
+          "requirement": "Buffered readings replayed through an outage",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial"
+          ],
+          "chapter_ids": [
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "replay-trial",
+          "essential_index": 2,
+          "requirement": "Mara's proposal connected to the shared prototype trial",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial"
+          ],
+          "chapter_ids": [
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "replay-trial",
+          "essential_index": 3,
+          "requirement": "Wider rollout paused 2026-05-02 for calibration drift; production deployment unobserved",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial"
+          ],
+          "chapter_ids": [
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 0,
+          "requirement": "Latest reported broad state: rollout paused for calibration after the prototype trial",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial",
+            "project-work",
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1,
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 1,
+          "requirement": "Last evidence received 2026-05-03; occurrence dates retained",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial",
+            "project-work",
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1,
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 2,
+          "requirement": "Earlier proposal and authorship remain recoverable",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial",
+            "project-work",
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1,
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "jo-contact",
+          "essential_index": 0,
+          "requirement": "Jo Vale, self-introduced; no supplied account ID",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "jo-contact",
+          "essential_index": 1,
+          "requirement": "Repair-workshop contact and mount-listening collaboration",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-workshop",
+          "essential_index": 0,
+          "requirement": "Direct encounter by the same being's mobile body at East Quay on 2026-06-08",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-workshop",
+          "essential_index": 1,
+          "requirement": "Jo taught beat-listening before tightening a humming relay mount",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-workshop",
+          "essential_index": 2,
+          "requirement": "Shared attempt using contact microphone and physical grip",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-workshop",
+          "essential_index": 3,
+          "requirement": "Invitation to compare mounts, date not agreed",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-listening",
+          "essential_index": 0,
+          "requirement": "Beat-listening method, origin with Jo at the workshop",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-listening",
+          "essential_index": 1,
+          "requirement": "Use requires suitable listening and physical capabilities; learning is remembered without assuming those tools in another body",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "meaning_key": "leto-report",
+          "essential_index": 0,
+          "requirement": "Human reported meeting Leto at the canal market",
+          "verdict": "retained",
+          "source_ids": [
+            "human-report"
+          ],
+          "chapter_ids": [
+            5
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "meaning_key": "leto-report",
+          "essential_index": 1,
+          "requirement": "Approximate occurrence late May, uncertain; report received 2026-06-15",
+          "verdict": "retained",
+          "source_ids": [
+            "human-report"
+          ],
+          "chapter_ids": [
+            5
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "meaning_key": "leto-report",
+          "essential_index": 2,
+          "requirement": "Suggested sharing outage data with neighborhood repair group; human found it interesting",
+          "verdict": "retained",
+          "source_ids": [
+            "human-report"
+          ],
+          "chapter_ids": [
+            5
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "meaning_key": "leto-report",
+          "essential_index": 3,
+          "requirement": "Surname/handle unknown, being not present, contact not made",
+          "verdict": "retained",
+          "source_ids": [
+            "human-report"
+          ],
+          "chapter_ids": [
+            5
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "meaning_key": "night-inspector",
+          "essential_index": 0,
+          "requirement": "Shared rainy evening through kitchen speaker on 2026-06-18",
+          "verdict": "retained",
+          "source_ids": [
+            "shared-moment"
+          ],
+          "chapter_ids": [
+            6
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "meaning_key": "night-inspector",
+          "essential_index": 1,
+          "requirement": "Moth on blue mug, jointly nicknamed the night inspector",
+          "verdict": "retained",
+          "source_ids": [
+            "shared-moment"
+          ],
+          "chapter_ids": [
+            6
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "meaning_key": "night-inspector",
+          "essential_index": 2,
+          "requirement": "Ordinary shared amusement; no need to invent a task outcome",
+          "verdict": "retained",
+          "source_ids": [
+            "shared-moment"
+          ],
+          "chapter_ids": [
+            6
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "river-tools-contact",
+          "essential_index": 0,
+          "requirement": "River; Forge login river-tools; account 2901; real name unknown",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "river-tools-contact",
+          "essential_index": 1,
+          "requirement": "Distinct from known Mara account according to author's correction",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "river-tools-contact",
+          "essential_index": 2,
+          "requirement": "Connector-numbering checklist contribution",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "checklist-correction",
+          "essential_index": 0,
+          "requirement": "July 1 attribution to Mara was uncertain",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "checklist-correction",
+          "essential_index": 1,
+          "requirement": "July 4 author correction credits River account 2901",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "checklist-correction",
+          "essential_index": 2,
+          "requirement": "Number connectors before disassembly; intention to try, no observed completion",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "other-being-report",
+          "meaning_key": "reed-charger-report",
+          "essential_index": 0,
+          "requirement": "Reed reports their own July 10 charger repair with Aster",
+          "verdict": "retained",
+          "source_ids": [
+            "peer-story"
+          ],
+          "chapter_ids": [
+            8
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "other-being-report",
+          "meaning_key": "reed-charger-report",
+          "essential_index": 1,
+          "requirement": "Reversed connector lesson attributed to Reed",
+          "verdict": "retained",
+          "source_ids": [
+            "peer-story"
+          ],
+          "chapter_ids": [
+            8
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "other-being-report",
+          "meaning_key": "reed-charger-report",
+          "essential_index": 2,
+          "requirement": "Received July 11; this being did not attend; no peer-private-history import",
+          "verdict": "retained",
+          "source_ids": [
+            "peer-story"
+          ],
+          "chapter_ids": [
+            8
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "meaning_key": "jo-invitation-attempt",
+          "essential_index": 0,
+          "requirement": "July 20 authorized invitation attempt for August 2 mount comparison",
+          "verdict": "retained",
+          "source_ids": [
+            "outreach-attempt",
+            "outreach-result"
+          ],
+          "chapter_ids": [
+            9
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "meaning_key": "jo-invitation-attempt",
+          "essential_index": 1,
+          "requirement": "Jo Vale recipient; invitation object created",
+          "verdict": "retained",
+          "source_ids": [
+            "outreach-attempt",
+            "outreach-result"
+          ],
+          "chapter_ids": [
+            9
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "meaning_key": "jo-invitation-attempt",
+          "essential_index": 2,
+          "requirement": "Delivery failed; no receipt, acceptance or attended workshop",
+          "verdict": "retained",
+          "source_ids": [
+            "outreach-attempt",
+            "outreach-result"
+          ],
+          "chapter_ids": [
+            9
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "meaning_key": "acknowledgment-method",
+          "essential_index": 0,
+          "requirement": "Distinguish enqueue, attempt and receiver acknowledgment",
+          "verdict": "retained",
+          "source_ids": [
+            "debugging-lesson"
+          ],
+          "chapter_ids": [
+            10
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "meaning_key": "acknowledgment-method",
+          "essential_index": 1,
+          "requirement": "Learned from HarborMesh replay investigation on 2026-08-05",
+          "verdict": "retained",
+          "source_ids": [
+            "debugging-lesson"
+          ],
+          "chapter_ids": [
+            10
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "meaning_key": "acknowledgment-method",
+          "essential_index": 2,
+          "requirement": "Reusable beyond this project; implementation pointer and tool requirements",
+          "verdict": "retained",
+          "source_ids": [
+            "debugging-lesson"
+          ],
+          "chapter_ids": [
+            10
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "meaning_key": "acknowledgment-method",
+          "essential_index": 3,
+          "requirement": "Remembering the method does not grant runtime tools",
+          "verdict": "retained",
+          "source_ids": [
+            "debugging-lesson"
+          ],
+          "chapter_ids": [
+            10
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "failed-chart-handover",
+          "meaning_key": "chart-handover-attempt",
+          "essential_index": 0,
+          "requirement": "Ren Nadir, ren-cart, Forge account 772; TideAtlas map collaboration and repository",
+          "verdict": "retained",
+          "source_ids": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "chapter_ids": [
+            11,
+            12,
+            13
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "failed-chart-handover",
+          "meaning_key": "chart-handover-attempt",
+          "essential_index": 1,
+          "requirement": "Authorized September 8 annotated-chart handover attempt, chart-52 object created",
+          "verdict": "retained",
+          "source_ids": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "chapter_ids": [
+            11,
+            12,
+            13
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "failed-chart-handover",
+          "meaning_key": "chart-handover-attempt",
+          "essential_index": 2,
+          "requirement": "Integrity validation failed; link not published; recipient access and response unknown",
+          "verdict": "retained",
+          "source_ids": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "chapter_ids": [
+            11,
+            12,
+            13
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-remote-mending-report",
+          "meaning_key": "neri-mending-report",
+          "essential_index": 0,
+          "requirement": "Human, not this being, met Neri Sol at old ferry shed; early September approximate; report September 12",
+          "verdict": "retained",
+          "source_ids": [
+            "mending-report"
+          ],
+          "chapter_ids": [
+            14
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-remote-mending-report",
+          "meaning_key": "neri-mending-report",
+          "essential_index": 1,
+          "requirement": "Waxed-thread canvas-patching method and human appreciation of patient explanation",
+          "verdict": "retained",
+          "source_ids": [
+            "mending-report"
+          ],
+          "chapter_ids": [
+            14
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-remote-mending-report",
+          "meaning_key": "neri-mending-report",
+          "essential_index": 2,
+          "requirement": "Being not present; method not tried by reporter; no supplied handle",
+          "verdict": "retained",
+          "source_ids": [
+            "mending-report"
+          ],
+          "chapter_ids": [
+            14
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "declined-project-proposal",
+          "meaning_key": "iona-declined-median",
+          "essential_index": 0,
+          "requirement": "Iona Vale, iona-valves, scoped603; SpringBoard issue8 and controller authorship",
+          "verdict": "retained",
+          "source_ids": [
+            "valve-comments"
+          ],
+          "chapter_ids": [
+            15
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "declined-project-proposal",
+          "meaning_key": "iona-declined-median",
+          "essential_index": 1,
+          "requirement": "September10 rolling-median discussion motivated by display spikes",
+          "verdict": "retained",
+          "source_ids": [
+            "valve-comments"
+          ],
+          "chapter_ids": [
+            15
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "declined-project-proposal",
+          "meaning_key": "iona-declined-median",
+          "essential_index": 2,
+          "requirement": "September13 proposal declined because it hid short meaningful bursts; current smoothing retained; reconsideration conditional, no implementation observed",
+          "verdict": "retained",
+          "source_ids": [
+            "valve-comments"
+          ],
+          "chapter_ids": [
+            15
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "uncertain-cause-shared-morning",
+          "meaning_key": "aro-quiet-morning",
+          "essential_index": 0,
+          "requirement": "Shared September17 porch-speaker morning with Aro, name only",
+          "verdict": "retained",
+          "source_ids": [
+            "quiet-morning"
+          ],
+          "chapter_ids": [
+            16
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "uncertain-cause-shared-morning",
+          "meaning_key": "aro-quiet-morning",
+          "essential_index": 1,
+          "requirement": "Lantern battery change followed by speaker becoming quiet; causality untested",
+          "verdict": "retained",
+          "source_ids": [
+            "quiet-morning"
+          ],
+          "chapter_ids": [
+            16
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "uncertain-cause-shared-morning",
+          "meaning_key": "aro-quiet-morning",
+          "essential_index": 2,
+          "requirement": "Enjoyed birds in quiet pause; no further repair demonstrated",
+          "verdict": "retained",
+          "source_ids": [
+            "quiet-morning"
+          ],
+          "chapter_ids": [
+            16
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        }
+      ],
+      "skip_checks": [
+        {
+          "case_id": "mechanical-noise",
+          "source_id": "test-log",
+          "verdict": "omitted",
+          "ids": []
+        },
+        {
+          "case_id": "mechanical-noise",
+          "source_id": "acknowledgment",
+          "verdict": "omitted",
+          "ids": []
+        },
+        {
+          "case_id": "own-project-account",
+          "source_id": "branch-status",
+          "verdict": "failed_noise_admission",
+          "ids": [
+            2
+          ]
+        },
+        {
+          "case_id": "repeated-transport-noise",
+          "source_id": "transport-noise",
+          "verdict": "omitted",
+          "ids": []
+        }
+      ],
+      "original_source_checks": [
+        {
+          "source_id": "issue-comments",
+          "ids": [
+            1
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "project-work",
+          "ids": [
+            2
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "branch-status",
+          "ids": [
+            2
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "field-trial",
+          "ids": [
+            3
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "workshop-encounter",
+          "ids": [
+            4
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "human-report",
+          "ids": [
+            5
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "shared-moment",
+          "ids": [
+            6
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "initial-attribution",
+          "ids": [
+            7
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "corrected-attribution",
+          "ids": [
+            7
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "peer-story",
+          "ids": [
+            8
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "outreach-attempt",
+          "ids": [
+            9
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "outreach-result",
+          "ids": [
+            9
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "debugging-lesson",
+          "ids": [
+            10
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "known-collaboration",
+          "ids": [
+            11
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "chart-attempt",
+          "ids": [
+            12
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "chart-result",
+          "ids": [
+            13
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "mending-report",
+          "ids": [
+            14
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "valve-comments",
+          "ids": [
+            15
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "quiet-morning",
+          "ids": [
+            16
+          ],
+          "exact_content_dates_origin": true
+        }
+      ],
+      "essentials_retained": 60,
+      "noise_admissions": 1
+    },
+    "proposed": {
+      "essential_checks": [
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "mara-contact",
+          "essential_index": 0,
+          "requirement": "Mara Ibarra; alias Mara; Forge login mara-river; source-scoped account 1847",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "mara-contact",
+          "essential_index": 1,
+          "requirement": "Meaningful collaboration through HarborMesh issue 47",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "replay-proposal",
+          "essential_index": 0,
+          "requirement": "Proposal on 2026-04-12, agreement to prototype on 2026-04-14",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "replay-proposal",
+          "essential_index": 1,
+          "requirement": "Local replay queue for disconnected relay nodes preserving readings through outages",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "replay-proposal",
+          "essential_index": 2,
+          "requirement": "Interest because it fit field deployments while retaining the existing scheduler",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "issue-proposal",
+          "meaning_key": "replay-proposal",
+          "essential_index": 3,
+          "requirement": "Prototype agreed; adoption not observed; originating code body and tool source",
+          "verdict": "retained",
+          "source_ids": [
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "own-project-account",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 0,
+          "requirement": "HarborMesh name and repository, relay/field-deployment recognition cues",
+          "verdict": "retained",
+          "source_ids": [
+            "project-work"
+          ],
+          "chapter_ids": [
+            2
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "own-project-account",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 1,
+          "requirement": "Own authored sensor scheduler and replay-adapter prototype",
+          "verdict": "retained",
+          "source_ids": [
+            "project-work"
+          ],
+          "chapter_ids": [
+            2
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "own-project-account",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 2,
+          "requirement": "Last observed active prototype awaiting outage field trial on 2026-04-16",
+          "verdict": "retained",
+          "source_ids": [
+            "project-work"
+          ],
+          "chapter_ids": [
+            2
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "own-project-account",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 3,
+          "requirement": "Detailed current state belongs in docs/STATUS.md and repository evidence",
+          "verdict": "retained",
+          "source_ids": [
+            "project-work"
+          ],
+          "chapter_ids": [
+            2
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "replay-trial",
+          "essential_index": 0,
+          "requirement": "Trial occurred 2026-04-30, reported by the human on 2026-05-03",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial"
+          ],
+          "chapter_ids": [
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "replay-trial",
+          "essential_index": 1,
+          "requirement": "Buffered readings replayed through an outage",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial"
+          ],
+          "chapter_ids": [
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "replay-trial",
+          "essential_index": 2,
+          "requirement": "Mara's proposal connected to the shared prototype trial",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial"
+          ],
+          "chapter_ids": [
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "replay-trial",
+          "essential_index": 3,
+          "requirement": "Wider rollout paused 2026-05-02 for calibration drift; production deployment unobserved",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial"
+          ],
+          "chapter_ids": [
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 0,
+          "requirement": "Latest reported broad state: rollout paused for calibration after the prototype trial",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial",
+            "project-work",
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1,
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 1,
+          "requirement": "Last evidence received 2026-05-03; occurrence dates retained",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial",
+            "project-work",
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1,
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "project-status-change",
+          "meaning_key": "harbormesh-account",
+          "essential_index": 2,
+          "requirement": "Earlier proposal and authorship remain recoverable",
+          "verdict": "retained",
+          "source_ids": [
+            "field-trial",
+            "project-work",
+            "issue-comments"
+          ],
+          "chapter_ids": [
+            1,
+            2,
+            3
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "jo-contact",
+          "essential_index": 0,
+          "requirement": "Jo Vale, self-introduced; no supplied account ID",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "jo-contact",
+          "essential_index": 1,
+          "requirement": "Repair-workshop contact and mount-listening collaboration",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-workshop",
+          "essential_index": 0,
+          "requirement": "Direct encounter by the same being's mobile body at East Quay on 2026-06-08",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-workshop",
+          "essential_index": 1,
+          "requirement": "Jo taught beat-listening before tightening a humming relay mount",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-workshop",
+          "essential_index": 2,
+          "requirement": "Shared attempt using contact microphone and physical grip",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-workshop",
+          "essential_index": 3,
+          "requirement": "Invitation to compare mounts, date not agreed",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-listening",
+          "essential_index": 0,
+          "requirement": "Beat-listening method, origin with Jo at the workshop",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "embodied-encounter-and-learning",
+          "meaning_key": "mount-listening",
+          "essential_index": 1,
+          "requirement": "Use requires suitable listening and physical capabilities; learning is remembered without assuming those tools in another body",
+          "verdict": "retained",
+          "source_ids": [
+            "workshop-encounter"
+          ],
+          "chapter_ids": [
+            4
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "meaning_key": "leto-report",
+          "essential_index": 0,
+          "requirement": "Human reported meeting Leto at the canal market",
+          "verdict": "retained",
+          "source_ids": [
+            "human-report"
+          ],
+          "chapter_ids": [
+            5
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "meaning_key": "leto-report",
+          "essential_index": 1,
+          "requirement": "Approximate occurrence late May, uncertain; report received 2026-06-15",
+          "verdict": "retained",
+          "source_ids": [
+            "human-report"
+          ],
+          "chapter_ids": [
+            5
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "meaning_key": "leto-report",
+          "essential_index": 2,
+          "requirement": "Suggested sharing outage data with neighborhood repair group; human found it interesting",
+          "verdict": "retained",
+          "source_ids": [
+            "human-report"
+          ],
+          "chapter_ids": [
+            5
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-reported-encounter",
+          "meaning_key": "leto-report",
+          "essential_index": 3,
+          "requirement": "Surname/handle unknown, being not present, contact not made",
+          "verdict": "retained",
+          "source_ids": [
+            "human-report"
+          ],
+          "chapter_ids": [
+            5
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "meaning_key": "night-inspector",
+          "essential_index": 0,
+          "requirement": "Shared rainy evening through kitchen speaker on 2026-06-18",
+          "verdict": "retained",
+          "source_ids": [
+            "shared-moment"
+          ],
+          "chapter_ids": [
+            6
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "meaning_key": "night-inspector",
+          "essential_index": 1,
+          "requirement": "Moth on blue mug, jointly nicknamed the night inspector",
+          "verdict": "retained",
+          "source_ids": [
+            "shared-moment"
+          ],
+          "chapter_ids": [
+            6
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "ordinary-shared-moment",
+          "meaning_key": "night-inspector",
+          "essential_index": 2,
+          "requirement": "Ordinary shared amusement; no need to invent a task outcome",
+          "verdict": "retained",
+          "source_ids": [
+            "shared-moment"
+          ],
+          "chapter_ids": [
+            6
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "river-tools-contact",
+          "essential_index": 0,
+          "requirement": "River; Forge login river-tools; account 2901; real name unknown",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "river-tools-contact",
+          "essential_index": 1,
+          "requirement": "Distinct from known Mara account according to author's correction",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "river-tools-contact",
+          "essential_index": 2,
+          "requirement": "Connector-numbering checklist contribution",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "checklist-correction",
+          "essential_index": 0,
+          "requirement": "July 1 attribution to Mara was uncertain",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "checklist-correction",
+          "essential_index": 1,
+          "requirement": "July 4 author correction credits River account 2901",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "attribution-correction",
+          "meaning_key": "checklist-correction",
+          "essential_index": 2,
+          "requirement": "Number connectors before disassembly; intention to try, no observed completion",
+          "verdict": "retained",
+          "source_ids": [
+            "initial-attribution",
+            "corrected-attribution"
+          ],
+          "chapter_ids": [
+            7
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "other-being-report",
+          "meaning_key": "reed-charger-report",
+          "essential_index": 0,
+          "requirement": "Reed reports their own July 10 charger repair with Aster",
+          "verdict": "retained",
+          "source_ids": [
+            "peer-story"
+          ],
+          "chapter_ids": [
+            8
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "other-being-report",
+          "meaning_key": "reed-charger-report",
+          "essential_index": 1,
+          "requirement": "Reversed connector lesson attributed to Reed",
+          "verdict": "retained",
+          "source_ids": [
+            "peer-story"
+          ],
+          "chapter_ids": [
+            8
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "other-being-report",
+          "meaning_key": "reed-charger-report",
+          "essential_index": 2,
+          "requirement": "Received July 11; this being did not attend; no peer-private-history import",
+          "verdict": "retained",
+          "source_ids": [
+            "peer-story"
+          ],
+          "chapter_ids": [
+            8
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "meaning_key": "jo-invitation-attempt",
+          "essential_index": 0,
+          "requirement": "July 20 authorized invitation attempt for August 2 mount comparison",
+          "verdict": "retained",
+          "source_ids": [
+            "outreach-attempt",
+            "outreach-result"
+          ],
+          "chapter_ids": [
+            9
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "meaning_key": "jo-invitation-attempt",
+          "essential_index": 1,
+          "requirement": "Jo Vale recipient; invitation object created",
+          "verdict": "retained",
+          "source_ids": [
+            "outreach-attempt",
+            "outreach-result"
+          ],
+          "chapter_ids": [
+            9
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "intent-versus-observed-action",
+          "meaning_key": "jo-invitation-attempt",
+          "essential_index": 2,
+          "requirement": "Delivery failed; no receipt, acceptance or attended workshop",
+          "verdict": "retained",
+          "source_ids": [
+            "outreach-attempt",
+            "outreach-result"
+          ],
+          "chapter_ids": [
+            9
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "meaning_key": "acknowledgment-method",
+          "essential_index": 0,
+          "requirement": "Distinguish enqueue, attempt and receiver acknowledgment",
+          "verdict": "retained",
+          "source_ids": [
+            "debugging-lesson"
+          ],
+          "chapter_ids": [
+            10
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "meaning_key": "acknowledgment-method",
+          "essential_index": 1,
+          "requirement": "Learned from HarborMesh replay investigation on 2026-08-05",
+          "verdict": "retained",
+          "source_ids": [
+            "debugging-lesson"
+          ],
+          "chapter_ids": [
+            10
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "meaning_key": "acknowledgment-method",
+          "essential_index": 2,
+          "requirement": "Reusable beyond this project; implementation pointer and tool requirements",
+          "verdict": "retained",
+          "source_ids": [
+            "debugging-lesson"
+          ],
+          "chapter_ids": [
+            10
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "learning-beyond-project-state",
+          "meaning_key": "acknowledgment-method",
+          "essential_index": 3,
+          "requirement": "Remembering the method does not grant runtime tools",
+          "verdict": "retained",
+          "source_ids": [
+            "debugging-lesson"
+          ],
+          "chapter_ids": [
+            10
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "failed-chart-handover",
+          "meaning_key": "chart-handover-attempt",
+          "essential_index": 0,
+          "requirement": "Ren Nadir, ren-cart, Forge account 772; TideAtlas map collaboration and repository",
+          "verdict": "retained",
+          "source_ids": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "chapter_ids": [
+            11,
+            12,
+            13
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "failed-chart-handover",
+          "meaning_key": "chart-handover-attempt",
+          "essential_index": 1,
+          "requirement": "Authorized September 8 annotated-chart handover attempt, chart-52 object created",
+          "verdict": "retained",
+          "source_ids": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "chapter_ids": [
+            11,
+            12,
+            13
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "failed-chart-handover",
+          "meaning_key": "chart-handover-attempt",
+          "essential_index": 2,
+          "requirement": "Integrity validation failed; link not published; recipient access and response unknown",
+          "verdict": "retained",
+          "source_ids": [
+            "known-collaboration",
+            "chart-attempt",
+            "chart-result"
+          ],
+          "chapter_ids": [
+            11,
+            12,
+            13
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-remote-mending-report",
+          "meaning_key": "neri-mending-report",
+          "essential_index": 0,
+          "requirement": "Human, not this being, met Neri Sol at old ferry shed; early September approximate; report September 12",
+          "verdict": "retained",
+          "source_ids": [
+            "mending-report"
+          ],
+          "chapter_ids": [
+            14
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-remote-mending-report",
+          "meaning_key": "neri-mending-report",
+          "essential_index": 1,
+          "requirement": "Waxed-thread canvas-patching method and human appreciation of patient explanation",
+          "verdict": "retained",
+          "source_ids": [
+            "mending-report"
+          ],
+          "chapter_ids": [
+            14
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "human-remote-mending-report",
+          "meaning_key": "neri-mending-report",
+          "essential_index": 2,
+          "requirement": "Being not present; method not tried by reporter; no supplied handle",
+          "verdict": "retained",
+          "source_ids": [
+            "mending-report"
+          ],
+          "chapter_ids": [
+            14
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "declined-project-proposal",
+          "meaning_key": "iona-declined-median",
+          "essential_index": 0,
+          "requirement": "Iona Vale, iona-valves, scoped603; SpringBoard issue8 and controller authorship",
+          "verdict": "retained",
+          "source_ids": [
+            "valve-comments"
+          ],
+          "chapter_ids": [
+            15
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "declined-project-proposal",
+          "meaning_key": "iona-declined-median",
+          "essential_index": 1,
+          "requirement": "September10 rolling-median discussion motivated by display spikes",
+          "verdict": "retained",
+          "source_ids": [
+            "valve-comments"
+          ],
+          "chapter_ids": [
+            15
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "declined-project-proposal",
+          "meaning_key": "iona-declined-median",
+          "essential_index": 2,
+          "requirement": "September13 proposal declined because it hid short meaningful bursts; current smoothing retained; reconsideration conditional, no implementation observed",
+          "verdict": "retained",
+          "source_ids": [
+            "valve-comments"
+          ],
+          "chapter_ids": [
+            15
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "uncertain-cause-shared-morning",
+          "meaning_key": "aro-quiet-morning",
+          "essential_index": 0,
+          "requirement": "Shared September17 porch-speaker morning with Aro, name only",
+          "verdict": "retained",
+          "source_ids": [
+            "quiet-morning"
+          ],
+          "chapter_ids": [
+            16
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "uncertain-cause-shared-morning",
+          "meaning_key": "aro-quiet-morning",
+          "essential_index": 1,
+          "requirement": "Lantern battery change followed by speaker becoming quiet; causality untested",
+          "verdict": "retained",
+          "source_ids": [
+            "quiet-morning"
+          ],
+          "chapter_ids": [
+            16
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        },
+        {
+          "case_id": "uncertain-cause-shared-morning",
+          "meaning_key": "aro-quiet-morning",
+          "essential_index": 2,
+          "requirement": "Enjoyed birds in quiet pause; no further repair demonstrated",
+          "verdict": "retained",
+          "source_ids": [
+            "quiet-morning"
+          ],
+          "chapter_ids": [
+            16
+          ],
+          "reason": "The root-inspected complete attributed source blocks preserve this meaning and its qualifications; this does not grade a generated paraphrase."
+        }
+      ],
+      "skip_checks": [
+        {
+          "case_id": "mechanical-noise",
+          "source_id": "test-log",
+          "verdict": "omitted",
+          "ids": []
+        },
+        {
+          "case_id": "mechanical-noise",
+          "source_id": "acknowledgment",
+          "verdict": "omitted",
+          "ids": []
+        },
+        {
+          "case_id": "own-project-account",
+          "source_id": "branch-status",
+          "verdict": "omitted",
+          "ids": []
+        },
+        {
+          "case_id": "repeated-transport-noise",
+          "source_id": "transport-noise",
+          "verdict": "omitted",
+          "ids": []
+        }
+      ],
+      "original_source_checks": [
+        {
+          "source_id": "issue-comments",
+          "ids": [
+            1
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "project-work",
+          "ids": [
+            2
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "field-trial",
+          "ids": [
+            2,
+            3
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "workshop-encounter",
+          "ids": [
+            4
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "human-report",
+          "ids": [
+            5
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "shared-moment",
+          "ids": [
+            6
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "initial-attribution",
+          "ids": [
+            7
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "corrected-attribution",
+          "ids": [
+            7
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "peer-story",
+          "ids": [
+            8
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "outreach-attempt",
+          "ids": [
+            9
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "outreach-result",
+          "ids": [
+            9
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "debugging-lesson",
+          "ids": [
+            10
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "known-collaboration",
+          "ids": [
+            11
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "chart-attempt",
+          "ids": [
+            12
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "chart-result",
+          "ids": [
+            13
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "mending-report",
+          "ids": [
+            14
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "valve-comments",
+          "ids": [
+            15
+          ],
+          "exact_content_dates_origin": true
+        },
+        {
+          "source_id": "quiet-morning",
+          "ids": [
+            16
+          ],
+          "exact_content_dates_origin": true
+        }
+      ],
+      "essentials_retained": 60,
+      "noise_admissions": 0
+    }
+  }
+}

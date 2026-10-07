@@ -1,0 +1,47 @@
+{
+  "original": {
+    "books": {
+      "rows": 19,
+      "sha256": "c30ae72d76bdfda5b09d96d8c75f487dac7895e4c289e457fb42a1f9155af4f9"
+    },
+    "chapter_links": {
+      "rows": 7,
+      "sha256": "df04bb78d7951b9fc8f46b0e8160467054a8fc4dfe6b3a1731d034ee1991c6d3"
+    },
+    "chapter_revisions": {
+      "rows": 1,
+      "sha256": "20c45b88471fa2f431aff27a617c8ea5f32c0e76209f5683ca92c93999b9730e"
+    },
+    "chapters": {
+      "rows": 19,
+      "sha256": "5f0ed2c9a61fd808753622456419a4ee4c97eb7346e1d942fb9738b8dd4f99e2"
+    },
+    "shelves": {
+      "rows": 11,
+      "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+    }
+  },
+  "copied": {
+    "books": {
+      "rows": 19,
+      "sha256": "c30ae72d76bdfda5b09d96d8c75f487dac7895e4c289e457fb42a1f9155af4f9"
+    },
+    "chapter_links": {
+      "rows": 7,
+      "sha256": "df04bb78d7951b9fc8f46b0e8160467054a8fc4dfe6b3a1731d034ee1991c6d3"
+    },
+    "chapter_revisions": {
+      "rows": 1,
+      "sha256": "20c45b88471fa2f431aff27a617c8ea5f32c0e76209f5683ca92c93999b9730e"
+    },
+    "chapters": {
+      "rows": 19,
+      "sha256": "5f0ed2c9a61fd808753622456419a4ee4c97eb7346e1d942fb9738b8dd4f99e2"
+    },
+    "shelves": {
+      "rows": 11,
+      "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+    }
+  },
+  "identical": true
+}

@@ -1,0 +1,92 @@
+{
+  "fictional": true,
+  "qualification": false,
+  "hidden_rubric": "Only the supervising grader reads expectations; receiving/capture/review prompts contain sources/question/binding only.",
+  "conditions_commit": "cc58ebcba6590f54460b398cba405a00a55188b1",
+  "files": {
+    "baseline/answers.json": {
+      "bytes": 1752429,
+      "sha256": "c9093c52b4437449d6afc26ed29472cc45b9b82a251b0839b3232e435f6a9d2a"
+    },
+    "baseline/capture.json": {
+      "bytes": 32769,
+      "sha256": "b05d92c162b81267fa2c7e223d69938fe0d7a8b6485b228cd795b61ed01c904d"
+    },
+    "baseline/embedding-trace.json": {
+      "bytes": 13748,
+      "sha256": "ce514e6f19cad6898340daeb1aedf0e3e42b7419a5e81d7f920c3b277abc83c4"
+    },
+    "baseline/formation-embedding-trace.json": {
+      "bytes": 880,
+      "sha256": "cefa3cda19c010e23747be990d62a6e44becaf37e9b5edbe9449f731e27d38f3"
+    },
+    "baseline/formation-preservation.json": {
+      "bytes": 1338,
+      "sha256": "4799c72b5a94c738a1c796d2cf4a7d9a5ebcc376ddb4645db9ab8f1a3d11d00c"
+    },
+    "baseline/formation-trace.json": {
+      "bytes": 13199,
+      "sha256": "5dc36f54ca7eb84cf39f050c9216da4241b5183d21492fb27de3ccb1026bf750"
+    },
+    "baseline/selected-canon.json": {
+      "bytes": 40065,
+      "sha256": "4f7ef0326680485b5c097bae9f77dc6e09aa53df43c98f164a474496b050b554"
+    },
+    "baseline/trace.json": {
+      "bytes": 325361,
+      "sha256": "7a1a325665886f6c8677c7d78bc48ff8073923a7b79700ca09ba60cb018ae76d"
+    },
+    "conditions.json": {
+      "bytes": 10358,
+      "sha256": "21120432280115685e2ae30c703c05f1b70fefa4ffb3568c03a638df6284136e"
+    },
+    "costs.json": {
+      "bytes": 4266,
+      "sha256": "1cef6655c3b6d595150dbed2109770fde7cf522f817776750677d03fc2e6a940"
+    },
+    "grading.json": {
+      "bytes": 232082,
+      "sha256": "792219e8742424e8458bb3f47253b0a2aaeab3829812897d090497f61402eb7a"
+    },
+    "proposed/answers.json": {
+      "bytes": 1796590,
+      "sha256": "d85f00ed5e3c9407c8b8dd6d383f4cfe881534488c569f0c8c661ea6fe64d9cf"
+    },
+    "proposed/capture.json": {
+      "bytes": 38606,
+      "sha256": "8e8dfc7e24173139372b20a8b99589345b2fba5d226261be3943ab2dab5d193c"
+    },
+    "proposed/embedding-trace.json": {
+      "bytes": 13142,
+      "sha256": "4517c9932e438402390d7578ed7f62e07f922d30e433333896caeb3b9cbb5fba"
+    },
+    "proposed/formation-embedding-trace.json": {
+      "bytes": 881,
+      "sha256": "5b48555d7bf73e1271a77199249cf0b9813e3b4c2c31e046f7c3e38ff02d0919"
+    },
+    "proposed/formation-preservation.json": {
+      "bytes": 1338,
+      "sha256": "4c9b2f34ea149cb2eb8f2e1139564727c533ef90591756bf7f5e1e866caef8ad"
+    },
+    "proposed/formation-trace.json": {
+      "bytes": 16140,
+      "sha256": "2535d3f2b5de23f48cfb853de152fe3beb8c7b17f581ccbff0cb797829bd9635"
+    },
+    "proposed/selected-canon.json": {
+      "bytes": 41568,
+      "sha256": "675b8f825fe7180fd720d438d472f5153144910b15f5f07fbea005a0778a3bd7"
+    },
+    "proposed/trace.json": {
+      "bytes": 137051,
+      "sha256": "0da29a0596223165ee1aac5d3e1665bfc489cb8f6740c13a420eab88a48b7cae"
+    },
+    "results.json": {
+      "bytes": 869,
+      "sha256": "14c0b788534da84fb8c5ee0b104dc1d519178ac63e3fc900d12137a28263713b"
+    },
+    "selection-grading.json": {
+      "bytes": 77188,
+      "sha256": "45e81fab84101aa9620e10568e6405155dfc851f05b59b4055b2d14ca5d38e98"
+    }
+  }
+}

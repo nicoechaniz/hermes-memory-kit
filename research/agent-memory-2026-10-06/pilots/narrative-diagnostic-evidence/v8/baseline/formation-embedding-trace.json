@@ -1,0 +1,38 @@
+[
+  {
+    "provider": "nvidia",
+    "input_type": "passage",
+    "texts": 8,
+    "input_characters": 8774,
+    "model": "nvidia/nemotron-3-embed-1b",
+    "output_dimensionality": null,
+    "state": "completed",
+    "usage": null,
+    "phase": "indexing",
+    "seconds": 0.5052810022607446
+  },
+  {
+    "provider": "nvidia",
+    "input_type": "passage",
+    "texts": 8,
+    "input_characters": 7450,
+    "model": "nvidia/nemotron-3-embed-1b",
+    "output_dimensionality": null,
+    "state": "completed",
+    "usage": null,
+    "phase": "indexing",
+    "seconds": 0.5405909400433302
+  },
+  {
+    "provider": "nvidia",
+    "input_type": "passage",
+    "texts": 3,
+    "input_characters": 1101,
+    "model": "nvidia/nemotron-3-embed-1b",
+    "output_dimensionality": null,
+    "state": "completed",
+    "usage": null,
+    "phase": "indexing",
+    "seconds": 0.17341928649693727
+  }
+]

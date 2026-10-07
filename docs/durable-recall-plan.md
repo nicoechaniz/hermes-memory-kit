@@ -93,6 +93,12 @@ The [natural recall procedure](narrative-recall-pilot.md) preserves failed
 diagnostics separately from qualification. Stage 2 can reuse the shipped finite
 capture/consolidation APIs, including per-account support sets and transitive
 source currency; passing their unit tests does not satisfy stage-two exit criteria.
+The [completed atomic-review diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-narrative-atomic-diagnostic.md)
+preserves both 22-question arms, outside claim/requirement grading and separated
+costs. It failed: copied source words can change the speaker, while faithful
+paraphrases can be wrongly rejected. Its exact continuation is unfinished-phase
+resumption followed by a comparable stronger receiving-model trial, with
+formation and receiving configuration separated. No stage-two pass is claimed.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

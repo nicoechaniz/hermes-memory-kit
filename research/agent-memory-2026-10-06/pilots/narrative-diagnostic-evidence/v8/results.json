@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "baseline",
+    "selected_count": 16,
+    "questions": 22,
+    "llm_calls": 101,
+    "schema": "hmk-synthetic-model-pilot/v2",
+    "source_loss": true,
+    "retrieval_clock": 2106956370,
+    "embedding_config": {
+      "provider": "nvidia",
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null
+    },
+    "rejected_narratives": 17,
+    "all_retrieval_statuses": [
+      "ok"
+    ]
+  },
+  {
+    "variant": "proposed",
+    "selected_count": 16,
+    "questions": 22,
+    "llm_calls": 101,
+    "schema": "hmk-synthetic-model-pilot/v2",
+    "source_loss": true,
+    "retrieval_clock": 2106956468,
+    "embedding_config": {
+      "provider": "nvidia",
+      "model": "nvidia/nemotron-3-embed-1b",
+      "output_dimensionality": null
+    },
+    "rejected_narratives": 16,
+    "all_retrieval_statuses": [
+      "ok"
+    ]
+  }
+]
