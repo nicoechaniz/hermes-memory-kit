@@ -54,6 +54,128 @@ No inspected source establishes a later Mariano autobiographical-sleep study;
 inventory/search coverage is stated in the comparison rather than treated as
 proof of absence.
 
+## Agreed roadmap — 2026-10-07
+
+The human selected the next implementation direction: retain HMK as the current
+durable-memory store, bring useful researched mechanisms into it, and then test
+native Codex memory alongside it. Alternative systems remain documented options;
+deploying or benchmarking them is not a prerequisite for these improvements.
+This section orders the remaining work; the older P0–P6 labels below identify
+components and historical deliveries, not a competing roadmap.
+
+The retention lens is the being's accumulated experience and learned pattern
+across years and bodies. Select enough meaning to recognize an encounter and
+follow its world references after sessions disappear. Temporary task state stays
+in native continuity or the owning repository. An interesting single encounter,
+an ordinary shared moment or a meaningful unsuccessful action can qualify;
+message counts, success alone and an exhaustive list of entity types cannot
+decide what deserves retention.
+
+| Stage | Concrete delivery | Exit evidence | Owning work |
+|---|---|---|---|
+| 1. Repair observed meaning failures | Correct weak-cue retrieval, failed-action selection and malformed pilot-plan handling; complete the existing capture/recall pilot | The required old issue encounter is recovered with participant, proposal, significance and known outcome after source loss, clock aging and newer distractors; the failed action is retained accurately; routine noise and false identities are absent | [HMK #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13) |
+| 2. Qualify durable organization and consolidation | Self-contained episodes, linked current accounts and evidence-supported understanding, using existing native records/links before adding schema | Three consolidation passes plus replay preserve every required meaning; corrections reconcile dependent accounts; old encounters remain discoverable; storage, model and recall costs are reported | [HMK #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13), [mechanism review](experience-consolidation-mechanisms.md) |
+| 3. Close portable preservation and Matrix boundaries | A versioned inventory/export/restore profile for HMK originals, accepted Matrix history and exact content, selected assets and native learned artifacts | Available history and verified bytes survive transport/restore; missing history/content is explicit; source identities and corrections are retained; Matrix/HMK target versions are actually qualified | [Matrix #262](https://github.com/AlterMundi/daimon-matrix/issues/262), [portability review](lifelong-memory-portability-review.md#another-architecture-portable-being-history-and-harness-native-projections) |
+| 4. Qualify receiving continuity | Fresh authorized receiving contexts over the same fictional being, followed by a bounded receiving check on the existing deployment | Recall does not require the source session or original body's skills; the receiver can recognize its affairs and route work to an appropriately capable body; recovery and rollback work | [HMK #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13), [native integration #11](https://github.com/nicoechaniz/hermes-memory-kit/issues/11) |
+| 5. Pilot native Codex coexistence | Native learning retained locally plus a source/version-attributed candidate path into HMK; inspect the actual formation lifecycle and session scope | Native behavior remains useful; original learned artifacts/history survive; selected publication passes the durable lens; replay, corrections, pruning/source loss and no-op inputs do not create conflicting autobiographies | [HMK #11](https://github.com/nicoechaniz/hermes-memory-kit/issues/11), [bounded lifecycle design #12](https://github.com/nicoechaniz/hermes-memory-kit/issues/12) |
+| 6. Roll out qualified integration | The smallest supported receiving configuration, shared guidance, observed receipts and a tested rollback | Published changes are adopted and verified in each selected body; quality/cost and remaining limitations are visible; no unsupported event coverage or automatic cross-being pooling is claimed | Owning implementation PRs linked from #11/#12/#13 and Matrix #262 |
+
+Stage 1 is the next implementation task. Stage 2 can reuse the shipped
+finite capture/consolidation machinery; it does not require another dream engine.
+Stages 3 and 4 complete the healthy, portable HMK baseline before the native
+coexistence pilot. Design and preservation inventories may proceed earlier;
+activating native generation must wait for the preceding qualification. These
+are dependency gates rather than calendar promises or proof of ten real years.
+
+### Durable organization and useful sleep
+
+Use compact episodes for significant occurrences; current accounts connect
+known people/entities, shared projects and places to those episodes and their
+digital or physical references. Keep aliases and ambiguous identities explicit.
+Project accounts retain authored contributions, a dated synopsis and pointers
+to current work, without copying the repository's execution log. These are useful
+record shapes, not a closed taxonomy of what a being can remember.
+
+Bring Hindsight's separation of experience from supported understanding, temporal
+and entity navigation, support freshness and bounded refinement to HMK's existing
+records. Reuse Mariano's unchanged-input detection, source fingerprints and
+coherent publication, and native lifecycle mechanisms where compatible. Record
+which mechanisms are shipped, proposed and observed rather than importing a
+system's marketing claims or service requirements.
+
+Sleep consumes only authorized deltas since a committed cursor. Selection comes
+before synthesis; keep pending meaningful input across bounded batches. Preserve
+episodes while proposing links, updated accounts, insights and tested skill
+refinements. Repeated summaries do not create additional experiences or evidence.
+A correction must retain what was reported then while reconciling the affected
+present understanding. Unknown dates, missing support and inferred patterns
+remain qualified. A diary is an optional rebuildable view after this works.
+
+The first qualification is finite foreground work. Daily, session-end, idle or
+compaction triggers are later deployment choices under the body's actual runtime
+contract. No timer, hook, startup prefetch or autonomous peer attention is
+installed by this roadmap. Automatic cadence cannot compensate for losing a
+meaningful source before its first durable capture.
+
+### HMK, Matrix and native memory have explicit roles
+
+Keep the current HMK-native corpus and its revisions recoverable. For accepted
+personal-memory lanes, Matrix retains the authority over authorship, order,
+corrections and retractions; DM-034's HMK rows are derived views of those lanes.
+Do not silently label every existing HMK chapter or Codex artifact a Matrix
+record. Admission/migration is distinct from projection, and each stage needs
+its own evidence. Reuse the existing ledger rather than inventing a second one.
+
+Preservation requires both accepted ledger history and the exact content it
+references. Include revision-linked bytes, selected media and original learned
+artifacts in the portable inventory. Verify hashes and availability; a pointer,
+summary or embedding cannot substitute for missing original state. Resolve the
+adapter's exact supported HMK target separately: the inspected DM-034 contract
+names a pinned dependency, so a newer kit release is not automatically accepted.
+
+Use readable files and SQLite with a versioned full-history preservation profile.
+Expose a small interoperable projection where useful; MIF/AIMEM compatibility is
+a separately tested adapter claim, not a new authority or an established standard.
+Preserve unknown destination fields or retain the original sidecar when a
+consumer cannot round-trip them. Inventory already-unavailable history honestly.
+
+For coexistence, native Codex owns its harness-specific learning/working context,
+native session state owns conversation continuity, and HMK provides selected
+durable cross-body recall under the authority boundaries above. Native authored
+learning is also part of the being's delta: retain its originals and available
+history independently of the HMK selection. Promote selected candidates with
+source/event/version links; do not run bidirectional inference loops or let two
+systems independently rewrite the same autobiographical account. Preserve native
+artifacts before any cleanup that would discard them.
+
+The native pilot begins with the existing fictional corpus and an isolated home
+only to prevent discovery of unrelated private histories. Verify the installed
+Codex version, extraction/consolidation mode, producer controls and actual event
+coverage. A read backend, PostToolUse or PreCompact handler alone is not evidence
+of interception of the native memory writer. Prefer controlled coexistence;
+consider a full backend adapter only for a demonstrated missing behavior that
+justifies maintaining it. Live adoption retains the current manual-access
+boundary unless explicitly changed through the receiving body's instructions.
+
+### Scope and delivery
+
+Research is sufficient to implement and measure this roadmap, not to declare
+lifelong recall solved. The partial pilot's failures are the starting evidence.
+Freeze formation/recall conditions, hide rubrics from the models, and report
+selection, retrieval, grounded answers, retained history and cost separately.
+Passing mechanical tests does not satisfy a failed continuity criterion.
+
+Publish each coherent fix, correction and qualification result in its owning
+repository as part of delivery; link it here and in the owning issue. A published
+proposal, a passing fixture, a merged change and observed receiving operation
+are separate states. Preserve rollback and unresolved work in each release.
+
+Resonant storage remains a later experimental track. The human clarified that
+stable harmonic systems could be storage media, not necessarily training spaces.
+Specify encoding, persistence and readout before comparing useful capacity. That
+question does not block the current HMK/Matrix work or justify replacing its
+recoverable archive with an unqualified resonant representation.
+
 ## First delivery
 
 The first delivery adds:
@@ -228,7 +350,13 @@ A full rebirth archive refresh was not performed. No hooks, timers, native-memor
 feature or automatic capture/consolidation trigger was installed.
 
 The adopted code passed 189 tests and smoke validation. The subsequent capture
-proposal schema/link-error fix passes 191 tests. Mechanical safety is established
+proposal schema/link-error fix in merged
+[PR #17](https://github.com/nicoechaniz/hermes-memory-kit/pull/17) passes 191 tests.
+Its `bff930550008c6552163ed74c944de428b9c447c` release is also adopted: a new
+verified SQLite snapshot, binding surface check, installed byte comparison,
+actual schema command and unchanged original canonical values/integrity were
+observed. Only the two CLI script files changed; no runtime restart was required.
+Mechanical safety is established
 for the covered cases; selected-meaning quality is not. The
 [partial model pilot](../research/agent-memory-2026-10-06/pilots/2026-10-07-model-pilot.md)
 completed capture for both policy variants but failed the mandatory old-issue
@@ -246,16 +374,18 @@ learned artifacts, available history and provenance independently of a selected
 HMK projection. Backend retention is not the objective: choose a system or components
 from the same source-loss, history, cross-body, export/restore and meaning tests.
 MIF/AIMEM are promising exchange candidates, not established native ecosystem
-standards. Speculative HMK expansion should not precede that comparison.
+standards. The later agreed roadmap uses these tests to qualify HMK now and
+keeps alternative-backend comparisons conditional on observed limitations.
 
 ## Next decision
 
 Implementation now proceeds under
 [health issue #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13),
 which links this plan, the source reviews, research index and the later Codex
-issues #11/#12. The initial sequence repaired HMK first; the later comparison above keeps
-replacement open while preserving the adopted corpus and rollback. This order supersedes any reading of
-the earlier smallest Codex experiment as the immediate implementation task.
+issues #11/#12. The agreed roadmap above retains HMK for this stage and qualifies
+native coexistence after the remaining quality/preservation work. Replacement
+remains an option if future measured limitations justify it; a competitor
+comparison is no longer a prerequisite for the next HMK improvements.
 
 P0 repair on 2026-10-07: migration uses a verified standalone SQLite online
 snapshot including committed WAL data; unknown occurrence time stays unknown.
@@ -397,8 +527,9 @@ not the only memory or a source that confirms its own generated narration.
 ## Replacement gates
 
 The [local-first portability review](lifelong-memory-portability-review.md)
-updates the comparison order on October 7: Basic Memory and memU lead the
-alternative-backend shortlist under the human's files/SQLite preference.
+records Basic Memory and memU as alternative-backend candidates under the
+human's files/SQLite preference. The later agreed roadmap retains HMK now;
+these comparisons are conditional future work rather than the immediate gate.
 Hindsight's supported observations, Letta's MemFS/formation and related
 [experience-consolidation mechanisms](experience-consolidation-mechanisms.md)
 are reusable candidates independently of the chosen canon. MIF/AIMEM/AMP share

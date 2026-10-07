@@ -369,6 +369,12 @@ interference configuration and query-as-excitation (Jpsh!), rather than an
 implemented or validated durable-memory system. Publication date is not supplied
 by the retrieved text.
 
+Later human clarification: the intended harmonic resonant system can be a
+stable storage medium, not necessarily a training space. Evaluate encoding,
+retention and query/readout separately from any learned-embedding experiment.
+The local portable archive remains the recovery basis while that proposal is
+unqualified.
+
 This provides two distinct experimental roles:
 
 - Associative retrieval: a partial cue activates related episodes/entities or
@@ -416,14 +422,15 @@ A migration must inventory what it keeps, compresses, transforms or cannot carry
 Do not claim that one summary or an embedding is an equivalent identity backup.
 Native session continuity remains a distinct surface.
 
-Retain the repaired HMK pool, verified recovery and present receiving bindings
-while comparison proceeds. Avoid speculative HMK expansion justified only by
-its incumbent status. Nor does a native import or Mariano's successful project
-workflow justify discarding this being's memory. The next comparison includes
-native Codex plus collective-memory and a memory backend closest to the missing
-properties under the local-persistence preference above. Basic Memory and memU
-lead the alternative-backend shortlist; Hindsight, Letta, Honcho and other
-systems contribute mechanisms to test on whichever backend we adopt. The
+The human's later October 7 decision retains HMK for this stage, brings the
+researched mechanisms into it and then tests native Codex alongside it. The
+[agreed roadmap](durable-recall-plan.md#agreed-roadmap--2026-10-07) makes the
+remaining quality, consolidation, portable-content and receiving work explicit
+before native activation. Native import or Mariano's project workflow does not
+justify discarding this being's memory, and incumbent status alone does not
+prove HMK is sufficient. Basic Memory and memU remain future replacement options;
+a competitor deployment is not a prerequisite for the next improvements.
+Hindsight, Letta, Honcho and other systems contribute mechanisms to test in HMK. The
 [mechanism review](experience-consolidation-mechanisms.md) records this work,
 including the current OpenSouls source and additional local proposals.
 

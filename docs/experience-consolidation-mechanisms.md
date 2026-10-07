@@ -49,7 +49,9 @@ Preserve source-event identity and revision when testing any formation system.
 
 ## Bring mechanisms to the selected backend
 
-The following are proposals, not shipped behavior or a decision to retain HMK.
+The following are proposed mechanisms, not claims of shipped behavior. The
+human's later October 7 decision retains HMK for this stage and brings useful
+mechanisms into it under the [agreed roadmap](durable-recall-plan.md#agreed-roadmap--2026-10-07).
 HMK already has selected episodes, typed links, native revision pre-images and
 a finite consolidation manifest with exact episode versions. Build on those
 primitives before inventing another canonical event store.
