@@ -93,6 +93,18 @@ before using any new endpoint.
 
 ## Provisional configuration and decision procedure
 
+Current human selection: use direct DeepSeek Flash for HMK narration and as the
+next consolidation candidate, retaining the existing embeddings/retrieval space.
+This is provisional adoption of the working candidate, not a passed narrative
+or consolidation qualification. Complete the fictional contract and distinguish
+first-generation fidelity from reviewer/revision cost and full-pipeline behavior.
+Gemini/Qwen and further provider expansion are deferred. The later requested
+[Sol comparison](../research/agent-memory-2026-10-06/pilots/2026-10-07-flash-native-codex-comparison.md)
+uses OpenAI Codex directly, not Nous, over all 44 identical frozen packets.
+Both initial-answer configurations retain factual/coverage defects and have no
+matched qualified reviewed workflow. Previous Nous observations retain their
+actual route rather than transferring quality/price claims to Codex.
+
 The first configuration to **test**, not deploy as a claimed winner, is:
 
 - Hybrid lexical/vector retrieval, comparing Voyage 4 Large with Qwen 3.7 text

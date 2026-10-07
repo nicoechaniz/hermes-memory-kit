@@ -1,0 +1,16 @@
+{
+  "request_sha256": "58f059943bcfbdae2b7dc537a0547aec5bae9abea1e3d7e23ce1d0ae30d2fd9b",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/58f059943bcfbdae2b7dc537a0547aec5bae9abea1e3d7e23ce1d0ae30d2fd9b.json",
+  "usage": {
+    "prompt_tokens": 9499,
+    "completion_tokens": 443,
+    "total_tokens": 9942
+  },
+  "seconds": 27.111692806705832,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The person was Mara Ibarra, displayed as Mara, with login mara-river and account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Her comment c901 appeared in HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The source tool dated her proposal 2026-04-12; I received its report through my code body on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara proposed a local replay queue to preserve readings on disconnected relay nodes through outages without replacing the scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"My code body replied that it fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and my code body agreed to prototype the queue on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received through my code body on 2026-05-03 said the April 30 trial successfully replayed buffered readings through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said Mara's proposal became the prototype they tested together.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As reported on 2026-05-03, the team had paused wider rollout on May 2 pending understanding of calibration drift, with no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not establish the project's current status; the recorded issue URL is the entry point for checking it.\",\"support\":[1,3],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

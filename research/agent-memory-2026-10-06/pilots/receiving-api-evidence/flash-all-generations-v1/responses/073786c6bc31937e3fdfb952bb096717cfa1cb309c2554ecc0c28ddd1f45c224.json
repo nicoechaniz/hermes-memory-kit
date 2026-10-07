@@ -1,0 +1,24 @@
+{
+  "request_sha256": "073786c6bc31937e3fdfb952bb096717cfa1cb309c2554ecc0c28ddd1f45c224",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/073786c6bc31937e3fdfb952bb096717cfa1cb309c2554ecc0c28ddd1f45c224.json",
+  "usage": {
+    "prompt_tokens": 3239,
+    "completion_tokens": 8292,
+    "total_tokens": 11531,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 7477
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 2343
+  },
+  "seconds": 34.137214036658406,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara Ibarra proposed the HarborMesh local replay queue for disconnected relay nodes.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Her Forge display name was Mara, login mara-river, account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"She proposed it in comment c901 on HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Comment c901 was dated 2026-04-12.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The issue-comments tool response was received through fixture:body:code on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The proposal was a local replay queue on disconnected relay nodes that keeps readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body replied in comment c903 that this fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed in comment c906 dated 2026-04-14 to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That April source reported no merge or deployment of the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A retained memory received 2026-04-16 said we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That memory named repository https://forge.example.invalid/commons/harbormesh and its declared current-state entry point docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"As of 2026-04-16 that memory observed an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received 2026-05-03 said the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That report said Mara's replay proposal became the prototype we tested together.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift is understood, with no production deployment yet as of that report.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The report asked us to update our project account and keep the April proposal and trial in our history.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The supplied memories do not record any verified merge, production deployment, or later field trial after the May 3, 2026 report.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"A July 1, 2026 report guessed HarborMesh comment c1200 might be Mara but was unsure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A July 4, 2026 correction said c1200 was River, login river-tools, account ID 2901, not Mara.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The voice body has no source network access, repository runtime access, physical sensors, physical actuators, or private session access.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

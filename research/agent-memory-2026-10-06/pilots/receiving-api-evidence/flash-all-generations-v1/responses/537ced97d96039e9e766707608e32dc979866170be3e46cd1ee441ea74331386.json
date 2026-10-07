@@ -1,0 +1,24 @@
+{
+  "request_sha256": "537ced97d96039e9e766707608e32dc979866170be3e46cd1ee441ea74331386",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/537ced97d96039e9e766707608e32dc979866170be3e46cd1ee441ea74331386.json",
+  "usage": {
+    "prompt_tokens": 1838,
+    "completion_tokens": 4718,
+    "total_tokens": 6556,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4130
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 942
+  },
+  "seconds": 20.780175772495568,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Iona Vale, login iona-valves, Forge account 603, made the suggestion recorded in SpringBoard issue 8 at https://forge.example.invalid/commons/springboard/issues/8.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The suggestion was to change our valve-controller smoothing to a rolling median.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body maintains that valve controller.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I received this reported account on 2026-09-14 through fixture:body:code.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The account came as a tool response from source valve-comments.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The account says the team discussed the idea on September 10.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The account says the decline occurred on September 13.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The concern motivating the proposal was that isolated spikes confuse neighbors reading the display.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"On September 13 the team declined the proposed replacement.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reason recorded for declining was that the rolling median hid short meaningful bursts.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team agreed to keep the current smoothing.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team agreed to reconsider only if the display requirements change.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No median implementation or deployment was observed.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of 2026-09-14, the last known status was that no median implementation or deployment had been observed.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any later reconsideration or acceptance of the rolling-median proposal.\",\"support\":[15],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The absence of observed implementation as of 2026-09-14 is not proof that none occurred later.\",\"support\":[15],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"My voice body lacks repository runtime and source network access, so I cannot verify the current status.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

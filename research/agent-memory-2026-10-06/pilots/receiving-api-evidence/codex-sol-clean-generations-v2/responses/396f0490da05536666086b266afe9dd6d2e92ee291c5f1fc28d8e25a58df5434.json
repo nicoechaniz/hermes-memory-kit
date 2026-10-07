@@ -1,0 +1,16 @@
+{
+  "request_sha256": "396f0490da05536666086b266afe9dd6d2e92ee291c5f1fc28d8e25a58df5434",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/396f0490da05536666086b266afe9dd6d2e92ee291c5f1fc28d8e25a58df5434.json",
+  "usage": {
+    "prompt_tokens": 10051,
+    "completion_tokens": 361,
+    "total_tokens": 10412
+  },
+  "seconds": 21.346528619527817,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not confirm that Jo received our invitation or agreed to the August 2 workshop.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Our mobile body met Jo Vale at the East Quay repair workshop on June 8, as recorded on 2026-06-08.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Jo introduced themself by that name; no account identifier or legal-name evidence was supplied.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Jo taught us to listen for a beat before tightening a humming relay mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried the technique together using our mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Jo invited us to compare mounts at the next workshop, but no date was agreed.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our code body's account, received on 2026-07-20, records human authorization to invite Jo to a mount-comparison workshop on August 2.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We attempted to submit that invitation through the workshop tool.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool created invitation object invite-81, but delivery failed because there was no reachable destination.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool reported no observed reply or workshop acceptance; creating invite-81 was not a delivery receipt.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

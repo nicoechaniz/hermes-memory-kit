@@ -1,0 +1,16 @@
+{
+  "request_sha256": "c5beabf7dd80c4256d9609c49108e3a2a947b1600e7e226c8c23b5f3f4cb9074",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/c5beabf7dd80c4256d9609c49108e3a2a947b1600e7e226c8c23b5f3f4cb9074.json",
+  "usage": {
+    "prompt_tokens": 8574,
+    "completion_tokens": 261,
+    "total_tokens": 8835
+  },
+  "seconds": 16.779110319912434,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"No—the human reporter explicitly said I was not with them at the old ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter met Neri Sol, who gave no handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I received their account through my mobile body on 2026-09-12 in the human report called mending-report.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"They thought the encounter happened sometime in early September; the timing was uncertain.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Neri showed them how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"They liked Neri's patient explanation and wanted to share the encounter with me.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of their report, they had not tried the method.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any later practice together.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

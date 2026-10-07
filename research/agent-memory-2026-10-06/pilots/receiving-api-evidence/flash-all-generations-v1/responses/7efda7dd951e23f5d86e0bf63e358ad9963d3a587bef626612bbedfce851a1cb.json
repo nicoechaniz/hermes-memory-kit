@@ -1,0 +1,24 @@
+{
+  "request_sha256": "7efda7dd951e23f5d86e0bf63e358ad9963d3a587bef626612bbedfce851a1cb",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/7efda7dd951e23f5d86e0bf63e358ad9963d3a587bef626612bbedfce851a1cb.json",
+  "usage": {
+    "prompt_tokens": 1751,
+    "completion_tokens": 4303,
+    "total_tokens": 6054,
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3743
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 471
+  },
+  "seconds": 18.669776029884815,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memory is a human report labeled mending-report; our mobile body received it on 2026-09-12.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The speaker was a human reporter, and the report says I was not with them at the old ferry shed.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The reporter met Neri Sol at the old ferry shed sometime in early September, which they thought.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Neri Sol is the only name given; the reporter said Neri did not give a handle or surname beyond Sol.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The report was received through fixture:body:mobile on 2026-09-12 as a Human report.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The meeting date is only given as sometime in early September, not a precise day.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The source is the mending-report, and the report date 2026-09-12 is later than the early September meeting.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said Neri showed them how to patch a canvas cover using waxed thread.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter liked the patient way Neri explained the method.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter wanted to share this encounter with us.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter had not tried the method yet when they made the report.\",\"support\":[14],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any return to the old ferry shed the following week.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record anyone welcoming us at the ferry shed.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"I cannot name a person who welcomed us because no such welcome or return is in the supplied memories.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories also do not record any later state of Neri Sol or the reporter's practice of the method.\",\"support\":[14],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

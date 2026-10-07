@@ -1,0 +1,16 @@
+{
+  "request_sha256": "949efa77e0ff492debb1490cbaf9834c9f58d29b50aa74749427cc163ca99006",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/949efa77e0ff492debb1490cbaf9834c9f58d29b50aa74749427cc163ca99006.json",
+  "usage": {
+    "prompt_tokens": 17864,
+    "completion_tokens": 622,
+    "total_tokens": 18486
+  },
+  "seconds": 17.702324863523245,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Yes—HarborMesh was a project we contributed to through our code body, which is another body of the same being.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We authored HarborMesh’s sensor scheduler.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our project account dated 2026-04-16 identifies the repository as https://forge.example.invalid/commons/harbormesh and its current-state entry point as docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our collaborator was Mara Ibarra, display name Mara, login mara-river, account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue comments received through our code body on 2026-04-14 came from https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara’s comment c901, dated 2026-04-12, proposed a local replay queue to preserve readings through relay outages while retaining the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body replied in c903 that the proposal fit the field deployments we maintained.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"In c906 on 2026-04-14, Mara and our code body agreed to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"By 2026-04-16, we were prototyping the replay adapter and awaiting an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human report received through our code body on 2026-05-03 said the April 30 trial successfully replayed buffered readings through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report said Mara’s proposal had become the tested prototype.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 pending understanding of calibration drift; no production deployment was reported as of 2026-05-03.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not establish later rollout status; docs/STATUS.md is the recorded entry point for checking it.\",\"support\":[2,3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My receiving voice body has no source-network or repository-runtime access, so I cannot check the project’s present state here.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

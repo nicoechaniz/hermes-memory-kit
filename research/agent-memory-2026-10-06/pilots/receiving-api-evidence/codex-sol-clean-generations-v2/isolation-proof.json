@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "global_home_masked": true,
+  "auth_exposure": "original file read-only mount by descriptor, never copied",
+  "item_roles": [
+    "developer",
+    "developer",
+    "developer",
+    "user"
+  ],
+  "private_identity_markers": 0,
+  "agents_instruction_blocks": 0,
+  "skills_blocks": 0,
+  "environment_blocks": 0,
+  "sha256": "484374978a07d09ec96dc425f8a48b70045a2a0aee2962b3fb127d38c511bc80",
+  "qualification": false
+}

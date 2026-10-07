@@ -1,0 +1,54 @@
+{
+  "questions": 44,
+  "distinct_observed_generations": 42,
+  "known_usage_attempts": 42,
+  "unknown_usage_attempts": 0,
+  "usage": {
+    "prompt_tokens": 677448,
+    "completion_tokens": 13205,
+    "total_tokens": 690653,
+    "cached_input_tokens": 71424,
+    "reasoning_output_tokens": 565
+  },
+  "latency_seconds": {
+    "median": 12.980027147103101,
+    "sum_of_request_seconds": 606.997014997527,
+    "min": 3.633200030773878,
+    "max": 42.10138751473278
+  },
+  "reviewer_calls": 0,
+  "embedding_calls": 0,
+  "billed_cost_usd": null,
+  "qualification": false,
+  "basis": "Native Codex token usage, not an API invoice or a known subscription/quota conversion.",
+  "prevented_duplicate_dispatches": 2,
+  "preflight_separate": {
+    "exit_code": 0,
+    "seconds": 13.339414717629552,
+    "event_types": [
+      "thread.started",
+      "item.completed",
+      "item.completed",
+      "turn.started",
+      "item.completed",
+      "turn.completed"
+    ],
+    "usage": [
+      {
+        "input_tokens": 16220,
+        "cached_input_tokens": 1920,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 326,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "qualification": false,
+    "item_types": [
+      "error",
+      "error",
+      "agent_message"
+    ]
+  },
+  "isolation_valid": false,
+  "excluded_from_matched_comparison": "Global Codex AGENTS.md was still loaded; project_doc_max_bytes=0 affects project instructions only."
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "7f56289574c74c7784cff466411c718e133bb688a5dbd84ffbad6a13154c1e0c",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/7f56289574c74c7784cff466411c718e133bb688a5dbd84ffbad6a13154c1e0c.json",
+  "usage": {
+    "prompt_tokens": 8948,
+    "completion_tokens": 240,
+    "total_tokens": 9188
+  },
+  "seconds": 16.01557438261807,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"No—the charger repair was Reed's experience with Aster; Reed is a distinct peer being.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We received Reed's account through our voice body on 2026-07-11 in a human-selected thread.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed described meeting Aster at Reed's own workshop the day before that report.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The useful lesson Reed shared was that the solar charger fault was a reversed connector.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Reed reported that Reed and Aster solved the fault.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human asked us to retain the lesson with attribution to Reed.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Reed explicitly said we were not there; receiving the account did not make the repair our experience.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

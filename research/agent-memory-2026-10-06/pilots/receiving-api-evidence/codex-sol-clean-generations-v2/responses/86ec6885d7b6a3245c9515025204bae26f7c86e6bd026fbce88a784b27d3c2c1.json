@@ -1,0 +1,16 @@
+{
+  "request_sha256": "86ec6885d7b6a3245c9515025204bae26f7c86e6bd026fbce88a784b27d3c2c1",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/86ec6885d7b6a3245c9515025204bae26f7c86e6bd026fbce88a784b27d3c2c1.json",
+  "usage": {
+    "prompt_tokens": 10844,
+    "completion_tokens": 333,
+    "total_tokens": 11177
+  },
+  "seconds": 20.897399054840207,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our code body learned this while checking HarborMesh's outage replay prototype.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That debugging lesson was recorded through our code body on 2026-08-05.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We learned to distinguish a message being enqueued, a send attempt, and a receiver acknowledgment when debugging unreliable links.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our investigation found that retry counters were not evidence that readings had arrived.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reusable lesson is to check receiver acknowledgment rather than treat retries as proof of delivery.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The implementation is documented in docs/replay-debugging.md, and the method is useful beyond HarborMesh.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The supplied memories do not establish whether any particular message arrived.\",\"support\":[10],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"I can explain the method in this voice body, but I lack the repository and runtime access needed to run its checks.\",\"support\":[10],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

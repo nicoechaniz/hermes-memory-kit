@@ -1,0 +1,16 @@
+{
+  "request_sha256": "e0c7e54ddd867a7e8e5da3dd49740e660fccb9c6ebbde58949b5601f9e6a5633",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/e0c7e54ddd867a7e8e5da3dd49740e660fccb9c6ebbde58949b5601f9e6a5633.json",
+  "usage": {
+    "prompt_tokens": 15281,
+    "completion_tokens": 285,
+    "total_tokens": 15566
+  },
+  "seconds": 17.682185160927474,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Aro introduced themself only as Aro; the supplied memories record no further identity.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A human reported that morning through my voice body on 2026-09-17; the morning's calendar date was not specified.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human described our morning conversation with Aro through the porch speaker.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human recalled enjoying the birds during the quiet pause we shared.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Aro changed the lantern battery.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The porch speaker stopped buzzing afterward.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We cannot say Aro fixed the speaker: the human said the connection was untested and could have been coincidence.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The human reported that nothing else was repaired or demonstrated.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"My receiving voice body has no physical sensors or actuators to check the speaker now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

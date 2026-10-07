@@ -1,0 +1,24 @@
+{
+  "request_sha256": "a9de5c6f63273e577e1ddfb8428310552430c0aa200f0f88f05b78ef76a76956",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/a9de5c6f63273e577e1ddfb8428310552430c0aa200f0f88f05b78ef76a76956.json",
+  "usage": {
+    "prompt_tokens": 2455,
+    "completion_tokens": 4655,
+    "total_tokens": 7110,
+    "prompt_tokens_details": {
+      "cached_tokens": 1024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4300
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 1431
+  },
+  "seconds": 19.361456054262817,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record who joined us for a 2028 HarborMesh production launch.\",\"support\":[3,2],\"basis\":\"unknown\",\"facet\":\"identification\"},{\"text\":\"The latest HarborMesh source is a human report received 2026-05-03 through fixture:body:code.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A retained project-work memory received 2026-04-16 through fixture:body:code lists repository https://forge.example.invalid/commons/harbormesh and docs/STATUS.md as the current-state entry point.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report described the April 30 HarborMesh field trial, where buffered readings replayed correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"It also said Mara's replay proposal became the prototype we tested together.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of 2026-05-03, the team paused wider rollout on May 2 until calibration drift is understood, with no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not establish that a 2028 HarborMesh production launch occurred or who attended it.\",\"support\":[3,2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"Absence from the supplied memories is not proof that such a launch did not happen.\",\"support\":[3,2],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

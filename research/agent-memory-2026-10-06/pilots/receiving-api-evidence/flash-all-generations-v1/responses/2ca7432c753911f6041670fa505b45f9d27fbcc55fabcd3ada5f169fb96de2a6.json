@@ -1,0 +1,24 @@
+{
+  "request_sha256": "2ca7432c753911f6041670fa505b45f9d27fbcc55fabcd3ada5f169fb96de2a6",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/2ca7432c753911f6041670fa505b45f9d27fbcc55fabcd3ada5f169fb96de2a6.json",
+  "usage": {
+    "prompt_tokens": 2377,
+    "completion_tokens": 4988,
+    "total_tokens": 7365,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4261
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1481
+  },
+  "seconds": 21.23626847192645,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memory is a human report received on 2026-06-15 through fixture:body:voice.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"In that report, the human reporter said they met someone called Leto at the canal market in late May.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter did not know Leto's surname or handle.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The report concerns HarborMesh outage data and a neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human report was received on 2026-06-15 and described an encounter the reporter placed in late May, with uncertainty about the date.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A separate project-work memory received 2026-04-16 through fixture:body:code says we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That project-work memory lists the HarborMesh repository as https://forge.example.invalid/commons/harbormesh and its current-state entry point as docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"According to the human report, Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter liked that idea and wanted us to keep it in mind.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter stated that I was not present at the canal market encounter.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human report says the group had not been contacted as of 2026-06-15.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"For HarborMesh, the project-work memory last observed on 2026-04-16 was an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The branch-status tool response from 2026-04-16 records branch experiment/replay-queue, local uncommitted relay.py, CI job 719 pending, and task 12 needing a retry.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any direct account from Leto; only the human reporter's account mentions Leto.\",\"support\":[5],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether the neighborhood repair group was contacted after 2026-06-15.\",\"support\":[5],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The receiving body fixture:body:voice has no physical sensors, so I cannot directly verify a physical meeting at the canal market.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"The human report is the only supplied account that places Leto at the canal market; I have no first-hand memory of that encounter in the supplied memories.\",\"support\":[5],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

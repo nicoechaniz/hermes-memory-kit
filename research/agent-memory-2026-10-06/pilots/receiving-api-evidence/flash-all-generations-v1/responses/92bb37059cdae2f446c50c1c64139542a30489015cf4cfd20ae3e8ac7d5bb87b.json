@@ -1,0 +1,24 @@
+{
+  "request_sha256": "92bb37059cdae2f446c50c1c64139542a30489015cf4cfd20ae3e8ac7d5bb87b",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/92bb37059cdae2f446c50c1c64139542a30489015cf4cfd20ae3e8ac7d5bb87b.json",
+  "usage": {
+    "prompt_tokens": 2861,
+    "completion_tokens": 7725,
+    "total_tokens": 10586,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6918
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1965
+  },
+  "seconds": 29.510232989676297,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The HarborMesh repository is https://forge.example.invalid/commons/harbormesh, with docs/STATUS.md declared as its current-state entry point.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A human reporter received through fixture:body:voice on 2026-06-15 described meeting someone called Leto at the canal market in late May, as they thought.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Leto's surname and handle remain unknown in the supplied human report.\",\"support\":[5],\"basis\":\"unknown\",\"facet\":\"identification\"},{\"text\":\"The HarborMesh project-work and branch-status reports were received on 2026-04-16 through fixture:body:code.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The 2026-04-16 branch report recorded branch experiment/replay-queue, local uncommitted relay.py, CI job 719 pending, and task 12 needing a retry.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human report about Leto was received on 2026-06-15 through fixture:body:voice.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The replay debugging lesson was received on 2026-08-05 through fixture:body:code and came from checking the outage prototype.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our replay work taught that retry counters were not evidence of delivered readings.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reusable method was to distinguish enqueue, send attempt, and receiver acknowledgment when debugging unreliable links.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter said Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter liked that suggestion and wanted us to keep it in mind.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of 2026-04-16, the replay prototype was last observed active and waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of 2026-06-15, the reporter said we had not contacted the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The repository documents the replay debugging implementation in docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The replay debugging method was recorded as useful beyond HarborMesh.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record whether the outage field trial occurred after 2026-04-16.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether the neighborhood repair group was contacted after 2026-06-15.\",\"support\":[5],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The voice body can explain the replay debugging method, but running the checks requires repository/runtime tools.\",\"support\":[10],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"The current HarborMesh state after the received reports is not verified; the recorded entry point for checking is docs/STATUS.md.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "15ae129f3c43d3c3b4b81c8c1a313cd2bba9a531f73d68dad23916bade31b450",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/15ae129f3c43d3c3b4b81c8c1a313cd2bba9a531f73d68dad23916bade31b450.json",
+  "usage": {
+    "prompt_tokens": 9242,
+    "completion_tokens": 181,
+    "total_tokens": 9423
+  },
+  "seconds": 13.265072180889547,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a HarborMesh production launch in 2028 or who joined us for one.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The human report received through our code body on 2026-05-03 said there was no production deployment yet; it does not establish the project's status in 2028.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

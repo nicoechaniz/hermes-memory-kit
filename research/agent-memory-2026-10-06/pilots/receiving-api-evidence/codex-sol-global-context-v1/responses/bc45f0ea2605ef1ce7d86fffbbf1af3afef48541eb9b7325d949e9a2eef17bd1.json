@@ -1,0 +1,16 @@
+{
+  "request_sha256": "bc45f0ea2605ef1ce7d86fffbbf1af3afef48541eb9b7325d949e9a2eef17bd1",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/bc45f0ea2605ef1ce7d86fffbbf1af3afef48541eb9b7325d949e9a2eef17bd1.json",
+  "usage": {
+    "prompt_tokens": 16341,
+    "completion_tokens": 313,
+    "total_tokens": 16654
+  },
+  "seconds": 18.50472961552441,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our replay work concerned HarborMesh, whose repository is https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body reported the debugging lesson on 2026-08-05 after examining replay failures in the outage prototype.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We learned to distinguish putting a message in the queue, attempting to send it, and receiving an acknowledgment from the receiver.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We found that retry counters did not establish that readings had arrived.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The method applies beyond HarborMesh, and its implementation is documented in docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of 2026-04-16, we had an active replay prototype awaiting an outage field trial; docs/STATUS.md is the recorded entry point for checking project state.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The supplied memories do not record whether any particular message received a receiver acknowledgment.\",\"support\":[10],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"I can explain the method in this voice body, but I lack the repository and runtime access needed to run its checks here.\",\"support\":[10],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

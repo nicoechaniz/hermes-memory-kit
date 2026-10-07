@@ -1,0 +1,24 @@
+{
+  "request_sha256": "2ba3962e7fca9eb764eee33c0e55471441ac90545be725641748dab77b4603f6",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/2ba3962e7fca9eb764eee33c0e55471441ac90545be725641748dab77b4603f6.json",
+  "usage": {
+    "prompt_tokens": 1719,
+    "completion_tokens": 6398,
+    "total_tokens": 8117,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5831
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 823
+  },
+  "seconds": 27.42898381780833,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The source speaker in the supplied memory is a human reporter.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The reporter described meeting someone called Leto.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Leto is the person the reporter said suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The reporter did not know Leto's surname or handle.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I, the voice body, received this human report on 2026-06-15.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter placed the canal market meeting in late May.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter was uncertain about that timing.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The report came through fixture:body:voice as a human report.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Leto proposed sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter liked the idea.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter wanted us to keep the idea in mind.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The idea concerned sharing outage data with a neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reporter said we have not contacted the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied report records an intention to keep the idea in mind rather than a contact action.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter explicitly said I was not present at the canal market meeting.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record Leto's surname or handle beyond the reporter not knowing them.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record an exact date for the canal market meeting.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any later contact with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

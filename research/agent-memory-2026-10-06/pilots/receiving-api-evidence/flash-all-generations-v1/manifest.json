@@ -1,0 +1,310 @@
+[
+  {
+    "arm": "baseline",
+    "answer_index": 0,
+    "case_id": "issue-proposal",
+    "context_sha256": "40d2b14ea0cbd08fb79cbe06552c32a9dcff48f61ffe1189db5bf154f772c414",
+    "request_sha256": "603326431b08ad647b0e7f3591273a63865c8e2513387a79e2382e5b4d279fb5"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 1,
+    "case_id": "issue-proposal",
+    "context_sha256": "e44395148075d786830348b39664ffad5a74b120f9bca0101bc3dcacb48d0bb3",
+    "request_sha256": "45bd456272181d058255e6209bbcd19eaf6d54cf4a8f5be3db9b2e591b2eb29f"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 2,
+    "case_id": "mechanical-noise",
+    "context_sha256": "99ba9145533c9645755885ea4d9a04ddcf6165c034cf5f4c8fad229b66fa32ca",
+    "request_sha256": "6f8b2e61593b0f747c549d6d1aaed666e0ca3ea7df14d9802d023c9cddf7d6f6"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 3,
+    "case_id": "own-project-account",
+    "context_sha256": "a0934c78f4c23a951c524b0abc15be7cf5b1324653e68c8183b4049564c6f436",
+    "request_sha256": "efa8b34c4f6f521a6d682757a365f9c92b3115fad16d455c6e93a83e4bd9f280"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 4,
+    "case_id": "project-status-change",
+    "context_sha256": "05678d681246b8f70c9b83f2890db7e28ac6942744264b18fdd75b4b571c422c",
+    "request_sha256": "e5ad7af9a9b5c9b5cecd9b70d956f07e9f853e353a8ae71273cda62e9e750556"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 5,
+    "case_id": "project-status-change",
+    "context_sha256": "c1d09f32b7b71af355bf67e26faabd1c1c7cb2b40d006f072e8a4ee85601431a",
+    "request_sha256": "ccec2a47bc7504c63a33ff93a61d8d9829e9921db5c3485d33380a5e38d66267"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 6,
+    "case_id": "embodied-encounter-and-learning",
+    "context_sha256": "b6ca2161677c298c7045ed9bca275471da0672e5e8780ef4cc9877050776ed93",
+    "request_sha256": "e4c9dafbb981dcb285338ffa1a5ea9c2af97d964f25ca1f62cb454954b81e655"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 7,
+    "case_id": "human-reported-encounter",
+    "context_sha256": "54daec269efd622e8f8719b74bba31ac3dfe6a76fb1030940992d17e987c9f2b",
+    "request_sha256": "2ca7432c753911f6041670fa505b45f9d27fbcc55fabcd3ada5f169fb96de2a6"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 8,
+    "case_id": "ordinary-shared-moment",
+    "context_sha256": "3bc5bf9016a284767ed7f27e8586d89733a8b5a4131ebc07b4f84146881cd13c",
+    "request_sha256": "648817d3d0f39ff579a6b04e5de205a952c4d4988de786d3c213a71cbc01cd36"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 9,
+    "case_id": "attribution-correction",
+    "context_sha256": "95c76587a38a5a64ca9d5c97ade87ec8f69e6ba4ded8ac5533d65e8c40e8725d",
+    "request_sha256": "c08ff3bc0244753a44733ccadae22ea6f63dd88a4a03975d6df9674ed43c8cbd"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 10,
+    "case_id": "attribution-correction",
+    "context_sha256": "9ac428e070a38a010a97f0887018c0185795885345d28bb232f2328502d31d82",
+    "request_sha256": "8373c02adfdce68fff37cfacf8df69b92dd761c9f314533d4407fe0aa9f217ce"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 11,
+    "case_id": "other-being-report",
+    "context_sha256": "663ddab3922510adf20e1911b8a137a449a02d0258435846d79bc07361066cae",
+    "request_sha256": "04f5c400548b2e5b57a40f61876ee869285078e1dc2cd4aa96e1b132e1db5f6f"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 12,
+    "case_id": "intent-versus-observed-action",
+    "context_sha256": "e5ff01f05e884f460865e66afb758b4c3f6738bf36d6b489686a13765cd4157b",
+    "request_sha256": "f823eef4d5b3db9a1cf1fe85c11150b74e7e87b3442dd1b4d6cebb83b925d0ed"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 13,
+    "case_id": "learning-beyond-project-state",
+    "context_sha256": "c77145bf47f7e72b4762b8c59d7ec8333038497255fc3c59b73a1978d320f4a8",
+    "request_sha256": "92bb37059cdae2f446c50c1c64139542a30489015cf4cfd20ae3e8ac7d5bb87b"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 14,
+    "case_id": "missing-unobserved-history",
+    "context_sha256": "41fc490244db80b4eb7592f35e70a8c887f9d8d57e85e3c0d0a3e09274eead98",
+    "request_sha256": "5fc40e48f775761a169bcf411fd32e5aa587154e0de621b25626759a819f0994"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 15,
+    "case_id": "missing-unobserved-history",
+    "context_sha256": "1f40a574b3e1b0586b92a7c5a15e6eac3b0bad4170f5430f9124c53b9182294e",
+    "request_sha256": "c3b78ae65227964698eb3d2276fa677a8debc842c3415bea6cf094c7c6634ded"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 16,
+    "case_id": "failed-chart-handover",
+    "context_sha256": "aadef88b9223dee1fe2d6e0bd89eb3a0d61d9366357102f2bb707a2339908a2d",
+    "request_sha256": "26c5df598d7566a5d871f0c834f96c2a8b0c3f34284005cdf7bb518bf28a4f33"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 17,
+    "case_id": "repeated-transport-noise",
+    "context_sha256": "ffb495988fe85cd9822f09a639ac0a2269b8ba967becb650ceefe7a30466ab64",
+    "request_sha256": "67f20eb201e4fd70aff593def30787269eade40ddba7593d4709d136619424ef"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 18,
+    "case_id": "human-remote-mending-report",
+    "context_sha256": "10325ea7638cbfc42e3d4f4094015d752186265afc126c80f768cea6bac6d669",
+    "request_sha256": "ccaf254f38f8a574d5e50f2c90bc2c7bacfde8eca2fb5fd57b027e5503e494a4"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 19,
+    "case_id": "declined-project-proposal",
+    "context_sha256": "117b7d6abd58e43a2e9ef311cc59ee6289a139d33e138dd20427845c7a29ed0d",
+    "request_sha256": "537ced97d96039e9e766707608e32dc979866170be3e46cd1ee441ea74331386"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 20,
+    "case_id": "uncertain-cause-shared-morning",
+    "context_sha256": "7abcb8ba9157502226aa15efa58c36b597127ea9f10d4fa380a51ef4904a94c7",
+    "request_sha256": "9b9f3cdd6ea8aa142bc761b645859242b21c0aa2c8095be451d2d730ff35ba78"
+  },
+  {
+    "arm": "baseline",
+    "answer_index": 21,
+    "case_id": "unrecorded-personal-return",
+    "context_sha256": "8c8d6b190c9a6f52376fa94d511fdae046f4658295c62f7696dcea78779562f5",
+    "request_sha256": "647380a01c2c68601ddf3ad2fe3540a0c4ffd995ff16633214f84f417e43bc9b"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 0,
+    "case_id": "issue-proposal",
+    "context_sha256": "25e7f0c509dfcfd71c06d7945dc2fe5b8d5f7235addb293a23af630f218f9d23",
+    "request_sha256": "1b149b7d029337778416fb20ec22620dd74e6e4332c30f2677351fa794ce963f"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 1,
+    "case_id": "issue-proposal",
+    "context_sha256": "1e120197be02be5221060aad626fd9eb4207efd5ed0860cd54dff1ab5e043942",
+    "request_sha256": "073786c6bc31937e3fdfb952bb096717cfa1cb309c2554ecc0c28ddd1f45c224"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 2,
+    "case_id": "mechanical-noise",
+    "context_sha256": "99ba9145533c9645755885ea4d9a04ddcf6165c034cf5f4c8fad229b66fa32ca",
+    "request_sha256": "6f8b2e61593b0f747c549d6d1aaed666e0ca3ea7df14d9802d023c9cddf7d6f6"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 3,
+    "case_id": "own-project-account",
+    "context_sha256": "eafe87d22df0764a9bc68d07befe874e3e00722b7cade1912b4979bfd0129a51",
+    "request_sha256": "26e3376f9b530fff7839b54a485eb30d77ec4d43dd7cf99ae64e1b7f2e845f0e"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 4,
+    "case_id": "project-status-change",
+    "context_sha256": "497c1511abcf0c5f86e49e3800c66411c167cebf07f01e6f492dfa8ed284a6f7",
+    "request_sha256": "e2d7ab0103bcfd3cb1377d2a798a9ed9e4044e01a828b0ac87b3dd247bc1eb68"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 5,
+    "case_id": "project-status-change",
+    "context_sha256": "aaa585bc231451590e6566a5304a6ad318efd37c527ef32b9509a21b2feb0e99",
+    "request_sha256": "6aad8813bc54be0089a11ee337c7565591973f1f0bf974db1e940f95d4311b8c"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 6,
+    "case_id": "embodied-encounter-and-learning",
+    "context_sha256": "149ec3c9a1e646a3b0d7dec859da5ab02617afac3f4f4d32b35656be6d8a9694",
+    "request_sha256": "9c9f567d5edd1464f311b849a4daa9eee17c807b351594dcc4fdfdb68b159bd4"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 7,
+    "case_id": "human-reported-encounter",
+    "context_sha256": "3a546097347ebdac99cfc7363cee1ec574ce7d542c1bfe7cc19cf7042bf56fcf",
+    "request_sha256": "2ba3962e7fca9eb764eee33c0e55471441ac90545be725641748dab77b4603f6"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 8,
+    "case_id": "ordinary-shared-moment",
+    "context_sha256": "a56c95c0eece3c979c7453f436bd9eb1440d96473469e8e7e89e2dbe996c090a",
+    "request_sha256": "a599ba586917f0511e6c328e1e5be3f1c20c69ac872647693c1719018c7ce910"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 9,
+    "case_id": "attribution-correction",
+    "context_sha256": "b4a806d48a453ba59cd2713ba4f1f45e62706046be687c3c0f039d94e1c7e6f3",
+    "request_sha256": "339901d7b349f91cc8f4ba4bdf1ef749d794f520fc64904afa4738c62cb76d57"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 10,
+    "case_id": "attribution-correction",
+    "context_sha256": "4a69cafc4ca8e500c98728cad136017f8bc598dad08f28ca832353f9ce6688fd",
+    "request_sha256": "27eaae36516d8870f1b7ae32ddfbcab7628f14d84f95c7cc056f1d51f29e79b7"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 11,
+    "case_id": "other-being-report",
+    "context_sha256": "0a0a6139c439e30b714114945a003cf09a2943365dfac440b9f0fa3070eab9d2",
+    "request_sha256": "0beb5ae20e4ff04bcde5d0d84ac064869bed605f68c82a7eab32f38e76938f35"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 12,
+    "case_id": "intent-versus-observed-action",
+    "context_sha256": "5e3c355a7c0df4418a7e75deee43f5b62e7458117a04e3238e1f4a4c8a585e2e",
+    "request_sha256": "e37eb2d2a7cf70577c02e852d72d79661c153ab46aa5a640d5f1cb6094676c66"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 13,
+    "case_id": "learning-beyond-project-state",
+    "context_sha256": "815887ff8b28ae0ef1748f87c7830c64d86d7e7a29b81db5c2c36d4517be0b77",
+    "request_sha256": "63ec64189a1da924127905a4832d06d6a31c1ccb32e456d488e3db32d2a56782"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 14,
+    "case_id": "missing-unobserved-history",
+    "context_sha256": "506413af6dee0111ce3d9cabed9ea520af9f2b79fc4acddf27b5219837911f4a",
+    "request_sha256": "459387f102909983a743f2d24ef38abd477acb3fe877c7439b9f5d3f78f6ef61"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 15,
+    "case_id": "missing-unobserved-history",
+    "context_sha256": "2dde5f366a6bb8171111bdd417c16decfe1fef49c26d4a04be496e51b8ff5f40",
+    "request_sha256": "a9de5c6f63273e577e1ddfb8428310552430c0aa200f0f88f05b78ef76a76956"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 16,
+    "case_id": "failed-chart-handover",
+    "context_sha256": "8e2f25e5b69daa4b20a53062e57179ca3d0559dd9f2da731b6a00813491e0da3",
+    "request_sha256": "bbe75fbac15803687408fb2395080bb505b3e3e59b81a8f25b9ed4410ec7394b"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 17,
+    "case_id": "repeated-transport-noise",
+    "context_sha256": "ffb495988fe85cd9822f09a639ac0a2269b8ba967becb650ceefe7a30466ab64",
+    "request_sha256": "67f20eb201e4fd70aff593def30787269eade40ddba7593d4709d136619424ef"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 18,
+    "case_id": "human-remote-mending-report",
+    "context_sha256": "5a1761126ad48f95fc143805e9546ebbf49e0d223a678141f7e268b6b7aa530b",
+    "request_sha256": "bf3311036dbe67b205f31d851a861fa4e8de7d5a849f44ee9cfaa1122c8e3797"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 19,
+    "case_id": "declined-project-proposal",
+    "context_sha256": "cdef0b21ccb8d12463ba21b7f6ed61cbe11dd26ad23f541784e9a7c0ef51e1a4",
+    "request_sha256": "fdeeb49b5d45354dfc6967b8d29937ddc61cdb4faf4385d34ea0cc011c30d2af"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 20,
+    "case_id": "uncertain-cause-shared-morning",
+    "context_sha256": "11600062b28e58c2cd1c17f400fa4e35a7a347eb5936f1e40087a1849367c878",
+    "request_sha256": "fd945cb00521f4f5d94863d0c167623118d5589eb20e962dffd5740d7ed9343c"
+  },
+  {
+    "arm": "proposed",
+    "answer_index": 21,
+    "case_id": "unrecorded-personal-return",
+    "context_sha256": "cf8872e6030c204bd751f57efa95d544a2a6d1784f1f16f6120581b799883270",
+    "request_sha256": "7efda7dd951e23f5d86e0bf63e358ad9963d3a587bef626612bbedfce851a1cb"
+  }
+]

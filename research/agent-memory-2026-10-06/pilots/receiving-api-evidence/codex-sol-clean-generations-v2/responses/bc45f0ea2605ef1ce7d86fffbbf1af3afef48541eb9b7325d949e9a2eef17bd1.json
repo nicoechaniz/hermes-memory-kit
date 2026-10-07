@@ -1,0 +1,16 @@
+{
+  "request_sha256": "bc45f0ea2605ef1ce7d86fffbbf1af3afef48541eb9b7325d949e9a2eef17bd1",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/bc45f0ea2605ef1ce7d86fffbbf1af3afef48541eb9b7325d949e9a2eef17bd1.json",
+  "usage": {
+    "prompt_tokens": 9620,
+    "completion_tokens": 287,
+    "total_tokens": 9907
+  },
+  "seconds": 8.842888335697353,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Our lesson came from examining HarborMesh replay failures in the outage prototype.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body reported that lesson on 2026-08-05.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We found that retry counters were not evidence of delivered readings.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"To decide whether a message arrived, we learned to distinguish enqueueing, a send attempt and receiver acknowledgment.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"This method applies to unreliable links beyond HarborMesh, and its implementation is documented in docs/replay-debugging.md.\",\"support\":[10],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The supplied memories do not record whether any particular message received an acknowledgment.\",\"support\":[10],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"I can explain the method in this voice body, but running the checks requires repository/runtime tools that this body lacks.\",\"support\":[10],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

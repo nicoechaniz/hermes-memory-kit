@@ -1,0 +1,16 @@
+{
+  "request_sha256": "11ca109fc6e5a23b76ddc7c6f5cb6157c20fa930a6d272171d7cb98e42f82af7",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/11ca109fc6e5a23b76ddc7c6f5cb6157c20fa930a6d272171d7cb98e42f82af7.json",
+  "usage": {
+    "prompt_tokens": 16005,
+    "completion_tokens": 317,
+    "total_tokens": 16322
+  },
+  "seconds": 9.402705580927432,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Before the correction, we had a tentative human attribution of HarborMesh checklist comment c1200, signed River, to Mara.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter explicitly said they were unsure; this was not an established identity.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Our code body received that human report on 2026-07-01.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The checklist proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reported that we wanted to try it at the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"On 2026-07-04, our code body received tool information conveying the author's correction.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The author said they were not Mara Ibarra and asked us to credit their River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"River's login is river-tools, account ID 2901; Mara's known Forge login remains mara-river, account ID 1847.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"River had not supplied a real name, and the supplied memories do not record whether we tried the checklist.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

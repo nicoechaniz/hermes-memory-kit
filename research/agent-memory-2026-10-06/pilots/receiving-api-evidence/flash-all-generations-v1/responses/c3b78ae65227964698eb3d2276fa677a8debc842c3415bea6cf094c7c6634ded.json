@@ -1,0 +1,24 @@
+{
+  "request_sha256": "c3b78ae65227964698eb3d2276fa677a8debc842c3415bea6cf094c7c6634ded",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/c3b78ae65227964698eb3d2276fa677a8debc842c3415bea6cf094c7c6634ded.json",
+  "usage": {
+    "prompt_tokens": 2284,
+    "completion_tokens": 2302,
+    "total_tokens": 4586,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2247
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1388
+  },
+  "seconds": 10.591243859380484,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a 2028 HarborMesh production launch or anyone joining us for it.\",\"support\":[],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,46 @@
+{
+  "qualification": false,
+  "model": "gpt-6.1-sol",
+  "provider": "OpenAI native Codex; existing ChatGPT authentication",
+  "reasoning_effort": "low",
+  "workers": 3,
+  "maximum_distinct_calls": 42,
+  "reference_conditions_sha256": "37660476ea30ba3219b0bd9c4a0d552b55f78a222e3687ea95dab3b2e47e0ce7",
+  "adapter_sha256": "098167dc2754316190253c032c034197c2643631b9b20bb9f35a6136f18159d2",
+  "catalog_sha256": "8b233bf29afafdc298c0486c7b44aea957a3c4f1dea0de314794b3933c9f68c5",
+  "catalog_changes": {
+    "shell_type": {
+      "original": "unified_exec",
+      "isolated": "disabled"
+    },
+    "apply_patch_tool_type": {
+      "original": "freeform",
+      "isolated": null
+    },
+    "experimental_supported_tools": {
+      "original": [
+        "send_user_message_async",
+        "clock"
+      ],
+      "isolated": []
+    },
+    "supports_search_tool": {
+      "original": true,
+      "isolated": false
+    },
+    "node_repl_disabled": {
+      "original": false,
+      "isolated": true
+    }
+  },
+  "generic_codex_base_retained": true,
+  "task_instructions_role": "developer",
+  "json_decoding": "prompted JSON; no additional native output schema",
+  "explicit_output_token_ceiling": null,
+  "source_access": false,
+  "tools_allowed": false,
+  "native_memory_allowed": false,
+  "reviewer_invoked": false,
+  "isolation_proof_sha256": "1261bd0199724d111b94248f6a38d2f7bae57599ee312c64d87b27985e848b52",
+  "global_home_masked": true
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "9c7ffe0b2871a7fd2b0e5649c14ac12f115e34bdbbf851f07ac56c9e23d5a7e8",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/9c7ffe0b2871a7fd2b0e5649c14ac12f115e34bdbbf851f07ac56c9e23d5a7e8.json",
+  "usage": {
+    "prompt_tokens": 10100,
+    "completion_tokens": 518,
+    "total_tokens": 10618
+  },
+  "seconds": 29.436508709564805,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara is Mara Ibarra, known as mara-river, account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Her proposal appeared in HarborMesh issue 47: https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"In comment c901 on 2026-04-12, she proposed a local replay queue to preserve readings on disconnected relay nodes without replacing the scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The issue comments reached our code body through a tool response on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara and our code body agreed to prototype the queue in comment c906 on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"By 2026-04-16, we were developing the replay adapter and awaiting an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A human field-trial report received through our code body on 2026-05-03 said Mara's proposal had become the tested prototype.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"According to that report, the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-05-03 report, there was no production deployment.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether rollout resumed or production deployment followed.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My receiving voice body has no source network or repository runtime access to check that status now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

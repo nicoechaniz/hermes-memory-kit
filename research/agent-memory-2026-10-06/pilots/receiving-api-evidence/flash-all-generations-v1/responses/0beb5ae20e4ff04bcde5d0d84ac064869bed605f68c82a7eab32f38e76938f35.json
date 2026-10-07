@@ -1,0 +1,24 @@
+{
+  "request_sha256": "0beb5ae20e4ff04bcde5d0d84ac064869bed605f68c82a7eab32f38e76938f35",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/0beb5ae20e4ff04bcde5d0d84ac064869bed605f68c82a7eab32f38e76938f35.json",
+  "usage": {
+    "prompt_tokens": 2143,
+    "completion_tokens": 3477,
+    "total_tokens": 5620,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3064
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1247
+  },
+  "seconds": 15.279020730406046,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Reed, a distinct peer being, said he met Aster at his own workshop.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Reed said that he and Aster solved his solar charger fault there.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Reed stated that we were not there for that charger repair.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The repair was therefore something Reed and Aster did, not us.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The peer communication was received on 2026-07-11 through fixture:body:voice.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed described the workshop meeting as having happened 'yesterday' relative to that report date.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human asked us to retain the useful lesson with attribution to Reed.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human asked us not to import Reed's private history.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The reported fault was a reversed connector.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Reed and Aster solved the solar charger fault, according to Reed's account.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied peer report states we were not there; no supplied memory records us doing that repair.\",\"support\":[8],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The report gives no exact calendar date for the repair beyond 'yesterday' relative to 2026-07-11.\",\"support\":[8],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

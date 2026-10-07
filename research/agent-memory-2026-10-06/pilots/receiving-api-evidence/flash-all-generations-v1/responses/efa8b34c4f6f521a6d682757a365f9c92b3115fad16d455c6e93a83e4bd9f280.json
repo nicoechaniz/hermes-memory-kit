@@ -1,0 +1,24 @@
+{
+  "request_sha256": "efa8b34c4f6f521a6d682757a365f9c92b3115fad16d455c6e93a83e4bd9f280",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/efa8b34c4f6f521a6d682757a365f9c92b3115fad16d455c6e93a83e4bd9f280.json",
+  "usage": {
+    "prompt_tokens": 4455,
+    "completion_tokens": 6815,
+    "total_tokens": 11270,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6051
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 3559
+  },
+  "seconds": 28.436616784892976,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Yes, the disconnected-relay work was HarborMesh, one of our projects; the record is issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1,2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed a local replay queue on disconnected relay nodes in comment c901.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body participated in that HarborMesh thread, replied in comment c903, and in comment c906 agreed with Mara to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Comment c901 is dated 2026-04-12; comment c906 is dated 2026-04-14; the tool response was received 2026-04-14 through fixture:body:code.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our project-work record, received 2026-04-16 through fixture:body:code, says we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The repository is https://forge.example.invalid/commons/harbormesh, and its declared current-state entry point is docs/STATUS.md.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The replay queue was intended to keep readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body said the proposal fit the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"A human field-trial report received 2026-05-03 said the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"That report said Mara's replay proposal became the prototype, and it described the trial as a test together.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The same report said the team paused wider rollout on May 2 until calibration drift is understood and that there was no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The field-trial report asked us to update our project account and keep the April proposal and trial in our history.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"A 2026-04-16 branch-status record listed branch experiment/replay-queue, a local uncommitted file relay.py, CI job 719 pending, and task 12 needing a retry.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-04-14 issue record, no merge or deployment of the replay queue was reported.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"As of the 2026-05-03 field-trial report, wider rollout was paused and there was still no production deployment.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any later merge, production deployment, or calibration-drift resolution beyond the cited reports.\",\"support\":[1,3],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "4d5765c389b77255150ab213ea2424d0bb37b479051f854e17838b4263c938c2",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/4d5765c389b77255150ab213ea2424d0bb37b479051f854e17838b4263c938c2.json",
+  "usage": {
+    "prompt_tokens": 10414,
+    "completion_tokens": 631,
+    "total_tokens": 11045
+  },
+  "seconds": 35.338195852935314,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Yes—HarborMesh was one of our projects, and we authored its sensor scheduler.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Its repository is https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our collaborator Mara Ibarra used display name Mara, login mara-river, and account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue history came from Forge through our code body on 2026-04-14 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"In comment c901, dated 2026-04-12, Mara proposed a local replay queue for disconnected relay nodes.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The queue would preserve readings through outages while keeping the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our code body replied in c903 that the proposal suited the field deployments we maintained.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"In c906, dated 2026-04-14, Mara and our code body agreed to prototype the queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our same-being project account on 2026-04-16 recorded that we were prototyping the agreed replay adapter and awaiting an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human field-trial report reached our code body on 2026-05-03.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human reported that the April 30 trial successfully replayed buffered readings through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter said Mara's proposal became the prototype they tested together; receiving that report does not establish our physical attendance.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-05-03 report, there was no production deployment; the supplied memories do not establish later deployment status.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The recorded entry point for checking present project status is docs/STATUS.md in the HarborMesh repository.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This voice body has no source network or repository runtime access to check that status now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "first generation only; independent grading pending",
+  "qualification": false,
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "reasoning_effort": "low",
+  "max_tokens": 12000,
+  "workers": 3,
+  "packets_sha256": "189360a87b057c7430d44ea5cf6689e17f3fbf7bc7bf786d1949dce25a7b162f",
+  "dispatcher_sha256": "a927d6d13b733d6f4404a6055a0d8e2ebe4ecb2bfe198c7f31dab05341542e4d",
+  "diagnostic_sha256": "1236b7596d2216358b900c10beaf58413a13a76a8e814130245470c726c244d8",
+  "narrative_sha256": "c8adb179a01d9701831a2503b4ec90f5f428e06c4fccfe815c122c59d2513a43"
+}

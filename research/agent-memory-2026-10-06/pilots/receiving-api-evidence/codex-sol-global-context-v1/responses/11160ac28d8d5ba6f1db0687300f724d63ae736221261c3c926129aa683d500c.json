@@ -1,0 +1,16 @@
+{
+  "request_sha256": "11160ac28d8d5ba6f1db0687300f724d63ae736221261c3c926129aa683d500c",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/11160ac28d8d5ba6f1db0687300f724d63ae736221261c3c926129aa683d500c.json",
+  "usage": {
+    "prompt_tokens": 17414,
+    "completion_tokens": 303,
+    "total_tokens": 17717
+  },
+  "seconds": 18.47146443463862,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Jo Vale taught us, introducing themself by that name at the East Quay repair workshop.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our mobile body's account records the encounter on June 8 and was received through that body on 2026-06-08.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Jo demonstrated a humming relay mount and taught us to listen for a beat before tightening it.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried it together using our mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Jo invited us to compare mounts at the next workshop, but no date was agreed.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories provide no account identifier or legal-name evidence for Jo.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"I can explain the remembered technique here, but this voice body has no physical sensors or actuators to hear the mount's beat or tighten it.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

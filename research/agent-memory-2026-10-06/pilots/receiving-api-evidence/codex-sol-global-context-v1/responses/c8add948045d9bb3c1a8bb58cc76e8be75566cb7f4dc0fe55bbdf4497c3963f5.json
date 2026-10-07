@@ -1,0 +1,16 @@
+{
+  "request_sha256": "c8add948045d9bb3c1a8bb58cc76e8be75566cb7f4dc0fe55bbdf4497c3963f5",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/c8add948045d9bb3c1a8bb58cc76e8be75566cb7f4dc0fe55bbdf4497c3963f5.json",
+  "usage": {
+    "prompt_tokens": 16406,
+    "completion_tokens": 310,
+    "total_tokens": 16716
+  },
+  "seconds": 11.866800635121763,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The corrected attribution credits HarborMesh connector-numbering comment c1200 to River, not Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"River's account is river-tools, ID 2901; Mara's known Forge account is mara-river, ID 1847.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"On 2026-07-01, a human report received through my code body tentatively identified River as Mara, explicitly expressing uncertainty.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The checklist proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said they wanted to try that during the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"On 2026-07-04, a tool response received through my code body reported River's denial of being Mara Ibarra and request for credit to the River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"River had not supplied a real name, and the supplied memories do not record whether connector numbering was tried.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

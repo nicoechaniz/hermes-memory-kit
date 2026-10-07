@@ -1,0 +1,16 @@
+{
+  "request_sha256": "6f330baa2d3fb8ec4a1e918f5c612a67e36d04dec9bd7f0cb8058880b636a9ce",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/6f330baa2d3fb8ec4a1e918f5c612a67e36d04dec9bd7f0cb8058880b636a9ce.json",
+  "usage": {
+    "prompt_tokens": 9110,
+    "completion_tokens": 398,
+    "total_tokens": 9508
+  },
+  "seconds": 10.951633137650788,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not establish that Jo received our invitation or agreed to it; the workshop tool reported failed delivery and no observed acceptance.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Our mobile body met someone who introduced themself as Jo Vale at the East Quay repair workshop on June 8.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"That encounter was reported through our mobile body on 2026-06-08.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Jo taught us to listen for a beat before tightening a humming relay mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We tried the technique together using our mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Jo invited us to compare mounts at the next workshop, but no date was agreed.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No account identifier or legal-name evidence for Jo was supplied.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"On 2026-07-20, our code body reported that the human authorized an invitation to Jo for a mount-comparison workshop on August 2.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We attempted to submit that invitation through the workshop tool.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool created invitation object invite-81 for Jo Vale, but delivery failed because there was no reachable destination.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Creating invite-81 was not a delivery receipt; no reply or workshop acceptance was observed in the 2026-07-20 report.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

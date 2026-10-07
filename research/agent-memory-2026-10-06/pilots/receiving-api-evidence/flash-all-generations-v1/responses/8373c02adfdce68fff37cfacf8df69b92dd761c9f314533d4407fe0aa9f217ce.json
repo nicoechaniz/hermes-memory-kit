@@ -1,0 +1,24 @@
+{
+  "request_sha256": "8373c02adfdce68fff37cfacf8df69b92dd761c9f314533d4407fe0aa9f217ce",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/8373c02adfdce68fff37cfacf8df69b92dd761c9f314533d4407fe0aa9f217ce.json",
+  "usage": {
+    "prompt_tokens": 3345,
+    "completion_tokens": 4467,
+    "total_tokens": 7812,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3885
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 2449
+  },
+  "seconds": 19.59300146996975,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The initial report described HarborMesh repair checklist comment c1200 as signed River.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter said they thought River was Mara, but they were not sure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The corrected author information for c1200 gave display name River, login river-tools, account ID 2901.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara's known Forge account remained 1847, login mara-river.\",\"support\":[7,1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The initial attribution came in a human report received 2026-07-01 through fixture:body:code.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The corrected attribution came in a tool_response received 2026-07-04 through fixture:body:code.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Before the correction, our working thought was that the River-signed checklist might be Mara.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The c1200 comment proposed numbering connectors before disassembly, and the reporter wanted us to try that next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The correction mattered because it replaced a tentative Mara attribution with a different River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The c1200 author replied that they are not Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The author asked that the connector-numbering checklist be credited to their River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The author said they had not supplied a real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The initial thought was explicitly uncertain, not a settled identification.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether we actually tried the connector-numbering checklist at the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether the requested River account credit was applied.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record River's real name beyond the stated display name, login, and account ID.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "c6e5e795779f9b4ae0265c2b2751934540d07d06e26c4f71c1352d49c562b7dd",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/c6e5e795779f9b4ae0265c2b2751934540d07d06e26c4f71c1352d49c562b7dd.json",
+  "usage": {
+    "prompt_tokens": 10134,
+    "completion_tokens": 526,
+    "total_tokens": 10660
+  },
+  "seconds": 29.64397773705423,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"That was Mara Ibarra, known on Forge as Mara, login mara-river, account ID 1847.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Her proposal appears in HarborMesh issue 47: https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"She posted comment c901 on 2026-04-12; our code body received the issue record through Forge on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"She suggested a local replay queue to preserve relay readings through outages while keeping the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed to prototype it on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Our 2026-04-16 project memory recorded an active prototype at https://forge.example.invalid/commons/harbormesh, with docs/STATUS.md as the current-state entry point.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human report received through our code body on 2026-05-03 said the April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"That report said wider rollout was paused on May 2 pending understanding of calibration drift, with no production deployment yet.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not establish the project's present deployment status.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

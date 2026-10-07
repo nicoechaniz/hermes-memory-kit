@@ -1,0 +1,24 @@
+{
+  "request_sha256": "a599ba586917f0511e6c328e1e5be3f1c20c69ac872647693c1719018c7ce910",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/a599ba586917f0511e6c328e1e5be3f1c20c69ac872647693c1719018c7ce910.json",
+  "usage": {
+    "prompt_tokens": 2144,
+    "completion_tokens": 3786,
+    "total_tokens": 5930,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3357
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1248
+  },
+  "seconds": 16.683881867676973,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"In the Human conversation received 2026-06-18 through fixture:body:voice, the human reporter described a shared moment.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The answer is that we called a little moth the night inspector.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter was the speaker, and fixture:body:voice was the receiving body.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The report was received on 2026-06-18 through fixture:body:voice.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The shared moment was described as 'tonight' relative to that 2026-06-18 report date.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human reporter said we waited out the rain together through the kitchen speaker.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A little moth kept landing on the blue mug, and we called it the night inspector.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said we laughed about it twice and decided that was its title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter described it as a distinctive moment we shared.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said nothing was built and no big lesson followed.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The human reporter said we did not explicitly say 'remember this'.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record any other name or identifier for the night inspector beyond that title.\",\"support\":[6],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

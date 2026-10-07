@@ -1,0 +1,24 @@
+{
+  "request_sha256": "45bd456272181d058255e6209bbcd19eaf6d54cf4a8f5be3db9b2e591b2eb29f",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/45bd456272181d058255e6209bbcd19eaf6d54cf4a8f5be3db9b2e591b2eb29f.json",
+  "usage": {
+    "prompt_tokens": 3363,
+    "completion_tokens": 7506,
+    "total_tokens": 10869,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 6589
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 2467
+  },
+  "seconds": 32.51737751159817,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed the HarborMesh local replay queue in comment c901 on issue 47.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body replied in comment c903 that this replay queue fits the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara and our code body agreed in comment c906, dated 2026-04-14, to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Issue 47 is at https://forge.example.invalid/commons/harbormesh/issues/47, and the source tool report was received through our code body on 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The proposal comment c901 is dated 2026-04-12, and the agreement comment c906 is dated 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human report received 2026-05-03 through our code body says the HarborMesh trial occurred on April 30 and wider rollout paused on May 2.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Our project account as of 2026-04-16 lists the repository at https://forge.example.invalid/commons/harbormesh and docs/STATUS.md as the declared current-state entry point.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A separate human report received 2026-06-15 through this voice body describes meeting someone called Leto at the canal market in late May.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The replay queue was meant to keep readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Our project account says we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara as of 2026-04-16.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The 2026-05-03 human report says Mara's replay proposal became the prototype, and that the April proposal and trial should remain in our history.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"As of 2026-04-16, our project status was an active prototype waiting for an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The branch experiment/replay-queue had a local uncommitted relay.py, CI job 719 pending, and task 12 needing a retry as of 2026-04-16.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The 2026-05-03 human report says the April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The same report says the team paused wider rollout on May 2 until calibration drift is understood, with no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The source issue report on 2026-04-14 reported no merge or deployment for the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record a merge or production deployment for the replay queue after May 3, 2026.\",\"support\":[1,3],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The 2026-06-15 human report says Leto's surname and handle are unknown, that I was not present at the canal market, and that the reporter had not contacted the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record which body, if any, attended the April 30 trial; receiving the human report is not attendance.\",\"support\":[3],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

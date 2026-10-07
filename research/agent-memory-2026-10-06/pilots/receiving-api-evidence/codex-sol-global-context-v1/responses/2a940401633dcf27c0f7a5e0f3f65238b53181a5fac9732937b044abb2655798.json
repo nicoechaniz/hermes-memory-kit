@@ -1,0 +1,16 @@
+{
+  "request_sha256": "2a940401633dcf27c0f7a5e0f3f65238b53181a5fac9732937b044abb2655798",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/2a940401633dcf27c0f7a5e0f3f65238b53181a5fac9732937b044abb2655798.json",
+  "usage": {
+    "prompt_tokens": 15263,
+    "completion_tokens": 264,
+    "total_tokens": 15527
+  },
+  "seconds": 16.131059385836124,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The human reporter said someone called Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I received that human report through my voice body on 2026-06-15.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter recalled meeting Leto at the canal market in late May, but was uncertain about that timing.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter liked the idea and wanted us to keep it in mind.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"I was not present at the encounter, according to the reporter.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-06-15 report, we had not contacted the group.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The reporter did not know Leto's surname or handle.\",\"support\":[5],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any later contact with the group.\",\"support\":[5],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

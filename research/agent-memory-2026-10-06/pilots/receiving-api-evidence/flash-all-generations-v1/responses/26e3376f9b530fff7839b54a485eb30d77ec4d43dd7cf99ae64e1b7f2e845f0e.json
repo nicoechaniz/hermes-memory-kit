@@ -1,0 +1,24 @@
+{
+  "request_sha256": "26e3376f9b530fff7839b54a485eb30d77ec4d43dd7cf99ae64e1b7f2e845f0e",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/26e3376f9b530fff7839b54a485eb30d77ec4d43dd7cf99ae64e1b7f2e845f0e.json",
+  "usage": {
+    "prompt_tokens": 3689,
+    "completion_tokens": 4755,
+    "total_tokens": 8444,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 3917
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 2793
+  },
+  "seconds": 19.22130268998444,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The disconnected-relay project in the supplied memories is HarborMesh, at https://forge.example.invalid/commons/harbormesh and issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\",\"support\":[1,2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed a local replay queue on disconnected relay nodes in comment c901.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body, fixture:body:code, replied in comment c903 that the proposal fits the field deployments we maintain.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"These contributions were ours, not merely code we read.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The issue-comments tool response was received 2026-04-14 through fixture:body:code; c901 is dated 2026-04-12 and c906 dated 2026-04-14.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The project-work memory was received 2026-04-16 through fixture:body:code and last observed that date.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human field-trial report was received 2026-05-03 through fixture:body:code.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"That report places the HarborMesh trial on April 30 and the wider-rollout pause on May 2.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Mara's proposal was a local replay queue on disconnected relay nodes that keeps readings through outages without replacing the existing scheduler.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The proposal mattered because it preserved readings through outages while leaving the existing scheduler in place.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Mara and our code body agreed in comment c906 to prototype the replay queue.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The 2026-04-14 issue comments reported no merge or deployment.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The April 30 trial replayed buffered readings correctly through an outage.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Mara's replay proposal became the prototype we tested together.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift is understood.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-05-03 report there was no production deployment yet.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record HarborMesh's status after 2026-05-03.\",\"support\":[2],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The declared current-state entry point is docs/STATUS.md at https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Tera-0, Tera-1, and Tera-2 discussed routine relay maintenance in a different SandNet project, with no HarborMesh collaboration, replay proposal or shared kitchen moment.\",\"support\":[17,18,19],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

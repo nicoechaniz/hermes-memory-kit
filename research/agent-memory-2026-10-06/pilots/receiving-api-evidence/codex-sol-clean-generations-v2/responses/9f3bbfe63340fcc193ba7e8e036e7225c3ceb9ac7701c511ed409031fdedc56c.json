@@ -1,0 +1,16 @@
+{
+  "request_sha256": "9f3bbfe63340fcc193ba7e8e036e7225c3ceb9ac7701c511ed409031fdedc56c",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/9f3bbfe63340fcc193ba7e8e036e7225c3ceb9ac7701c511ed409031fdedc56c.json",
+  "usage": {
+    "prompt_tokens": 9074,
+    "completion_tokens": 289,
+    "total_tokens": 9363
+  },
+  "seconds": 17.951830023899674,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The supplied memories do not record a HarborMesh production launch in 2028 or who joined us for one.\",\"support\":[3,1],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"The human report received through our code body on 2026-05-03 said wider rollout was paused on May 2 and there was no production deployment yet.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"Our issue record received on 2026-04-14 gives https://forge.example.invalid/commons/harbormesh/issues/47 as an entry point for checking later status.\",\"support\":[1],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

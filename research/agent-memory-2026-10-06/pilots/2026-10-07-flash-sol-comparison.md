@@ -5,6 +5,17 @@ comparisons, and retained Sol 6.1 low as a candidate if consumption is modest.
 This is a bounded comparison, not a provider winner or narrative/stage-two
 qualification. Earlier failed diagnostics and stage-one evidence remain intact.
 
+Subsequent human steering requires future Sol inference through **OpenAI Codex
+directly**, not Nous. The measurements below remain historical observations of
+Nous only, not validation or pricing of the selected native route. The human
+then provisionally adopted DeepSeek Flash and deferred further model comparisons
+to advance narration/consolidation work. No new Nous calls are authorized by
+that current choice; the previous evidence remains preserved.
+The later explicitly requested
+[native Codex comparison](2026-10-07-flash-native-codex-comparison.md) records
+OpenAI Codex directly over all 44 initial questions, with its own isolation,
+outside grading and token accounting. It does not relabel the Nous results below.
+
 Eight stateless Nous API calls requested `openai/gpt-6.1-sol` with low reasoning.
 All returned HTTP 200, complete JSON and that exact model label. No native Codex
 account/session, subagent, tool, private memory, source URL or hidden rubric was

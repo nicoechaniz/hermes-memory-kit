@@ -1,0 +1,29 @@
+{
+  "exit_code": 0,
+  "seconds": 13.339414717629552,
+  "event_types": [
+    "thread.started",
+    "item.completed",
+    "item.completed",
+    "turn.started",
+    "item.completed",
+    "turn.completed"
+  ],
+  "usage": [
+    {
+      "input_tokens": 16220,
+      "cached_input_tokens": 1920,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 326,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "qualification": false,
+  "item_types": [
+    "error",
+    "error",
+    "agent_message"
+  ],
+  "isolation_valid": false,
+  "excluded_from_matched_comparison": "Global AGENTS.md remained loaded."
+}

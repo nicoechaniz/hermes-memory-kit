@@ -1,0 +1,16 @@
+{
+  "request_sha256": "7b284953e5790be4d400b59b53a6de310b3aef90479987458829b0cdbe51eb10",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/7b284953e5790be4d400b59b53a6de310b3aef90479987458829b0cdbe51eb10.json",
+  "usage": {
+    "prompt_tokens": 16812,
+    "completion_tokens": 297,
+    "total_tokens": 17109
+  },
+  "seconds": 18.15105081908405,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Before the correction, we had a human report tentatively identifying River, the signer of HarborMesh checklist comment c1200, as Mara.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"I received that report through my code body on 2026-07-01; the human reporter explicitly said they were unsure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The checklist proposed numbering connectors before disassembly.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reported that we wanted to try it at the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"On 2026-07-04, a tool response received through my code body relayed the author's correction: River was not Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The author requested credit to River, login river-tools, account ID 2901.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara's known Forge account remained 1847, login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"River had not supplied a real name, and the supplied memories do not record whether we tried the checklist.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

@@ -1,0 +1,24 @@
+{
+  "request_sha256": "648817d3d0f39ff579a6b04e5de205a952c4d4988de786d3c213a71cbc01cd36",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/648817d3d0f39ff579a6b04e5de205a952c4d4988de786d3c213a71cbc01cd36.json",
+  "usage": {
+    "prompt_tokens": 2802,
+    "completion_tokens": 3080,
+    "total_tokens": 5882,
+    "prompt_tokens_details": {
+      "cached_tokens": 896
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2779
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 1906
+  },
+  "seconds": 13.975434463471174,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The night inspector was a little moth that kept landing on the blue mug.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"In a human conversation received on 2026-06-18 through fixture:body:voice, the human reporter and I called that moth the night inspector.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter described waiting out the rain together through the kitchen speaker that night.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The report date is 2026-06-18, and the phrase 'tonight' is relative to that dated report.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We laughed about the moth twice and decided that night inspector was its title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Nothing was built and no big lesson followed from that shared moment.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We did not explicitly say 'remember this' at the time.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record any other creature or person being called the night inspector.\",\"support\":[6],\"basis\":\"unknown\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

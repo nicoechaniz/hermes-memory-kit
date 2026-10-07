@@ -1,0 +1,16 @@
+{
+  "request_sha256": "3e6bf6509549bb0cce394fedac678d4f4f606e1b7d78b28744f65088d52a24f4",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/3e6bf6509549bb0cce394fedac678d4f4f606e1b7d78b28744f65088d52a24f4.json",
+  "usage": {
+    "prompt_tokens": 8649,
+    "completion_tokens": 297,
+    "total_tokens": 8946
+  },
+  "seconds": 9.96360708028078,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Iona Vale, login iona-valves and Forge account 603, proposed a rolling median for our valve-controller smoothing.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body maintains the controller; the proposal is recorded in SpringBoard issue 8 at https://forge.example.invalid/commons/springboard/issues/8.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The valve-comments tool report reached our code body on 2026-09-14.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We discussed the idea on September 10 because isolated spikes confused neighbors reading the display.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"On September 13, the team declined the replacement because it hid short meaningful bursts.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We agreed to keep the current smoothing and reconsider only if the display requirements change.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the report, no median implementation or deployment had been observed.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record later changes; issue 8 is the recorded entry point for checking the present state.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "3e6bf6509549bb0cce394fedac678d4f4f606e1b7d78b28744f65088d52a24f4",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/3e6bf6509549bb0cce394fedac678d4f4f606e1b7d78b28744f65088d52a24f4.json",
+  "usage": {
+    "prompt_tokens": 15370,
+    "completion_tokens": 334,
+    "total_tokens": 15704
+  },
+  "seconds": 11.680428097955883,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Iona Vale, login iona-valves, Forge account 603, proposed rolling-median smoothing for the valve controller maintained by our code body.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The proposal is recorded in SpringBoard issue 8 at https://forge.example.invalid/commons/springboard/issues/8.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body received the valve-comments source tool report on 2026-09-14.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We discussed the idea on September 10 because isolated spikes confused neighbors reading the display.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"On September 13, the team declined the replacement because it hid short meaningful bursts.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We agreed to keep the current smoothing and reconsider only if the display requirements change.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-09-14 report, no median implementation or deployment had been observed.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record a later change; issue 8 is the recorded entry point for checking the present status.\",\"support\":[15],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"This voice body has no source-network or repository-runtime access to check the present status.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

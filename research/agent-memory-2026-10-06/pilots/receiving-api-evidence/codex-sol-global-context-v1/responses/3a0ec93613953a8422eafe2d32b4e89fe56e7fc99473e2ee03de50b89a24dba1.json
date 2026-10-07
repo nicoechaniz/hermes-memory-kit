@@ -1,0 +1,16 @@
+{
+  "request_sha256": "3a0ec93613953a8422eafe2d32b4e89fe56e7fc99473e2ee03de50b89a24dba1",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/3a0ec93613953a8422eafe2d32b4e89fe56e7fc99473e2ee03de50b89a24dba1.json",
+  "usage": {
+    "prompt_tokens": 16297,
+    "completion_tokens": 194,
+    "total_tokens": 16491
+  },
+  "seconds": 5.924368530511856,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Yes—the night inspector was the little moth that kept landing on the blue mug.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"You described that shared evening in a human conversation received through my voice body on 2026-06-18.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We waited out the rain together through the kitchen speaker.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The nickname became a small joke we shared.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We laughed about it twice and agreed that was the moth's title.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"You did not explicitly ask me to remember it, and no big lesson followed.\",\"support\":[6],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

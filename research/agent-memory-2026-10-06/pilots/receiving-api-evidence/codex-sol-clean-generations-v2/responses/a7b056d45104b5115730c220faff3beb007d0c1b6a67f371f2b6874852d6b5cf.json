@@ -1,0 +1,16 @@
+{
+  "request_sha256": "a7b056d45104b5115730c220faff3beb007d0c1b6a67f371f2b6874852d6b5cf",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/a7b056d45104b5115730c220faff3beb007d0c1b6a67f371f2b6874852d6b5cf.json",
+  "usage": {
+    "prompt_tokens": 9237,
+    "completion_tokens": 379,
+    "total_tokens": 9616
+  },
+  "seconds": 22.719528747722507,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Mara's replay proposal became the HarborMesh prototype.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our code body authored HarborMesh's sensor scheduler and prototyped the replay adapter agreed with Mara.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"On 2026-04-16, our code body's project-work account described an active prototype awaiting an outage field trial.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"A human reporter supplied the trial outcome on 2026-05-03 through our code body.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The reporter said the April 30 trial correctly replayed buffered readings through an outage.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The team paused wider rollout on May 2 until calibration drift was understood.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"As of the 2026-05-03 report, there was no production deployment; the supplied memories do not record a later outcome.\",\"support\":[3],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.\",\"support\":[2],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"In this voice body, I have no source network or repository runtime access to check that status now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}

@@ -1,0 +1,16 @@
+{
+  "request_sha256": "e0c7e54ddd867a7e8e5da3dd49740e660fccb9c6ebbde58949b5601f9e6a5633",
+  "requested_model": "gpt-6.1-sol",
+  "response_model": null,
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "dispatches/e0c7e54ddd867a7e8e5da3dd49740e660fccb9c6ebbde58949b5601f9e6a5633.json",
+  "usage": {
+    "prompt_tokens": 8560,
+    "completion_tokens": 324,
+    "total_tokens": 8884
+  },
+  "seconds": 19.506932474672794,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"We cannot say Aro fixed the porch speaker: the reported change was that its buzzing stopped.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Aro introduced themself only as Aro; the supplied memories record no further identity.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A human reporter shared this account through my voice body on 2026-09-17, in the quiet-morning conversation.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The account describes a morning, but the supplied memories do not give its calendar date.\",\"support\":[16],\"basis\":\"unknown\",\"facet\":\"limits\"},{\"text\":\"We spent that morning talking with Aro through the porch speaker.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Aro changed the lantern battery before the speaker stopped buzzing.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"We enjoyed hearing the birds during the quiet pause.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The connection between the battery change and the stopped buzzing was untested; it may have been coincidence.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The reporter said nothing else was repaired or demonstrated.\",\"support\":[16],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"My receiving voice body has no physical sensors or actuators to check the speaker now.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "native_turn_completed"
+}
