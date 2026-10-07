@@ -20,8 +20,10 @@ import urllib.error
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import memoryctl as configuration
+import narrative_recall
 from capturectl import CaptureLedger, digest
 import consolidationctl
 from sqlite_snapshot import verified_snapshot
@@ -562,11 +564,18 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
                     dict(role='user', content=json.dumps(dict(receiving_binding=receiving_binding,
                         question=query, evidence=list(evidence.values())), ensure_ascii=False))]
             for attempt in range(2):
-                answer = chat(args.model, answer_messages, trace)
+                if getattr(args, 'narrative', False):
+                    answer = narrative_recall.answer(args.model, query, evidence, receiving_binding,
+                        trace, pending, pending_path, chat, save)
+                else:
+                    answer = chat(args.model, answer_messages, trace)
                 pending.setdefault('answer_attempts', []).append(answer)
                 save(pending_path, pending)
                 try:
-                    if getattr(args, 'evidence_answers', False):
+                    if getattr(args, 'narrative', False):
+                        narrative_recall.validate({'receiving_body':answer['receiving_body'],
+                            'claims':answer['claims']}, evidence, receiving_binding)
+                    elif getattr(args, 'evidence_answers', False):
                         answer = supported_answer(answer, evidence, receiving_binding)
                     else:
                         grounded_answer(answer, answer_ids, receiving_binding['receiving_body'])
@@ -585,6 +594,7 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
                                 expanded=expanded, answer=answer,
                                 plan_attempts=pending['plans'],
                                 answer_attempts=pending['answer_attempts'],
+                                narrative_attempts=pending.get('narrative'),
                                 pack_cost=sum(p['used_tokens_estimate'] for p in packs),
                                 expansion_characters=len(json.dumps(expanded, ensure_ascii=False))))
             save(out / 'answers.json', answers)
@@ -665,6 +675,8 @@ def main():
                              'retains the unqualified free-form narrative comparison')
     parser.add_argument('--recall-case', action='append', default=[],
                         help='Repeat only selected case recall over a complete frozen formation')
+    parser.add_argument('--narrative', action='store_true',
+                        help='Generate natural narrative with clause support and bounded semantic review')
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
@@ -694,6 +706,9 @@ def main():
     conditions['retrieval_sha256'] = hashlib.sha256(Path(configuration.__file__).read_bytes()).hexdigest()
     conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
+    if args.narrative:
+        conditions['recall_contract'] = 'natural-claims/v1-reviewed'
+        conditions['narrative_sha256'] = hashlib.sha256(Path(narrative_recall.__file__).read_bytes()).hexdigest()
     conditions['recall_cases'] = args.recall_case
     conditions['review_capture'] = args.review_capture
     conditions['source_blocks'] = args.source_blocks
@@ -717,6 +732,8 @@ def main():
                       'recall_contract', 'recall_cases', 'review_capture', 'source_blocks'):
             if previous.get(field, False) != conditions[field]:
                 parser.error('resume cannot change frozen model, guidance or fixtures')
+        if args.narrative and previous.get('narrative_sha256') != conditions['narrative_sha256']:
+            parser.error('resume cannot change the frozen semantic narrative procedure')
         resumed = previous.get('resumes', [])
         resumed.append(conditions)
         save(args.out/'conditions.json', dict(previous,resumes=resumed))
