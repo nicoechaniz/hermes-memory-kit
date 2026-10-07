@@ -1,0 +1,25 @@
+[
+  {
+    "previous": {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b",
+      "effort": "high",
+      "output_limit": 12000,
+      "provider_format": "plain",
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "dispatcher_sha256": "6ff6d1cf94fa47f08e2718ad57d677e706b6295ead6899fbda7a644461d6d72c",
+      "qualification": false
+    },
+    "adopted": {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b",
+      "effort": "high",
+      "output_limit": 12000,
+      "provider_format": "plain",
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "dispatcher_sha256": "e53ce78b6928b9fae86059d2a42b1050bd03bb27926e3d9f871c76906f4b0e00",
+      "qualification": false,
+      "timeout_seconds": 300,
+      "max_attempts_per_request": 2
+    },
+    "scope": "explicit transport-only adoption; model messages/schema/evidence and receiving procedure remain frozen"
+  }
+]

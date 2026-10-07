@@ -166,7 +166,11 @@ class FileExchange:
                 response_format_sha256=pilot.digest(schema),prompt_hash=pilot.digest(messages)))
         trace.finish(call,dict(state='completed',response_model=response.get('response_model'),
             usage=response.get('usage'),seconds=response.get('seconds'),
-            dispatch_receipt=response['dispatch_receipt'],response_content=content))
+            dispatch_receipt=response['dispatch_receipt'],response_content=content,
+            finish_reason=response.get('finish_reason')))
+        if response.get('finish_reason') == 'length':
+            trace.finish(call,dict(parse_error='incomplete_response'))
+            return {'_invalid_json':content, '_finish_reason':'length'}
         try:return json.loads(content)
         except json.JSONDecodeError:
             trace.finish(call,dict(parse_error='invalid_json'))

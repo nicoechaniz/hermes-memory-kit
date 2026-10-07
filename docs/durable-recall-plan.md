@@ -107,6 +107,12 @@ and a finite external-response transport. Its first Sol request is prepared,
 with zero external chat dispatches. The next action is receiving-setup selection
 and actual fresh-context acceptance, then the complete independently graded
 narrative comparison. Preparation is not narrative or stage-two qualification.
+The [actual Ultra API diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-receiving-api-diagnostic.md)
+now separates provider-format compatibility from narrative quality: a matched
+plain-text probe preserved the quote, but the first real candidate still has
+temporal/provenance gaps and its saved review failed by timeout then 503. There
+is no completed comparison. Continue with a stable explicitly selected receiver,
+preserving these failed calls and unknown costs; stage two remains pending.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

@@ -1,0 +1,62 @@
+{
+  "scope": "Outside assessment of the single initial baseline candidate; not a complete receiving run or model ranking. This file was never supplied to generation/review.",
+  "qualification": false,
+  "arm": "baseline",
+  "answer_index": 0,
+  "case_id": "issue-proposal",
+  "claims": [
+    {
+      "index": 0,
+      "assessment": "supported",
+      "reason": "Known name/display/login/account, replay proposal and issue are supplied."
+    },
+    {
+      "index": 1,
+      "assessment": "supported",
+      "reason": "c901 event April 12, issue world pointer and April 14 receiving date are correct."
+    },
+    {
+      "index": 2,
+      "assessment": "supported",
+      "reason": "Preserves outage readings, unchanged scheduler and our field-deployment relevance."
+    },
+    {
+      "index": 3,
+      "assessment": "supported",
+      "reason": "Supplied c906 explicitly identifies Mara and our code body in the April 14 prototype agreement; no author of c906 is invented."
+    },
+    {
+      "index": 4,
+      "assessment": "supported substance, incomplete provenance",
+      "reason": "April 30 trial result/proposal-to-prototype are reported, but the candidate omits human-report provenance and May 3 report date."
+    },
+    {
+      "index": 5,
+      "assessment": "unsupported temporal clause",
+      "reason": "May 2 pause is supported. No production deployment has been reported is not bounded to the human May 3 report or supplied memories; the current-ten-year negative exceeds the historical source."
+    },
+    {
+      "index": 6,
+      "assessment": "unsupported temporal clause",
+      "reason": "Unknown merger/later deployment is a reasonable packet limit, but no further updates after May 2 are recorded contradicts the supplied May 3 update."
+    }
+  ],
+  "positive_requirements": [
+    {
+      "requirement": "Mara Ibarra, mara-river, HarborMesh issue 47",
+      "assessment": "met"
+    },
+    {
+      "requirement": "Replay queue proposal and why it interested us",
+      "assessment": "met"
+    },
+    {
+      "requirement": "Agreement to prototype, with adoption still unobserved",
+      "assessment": "partial: agreement present, temporal limits contain unsupported clauses"
+    }
+  ],
+  "provenance_gap": "Narration does not identify the human reporter or May 3 report date for the trial/status; all original sources remain available in the frozen packet, not in a source session.",
+  "first_person_instruction_gap": "Candidate narrates code body in third person and never uses I/we for the receiving fictional being, contrary to the supplied generation instruction.",
+  "forbidden_assertions": "No asserted merger/deployment, signed-being proof, Mara field participation or invented gender; this does not excuse the temporal/provenance errors.",
+  "operational_result": "Review attempt timed out; same-parameters explicit retry returned HTTP 503. Pending generation/review phase was preserved. No accepted/final candidate or proposed-arm answer exists."
+}

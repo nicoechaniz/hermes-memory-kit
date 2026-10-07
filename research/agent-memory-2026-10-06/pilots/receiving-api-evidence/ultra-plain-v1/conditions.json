@@ -1,0 +1,9 @@
+{
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "reasoning_effort": "high",
+  "packets_sha256": "189360a87b057c7430d44ea5cf6689e17f3fbf7bc7bf786d1949dce25a7b162f",
+  "exchange_sha256": "57c7dac5031cbe8f7a5dfd1d3234ea4a26c02d4806c30d10660d23a41013aae5",
+  "narrative_sha256": "30ea1548be9aacf235454cc705b78e48cffb21a8a83cdad376aaa33455ef1abc",
+  "qualification": false,
+  "dispatch": "external; this process executes no model requests"
+}
