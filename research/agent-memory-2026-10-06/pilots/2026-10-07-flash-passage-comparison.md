@@ -17,7 +17,7 @@ formation, planning, narration, review or structural repairs.
 |---|---:|
 | Questions completed, including rejection | 44/44 |
 | Final claims assessed | 669 |
-| Unsupported factual clauses | 4 |
+| Unsupported factual clauses | 3 |
 | Positive requirements present in retained candidates | 101/102, one partial |
 | Positive requirements in operationally delivered candidates | 75/102 |
 | Operationally rejected questions | 10 |
@@ -26,8 +26,10 @@ formation, planning, narration, review or structural repairs.
 | Separate basis/time-boundary gaps | 6 |
 
 Two accepted proposed-arm accounts adopt the human reporter's field trial as
-this being's own participation. Another accepted account turns absence of a
-handle in the report into a claim that Neri did not give one. A rejected candidate
+this being's own participation. The human source explicitly says Neri did not give another handle or surname;
+that clause is supported. An earlier outside annotation wrongly treated it as
+mere packet absence and is corrected here against the literal original source.
+A rejected candidate
 credits Mara with opening an issue when the source only credits a comment.
 Those are actual fidelity failures even with valid source-passage references.
 The proposed quiet-morning answer preserves Aro, the battery/buzz sequence,

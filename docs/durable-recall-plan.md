@@ -184,7 +184,7 @@ needs relevance adjudication; it is not full narrative qualification. Native
 review/repair transport preserves explicit task turns without loading history.
 Qwen is deferred under the current quota constraint.
 The [complete Flash passage comparison](../research/agent-memory-2026-10-06/pilots/2026-10-07-flash-passage-comparison.md)
-now finishes all 44 questions: 669 claims assessed, four unsupported clauses,
+now finishes all 44 questions: 669 claims assessed, three unsupported clauses,
 one partial positive requirement and ten operational rejections. It fails
 qualification. The next frozen candidate keeps Flash initial narration and uses
 native Codex Sol low for review/corrections; all roles, budgets and raw responses

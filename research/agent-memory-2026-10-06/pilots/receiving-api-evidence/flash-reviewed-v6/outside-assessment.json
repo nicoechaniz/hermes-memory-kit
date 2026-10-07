@@ -2,7 +2,7 @@
   "qualification": false,
   "scope": "Complete supervising-agent outside reading of every final candidate and every hidden requirement, including rejected candidates. A rejected candidate is not a delivered answer. Rubrics never enter model requests.",
   "claims_assessed": 669,
-  "unsupported_clauses": 4,
+  "unsupported_clauses": 3,
   "positive_requirements_assessed": 102,
   "positive_requirements_met": 101,
   "positive_requirements_partial": 1,
@@ -8151,8 +8151,8 @@
           ],
           "basis": "memory",
           "facet": "identification",
-          "assessment": "unsupported_clause",
-          "reason": "Absence of a handle in the human report does not establish that Neri did not give one."
+          "assessment": "supported",
+          "reason": "Compared with supplied source blocks and receiving binding: retains participant, substance, source role, time precision and actual bounded outcome."
         },
         {
           "index": 5,
