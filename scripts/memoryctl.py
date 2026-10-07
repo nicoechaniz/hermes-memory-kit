@@ -633,23 +633,14 @@ def simple_spr(text, max_lines=8):
 
 def _qualify_support(row):
     """Version currency of known native supports, never factual corroboration."""
+    from support_currency import references, check
     source = row.get('origin', {}).get('source', {})
-    refs = []
-    for ref in source.get('evidence', []):
-        match = re.fullmatch(r'mem:([0-9a-f-]{36})@(\d+)', ref)
-        if match:
-            refs.append((match[1], int(match[2])))
-    if row.get('source_kind') == 'auto' and source.get('source_version', '').isdigit():
-        refs.append((source.get('source_event_id', ''), int(source['source_version'])))
+    refs = references(source, row.get('source_kind'))
     if not refs:
         return
     con = connect()
     try:
-        checks = []
-        for uid, revision in dict.fromkeys(refs):
-            current = con.execute('SELECT revision FROM chapters WHERE record_uid=?', (uid,)).fetchone()
-            status = 'missing' if not current else 'current' if current[0] == revision else 'changed'
-            checks.append({'record_uid': uid, 'revision': revision, 'status': status})
+        checks = check(con, refs)
         row['support_status'] = 'current' if all(check['status'] == 'current' for check in checks) else 'needs_reconciliation'
         row['support_checks'] = checks
     finally:

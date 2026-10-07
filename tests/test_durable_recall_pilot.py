@@ -227,7 +227,31 @@ def test_truncated_response_preserves_usage_bytes_and_explicit_reasoning_budget(
     trace.narrative_reasoning_effort='high';trace.narrative_reasoning_budget=2048
     value=pilot.chat('fixture',[],trace)
     assert value=={'_invalid_json':content,'_finish_reason':'length'}
-    assert requests[0]['reasoning_budget']==2048 and requests[0]['max_tokens']==6000
+    assert requests[0]['reasoning_budget']==2048 and requests[0]['max_tokens']==12000
     row=json.loads(trace.path.read_text())[0]
     assert row['usage']['total_tokens']==6000 and row['response_content']==content
     assert row['parse_error']=='incomplete_response' and row['requested_reasoning_budget']==2048
+    assert row['requested_max_tokens']==12000
+
+
+def test_reader_upgrade_requires_explicit_comparable_formation(pilot):
+    source=dict(model='fixture',baseline_commit='old',guidance_hashes={'proposed':'fixed'},
+        fixture_hash='fictional',reasoning_effort='low',embedding_config={'provider':'fixed'},
+        retrieval_profile='general',rerank_provider='none',review_capture=False,source_blocks=True,
+        retrieval_sha256='old-reader')
+    conditions=dict(source,retrieval_sha256='new-reader')
+    with pytest.raises(ValueError,match='explicit'):
+        pilot.formation_compatibility(source,conditions)
+    assert pilot.formation_compatibility(source,conditions,True)['explicit_upgrade'] is True
+    with pytest.raises(ValueError,match='identical'):
+        pilot.formation_compatibility(source,dict(conditions,fixture_hash='different'),True)
+
+
+def test_formation_preservation_includes_originals_and_history(pilot,tmp_path):
+    memory=pilot.memory_at(tmp_path/'memory')
+    cid=memory.add_text('episodes','A shared moment','Original meaningful source.')
+    original=pilot.formation_state(memory.DB_PATH)
+    memory.update_chapter(cid,content='Original source plus dated correction.')
+    changed=pilot.formation_state(memory.DB_PATH)
+    assert changed['chapters']!=original['chapters']
+    assert changed['chapter_revisions']['rows']>original['chapter_revisions']['rows']

@@ -83,8 +83,16 @@ decide what deserves retention.
 Stage 1 is complete with the scope and evidence recorded in the
 [qualification report](../research/agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md).
 Exact attributed support is the qualified answer form; free-form narrative
-fidelity is not established. Stage 2 is the next implementation task and can reuse the shipped
-finite capture/consolidation machinery; it does not require another dream engine.
+fidelity is not established. The current human-directed goal first requires a
+complete natural-narrative qualification under the final receiving contract,
+then the three stage-two consolidation passes. The expanded fictional contract
+has eighteen capture cases, twenty-two questions, sixty essential checks and
+fifty-one answer requirements, including four new cases. Both policy arms use
+comparable conditions and hidden rubrics outside formation and answer prompts.
+The [natural recall procedure](narrative-recall-pilot.md) preserves failed
+diagnostics separately from qualification. Stage 2 can reuse the shipped finite
+capture/consolidation APIs, including per-account support sets and transitive
+source currency; passing their unit tests does not satisfy stage-two exit criteria.
 Stages 3 and 4 complete the healthy, portable HMK baseline before the native
 coexistence pilot. Design and preservation inventories may proceed earlier;
 activating native generation must wait for the preceding qualification. These

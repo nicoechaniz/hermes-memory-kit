@@ -1,0 +1,70 @@
+{
+  "baseline": {
+    "recall": {
+      "calls": 22,
+      "known_prompt_tokens": 30427,
+      "known_completion_tokens": 9645,
+      "known_total_tokens": 40072,
+      "seconds": 115.4288445264101,
+      "missing_usage": 0
+    },
+    "narrative_generation": {
+      "calls": 22,
+      "known_prompt_tokens": 48850,
+      "known_completion_tokens": 28700,
+      "known_total_tokens": 77550,
+      "seconds": 336.16783977579325,
+      "missing_usage": 0
+    },
+    "narrative_review": {
+      "calls": 38,
+      "known_prompt_tokens": 110532,
+      "known_completion_tokens": 61012,
+      "known_total_tokens": 171544,
+      "seconds": 635.7229759348556,
+      "missing_usage": 0
+    },
+    "narrative_revision": {
+      "calls": 16,
+      "known_prompt_tokens": 63938,
+      "known_completion_tokens": 19772,
+      "known_total_tokens": 83710,
+      "seconds": 209.30838848557323,
+      "missing_usage": 0
+    }
+  },
+  "proposed": {
+    "recall": {
+      "calls": 22,
+      "known_prompt_tokens": 33555,
+      "known_completion_tokens": 9060,
+      "known_total_tokens": 42615,
+      "seconds": 109.04375731572509,
+      "missing_usage": 0
+    },
+    "narrative_generation": {
+      "calls": 22,
+      "known_prompt_tokens": 45085,
+      "known_completion_tokens": 27840,
+      "known_total_tokens": 72925,
+      "seconds": 299.0921914950013,
+      "missing_usage": 0
+    },
+    "narrative_review": {
+      "calls": 50,
+      "known_prompt_tokens": 145924,
+      "known_completion_tokens": 83458,
+      "known_total_tokens": 229382,
+      "seconds": 852.1904484499246,
+      "missing_usage": 0
+    },
+    "narrative_revision": {
+      "calls": 25,
+      "known_prompt_tokens": 95333,
+      "known_completion_tokens": 32427,
+      "known_total_tokens": 127760,
+      "seconds": 282.2627545548603,
+      "missing_usage": 0
+    }
+  }
+}

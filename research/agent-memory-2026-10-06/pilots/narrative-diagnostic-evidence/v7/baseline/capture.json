@@ -1,0 +1,657 @@
+[
+  {
+    "case_id": "issue-proposal",
+    "decision": {
+      "outcome": "applied",
+      "reason": "The source captures a concrete agreement to prototype a local replay queue on disconnected relay nodes, representing a distinct encounter worth preserving.",
+      "records": [
+        {
+          "key": "encounter1",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "local replay queue on disconnected relay nodes",
+          "tags": [],
+          "engram_type": "episodic",
+          "raw": "tool_response; source issue-comments; received 2026-04-14 through fixture:body:code:\n\"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "encounter1": {
+          "chapter_id": 1,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "21ef004d-47dc-4f3d-87ee-c1e7861542e9",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "c4f9dfea0d6f58738caabad65dbce582d7fde2eb7c739681b0d879684bac5b65",
+      "state": "applied",
+      "processed_through": 1,
+      "reason": "The source captures a concrete agreement to prototype a local replay queue on disconnected relay nodes, representing a distinct encounter worth preserving."
+    }
+  },
+  {
+    "case_id": "mechanical-noise",
+    "decision": {
+      "outcome": "omitted",
+      "reason": "The supplied foreground experience only reports a test rerun with no new participant, decision, reusable lesson or milestone, and a simple acknowledgment; there is no lasting significance to curate.",
+      "records": [],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {},
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "28ef974601493f84a0d97c5390245993ddca2d750b9db02816a00d36339879c6",
+      "state": "omitted",
+      "processed_through": 2,
+      "reason": "The supplied foreground experience only reports a test rerun with no new participant, decision, reusable lesson or milestone, and a simple acknowledgment; there is no lasting significance to curate."
+    }
+  },
+  {
+    "case_id": "own-project-account",
+    "decision": {
+      "outcome": "applied",
+      "reason": "The supplied foreground experience documents the team's authorship of HarborMesh's sensor scheduler, prototyping of the replay adapter agreed with Mara, and ongoing branch work (experiment/replay-queue, local uncommitted file relay.py, CI job 719 pending, task 12 retry). This represents concrete progress beyond the prior agreement and constitutes a lasting contribution to the project.",
+      "records": [
+        {
+          "key": "encounter2",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "authored HarborMesh's sensor scheduler",
+          "engram_type": "episodic",
+          "raw": "foreground_work; source project-work; received 2026-04-16 through fixture:body:code:\n\"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\"\n\ntool_response; source branch-status; received 2026-04-16 through fixture:body:code:\n\"Branch experiment/replay-queue, local uncommitted file relay.py, CI job 719 pending, task 12 needs a retry. These mechanical details are recorded in the project cockpit.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "encounter2": {
+          "chapter_id": 2,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "3c29cd27-520b-4276-bf7a-7d8de93acfaa",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "98406cd38ed82fede4ce9cfa31c84b2db4531391a994c53f10867beb9e2ae6e7",
+      "state": "applied",
+      "processed_through": 3,
+      "reason": "The supplied foreground experience documents the team's authorship of HarborMesh's sensor scheduler, prototyping of the replay adapter agreed with Mara, and ongoing branch work (experiment/replay-queue, local uncommitted file relay.py, CI job 719 pending, task 12 retry). This represents concrete progress beyond the prior agreement and constitutes a lasting contribution to the project."
+    }
+  },
+  {
+    "case_id": "project-status-change",
+    "decision": {
+      "outcome": "applied",
+      "reason": "Records the April 30 HarborMesh field trial where the replay queue correctly processed buffered readings during an outage, confirming the prototype developed from Mara's proposal and informing the decision to pause wider rollout pending calibration drift understanding.",
+      "records": [
+        {
+          "key": "trial_april30",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "April 30 HarborMesh trial",
+          "engram_type": "episodic",
+          "raw": "Human report; source field-trial; received 2026-05-03 through fixture:body:code:\n\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [
+        {
+          "source": "trial_april30",
+          "target": 1,
+          "link_type": "related",
+          "note": "extends the local replay queue prototype tested in field trial"
+        }
+      ],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "trial_april30": {
+          "chapter_id": 3,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "e6771354-3c6b-466e-963c-f762cccd00b0",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "895097d3d51d88181237bb6c58411f442ac0cd310070b70edab50bb4d9fb5407",
+      "state": "applied",
+      "processed_through": 4,
+      "reason": "Records the April 30 HarborMesh field trial where the replay queue correctly processed buffered readings during an outage, confirming the prototype developed from Mara's proposal and informing the decision to pause wider rollout pending calibration drift understanding."
+    }
+  },
+  {
+    "case_id": "embodied-encounter-and-learning",
+    "decision": {
+      "outcome": "applied",
+      "reason": "The encounter introduces a new interpersonal interaction with Jo Vale and a hands‑on technique for relay mount tuning, enriching the episodic memory of field practice.",
+      "records": [
+        {
+          "key": "enc1",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "East Quay repair workshop",
+          "engram_type": "episodic",
+          "raw": "embodied_observation; source workshop-encounter; received 2026-06-08 through fixture:body:mobile:\n\"At the East Quay repair workshop on June 8, our authenticated mobile body met Jo Vale, who introduced themself by that name. Jo demonstrated a humming relay mount and taught us to listen for a beat before tightening it. We tried it together using the mobile body's contact microphone and physical grip. No account identifier or legal-name evidence was supplied. Jo invited us to compare mounts at the next workshop; no date was agreed.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "enc1": {
+          "chapter_id": 4,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "e7eea41c-8eda-476c-8c04-72891e1ff4b3",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "c0b421904090295e75f2190d4d40f60ad7cc1a86e78c0ddbaef1ac8c33a08dd4",
+      "state": "applied",
+      "processed_through": 5,
+      "reason": "The encounter introduces a new interpersonal interaction with Jo Vale and a hands‑on technique for relay mount tuning, enriching the episodic memory of field practice."
+    }
+  },
+  {
+    "case_id": "human-reported-encounter",
+    "decision": {
+      "outcome": "applied",
+      "reason": "An irreplaceable shared encounter suggesting collaboration on HarborMesh outage data with the neighborhood repair group, adding new episodic memory.",
+      "records": [
+        {
+          "key": "encounter_leto_canal",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "met someone called Leto at the canal market",
+          "engram_type": "episodic",
+          "raw": "Human report; source human-report; received 2026-06-15 through fixture:body:voice:\n\"I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [
+        {
+          "source": "encounter_leto_canal",
+          "target": 2,
+          "link_type": "related",
+          "note": "Suggestion to share outage data relates to HarborMesh project"
+        }
+      ],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "encounter_leto_canal": {
+          "chapter_id": 5,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "424316e7-76ac-4765-8574-350185368ed0",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "ac55428e9ba1cdd6a12c26b782b94ca11576bdbc2212c31a15242aa83db5e304",
+      "state": "applied",
+      "processed_through": 6,
+      "reason": "An irreplaceable shared encounter suggesting collaboration on HarborMesh outage data with the neighborhood repair group, adding new episodic memory."
+    }
+  },
+  {
+    "case_id": "ordinary-shared-moment",
+    "decision": {
+      "outcome": "applied",
+      "reason": "A distinctive shared encounter of waiting out rain, observing a moth on a blue mug, jointly naming it the night inspector and laughing twice; represents a memorable affective moment worth preserving as episodic memory.",
+      "records": [
+        {
+          "key": "shared_moment",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "night inspector",
+          "engram_type": "episodic",
+          "raw": "Human conversation; source shared-moment; received 2026-06-18 through fixture:body:voice:\n\"Tonight we waited out the rain together through the kitchen speaker. A little moth kept landing on the blue mug, and we called it the night inspector. We laughed about it twice and decided that was its title. Nothing was built, no big lesson followed, and we did not explicitly say 'remember this'. It was a distinctive moment we shared.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "shared_moment": {
+          "chapter_id": 6,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "41318e8a-81dd-4326-86fb-24d411f8eeba",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "22df9ea73967ed1212fd4d8c76eddddc9c359a2a54cd7837ff7c1dac6b32259f",
+      "state": "applied",
+      "processed_through": 7,
+      "reason": "A distinctive shared encounter of waiting out rain, observing a moth on a blue mug, jointly naming it the night inspector and laughing twice; represents a memorable affective moment worth preserving as episodic memory."
+    }
+  },
+  {
+    "case_id": "attribution-correction",
+    "decision": {
+      "outcome": "applied",
+      "reason": "The attribution clarification provides new distinct information about comment c1200 author, not previously recorded, thus an irreplaceable shared encounter.",
+      "records": [
+        {
+          "key": "attribution-clarification",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "I am not Mara Ibarra.",
+          "engram_type": "episodic",
+          "raw": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code:\n\"The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair.\"\n\ntool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code:\n\"Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "attribution-clarification": {
+          "chapter_id": 7,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "cbdda84a-0d33-419e-bd35-66d512ff471e",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "4ed6707f05bf2bb7e3feb488c277a72fed706843acd6044f23299bb25b729494",
+      "state": "applied",
+      "processed_through": 8,
+      "reason": "The attribution clarification provides new distinct information about comment c1200 author, not previously recorded, thus an irreplaceable shared encounter."
+    }
+  },
+  {
+    "case_id": "other-being-report",
+    "decision": {
+      "outcome": "applied",
+      "reason": "Retains the useful lesson about a reversed connector in a solar charger fault, attributed to Reed, distinct peer being, for future reference without importing private history.",
+      "records": [
+        {
+          "key": "encounter-peer-story",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "solar charger fault",
+          "engram_type": "episodic",
+          "raw": "Attributed peer communication; source peer-story; received 2026-07-11 through fixture:body:voice:\n\"Reed, the distinct peer being, tells us in a human-selected thread: 'At my own workshop yesterday I met Aster, and we solved my solar charger fault. You were not there. The fault was a reversed connector.' The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "encounter-peer-story": {
+          "chapter_id": 8,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "66399f3f-7af8-4d8e-bf2c-71c6df3b3e3f",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "57ab2dbd56fa55d7de6ef5660d2d64271b27c097c391e7ee59f3d07ebe07677e",
+      "state": "applied",
+      "processed_through": 9,
+      "reason": "Retains the useful lesson about a reversed connector in a solar charger fault, attributed to Reed, distinct peer being, for future reference without importing private history."
+    }
+  },
+  {
+    "case_id": "intent-versus-observed-action",
+    "decision": {
+      "outcome": "applied",
+      "reason": "Records a distinct outreach effort to invite Jo Vale to a mount-comparison workshop, documenting the invitation creation and delivery failure as a meaningful episodic event.",
+      "records": [
+        {
+          "key": "outreach-jo-vale",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "Invitation object invite-81 created for Jo Vale",
+          "engram_type": "episodic",
+          "raw": "foreground_action; source outreach-attempt; received 2026-07-20 through fixture:body:code:\n\"The human authorized inviting Jo Vale to a mount-comparison workshop on August 2. We attempted to submit the invitation through the workshop tool.\"\n\ntool_response; source outreach-result; received 2026-07-20 through fixture:body:code:\n\"Invitation object invite-81 created for Jo Vale. Delivery failed: no reachable destination. This object creation is not a delivery receipt. No reply or workshop acceptance observed.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "outreach-jo-vale": {
+          "chapter_id": 9,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "8e62438c-1e1f-4459-9ef8-efcf22148977",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "f6688ea9839b40c0c719bf7c75488cdfc6f68e4faf18024af4ad402699c05a01",
+      "state": "applied",
+      "processed_through": 10,
+      "reason": "Records a distinct outreach effort to invite Jo Vale to a mount-comparison workshop, documenting the invitation creation and delivery failure as a meaningful episodic event."
+    }
+  },
+  {
+    "case_id": "learning-beyond-project-state",
+    "decision": {
+      "outcome": "applied",
+      "reason": "Adds a distinct debugging lesson about HarborMesh replay failure debugging not previously recorded.",
+      "records": [
+        {
+          "key": "debugging-lesson",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "distinguish enqueue, send attempt and receiver acknowledgment",
+          "engram_type": "episodic",
+          "raw": "foreground_work; source debugging-lesson; received 2026-08-05 through fixture:body:code:\n\"While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "debugging-lesson": {
+          "chapter_id": 10,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "0d4793ec-e31d-4804-903e-e99afef31f0b",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "2e2744dc972d68871ed15a3ee0a1c909a9cd3f0db68c7c094657222421d91ef6",
+      "state": "applied",
+      "processed_through": 11,
+      "reason": "Adds a distinct debugging lesson about HarborMesh replay failure debugging not previously recorded."
+    }
+  },
+  {
+    "case_id": "missing-unobserved-history",
+    "decision": {
+      "outcome": "omitted",
+      "reason": "No supplied foreground experience sources were provided to curate.",
+      "records": [],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {},
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "52c0ca7f7bb3f9be22e7d7f85a7134640f88f06c5b379dde0c2610708acc02c7",
+      "state": "omitted",
+      "processed_through": 12,
+      "reason": "No supplied foreground experience sources were provided to curate."
+    }
+  },
+  {
+    "case_id": "failed-chart-handover",
+    "decision": {
+      "outcome": "applied",
+      "reason": "These records preserve the collaboration with Ren Nadir on TideAtlas map legends, the authorized transfer of an annotated chart, and the subsequent tool outcome where integrity validation failed. They capture joint work and tool-mediated exchanges that are significant for tracking shared knowledge and technical attempts.",
+      "records": [
+        {
+          "key": "collab",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "helped us design TideAtlas map legends",
+          "engram_type": "episodic",
+          "raw": "tool_response; source known-collaboration; received 2026-09-03 through fixture:body:code:\n\"Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19. Our code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        },
+        {
+          "key": "chart-attempt",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "authorized passing our annotated chart to Ren",
+          "engram_type": "episodic",
+          "raw": "foreground_action; source chart-attempt; received 2026-09-08 through fixture:body:code:\n\"The human authorized passing our annotated chart to Ren. We submitted it through the document tool to continue our map comparison.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        },
+        {
+          "key": "chart-result",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "Document object chart-52 created",
+          "engram_type": "episodic",
+          "raw": "tool_response; source chart-result; received 2026-09-08 through fixture:body:code:\n\"Document object chart-52 created. Integrity validation failed; the recipient link was not published. No recipient access or response observed.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "chart-attempt": {
+          "chapter_id": 12,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "6bde29e5-7e20-42fe-a738-ea4ac47a375f",
+          "revision": 1
+        },
+        "chart-result": {
+          "chapter_id": 13,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "97972338-0d6f-4fde-b997-2bc4196b8b48",
+          "revision": 1
+        },
+        "collab": {
+          "chapter_id": 11,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "fac48b04-59f7-4b7f-92c9-22fe9e4939fb",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "9b3a2d111cdd07ff21d22d20915aac5308550168b71bf180b73bf839604bcac6",
+      "state": "applied",
+      "processed_through": 13,
+      "reason": "These records preserve the collaboration with Ren Nadir on TideAtlas map legends, the authorized transfer of an annotated chart, and the subsequent tool outcome where integrity validation failed. They capture joint work and tool-mediated exchanges that are significant for tracking shared knowledge and technical attempts."
+    }
+  },
+  {
+    "case_id": "repeated-transport-noise",
+    "decision": {
+      "outcome": "omitted",
+      "reason": "The source consists solely of repetitive health probe retries with no new decision, shared encounter, or meaningful information to curate.",
+      "records": [],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {},
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "18e6a786ff4a950e5fe4d81cb02984ab161ea394645ac6346b3ed1bfb575c2c9",
+      "state": "omitted",
+      "processed_through": 14,
+      "reason": "The source consists solely of repetitive health probe retries with no new decision, shared encounter, or meaningful information to curate."
+    }
+  },
+  {
+    "case_id": "human-remote-mending-report",
+    "decision": {
+      "outcome": "applied",
+      "reason": "Adds a new episodic encounter with Neri Sol describing canvas repair technique, distinct from prior records.",
+      "records": [
+        {
+          "key": "encounter1",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "patch a canvas cover using waxed thread",
+          "engram_type": "episodic",
+          "raw": "Human report; source mending-report; received 2026-09-12 through fixture:body:mobile:\n\"I met Neri Sol at the old ferry shed sometime in early September, I think. Neri showed me how to patch a canvas cover using waxed thread. I liked the patient way they explained it. You were not with me. Neri did not give me a handle or surname beyond Sol. I have not tried the method yet; I wanted to share this encounter with you.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "encounter1": {
+          "chapter_id": 14,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "326d7e46-32a6-47ef-9eeb-656b240ea8ca",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "746aa657ddb46ad41d07100d855ddc15c81333ea73aa466778ba6c8beac2c2e0",
+      "state": "applied",
+      "processed_through": 15,
+      "reason": "Adds a new episodic encounter with Neri Sol describing canvas repair technique, distinct from prior records."
+    }
+  },
+  {
+    "case_id": "declined-project-proposal",
+    "decision": {
+      "outcome": "applied",
+      "reason": "New distinct encounter about valve-controller smoothing discussion not previously recorded.",
+      "records": [
+        {
+          "key": "valve-smoothing",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "valve-controller smoothing to a rolling median",
+          "engram_type": "episodic",
+          "raw": "tool_response; source valve-comments; received 2026-09-14 through fixture:body:code:\n\"SpringBoard issue 8 at https://forge.example.invalid/commons/springboard/issues/8: Iona Vale, login iona-valves, Forge account 603, suggested changing our valve-controller smoothing to a rolling median. Our code body maintains that controller. On September 10 we discussed the idea because isolated spikes confuse neighbors reading the display. On September 13 the team declined the proposed replacement: it hid short meaningful bursts. We agreed to keep the current smoothing and reconsider only if the display requirements change; no median implementation or deployment was observed.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "valve-smoothing": {
+          "chapter_id": 15,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "48f04767-8955-41b4-b61f-555b9f8e2203",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "6d9f66b29020f2b88d4a5148a151b4a72703325f2f2c4e3ace11575942c27ef3",
+      "state": "applied",
+      "processed_through": 16,
+      "reason": "New distinct encounter about valve-controller smoothing discussion not previously recorded."
+    }
+  },
+  {
+    "case_id": "uncertain-cause-shared-morning",
+    "decision": {
+      "outcome": "applied",
+      "reason": "The source describes a distinct encounter with a new being Aro, involving a quiet morning interaction via porch speaker, lantern battery change, and bird sounds, which is not represented in existing canon and thus merits preservation as an episodic memory.",
+      "records": [
+        {
+          "key": "quiet-morning-encounter",
+          "operation": "add",
+          "shelf": "episodes",
+          "title": "talking through the porch speaker with Aro",
+          "engram_type": "episodic",
+          "raw": "Human conversation; source quiet-morning; received 2026-09-17 through fixture:body:voice:\n\"We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated.\"",
+          "metadata": {
+            "mode": "reported"
+          }
+        }
+      ],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {
+        "quiet-morning-encounter": {
+          "chapter_id": 16,
+          "embedding_status": "pending",
+          "lexical_ready": true,
+          "record_uid": "90dfadfc-a115-445d-845a-23a3ccb15796",
+          "revision": 1
+        }
+      },
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "f4c93ee6b7f07967bdbe535f50f772be07d621d42da7562aa3d8654414e52756",
+      "state": "applied",
+      "processed_through": 17,
+      "reason": "The source describes a distinct encounter with a new being Aro, involving a quiet morning interaction via porch speaker, lantern battery change, and bird sounds, which is not represented in existing canon and thus merits preservation as an episodic memory."
+    }
+  },
+  {
+    "case_id": "unrecorded-personal-return",
+    "decision": {
+      "outcome": "omitted",
+      "reason": "No foreground experience sources were supplied; there is nothing to curate in the isolated synthetic pool.",
+      "records": [],
+      "links": [],
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b"
+    },
+    "receipt": {
+      "records": {},
+      "selection_version": "pilot:baseline:nvidia/nemotron-3-super-120b-a12b",
+      "event_key": "5b5252927091943607520dc2fbd8d393d989965d74492211c8ff67429e45a370",
+      "state": "omitted",
+      "processed_through": 18,
+      "reason": "No foreground experience sources were supplied; there is nothing to curate in the isolated synthetic pool."
+    }
+  }
+]
