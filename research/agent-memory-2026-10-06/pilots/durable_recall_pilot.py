@@ -793,7 +793,7 @@ def main():
     conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
     if args.narrative:
-        conditions['recall_contract'] = 'natural-claims/v9-constrained-json'
+        conditions['recall_contract'] = 'natural-claims/v10-resumable-receiving'
         conditions['narrative_reasoning_effort'] = args.narrative_reasoning_effort
         conditions['narrative_reasoning_budget'] = args.narrative_reasoning_budget
         conditions['narrative_max_tokens'] = args.narrative_max_tokens

@@ -80,6 +80,12 @@ def test_bounded_unsupported_narrative_preserves_pending_instead_of_claiming_suc
     assert len(saved['narrative']['generations'])==3
     assert 'accepted' not in saved['narrative']
     assert trace.phase=='recall'
+    # The bounded semantic rejection is terminal for this frozen comparison;
+    # resuming cannot quietly grant another three generation rounds.
+    def unexpected_call(*args):pytest.fail('Terminal rejection repeated a provider call.')
+    with pytest.raises(nr.NarrativeRejected,match='two evidence-grounded revisions'):
+        nr.answer('fixture','Did Jo get it?',{1:{}},body,trace,saved,path,
+                  unexpected_call,lambda p,v:p.write_text(json.dumps(v)))
 
 
 def test_nested_envelopes_keep_human_speaker_separate_from_receiving_mobile_body():
@@ -199,3 +205,114 @@ def test_json_schema_bounds_sentences_and_review_without_certifying_semantics():
     # API constraints supplement independent membership/meaning/coverage checks.
     with pytest.raises(ValueError,match='split compound'):
         nr.validate(account('x'*221,[4]),{4:{}},{'receiving_body':'voice'})
+
+
+def test_review_timeout_resumes_saved_candidate_without_another_generation(tmp_path):
+    candidate=account('Delivery failed.',[1]);evidence={1:{'text':'Delivery failed.'}}
+    body={'receiving_body':'voice'};trace=SimpleNamespace(phase='recall')
+    checkpoint=tmp_path/'pending.json';pending={};calls=[]
+    def save(path,value):path.write_text(json.dumps(value))
+    def first(model,messages,trace):
+        calls.append(trace.phase)
+        if trace.phase=='narrative_generation':return candidate
+        raise TimeoutError('Provider response unavailable; usage unknown.')
+    with pytest.raises(TimeoutError):
+        nr.answer('fixture','What happened?',evidence,body,trace,pending,checkpoint,first,save)
+    assert trace.phase=='recall'
+    saved=json.loads(checkpoint.read_text())
+    assert saved['narrative']['generations']==[candidate]
+    assert saved['narrative']['reviews']==[]
+    def resumed(model,messages,trace):
+        calls.append(trace.phase)
+        assert json.loads(messages[1]['content'])['candidate']==candidate
+        return verdict('supported','Actual failed delivery.',candidate,'Delivery failed.')
+    result=nr.answer('fixture','What happened?',evidence,body,trace,saved,checkpoint,resumed,save)
+    assert result['claims']==candidate['claims']
+    assert calls==['narrative_generation','narrative_review','narrative_review']
+    assert saved['narrative']['generations']==[candidate]
+
+
+@pytest.mark.parametrize('boundary', ['generation_validate','review_validate','assess'])
+def test_persisted_response_or_assessment_is_not_called_again(tmp_path,boundary):
+    candidate=account('Delivery failed.',[1]);evidence={1:{'text':'Delivery failed.'}}
+    checkpoint=tmp_path/'pending.json';calls=[];interrupted=False
+    def chat(model,messages,trace):
+        calls.append(trace.phase)
+        return candidate if trace.phase=='narrative_generation' else verdict(
+            'supported','Failed delivery.',candidate,'Delivery failed.')
+    def save(path,value):
+        nonlocal interrupted
+        path.write_text(json.dumps(value))
+        if not interrupted and value['narrative']['progress']['phase']==boundary:
+            interrupted=True
+            raise RuntimeError('Process stopped after durable write.')
+    trace=SimpleNamespace(phase='recall');body={'receiving_body':'voice'}
+    with pytest.raises(RuntimeError):
+        nr.answer('fixture','What happened?',evidence,body,trace,{},checkpoint,chat,save)
+    assert trace.phase=='recall'
+    saved=json.loads(checkpoint.read_text())
+    nr.answer('fixture','What happened?',evidence,body,trace,saved,checkpoint,chat,save)
+    assert calls==['narrative_generation','narrative_review']
+    assert len(saved['narrative']['generations'])==len(saved['narrative']['reviews'])==1
+
+
+def test_semantic_revision_retains_critique_and_its_budget_across_interruption(tmp_path):
+    bad=account('Jo received it.',[1]);good=account('Delivery failed.',[1])
+    evidence={1:{'text':'Delivery failed.'}};body={'receiving_body':'voice'}
+    checkpoint=tmp_path/'pending.json';calls=[];interrupted=False
+    def chat(model,messages,trace):
+        calls.append(trace.phase)
+        if trace.phase=='narrative_generation':return bad
+        if trace.phase=='narrative_revision':
+            assert 'Receipt unknown.' in json.dumps(messages)
+            return good
+        candidate=json.loads(messages[1]['content'])['candidate']
+        return verdict('unsupported','Receipt unknown.',bad) if candidate==bad else verdict(
+            'supported','Observed failure.',good,'Delivery failed.')
+    def save(path,value):
+        nonlocal interrupted
+        path.write_text(json.dumps(value))
+        p=value['narrative']['progress']
+        if not interrupted and p['revision']==1 and p['phase']=='generation':
+            interrupted=True;raise RuntimeError('Stopped before revision.')
+    trace=SimpleNamespace(phase='recall')
+    with pytest.raises(RuntimeError):
+        nr.answer('fixture','Did Jo get it?',evidence,body,trace,{},checkpoint,chat,save)
+    saved=json.loads(checkpoint.read_text())
+    result=nr.answer('fixture','Did Jo get it?',evidence,body,trace,saved,checkpoint,chat,save)
+    assert result['claims']==good['claims']
+    assert calls==['narrative_generation','narrative_review','narrative_revision','narrative_review']
+    assert saved['narrative']['generations']==[bad,good]
+
+
+def test_terminal_rejection_does_not_reset_attempts_on_resume(tmp_path):
+    candidate=account('Delivery failed.',[1]);checkpoint=tmp_path/'pending.json'
+    responses=iter([candidate,{'bad':'review'}, {'bad':'review again'}]);calls=[]
+    def chat(*args):calls.append(args[2].phase);return next(responses)
+    save=lambda path,value:path.write_text(json.dumps(value))
+    args=('fixture','What happened?',{1:{'text':'Delivery failed.'}},
+          {'receiving_body':'voice'},SimpleNamespace(phase='recall'))
+    with pytest.raises(nr.NarrativeRejected):nr.answer(*args,{},checkpoint,chat,save)
+    saved=json.loads(checkpoint.read_text())
+    with pytest.raises(nr.NarrativeRejected):nr.answer(*args,saved,checkpoint,chat,save)
+    assert calls==['narrative_generation','narrative_review','narrative_review']
+    assert len(saved['narrative']['generations'])==1 and len(saved['narrative']['reviews'])==2
+
+
+def test_changed_model_and_legacy_unfinished_state_preserve_work(tmp_path):
+    candidate=account('Delivery failed.',[1]);evidence={1:{'text':'Delivery failed.'}}
+    checkpoint=tmp_path/'pending.json';body={'receiving_body':'voice'}
+    trace=SimpleNamespace(phase='recall');save=lambda p,v:p.write_text(json.dumps(v))
+    def chat(model,messages,trace):
+        if trace.phase=='narrative_generation':return candidate
+        raise TimeoutError('Pending review.')
+    with pytest.raises(TimeoutError):
+        nr.answer('fixture','What happened?',evidence,body,trace,{},checkpoint,chat,save)
+    saved=json.loads(checkpoint.read_text());original=checkpoint.read_bytes()
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('different','What happened?',evidence,body,trace,saved,checkpoint,chat,save)
+    assert checkpoint.read_bytes()==original
+    legacy={'narrative':{'generations':[candidate],'reviews':[]}}
+    with pytest.raises(ValueError,match='legacy narrative checkpoint'):
+        nr.answer('fixture','What happened?',evidence,body,trace,legacy,checkpoint,chat,save)
+    assert checkpoint.read_bytes()==original and legacy['narrative']['generations']==[candidate]
