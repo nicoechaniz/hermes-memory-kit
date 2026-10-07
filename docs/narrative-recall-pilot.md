@@ -43,6 +43,12 @@ quote membership and decomposition, not semantic entailment. Quoting a related
 passage can still be wrong, so independent grading remains mandatory. A question
 asking only an unavailable detail may cite source-qualified limits without five
 irrelevant filler facets; a positive remembered account still needs all five.
+The receiving API requests a closed JSON schema, with sentences bounded to 220
+characters and short proof quotations (at most 400 characters each). This
+reduces malformed review output and compound-claim overload without certifying
+factual fidelity. The same local validators and independent semantic grading
+still apply even when the provider accepts the schema. The schema hash is
+recorded for each call; the frozen helper hash includes its implementation.
 Two evidence-grounded revisions are permitted. Actual candidates, reviewers,
 anchor checks, phases and known provider usage remain recorded separately.
 Native tools absent from the current body restrict new actions, not access to
@@ -97,3 +103,9 @@ The complete v7 diagnostic compared all twenty-two questions in both arms but
 did not qualify natural narration. Operational acceptance and correct retrieval
 did not prevent participant, chronology and outcome errors. See the
 [preserved diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-07-narrative-diagnostic.md).
+
+An explicit fictional schema capability probe on the selected NVIDIA endpoint
+returned HTTP 200 and correctly escaped an embedded quotation, using 269 total
+provider tokens. That establishes acceptance of that request and sample output,
+not universal schema enforcement or narrative quality. The probe and its cost
+are separate from formation, recall and hidden-rubric grading.

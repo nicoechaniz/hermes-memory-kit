@@ -177,3 +177,23 @@ def test_invalid_atomic_review_retains_actual_candidate_as_rejected(tmp_path):
     assert pending['narrative']['generations']==[candidate]
     assert len(pending['narrative']['reviews'])==2
     assert 'accepted' not in pending['narrative']
+
+
+def test_json_schema_bounds_sentences_and_review_without_certifying_semantics():
+    packet={'receiving_binding':{'receiving_body':'voice'},'evidence':[{'id':4}],
+            'candidate':account('Delivery failed.',[4])}
+    messages=[{'role':'system','content':'Fictional'}, {'role':'user','content':json.dumps(packet)}]
+    generation=nr.response_schema('narrative_generation',messages)
+    claim=generation['properties']['claims']['items']
+    assert claim['properties']['text']['maxLength']==220
+    assert claim['properties']['support']['items']['enum']==[4]
+    assert generation['properties']['receiving_body']['enum']==['voice']
+    review=nr.response_schema('narrative_review',messages)
+    entry=review['properties']['claims']['items']
+    assert review['properties']['claims']['minItems']==review['properties']['claims']['maxItems']==5
+    proof=entry['properties']['assertions']['items']['properties']['proof']['items']
+    assert proof['properties']['quote']['maxLength']==400
+    assert proof['properties']['id']['enum']==[4]
+    # API constraints supplement independent membership/meaning/coverage checks.
+    with pytest.raises(ValueError,match='split compound'):
+        nr.validate(account('x'*221,[4]),{4:{}},{'receiving_body':'voice'})

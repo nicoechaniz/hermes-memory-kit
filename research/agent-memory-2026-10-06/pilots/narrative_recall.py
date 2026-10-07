@@ -13,6 +13,35 @@ class NarrativeRejected(ValueError):
     """Bounded semantic review rejected the retained candidate, not lost work."""
 
 
+def response_schema(phase, messages):
+    """Constrain syntax and bounded sentence size; never certify meaning."""
+    packet = json.loads(messages[1]['content'])
+    string = {'type':'string', 'minLength':1}
+    reason = dict(string, maxLength=400)
+    ids = [row['id'] for row in packet['evidence']]
+    cited = {'type':'integer', **({'enum':ids} if ids else {})}
+    def obj(properties):
+        return dict(type='object',properties=properties,required=list(properties),additionalProperties=False)
+    def array(items, **limits):
+        return dict(type='array', items=items, **limits)
+    if phase == 'narrative_review':
+        count = len(packet['candidate']['claims'])
+        verdict = {'type':'string','enum':['supported','unsupported']}
+        proof = obj({'id':cited,'quote':dict(string,maxLength=400)})
+        atom = obj({'span':string,'verdict':verdict,'reason':reason,
+                    'proof':array(proof,maxItems=5 if ids else 0)})
+        entry = obj({'index':{'type':'integer','minimum':0,'maximum':count-1},
+                     'verdict':verdict,'reason':reason,'assertions':array(atom,minItems=1,maxItems=8)})
+        return obj({'claims':array(entry,minItems=count,maxItems=count),
+                    'missing':array(reason,maxItems=20)})
+    claim = obj({'text':dict(string,maxLength=220),
+                 'support':array(cited,maxItems=5 if ids else 0),
+                 'basis':{'type':'string','enum':['memory','binding','unknown']},
+                 'facet':{'type':'string','enum':['identification','context','meaning','outcome','limits']}})
+    return obj({'receiving_body':{'type':'string','enum':[packet['receiving_binding']['receiving_body']]},
+                'claims':array(claim,minItems=1,maxItems=20)})
+
+
 def source_blocks(text, depth=0):
     """Decode only exact shipped source envelopes, never infer a narrator.
 
@@ -122,6 +151,8 @@ def validate(value, evidence, binding):
             raise ValueError('facet must be identification, context, meaning, outcome or limits')
         if not isinstance(claim['text'], str) or not claim['text'].strip():
             raise ValueError('claim text must be nonempty natural-language prose')
+        if len(claim['text']) > 220:
+            raise ValueError('split compound claims into sentences of at most 220 characters')
         if claim['basis'] not in {'memory', 'binding', 'unknown'}:
             raise ValueError('basis is memory, binding or unknown')
         ids = claim['support']
@@ -203,6 +234,9 @@ SHORT factual sentences. Split compound assertions; do not pad facets with
 speculation. A wholly unsupported event may instead have one scoped unknown
 claim. A question asking only an unavailable detail may use source-cited limits
 claims, preserving the known uncertainty without retelling an unrelated story.
+Each sentence is at most 220 characters. Prefer one factual assertion per
+sentence, using several sentences within a facet when needed. Do not cram an
+entire timeline, several actors and an outcome into one sentence.
 The five facets are:
 identification: known participants, accounts, identifiers and world pointers;
 context: source speaker, originating body, event dates versus report dates;
@@ -270,6 +304,9 @@ decoded quotation. Choose the passages that support THAT assertion; a related
 topic alone is not support. Binding/packet-unknown assertions can have no proof.
 Quotes must occur verbatim in supplied evidence; do not quote the candidate as
 its own proof. The claim verdict is unsupported if ANY assertion is unsupported.
+Use short proof quotations (at most 400 characters each), including the relevant
+qualification. Do not copy an entire record when a passage suffices. Escape all
+embedded quotation marks and newlines correctly in JSON strings.
 Check coverage of the question AND relevant known identifiers/world pointers,
 originating roles, event/report dates and precision, substance/significance,
 actual outcomes and limits. Do not require unrelated facts, invent expected
