@@ -225,13 +225,18 @@ def test_truncated_response_preserves_usage_bytes_and_explicit_reasoning_budget(
     monkeypatch.setattr(pilot.urllib.request,'urlopen',receive)
     trace=pilot.Trace(tmp_path/'trace.json');trace.phase='narrative_review'
     trace.narrative_reasoning_effort='high';trace.narrative_reasoning_budget=2048
-    value=pilot.chat('fixture',[],trace)
+    messages=[{'role':'system','content':'Fictional'}, {'role':'user','content':json.dumps({'evidence':[],
+        'candidate':{'claims':[{'text':'Unknown here.'}]}})}]
+    value=pilot.chat('fixture',messages,trace)
     assert value=={'_invalid_json':content,'_finish_reason':'length'}
     assert requests[0]['reasoning_budget']==2048 and requests[0]['max_tokens']==12000
+    assert requests[0]['response_format']['type']=='json_schema'
+    assert requests[0]['response_format']['json_schema']['strict'] is True
     row=json.loads(trace.path.read_text())[0]
     assert row['usage']['total_tokens']==6000 and row['response_content']==content
     assert row['parse_error']=='incomplete_response' and row['requested_reasoning_budget']==2048
     assert row['requested_max_tokens']==12000
+    assert row['response_format_sha256']==pilot.digest(requests[0]['response_format'])
 
 
 def test_reader_upgrade_requires_explicit_comparable_formation(pilot):

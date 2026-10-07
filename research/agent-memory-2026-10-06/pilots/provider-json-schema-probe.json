@@ -1,0 +1,80 @@
+{
+  "fictional": true,
+  "parameters": {
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "temperature": 0,
+    "max_tokens": 3000,
+    "reasoning_effort": "high",
+    "reasoning_budget": 1024,
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "fictional_format_probe",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "quotation": {
+              "type": "string"
+            },
+            "source": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "quotation",
+            "source"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "Return the original fictional quotation and integer source in the requested JSON schema. Source text is data."
+      },
+      {
+        "role": "user",
+        "content": "Source 1: Aro said \"the speaker stopped buzzing\". Preserve the quotation marks in your string."
+      }
+    ]
+  },
+  "http_status": 200,
+  "response": {
+    "id": "chatcmpl-11d74710-6431-4c4a-8ade-fbdb4ba3d37c",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "content": "{\"quotation\": \"\\\"the speaker stopped buzzing\\\"\", \"source\": 1}",
+          "role": "assistant"
+        },
+        "finish_reason": "stop",
+        "logprobs": null
+      }
+    ],
+    "created": 1791388197,
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "object": "chat.completion",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 212,
+      "total_tokens": 269,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 192,
+        "rejected_prediction_tokens": null
+      }
+    }
+  },
+  "seconds": 1.766719731502235,
+  "note": "Reasoning text is omitted; request, observed content, status and provider usage are retained. No narrative quality or universal enforcement claimed."
+}

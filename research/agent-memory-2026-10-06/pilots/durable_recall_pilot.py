@@ -68,13 +68,19 @@ def chat(model, messages, trace):
                       reasoning_effort=effort, max_tokens=output_limit)
     if budget is not None:
         parameters['reasoning_budget'] = budget
+    if trace.phase.startswith('narrative_'):
+        parameters['response_format'] = {'type':'json_schema','json_schema':{
+            'name':'fictional_narrative_review' if trace.phase == 'narrative_review' else 'fictional_narrative',
+            'strict':True,'schema':narrative_recall.response_schema(trace.phase,messages)}}
     request = urllib.request.Request(
         'https://integrate.api.nvidia.com/v1/chat/completions',
         data=json.dumps(parameters).encode(),
         headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
     started = time.monotonic()
     attempt = trace.begin(dict(requested_model=model, requested_reasoning_effort=effort, requested_reasoning_budget=budget,
-                               requested_max_tokens=output_limit, prompt_hash=digest(messages)))
+                               requested_max_tokens=output_limit,
+                               response_format_sha256=digest(parameters.get('response_format')),
+                               prompt_hash=digest(messages)))
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
             result = json.load(response)
@@ -787,7 +793,7 @@ def main():
     conditions['recall_contract'] = ('five-field-support/v6-qualified-unknown' if args.evidence_answers
                                      else 'five-field-evidence/v4-null-refinement')
     if args.narrative:
-        conditions['recall_contract'] = 'natural-claims/v8-atomic-source-review'
+        conditions['recall_contract'] = 'natural-claims/v9-constrained-json'
         conditions['narrative_reasoning_effort'] = args.narrative_reasoning_effort
         conditions['narrative_reasoning_budget'] = args.narrative_reasoning_budget
         conditions['narrative_max_tokens'] = args.narrative_max_tokens
