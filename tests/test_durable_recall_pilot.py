@@ -173,3 +173,23 @@ def test_answer_cannot_select_its_body_from_remembered_provenance(pilot):
         ('identification','context','meaning','outcome','limits'),'Unknown'),'used_ids':[]}
     with pytest.raises(ValueError,match='supplied binding'):
         pilot.grounded_answer(value,set(),'fixture:body:voice')
+
+
+def test_evidence_response_preserves_failed_outcome_and_refuses_narrative(pilot):
+    pack={'items':[{'id':1,'spr':'Object created.', 'origin':{'kind':'capture'}}]}
+    text='Object created. Delivery failed. No access or response observed.'
+    evidence=pilot.answer_evidence([pack],[{'id':1,'raw':text}])
+    binding={'receiving_body':'fixture:body:voice','physical_actuators':False}
+    value={'receiving_body':'fixture:body:voice','answer':dict.fromkeys(
+        ('identification','context','meaning','outcome','limits'),[1]),'used_ids':[1]}
+    result=pilot.supported_answer(value,evidence,binding)
+    assert result['evidence'][0]['text']==text
+    assert result['evidence'][0]['representation']=='expanded_record'
+    assert result['receiving_binding']==binding
+    value['answer']['outcome']='Recipient did not receive it.'
+    with pytest.raises(ValueError):pilot.supported_answer(value,evidence,binding)
+    value['answer']['outcome']=[99]
+    with pytest.raises(ValueError):pilot.supported_answer(value,evidence,binding)
+    value['answer']['outcome']=[1]
+    value['used_ids']=[]
+    with pytest.raises(ValueError):pilot.supported_answer(value,evidence,binding)

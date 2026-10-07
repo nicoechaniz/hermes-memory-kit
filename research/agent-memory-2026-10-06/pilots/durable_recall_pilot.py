@@ -132,6 +132,50 @@ def grounded_answer(value, candidates, receiving_body=None):
     return value
 
 
+def answer_evidence(packs, expanded):
+    """Only actually supplied text; expansion supersedes an incomplete preview."""
+    available = {}
+    for pack in packs:
+        for item in pack['items']:
+            for row in [item, *item.get('neighbors', [])]:
+                available[row['id']] = dict(id=row['id'], text=row.get('spr', ''),
+                    origin=row.get('origin'), representation='retrieved_preview')
+    for row in expanded:
+        available[row['id']] = dict(id=row['id'], text=row.get('raw', row.get('spr', '')),
+            origin=row.get('origin'), representation='expanded_record')
+    return available
+
+
+def supported_answer(value, evidence, binding):
+    """Select factual support instead of trusting paraphrase as verified fact.
+
+    Full supplied blocks preserve surrounding qualifications. Empty facets mean
+    unsupported in this context, never proof that the event did not happen.
+    Interpretation/narrative qualification remains a separate future concern.
+    """
+    fields = {'identification', 'context', 'meaning', 'outcome', 'limits'}
+    if not isinstance(value, dict) or set(value) != {'receiving_body', 'answer', 'used_ids'}:
+        raise ValueError('return only receiving_body, answer and used_ids')
+    if value['receiving_body'] != binding['receiving_body']:
+        raise ValueError('receiving_body must match the supplied binding')
+    facets = value['answer']
+    if not isinstance(facets, dict) or set(facets) != fields:
+        raise ValueError('answer needs identification, context, meaning, outcome and limits')
+    for ids in [*facets.values(), value['used_ids']]:
+        if not isinstance(ids, list) or len(ids) > 5 or any(
+                type(cid) is not int or cid not in evidence for cid in ids):
+            raise ValueError('each facet and used_ids needs at most five supplied evidence IDs')
+    selected = set().union(*map(set, facets.values()))
+    if set(value['used_ids']) != selected:
+        raise ValueError('used_ids must equal the union of the five facets')
+    return dict(value, evidence=[evidence[cid] for cid in dict.fromkeys(value['used_ids'])],
+                receiving_binding=binding,
+                interpretation='Exact attributed support, not generated factual narration. '
+                               'Empty facets mean unsupported here. Dated project evidence '
+                               'is last known state, not verification today. Quoted speakers '
+                               'remain distinct from the receiving body.')
+
+
 def source_decision(value, sources, canon):
     """Select source blocks; never let generated prose become factual raw text.
 
@@ -476,12 +520,36 @@ original code/physical capabilities.'''),
             answer_ids = set().union(*(visible_ids(pack) for pack in packs))
             for item in expanded:
                 answer_ids |= visible_ids({'items':[item]})
+            evidence = answer_evidence(packs, expanded)
+            if getattr(args, 'evidence_answers', False):
+                answer_messages = [dict(role='system', content='''Select evidence for the
+fictional being's question from supplied retrieved memory only. Original sources,
+sessions and network tools are unavailable. Return JSON with ONLY receiving_body
+(the binding's exact current body ID), answer (five facets) and used_ids.
+Each facet identification, context, meaning, outcome and limits is an array of
+up to five supplied evidence IDs, not prose. Include all relevant support for
+the question: participant identifiers and world pointers; source/body and dates;
+substance and significance; actual action stages/results; uncertainty, reported
+knowledge, corrections and last-known versus current state. Empty arrays mean
+unsupported in the supplied evidence, not that an event never happened.
+used_ids must be the union of the five facets. The adapter returns the selected
+exact blocks, keeping speaker attribution and qualifications, without adopting
+a quoted human's I/we as the receiving body or inventing effects. Current body
+identity and capabilities come only from the receiving binding. No narration,
+new identities, inferred receipt/non-receipt, attendance or current-state claims.
+Evidence previews are not full records; use the supplied expanded record where
+available. Select useful evidence, not unrelated snippets to fill facets.'''),
+                    dict(role='user', content=json.dumps(dict(receiving_binding=receiving_binding,
+                        question=query, evidence=list(evidence.values())), ensure_ascii=False))]
             for attempt in range(2):
                 answer = chat(args.model, answer_messages, trace)
                 pending.setdefault('answer_attempts', []).append(answer)
                 save(pending_path, pending)
                 try:
-                    grounded_answer(answer, answer_ids, receiving_binding['receiving_body'])
+                    if getattr(args, 'evidence_answers', False):
+                        answer = supported_answer(answer, evidence, receiving_binding)
+                    else:
+                        grounded_answer(answer, answer_ids, receiving_binding['receiving_body'])
                 except ValueError as error:
                     pending['error'] = str(error)
                     save(pending_path, pending)
@@ -572,6 +640,9 @@ def main():
     parser.add_argument('--source-blocks', action=argparse.BooleanOptionalAction, default=True,
                         help='Construct factual record text from selected attributed exact blocks (default); '
                              '--no-source-blocks retains the experimental generative comparison')
+    parser.add_argument('--evidence-answers', action=argparse.BooleanOptionalAction, default=True,
+                        help='Return selected exact retrieved support; --no-evidence-answers '
+                             'retains the unqualified free-form narrative comparison')
     args = parser.parse_args()
     args.out = args.out.resolve()
     if args.out.exists() and not args.resume:
@@ -597,7 +668,8 @@ def main():
     conditions['rerank_provider'] = configuration.rerank_provider_default()
     conditions['retrieval_profile'] = configuration.read_env_key('HMK_RETRIEVAL_PROFILE') or 'general'
     conditions['retrieval_sha256'] = hashlib.sha256(Path(configuration.__file__).read_bytes()).hexdigest()
-    conditions['recall_contract'] = 'five-field-evidence/v3-bound-receiver'
+    conditions['recall_contract'] = ('five-field-support/v4-exact-evidence' if args.evidence_answers
+                                     else 'five-field-evidence/v3-bound-receiver')
     conditions['review_capture'] = args.review_capture
     conditions['source_blocks'] = args.source_blocks
     if args.reuse_capture:
