@@ -453,6 +453,23 @@ that force the loss of meaningful people, projects or irreplaceable episodes.
 
 ## Current adoption and qualification — 2026-10-07
 
+### Fresh formation/navigation trial
+
+The [fresh pipeline report](../research/agent-memory-2026-10-06/pilots/2026-10-07-fresh-pipeline-navigation.md)
+preserves a failed full-formation Flash/native-Sol attempt separately from the
+qualified frozen-packet receiving comparison. Selection retains 120/120 essentials
+across arms with no mechanical noise. The proposed narrator misses a stored
+lesson discarded by the handoff, and adds occurrence-year precision; automatic
+review acceptance does not close those gates. Core navigation now counts distinct
+chapters and the pilot keeps returned expansion previews. Complete diagnostics
+retain terminal structural candidates without losing remaining questions.
+
+Continuation: outside-grade the full upgraded two-arm recall with identical
+formation, unchanged embeddings and fresh receiving conditions. Only after it
+qualifies, apply the finite organization helper for three inspected passes,
+replay and source correction/dependent reconciliation; repeat recall each time.
+Qwen quota is currently unavailable and its comparison remains deferred.
+
 ### Stage 1 exit evidence and exact continuation
 
 The [stage-one report](../research/agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md)
