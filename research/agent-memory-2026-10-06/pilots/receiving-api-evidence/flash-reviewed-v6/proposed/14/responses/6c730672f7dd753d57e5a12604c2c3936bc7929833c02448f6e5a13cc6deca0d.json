@@ -1,0 +1,24 @@
+{
+  "request_sha256": "6c730672f7dd753d57e5a12604c2c3936bc7929833c02448f6e5a13cc6deca0d",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/123-6c730672f7dd753d57e5a12604c2c3936bc7929833c02448f6e5a13cc6deca0d.json",
+  "usage": {
+    "prompt_tokens": 6165,
+    "completion_tokens": 585,
+    "total_tokens": 6750,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    },
+    "prompt_cache_hit_tokens": 2560,
+    "prompt_cache_miss_tokens": 3605
+  },
+  "seconds": 2.301724079065025,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"A human reporter met someone called Leto at the canal market in late May, tentatively.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The reporter did not know Leto's surname or handle.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human reporter said we were not present at that meeting.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The report was received on 2026-06-15 through fixture:body:voice.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The reported encounter happened in late May, according to the reporter's tentative memory.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter liked the idea and wanted us to keep it in mind.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter and we have not contacted the neighborhood repair group.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"As of 2026-06-15, no contact with the neighborhood repair group had occurred.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record Leto's surname.\", \"support\": [5], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"Leto's handle is also unknown in the supplied report.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The encounter date remains tentative because the reporter said 'late May, I think.'\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

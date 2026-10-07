@@ -1,0 +1,24 @@
+{
+  "request_sha256": "a3e48d0a245f7b7b127cd5e61c92560fc6e948783d8239bd7b3cd4c3c97639b5",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/137-a3e48d0a245f7b7b127cd5e61c92560fc6e948783d8239bd7b3cd4c3c97639b5.json",
+  "usage": {
+    "prompt_tokens": 1985,
+    "completion_tokens": 3227,
+    "total_tokens": 5212,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2608
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 833
+  },
+  "seconds": 13.3510025953874,
+  "content": "{\n  \"receiving_body\": \"fixture:body:voice\",\n  \"claims\": [\n    {\n      \"text\": \"The human reporter told me they met someone called Leto at the canal market.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The reporter did not know Leto's surname or handle.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"I was not present at that meeting.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The report was received on 2026-06-15 through fixture:body:voice.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The reporter said the meeting happened in late May, though they were unsure.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The source is a human report, not a direct message from Leto.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"The reporter liked the idea and wanted us to keep it in mind.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"As of the report, the reporter had not contacted the neighborhood repair group.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"outcome\"\n    },\n    {\n      \"text\": \"No sharing of outage data had occurred by the report date.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"outcome\"\n    },\n    {\n      \"text\": \"The exact date of the meeting is uncertain; the reporter said \\\"late May, I think.\\\"\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"The current status of any contact with the group is unknown beyond the report.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"I have no direct memory of the meeting because I was not present.\",\n      \"support\": [5],\n      \"basis\": \"memory\",\n      \"facet\": \"limits\"\n    }\n  ]\n}",
+  "finish_reason": "stop"
+}

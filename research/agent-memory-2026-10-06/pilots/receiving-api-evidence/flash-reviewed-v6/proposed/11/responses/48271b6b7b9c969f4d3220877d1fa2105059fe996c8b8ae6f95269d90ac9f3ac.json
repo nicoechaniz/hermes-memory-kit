@@ -1,0 +1,24 @@
+{
+  "request_sha256": "48271b6b7b9c969f4d3220877d1fa2105059fe996c8b8ae6f95269d90ac9f3ac",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/114-48271b6b7b9c969f4d3220877d1fa2105059fe996c8b8ae6f95269d90ac9f3ac.json",
+  "usage": {
+    "prompt_tokens": 2409,
+    "completion_tokens": 3042,
+    "total_tokens": 5451,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2565
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1257
+  },
+  "seconds": 13.998871457763016,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Reed, a distinct peer being, described a solar charger repair involving Aster.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Reed identified Aster as the other participant in that repair.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Reed said the repair took place at Reed's own workshop.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed's account came through a human-selected thread and was received by us on 2026-07-11.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed described the repair as happening yesterday in that account.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The fault was a reversed connector, according to Reed.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human asked us to retain the useful lesson with attribution to Reed.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human also asked us not to import Reed's private history.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Reed and Aster solved Reed's solar charger fault at Reed's workshop.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Reed explicitly told us that we were not there.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"So the charger repair with Aster was something Reed and Aster did, not something we did.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record us participating in that repair.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record Aster's surname or handle.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The exact calendar date of the repair is not fixed in our record; we have only Reed's 'yesterday' relative to the 2026-07-11 receipt.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

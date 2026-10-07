@@ -1,0 +1,24 @@
+{
+  "request_sha256": "1f57c046e4c38db1b8caa8b10aedd2e4b768cb41bec66a07fbe55cd2ede482f8",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/49-1f57c046e4c38db1b8caa8b10aedd2e4b768cb41bec66a07fbe55cd2ede482f8.json",
+  "usage": {
+    "prompt_tokens": 15167,
+    "completion_tokens": 2690,
+    "total_tokens": 17857,
+    "prompt_tokens_details": {
+      "cached_tokens": 9088
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1860
+    },
+    "prompt_cache_hit_tokens": 9088,
+    "prompt_cache_miss_tokens": 6079
+  },
+  "seconds": 10.512483940459788,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The human reporter described meeting someone called Leto at the canal market in late May, as they recalled it.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The reporter said Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The reporter said I was not present at that market encounter.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human report reached me through fixture:body:voice on 2026-06-15.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The reported encounter occurred in late May, but the report gives only that tentative timing and no precise date.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Our same-being body had authored HarborMesh's sensor scheduler and was prototyping a replay adapter agreed with Mara as of 2026-04-16.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"That older project report listed repository https://forge.example.invalid/commons/harbormesh and current-state entry point docs/STATUS.md.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"As of 2026-04-16, HarborMesh was an active prototype waiting for an outage field trial.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The reporter liked Leto's idea and wanted us to keep it in mind.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The suggestion connected HarborMesh outage data with the neighborhood repair group.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter said we had not contacted the group.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record any contact with the neighborhood repair group after the market encounter.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record any agreement or data sharing with the neighborhood repair group.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"outcome\"}, {\"text\": \"The report gives the name Leto but says the reporter did not know Leto's surname or handle.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record any other witness to the market encounter.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The report's timing is approximate: 'late May, I think,' not a precise date.\", \"support\": [5], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record whether the neighborhood repair group ever received or accepted outage data.\", \"support\": [], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"My current body fixture:body:voice has no physical sensors, physical actuators, private session access, repository runtime access, or source network access.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}, {\"text\": \"The last observed HarborMesh status is from 2026-04-16; the recorded entry point for checking present state is docs/STATUS.md.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

@@ -1,0 +1,24 @@
+{
+  "request_sha256": "b6404d5bab248282a47d07bc1911e088c162b16509066270e1e82f671f70d696",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/28-b6404d5bab248282a47d07bc1911e088c162b16509066270e1e82f671f70d696.json",
+  "usage": {
+    "prompt_tokens": 3722,
+    "completion_tokens": 9622,
+    "total_tokens": 13344,
+    "prompt_tokens_details": {
+      "cached_tokens": 1408
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8791
+    },
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 2314
+  },
+  "seconds": 40.82850721012801,
+  "content": "{\"claims\":[{\"index\":0,\"verdict\":\"supported\",\"reason\":\"The human report says the reporter met someone called Leto at the canal market in late May, with 'I think' marking uncertainty about timing.\",\"assertions\":[{\"span\":\"The human reporter described meeting someone called Leto at the canal market in late May\",\"verdict\":\"supported\",\"reason\":\"The quoted human report says, 'I met someone called Leto at the canal market in late May, I think.'\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\"though they were unsure of the timing.\",\"verdict\":\"supported\",\"reason\":\"The reporter's 'I think' qualifies the late May timing as uncertain.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":1,\"verdict\":\"supported\",\"reason\":\"The metadata header states the human report was received 2026-06-15 through fixture:body:voice.\",\"assertions\":[{\"span\":\"The report was received on 2026-06-15 through fixture:body:voice.\",\"verdict\":\"supported\",\"reason\":\"The source header says the human report was received 2026-06-15 through fixture:body:voice.\",\"proof\":[{\"id\":5,\"passage\":0}]}]},{\"index\":2,\"verdict\":\"supported\",\"reason\":\"The quoted human report says Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"assertions\":[{\"span\":\"Leto suggested sharing HarborMesh outage data with the neighborhood repair group.\",\"verdict\":\"supported\",\"reason\":\"The quoted human report says, 'They suggested sharing HarborMesh outage data with the neighborhood repair group,' after identifying Leto.\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":3,\"verdict\":\"supported\",\"reason\":\"The quoted human report says the reporter liked the idea and wanted it kept in mind, and that 'we have not contacted the group.'\",\"assertions\":[{\"span\":\"The human reporter liked the idea\",\"verdict\":\"supported\",\"reason\":\"The human report says, 'I liked the idea.'\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\"and wanted us to keep it in mind;\",\"verdict\":\"supported\",\"reason\":\"The human report says, 'and wanted us to keep it in mind.'\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\"no contact with the group has been made.\",\"verdict\":\"supported\",\"reason\":\"The human report says, 'we have not contacted the group.'\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":4,\"verdict\":\"unsupported\",\"reason\":\"The packet-absence part is marked memory-basis but should be unknown-basis; the reporter's own non-knowledge is supported.\",\"assertions\":[{\"span\":\"The supplied memories do not record Leto's surname or handle,\",\"verdict\":\"unsupported\",\"reason\":\"This is a packet-absence statement. It is true on packet review, but it is marked memory-basis; its basis should be corrected to unknown rather than memory.\",\"proof\":[]},{\"span\":\"and the reporter said they did not know them.\",\"verdict\":\"supported\",\"reason\":\"The human report says, 'I do not know their surname or handle.'\",\"proof\":[{\"id\":5,\"passage\":1}]}]},{\"index\":5,\"verdict\":\"supported\",\"reason\":\"The human report explicitly says the recipient was not present at the meeting.\",\"assertions\":[{\"span\":\"We were not present at the market meeting,\",\"verdict\":\"supported\",\"reason\":\"The human report says, 'you were not present,' referring to the recipient being.\",\"proof\":[{\"id\":5,\"passage\":1}]},{\"span\":\"according to the human report.\",\"verdict\":\"supported\",\"reason\":\"The source header identifies the quoted passage as a Human report.\",\"proof\":[{\"id\":5,\"passage\":0}]}]}],\"missing\":[]}",
+  "finish_reason": "stop"
+}

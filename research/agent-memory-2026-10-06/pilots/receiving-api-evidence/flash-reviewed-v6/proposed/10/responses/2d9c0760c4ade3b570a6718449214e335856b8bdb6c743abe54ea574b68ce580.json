@@ -1,0 +1,24 @@
+{
+  "request_sha256": "2d9c0760c4ade3b570a6718449214e335856b8bdb6c743abe54ea574b68ce580",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/182-2d9c0760c4ade3b570a6718449214e335856b8bdb6c743abe54ea574b68ce580.json",
+  "usage": {
+    "prompt_tokens": 9787,
+    "completion_tokens": 2215,
+    "total_tokens": 12002,
+    "prompt_tokens_details": {
+      "cached_tokens": 6016
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1559
+    },
+    "prompt_cache_hit_tokens": 6016,
+    "prompt_cache_miss_tokens": 3771
+  },
+  "seconds": 10.424974874593318,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The HarborMesh repair checklist comment c1200 was signed River.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human reporter suspected that River was Mara, but explicitly said they were not sure.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Mara Ibarra's known Forge account was 1847 with login mara-river, as reported in HarborMesh issue 47.\", \"support\": [1, 7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The human reporter's initial-attribution report was received on 2026-07-01 through fixture:body:code.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"A corrected-attribution tool response was received on 2026-07-04 through fixture:body:code.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The comment proposed numbering connectors before disassembly, and the reporter wanted to try that next repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The later correction gave c1200's author as display name River, login river-tools, account ID 2901.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The author replied that they were not Mara Ibarra and asked to be credited to the River account.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The author also said they had not supplied a real name.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Mara's known Forge account remained 1847 with login mara-river, separate from the River account 2901.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The issue-comments report, received 2026-04-14, concerned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The supplied memories do not record a real name for the River account author.\", \"support\": [7], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record whether the connector-numbering checklist was used in the next repair.\", \"support\": [7], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not establish any further connection between the River account and Mara beyond the reporter's earlier tentative suspicion.\", \"support\": [7], \"basis\": \"unknown\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

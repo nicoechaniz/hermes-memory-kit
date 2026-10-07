@@ -1,0 +1,24 @@
+{
+  "request_sha256": "f8e59198be5e244de0e82b258cc427e697249256d7c725c7406ff5fd4f2c894a",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/164-f8e59198be5e244de0e82b258cc427e697249256d7c725c7406ff5fd4f2c894a.json",
+  "usage": {
+    "prompt_tokens": 8539,
+    "completion_tokens": 2031,
+    "total_tokens": 10570,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1146
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 5851
+  },
+  "seconds": 6.891802720725536,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The connector-numbering proposal is HarborMesh repair checklist comment c1200, signed \\u201cRiver.\\u201d\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"A human reporter told our code body on 2026-07-01 that they thought c1200\\u2019s River was Mara but were not sure.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"We received a corrected tool response through our code body on 2026-07-04 identifying c1200\\u2019s author as display name River, login river-tools, account ID 2901.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The c1200 author replied, \\u201cI am not Mara Ibarra,\\u201d and asked that the connector-numbering checklist be credited to the River account.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Mara Ibarra\\u2019s known Forge account is 1847, login mara-river.\", \"support\": [7, 1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The initial human report and the correction were both received through our code body, on 2026-07-01 and 2026-07-04 respectively.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The initial report described c1200 as proposing to number connectors before disassembly and said they wanted to try that next repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Mara\\u2019s known account details come from a tool response received 2026-04-14 through our code body, citing https://forge.example.invalid/commons/harbormesh/issues/47.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The proposal\\u2019s practical point was to number connectors before disassembly in a repair checklist.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The human reporter wanted to try that connector-numbering method on the next repair.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The correction mattered because it replaced the tentative Mara attribution with attribution to the River account.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"According to the corrected record, Mara was not the one who proposed numbering the connectors.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The comment was credited to the River account by the author\\u2019s request; no real name was supplied.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The author also said they had not supplied a real name.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record Mara proposing connector numbering.\", \"support\": [7], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not establish the River author\\u2019s real name beyond that account.\", \"support\": [7], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The earlier tentative \\u201cI think that is Mara\\u201d report remains an earlier uncertainty, not erased by the later correction.\", \"support\": [7], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not report whether the connector-numbering checklist was later used or adopted.\", \"support\": [7], \"basis\": \"unknown\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

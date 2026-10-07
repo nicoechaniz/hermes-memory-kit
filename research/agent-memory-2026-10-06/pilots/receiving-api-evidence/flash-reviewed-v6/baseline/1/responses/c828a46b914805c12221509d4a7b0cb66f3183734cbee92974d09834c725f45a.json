@@ -1,0 +1,24 @@
+{
+  "request_sha256": "c828a46b914805c12221509d4a7b0cb66f3183734cbee92974d09834c725f45a",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/59-c828a46b914805c12221509d4a7b0cb66f3183734cbee92974d09834c725f45a.json",
+  "usage": {
+    "prompt_tokens": 16670,
+    "completion_tokens": 985,
+    "total_tokens": 17655,
+    "prompt_tokens_details": {
+      "cached_tokens": 9984
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 117
+    },
+    "prompt_cache_hit_tokens": 9984,
+    "prompt_cache_miss_tokens": 6686
+  },
+  "seconds": 3.5299475202336907,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed a local replay queue on disconnected relay nodes for HarborMesh.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The proposal was recorded in HarborMesh issue 47 comment c901 dated 2026-04-12 at https://forge.example.invalid/commons/harbormesh/issues/47.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Our code body replied in comment c903 that this fits the field deployments we maintain.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"In comment c906 dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"We authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The HarborMesh repository is https://forge.example.invalid/commons/harbormesh.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The project-work report states these are our contributions, not merely code we read.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"That project-work report was received 2026-04-16 through our code body, with docs/STATUS.md as declared current-state entry point.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Last observed 2026-04-16, the prototype was active and waiting for an outage field trial.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"Branch experiment/replay-queue had a local uncommitted file relay.py, CI job 719 pending, and task 12 needing a retry.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"A human field-trial report was received 2026-05-03 through our code body.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The queue was meant to keep readings through outages without replacing the existing scheduler.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The report said Mara's replay proposal became the prototype tested together.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The report said the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The team paused wider rollout on May 2 until calibration drift is understood.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The May 3 report said there was no production deployment yet.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"As of the 2026-04-14 issue-comment record, no merge or deployment was reported.\", \"support\": [1], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record an actual merge or production deployment.\", \"support\": [1, 3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"Our current voice body has no repository runtime access, source network access, physical sensors, physical actuators, or private session access.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

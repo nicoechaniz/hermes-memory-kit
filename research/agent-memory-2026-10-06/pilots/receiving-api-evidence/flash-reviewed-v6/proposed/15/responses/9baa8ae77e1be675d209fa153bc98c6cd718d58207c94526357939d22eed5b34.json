@@ -1,0 +1,24 @@
+{
+  "request_sha256": "9baa8ae77e1be675d209fa153bc98c6cd718d58207c94526357939d22eed5b34",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/145-9baa8ae77e1be675d209fa153bc98c6cd718d58207c94526357939d22eed5b34.json",
+  "usage": {
+    "prompt_tokens": 6038,
+    "completion_tokens": 684,
+    "total_tokens": 6722,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 3350
+  },
+  "seconds": 2.9505644468590617,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The supplied memories do not record a HarborMesh production launch in 2028 or name anyone who joined us for such a launch.\", \"support\": [3, 2], \"basis\": \"unknown\", \"facet\": \"identification\"}, {\"text\": \"The most recent relevant report was a human field-trial report received 2026-05-03 through fixture:body:code, describing the April 30 HarborMesh trial.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"That report says the April 30 HarborMesh trial replayed buffered readings correctly through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"An earlier same-being project-work report received 2026-04-16 through fixture:body:code said we authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"That 2026-04-16 report recorded the status as an active prototype, waiting for an outage field trial.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"In the remembered work, Mara's replay proposal became the prototype we tested together, per the 2026-05-03 field-trial report.\", \"support\": [3, 2], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That report asked us to update our project account and keep the April proposal and trial in our history.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The team paused wider rollout on May 2 until calibration drift is understood, according to the 2026-05-03 report.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"As of the 2026-05-03 report, there was no production deployment yet.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The 2026-04-16 project-work report listed the repository https://forge.example.invalid/commons/harbormesh, with declared current-state entry point docs/STATUS.md.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"limits\"}, {\"text\": \"The current receiving body fixture:body:voice has no repository runtime access or source network access, so we cannot newly verify later production state from this binding.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

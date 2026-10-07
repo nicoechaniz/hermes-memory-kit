@@ -1,0 +1,24 @@
+{
+  "request_sha256": "21cb13f20c289b17112d0ca6451ba6537007ae3d6ba21eb3b8c1871ddd78a0dc",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/16-21cb13f20c289b17112d0ca6451ba6537007ae3d6ba21eb3b8c1871ddd78a0dc.json",
+  "usage": {
+    "prompt_tokens": 3067,
+    "completion_tokens": 3334,
+    "total_tokens": 6401,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2856
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1915
+  },
+  "seconds": 14.703988100402057,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Reed is a distinct peer being whose account reached us on 2026-07-11 through fixture:body:voice.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"In that account Reed met Aster at Reed's own workshop.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Aster was the person Reed met there; the supplied account gives no surname or handle for Aster.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The account came as attributed peer communication from a human-selected thread; the source was peer-story.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Reed described the workshop meeting with Aster as having happened 'yesterday' relative to the report received 2026-07-11.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The human asked us to retain the useful lesson with attribution to Reed, without importing Reed's private history.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The lesson was that the solar charger fault was a reversed connector.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"That repair mattered as Reed and Aster's shared learning, not as our own experience.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Reed and Aster solved Reed's solar charger fault at Reed's workshop.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The account explicitly states that we were not there.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"So the charger repair with Aster was not something we did; receiving the report is not attending the repair.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record us meeting Aster or working on that charger.\",\"support\":[8],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The receiving body voice has no physical sensors or actuators, so this body cannot perform physical repairs.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

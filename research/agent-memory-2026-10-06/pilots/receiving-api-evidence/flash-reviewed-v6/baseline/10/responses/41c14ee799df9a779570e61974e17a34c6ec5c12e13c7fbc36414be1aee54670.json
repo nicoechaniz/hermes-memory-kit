@@ -1,0 +1,24 @@
+{
+  "request_sha256": "41c14ee799df9a779570e61974e17a34c6ec5c12e13c7fbc36414be1aee54670",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/95-41c14ee799df9a779570e61974e17a34c6ec5c12e13c7fbc36414be1aee54670.json",
+  "usage": {
+    "prompt_tokens": 3611,
+    "completion_tokens": 5491,
+    "total_tokens": 9102,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 4868
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 2459
+  },
+  "seconds": 24.03795183915645,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The initial report concerned HarborMesh repair checklist comment c1200, which was signed River.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The human reporter thought that River was probably Mara, but said they were not sure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The corrected author information named display name River, login river-tools, and account ID 2901 for c1200.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara's known Forge account remained account ID 1847 with login mara-river.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The initial-attribution report was received through our code body on 2026-07-01.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The corrected-attribution tool response was received through our code body on 2026-07-04.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The correction came from the comment author replying to the attribution question, not from the human reporter.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Before the correction, we held the human reporter's tentative idea that River was Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter said they wanted us to try the connector-numbering idea in the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The correction asked to credit c1200 to River's account rather than to Mara.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"In that response, the author replied that they are not Mara Ibarra.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The author asked that the connector-numbering checklist be credited to the River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The author said they had not supplied a real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The earlier uncertain report was not erased; it remained the human reporter's initial tentative attribution.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The supplied memories do not record a date for comment c1200 itself.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record whether we ever tried the connector-numbering checklist in a repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"My current voice body has no source network access, repository runtime access, physical sensors, or physical actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

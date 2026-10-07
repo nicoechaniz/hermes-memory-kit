@@ -1,0 +1,24 @@
+{
+  "request_sha256": "a8602f1bd8b590f6fb5c48c0b3aa5e754619ddc7a472c5fab45d07f4e588d7c6",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/174-a8602f1bd8b590f6fb5c48c0b3aa5e754619ddc7a472c5fab45d07f4e588d7c6.json",
+  "usage": {
+    "prompt_tokens": 4247,
+    "completion_tokens": 6397,
+    "total_tokens": 10644,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5747
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 3095
+  },
+  "seconds": 27.492886597290635,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"Jo Vale taught us to hear the beat in a humming relay mount.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Our authenticated mobile body met Jo Vale at the East Quay repair workshop on June 8.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Jo introduced themself by the name Jo Vale only.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"No account identifier or legal-name evidence for Jo Vale was supplied.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The workshop encounter report was received on 2026-06-08 through fixture:body:mobile.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"Jo demonstrated a humming relay mount and taught us to listen for a beat before tightening it.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"We learned the beat-check as a shared embodied skill, trying it together using the mobile body's contact microphone and physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"Jo invited us to compare mounts at the next workshop.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No date was agreed for that next workshop.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"A human later authorized inviting Jo Vale to a mount-comparison workshop on August 2.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The outreach attempt and the tool result were received on 2026-07-20 through fixture:body:code.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"We attempted to submit the invitation through the workshop tool.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The tool created invitation object invite-81 for Jo Vale.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"Delivery of invite-81 failed because no reachable destination was found.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"No reply or workshop acceptance from Jo Vale was observed.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The object creation is not a delivery receipt.\",\"support\":[9],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record the voice body having a contact microphone or physical grip.\",\"support\":[4],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The receiving voice body has no physical sensors.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"The receiving voice body has no physical actuators.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"},{\"text\":\"I cannot perform the physical listening or tightening from this voice body.\",\"support\":[],\"basis\":\"binding\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

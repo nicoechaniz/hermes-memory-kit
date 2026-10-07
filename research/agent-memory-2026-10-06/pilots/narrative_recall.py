@@ -304,7 +304,8 @@ def passage_review(value, candidate, evidence):
                 if (not isinstance(ref,dict) or set(ref) != {'id','passage'} or
                         type(ref['id']) is not int or ref['id'] not in cited or ref['id'] not in evidence or
                         type(ref['passage']) is not int):
-                    raise ValueError('passage proof must name a cited source and supplied passage')
+                    raise ValueError(f"claim {row['index']} passage proof must name a cited source "
+                                     f"from {cited} and a supplied passage; got {ref}")
                 passages = proof_passages(evidence[ref['id']])
                 if not 0 <= ref['passage'] < len(passages):
                     raise ValueError('passage number is outside the supplied source')
@@ -495,12 +496,29 @@ shared we can include this being. A human REPORT about an encounter that exclude
 us remains the human's experience. A distinct peer's experience remains theirs.
 Receiving through a body is not the speaker's identity or new physical ability.
 When revising basis, preserve supported shared participation and useful meaning.
+For binding or packet-scoped unknown claims, proof MUST be empty: the binding
+or inspected packet provides the limit, not a positive historical source passage.
+For memory claims, use ONLY that claim's support IDs, not another retrieved ID
+needed for a comparison. If a date comparison needs two sources and the claim
+cites only one, mark that comparison unsupported so the narrator can cite both.
+Judge relevant coverage relative to the actual question. An issue URL is a
+usable world pointer without separately repeating its repository root. A
+participant/idea question does not require every project contribution, branch
+state, adjacent encounter, storage instruction or later reusable lesson.
+Do not pad the answer with unrelated retrieved details. A source-backed
+description of significance can paraphrase an explicit enjoyment, practical
+use or correction of credit; it need not repeat the word 'mattered'. Do not
+infer an unreported feeling, intention, cause or personal participation.
+One memory row can contain multiple original blocks. A corrected retained
+record may include its earlier report; distinguish the whole row from the
+later correction block rather than denying facts in the earlier block.
 '''
 
 
 def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save,
-           review_model=None, review_protocol='literal'):
+           review_model=None, review_protocol='literal', revision_model=None):
     review_model = review_model or model
+    revision_model = revision_model or model
     if review_protocol not in {'literal','passages'}:
         raise ValueError('explicit literal or passages review protocol required')
     review_instructions = PASSAGE_REVIEW if review_protocol == 'passages' else REVIEW
@@ -520,6 +538,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
     # replacement of a saved reviewer or a reset of its repair/revision budget.
     if review_model != model:
         procedure_settings.update(review_model=review_model, protocol='receiving-phase/v2')
+    if revision_model != model:
+        procedure_settings.update(revision_model=revision_model, protocol='receiving-phase/v3')
     procedure = hashlib.sha256(json.dumps(procedure_settings, sort_keys=True).encode()).hexdigest()
     if state.get('procedure_sha256', procedure) != procedure:
         raise ValueError('narrative procedure/model changed; preserve pending work and start a new comparison')
@@ -560,7 +580,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                 raise ValueError('invalid narrative phase cursor; preserve checkpoint')
             if progress['phase'] == 'generation':
                 trace.phase = 'narrative_generation' if revision == 0 else 'narrative_revision'
-                candidate = chat(model, progress['messages'], trace)
+                selected_model = revision_model if revision or progress['repair'] else model
+                candidate = chat(selected_model, progress['messages'], trace)
                 state['generations'].append(candidate)
                 progress.update(phase='generation_validate', candidate_index=len(state['generations'])-1)
                 save(checkpoint, pending)

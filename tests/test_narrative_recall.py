@@ -468,3 +468,25 @@ def test_reviewer_critique_returns_revisions_to_original_narrator(tmp_path):
     assert value['claims']==good['claims']
     assert calls==[('narrator','narrative_generation'),('reviewer','narrative_review'),
                    ('narrator','narrative_revision'),('reviewer','narrative_review')]
+
+
+def test_frozen_revision_role_routes_correction_without_repeating_initial_model(tmp_path):
+    body={'receiving_body':'voice'}
+    first=account('Jo received it.',[1])
+    final=account('Delivery failed.',[1])
+    evidence={1:{'text':'Delivery failed.'}}
+    responses=iter([first,verdict('unsupported','Receipt unsupported.',first),
+                    final,verdict('supported','Actual failure.',final,'Delivery failed.')])
+    calls=[]
+    def chat(model,messages,trace):
+        calls.append((model,trace.phase));return next(responses)
+    pending={};save=lambda p,v:p.write_text(json.dumps(v));path=tmp_path/'pending.json'
+    value=nr.answer('initial','Did Jo get it?',evidence,body,SimpleNamespace(phase='recall'),
+                    pending,path,chat,save,review_model='reviewer',revision_model='corrector')
+    assert value['claims'][0]['text']=='Delivery failed.'
+    assert calls==[('initial','narrative_generation'),('reviewer','narrative_review'),
+                   ('corrector','narrative_revision'),('reviewer','narrative_review')]
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('initial','Did Jo get it?',evidence,body,SimpleNamespace(phase='recall'),
+                    pending,path,chat,save,review_model='reviewer',revision_model='other')
+    assert len(calls)==4

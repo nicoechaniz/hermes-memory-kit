@@ -1,0 +1,24 @@
+{
+  "request_sha256": "be10ce488e9a151106e228d0900f4a9dd9cc7db4ad26f4cfa78ec33d4a2f427d",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/166-be10ce488e9a151106e228d0900f4a9dd9cc7db4ad26f4cfa78ec33d4a2f427d.json",
+  "usage": {
+    "prompt_tokens": 2766,
+    "completion_tokens": 5927,
+    "total_tokens": 8693,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5245
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1614
+  },
+  "seconds": 23.37473703175783,
+  "content": "{\"receiving_body\":\"fixture:body:voice\",\"claims\":[{\"text\":\"The connector-numbering proposal is HarborMesh repair checklist comment c1200, signed “River.”\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"A human reporter told our code body on 2026-07-01 that they thought c1200’s River was Mara but were not sure.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"We received a corrected tool response through our code body on 2026-07-04 identifying c1200’s author as display name River, login river-tools, account ID 2901.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The c1200 author replied, “I am not Mara Ibarra,” and asked that the connector-numbering checklist be credited to the River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"Mara Ibarra’s known Forge account is 1847, login mara-river.\",\"support\":[1,7],\"basis\":\"memory\",\"facet\":\"identification\"},{\"text\":\"The initial human report and the correction were both received through our code body, on 2026-07-01 and 2026-07-04 respectively.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The initial report described c1200 as proposing to number connectors before disassembly and said they wanted to try that next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"context\"},{\"text\":\"The proposal’s practical point was to number connectors before disassembly in a repair checklist.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The human reporter wanted to try that connector-numbering method on the next repair.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"The correction mattered because it replaced the tentative Mara attribution with attribution to the River account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"meaning\"},{\"text\":\"According to the corrected record, Mara was not the one who proposed numbering the connectors.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The comment was credited to the River account by the author’s request; no real name was supplied.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"outcome\"},{\"text\":\"The author also said they had not supplied a real name.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not record Mara proposing connector numbering.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not establish the River author’s real name beyond that account.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The earlier tentative “I think that is Mara” report remains an earlier uncertainty, not erased by the later correction.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"},{\"text\":\"The supplied memories do not report whether the connector-numbering checklist was later used or adopted.\",\"support\":[7],\"basis\":\"memory\",\"facet\":\"limits\"}]}",
+  "finish_reason": "stop"
+}

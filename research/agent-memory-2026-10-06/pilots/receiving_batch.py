@@ -20,7 +20,18 @@ class DispatchBudgetPending(RuntimeError):
 
 def run(packet_root, out, *, api_key, generation_effort='low', review_effort='low',
         workers=3, max_calls=48, question_keys=None, dispatcher=api.dispatch,
-        generation_references=(), response_references=(), review_protocol='passages'):
+        generation_references=(), response_references=(), review_protocol='passages',
+        generation_model='deepseek-flash', review_model=None, revision_model=None):
+    review_model = review_model or generation_model
+    revision_model = revision_model or generation_model
+    if any(m not in {'deepseek-flash','gpt-6.1-sol'}
+           for m in (generation_model,review_model,revision_model)):
+        raise ValueError('explicit qualified transport model names required')
+    native_roles = 'gpt-6.1-sol' in (generation_model,review_model,revision_model)
+    if native_roles and (dispatcher is api.dispatch or
+            (review_model == 'gpt-6.1-sol' and review_effort != 'low') or
+            ('gpt-6.1-sol' in (generation_model,revision_model) and generation_effort != 'low')):
+        raise ValueError('native Sol requires explicit native routing and low effort')
     packet_root, out = Path(packet_root), Path(out)
     if not 1 <= workers <= 3 or not 0 <= max_calls <= 528:
         raise ValueError('explicit finite worker/call bounds required')
@@ -39,7 +50,8 @@ def run(packet_root, out, *, api_key, generation_effort='low', review_effort='lo
     if not selected <= set(keys):
         raise ValueError('selected questions must belong to the frozen packets')
     frozen = dict(qualification=False, packets_sha256=source['packets_sha256'],
-        generation_model='deepseek-flash', review_model='deepseek-flash',
+        generation_model=generation_model, review_model=review_model,
+        revision_model=revision_model,
         generation_effort=generation_effort, review_effort=review_effort,
         review_protocol=review_protocol,
         generation_limit=12000, review_limit=32768, workers=workers,
@@ -49,6 +61,9 @@ def run(packet_root, out, *, api_key, generation_effort='low', review_effort='lo
         narrative_sha256=api.exchange.checksum(Path(api.exchange.narrative.__file__)),
         independent_grading_required=True, source_access=False, tools_allowed=False,
         native_memory_allowed=False)
+    if native_roles:
+        import receiving_codex_native as native
+        frozen['native_dispatcher_sha256'] = api.exchange.checksum(Path(native.__file__))
     out.mkdir(mode=0o700, parents=True, exist_ok=True)
     if (out/'conditions.json').exists() and json.loads((out/'conditions.json').read_text()) != frozen:
         raise ValueError('procedure changed; preserve completed and pending work')
@@ -111,8 +126,9 @@ def run(packet_root, out, *, api_key, generation_effort='low', review_effort='lo
                 dispatcher(path,root,api_key,'deepseek')
                 return transport(model,messages,call_trace)
         try:
-            value = api.exchange.narrative.answer('deepseek-flash',packet['question'],evidence,
+            value = api.exchange.narrative.answer(generation_model,packet['question'],evidence,
                 packet['binding'],trace,pending,checkpoint,chat,api.exchange.pilot.save,
+                review_model=review_model, revision_model=revision_model,
                 review_protocol=review_protocol)
         except DispatchBudgetPending:
             return dict(arm=packet['arm'],answer_index=packet['answer_index'],state='pending_budget')

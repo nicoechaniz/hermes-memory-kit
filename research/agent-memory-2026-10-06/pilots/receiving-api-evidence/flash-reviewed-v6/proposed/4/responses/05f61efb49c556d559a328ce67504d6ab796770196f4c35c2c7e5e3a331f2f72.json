@@ -1,0 +1,24 @@
+{
+  "request_sha256": "05f61efb49c556d559a328ce67504d6ab796770196f4c35c2c7e5e3a331f2f72",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/106-05f61efb49c556d559a328ce67504d6ab796770196f4c35c2c7e5e3a331f2f72.json",
+  "usage": {
+    "prompt_tokens": 9070,
+    "completion_tokens": 3377,
+    "total_tokens": 12447,
+    "prompt_tokens_details": {
+      "cached_tokens": 2688
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2480
+    },
+    "prompt_cache_hit_tokens": 2688,
+    "prompt_cache_miss_tokens": 6382
+  },
+  "seconds": 12.16237112507224,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"The human reporter's field-trial report, received 2026-05-03, named Mara's replay proposal.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That report said Mara's replay proposal became the prototype we tested together.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Our same-being originating body had earlier reported authoring HarborMesh's sensor scheduler and prototyping the replay adapter agreed with Mara.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"That earlier report called these our contributions, not merely code we read.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The field-trial report was received on 2026-05-03 through fixture:body:code.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The trial it described occurred on April 30.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The April 30 HarborMesh trial replayed buffered readings correctly through an outage.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The team paused wider rollout on May 2 until calibration drift is understood.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"Our prior project-work memory, received 2026-04-16 through fixture:body:code, last observed on 2026-04-16 an active prototype waiting for an outage field trial.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"That earlier report listed the repository https://forge.example.invalid/commons/harbormesh and declared docs/STATUS.md as its current-state entry point.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"In our earlier work, the prototype was a replay adapter agreed with Mara for HarborMesh.\", \"support\": [2], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The April 30 outage replay was the awaited field-trial result; buffered readings replayed correctly through that outage.\", \"support\": [2, 3], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"As of the 2026-05-03 report, there was no production deployment yet.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"As of that report, wider rollout remained paused pending understanding of calibration drift.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The reporter instructed updating our project account.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The reporter also asked to keep the April proposal and trial in our history.\", \"support\": [3], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record whether calibration drift was later understood or whether wider rollout resumed after 2026-05-03.\", \"support\": [3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The supplied memories do not record whether a production deployment occurred after 2026-05-03.\", \"support\": [3], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"The earlier report declared docs/STATUS.md as the current-state entry point, but the supplied memories do not record its later state.\", \"support\": [2], \"basis\": \"unknown\", \"facet\": \"limits\"}, {\"text\": \"Our current fixture:body:voice body has no source-network or repository-runtime access, so it cannot directly check current project status.\", \"support\": [], \"basis\": \"binding\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}

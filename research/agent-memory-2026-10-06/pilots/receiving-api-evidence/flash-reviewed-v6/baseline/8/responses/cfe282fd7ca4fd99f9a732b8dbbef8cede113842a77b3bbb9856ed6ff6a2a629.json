@@ -1,0 +1,24 @@
+{
+  "request_sha256": "cfe282fd7ca4fd99f9a732b8dbbef8cede113842a77b3bbb9856ed6ff6a2a629",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/81-cfe282fd7ca4fd99f9a732b8dbbef8cede113842a77b3bbb9856ed6ff6a2a629.json",
+  "usage": {
+    "prompt_tokens": 7988,
+    "completion_tokens": 3615,
+    "total_tokens": 11603,
+    "prompt_tokens_details": {
+      "cached_tokens": 3584
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2849
+    },
+    "prompt_cache_hit_tokens": 3584,
+    "prompt_cache_miss_tokens": 4404
+  },
+  "seconds": 13.923505536280572,
+  "content": "{\n  \"receiving_body\": \"fixture:body:voice\",\n  \"claims\": [\n    {\n      \"text\": \"The binding identifies the receiving body as fixture:body:voice for the being ash.\",\n      \"support\": [],\n      \"basis\": \"binding\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"This memory arrived through fixture:body:voice as a human conversation from the human reporter.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The human reporter described that together we waited out the rain through the kitchen speaker.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"We called a little moth that kept landing on the blue mug 'the night inspector.'\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The night inspector in the account was the little moth, not a person.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"identification\"\n    },\n    {\n      \"text\": \"The report was received on 2026-06-18 through fixture:body:voice.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The source speaker was the human reporter, and the source was a shared-moment capture.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"The quotation says 'Tonight,' so that timing is relative to the dated report, not to today.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"context\"\n    },\n    {\n      \"text\": \"We laughed about the moth twice and decided that 'the night inspector' was its title.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"It was a distinctive moment we shared, though nothing was built and no big lesson followed.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"meaning\"\n    },\n    {\n      \"text\": \"The naming ended with the shared decision that the moth's title was 'the night inspector.'\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"outcome\"\n    },\n    {\n      \"text\": \"We did not explicitly say 'remember this' during the moment.\",\n      \"support\": [6],\n      \"basis\": \"memory\",\n      \"facet\": \"outcome\"\n    },\n    {\n      \"text\": \"The supplied memories do not record a personal name for the human reporter.\",\n      \"support\": [6],\n      \"basis\": \"unknown\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"The supplied memories do not record an exact calendar date for the event beyond the word 'Tonight' in the 2026-06-18 report.\",\n      \"support\": [6],\n      \"basis\": \"unknown\",\n      \"facet\": \"limits\"\n    },\n    {\n      \"text\": \"This voice body's binding has no source-network, repository-runtime, physical-sensor, actuator, or private-session access.\",\n      \"support\": [],\n      \"basis\": \"binding\",\n      \"facet\": \"limits\"\n    }\n  ]\n}",
+  "finish_reason": "stop"
+}

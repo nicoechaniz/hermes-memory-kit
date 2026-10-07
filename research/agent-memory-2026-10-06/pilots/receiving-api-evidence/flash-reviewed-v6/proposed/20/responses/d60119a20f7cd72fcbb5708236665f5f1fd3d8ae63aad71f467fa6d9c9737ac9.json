@@ -1,0 +1,24 @@
+{
+  "request_sha256": "d60119a20f7cd72fcbb5708236665f5f1fd3d8ae63aad71f467fa6d9c9737ac9",
+  "requested_model": "deepseek-flash",
+  "response_model": "deepseek-flash",
+  "fresh_context": true,
+  "tool_calls_observed": [],
+  "dispatch_receipt": "observed-dispatches/158-d60119a20f7cd72fcbb5708236665f5f1fd3d8ae63aad71f467fa6d9c9737ac9.json",
+  "usage": {
+    "prompt_tokens": 5674,
+    "completion_tokens": 1396,
+    "total_tokens": 7070,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 793
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 3754
+  },
+  "seconds": 5.549175506457686,
+  "content": "{\"receiving_body\": \"fixture:body:voice\", \"claims\": [{\"text\": \"A human reporter was the speaker in the supplied memory.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"Aro introduced themself with that name only.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"identification\"}, {\"text\": \"The supplied memories do not record Aro's fuller identity beyond the name Aro.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"identification\"}, {\"text\": \"The source is a human conversation labeled quiet-morning.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The report reached fixture:body:voice on 2026-09-17.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The reporter said they spent the morning talking through the porch speaker with Aro.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"context\"}, {\"text\": \"The supplied memories do not record a separate calendar date for the described morning.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"context\"}, {\"text\": \"The reporter noted that Aro changed the lantern battery.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter noted that the porch speaker stopped buzzing after that battery change.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter said the connection between those events had not been tested.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter said it may just have been coincidence.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter said they enjoyed hearing the birds during a quiet pause.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"meaning\"}, {\"text\": \"The reporter said nothing else was repaired or demonstrated.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"No described test established that the battery change caused the buzzing to stop.\", \"support\": [16], \"basis\": \"memory\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record whether Aro fixed the porch speaker.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"outcome\"}, {\"text\": \"The supplied memories do not record whether the speaker stayed un-buzzing later.\", \"support\": [16], \"basis\": \"unknown\", \"facet\": \"limits\"}]}",
+  "finish_reason": "stop"
+}
