@@ -56,19 +56,19 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: [unknown outcomes and positive premises](../research/agent-memory-2026-10-06/pilots/2026-10-08-unknown-outcomes-and-positive-premises.md)
-records a stopped stage comparison: 25 completed answers / 443 outside-assessed
-clauses, one unsupported invitation-order modifier. Native medium review approved
-bounded receipt uncertainty while overlooking the positive temporal premise.
-Five bounded actual reviews reject four incorrect premises and preserve the
-faithful eighteen-clause control. The opt-in unknown-premise instruction changes
-existing review, adds no review phase and fingerprints checkpoints; 99 focused
-tests pass. All failures, sources and valid three-pass/replay/reconciliation
-work remain preserved. Qualify fresh identical closing packages under this
-correction, then finish snapshot receiving with explicit unchanged control/replay
-references. Old queues stay stopped; stage two remains open. The earlier complete
-medium-profile closing remains preserved evidence, not proof against this newly
-observed stage failure.
+Current continuation, 2026-10-08: [complete positive-premise closing](../research/agent-memory-2026-10-06/pilots/2026-10-08-positive-premise-closing-qualification.md)
+qualifies all 44 original packages: 583 outside-assessed final clauses, all 102
+positive requirements, no unsupported/rejected deliveries. The stricter existing
+review instruction detects embedded positive premises without adding a review
+phase. It makes 100 new native calls/1,669,962 known tokens; all 45 original
+physical generation/shape-repair requests are reused exactly. Five extra actual
+review/revision pairs versus the prior profile remain a measured cost, not an
+optimality claim. The stopped 25-answer stage failure, five bounded diagnostics
+and all earlier evidence are preserved. Fresh first-pass stage receiving has
+begun under the qualified procedure. Finish targets/full understanding after each
+pass and correction, using explicit unchanged control/replay references. Keep
+valid consolidation/replay/reconciliation; old queues stay stopped. Stage two
+remains open; 99 focused component tests remain valid.
 
 Preserved evidence: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation
