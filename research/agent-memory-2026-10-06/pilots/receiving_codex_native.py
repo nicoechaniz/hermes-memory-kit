@@ -27,11 +27,13 @@ def command(request, catalog, empty_cwd, logs):
     if (request.get('format') != 'hmk-fictional-receiving-request/v1'
             or request.get('model') != 'gpt-6.1-sol'
             or request.get('phase') not in {'narrative_generation', 'narrative_revision', 'narrative_review'}
-            or request.get('reasoning_effort') != 'low'
+            or request.get('reasoning_effort') not in {'low', 'medium'}
+            or (request.get('reasoning_effort') == 'medium' and
+                request.get('phase') != 'narrative_review')
             or request.get('fresh_context') is not True
             or request.get('tools_allowed') is not False
             or request.get('native_memory_allowed') is not False):
-        raise ValueError('explicit isolated native Sol low narrative profile required')
+        raise ValueError('explicit isolated native Sol low narrative or medium review profile required')
     messages = request['messages']
     if (not isinstance(messages, list) or len(messages) < 2
             or messages[0].get('role') != 'system'
@@ -43,7 +45,7 @@ def command(request, catalog, empty_cwd, logs):
     # Same task instructions/schema as the stateless API comparator. Codex adds
     # its generic base instructions; that harness difference must be reported.
     system = messages[0]['content'] + '\nReturn only JSON conforming to this output schema. This constrains syntax, not evidence or truth:\n' + json.dumps(request['response_schema'])
-    config = dict(model_provider='openai', model_reasoning_effort='low',
+    config = dict(model_provider='openai', model_reasoning_effort=request['reasoning_effort'],
         model_reasoning_summary='none', model_catalog_json=str(catalog),
         project_doc_max_bytes=0, developer_instructions=system,
         include_environment_context=False, include_permissions_instructions=False,
@@ -84,6 +86,9 @@ def dispatch(request_path, root, catalog, runner=subprocess.run, credential_file
             experimental_supported_tools=[], supports_search_tool=False,
             node_repl_disabled=True).items()):
         raise ValueError('native catalog must disable all selected model tool capabilities')
+    if request.get('reasoning_effort') == 'medium' and 'medium' not in {
+            level.get('effort') for level in selected[0].get('supported_reasoning_levels', [])}:
+        raise ValueError('native catalog does not establish medium reasoning support')
     cwd = root/'empty-cwd'; cwd.mkdir(mode=0o700, exist_ok=True)
     argv, stdin = command(request, catalog, cwd.resolve(), (root/'logs').resolve())
     receipt_path = root/'dispatches'/(d+'.json')
@@ -100,7 +105,7 @@ def dispatch(request_path, root, catalog, runner=subprocess.run, credential_file
     # sessions' instructions, history, config and native memory remain untouched.
     receipt = dict(state='started', provider='openai-codex-native',
         requested_model='gpt-6.1-sol', actual_response_model=None,
-        request_sha256=d, reasoning_effort='low', catalog_sha256=exchange.checksum(catalog),
+        request_sha256=d, reasoning_effort=request['reasoning_effort'], catalog_sha256=exchange.checksum(catalog),
         command=argv, native_memory_allowed=False, tools_allowed=False,
         fresh_context_basis='new ephemeral CLI thread; no resume/fork, private instructions or skills',
         task_instructions_role='developer; generic native Codex base remains',

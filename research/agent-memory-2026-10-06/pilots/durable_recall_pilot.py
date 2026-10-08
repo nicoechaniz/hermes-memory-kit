@@ -216,7 +216,10 @@ def verify_narrative_answer(value, pending, evidence, binding):
     if not candidate or not review:
         raise ValueError('typed narrative has no accepted candidate/review checkpoint')
     narrative_recall.validate(candidate, evidence, binding)
-    narrative_recall.review_shape(review, candidate, evidence, binding, 'assertions')
+    joint = state.get('joint_support_protocol')
+    if joint not in {None, 'memory-and-binding/v1'} or value.get('joint_support_protocol') != joint:
+        raise ValueError('joint support differs from the accepted procedure')
+    narrative_recall.review_shape(review, candidate, evidence, binding, 'assertions', joint is not None)
     expected = narrative_recall.supported_claims(candidate, review)
     ids = list(dict.fromkeys(cid for c in expected['claims'] for cid in c['support']))
     if 'citation_receipt_protocol' in value or 'citation_receipts' in value:

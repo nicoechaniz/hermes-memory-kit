@@ -263,7 +263,7 @@ def validate(value, evidence, binding):
     return value
 
 
-def review_shape(value, candidate, evidence, binding=None, protocol='literal'):
+def review_shape(value, candidate, evidence, binding=None, protocol='literal', allow_joint_support=False):
     typed = protocol == 'assertions'
     if typed and not isinstance(binding, dict):
         raise ValueError('assertion review requires the actual receiving binding')
@@ -306,18 +306,19 @@ def review_shape(value, candidate, evidence, binding=None, protocol='literal'):
             basis = atom['basis'] if typed else claim['basis']
             if typed:
                 fields = atom['binding_fields']
-                if (basis not in {'memory','binding','unknown'} or
+                if (basis not in ({'memory','binding','unknown','mixed'} if allow_joint_support
+                                  else {'memory','binding','unknown'}) or
                         not isinstance(atom['source_fact'],str) or not atom['source_fact'].strip()):
                     raise ValueError('each assertion needs its own basis and source proposition')
                 if (not isinstance(fields,list) or any(not isinstance(f,str) or f not in binding for f in fields)):
                     raise ValueError('binding fields must name actual supplied receiving fields')
-                if basis != 'binding' and fields:
+                if basis not in {'binding','mixed'} and fields:
                     raise ValueError('only binding assertions may cite receiving fields')
-                if basis == 'binding' and atom['verdict'] == 'supported' and not fields:
+                if basis in {'binding','mixed'} and atom['verdict'] == 'supported' and not fields:
                     raise ValueError('supported binding assertions require actual receiving fields')
-                if basis != 'memory' and atom['proof']:
+                if basis not in {'memory','mixed'} and atom['proof']:
                     raise ValueError('binding and unknown assertions cannot cite historical proof')
-            if basis == 'memory' and atom['verdict'] == 'supported' and not atom['proof']:
+            if basis in {'memory','mixed'} and atom['verdict'] == 'supported' and not atom['proof']:
                 raise ValueError('supported memory assertions require quoted source proof')
             for proof in atom['proof']:
                 allowed = evidence if typed else claim['support']
@@ -391,7 +392,7 @@ def proof_passages(item):
     return [dict(passage=index,quote=text) for index,text in enumerate(passages)]
 
 
-def passage_review(value, candidate, evidence, protocol='passages'):
+def passage_review(value, candidate, evidence, protocol='passages', allow_joint_support=False):
     """Materialize original quotations; never repair IDs, words or verdicts."""
     canonical = json.loads(json.dumps(value))
     if not isinstance(canonical,dict) or not isinstance(canonical.get('claims'),list):
@@ -416,6 +417,12 @@ def passage_review(value, candidate, evidence, protocol='passages'):
                     raise ValueError('passage number is outside the supplied source')
                 converted.append(dict(id=ref['id'],quote=passages[ref['passage']]['quote']))
             atom['proof'] = converted
+            if (allow_joint_support and protocol == 'assertions' and
+                    atom.get('basis') in {'memory','binding'} and converted and atom.get('binding_fields')):
+                # A conclusion can require a remembered dependency and a
+                # current capability together. Retain both evidence classes;
+                # never rewrite words, source facts or semantic verdicts.
+                atom['basis'] = 'mixed'
     return canonical
 
 
@@ -756,13 +763,18 @@ judgment and must be assessed independently outside this procedure.
 
 def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save,
            review_model=None, review_protocol='literal', revision_model=None,
-           source_representation='full', preserve_citation_receipts=False, clarify_deixis=False):
+           source_representation='full', preserve_citation_receipts=False, clarify_deixis=False,
+           allow_joint_support=False, review_effort=None):
     if source_representation not in {'full', 'decoded'}:
         raise ValueError('explicit full or decoded source representation required')
     review_model = review_model or model
     revision_model = revision_model or model
     if review_protocol not in {'literal','passages','assertions'}:
         raise ValueError('explicit literal, passages or assertions review protocol required')
+    if type(allow_joint_support) is not bool or (allow_joint_support and review_protocol != 'assertions'):
+        raise ValueError('joint support requires explicit assertion review')
+    if review_effort not in {None,'low','medium'}:
+        raise ValueError('explicit low or medium verification effort required')
     if type(preserve_citation_receipts) is not bool or (
             preserve_citation_receipts and review_protocol != 'assertions'):
         raise ValueError('citation receipts require explicit assertion review')
@@ -791,6 +803,10 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         raise ValueError('source referents require an explicit boolean option')
     if clarify_deixis:
         procedure_settings['source_referents_protocol'] = 'report-deixis/v1'
+    if allow_joint_support:
+        procedure_settings['joint_support_protocol'] = 'memory-and-binding/v1'
+    if review_effort is not None:
+        procedure_settings['review_effort'] = review_effort
     # Changed validation needs a new comparison, including accepted checkpoints.
     # Historical trials can resume with their preserved implementation.
     # Selecting a separate reviewer is a new frozen procedure, never an implicit
@@ -806,6 +822,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         raise ValueError('legacy narrative checkpoint has no phase cursor; preserve it and start a new comparison')
     state['context_sha256'] = fingerprint
     state['procedure_sha256'] = procedure
+    if allow_joint_support:
+        state['joint_support_protocol'] = 'memory-and-binding/v1'
     def rendered(candidate, review):
         value = supported_claims(candidate, review) if review_protocol == 'assertions' else candidate
         return dict(value, text=' '.join(claim['text'] for claim in value['claims']),
@@ -814,10 +832,11 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                 dict(support_protocol='assertions/v2') if review_protocol == 'assertions' else {}), **(
                 dict(citation_receipt_protocol='original-receipts/v1',
                      citation_receipts=receipt_context(value, evidence))
-                if preserve_citation_receipts else {}))
+                if preserve_citation_receipts else {}), **(
+                dict(joint_support_protocol='memory-and-binding/v1') if allow_joint_support else {}))
     if 'accepted' in state:
         validate(state['accepted'], evidence, binding)
-        review_shape(state['accepted_review'], state['accepted'], evidence, binding, review_protocol)
+        review_shape(state['accepted_review'], state['accepted'], evidence, binding, review_protocol, allow_joint_support)
         return rendered(state['accepted'], state['accepted_review'])
     context = supplied_context(query, evidence, binding, source_representation, clarify_deixis)
     if 'progress' not in state:
@@ -884,13 +903,13 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                 review = state['reviews'][progress['review_index']]['review']
                 try:
                     if review_protocol in {'passages','assertions'}:
-                        review = passage_review(review,candidate,evidence,review_protocol)
+                        review = passage_review(review,candidate,evidence,review_protocol,allow_joint_support)
                         repairs = []
                     else:
                         review, repairs = literal_review_quotes(review,candidate,evidence)
                     state['reviews'][progress['review_index']].update(
                         canonical_review=review,literal_quote_repairs=repairs,proof_protocol=review_protocol)
-                    review_shape(review, candidate, evidence, binding, review_protocol)
+                    review_shape(review, candidate, evidence, binding, review_protocol,allow_joint_support)
                 except ValueError as error:
                     if progress['repair'] == 1:
                         reject('atomic review invalid after one structural repair: '+str(error), 'review')

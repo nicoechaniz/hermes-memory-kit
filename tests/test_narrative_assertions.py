@@ -48,6 +48,7 @@ def test_actual_binding_and_original_source_membership_remain_required():
     review['claims'][0]['assertions'][1]['binding_fields'] = ['invented_runtime_access']
     with pytest.raises(ValueError,match='actual supplied receiving fields'):
         nr.review_shape(review,candidate,evidence,binding,'assertions')
+
     candidate,evidence,binding,review = example()
     review['claims'][0]['assertions'][0]['proof'][0]['quote'] = 'Checks have already succeeded.'
     with pytest.raises(ValueError,match='verbatim'):
@@ -56,6 +57,34 @@ def test_actual_binding_and_original_source_membership_remain_required():
     review['claims'][0]['assertions'][0]['proof'][0]['id'] = 999
     with pytest.raises(ValueError,match='supplied citations'):
         nr.review_shape(review,candidate,evidence,binding,'assertions')
+
+
+def test_joint_conclusion_retains_memory_and_actual_binding_without_changing_verdict():
+    evidence={1:{'text':'Running these checks requires repository/runtime tools.'}}
+    binding={'receiving_body':'voice','repository_runtime_access':False}
+    candidate={'receiving_body':'voice','claims':[dict(text='I cannot run those checks here.',
+        basis='binding',support=[],facet='limits')]}
+    raw={'claims':[dict(index=0,verdict='supported',reason='Two actual premises support the conclusion.',assertions=[dict(
+        span=candidate['claims'][0]['text'],basis='memory',source_fact='Checks require runtime tools and current runtime access is false.',
+        proof=[{'id':1,'passage':0}],binding_fields=['repository_runtime_access'],
+        verdict='supported',reason='Original dependency and actual body capability jointly entail this limit.')])],'missing':[]}
+    strict=nr.passage_review(raw,candidate,evidence,'assertions')
+    with pytest.raises(ValueError,match='only binding assertions'):
+        nr.review_shape(strict,candidate,evidence,binding,'assertions')
+    joint=nr.passage_review(raw,candidate,evidence,'assertions',True)
+    nr.review_shape(joint,candidate,evidence,binding,'assertions',True)
+    atom=joint['claims'][0]['assertions'][0]
+    assert atom['basis']=='mixed' and raw['claims'][0]['assertions'][0]['basis']=='memory'
+    assert atom['span']==candidate['claims'][0]['text']
+    assert atom['proof']==[{'id':1,'quote':evidence[1]['text']}]
+    assert nr.supported_claims(candidate,joint)['claims'][0]['basis']=='mixed'
+    # A rejected date/actor remains rejected; normalization is not approval.
+    raw['claims'][0]['verdict']=raw['claims'][0]['assertions'][0]['verdict']='unsupported'
+    rejected=nr.passage_review(raw,candidate,evidence,'assertions',True)
+    assert rejected['claims'][0]['verdict']=='unsupported'
+    atom['binding_fields']=['invented_access']
+    with pytest.raises(ValueError,match='actual supplied receiving fields'):
+        nr.review_shape(joint,candidate,evidence,binding,'assertions',True)
 
 
 def test_unknown_cannot_hide_historical_proof_and_memory_cannot_drop_proof():
@@ -115,6 +144,10 @@ def test_assertion_protocol_accepts_source_relabeling_without_semantic_revision(
         nr.answer('fixture','Can this body run the checks?',evidence,binding,
             trace,pending,tmp_path/'pending.json',chat,save,review_protocol='assertions',
             clarify_deixis=True)
+    for options in [{'allow_joint_support':True}, {'review_effort':'medium'}]:
+        with pytest.raises(ValueError,match='procedure/model changed'):
+            nr.answer('fixture','Can this body run the checks?',evidence,binding,
+                trace,pending,tmp_path/'pending.json',chat,save,review_protocol='assertions',**options)
 
 
 def test_report_referents_preserve_source_and_require_event_specific_membership():
