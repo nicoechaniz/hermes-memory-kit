@@ -179,6 +179,33 @@ def answer_evidence(packs, expanded):
     return available
 
 
+def verify_narrative_answer(value, pending, evidence, binding):
+    """Validate a rendered answer against the exact accepted phase evidence.
+
+    Typed support enriches claims; it is not the draft sentence API shape.
+    Check its projection against saved candidate/review without provider calls
+    or resetting a pending revision budget.
+    """
+    if value.get('support_protocol') != 'assertions/v2':
+        return narrative_recall.validate(dict(receiving_body=value['receiving_body'],
+            claims=value['claims']), evidence, binding)
+    state = pending.get('narrative', {})
+    candidate, review = state.get('accepted'), state.get('accepted_review')
+    if not candidate or not review:
+        raise ValueError('typed narrative has no accepted candidate/review checkpoint')
+    narrative_recall.validate(candidate, evidence, binding)
+    narrative_recall.review_shape(review, candidate, evidence, binding, 'assertions')
+    expected = narrative_recall.supported_claims(candidate, review)
+    ids = list(dict.fromkeys(cid for c in expected['claims'] for cid in c['support']))
+    if (value.get('receiving_body') != expected['receiving_body'] or
+            value.get('claims') != expected['claims'] or value.get('used_ids') != ids or
+            value.get('text') != ' '.join(c['text'] for c in expected['claims']) or
+            value.get('semantic_review') != review or value.get('review_is_proof') is not False or
+            review['missing'] or any(r['verdict'] != 'supported' for r in review['claims'])):
+        raise ValueError('typed narrative differs from its accepted source projection')
+    return value
+
+
 def supported_answer(value, evidence, binding):
     """Select factual support instead of trusting paraphrase as verified fact.
 
@@ -657,8 +684,7 @@ available. Select useful evidence, not unrelated snippets to fill facets.'''),
                     if getattr(args, 'narrative', False) and answer.get('operational_status') == 'rejected':
                         break
                     if getattr(args, 'narrative', False):
-                        narrative_recall.validate({'receiving_body':answer['receiving_body'],
-                            'claims':answer['claims']}, evidence, receiving_binding)
+                        verify_narrative_answer(answer, pending, evidence, receiving_binding)
                     elif getattr(args, 'evidence_answers', False):
                         answer = supported_answer(answer, evidence, receiving_binding)
                     else:
