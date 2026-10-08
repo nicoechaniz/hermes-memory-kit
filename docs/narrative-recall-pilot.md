@@ -230,6 +230,13 @@ supplies scoped capture, planning and consolidation messages. A separate
 `hmk-fictional-memory-operation/v1` request profile permits only those finite
 DeepSeek operations, without changing the historical receiving profile.
 
+Resolve credentials through the existing active Hermes profile before starting
+finite callers. Set the subprocess's supported `HERMES_HOME` to that profile;
+read its configured provider pool without copying credentials into the checkout,
+commands, public receipts or another auth store. An empty old default/global
+home does not establish that the running Hermes profile lacks a credential.
+Record the chosen profile resolution separately from fictional model inputs.
+
 Actual request/response/parameter receipts survive failures and resumption.
 Response content must match its observed completed receipt; the same request
 can be consumed again with zero additional calls. Failed/unresolved attempts

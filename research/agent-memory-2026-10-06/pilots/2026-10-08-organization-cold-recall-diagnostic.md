@@ -68,10 +68,11 @@ These checks validate routing/preservation, not model quality.
 
 The new full equivalent V4 comparison has been prepared with preserved code and
 unchanged original fictional formation, embeddings and two policy arms. Its
-credential preflight fails before dispatch because the configured DeepSeek pool
-has no entries. No fresh model outcome is claimed. Restoring the authorized
-configured access is the dependency for V4 and further Flash organization calls;
-no different provider or old credential is substituted automatically.
+initial credential preflight queried the old default/global Hermes home and
+failed before dispatch. The active Hermes profile has its intact DeepSeek pool;
+the human correction led to resolving that existing profile through HERMES_HOME.
+V4 and further organization calls resumed without copying or mutating credentials.
+No fresh model outcome is claimed by this historical targeted diagnostic.
 
 Resume V4, inspect every actual final claim and requirement, then run new-procedure
 recall on the three preserved first-write snapshots. Retain these old failures as

@@ -1,0 +1,11 @@
+{
+  "physical_calls": 4,
+  "completed_calls": 4,
+  "known_tokens": 47841,
+  "median_seconds": 26.62054711719975,
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "effort": "low",
+  "billed_usd": null,
+  "scope": "Only this organization phase; cold recall and prior source formation separately measured."
+}
