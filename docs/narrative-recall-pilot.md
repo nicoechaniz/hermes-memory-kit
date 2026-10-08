@@ -46,6 +46,23 @@ answer, and a conservative empty answer cannot satisfy a positive requirement.
 
 ## Narration and review
 
+The opt-in `assertions/v2` review protocol corrects the sentence-level source
+classification failure observed in PR #64. Each reviewed assertion identifies
+its own memory/binding/unknown basis and the proposition established by its
+actual source. Memory assertions retain original passage references, binding
+assertions name supplied receiving fields, and packet-scoped unknowns have no
+positive historical proof. Exhaustive word coverage, semantic verdicts, source
+membership and all outside fidelity/coverage requirements remain mandatory.
+The rendered answer attaches these assertion sources without changing narrative
+words; a sentence can have mixed support, with its draft label retained for audit.
+Typed review may correct a draft citation from any actually supplied source,
+never an external record. Semantic errors and omissions still require revision
+or refusal. The model's source proposition and verdict remain fallible judgments.
+This is a changed, fingerprinted receiving contract, not a reinterpretation of
+historical failed trials or evidence of full qualification. The client freezes
+and checks the selected protocol before dispatch. Legacy literal/passage behavior
+remains available for its preserved procedures.
+
 `--narrative` returns natural claim prose, each with visible support IDs and a
 memory/binding/unknown basis. Remembered accounts cover identification, context,
 meaning, outcome and limits. The adapter decodes only exact attributed source

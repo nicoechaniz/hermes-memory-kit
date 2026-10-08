@@ -59,7 +59,15 @@ proof of absence.
 Current continuation, 2026-10-08: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation
 are applied with native replay, original/history preservation and backup/restore
-verified. The [actual preservation/reconciliation report](../research/agent-memory-2026-10-06/pilots/2026-10-08-three-pass-preservation-and-reconciliation.md)
+verified. The [assertion-verification correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-assertion-verification-diagnostic.md)
+now preserves two faithful fixed-packet controls and detects five introduced
+semantic/capability errors. It types support per assertion and distinguishes
+direct conversation from indirect report without rewriting source text or
+faithful prose. Three unused fictional receiving cases are the next bounded
+gate, followed by one complete closing comparison and the outstanding
+per-transformation recall assessment. Do not resume the old queues or repeat
+valid consolidations. Stage two remains open. The
+[actual preservation/reconciliation report](../research/agent-memory-2026-10-06/pilots/2026-10-08-three-pass-preservation-and-reconciliation.md)
 records source currency/refusals, projection reduction, storage growth and separate
 organization costs. The [completed V5 assessment and bounded continuation](../research/agent-memory-2026-10-06/pilots/2026-10-08-v5-failure-and-bounded-continuation.md)
 cover all 44 answers and 571 claims. Both arms meet all candidate positive
@@ -67,10 +75,10 @@ requirements, but four support/basis errors and one actual change of meaning
 prevent qualification. Native revision introduced the changed meaning and native
 review accepted it. Further broad snapshot queues have been stopped with completed
 in-flight receipts, preserved responses and unfinished cursors. Do not resume
-those queues or launch another full variant before correcting the demonstrated
-mechanism on the same fixed packets. The next action is assertion-level source
-verification that preserves faithful paraphrases and catches changed semantic
-relations, with memory, binding and uncertainty distinguished. Keep every
+those queues or launch another full variant before the bounded correction gates
+above are met. Assertion-level source verification preserves faithful
+paraphrases and checks semantic relations, with memory, binding and uncertainty
+distinguished; its bounded diagnostic is not full qualification. Keep every
 existing fidelity/provenance/positive/negative requirement. Once that bounded
 correction is stable, execute one complete closing comparison and finish the
 required per-transformation receiving gates, reusing eligible exact evidence.

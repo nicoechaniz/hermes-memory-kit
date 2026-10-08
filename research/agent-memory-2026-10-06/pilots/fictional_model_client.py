@@ -13,7 +13,8 @@ import receiving_codex_native as native
 class Client:
     def __init__(self, root, fixture, api_key, catalog, *, operation_effort='low',
                  generation_model='deepseek-flash', review_model='gpt-6.1-sol',
-                 revision_model='gpt-6.1-sol', dispatcher=None, operation_output_limit=None):
+                 revision_model='gpt-6.1-sol', dispatcher=None, operation_output_limit=None,
+                 review_protocol='passages'):
         self.root, self.catalog = Path(root), Path(catalog).resolve()
         self.key, self.dispatcher = api_key, dispatcher
         corpus = json.loads(Path(fixture).read_text())
@@ -22,6 +23,9 @@ class Client:
         if generation_model != 'deepseek-flash' or review_model != 'gpt-6.1-sol' or revision_model != 'gpt-6.1-sol':
             raise ValueError('explicit current Flash/native-Sol candidate roles required')
         self.operation_effort = operation_effort
+        if review_protocol not in {'passages','assertions'}:
+            raise ValueError('explicit passages or assertions review protocol required')
+        self.review_protocol = review_protocol
         if operation_output_limit is not None and (
                 type(operation_output_limit) is not int or not 1 <= operation_output_limit <= 32768):
             raise ValueError('explicit operation output limit must be an integer from 1 to 32768')
@@ -30,7 +34,7 @@ class Client:
                           revision_model=revision_model)
         frozen = dict(format='hmk-fictional-model-client/v1',fixture_sha256=api.exchange.checksum(Path(fixture)),
             operation_model='deepseek-flash',operation_effort=operation_effort,**self.roles,
-            narrative_effort='low',review_protocol='passages',
+            narrative_effort='low',review_protocol=review_protocol,
             client_sha256=api.exchange.checksum(Path(__file__)),
             api_sha256=api.exchange.checksum(Path(api.__file__)),
             native_sha256=api.exchange.checksum(Path(native.__file__)),
@@ -53,6 +57,11 @@ class Client:
                         self.roles['revision_model'])
             if model != expected:
                 raise ValueError('narrative call does not match frozen processing role')
+            if trace.phase == 'narrative_review':
+                protocol = json.loads(messages[1]['content']).get('review_protocol')
+                expected_protocol = 'assertions/v2' if self.review_protocol == 'assertions' else 'passages/v1'
+                if protocol != expected_protocol:
+                    raise ValueError('narrative review does not match frozen support protocol')
             transport = api.exchange.FileExchange(root,'low','low')
             try:
                 return transport(model,messages,trace)

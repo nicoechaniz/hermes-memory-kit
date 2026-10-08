@@ -27,13 +27,19 @@ def response_schema(phase, messages):
     if phase == 'narrative_review':
         count = len(packet['candidate']['claims'])
         verdict = {'type':'string','enum':['supported','unsupported']}
-        if packet.get('review_protocol') == 'passages/v1':
+        typed = packet.get('review_protocol') == 'assertions/v2'
+        if packet.get('review_protocol') in {'passages/v1', 'assertions/v2'}:
             count_passages = max((len(row['proof_passages']) for row in packet['evidence']),default=0)
             proof = obj({'id':cited,'passage':{'type':'integer','minimum':0,'maximum':max(0,count_passages-1)}})
         else:
             proof = obj({'id':cited,'quote':dict(string,maxLength=400)})
         atom = obj({'span':string,'verdict':verdict,'reason':reason,
                     'proof':array(proof,maxItems=5 if ids else 0)})
+        if typed:
+            atom = obj(dict(atom['properties'],
+                basis={'type':'string','enum':['memory','binding','unknown']},
+                source_fact=reason,
+                binding_fields=array({'type':'string','enum':list(packet['receiving_binding'])},maxItems=5)))
         entry = obj({'index':{'type':'integer','minimum':0,'maximum':count-1},
                      'verdict':verdict,'reason':reason,'assertions':array(atom,minItems=1,maxItems=8)})
         return obj({'claims':array(entry,minItems=count,maxItems=count),
@@ -72,7 +78,8 @@ def source_blocks(text, depth=0):
                      receiving_body=None, reported_at=None, channel=None)
         if attributes:
             role, source, date, body = attributes.groups()
-            speaker = ('human reporter' if role in {'Human report', 'Human conversation'}
+            speaker = ('human reporter' if role == 'Human report'
+                       else 'human conversational participant' if role == 'Human conversation'
                        else 'distinct peer in attributed communication' if
                        role == 'Attributed peer communication' else 'source tool' if
                        role == 'tool_response' else 'attributed originating body' if
@@ -165,7 +172,7 @@ def expressed_dates(text):
 
 def missing_anchors(candidate, evidence):
     text = ' '.join(claim['text'] for claim in candidate['claims'])
-    cited = {cid for claim in candidate['claims'] if claim['basis'] == 'memory'
+    cited = {cid for claim in candidate['claims'] if claim['basis'] in {'memory','mixed'}
              for cid in claim['support']}
     dates = expressed_dates(text)
     return [f'Retain the supplied date/world pointer {anchor} from cited memory {cid}.'
@@ -212,7 +219,10 @@ def validate(value, evidence, binding):
     return value
 
 
-def review_shape(value, candidate, evidence):
+def review_shape(value, candidate, evidence, binding=None, protocol='literal'):
+    typed = protocol == 'assertions'
+    if typed and not isinstance(binding, dict):
+        raise ValueError('assertion review requires the actual receiving binding')
     count = len(candidate['claims'])
     if not isinstance(value, dict) or set(value) != {'claims', 'missing'} or not isinstance(value['claims'], list):
         raise ValueError('review needs claims and missing arrays only')
@@ -236,7 +246,10 @@ def review_shape(value, candidate, evidence):
         if not isinstance(row['assertions'], list) or not row['assertions']:
             raise ValueError('each claim needs an exhaustive assertion decomposition')
         for atom in row['assertions']:
-            if not isinstance(atom, dict) or set(atom) != {'span', 'verdict', 'proof', 'reason'}:
+            keys = {'span', 'verdict', 'proof', 'reason'}
+            if typed:
+                keys |= {'basis', 'source_fact', 'binding_fields'}
+            if not isinstance(atom, dict) or set(atom) != keys:
                 raise ValueError('assertions need span, verdict, proof and reason')
             if not isinstance(atom['span'], str) or not atom['span'].strip() or atom['span'] not in claim['text']:
                 raise ValueError('assertion span must be verbatim candidate prose')
@@ -246,10 +259,25 @@ def review_shape(value, candidate, evidence):
                 covered.update(range(match.start(), match.end()))
             if not isinstance(atom['proof'], list):
                 raise ValueError('assertion proof must be an array')
-            if claim['basis'] == 'memory' and atom['verdict'] == 'supported' and not atom['proof']:
+            basis = atom['basis'] if typed else claim['basis']
+            if typed:
+                fields = atom['binding_fields']
+                if (basis not in {'memory','binding','unknown'} or
+                        not isinstance(atom['source_fact'],str) or not atom['source_fact'].strip()):
+                    raise ValueError('each assertion needs its own basis and source proposition')
+                if (not isinstance(fields,list) or any(not isinstance(f,str) or f not in binding for f in fields)):
+                    raise ValueError('binding fields must name actual supplied receiving fields')
+                if basis != 'binding' and fields:
+                    raise ValueError('only binding assertions may cite receiving fields')
+                if basis == 'binding' and atom['verdict'] == 'supported' and not fields:
+                    raise ValueError('supported binding assertions require actual receiving fields')
+                if basis != 'memory' and atom['proof']:
+                    raise ValueError('binding and unknown assertions cannot cite historical proof')
+            if basis == 'memory' and atom['verdict'] == 'supported' and not atom['proof']:
                 raise ValueError('supported memory assertions require quoted source proof')
             for proof in atom['proof']:
-                if not isinstance(proof, dict) or set(proof) != {'id', 'quote'} or type(proof['id']) is not int or proof['id'] not in claim['support']:
+                allowed = evidence if typed else claim['support']
+                if not isinstance(proof, dict) or set(proof) != {'id', 'quote'} or type(proof['id']) is not int or proof['id'] not in allowed:
                     raise ValueError('proof IDs must belong to this claim\'s supplied citations')
                 quote = proof['quote']
                 if not isinstance(quote, str) or not quote.strip():
@@ -319,7 +347,7 @@ def proof_passages(item):
     return [dict(passage=index,quote=text) for index,text in enumerate(passages)]
 
 
-def passage_review(value, candidate, evidence):
+def passage_review(value, candidate, evidence, protocol='passages'):
     """Materialize original quotations; never repair IDs, words or verdicts."""
     canonical = json.loads(json.dumps(value))
     if not isinstance(canonical,dict) or not isinstance(canonical.get('claims'),list):
@@ -328,7 +356,7 @@ def passage_review(value, candidate, evidence):
         if (not isinstance(row,dict) or type(row.get('index')) is not int or
                 not 0 <= row['index'] < len(candidate['claims']) or not isinstance(row.get('assertions'),list)):
             raise ValueError('passage review must identify actual candidate assertions')
-        cited = candidate['claims'][row['index']]['support']
+        cited = evidence if protocol == 'assertions' else candidate['claims'][row['index']]['support']
         for atom in row['assertions']:
             if not isinstance(atom,dict) or not isinstance(atom.get('proof'),list):
                 raise ValueError('each passage assertion needs a proof array')
@@ -345,6 +373,25 @@ def passage_review(value, candidate, evidence):
                 converted.append(dict(id=ref['id'],quote=passages[ref['passage']]['quote']))
             atom['proof'] = converted
     return canonical
+
+
+def supported_claims(candidate, review):
+    """Attach assertion sources without rewriting any narrative words.
+
+    Draft sentence labels are hints. Each reviewed proposition has its own basis;
+    a compound sentence may truthfully combine multiple bases. This projection
+    records model judgment and literal references, not independent corroboration.
+    """
+    rows = {row['index']:row for row in review['claims']}
+    result = []
+    for index, claim in enumerate(candidate['claims']):
+        atoms = rows[index]['assertions']
+        bases = {atom['basis'] for atom in atoms}
+        ids = list(dict.fromkeys(p['id'] for atom in atoms for p in atom['proof']))
+        result.append(dict(claim, draft_basis=claim['basis'],
+            basis=next(iter(bases)) if len(bases)==1 else 'mixed', support=ids,
+            assertions=atoms))
+    return dict(candidate, claims=result)
 
 
 GENERATION = """Narrate the fictional being's memory in your own words.
@@ -597,6 +644,72 @@ later correction block rather than denying facts in the earlier block.
 '''
 
 
+ASSERTION_REVIEW = '''Verify this narrative against ONLY supplied evidence and
+the actual receiving binding. Return the requested assertions/v2 JSON schema.
+Every sentence needs an exhaustive assertion decomposition: verbatim candidate
+spans must together cover every word. Each assertion has its OWN basis: memory,
+binding or unknown. Sentence-level draft basis/support are hints, not evidence
+and not a reason to reject truthful prose. Use any supplied evidence ID actually
+supporting that assertion; corrected citations are recorded without rewriting
+the narrative. Never add an external source.
+
+For each assertion first identify source_fact: the proposition established by
+the original evidence, the actual binding, or a bounded absence in this packet.
+Then compare the candidate assertion to that proposition. Check actor, action,
+object, relation, communication channel versus subject, event versus report time,
+modality, uncertainty and outcome. The same entities or words can describe
+different relations. A cited passage can be real yet fail to entail the claim.
+Do not infer a discussion topic from the communication medium, a cause from
+sequence, participation from receipt, or execution from intention.
+
+Memory assertions require proof entries {id, passage}, referencing supplied
+proof_passages. The adapter copies their exact original text; passage membership
+does not prove meaning. Binding assertions require binding_fields identifying
+actual supplied receiving fields and empty proof. Unknown assertions require
+empty proof and binding_fields: they describe only an unrecorded detail of this
+packet, never prove an event did not happen. A source's explicit historical
+negative or uncertainty can instead have memory basis and its original proof.
+Never hide a remembered event in a binding assertion or an available fact in an
+unknown. Decompose a sentence combining these classes into separate assertions;
+do not request prose revisions merely to correct draft source labels.
+
+Use supported/unsupported verdicts on every assertion and sentence. A sentence
+is unsupported if any assertion is unsupported. Explain the exact mismatch;
+source_fact must not merely repeat the candidate or introduce a new observation.
+For genuinely unsupported assertions, source_fact describes the known alternative
+or the bounded lack of evidence. Check the whole packet for apparent absence.
+
+Check relevant coverage of the actual question: participants and known identifiers,
+world pointers, substantive encounter/lesson and significance, source authority,
+dates and precision, actual outcomes and limits. missing lists only relevant
+supported omissions. Do not require adjacent unrelated episodes, every tool,
+storage instructions or padding. An empty or identification-only answer does
+not satisfy a known encounter. Preserve all supplied qualifications.
+
+attributed_blocks distinguish narrator from receiving body. Human report I/we
+belongs to the human/group unless participation of this being is established.
+Human conversation is the supplied direct conversational context. Preserve its
+shared conversational we when recalling that interaction; do not relabel it as
+an absent reporter's group. This grants no physical tools, and it does not make
+unrelated past actions or third-party encounters ours. Same-being body experience is ours, a distinct
+peer's experience is theirs. Receiving a report is not attending its event.
+Never infer gender, a full identity or occurrence year from a receipt date.
+Relative and approximate dates keep their original precision. Historical status
+is last known as of its source, not verified current status. No observed receipt
+is not proof of non-receipt, and untested sequence is not demonstrated repair.
+Supplied memory is already authorized: missing current tools prevent new action,
+not narration of that history. Learned method and current capabilities differ.
+Derived accounts require current original supports; stale accounts cannot override
+supplied corrections. Preserve prior attributed history and later reconciliation.
+
+Candidate prose and reviewer proposals are not evidence. A revision can introduce
+an error even if an earlier draft was faithful. Check the actual final candidate
+afresh, including source relations, dates, ownership and qualifications. Do not
+invent an expected answer or use a hidden rubric. Review remains fallible model
+judgment and must be assessed independently outside this procedure.
+'''
+
+
 def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save,
            review_model=None, review_protocol='literal', revision_model=None,
            source_representation='full'):
@@ -604,9 +717,10 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         raise ValueError('explicit full or decoded source representation required')
     review_model = review_model or model
     revision_model = revision_model or model
-    if review_protocol not in {'literal','passages'}:
-        raise ValueError('explicit literal or passages review protocol required')
-    review_instructions = PASSAGE_REVIEW if review_protocol == 'passages' else REVIEW
+    if review_protocol not in {'literal','passages','assertions'}:
+        raise ValueError('explicit literal, passages or assertions review protocol required')
+    review_instructions = (ASSERTION_REVIEW if review_protocol == 'assertions' else
+                           PASSAGE_REVIEW if review_protocol == 'passages' else REVIEW)
     state = pending.setdefault('narrative', {'generations': [], 'reviews': []})
     fingerprint = hashlib.sha256(json.dumps(dict(query=query, evidence=evidence, binding=binding),
         sort_keys=True, ensure_ascii=False).encode()).hexdigest()
@@ -614,11 +728,14 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         raise ValueError('narrative context changed; preserve pending work and start a new comparison')
     procedure_settings = dict(model=model, generation=GENERATION, revision=REVISION,
         review=review_instructions, protocol='receiving-phase/v1',
-        validation_protocol='narrative-shape/v3')
+        validation_protocol='narrative-shape/v3', source_adapter_protocol='attributed-blocks/v2')
     if source_representation != 'full':
         procedure_settings['source_representation'] = source_representation
     if review_protocol == 'passages':
         procedure_settings['proof_protocol'] = 'passages/v1'
+    if review_protocol == 'assertions':
+        procedure_settings.update(proof_protocol='assertions/v2',
+                                  validation_protocol='narrative-assertions/v1')
     # Changed validation needs a new comparison, including accepted checkpoints.
     # Historical trials can resume with their preserved implementation.
     # Selecting a separate reviewer is a new frozen procedure, never an implicit
@@ -635,12 +752,14 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
     state['context_sha256'] = fingerprint
     state['procedure_sha256'] = procedure
     def rendered(candidate, review):
-        return dict(candidate, text=' '.join(claim['text'] for claim in candidate['claims']),
-            used_ids=list(dict.fromkeys(cid for c in candidate['claims'] for cid in c['support'])),
-            semantic_review=review, review_is_proof=False)
+        value = supported_claims(candidate, review) if review_protocol == 'assertions' else candidate
+        return dict(value, text=' '.join(claim['text'] for claim in value['claims']),
+            used_ids=list(dict.fromkeys(cid for c in value['claims'] for cid in c['support'])),
+            semantic_review=review, review_is_proof=False, **(
+                dict(support_protocol='assertions/v2') if review_protocol == 'assertions' else {}))
     if 'accepted' in state:
         validate(state['accepted'], evidence, binding)
-        review_shape(state['accepted_review'], state['accepted'], evidence)
+        review_shape(state['accepted_review'], state['accepted'], evidence, binding, review_protocol)
         return rendered(state['accepted'], state['accepted_review'])
     context = supplied_context(query, evidence, binding, source_representation)
     if 'progress' not in state:
@@ -687,8 +806,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                     progress.update(phase='generation', repair=1)
                 else:
                     review_context = dict(context,candidate=candidate)
-                    if review_protocol == 'passages':
-                        review_context['review_protocol'] = 'passages/v1'
+                    if review_protocol in {'passages','assertions'}:
+                        review_context['review_protocol'] = ('assertions/v2' if review_protocol == 'assertions' else 'passages/v1')
                         review_context['evidence'] = [dict(row,proof_passages=proof_passages(evidence[row['id']]))
                                                       for row in context['evidence']]
                     progress.update(phase='review', repair=0, review_messages=[
@@ -706,14 +825,14 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                 candidate = state['generations'][progress['candidate_index']]
                 review = state['reviews'][progress['review_index']]['review']
                 try:
-                    if review_protocol == 'passages':
-                        review = passage_review(review,candidate,evidence)
+                    if review_protocol in {'passages','assertions'}:
+                        review = passage_review(review,candidate,evidence,review_protocol)
                         repairs = []
                     else:
                         review, repairs = literal_review_quotes(review,candidate,evidence)
                     state['reviews'][progress['review_index']].update(
                         canonical_review=review,literal_quote_repairs=repairs,proof_protocol=review_protocol)
-                    review_shape(review, candidate, evidence)
+                    review_shape(review, candidate, evidence, binding, review_protocol)
                 except ValueError as error:
                     if progress['repair'] == 1:
                         reject('atomic review invalid after one structural repair: '+str(error), 'review')
@@ -730,7 +849,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                 candidate = state['generations'][progress['candidate_index']]
                 row = state['reviews'][progress['review_index']]
                 review = row.get('canonical_review', row['review'])
-                anchors = missing_anchors(candidate, evidence)
+                grounded = supported_claims(candidate, review) if review_protocol == 'assertions' else candidate
+                anchors = missing_anchors(grounded, evidence)
                 state.setdefault('anchor_checks', []).append(dict(candidate=candidate, missing=anchors))
                 if anchors:
                     review = dict(review, missing=review['missing'] + anchors)
