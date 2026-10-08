@@ -93,15 +93,13 @@ def complete_source_envelopes(text, depth=0):
     if depth > 20:
         return False
     cursor, count, decoder = 0, 0, json.JSONDecoder()
-    while cursor < len(text):
-        while cursor < len(text) and text[cursor].isspace():
-            cursor += 1
-        if cursor == len(text):
-            break
-        match = re.match(r'([^\n]+):\n', text[cursor:])
-        if match is None:
+    # Match the exact boundaries used by source_blocks, including blank lines.
+    # A more permissive parser could approve an envelope that source_blocks
+    # never decoded and accidentally discard its content.
+    for match in re.finditer(r'(?:^|\n\n)([^\n]+):\n', text):
+        if text[cursor:match.start()].strip():
             return False
-        start = cursor + match.end()
+        start = match.end()
         try:
             value, consumed = decoder.raw_decode(text[start:])
         except ValueError:
@@ -111,7 +109,7 @@ def complete_source_envelopes(text, depth=0):
         if match.group(1).startswith('Previously retained memory ') and not complete_source_envelopes(value, depth+1):
             return False
         cursor, count = start + consumed, count + 1
-    return count > 0
+    return count > 0 and not text[cursor:].strip()
 
 
 def supplied_context(query, evidence, binding, source_representation='full'):

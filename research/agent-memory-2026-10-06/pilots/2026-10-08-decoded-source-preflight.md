@@ -22,9 +22,9 @@ Attributed blocks/provenance/anchors compare equal. Source payload falls from
 provider tokens, money, latency or narrative quality. Native base instructions
 and reviews have additional costs; no such saving is claimed yet.
 
-Forty narrative tests pass, including complete nested-source conservation,
-four mixed/malformed fallback cases and checkpoint incompatibility. The full
-suite passes 326 tests. No production installation, model choice, memory or
+Forty-two narrative tests pass, including complete nested-source conservation,
+six mixed/malformed fallback cases and checkpoint incompatibility. The full
+suite passes 328 tests. No production installation, model choice, memory or
 running trial changes in this delivery. The option needs a fresh equivalent
 receiving comparison before adoption. The ongoing full fresh-v2 trial retains
 full-format inputs and outside grading; its attribution limitations are not

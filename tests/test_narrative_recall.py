@@ -508,13 +508,15 @@ def test_decoded_context_preserves_complete_nested_sources_and_provenance():
     assert evidence[4]['text']==text  # Retrieval originals and proof checking stay unchanged.
 
 
-@pytest.mark.parametrize('kind',['prefix','suffix','nested-prefix','broken'])
+@pytest.mark.parametrize('kind',['prefix','suffix','nested-prefix','broken','single-newline','adjacent'])
 def test_decoded_context_keeps_every_mixed_or_malformed_source_byte(kind):
     original='Human report; source encounter; received 2026-09-12 through mobile:\n'+json.dumps('Neri proposed a method.')
     text={'prefix':'Extra significant fact.\n\n'+original,
           'suffix':original+'\n\nExtra significant fact.',
           'nested-prefix':'Previously retained memory 4, revision 1:\n'+json.dumps('Extra significant fact.\n\n'+original),
-          'broken':original+'\n\nHuman report; source later:\n"incomplete'}[kind]
+          'broken':original+'\n\nHuman report; source later:\n"incomplete',
+          'single-newline':original+'\n'+original,
+          'adjacent':original+original}[kind]
     assert not nr.complete_source_envelopes(text)
     result=nr.supplied_context('What happened?',{4:{'text':text}},{'receiving_body':'voice'},'decoded')
     assert result['evidence'][0]['text']==text
