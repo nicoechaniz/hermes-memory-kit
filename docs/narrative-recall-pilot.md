@@ -237,6 +237,14 @@ commands, public receipts or another auth store. An empty old default/global
 home does not establish that the running Hermes profile lacks a credential.
 Record the chosen profile resolution separately from fictional model inputs.
 
+An explicit `operation_output_limit` can select a bounded completion limit for
+fictional operations only. It is frozen in conditions and request identity;
+changed limits require a new transport and preserve prior truncated attempts.
+Narrative/receiving limits remain unchanged. A completion limit includes the
+provider's reasoning tokens as well as its final JSON; record length termination
+and usage before considering any explicit retry. A higher limit is not semantic
+qualification or proof of causally improved quality.
+
 Actual request/response/parameter receipts survive failures and resumption.
 Response content must match its observed completed receipt; the same request
 can be consumed again with zero additional calls. Failed/unresolved attempts

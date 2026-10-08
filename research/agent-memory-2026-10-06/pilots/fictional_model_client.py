@@ -13,7 +13,7 @@ import receiving_codex_native as native
 class Client:
     def __init__(self, root, fixture, api_key, catalog, *, operation_effort='low',
                  generation_model='deepseek-flash', review_model='gpt-6.1-sol',
-                 revision_model='gpt-6.1-sol', dispatcher=None):
+                 revision_model='gpt-6.1-sol', dispatcher=None, operation_output_limit=None):
         self.root, self.catalog = Path(root), Path(catalog).resolve()
         self.key, self.dispatcher = api_key, dispatcher
         corpus = json.loads(Path(fixture).read_text())
@@ -22,6 +22,10 @@ class Client:
         if generation_model != 'deepseek-flash' or review_model != 'gpt-6.1-sol' or revision_model != 'gpt-6.1-sol':
             raise ValueError('explicit current Flash/native-Sol candidate roles required')
         self.operation_effort = operation_effort
+        if operation_output_limit is not None and (
+                type(operation_output_limit) is not int or not 1 <= operation_output_limit <= 32768):
+            raise ValueError('explicit operation output limit must be an integer from 1 to 32768')
+        self.operation_output_limit = operation_output_limit
         self.roles = dict(generation_model=generation_model,review_model=review_model,
                           revision_model=revision_model)
         frozen = dict(format='hmk-fictional-model-client/v1',fixture_sha256=api.exchange.checksum(Path(fixture)),
@@ -32,6 +36,8 @@ class Client:
             native_sha256=api.exchange.checksum(Path(native.__file__)),
             narrative_sha256=api.exchange.checksum(Path(api.exchange.narrative.__file__)),
             catalog_sha256=api.exchange.checksum(self.catalog),tools_allowed=False,native_memory_allowed=False)
+        if operation_output_limit is not None:
+            frozen['operation_output_limit'] = operation_output_limit
         self.root.mkdir(parents=True,exist_ok=True,mode=0o700)
         path = self.root/'client-conditions.json'
         if path.exists() and json.loads(path.read_text()) != frozen:
@@ -60,6 +66,8 @@ class Client:
             model=model,phase=trace.phase,reasoning_effort=self.operation_effort,
             messages=messages,response_schema={'type':'object'},fresh_context=True,
             tools_allowed=False,native_memory_allowed=False)
+        if self.operation_output_limit is not None:
+            request['output_token_limit'] = self.operation_output_limit
         d = api.exchange.pilot.digest(request)
         path = root/'requests'/(d+'.json');path.parent.mkdir(exist_ok=True)
         if path.exists() and json.loads(path.read_text()) != request:
