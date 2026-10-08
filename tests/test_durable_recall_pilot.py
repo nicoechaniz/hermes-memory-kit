@@ -61,6 +61,26 @@ def test_pipeline_accepts_typed_source_projection_and_rejects_tampered_prose(pil
         pilot.verify_narrative_answer(answer,state,evidence,binding)
 
 
+def test_temporal_metadata_preserves_native_null_and_full_expansion_precedence(pilot):
+    packs=[{'items':[{'id':1,'spr':'Preview','event_ts':99,
+                     'neighbors':[{'id':2,'spr':'Neighbor','event_ts':0}]}]}]
+    full=[{'id':1,'raw':'Original quotation with an approximate date.','event_ts':None}]
+    ordinary=pilot.answer_evidence(packs,full)
+    enriched=pilot.answer_evidence(packs,full,True)
+    assert all('temporal_metadata'not in row for row in ordinary.values())
+    assert enriched[1]['text']==ordinary[1]['text']==full[0]['raw']
+    assert enriched[1]['temporal_metadata']['native_event_ts']is None
+    assert enriched[2]['temporal_metadata']['native_event_ts']==0
+    assert 'Receipt order does not establish event order' in enriched[1]['temporal_metadata']['ordering']
+
+
+def test_temporal_metadata_does_not_invent_an_unavailable_native_field(pilot):
+    packs=[{'items':[{'id':1,'spr':'Received 2026-08-05.'}]}]
+    assert 'temporal_metadata'not in pilot.answer_evidence(packs,[],True)[1]
+    with pytest.raises(ValueError,match='explicit boolean'):
+        pilot.answer_evidence(packs,[],'yes')
+
+
 def test_trace_survives_rejected_response(pilot, tmp_path, monkeypatch):
     path = tmp_path/'trace.json'
     trace = pilot.Trace(path)
