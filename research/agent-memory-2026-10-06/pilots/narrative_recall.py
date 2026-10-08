@@ -764,6 +764,7 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                                   validation_protocol='narrative-assertions/v1')
     if preserve_citation_receipts:
         procedure_settings['citation_receipt_protocol'] = 'original-receipts/v1'
+        procedure_settings['revision_anchor_feedback'] = 'full-source/v1'
     # Changed validation needs a new comparison, including accepted checkpoints.
     # Historical trials can resume with their preserved implementation.
     # Selecting a separate reviewer is a new frozen procedure, never an implicit
@@ -895,6 +896,14 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                     reject('narrative remained unsupported or incomplete after two evidence-grounded revisions', 'semantic')
                     raise_rejection()
                 state['error'] = 'unsupported or incomplete narrative'
+                if preserve_citation_receipts:
+                    # Receipt context changes acceptance of an otherwise faithful
+                    # answer, not generation prompts for a necessary correction.
+                    # Preserve the already observed full feedback when meaning
+                    # or a narrative world pointer still needs revision.
+                    canonical = row.get('canonical_review', row['review'])
+                    review = dict(canonical, missing=canonical['missing'] +
+                                  missing_anchors(grounded, evidence))
                 progress['messages'].extend([dict(role='assistant', content=json.dumps(candidate)),
                     dict(role='user', content=json.dumps(dict(review=review))+'\n'+REVISION)])
                 progress.update(phase='generation', repair=0, revision=revision+1)

@@ -76,8 +76,10 @@ receipt dates into prose and a later revision introduced ownership drift. Native
 review caught it, but did not deliver the answer. Original receipt context can
 preserve those dates without forcing another story; the same-package diagnostic
 passes twenty claims with zero new model calls and one fewer revision/review pair.
-Requalify the existing closing packages by exact raw consumption, then finish
-snapshot recall under this recorded option. Stopped queues remain stopped.
+[Complete receiving requalification](../research/agent-memory-2026-10-06/pilots/2026-10-08-receipt-context-closing-requalification.md)
+now passes all 44 identical closing packages, 579 claims and all 102 positive
+requirements with zero new model/embedding calls. Finish snapshot recall under
+this qualified recorded option. Stopped queues remain stopped.
 Do not resume the old queues or repeat
 valid consolidations. Stage two remains open. The
 [actual preservation/reconciliation report](../research/agent-memory-2026-10-06/pilots/2026-10-08-three-pass-preservation-and-reconciliation.md)

@@ -154,3 +154,29 @@ def test_receipt_metadata_does_not_excuse_missing_world_pointer_or_wrong_claim(t
             tmp_path/'pending.json',chat,lambda p,v: p.write_text(json.dumps(v)),
             review_protocol='assertions',preserve_citation_receipts=True)
     assert calls.count('narrative_review') == 3
+
+
+def test_required_semantic_revision_keeps_observed_feedback_then_accepts_receipts(tmp_path):
+    evidence = {1: {'text': 'Human report; source intent; received 2026-07-01 through code:\n'
+                    + json.dumps('The human group wanted to try the method.')}}
+    binding = {'receiving_body': 'voice'}
+    wrong = {'receiving_body': 'voice', 'claims': [dict(text='We wanted to try the method.',
+             support=[1], basis='memory', facet='limits')]}
+    faithful = json.loads(json.dumps(wrong))
+    faithful['claims'][0]['text'] = 'The human group wanted to try the method.'
+    def chat(model,messages,trace):
+        if trace.phase == 'narrative_generation':return wrong
+        if trace.phase == 'narrative_revision':
+            feedback = json.JSONDecoder().raw_decode(messages[-1]['content'])[0]['review']
+            assert feedback['missing'] == nr.missing_anchors(wrong,evidence)
+            return faithful
+        packet = json.loads(messages[1]['content']); text = packet['candidate']['claims'][0]['text']
+        verdict = 'supported' if text == faithful['claims'][0]['text'] else 'unsupported'
+        return {'claims':[dict(index=0,verdict=verdict,reason='Check who wanted to try.',assertions=[dict(
+            span=text,verdict=verdict,reason='The human group is the source actor.',basis='memory',
+            source_fact='Only the human group wanted to try.',proof=[{'id':1,'passage':1}],binding_fields=[])])], 'missing':[]}
+    result = nr.answer('fixture','Who wanted to try?',evidence,binding,SimpleNamespace(phase='recall'),{},
+        tmp_path/'pending.json',chat,lambda p,v:p.write_text(json.dumps(v)),
+        review_protocol='assertions',preserve_citation_receipts=True)
+    assert result['text'] == faithful['claims'][0]['text']
+    assert result['citation_receipts'][0]['sources'][0]['reported_at'] == '2026-07-01'
