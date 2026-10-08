@@ -761,10 +761,23 @@ judgment and must be assessed independently outside this procedure.
 '''
 
 
+UNKNOWN_PREMISES_REVIEW = """
+Packet-scoped unknown outcomes do not license unsupported positive premises.
+Audit every actor, role, relation, date/order qualifier and event/outcome descriptor
+embedded inside a negative or unknown sentence, including presuppositions. Separate
+these positive assertions from the absence claim. The absence can be unknown while
+its embedded premise is unsupported. Do not let empty-proof unknown basis absorb
+a remembered or invented premise. Receipt order can date the reports but cannot
+order the reported actions. Preserve a faithful bounded unknown and supported
+report chronology; do not require positive proof that no record exists. Whether
+an outcome occurred is uncertainty, not an assertion that the outcome occurred.
+"""
+
+
 def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save,
            review_model=None, review_protocol='literal', revision_model=None,
            source_representation='full', preserve_citation_receipts=False, clarify_deixis=False,
-           allow_joint_support=False, review_effort=None):
+           allow_joint_support=False, review_effort=None, check_unknown_premises=False):
     if source_representation not in {'full', 'decoded'}:
         raise ValueError('explicit full or decoded source representation required')
     review_model = review_model or model
@@ -780,6 +793,10 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         raise ValueError('citation receipts require explicit assertion review')
     review_instructions = (ASSERTION_REVIEW if review_protocol == 'assertions' else
                            PASSAGE_REVIEW if review_protocol == 'passages' else REVIEW)
+    if type(check_unknown_premises) is not bool or (check_unknown_premises and review_protocol != 'assertions'):
+        raise ValueError('unknown premise checks require explicit assertion review')
+    if check_unknown_premises:
+        review_instructions += UNKNOWN_PREMISES_REVIEW
     state = pending.setdefault('narrative', {'generations': [], 'reviews': []})
     fingerprint = hashlib.sha256(json.dumps(dict(query=query, evidence=evidence, binding=binding),
         sort_keys=True, ensure_ascii=False).encode()).hexdigest()
@@ -807,6 +824,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         procedure_settings['joint_support_protocol'] = 'memory-and-binding/v1'
     if review_effort is not None:
         procedure_settings['review_effort'] = review_effort
+    if check_unknown_premises:
+        procedure_settings['unknown_premises_protocol'] = 'positive-presuppositions/v1'
     # Changed validation needs a new comparison, including accepted checkpoints.
     # Historical trials can resume with their preserved implementation.
     # Selecting a separate reviewer is a new frozen procedure, never an implicit
@@ -824,6 +843,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
     state['procedure_sha256'] = procedure
     if allow_joint_support:
         state['joint_support_protocol'] = 'memory-and-binding/v1'
+    if check_unknown_premises:
+        state['unknown_premises_protocol'] = 'positive-presuppositions/v1'
     def rendered(candidate, review):
         value = supported_claims(candidate, review) if review_protocol == 'assertions' else candidate
         return dict(value, text=' '.join(claim['text'] for claim in value['claims']),
@@ -833,7 +854,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                 dict(citation_receipt_protocol='original-receipts/v1',
                      citation_receipts=receipt_context(value, evidence))
                 if preserve_citation_receipts else {}), **(
-                dict(joint_support_protocol='memory-and-binding/v1') if allow_joint_support else {}))
+                dict(joint_support_protocol='memory-and-binding/v1') if allow_joint_support else {}), **(
+                dict(unknown_premises_protocol='positive-presuppositions/v1') if check_unknown_premises else {}))
     if 'accepted' in state:
         validate(state['accepted'], evidence, binding)
         review_shape(state['accepted_review'], state['accepted'], evidence, binding, review_protocol, allow_joint_support)
