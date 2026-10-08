@@ -144,7 +144,7 @@ def test_assertion_protocol_accepts_source_relabeling_without_semantic_revision(
         nr.answer('fixture','Can this body run the checks?',evidence,binding,
             trace,pending,tmp_path/'pending.json',chat,save,review_protocol='assertions',
             clarify_deixis=True)
-    for options in [{'allow_joint_support':True}, {'review_effort':'medium'}]:
+    for options in [{'allow_joint_support':True}, {'review_effort':'medium'}, {'check_unknown_premises':True}]:
         with pytest.raises(ValueError,match='procedure/model changed'):
             nr.answer('fixture','Can this body run the checks?',evidence,binding,
                 trace,pending,tmp_path/'pending.json',chat,save,review_protocol='assertions',**options)
@@ -248,3 +248,38 @@ def test_required_semantic_revision_keeps_observed_feedback_then_accepts_receipt
         review_protocol='assertions',preserve_citation_receipts=True)
     assert result['text'] == faithful['claims'][0]['text']
     assert result['citation_receipts'][0]['sources'][0]['reported_at'] == '2026-07-01'
+
+
+def test_unknown_premise_contract_changes_only_review_and_keeps_bounded_phases(tmp_path):
+    candidate,evidence,binding,review=example()
+    raw=json.loads(json.dumps(review))
+    raw['claims'][0]['assertions'][0]['proof']=[{'id':1,'passage':0}]
+    contexts=[]
+    def chat(model,messages,trace):
+        contexts.append((trace.phase,messages))
+        return raw if trace.phase=='narrative_review' else candidate
+    pending={};save=lambda p,v:p.write_text(json.dumps(v))
+    result=nr.answer('fixture','Can this body run the checks?',evidence,binding,
+        SimpleNamespace(phase='recall'),pending,tmp_path/'pending.json',chat,save,
+        review_protocol='assertions',check_unknown_premises=True)
+    assert [p for p,m in contexts]==['narrative_generation','narrative_review']
+    assert contexts[1][1][0]['content']==nr.ASSERTION_REVIEW+nr.UNKNOWN_PREMISES_REVIEW
+    assert nr.UNKNOWN_PREMISES_REVIEW not in contexts[0][1][0]['content']
+    assert result['text']==candidate['claims'][0]['text']
+    assert result['unknown_premises_protocol']=='positive-presuppositions/v1'
+    assert nr.answer('fixture','Can this body run the checks?',evidence,binding,
+        SimpleNamespace(phase='recall'),pending,tmp_path/'pending.json',
+        lambda *a:pytest.fail('Unexpected replay call'),save,review_protocol='assertions',
+        check_unknown_premises=True)==result
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('fixture','Can this body run the checks?',evidence,binding,
+            SimpleNamespace(phase='recall'),pending,tmp_path/'pending.json',chat,save,
+            review_protocol='assertions')
+    for option in [1,'yes']:
+        with pytest.raises(ValueError,match='unknown premise checks'):
+            nr.answer('fixture','q',evidence,binding,SimpleNamespace(phase='recall'),{},
+                tmp_path/'invalid.json',chat,save,review_protocol='assertions',
+                check_unknown_premises=option)
+    with pytest.raises(ValueError,match='unknown premise checks'):
+        nr.answer('fixture','q',evidence,binding,SimpleNamespace(phase='recall'),{},
+            tmp_path/'invalid.json',chat,save,review_protocol='passages',check_unknown_premises=True)

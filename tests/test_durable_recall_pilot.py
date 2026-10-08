@@ -97,6 +97,12 @@ def test_joint_projection_is_bound_to_selected_procedure_and_preserves_sources(p
     assert result['claims'][0]['basis']=='mixed' and result['claims'][0]['support']==[1]
     assert result['text']==candidate['claims'][0]['text']
     assert pilot.verify_narrative_answer(result,state,evidence,binding)==result
+    forged_unknown=dict(result,unknown_premises_protocol='positive-presuppositions/v1')
+    with pytest.raises(ValueError,match='unknown premise support'):
+        pilot.verify_narrative_answer(forged_unknown,state,evidence,binding)
+    state['narrative']['unknown_premises_protocol']='positive-presuppositions/v1'
+    assert pilot.verify_narrative_answer(forged_unknown,state,evidence,binding)==forged_unknown
+    del state['narrative']['unknown_premises_protocol']
     forged=dict(result,joint_support_protocol='other')
     with pytest.raises(ValueError,match='accepted procedure'):
         pilot.verify_narrative_answer(forged,state,evidence,binding)

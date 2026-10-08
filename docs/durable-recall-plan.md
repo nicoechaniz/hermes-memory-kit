@@ -56,19 +56,19 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: [complete selected-profile closing
-qualification](../research/agent-memory-2026-10-06/pilots/2026-10-08-medium-profile-closing-qualification.md)
-passes both arms: 44 delivered answers, 589 independently assessed clauses and
-all 102 positive requirements. Flash low narration, native OpenAI Codex Sol low
-correction and native Sol medium verification retain actual source-role/time,
-receipt and joint-support evidence. The bounded medium decision and earlier
-failures remain preserved. This comparison makes 119 new calls/1,713,932 known
-tokens; revision cost remains substantial, not a provider-wide optimality claim.
-No new formation/retrieval/embedding work is claimed. Finish affected and full
-stage-two snapshot receiving under this qualified procedure, reusing verified
-unchanged control/replay states and actual exact raw requests. Preserve all valid
-consolidation/replay/reconciliation; old queues stay stopped. Stage two remains
-open. The 98 focused component tests remain valid.
+Current continuation, 2026-10-08: [unknown outcomes and positive premises](../research/agent-memory-2026-10-06/pilots/2026-10-08-unknown-outcomes-and-positive-premises.md)
+records a stopped stage comparison: 25 completed answers / 443 outside-assessed
+clauses, one unsupported invitation-order modifier. Native medium review approved
+bounded receipt uncertainty while overlooking the positive temporal premise.
+Five bounded actual reviews reject four incorrect premises and preserve the
+faithful eighteen-clause control. The opt-in unknown-premise instruction changes
+existing review, adds no review phase and fingerprints checkpoints; 99 focused
+tests pass. All failures, sources and valid three-pass/replay/reconciliation
+work remain preserved. Qualify fresh identical closing packages under this
+correction, then finish snapshot receiving with explicit unchanged control/replay
+references. Old queues stay stopped; stage two remains open. The earlier complete
+medium-profile closing remains preserved evidence, not proof against this newly
+observed stage failure.
 
 Preserved evidence: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation

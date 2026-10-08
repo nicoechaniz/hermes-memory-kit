@@ -1,0 +1,31 @@
+{
+  "stopped_stage": {
+    "new_calls": 99,
+    "known_tokens": 1971877,
+    "providers": {
+      "openai-codex-native": 72,
+      "deepseek": 27
+    },
+    "billed_usd": null
+  },
+  "bounded_diagnostics": [
+    {
+      "new_calls": 3,
+      "known_tokens": 51103,
+      "providers": {
+        "openai-codex-native": 3
+      },
+      "billed_usd": null
+    },
+    {
+      "new_calls": 2,
+      "known_tokens": 34203,
+      "providers": {
+        "openai-codex-native": 2
+      },
+      "billed_usd": null
+    }
+  ],
+  "new_embeddings": 0,
+  "native_subscription_conversion_unknown": true
+}
