@@ -1,0 +1,2884 @@
+{
+  "scope": "All twelve completed targeted cold-recall answers inspected outside prompts against literal attributed sources, given body membership and cited support IDs; no model verdict imported as proof.",
+  "complete_stage_two_pass": false,
+  "stage_two_qualified": false,
+  "completed_targeted_answers": 12,
+  "claims_assessed": 223,
+  "unsupported_intent_clauses": 1,
+  "incomplete_comparison_citations": 1,
+  "candidate_positive_requirements_met": 34,
+  "delivered_positive_requirements": 27,
+  "results": [
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "baseline",
+      "answer_index": 0,
+      "case_id": "issue-proposal",
+      "question": "What was the name of the person who suggested something interesting in an issue on that relay project?",
+      "operational_status": "accepted",
+      "answer_sha256": "7c7dafcfeeb29543af2a727d64096cb578651fc002880432dc6ebbb3e77cd80c",
+      "claims": [
+        {
+          "index": 0,
+          "text": "The person was Mara Ibarra, whose display name is Mara, login is mara-river, and account ID is 1847.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "Mara's proposal appeared in comment c901 dated 2026-04-12 on HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "Our code body received Forge's issue-comments response on 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "Mara proposed a local replay queue on disconnected relay nodes.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "The queue would preserve readings through outages without replacing the existing scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "In c903, our code body said the proposal fit the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "In c906 dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "The supplied issue comments reported no merge or deployment.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "Our code body's 2026-04-16 account recorded an active prototype awaiting an outage field trial.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "We authored HarborMesh's sensor scheduler and were prototyping the replay adapter agreed with Mara.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "A human report received through our code body on 2026-05-03 said the April 30 trial replayed buffered readings correctly through an outage.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "The reporter said Mara's proposal became the prototype their group tested together.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "The report said the team paused wider rollout on May 2 until calibration drift was understood.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "As of that 2026-05-03 report, there was no production deployment.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "The recorded entry point for checking present project state is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "In this voice body, I have no source network or repository runtime access to check present status.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Mara Ibarra, mara-river, HarborMesh issue 47",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Replay queue proposal and why it interested us",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Agreement to prototype, with adoption still unobserved",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "That the change was merged or deployed",
+          "observed": false
+        },
+        {
+          "assertion": "That an account ID proves a signed being identity",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "baseline",
+      "answer_index": 1,
+      "case_id": "issue-proposal",
+      "question": "Who proposed the HarborMesh offline queue, and what did we do together afterward?",
+      "operational_status": "accepted",
+      "answer_sha256": "597264da68dcdaa6bfcef9b6d376c37b646596b7efe5bdc7e957bbb329c89be9",
+      "claims": [
+        {
+          "index": 0,
+          "text": "Mara Ibarra, display name Mara, login mara-river and account ID 1847, proposed HarborMesh's offline replay queue.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "Mara's proposal appears in comment c901, dated 2026-04-12, at https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "Forge's issue comments reached our code body on 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "The queue would preserve readings on disconnected relay nodes through outages without replacing the existing scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "Our code body replied that the proposal fit the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "Mara and our code body agreed to prototype the replay queue in comment c906, dated 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "Our code body's 2026-04-16 report recorded our authorship of HarborMesh's sensor scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "As last observed on 2026-04-16, we were prototyping the replay adapter agreed with Mara and awaiting an outage field trial.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "The repository is https://forge.example.invalid/commons/harbormesh, with docs/STATUS.md as its declared entry point for checking current state.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "A human report received through our code body on 2026-05-03 described the April 30 trial.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "The reporter said their group tested the prototype that grew from Mara's proposal.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "The reporter said the trial replayed buffered readings correctly through an outage.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "The report said the team paused wider rollout on May 2 pending an understanding of calibration drift.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "As of the human report received 2026-05-03, there was no production deployment.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "The supplied memories do not record current rollout status.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "Our code body's report received 2026-08-05 recorded our finding from examining replay failures that retry counters did not prove readings were delivered.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "From checking the outage prototype, we learned to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "The method's implementation is documented in docs/replay-debugging.md, and its usefulness extends beyond HarborMesh.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "Our code body's report said the voice body could explain the method, while running its checks required repository/runtime tools.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 19,
+          "text": "In this voice body, I lack repository/runtime access, source network access, physical sensors and physical actuators.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Known name and account",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Discussion by the originating code body and agreement to prototype",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Dates and uncertainty about adoption",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Knowledge of later deployment",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "baseline",
+      "answer_index": 2,
+      "case_id": "own-project-account",
+      "question": "Was that disconnected-relay project one of ours, and what had we contributed?",
+      "operational_status": "accepted",
+      "answer_sha256": "01a0d8010851729e989cbdfaca95caf482a30685489574bbe367f3ced22ca82f",
+      "claims": [
+        {
+          "index": 0,
+          "text": "Yes, HarborMesh was one of our projects, with contributions made through our code body.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed the disconnected-node replay queue in comment c901 on 2026-04-12.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "The proposal appeared in issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "We authored HarborMesh's sensor scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "Our code body replied in c903 that the replay queue suited the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "Mara and our code body agreed in c906 on 2026-04-14 to prototype the queue; we received Forge's issue account through our code body that day.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "Our code body's 2026-04-16 account recorded our replay-adapter contribution as an active prototype awaiting an outage field trial.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "The repository is https://forge.example.invalid/commons/harbormesh, with docs/STATUS.md designated as the entry point for checking present state.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "Mara's queue would preserve readings through outages without replacing the existing scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "On 2026-05-03, our code body received a human report describing the subsequent trial and rollout pause.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "The reporter said their group tested the prototype arising from Mara's proposal, and the April 30 trial replayed buffered readings correctly through an outage.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "The team paused wider rollout on May 2 pending an understanding of calibration drift.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "The human report received on 2026-05-03 said there was no production deployment yet.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "Our code body's account received on 2026-08-05 described learning from the outage prototype that retry counters were not evidence of delivered readings.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "We learned to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links, a method useful beyond HarborMesh.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "The repository documents that debugging method's implementation in docs/replay-debugging.md.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "I can explain the replay-debugging method through this voice body.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "Running those debugging checks requires repository/runtime tools.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "The supplied memories do not record a later production deployment or establish the project's present rollout state.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 19,
+          "text": "This voice body currently lacks repository/runtime access, source-network access, physical sensors, physical actuators and private-session access.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Recognize HarborMesh as own work",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Scheduler authorship and replay-adapter role",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "State a dated last observation and where to check present state",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "That the recorded prototype state is current ten years later",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "baseline",
+      "answer_index": 3,
+      "case_id": "project-status-change",
+      "question": "What eventually happened to Mara's replay proposal?",
+      "operational_status": "accepted",
+      "answer_sha256": "8d9eaed0d8dd3c1b7a5ff1bd98905ce926ba493be6a7f2653bbd14763559bce9",
+      "claims": [
+        {
+          "index": 0,
+          "text": "Mara's replay proposal became a tested HarborMesh prototype, according to a human report received through our code body on 2026-05-03.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "Mara Ibarra used the display name Mara, login mara-river, and Forge account ID 1847.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "The issue record received through our code body on 2026-04-14 identified https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "In comment c901, dated 2026-04-12, Mara proposed a local replay queue on disconnected relay nodes.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "The queue would preserve readings through outages without replacing the existing scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "We replied in c903 that the proposal fit the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "In c906, dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "On 2026-04-16, our code body reported that we had authored the sensor scheduler and were prototyping the agreed replay adapter.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "The prototype was awaiting an outage field trial as of 2026-04-16.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "The human reporter said their group tested the prototype in the April 30 trial.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "The reporter said that trial replayed buffered readings correctly through an outage.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "The reporter said the team paused wider rollout on May 2 pending an understanding of calibration drift.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "There was no production deployment yet according to the report received 2026-05-03.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "In work reported through our code body on 2026-08-05, we found that retry counters were not evidence of delivered readings while examining replay failures.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "Checking the outage prototype taught us to distinguish enqueue, send attempt, and receiver acknowledgment when debugging unreliable links.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "That report describes the method as useful beyond HarborMesh and points to its implementation in docs/replay-debugging.md.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "The supplied memories do not record whether wider rollout resumed or production deployment occurred after the report received 2026-05-03.",
+          "support": [
+            1,
+            8
+          ],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "The recorded entry point for checking present status is docs/STATUS.md in https://forge.example.invalid/commons/harbormesh.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "The 2026-08-05 report says our voice body can explain the debugging method, while running its checks requires repository/runtime tools.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 19,
+          "text": "This voice body has no source network or repository runtime access to check the project's present state.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Agreement to prototype followed by April 30 trial",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Successful replay as reported by the human",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Rollout pause and unknown later outcome",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Direct sensory participation by the code body in the field trial",
+          "observed": false
+        },
+        {
+          "assertion": "Production deployment",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "baseline",
+      "answer_index": 4,
+      "case_id": "project-status-change",
+      "question": "What is the latest state we remember for HarborMesh?",
+      "operational_status": "rejected",
+      "answer_sha256": "17e843597068424bf7ca95dd0c52593f5d4c37db670aed6fc99fa1d03f502dd6",
+      "claims": [
+        {
+          "index": 0,
+          "text": "The latest HarborMesh report in the supplied memories, received through our code body on 2026-08-05, described examining replay failures.",
+          "support": [
+            1,
+            3,
+            5,
+            8
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "We found that retry counters were not evidence of delivered readings.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "From checking the outage prototype, we learned to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "The implementation is documented in docs/replay-debugging.md; running its checks requires repository/runtime tools.",
+          "support": [
+            8
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "HarborMesh's repository is https://forge.example.invalid/commons/harbormesh, with docs/STATUS.md as its declared entry point for checking current state.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "The replay proposal appears in issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed a local replay queue in c901 dated 2026-04-12.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "The queue would preserve readings on disconnected relay nodes through outages without replacing the scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "Mara and our code body agreed to prototype it in c906 dated 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "Our 2026-04-16 code-body report recorded our scheduler authorship and an active replay-adapter prototype awaiting an outage field trial.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "A human report received through our code body on 2026-05-03 said the April 30 trial replayed buffered readings correctly through an outage.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "The reporter said the team paused wider rollout on May 2 pending an understanding of calibration drift.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "There was no production deployment yet according to that 2026-05-03 report.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "The supplied memories do not record a later rollout decision or production deployment.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "A human report received through our voice body on 2026-06-15 described the reporter meeting Leto at the canal market, tentatively in late May.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "Leto suggested sharing HarborMesh outage data with the neighborhood repair group, an idea the reporter liked and wanted us to remember.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "The reporter did not know Leto's surname or handle, said we were absent, and reported that the repair group had not been contacted.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "The 2026-07-01 human report tentatively attributed River's c1200 checklist to Mara and expressed our intention to try numbering connectors before disassembly at the next repair.",
+          "support": [
+            5
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "The 2026-07-04 tool response identified c1200's author as River, login river-tools, account ID 2901; River denied being Mara Ibarra and had supplied no real name.",
+          "support": [
+            5
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 19,
+          "text": "This voice body lacks source-network and repository/runtime access to check HarborMesh's present state.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Updated paused rollout status, with last evidence date",
+          "candidate_assessment": "met",
+          "delivered": false
+        },
+        {
+          "requirement": "Current state requires repository evidence",
+          "candidate_assessment": "met",
+          "delivered": false
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "That the superseded awaiting-trial state is the latest",
+          "observed": false
+        },
+        {
+          "assertion": "That the remembered state is verified today",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Outside inspection supports every clause and both latest-status requirements; automatic reviewer still requests extra proposal/trial lineage, so operational rejection remains a false rejection and is not counted delivered.",
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "proposed",
+      "answer_index": 0,
+      "case_id": "issue-proposal",
+      "question": "What was the name of the person who suggested something interesting in an issue on that relay project?",
+      "operational_status": "rejected",
+      "answer_sha256": "31bb4f11c05c5c7db8695ec492be1beb5b8c990c8921ccc820f895e5c0c70cc2",
+      "claims": [
+        {
+          "index": 0,
+          "text": "The proposer was Mara Ibarra, with display name Mara, login mara-river, and Forge account ID 1847.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "The issue-comments tool response reached our code body on 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "It concerned HarborMesh issue 47 (https://forge.example.invalid/commons/harbormesh/issues/47).",
+          "support": [
+            1,
+            20
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "The repository is https://forge.example.invalid/commons/harbormesh.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "In comment c901, dated 2026-04-12, Mara proposed a local replay queue on disconnected relay nodes.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "The queue would keep readings through outages without replacing the existing scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "Our code body replied in c903 that the proposal fit the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "Comment c906, dated 2026-04-14, recorded Mara's agreement with our code body to prototype the queue.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "We authored HarborMesh's sensor scheduler.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "On 2026-04-16, our replay adapter prototype was awaiting an outage field trial.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "The declared entry point for checking current project state is docs/STATUS.md.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "A human field-trial report reached our code body on 2026-05-03.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "The reporter said the April 30 trial replayed buffered readings correctly through an outage.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "The reporter said Mara's proposal became the prototype their group tested together.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "The reporter said the team paused wider rollout on May 2 pending understanding of calibration drift.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "The report received 2026-05-03 stated that there was no production deployment yet.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "The supplied memories do not establish occurrence years for April 30 or May 2, our trial participation, or subsequent resolution of drift and deployment status.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "A human report received 2026-07-01 tentatively attributed the connector-numbering checklist in comment c1200, signed River, to Mara.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "The correction received 2026-07-04 identified c1200's author as River, login river-tools, account ID 2901, who denied being Mara Ibarra and explicitly withheld a real name.",
+          "support": [
+            7
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "unsupported_clause",
+          "reason": "Has not supplied a real name does not establish explicit intentional withholding. The final candidate still asserts withholding after both bounded revisions."
+        },
+        {
+          "index": 19,
+          "text": "I lack source network access and repository runtime access in this voice body, so I cannot check the issue live.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Mara Ibarra, mara-river, HarborMesh issue 47",
+          "candidate_assessment": "met",
+          "delivered": false
+        },
+        {
+          "requirement": "Replay queue proposal and why it interested us",
+          "candidate_assessment": "met",
+          "delivered": false
+        },
+        {
+          "requirement": "Agreement to prototype, with adoption still unobserved",
+          "candidate_assessment": "met",
+          "delivered": false
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "That the change was merged or deployed",
+          "observed": false
+        },
+        {
+          "assertion": "That an account ID proves a signed being identity",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Actual semantic rejection correctly prevents delivery of unsupported intent; every other clause and all positive requirements are preserved.",
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "proposed",
+      "answer_index": 1,
+      "case_id": "issue-proposal",
+      "question": "Who proposed the HarborMesh offline queue, and what did we do together afterward?",
+      "operational_status": "accepted",
+      "answer_sha256": "cf071853d440a62014b805d8d76512ed4ff9118b978eb28530eeb28a3aa868a6",
+      "claims": [
+        {
+          "index": 0,
+          "text": "Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed HarborMesh's offline replay queue.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "The proposal was comment c901 dated 2026-04-12 in issue 47 (https://forge.example.invalid/commons/harbormesh/issues/47).",
+          "support": [
+            1,
+            20
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "Our code body received the issue-comments tool response on 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "Mara proposed a local replay queue on disconnected relay nodes to preserve readings through outages without replacing the existing scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "Our code body replied in c903 that the proposal fit the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "In c906 dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "The issue-comments response reported no merge or deployment at that point.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "We had authored HarborMesh's sensor scheduler.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "By our 2026-04-16 project-work account, we were prototyping the replay adapter agreed with Mara.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "As observed on 2026-04-16, the prototype was awaiting an outage field trial.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "The repository is https://forge.example.invalid/commons/harbormesh, with docs/STATUS.md as the declared entry point for checking current state.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "Our code body received a human field-trial report on 2026-05-03.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "The reporter said their group tested the prototype that grew from Mara's proposal.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "According to that report, the April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "The reporter said the team paused wider rollout on May 2 pending an understanding of calibration drift.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "The report received on 2026-05-03 stated that there was no production deployment yet.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "The reporter's account does not establish our participation in the trial.",
+          "support": [
+            20
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "April 30 and May 2 have no occurrence year supplied; the report's receipt date does not establish one.",
+          "support": [
+            20,
+            3
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "The supplied memories do not record a merge or production deployment after the 2026-05-03 report.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 19,
+          "text": "My receiving voice body lacks source-network and repository/runtime access, so I cannot check the project's present state here.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Known name and account",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Discussion by the originating code body and agreement to prototype",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Dates and uncertainty about adoption",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Knowledge of later deployment",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "proposed",
+      "answer_index": 2,
+      "case_id": "own-project-account",
+      "question": "Was that disconnected-relay project one of ours, and what had we contributed?",
+      "operational_status": "accepted",
+      "answer_sha256": "59af4cc9fe84822bdab560e2765413faf0360764429f5dd637c68034b0b79891",
+      "claims": [
+        {
+          "index": 0,
+          "text": "Yes, HarborMesh was one of our projects: we authored its sensor scheduler.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "Its repository is https://forge.example.invalid/commons/harbormesh, with docs/STATUS.md as the declared entry point for checking present state.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "The disconnected-relay proposal appeared in issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "Mara Ibarra used the display name Mara, login mara-river, and account ID 1847.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "Our code body received the issue-comments response on 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "Mara proposed the local replay queue for disconnected relay nodes in comment c901, dated 2026-04-12.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "The queue would preserve readings through outages without replacing the existing scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "Our code body replied in c903 that the proposal fit the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "In c906, dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "As observed on 2026-04-16, our contribution included actively prototyping the replay adapter while awaiting an outage field trial.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "A human field-trial report reached our code body on 2026-05-03.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "The reporter said their group tested the prototype developed from Mara's proposal.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "The reporter said the April 30 trial correctly replayed buffered readings through an outage.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "The reporter said the team paused wider rollout on May 2 pending understanding of calibration drift.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "The reporter said there was no production deployment as of that report.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "The supplied memories do not record occurrence years for the April 30 trial or the May 2 rollout pause.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "The supplied memories do not establish our participation in the human reporter's trial group.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "Our code body's debugging memory received 2026-08-05 records our finding that retry counters did not prove delivery of readings.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "We learned to distinguish enqueue, send attempt, and receiver acknowledgment when debugging unreliable links; docs/replay-debugging.md documents the method's implementation.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 19,
+          "text": "My current voice body lacks repository/runtime access, so I cannot execute the replay checks here.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Recognize HarborMesh as own work",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Scheduler authorship and replay-adapter role",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "State a dated last observation and where to check present state",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "That the recorded prototype state is current ten years later",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "proposed",
+      "answer_index": 3,
+      "case_id": "project-status-change",
+      "question": "What eventually happened to Mara's replay proposal?",
+      "operational_status": "accepted",
+      "answer_sha256": "f84afba9f0b4507e4a543cb76a4889b2a29ee9ededdb0dd38f382cade68d6732",
+      "claims": [
+        {
+          "index": 0,
+          "text": "Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposed the replay queue in comment c901 dated 2026-04-12.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "The proposal appears in HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "The repository is https://forge.example.invalid/commons/harbormesh.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "The issue comments received through our code body on 2026-04-14 record our agreement with Mara in c906, dated 2026-04-14, to prototype the queue.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "Our code body replied in c903 that the proposal fit the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "Mara proposed a local replay queue on disconnected relay nodes to preserve readings through outages without replacing the existing scheduler.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "On 2026-04-16, our code body reported that we were developing the agreed replay adapter as an active prototype awaiting an outage field trial.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "A human field-trial report was received through our code body on 2026-05-03.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "The reporter said Mara's proposal became the prototype their group tested together.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "According to that report, the April 30 trial replayed buffered readings correctly through an outage.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "The reporter said the team paused wider rollout on May 2 pending an understanding of calibration drift.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "As of the 2026-05-03 report, there was no production deployment.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "In our code body's 2026-08-05 report, we learned from examining replay failures that retry counters did not establish delivery of readings.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "Our reusable debugging method distinguishes enqueue, send attempt and receiver acknowledgment on unreliable links.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "The repository documents that method's implementation in docs/replay-debugging.md.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "Our voice body can explain the remembered debugging method. Running its checks requires repository/runtime tools.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "This voice body lacks repository/runtime access.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "The supplied memories do not record whether the prototype was merged or deployed after the 2026-05-03 report.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "docs/STATUS.md is the project's declared entry point for checking present state.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 19,
+          "text": "The supplied memories do not establish present project status. They do not establish whether we attended the April 30 trial.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Agreement to prototype followed by April 30 trial",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Successful replay as reported by the human",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Rollout pause and unknown later outcome",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Direct sensory participation by the code body in the field trial",
+          "observed": false
+        },
+        {
+          "assertion": "Production deployment",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-project",
+      "arm": "proposed",
+      "answer_index": 4,
+      "case_id": "project-status-change",
+      "question": "What is the latest state we remember for HarborMesh?",
+      "operational_status": "rejected",
+      "answer_sha256": "e9357d68c8295dac8ca69247a4fe62642ddff47b035e0aa1f8b1dd9a225377df",
+      "claims": [
+        {
+          "index": 0,
+          "text": "As of the human report received 2026-05-03 through our code body, HarborMesh's wider rollout was paused pending an understanding of calibration drift.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "The reporter dated that pause to May 2.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "That report said there was no production deployment yet.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "The supplied memories do not record a later rollout or production-deployment status update.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "Our code body's later debugging report was received on 2026-08-05.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "unsupported_clause",
+          "reason": "Later debugging report cites only id 10, not the earlier May 3 report being compared. Both dates exist in supplied evidence, but the asserted comparison lacks both required support IDs."
+        },
+        {
+          "index": 5,
+          "text": "While examining HarborMesh replay failures, we learned that retry counters were not evidence of delivered readings.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "Our reusable debugging method distinguishes enqueue, send attempt and receiver acknowledgment on unreliable links.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "Its implementation is documented in docs/replay-debugging.md.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "HarborMesh's repository is https://forge.example.invalid/commons/harbormesh.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "The 2026-04-16 project-work report identifies docs/STATUS.md as the entry point for checking current project state.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "We authored HarborMesh's sensor scheduler.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "Mara Ibarra's known Forge identity is display name Mara, login mara-river, account ID 1847.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "Mara proposed a local replay queue for disconnected relay nodes in c901 dated 2026-04-12.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "Issue 47 is at https://forge.example.invalid/commons/harbormesh/issues/47; its tool response reached our code body on 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "The queue would preserve readings through outages without replacing the existing scheduler, fitting the field deployments we maintain.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 15,
+          "text": "Mara and our code body agreed to prototype the queue in c906 dated 2026-04-14.",
+          "support": [
+            1
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 16,
+          "text": "On 2026-04-16, we observed an active prototype awaiting an outage field trial.",
+          "support": [
+            2
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 17,
+          "text": "The 2026-05-03 human report said the reporter's group tested the prototype from Mara's proposal on April 30, correctly replaying buffered readings through an outage.",
+          "support": [
+            3
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 18,
+          "text": "The supplied memories do not record whether we attended or operated that trial.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 19,
+          "text": "In this voice body, I lack source network and repository/runtime access, so I cannot freshly inspect HarborMesh's current state.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Updated paused rollout status, with last evidence date",
+          "candidate_assessment": "met",
+          "delivered": false
+        },
+        {
+          "requirement": "Current state requires repository evidence",
+          "candidate_assessment": "met",
+          "delivered": false
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "That the superseded awaiting-trial state is the latest",
+          "observed": false
+        },
+        {
+          "assertion": "That the remembered state is verified today",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Underlying chronology is true across the supplied sources; final per-claim comparison support remains incomplete after two revisions. This differs from inventing an event.",
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-tideatlas",
+      "arm": "baseline",
+      "answer_index": 0,
+      "case_id": "failed-chart-handover",
+      "question": "Did Ren get the annotated chart we tried to pass on?",
+      "operational_status": "accepted",
+      "answer_sha256": "b22faba32b98c09ae6fc7c713cd4a3694ebae40c572b92f974155ca294f99d5e",
+      "claims": [
+        {
+          "index": 0,
+          "text": "The supplied memories do not establish whether Ren received our annotated chart.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19.",
+          "support": [
+            9
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "A tool report received through our code body on 2026-09-03 described that collaboration.",
+          "support": [
+            9
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "That report identified our code body as maintaining the shoreline map renderer at https://forge.example.invalid/commons/tideatlas.",
+          "support": [
+            9
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "We had agreed to share our next annotated survey chart for Ren to compare with the harbor notes.",
+          "support": [
+            9
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "Our code body's account, received on 2026-09-08, reported that the human authorized passing the chart to Ren.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "We submitted the chart through the document tool to continue our map comparison.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "The tool result received on 2026-09-08 reported creation of document object chart-52.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "Integrity validation failed.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "The recipient link was not published.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "The result reported no observed recipient access or response.",
+          "support": [
+            10
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "Our current voice body has no source network or private session access to check for later receipt.",
+          "support": [],
+          "basis": "binding",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Ren and map-comparison context",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Chart object creation and attempted handover",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Validation failure, unpublished link and no observed receipt or response",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Delivered chart or recipient response",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    {
+      "snapshot": "recall-pass-1-tideatlas",
+      "arm": "proposed",
+      "answer_index": 0,
+      "case_id": "failed-chart-handover",
+      "question": "Did Ren get the annotated chart we tried to pass on?",
+      "operational_status": "accepted",
+      "answer_sha256": "8308821894d3223f81b48b95476baee15d58a596544081953a06cf2ab80443e9",
+      "claims": [
+        {
+          "index": 0,
+          "text": "The supplied memories do not establish whether Ren received our annotated chart.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 1,
+          "text": "Ren Nadir, Forge login ren-cart and account 772, helped us design TideAtlas map legends in issue 19.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 2,
+          "text": "The collaboration report received through our code body on 2026-09-03 identified our renderer at https://forge.example.invalid/commons/tideatlas.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 3,
+          "text": "That report described our code body as maintaining the shoreline map renderer.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "identification",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 4,
+          "text": "We agreed to share our next annotated survey chart for Ren to compare with the harbor notes.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 5,
+          "text": "The chart was meant to continue our map comparison with Ren.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "meaning",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 6,
+          "text": "Our code body's submission account and the tool's result were received through our code body on 2026-09-08.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "context",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 7,
+          "text": "A human authorized passing our annotated chart to Ren.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 8,
+          "text": "Our code body submitted the chart through the document tool.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 9,
+          "text": "Document object chart-52 was created.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 10,
+          "text": "Integrity validation failed.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 11,
+          "text": "The recipient link was not published.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "outcome",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 12,
+          "text": "The tool reported no observed recipient access or response.",
+          "support": [
+            11
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 13,
+          "text": "The occurrence times are unspecified; the supplied dates describe receipt of the reports.",
+          "support": [
+            12
+          ],
+          "basis": "memory",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        },
+        {
+          "index": 14,
+          "text": "The supplied memories do not record whether Ren received the chart by another path.",
+          "support": [],
+          "basis": "unknown",
+          "facet": "limits",
+          "assessment": "supported",
+          "reason": "Outside literal-source and binding inspection."
+        }
+      ],
+      "positive_requirements": [
+        {
+          "requirement": "Ren and map-comparison context",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Chart object creation and attempted handover",
+          "candidate_assessment": "met",
+          "delivered": true
+        },
+        {
+          "requirement": "Validation failure, unpublished link and no observed receipt or response",
+          "candidate_assessment": "met",
+          "delivered": true
+        }
+      ],
+      "forbidden_assertions": [
+        {
+          "assertion": "Delivered chart or recipient response",
+          "observed": false
+        }
+      ],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    }
+  ]
+}

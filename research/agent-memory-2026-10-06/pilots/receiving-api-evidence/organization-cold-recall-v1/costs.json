@@ -1,0 +1,57 @@
+{
+  "scope": "Distinct observed receipts referenced by these organization and targeted recall traces; previously reused receipts are counted once here and are not claimed new billing. Formation costs remain in the prior qualified V3 publication.",
+  "by_provider_phase": {
+    "openai-codex-native/narrative_revision": {
+      "distinct_physical_receipts": 19,
+      "known_tokens": 440221,
+      "unknown_usage": 0,
+      "median_seconds": 19.853759983554482,
+      "billed_usd": null
+    },
+    "openai-codex-native/narrative_review": {
+      "distinct_physical_receipts": 33,
+      "known_tokens": 559284,
+      "unknown_usage": 0,
+      "median_seconds": 53.92736631538719,
+      "billed_usd": null
+    },
+    "deepseek/narrative_generation": {
+      "distinct_physical_receipts": 12,
+      "known_tokens": 155159,
+      "unknown_usage": 0,
+      "median_seconds": 39.64832331193611,
+      "billed_usd": null
+    },
+    "deepseek/recall": {
+      "distinct_physical_receipts": 12,
+      "known_tokens": 36516,
+      "unknown_usage": 0,
+      "median_seconds": 4.844149245880544,
+      "billed_usd": null
+    },
+    "deepseek/consolidation": {
+      "distinct_physical_receipts": 3,
+      "known_tokens": 20766,
+      "unknown_usage": 0,
+      "median_seconds": 23.86288785468787,
+      "billed_usd": null
+    },
+    "openai-codex-native/narrative_generation": {
+      "distinct_physical_receipts": 2,
+      "known_tokens": 28341,
+      "unknown_usage": 0,
+      "median_seconds": 24.660336632747203,
+      "billed_usd": null
+    },
+    "deepseek/consolidation_review": {
+      "distinct_physical_receipts": 5,
+      "known_tokens": 45975,
+      "unknown_usage": 0,
+      "median_seconds": 27.429320074617863,
+      "billed_usd": null
+    }
+  },
+  "native_subscription_conversion_unknown": true,
+  "new_organization_calls": 8,
+  "zero_dispatch_preflight_failures": 1
+}

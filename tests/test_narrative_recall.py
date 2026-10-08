@@ -221,6 +221,23 @@ def test_changed_validation_cannot_silently_requalify_an_accepted_checkpoint(tmp
     assert checkpoint.read_bytes()==original
 
 
+def test_changed_revision_contract_cannot_reuse_an_accepted_checkpoint(tmp_path, monkeypatch):
+    candidate=account('Delivery failed.',[1]); evidence={1:{'text':'Delivery failed.'}}
+    binding={'receiving_body':'voice'}; checkpoint=tmp_path/'pending.json'; pending={}
+    def chat(model,messages,trace):
+        return candidate if trace.phase=='narrative_generation' else verdict(
+            'supported','Actual failure.',candidate,'Delivery failed.')
+    nr.answer('fixture','What happened?',evidence,binding,SimpleNamespace(phase='recall'),
+              pending,checkpoint,chat,lambda p,v:p.write_text(json.dumps(v)))
+    original=checkpoint.read_bytes()
+    monkeypatch.setattr(nr,'REVISION',nr.REVISION+' Changed repair procedure.')
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('fixture','What happened?',evidence,binding,SimpleNamespace(phase='recall'),
+                  pending,checkpoint,lambda *a:pytest.fail('Unexpected provider call'),
+                  lambda p,v:p.write_text(json.dumps(v)))
+    assert checkpoint.read_bytes()==original
+
+
 def test_source_clause_delimiter_repair_preserves_raw_review_and_exact_words(tmp_path):
     candidate=account('Delivery failed.',[1]);evidence={1:{'text':'Delivery failed; no reply observed.'}}
     raw=verdict('supported','Observed failure.',candidate,'Delivery failed.')
