@@ -64,10 +64,12 @@ now preserves two faithful fixed-packet controls and detects five introduced
 semantic/capability errors. It types support per assertion and distinguishes
 direct conversation from indirect report without rewriting source text or
 faithful prose. [Three unused fictional receiving cases](../research/agent-memory-2026-10-06/pilots/2026-10-08-unused-narrative-holdouts.md)
-now pass outside assessment of 39 claims and 15 positive requirements. The one
-complete closing comparison is started; a runner-only projection-validation fix
-must continue its saved checkpoints without changing prompts or resetting budgets.
-The outstanding per-transformation recall assessment follows that comparison.
+now pass outside assessment of 39 claims and 15 positive requirements. The [complete closing comparison](../research/agent-memory-2026-10-06/pilots/2026-10-08-closing-narrative-qualification.md)
+now passes both arms: 44 delivered answers, 581 outside-assessed claims and all
+102 positive requirements. Its explicit runner-only transition preserves the
+saved checkpoints and budgets; no receiving prompt or model changes. Substantial
+review/revision cost remains measured separately. The outstanding
+per-transformation recall assessment follows this qualified comparison.
 Do not resume the old queues or repeat
 valid consolidations. Stage two remains open. The
 [actual preservation/reconciliation report](../research/agent-memory-2026-10-06/pilots/2026-10-08-three-pass-preservation-and-reconciliation.md)
