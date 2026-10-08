@@ -67,6 +67,11 @@ Finish those recalls and every claim/requirement assessment, including corrected
 and stale intermediate sources, then close separated fidelity/cost gates. Preserve
 earlier diagnostics and false rejections without starting another prompt variant
 by default. The
+[complete V4 diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-08-complete-v4-receiving-diagnostic.md)
+retains all 597 assessed claims: no invented final fact, but three support/basis
+failures and one omitted shared-participation requirement keep it unqualified.
+Receiving costs are separated from organization calls sharing its transport.
+The
 [revision headroom diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-08-narrative-revision-headroom.md)
 records the final guidance and its observed trigger. Stage two is not complete.
 
