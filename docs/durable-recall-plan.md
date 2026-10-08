@@ -484,6 +484,14 @@ The extended narrative fixture has 60 retained essentials per arm; its qualified
 fresh canon, not an unqualified new capture or the old 48-item report alone,
 is the starting point for stage-two organization.
 
+The [reported-participation clarification](../research/agent-memory-2026-10-06/pilots/2026-10-08-reported-participation-guidance.md)
+preserves the remaining accepted human-group ownership error. Fresh-v2 proposed
+recovers the missing method and occurrence precision but is still unqualified.
+A fresh complete equivalent trial adds explicit past-participant/stale-support
+guidance and the optional decoded-source payload; original capture, embeddings,
+reader and all historical checkpoints remain preserved. Its results must be
+outside-assessed before any stage-two account application.
+
 ### Stage 1 exit evidence and exact continuation
 
 The [stage-one report](../research/agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md)
