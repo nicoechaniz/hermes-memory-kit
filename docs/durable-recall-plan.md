@@ -69,7 +69,15 @@ now passes both arms: 44 delivered answers, 581 outside-assessed claims and all
 102 positive requirements. Its explicit runner-only transition preserves the
 saved checkpoints and budgets; no receiving prompt or model changes. Substantial
 review/revision cost remains measured separately. The outstanding
-per-transformation recall assessment follows this qualified comparison.
+per-transformation recall assessment follows this qualified comparison. A
+[bounded receipt-context correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-citation-receipts-without-forced-stories.md)
+now addresses a stage-two receiving rejection: redundant proof forced unrelated
+receipt dates into prose and a later revision introduced ownership drift. Native
+review caught it, but did not deliver the answer. Original receipt context can
+preserve those dates without forcing another story; the same-package diagnostic
+passes twenty claims with zero new model calls and one fewer revision/review pair.
+Requalify the existing closing packages by exact raw consumption, then finish
+snapshot recall under this recorded option. Stopped queues remain stopped.
 Do not resume the old queues or repeat
 valid consolidations. Stage two remains open. The
 [actual preservation/reconciliation report](../research/agent-memory-2026-10-06/pilots/2026-10-08-three-pass-preservation-and-reconciliation.md)

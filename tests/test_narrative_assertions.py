@@ -107,3 +107,50 @@ def test_assertion_protocol_accepts_source_relabeling_without_semantic_revision(
     with pytest.raises(ValueError,match='procedure/model changed'):
         nr.answer('fixture','Can this body run the checks?',evidence,binding,
             trace,pending,tmp_path/'pending.json',chat,save,review_protocol='passages')
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('fixture','Can this body run the checks?',evidence,binding,
+            trace,pending,tmp_path/'pending.json',chat,save,review_protocol='assertions',
+            preserve_citation_receipts=True)
+
+
+def test_secondary_identifier_proof_preserves_receipts_without_another_story():
+    evidence = {7: {'text': 'Human report; source tentative; received 2026-07-01 through code:\n'
+        + json.dumps('The human group wanted to try the checklist.') + '\n\n'
+        + 'tool_response; source identity; received 2026-07-04 through code:\n'
+        + json.dumps('Mara\'s account remains 1847.')}}
+    candidate = {'claims': [dict(text='Mara has account 1847.', support=[7], basis='memory')]}
+    assert len(nr.missing_anchors(candidate, evidence)) == 2
+    receipts = nr.receipt_context(candidate, evidence)
+    assert nr.missing_anchors(candidate, evidence, receipts) == []
+    assert candidate['claims'][0]['text'] == 'Mara has account 1847.'
+    assert [s['reported_at'] for s in receipts[0]['sources']] == ['2026-07-01', '2026-07-04']
+    assert all('quotation' not in s for s in receipts[0]['sources'])
+    receipts[0]['sources'][0]['reported_at'] = '2036-07-01'
+    with pytest.raises(ValueError, match='original supplied sources'):
+        nr.missing_anchors(candidate, evidence, receipts)
+
+
+def test_receipt_metadata_does_not_excuse_missing_world_pointer_or_wrong_claim(tmp_path):
+    candidate,evidence,binding,review = example()
+    candidate['claims'][0].update(basis='mixed', support=[1])
+    evidence[1]['text'] = ('foreground_work; source checks; received 2026-08-05 through code:\n'
+                          + json.dumps('The checks need repository/runtime tools. See docs/checks.md.'))
+    receipts = nr.receipt_context(candidate, evidence)
+    missing = nr.missing_anchors(candidate, evidence, receipts)
+    assert len(missing) == 1 and 'docs/checks.md' in missing[0]
+    # A real attribution verdict must still reject the narrative even when
+    # every receipt is retained. Citation metadata is never semantic proof.
+    evidence[1]['text'] = 'Only the human group wanted to try the method.'
+    candidate['claims'][0].update(text='We wanted to try the method.',basis='memory',support=[1])
+    bad = dict(span='We wanted to try the method.',basis='memory',source_fact=evidence[1]['text'],
+               proof=[{'id':1,'passage':0}],binding_fields=[],verdict='unsupported',reason='Human group is not this being.')
+    raw = dict(claims=[dict(index=0,verdict='unsupported',reason=bad['reason'],assertions=[bad])],missing=[])
+    calls = []
+    def chat(model,messages,trace):
+        calls.append(trace.phase)
+        return raw if trace.phase == 'narrative_review' else candidate
+    with pytest.raises(nr.NarrativeRejected):
+        nr.answer('fixture','Who wanted to try?',evidence,binding,SimpleNamespace(phase='recall'),{},
+            tmp_path/'pending.json',chat,lambda p,v: p.write_text(json.dumps(v)),
+            review_protocol='assertions',preserve_citation_receipts=True)
+    assert calls.count('narrative_review') == 3

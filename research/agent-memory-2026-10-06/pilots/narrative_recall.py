@@ -170,14 +170,37 @@ def expressed_dates(text):
     return dates
 
 
-def missing_anchors(candidate, evidence):
+def receipt_context(candidate, evidence):
+    """Keep source receipt dates as attributed citation metadata, not new events.
+
+    A secondary proof of an identifier does not require retelling every episode
+    in its record. This metadata is deterministic original-source provenance;
+    it does not establish a claim's meaning or replace narrative requirements.
+    """
+    cited = sorted({cid for claim in candidate['claims'] for cid in claim['support']})
+    return [dict(id=cid, source_text_sha256=hashlib.sha256(
+        evidence[cid].get('text', '').encode()).hexdigest(),
+        sources=[{key: block.get(key) for key in
+                  ('header', 'speaker', 'receiving_body', 'reported_at', 'channel', 'source')}
+                 for block in source_blocks(evidence[cid].get('text', ''))])
+            for cid in cited]
+
+
+def missing_anchors(candidate, evidence, citation_receipts=None):
     text = ' '.join(claim['text'] for claim in candidate['claims'])
     cited = {cid for claim in candidate['claims'] if claim['basis'] in {'memory','mixed'}
              for cid in claim['support']}
     dates = expressed_dates(text)
+    # Never trust caller/model supplied metadata to excuse a missing anchor.
+    expected = receipt_context(candidate, evidence)
+    if citation_receipts is not None and citation_receipts != expected:
+        raise ValueError('citation receipts differ from the original supplied sources')
+    receipts = {row['id']: {source['reported_at'] for source in row['sources']}
+                for row in expected} if citation_receipts is not None else {}
     return [f'Retain the supplied date/world pointer {anchor} from cited memory {cid}.'
             for cid in sorted(cited) for anchor in source_anchors(evidence[cid])
-            if not (anchor in dates if re.fullmatch(r'\d{4}-\d{2}-\d{2}', anchor) else anchor in text)]
+            if not (anchor in dates or anchor in receipts.get(cid, set())
+                    if re.fullmatch(r'\d{4}-\d{2}-\d{2}', anchor) else anchor in text)]
 
 
 def validate(value, evidence, binding):
@@ -712,13 +735,16 @@ judgment and must be assessed independently outside this procedure.
 
 def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save,
            review_model=None, review_protocol='literal', revision_model=None,
-           source_representation='full'):
+           source_representation='full', preserve_citation_receipts=False):
     if source_representation not in {'full', 'decoded'}:
         raise ValueError('explicit full or decoded source representation required')
     review_model = review_model or model
     revision_model = revision_model or model
     if review_protocol not in {'literal','passages','assertions'}:
         raise ValueError('explicit literal, passages or assertions review protocol required')
+    if type(preserve_citation_receipts) is not bool or (
+            preserve_citation_receipts and review_protocol != 'assertions'):
+        raise ValueError('citation receipts require explicit assertion review')
     review_instructions = (ASSERTION_REVIEW if review_protocol == 'assertions' else
                            PASSAGE_REVIEW if review_protocol == 'passages' else REVIEW)
     state = pending.setdefault('narrative', {'generations': [], 'reviews': []})
@@ -736,6 +762,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
     if review_protocol == 'assertions':
         procedure_settings.update(proof_protocol='assertions/v2',
                                   validation_protocol='narrative-assertions/v1')
+    if preserve_citation_receipts:
+        procedure_settings['citation_receipt_protocol'] = 'original-receipts/v1'
     # Changed validation needs a new comparison, including accepted checkpoints.
     # Historical trials can resume with their preserved implementation.
     # Selecting a separate reviewer is a new frozen procedure, never an implicit
@@ -756,7 +784,10 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         return dict(value, text=' '.join(claim['text'] for claim in value['claims']),
             used_ids=list(dict.fromkeys(cid for c in value['claims'] for cid in c['support'])),
             semantic_review=review, review_is_proof=False, **(
-                dict(support_protocol='assertions/v2') if review_protocol == 'assertions' else {}))
+                dict(support_protocol='assertions/v2') if review_protocol == 'assertions' else {}), **(
+                dict(citation_receipt_protocol='original-receipts/v1',
+                     citation_receipts=receipt_context(value, evidence))
+                if preserve_citation_receipts else {}))
     if 'accepted' in state:
         validate(state['accepted'], evidence, binding)
         review_shape(state['accepted_review'], state['accepted'], evidence, binding, review_protocol)
@@ -850,7 +881,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                 row = state['reviews'][progress['review_index']]
                 review = row.get('canonical_review', row['review'])
                 grounded = supported_claims(candidate, review) if review_protocol == 'assertions' else candidate
-                anchors = missing_anchors(grounded, evidence)
+                anchors = missing_anchors(grounded, evidence,
+                    receipt_context(grounded, evidence) if preserve_citation_receipts else None)
                 state.setdefault('anchor_checks', []).append(dict(candidate=candidate, missing=anchors))
                 if anchors:
                     review = dict(review, missing=review['missing'] + anchors)

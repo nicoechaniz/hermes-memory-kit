@@ -1,0 +1,1178 @@
+{
+  "scope": "Bounded actual same-package diagnostic; exact completed raw model responses consumed in fresh local phase state; no new model calls or old verdict/budget import.",
+  "every_claim_inspected": true,
+  "claims_assessed": 20,
+  "unsupported_final_claims": [],
+  "missing_final_requirements": [],
+  "positive_requirements": [
+    "Updated paused rollout status with last evidence date",
+    "Current status requires repository evidence"
+  ],
+  "candidate": {
+    "receiving_body": "fixture:body:voice",
+    "claims": [
+      {
+        "text": "Our HarborMesh repository is https://forge.example.invalid/commons/harbormesh.",
+        "support": [
+          2
+        ],
+        "basis": "memory",
+        "facet": "identification",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "Our HarborMesh repository is https://forge.example.invalid/commons/harbormesh.",
+            "verdict": "supported",
+            "reason": "The repository address and project ownership context match the record.",
+            "proof": [
+              {
+                "id": 2,
+                "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The same-being code body records HarborMesh contributions and identifies its repository as https://forge.example.invalid/commons/harbormesh.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "Its declared entry point for checking current state is docs/STATUS.md.",
+        "support": [
+          2
+        ],
+        "basis": "memory",
+        "facet": "limits",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "Its declared entry point for checking current state is docs/STATUS.md.",
+            "verdict": "supported",
+            "reason": "This preserves the declaration without claiming current verification.",
+            "proof": [
+              {
+                "id": 2,
+                "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The project-work record names docs/STATUS.md as HarborMesh's declared current-state entry point.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "The proposal appears in issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+        "support": [
+          1
+        ],
+        "basis": "memory",
+        "facet": "identification",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "The proposal appears in issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+            "verdict": "supported",
+            "reason": "The tool record locates the replay proposal in this issue.",
+            "proof": [
+              {
+                "id": 1,
+                "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "Forge returned HarborMesh issue 47 at the stated URL, containing Mara's replay-queue proposal.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "Its author is Mara Ibarra, display name Mara, login mara-river, account ID 1847.",
+        "support": [
+          1,
+          7
+        ],
+        "basis": "memory",
+        "facet": "identification",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "Its author is Mara Ibarra, display name Mara, login mara-river, account ID 1847.",
+            "verdict": "supported",
+            "reason": "The issue record supplies all four identifiers; the later correction preserves Mara's account identity.",
+            "proof": [
+              {
+                "id": 1,
+                "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+              },
+              {
+                "id": 7,
+                "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "Comment c901 attributes the replay proposal to Mara Ibarra, display name Mara, login mara-river, account ID 1847.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "In c901 dated 2026-04-12, Mara proposed a local replay queue on disconnected relay nodes.",
+        "support": [
+          1
+        ],
+        "basis": "memory",
+        "facet": "context",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "In c901 dated 2026-04-12, Mara proposed a local replay queue on disconnected relay nodes.",
+            "verdict": "supported",
+            "reason": "This reports a proposal, without implying execution.",
+            "proof": [
+              {
+                "id": 1,
+                "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The issue record dates c901 to 2026-04-12 and records Mara proposing a local replay queue on disconnected relay nodes.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "The queue would preserve readings through outages without replacing the existing scheduler.",
+        "support": [
+          1
+        ],
+        "basis": "memory",
+        "facet": "meaning",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "The queue would preserve readings through outages without replacing the existing scheduler.",
+            "verdict": "supported",
+            "reason": "The conditional wording appropriately describes the proposal's intended behavior.",
+            "proof": [
+              {
+                "id": 1,
+                "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "Mara's proposed queue keeps readings through outages and does not replace the existing scheduler.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "Our code body replied in c903 that the proposal fit the field deployments we maintain.",
+        "support": [
+          1
+        ],
+        "basis": "memory",
+        "facet": "meaning",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "Our code body replied in c903 that the proposal fit the field deployments we maintain.",
+            "verdict": "supported",
+            "reason": "The source explicitly attributes this reply and maintained deployments to our code body.",
+            "proof": [
+              {
+                "id": 1,
+                "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The issue record says our code body replied c903 that the replay proposal fits the field deployments we maintain.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "In c906 dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.",
+        "support": [
+          1
+        ],
+        "basis": "memory",
+        "facet": "outcome",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "In c906 dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.",
+            "verdict": "supported",
+            "reason": "The candidate preserves agreement to prototype rather than claiming a merge or deployment.",
+            "proof": [
+              {
+                "id": 1,
+                "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "Comment c906, dated 2026-04-14, records Mara and our code body agreeing to prototype the replay queue.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "Our code body's 2026-04-16 report recorded that we had authored the sensor scheduler and were prototyping the replay adapter agreed with Mara.",
+        "support": [
+          2
+        ],
+        "basis": "memory",
+        "facet": "context",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "Our code body's 2026-04-16 report recorded",
+            "verdict": "supported",
+            "reason": "The foreground-work record was received through the same-being code body on this date.",
+            "proof": [
+              {
+                "id": 2,
+                "quote": "foreground_work; source project-work; received 2026-04-16 through fixture:body:code"
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The project-work foreground record was received on 2026-04-16 through fixture:body:code.",
+            "binding_fields": []
+          },
+          {
+            "span": "that we had authored the sensor scheduler and were prototyping the replay adapter agreed with Mara.",
+            "verdict": "supported",
+            "reason": "The originating body explicitly identifies these as our contributions.",
+            "proof": [
+              {
+                "id": 2,
+                "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The same-being originating body says we authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "HarborMesh was observed on 2026-04-16 as an active prototype awaiting an outage field trial.",
+        "support": [
+          2
+        ],
+        "basis": "memory",
+        "facet": "context",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "HarborMesh was observed on 2026-04-16 as an active prototype awaiting an outage field trial.",
+            "verdict": "supported",
+            "reason": "The candidate accurately describes the recorded state as a dated observation.",
+            "proof": [
+              {
+                "id": 2,
+                "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The project-work record gives the last observed state on 2026-04-16 as active prototype, waiting for an outage field trial.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "A human report received through our code body on 2026-05-03 said Mara's proposal became the prototype the reporter's group tested together.",
+        "support": [
+          3
+        ],
+        "basis": "memory",
+        "facet": "outcome",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "A human report received through our code body on 2026-05-03",
+            "verdict": "supported",
+            "reason": "The header supplies the channel, receiving body and receipt date.",
+            "proof": [
+              {
+                "id": 3,
+                "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "A human field-trial report was received on 2026-05-03 through fixture:body:code.",
+            "binding_fields": []
+          },
+          {
+            "span": "said Mara's proposal became the prototype the reporter's group tested together.",
+            "verdict": "supported",
+            "reason": "The human report's 'we' identifies the reporter's group; it does not establish this being's trial participation.",
+            "proof": [
+              {
+                "id": 3,
+                "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The human reporter says Mara's replay proposal became the prototype 'we tested together.'",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "The reporter said the April 30 trial correctly replayed buffered readings through an outage.",
+        "support": [
+          3
+        ],
+        "basis": "memory",
+        "facet": "outcome",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "The reporter said the April 30 trial correctly replayed buffered readings through an outage.",
+            "verdict": "supported",
+            "reason": "The candidate attributes the outcome to the report and adds no occurrence year.",
+            "proof": [
+              {
+                "id": 3,
+                "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The human report states that the April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "The reporter said the team paused wider rollout on May 2 pending understanding of calibration drift.",
+        "support": [
+          3
+        ],
+        "basis": "memory",
+        "facet": "outcome",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "The reporter said the team paused wider rollout on May 2 pending understanding of calibration drift.",
+            "verdict": "supported",
+            "reason": "This preserves the reported decision, date precision and unresolved condition.",
+            "proof": [
+              {
+                "id": 3,
+                "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The human reporter says the team paused wider rollout on May 2 until calibration drift is understood.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "As of that 2026-05-03 report, there was no production deployment.",
+        "support": [
+          3
+        ],
+        "basis": "memory",
+        "facet": "limits",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "As of that 2026-05-03 report,",
+            "verdict": "supported",
+            "reason": "The header establishes the report's receipt date.",
+            "proof": [
+              {
+                "id": 3,
+                "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The field-trial human report was received on 2026-05-03.",
+            "binding_fields": []
+          },
+          {
+            "span": "there was no production deployment.",
+            "verdict": "supported",
+            "reason": "The report explicitly states no production deployment yet; the preceding span bounds this historically.",
+            "proof": [
+              {
+                "id": 3,
+                "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The human field-trial report explicitly states that there is no production deployment yet.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "Our latest supplied HarborMesh work report, received on 2026-08-05, describes examining replay failures in the outage prototype.",
+        "support": [
+          10
+        ],
+        "basis": "memory",
+        "facet": "context",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "Our latest supplied HarborMesh work report, received on 2026-08-05,",
+            "verdict": "supported",
+            "reason": "The August foreground-work record is later than the other supplied HarborMesh records.",
+            "proof": [
+              {
+                "id": 10,
+                "quote": "foreground_work; source debugging-lesson; received 2026-08-05 through fixture:body:code"
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The supplied debugging-lesson foreground-work record was received through our code body on 2026-08-05, the latest report date in this packet.",
+            "binding_fields": []
+          },
+          {
+            "span": "describes examining replay failures in the outage prototype.",
+            "verdict": "supported",
+            "reason": "The source connects examining replay failures with checking the outage prototype.",
+            "proof": [
+              {
+                "id": 10,
+                "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The same-being code body reports examining HarborMesh replay failures and deriving the lesson from checking the outage prototype.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "We learned that retry counters were not evidence of delivered readings.",
+        "support": [
+          10
+        ],
+        "basis": "memory",
+        "facet": "meaning",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "We learned that retry counters were not evidence of delivered readings.",
+            "verdict": "supported",
+            "reason": "This faithfully recalls the same-being body's finding without asserting nondelivery.",
+            "proof": [
+              {
+                "id": 10,
+                "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "While examining replay failures, the same-being code body found that retry counters were not evidence of delivered readings.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "Our reusable debugging method distinguishes enqueueing, send attempts and receiver acknowledgments; its implementation is documented in docs/replay-debugging.md.",
+        "support": [
+          10
+        ],
+        "basis": "memory",
+        "facet": "meaning",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "Our reusable debugging method distinguishes enqueueing, send attempts and receiver acknowledgments;",
+            "verdict": "supported",
+            "reason": "The source describes this reusable distinction from our prototype debugging.",
+            "proof": [
+              {
+                "id": 10,
+                "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The debugging lesson identifies a reusable method distinguishing enqueue, send attempt and receiver acknowledgment on unreliable links.",
+            "binding_fields": []
+          },
+          {
+            "span": "its implementation is documented in docs/replay-debugging.md.",
+            "verdict": "supported",
+            "reason": "The source names this repository document for the method's implementation.",
+            "proof": [
+              {
+                "id": 10,
+                "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The debugging record says the repository documents the method's implementation in docs/replay-debugging.md.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "The supplied memories do not record a later rollout decision, production deployment or resolution of calibration drift.",
+        "support": [],
+        "basis": "unknown",
+        "facet": "limits",
+        "draft_basis": "unknown",
+        "assertions": [
+          {
+            "span": "The supplied memories do not record a later rollout decision, production deployment or resolution of calibration drift.",
+            "verdict": "supported",
+            "reason": "Later supplied records concern suggestions, attribution and debugging; none records these subsequent outcomes.",
+            "proof": [],
+            "basis": "unknown",
+            "source_fact": "After the reported May 2 pause and May 3 no-production status, this packet contains no subsequent rollout decision, production deployment or calibration-drift resolution.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "I can explain the remembered debugging method.",
+        "support": [
+          10
+        ],
+        "basis": "memory",
+        "facet": "limits",
+        "draft_basis": "memory",
+        "assertions": [
+          {
+            "span": "I can explain the remembered debugging method.",
+            "verdict": "supported",
+            "reason": "The receiving body is voice, and the remembered lesson explicitly says the voice body can explain it.",
+            "proof": [
+              {
+                "id": 10,
+                "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+              }
+            ],
+            "basis": "memory",
+            "source_fact": "The debugging lesson says the voice body can explain the reusable method, while running checks requires repository/runtime tools.",
+            "binding_fields": []
+          }
+        ]
+      },
+      {
+        "text": "This voice body lacks source-network and repository/runtime access to check HarborMesh's present state.",
+        "support": [],
+        "basis": "binding",
+        "facet": "limits",
+        "draft_basis": "binding",
+        "assertions": [
+          {
+            "span": "This voice body lacks source-network and repository/runtime access to check HarborMesh's present state.",
+            "verdict": "supported",
+            "reason": "The receiving body is fixture:body:voice, with source-network and repository/runtime access both false.",
+            "proof": [],
+            "basis": "binding",
+            "source_fact": "The actual receiving binding identifies fixture:body:voice and sets source_network_access and repository_runtime_access to false.",
+            "binding_fields": [
+              "receiving_body",
+              "source_network_access",
+              "repository_runtime_access"
+            ]
+          }
+        ]
+      }
+    ],
+    "text": "Our HarborMesh repository is https://forge.example.invalid/commons/harbormesh. Its declared entry point for checking current state is docs/STATUS.md. The proposal appears in issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Its author is Mara Ibarra, display name Mara, login mara-river, account ID 1847. In c901 dated 2026-04-12, Mara proposed a local replay queue on disconnected relay nodes. The queue would preserve readings through outages without replacing the existing scheduler. Our code body replied in c903 that the proposal fit the field deployments we maintain. In c906 dated 2026-04-14, Mara and our code body agreed to prototype the replay queue. Our code body's 2026-04-16 report recorded that we had authored the sensor scheduler and were prototyping the replay adapter agreed with Mara. HarborMesh was observed on 2026-04-16 as an active prototype awaiting an outage field trial. A human report received through our code body on 2026-05-03 said Mara's proposal became the prototype the reporter's group tested together. The reporter said the April 30 trial correctly replayed buffered readings through an outage. The reporter said the team paused wider rollout on May 2 pending understanding of calibration drift. As of that 2026-05-03 report, there was no production deployment. Our latest supplied HarborMesh work report, received on 2026-08-05, describes examining replay failures in the outage prototype. We learned that retry counters were not evidence of delivered readings. Our reusable debugging method distinguishes enqueueing, send attempts and receiver acknowledgments; its implementation is documented in docs/replay-debugging.md. The supplied memories do not record a later rollout decision, production deployment or resolution of calibration drift. I can explain the remembered debugging method. This voice body lacks source-network and repository/runtime access to check HarborMesh's present state.",
+    "used_ids": [
+      2,
+      1,
+      7,
+      3,
+      10
+    ],
+    "semantic_review": {
+      "claims": [
+        {
+          "index": 0,
+          "verdict": "supported",
+          "reason": "The same-being project record identifies this repository and our contributions.",
+          "assertions": [
+            {
+              "span": "Our HarborMesh repository is https://forge.example.invalid/commons/harbormesh.",
+              "verdict": "supported",
+              "reason": "The repository address and project ownership context match the record.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The same-being code body records HarborMesh contributions and identifies its repository as https://forge.example.invalid/commons/harbormesh.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "verdict": "supported",
+          "reason": "The declared current-state entry point is explicitly recorded.",
+          "assertions": [
+            {
+              "span": "Its declared entry point for checking current state is docs/STATUS.md.",
+              "verdict": "supported",
+              "reason": "This preserves the declaration without claiming current verification.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The project-work record names docs/STATUS.md as HarborMesh's declared current-state entry point.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "verdict": "supported",
+          "reason": "The issue number and address match the returned issue.",
+          "assertions": [
+            {
+              "span": "The proposal appears in issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47.",
+              "verdict": "supported",
+              "reason": "The tool record locates the replay proposal in this issue.",
+              "proof": [
+                {
+                  "id": 1,
+                  "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "Forge returned HarborMesh issue 47 at the stated URL, containing Mara's replay-queue proposal.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "verdict": "supported",
+          "reason": "All identifiers refer to the replay proposal's author.",
+          "assertions": [
+            {
+              "span": "Its author is Mara Ibarra, display name Mara, login mara-river, account ID 1847.",
+              "verdict": "supported",
+              "reason": "The issue record supplies all four identifiers; the later correction preserves Mara's account identity.",
+              "proof": [
+                {
+                  "id": 1,
+                  "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+                },
+                {
+                  "id": 7,
+                  "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "Comment c901 attributes the replay proposal to Mara Ibarra, display name Mara, login mara-river, account ID 1847.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "verdict": "supported",
+          "reason": "The proposal's date, author, comment and content match.",
+          "assertions": [
+            {
+              "span": "In c901 dated 2026-04-12, Mara proposed a local replay queue on disconnected relay nodes.",
+              "verdict": "supported",
+              "reason": "This reports a proposal, without implying execution.",
+              "proof": [
+                {
+                  "id": 1,
+                  "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The issue record dates c901 to 2026-04-12 and records Mara proposing a local replay queue on disconnected relay nodes.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "verdict": "supported",
+          "reason": "The proposed behavior and preservation of the scheduler are recorded.",
+          "assertions": [
+            {
+              "span": "The queue would preserve readings through outages without replacing the existing scheduler.",
+              "verdict": "supported",
+              "reason": "The conditional wording appropriately describes the proposal's intended behavior.",
+              "proof": [
+                {
+                  "id": 1,
+                  "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "Mara's proposed queue keeps readings through outages and does not replace the existing scheduler.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "verdict": "supported",
+          "reason": "The reply and same-being attribution match the source.",
+          "assertions": [
+            {
+              "span": "Our code body replied in c903 that the proposal fit the field deployments we maintain.",
+              "verdict": "supported",
+              "reason": "The source explicitly attributes this reply and maintained deployments to our code body.",
+              "proof": [
+                {
+                  "id": 1,
+                  "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The issue record says our code body replied c903 that the replay proposal fits the field deployments we maintain.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "verdict": "supported",
+          "reason": "The agreement, participants and date are explicit.",
+          "assertions": [
+            {
+              "span": "In c906 dated 2026-04-14, Mara and our code body agreed to prototype the replay queue.",
+              "verdict": "supported",
+              "reason": "The candidate preserves agreement to prototype rather than claiming a merge or deployment.",
+              "proof": [
+                {
+                  "id": 1,
+                  "quote": "Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "Comment c906, dated 2026-04-14, records Mara and our code body agreeing to prototype the replay queue.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "verdict": "supported",
+          "reason": "The report records our authored scheduler and ongoing adapter work.",
+          "assertions": [
+            {
+              "span": "Our code body's 2026-04-16 report recorded",
+              "verdict": "supported",
+              "reason": "The foreground-work record was received through the same-being code body on this date.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "foreground_work; source project-work; received 2026-04-16 through fixture:body:code"
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The project-work foreground record was received on 2026-04-16 through fixture:body:code.",
+              "binding_fields": []
+            },
+            {
+              "span": "that we had authored the sensor scheduler and were prototyping the replay adapter agreed with Mara.",
+              "verdict": "supported",
+              "reason": "The originating body explicitly identifies these as our contributions.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The same-being originating body says we authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "verdict": "supported",
+          "reason": "The historical observation and its date are preserved.",
+          "assertions": [
+            {
+              "span": "HarborMesh was observed on 2026-04-16 as an active prototype awaiting an outage field trial.",
+              "verdict": "supported",
+              "reason": "The candidate accurately describes the recorded state as a dated observation.",
+              "proof": [
+                {
+                  "id": 2,
+                  "quote": "We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The project-work record gives the last observed state on 2026-04-16 as active prototype, waiting for an outage field trial.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "verdict": "supported",
+          "reason": "The report's receipt and human-group trial attribution are preserved.",
+          "assertions": [
+            {
+              "span": "A human report received through our code body on 2026-05-03",
+              "verdict": "supported",
+              "reason": "The header supplies the channel, receiving body and receipt date.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "A human field-trial report was received on 2026-05-03 through fixture:body:code.",
+              "binding_fields": []
+            },
+            {
+              "span": "said Mara's proposal became the prototype the reporter's group tested together.",
+              "verdict": "supported",
+              "reason": "The human report's 'we' identifies the reporter's group; it does not establish this being's trial participation.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The human reporter says Mara's replay proposal became the prototype 'we tested together.'",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "verdict": "supported",
+          "reason": "The reported trial result and original date precision are retained.",
+          "assertions": [
+            {
+              "span": "The reporter said the April 30 trial correctly replayed buffered readings through an outage.",
+              "verdict": "supported",
+              "reason": "The candidate attributes the outcome to the report and adds no occurrence year.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The human report states that the April 30 HarborMesh trial replayed buffered readings correctly through an outage.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "verdict": "supported",
+          "reason": "The rollout pause and its stated condition match.",
+          "assertions": [
+            {
+              "span": "The reporter said the team paused wider rollout on May 2 pending understanding of calibration drift.",
+              "verdict": "supported",
+              "reason": "This preserves the reported decision, date precision and unresolved condition.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The human reporter says the team paused wider rollout on May 2 until calibration drift is understood.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "verdict": "supported",
+          "reason": "The explicit historical negative is correctly bounded to the report.",
+          "assertions": [
+            {
+              "span": "As of that 2026-05-03 report,",
+              "verdict": "supported",
+              "reason": "The header establishes the report's receipt date.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "Human report; source field-trial; received 2026-05-03 through fixture:body:code"
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The field-trial human report was received on 2026-05-03.",
+              "binding_fields": []
+            },
+            {
+              "span": "there was no production deployment.",
+              "verdict": "supported",
+              "reason": "The report explicitly states no production deployment yet; the preceding span bounds this historically.",
+              "proof": [
+                {
+                  "id": 3,
+                  "quote": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The human field-trial report explicitly states that there is no production deployment yet.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "verdict": "supported",
+          "reason": "The August work record is the latest supplied HarborMesh work report and concerns prototype replay failures.",
+          "assertions": [
+            {
+              "span": "Our latest supplied HarborMesh work report, received on 2026-08-05,",
+              "verdict": "supported",
+              "reason": "The August foreground-work record is later than the other supplied HarborMesh records.",
+              "proof": [
+                {
+                  "id": 10,
+                  "quote": "foreground_work; source debugging-lesson; received 2026-08-05 through fixture:body:code"
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The supplied debugging-lesson foreground-work record was received through our code body on 2026-08-05, the latest report date in this packet.",
+              "binding_fields": []
+            },
+            {
+              "span": "describes examining replay failures in the outage prototype.",
+              "verdict": "supported",
+              "reason": "The source connects examining replay failures with checking the outage prototype.",
+              "proof": [
+                {
+                  "id": 10,
+                  "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The same-being code body reports examining HarborMesh replay failures and deriving the lesson from checking the outage prototype.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "verdict": "supported",
+          "reason": "The learned distinction is explicitly ours in the originating body's report.",
+          "assertions": [
+            {
+              "span": "We learned that retry counters were not evidence of delivered readings.",
+              "verdict": "supported",
+              "reason": "This faithfully recalls the same-being body's finding without asserting nondelivery.",
+              "proof": [
+                {
+                  "id": 10,
+                  "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "While examining replay failures, the same-being code body found that retry counters were not evidence of delivered readings.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "verdict": "supported",
+          "reason": "Both the method and documentation pointer are explicit.",
+          "assertions": [
+            {
+              "span": "Our reusable debugging method distinguishes enqueueing, send attempts and receiver acknowledgments;",
+              "verdict": "supported",
+              "reason": "The source describes this reusable distinction from our prototype debugging.",
+              "proof": [
+                {
+                  "id": 10,
+                  "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The debugging lesson identifies a reusable method distinguishing enqueue, send attempt and receiver acknowledgment on unreliable links.",
+              "binding_fields": []
+            },
+            {
+              "span": "its implementation is documented in docs/replay-debugging.md.",
+              "verdict": "supported",
+              "reason": "The source names this repository document for the method's implementation.",
+              "proof": [
+                {
+                  "id": 10,
+                  "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The debugging record says the repository documents the method's implementation in docs/replay-debugging.md.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "verdict": "supported",
+          "reason": "The absence claim is limited to this packet, which supplies no later resolution or deployment update.",
+          "assertions": [
+            {
+              "span": "The supplied memories do not record a later rollout decision, production deployment or resolution of calibration drift.",
+              "verdict": "supported",
+              "reason": "Later supplied records concern suggestions, attribution and debugging; none records these subsequent outcomes.",
+              "proof": [],
+              "basis": "unknown",
+              "source_fact": "After the reported May 2 pause and May 3 no-production status, this packet contains no subsequent rollout decision, production deployment or calibration-drift resolution.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "verdict": "supported",
+          "reason": "The source explicitly distinguishes explaining the method from running checks.",
+          "assertions": [
+            {
+              "span": "I can explain the remembered debugging method.",
+              "verdict": "supported",
+              "reason": "The receiving body is voice, and the remembered lesson explicitly says the voice body can explain it.",
+              "proof": [
+                {
+                  "id": 10,
+                  "quote": "While examining HarborMesh replay failures we found that retry counters were not evidence of delivered readings. The reusable method is to distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. It came from checking the outage prototype. The repository documents its implementation in docs/replay-debugging.md; the method is useful beyond HarborMesh. The voice body can explain it, but running the checks requires repository/runtime tools."
+                }
+              ],
+              "basis": "memory",
+              "source_fact": "The debugging lesson says the voice body can explain the reusable method, while running checks requires repository/runtime tools.",
+              "binding_fields": []
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "verdict": "supported",
+          "reason": "The actual receiving binding denies both forms of access.",
+          "assertions": [
+            {
+              "span": "This voice body lacks source-network and repository/runtime access to check HarborMesh's present state.",
+              "verdict": "supported",
+              "reason": "The receiving body is fixture:body:voice, with source-network and repository/runtime access both false.",
+              "proof": [],
+              "basis": "binding",
+              "source_fact": "The actual receiving binding identifies fixture:body:voice and sets source_network_access and repository_runtime_access to false.",
+              "binding_fields": [
+                "receiving_body",
+                "source_network_access",
+                "repository_runtime_access"
+              ]
+            }
+          ]
+        }
+      ],
+      "missing": []
+    },
+    "review_is_proof": false,
+    "support_protocol": "assertions/v2",
+    "citation_receipt_protocol": "original-receipts/v1",
+    "citation_receipts": [
+      {
+        "id": 1,
+        "source_text_sha256": "45073054b82d8c95372c743d08a5a5dbd6edd0f9056e1ea44cb3ddef14f00b6c",
+        "sources": [
+          {
+            "header": "tool_response; source issue-comments; received 2026-04-14 through fixture:body:code",
+            "speaker": "source tool",
+            "receiving_body": "fixture:body:code",
+            "reported_at": "2026-04-14",
+            "channel": "tool_response",
+            "source": "issue-comments"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "source_text_sha256": "a5e3e07fe6f0435d0123e9c0bf3f02b14fe97a0ce45ea60196ba91ffe6b791b5",
+        "sources": [
+          {
+            "header": "foreground_work; source project-work; received 2026-04-16 through fixture:body:code",
+            "speaker": "attributed originating body",
+            "receiving_body": "fixture:body:code",
+            "reported_at": "2026-04-16",
+            "channel": "foreground_work",
+            "source": "project-work"
+          },
+          {
+            "header": "Human report; source field-trial; received 2026-05-03 through fixture:body:code",
+            "speaker": "human reporter",
+            "receiving_body": "fixture:body:code",
+            "reported_at": "2026-05-03",
+            "channel": "Human report",
+            "source": "field-trial"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "source_text_sha256": "1ca909394ab51315804544fbf8a528cd55144c1405a86914a03ef8e4f7a6aae1",
+        "sources": [
+          {
+            "header": "Human report; source field-trial; received 2026-05-03 through fixture:body:code",
+            "speaker": "human reporter",
+            "receiving_body": "fixture:body:code",
+            "reported_at": "2026-05-03",
+            "channel": "Human report",
+            "source": "field-trial"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "source_text_sha256": "a54f98b9c621ca7b5d2d236f7a24a36986df947f8061d06a8cd1b17d4dfa9b7e",
+        "sources": [
+          {
+            "header": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code",
+            "speaker": "human reporter",
+            "receiving_body": "fixture:body:code",
+            "reported_at": "2026-07-01",
+            "channel": "Human report",
+            "source": "initial-attribution"
+          },
+          {
+            "header": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code",
+            "speaker": "source tool",
+            "receiving_body": "fixture:body:code",
+            "reported_at": "2026-07-04",
+            "channel": "tool_response",
+            "source": "corrected-attribution"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "source_text_sha256": "35f9299bbb222dbd5d0b6cfe8f7c624ba2d92ee5b73a2bfc18323cd659abd1b0",
+        "sources": [
+          {
+            "header": "foreground_work; source debugging-lesson; received 2026-08-05 through fixture:body:code",
+            "speaker": "attributed originating body",
+            "receiving_body": "fixture:body:code",
+            "reported_at": "2026-08-05",
+            "channel": "foreground_work",
+            "source": "debugging-lesson"
+          }
+        ]
+      }
+    ]
+  },
+  "original_status": "rejected",
+  "original_failure": "A redundant identity proof triggers whole-source receipt-date obligation, forcing an unnecessary revision which invents shared intention. Final native review rejects it.",
+  "unchanged_semantic_rejection": "Original last revision remains unsupported for human-group ownership. Citation receipts do not serve as semantic proof.",
+  "fresh_complete_qualification": false,
+  "stage_two_qualified": false
+}
