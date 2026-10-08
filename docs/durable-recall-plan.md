@@ -56,20 +56,30 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: [reader-authority closing qualification](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-authority-closing-qualification.md)
-passes both original arms: 44 delivered answers, 583 outside-assessed clauses and
-102 positive requirements. The [reader-guidance defect and bounded correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-guidance-is-not-memory.md)
-remain preserved, including actual failed stage approvals. Report-referents/v2
-and the existing medium review distinguish source words, reader rules, unknown
-premises and actual date-object relations. The comparison costs 137 new physical
-calls / 2,060,240 known tokens, separately from 13 reused calls. Cost efficiency is
-not established by fidelity qualification. Finish cold receiving from the valid
-three-pass/correction/reconciliation snapshots, with explicit invariant control
-and replay references; old queues stay stopped and consolidation is not repeated.
-The installed 27 native scripts remain byte-identical; no live migration is needed.
-All historical failures/closings remain preserved; stage two is open.
+Current continuation, 2026-10-08: natural narration and stage two are qualified
+for the finite fictional corpus under the current reader-authority procedure.
+The [original closing](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-authority-closing-qualification.md)
+passes both arms (44 answers, 583 clauses, 102 positive requirements). The
+[per-transformation closing](../research/agent-memory-2026-10-06/pilots/2026-10-08-stage-two-recall-qualification.md)
+passes 123 actual cold receiving answers, 1,813 clauses and 304 requirements,
+plus 22 replay references supported by exact state/condition equality. All three
+organization passes, literal correction, replay and dependent reconciliation
+remain preserved, with originals/history and verified backup/restore. This
+continuation reuses valid formation/organization; it does not repeat them.
+Selection, retrieval/indexing, narrative fidelity, preservation and costs stay
+separate, including a preserved timeout and one exact retry. The
+[observed cost note](../research/agent-memory-2026-10-06/pilots/2026-10-08-observed-costs-and-daily-consolidation.md)
+separates qualification from a small daily-delta organization estimate and native
+subscription usage from API equivalents. Installed native scripts remain
+byte-identical; no live corpus/runtime migration is required. Historical failures
+and stopped queues remain preserved. Next, under a new authorized scope: stage 3,
+qualify full-history/content closure and Matrix/HMK target compatibility through
+[Matrix #263](https://github.com/AlterMundi/daimon-matrix/issues/263), reusing export
+PR #261 and the existing preservation profile. Native memory and automatic
+lifecycle activation remain later stages.
 
-Preserved evidence: all three organization passes, exact eighteen-input
+Earlier preserved evidence and superseded continuations: all three organization
+passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation
 are applied with native replay, original/history preservation and backup/restore
 verified. The [assertion-verification correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-assertion-verification-diagnostic.md)
@@ -147,10 +157,10 @@ decide what deserves retention.
 
 Stage 1 is complete with the scope and evidence recorded in the
 [qualification report](../research/agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md).
-Exact attributed support is the qualified answer form; free-form narrative
-fidelity is not established. The current human-directed goal first requires a
-complete natural-narrative qualification under the final receiving contract,
-then the three stage-two consolidation passes. The expanded fictional contract
+That delivery qualified exact attributed support; it did not establish free-form
+narrative fidelity. The subsequent [natural-narrative closing](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-authority-closing-qualification.md)
+and [stage-two receiving closure](../research/agent-memory-2026-10-06/pilots/2026-10-08-stage-two-recall-qualification.md)
+now satisfy those finite fictional gates. The expanded fictional contract
 has eighteen capture cases, twenty-two questions, sixty essential checks and
 fifty-one answer requirements, including four new cases. Both policy arms use
 comparable conditions and hidden rubrics outside formation and answer prompts.
@@ -583,19 +593,20 @@ All 242 original chapters and canonical values/history remain preserved.
 - [x] Keep routine noise and invented identities/proposals/results absent from
   qualified factual support; publish/merge/adopt the relevant corrections with
   verified backup/restore/rollback and leave native memory disabled.
-- [ ] Stage 2: qualify linked episodes/current accounts/supported understanding
-  through three consolidation passes plus replay and dependent corrections.
+- [x] Stage 2: qualify linked episodes/current accounts/supported understanding
+  through three consolidation passes plus replay and dependent corrections; see
+  the [per-transformation closing](../research/agent-memory-2026-10-06/pilots/2026-10-08-stage-two-recall-qualification.md).
 
-Start stage 2 from the published fictional selected canon/native history and
-formation traces in the report's evidence directory. Reduce duplicate/nested
-source blocks without discarding support; use existing native chapter/link and
-consolidation APIs. Inspect all 48 retained essentials and old encounter recall
-after each of three passes, then replay unchanged inputs and apply a supported
-correction to check dependent-account reconciliation. Measure storage and model,
-retrieval and answer costs separately. Do not start portable/native activation
-from the stage-one result; stages 3–5 retain their own gates. The exact evidence
-response avoids demonstrated narrative invention, but does not claim narrative
-reasoning, actual live cross-harness receiving acceptance or lifelong scale.
+Stage 2 exit is complete for the qualified fictional procedure. The three-pass
+organization/replay/correction/reconciliation evidence is reused with cold recall
+after every transformation, source loss, real retrieval-clock aging and recent
+distractors. All 48 earlier retained essentials survive in original/current or
+native-history bytes; the expanded 60-check formation evidence remains unchanged.
+Original/history preservation and rollback are separate from all
+clause and positive/negative requirement grades. Native memory remains disabled;
+portability and actual cross-harness receiving acceptance retain stages 3–4.
+Continue at the stage-three Matrix archive/content-closure and supported-target
+qualification; do not resume stopped research queues or rerun valid consolidation.
 
 ### Earlier preservation and qualification history
 
