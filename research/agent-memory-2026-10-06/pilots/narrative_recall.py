@@ -386,6 +386,11 @@ addresses the being. Never identify that human as the voice/code/mobile body.
 Receiving a report is not attending. Human conversation's shared we can describe
 our interaction; it does not grant physical senses/tools. Another same-being
 body's history is ours; a distinct peer's experience remains THEIRS.
+In an indirect account of a Human report, replace its bare I/we with the
+reporter/their group for past actions whose participants are not identified.
+Even 'the human reported that we tested it' makes this narrator part of that
+group. Include our being in past participation only when the source identifies
+that participation. Preserve explicitly shared conversations and joint intentions.
 
 Retain literal_source_anchors (the same calendar dates and world URLs/docs paths)
 from each cited source. Also preserve relevant known account numbers/logins,
@@ -396,6 +401,11 @@ a later correction erase the earlier uncertain report.
 Month and day without an explicit occurrence year must remain month and day.
 Do not borrow the year from a full report/receipt date, even when its month and
 day match. A fully dated receipt does not increase an occurrence's precision.
+An inferred account with support_status needs_reconciliation has changed support.
+Keep its qualified history when relevant, but resolve its factual account against
+the supplied original supports and later corrections. An account is not new
+corroboration; its write time is not an observation date. Never let an outdated
+synthesis override a supplied correction or discard the original corrected history.
 
 A created object is not delivery; no observed receipt/access is not proof of
 non-receipt. Say the supplied actual failure and bound unknown acceptance or
@@ -490,6 +500,14 @@ being, not the human reporter. Do not overturn that explicit distinction.
 Quoted human I/we remains its speaker; receiving a report does not establish
 participation or a preference of the receiving body. Same-being body history
 does not grant the receiver sensors/tools. Distinct peers remain distinct.
+An indirect attribution prefix does not transfer first-person pronouns back to
+the reporter: 'the human reported that we tested it' still includes this being.
+Check that any claimed participation of this being is explicit in the source;
+otherwise request reporter/their-group wording, preserving known shared
+conversations and future joint intentions rather than inventing an exclusion.
+Inspect support_status and support_checks on derived accounts. Changed support
+requires reconciliation against supplied originals/corrections, not accepting
+an outdated account as current or treating its repeated synthesis as corroboration.
 Do not accept a stronger outcome, causal explanation or invented simulation.
 Unobserved receipt/access does not prove the recipient did not obtain something;
 no acceptance/attendance observed is not proof no meeting occurred. Known delivery

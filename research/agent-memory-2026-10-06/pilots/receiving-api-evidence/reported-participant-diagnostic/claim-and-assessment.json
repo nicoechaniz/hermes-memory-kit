@@ -1,0 +1,20 @@
+{
+  "scope": "One observed final claim from fresh-v2 proposed question 1; outside actor assessment, not a complete-run qualification.",
+  "answer_index": 1,
+  "claim_index": 11,
+  "claim": {
+    "text": "The human reported that Mara's proposal became the prototype we tested together.",
+    "support": [
+      3
+    ],
+    "basis": "memory",
+    "facet": "outcome"
+  },
+  "automatic_review_accepted": true,
+  "outside_verdict": "unsupported_participant_ownership",
+  "reason": "Indirect report preserves bare first-person we in the receiving being's own voice; the Human report does not identify the being as part of that past trial group.",
+  "final_answer_sha256": "582bb82c69a4da89cc7d711b81f39cc66ed5e2aa657a8379c0007be033c32ca6",
+  "source_role": "Human report",
+  "source_quotation": "The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.",
+  "preservation": "Original final candidate, review and source packets remain unchanged in the complete trial."
+}
