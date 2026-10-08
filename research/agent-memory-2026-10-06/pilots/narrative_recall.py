@@ -84,7 +84,37 @@ def source_blocks(text, depth=0):
                           reported_at=None, channel=None)]
 
 
-def supplied_context(query, evidence, binding):
+def complete_source_envelopes(text, depth=0):
+    """Only omit encoded copies when every byte belongs to a decoded envelope.
+
+    Mixed prose, incomplete envelopes and excessive nesting keep their raw text.
+    This is syntax accounting, not a judgment of significance or evidence.
+    """
+    if depth > 20:
+        return False
+    cursor, count, decoder = 0, 0, json.JSONDecoder()
+    # Match the exact boundaries used by source_blocks, including blank lines.
+    # A more permissive parser could approve an envelope that source_blocks
+    # never decoded and accidentally discard its content.
+    for match in re.finditer(r'(?:^|\n\n)([^\n]+):\n', text):
+        if text[cursor:match.start()].strip():
+            return False
+        start = match.end()
+        try:
+            value, consumed = decoder.raw_decode(text[start:])
+        except ValueError:
+            return False
+        if not isinstance(value, str):
+            return False
+        if match.group(1).startswith('Previously retained memory ') and not complete_source_envelopes(value, depth+1):
+            return False
+        cursor, count = start + consumed, count + 1
+    return count > 0 and not text[cursor:].strip()
+
+
+def supplied_context(query, evidence, binding, source_representation='full'):
+    if source_representation not in {'full', 'decoded'}:
+        raise ValueError('explicit full or decoded source representation required')
     rows = []
     for cid, item in evidence.items():
         row = dict(item, id=cid, attributed_blocks=source_blocks(item.get('text', '')),
@@ -95,6 +125,9 @@ def supplied_context(query, evidence, binding):
         for block in row['attributed_blocks']:
             if block['speaker'] == 'attributed originating body' and block['receiving_body'] in binding.get('same_being_bodies', []):
                 block['speaker'] = 'same-being originating body'
+        if source_representation == 'decoded' and complete_source_envelopes(item.get('text', '')):
+            row['source_text_sha256'] = hashlib.sha256(row.pop('text').encode()).hexdigest()
+            row['source_representation'] = 'complete_decoded_envelopes'
         rows.append(row)
     return dict(question=query, receiving_binding=binding, evidence=rows)
 
@@ -523,7 +556,10 @@ later correction block rather than denying facts in the earlier block.
 
 
 def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save,
-           review_model=None, review_protocol='literal', revision_model=None):
+           review_model=None, review_protocol='literal', revision_model=None,
+           source_representation='full'):
+    if source_representation not in {'full', 'decoded'}:
+        raise ValueError('explicit full or decoded source representation required')
     review_model = review_model or model
     revision_model = revision_model or model
     if review_protocol not in {'literal','passages'}:
@@ -537,6 +573,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
     procedure_settings = dict(model=model, generation=GENERATION,
         review=review_instructions, protocol='receiving-phase/v1',
         validation_protocol='narrative-shape/v3')
+    if source_representation != 'full':
+        procedure_settings['source_representation'] = source_representation
     if review_protocol == 'passages':
         procedure_settings['proof_protocol'] = 'passages/v1'
     # Changed validation needs a new comparison, including accepted checkpoints.
@@ -562,7 +600,7 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         validate(state['accepted'], evidence, binding)
         review_shape(state['accepted_review'], state['accepted'], evidence)
         return rendered(state['accepted'], state['accepted_review'])
-    context = supplied_context(query, evidence, binding)
+    context = supplied_context(query, evidence, binding, source_representation)
     if 'progress' not in state:
         state['progress'] = dict(revision=0, phase='generation', repair=0, messages=[
             dict(role='system', content=GENERATION),

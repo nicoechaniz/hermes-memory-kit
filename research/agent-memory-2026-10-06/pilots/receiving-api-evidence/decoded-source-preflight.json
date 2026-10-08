@@ -1,0 +1,97 @@
+{
+  "scope": "Representation-only conservation check on observed fresh-v2 initial narrator inputs. No inference, token-cost estimate or semantic qualification.",
+  "questions": 11,
+  "full_characters": 109508,
+  "decoded_characters": 84206,
+  "rows": [
+    {
+      "arm": "baseline",
+      "request_sha256": "1eb8c6b2508b3219768dd63a02fe842cc75d6177e11a643394768d5ef38e6275",
+      "source_bytes_unchanged": true,
+      "full_characters": 10394,
+      "decoded_characters": 7662,
+      "decoded_rows": 4
+    },
+    {
+      "arm": "baseline",
+      "request_sha256": "59192ce90e750aa96b9b39bf49698ee6a49b39017368b7ab839c330899fce138",
+      "source_bytes_unchanged": true,
+      "full_characters": 445,
+      "decoded_characters": 445,
+      "decoded_rows": 0
+    },
+    {
+      "arm": "baseline",
+      "request_sha256": "9af4a25d9b6bc30773175501b55610e4c5df58cc716f3a4b1904fa56a927eafa",
+      "source_bytes_unchanged": true,
+      "full_characters": 13740,
+      "decoded_characters": 10395,
+      "decoded_rows": 6
+    },
+    {
+      "arm": "baseline",
+      "request_sha256": "ace089f22c840a362621c739681f51b64e796f27eeefd0fbee0004637d1622c3",
+      "source_bytes_unchanged": true,
+      "full_characters": 12204,
+      "decoded_characters": 9472,
+      "decoded_rows": 4
+    },
+    {
+      "arm": "baseline",
+      "request_sha256": "bb3cdd6ce889be81bf4e4a9238f63480579bca74e974a9770d4afc66efb22e3c",
+      "source_bytes_unchanged": true,
+      "full_characters": 12169,
+      "decoded_characters": 9113,
+      "decoded_rows": 5
+    },
+    {
+      "arm": "proposed",
+      "request_sha256": "0651301ce88d3f59bf47613793c8be08439eb5f60d9d0b81b01dd6650c7a5865",
+      "source_bytes_unchanged": true,
+      "full_characters": 12355,
+      "decoded_characters": 9529,
+      "decoded_rows": 6
+    },
+    {
+      "arm": "proposed",
+      "request_sha256": "59192ce90e750aa96b9b39bf49698ee6a49b39017368b7ab839c330899fce138",
+      "source_bytes_unchanged": true,
+      "full_characters": 445,
+      "decoded_characters": 445,
+      "decoded_rows": 0
+    },
+    {
+      "arm": "proposed",
+      "request_sha256": "64e97bdca90b081e8ecbffa30c594fb09aa66a823196a54f8838e5552df97f72",
+      "source_bytes_unchanged": true,
+      "full_characters": 12306,
+      "decoded_characters": 9480,
+      "decoded_rows": 6
+    },
+    {
+      "arm": "proposed",
+      "request_sha256": "6c16be5d5533b5d338ad4bd8bccb9c766c8c56add01bcc0b497bd6874a84d489",
+      "source_bytes_unchanged": true,
+      "full_characters": 12305,
+      "decoded_characters": 9479,
+      "decoded_rows": 6
+    },
+    {
+      "arm": "proposed",
+      "request_sha256": "79fc3e1ff78a9bd720b109c0436b3c22474d247f6d9f894ba04709dd0330392b",
+      "source_bytes_unchanged": true,
+      "full_characters": 12334,
+      "decoded_characters": 9508,
+      "decoded_rows": 6
+    },
+    {
+      "arm": "proposed",
+      "request_sha256": "8363ef4acecc9781c8621c4c455419f5f6328cb9cb7db16c6eb4fd85f201d2b3",
+      "source_bytes_unchanged": true,
+      "full_characters": 10811,
+      "decoded_characters": 8678,
+      "decoded_rows": 4
+    }
+  ],
+  "character_reduction_fraction": 0.23105161266756769
+}

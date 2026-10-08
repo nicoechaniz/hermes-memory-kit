@@ -490,3 +490,45 @@ def test_frozen_revision_role_routes_correction_without_repeating_initial_model(
         nr.answer('initial','Did Jo get it?',evidence,body,SimpleNamespace(phase='recall'),
                     pending,path,chat,save,review_model='reviewer',revision_model='other')
     assert len(calls)==4
+
+
+def test_decoded_context_preserves_complete_nested_sources_and_provenance():
+    quote='I met Neri at the shed; you were not with me.\nNo extra handle was supplied.'
+    original='Human report; source mending; received 2026-09-12 through mobile:\n'+json.dumps(quote)
+    text='Previously retained memory 4, revision 1:\n'+json.dumps(original)+'\n\n'+original
+    evidence={4:dict(text=text,origin={'kind':'native','source':{'mode':'reported'}},support_status='current')}
+    full=nr.supplied_context('What did the human report?',evidence,{'receiving_body':'voice'})
+    lean=nr.supplied_context('What did the human report?',evidence,{'receiving_body':'voice'},'decoded')
+    row=lean['evidence'][0]
+    assert row['attributed_blocks']==full['evidence'][0]['attributed_blocks']
+    assert row['attributed_blocks'][0]['quotation']==quote
+    assert row['origin']==evidence[4]['origin'] and row['support_status']=='current'
+    assert row['source_text_sha256']==nr.hashlib.sha256(text.encode()).hexdigest()
+    assert 'text' not in row and len(json.dumps(lean))<len(json.dumps(full))
+    assert evidence[4]['text']==text  # Retrieval originals and proof checking stay unchanged.
+
+
+@pytest.mark.parametrize('kind',['prefix','suffix','nested-prefix','broken','single-newline','adjacent'])
+def test_decoded_context_keeps_every_mixed_or_malformed_source_byte(kind):
+    original='Human report; source encounter; received 2026-09-12 through mobile:\n'+json.dumps('Neri proposed a method.')
+    text={'prefix':'Extra significant fact.\n\n'+original,
+          'suffix':original+'\n\nExtra significant fact.',
+          'nested-prefix':'Previously retained memory 4, revision 1:\n'+json.dumps('Extra significant fact.\n\n'+original),
+          'broken':original+'\n\nHuman report; source later:\n"incomplete',
+          'single-newline':original+'\n'+original,
+          'adjacent':original+original}[kind]
+    assert not nr.complete_source_envelopes(text)
+    result=nr.supplied_context('What happened?',{4:{'text':text}},{'receiving_body':'voice'},'decoded')
+    assert result['evidence'][0]['text']==text
+
+
+def test_decoded_representation_cannot_reuse_full_context_checkpoint(tmp_path):
+    body={'receiving_body':'voice'};candidate=account('Delivery failed.',[1]);evidence={1:{'text':'Delivery failed.'}}
+    responses=iter([candidate,verdict('supported','Actual failure.',candidate,'Delivery failed.')]);calls=[]
+    def chat(model,messages,trace):calls.append(trace.phase);return next(responses)
+    save=lambda p,v:p.write_text(json.dumps(v));pending={};path=tmp_path/'pending.json'
+    nr.answer('model','What happened?',evidence,body,SimpleNamespace(phase='recall'),pending,path,chat,save)
+    before=path.read_bytes()
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('model','What happened?',evidence,body,SimpleNamespace(phase='recall'),pending,path,chat,save,source_representation='decoded')
+    assert path.read_bytes()==before and len(calls)==2

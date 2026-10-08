@@ -469,6 +469,11 @@ formation, unchanged embeddings and fresh receiving conditions. Only after it
 qualifies, apply the finite organization helper for three inspected passes,
 replay and source correction/dependent reconciliation; repeat recall each time.
 Qwen quota is currently unavailable and its comparison remains deferred.
+An [optional decoded-source preflight](../research/agent-memory-2026-10-06/pilots/2026-10-08-decoded-source-preflight.md)
+conserves full attributed source content while removing redundant encoded copies
+only for complete envelopes. Eleven observed packet checks reduce characters
+by 23.1%; no inference quality or dollar savings are claimed. Its default is off
+and a new equivalent receiving comparison is required before adoption.
 
 ### Stage 1 exit evidence and exact continuation
 
