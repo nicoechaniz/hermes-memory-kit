@@ -1,0 +1,50 @@
+{
+  "closing": {
+    "new_model_dispatches": 119,
+    "new_known_tokens": 1713932,
+    "new_by_provider": {
+      "deepseek": 27,
+      "openai-codex-native": 92
+    },
+    "reused_distinct_physical_calls": 16,
+    "reused_known_tokens": 191427,
+    "billed_usd": null,
+    "new_embeddings": 0
+  },
+  "by_role_distinct_actual_calls_including_reuse": {
+    "narrative_generation": {
+      "distinct_physical_calls": 45,
+      "known_tokens": 445762,
+      "summed_call_seconds": 1015.0382069619372,
+      "new_physical_calls": 30,
+      "reasoning_efforts": [
+        "low"
+      ],
+      "billed_usd": null
+    },
+    "narrative_review": {
+      "distinct_physical_calls": 67,
+      "known_tokens": 1040492,
+      "summed_call_seconds": 5973.7867780206725,
+      "new_physical_calls": 66,
+      "reasoning_efforts": [
+        "medium"
+      ],
+      "billed_usd": null
+    },
+    "narrative_revision": {
+      "distinct_physical_calls": 23,
+      "known_tokens": 419105,
+      "summed_call_seconds": 436.3324056463316,
+      "new_physical_calls": 23,
+      "reasoning_efforts": [
+        "low"
+      ],
+      "billed_usd": null
+    }
+  },
+  "new_selection_calls": 0,
+  "new_retrieval_calls": 0,
+  "new_consolidation_calls": 0,
+  "native_subscription_conversion_unknown": true
+}

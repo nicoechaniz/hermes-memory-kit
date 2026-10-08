@@ -56,20 +56,19 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: source-role and native temporal projections
-are preserved, but the final temporal-source comparison stopped after 13 answers
-with a date scope lost across coordinated assertion spans. The [bounded medium
-verification and joint-support correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-medium-verification-and-joint-support.md)
-now rejects that actual error and preserves the faithful control. The first
-strict response-shape failure remains recorded; local joint-source projection
-consumes both actual responses without changing words/verdicts or adding calls.
-Use Flash low narration, native Sol low correction and native Sol medium semantic
-verification for the next complete same-package closing qualification. Keep
-actual temporal/source-role evidence, receipt context and hidden outside grading.
-Ninety-eight focused tests pass. The two-case diagnostic is not full
-qualification. After that closing gate, finish required snapshot receiving,
-reusing valid consolidation/replay/reconciliation and exact actual response
-conditions. Old queues stay stopped; stage two remains open.
+Current continuation, 2026-10-08: [complete selected-profile closing
+qualification](../research/agent-memory-2026-10-06/pilots/2026-10-08-medium-profile-closing-qualification.md)
+passes both arms: 44 delivered answers, 589 independently assessed clauses and
+all 102 positive requirements. Flash low narration, native OpenAI Codex Sol low
+correction and native Sol medium verification retain actual source-role/time,
+receipt and joint-support evidence. The bounded medium decision and earlier
+failures remain preserved. This comparison makes 119 new calls/1,713,932 known
+tokens; revision cost remains substantial, not a provider-wide optimality claim.
+No new formation/retrieval/embedding work is claimed. Finish affected and full
+stage-two snapshot receiving under this qualified procedure, reusing verified
+unchanged control/replay states and actual exact raw requests. Preserve all valid
+consolidation/replay/reconciliation; old queues stay stopped. Stage two remains
+open. The 98 focused component tests remain valid.
 
 Preserved evidence: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation
