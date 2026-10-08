@@ -56,6 +56,19 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
+Stage-three continuation, 2026-10-08: the
+[portable-preservation qualification](../research/agent-memory-2026-10-06/pilots/2026-10-08-stage-three-preservation-qualification.md)
+passes the source-free fictional round trip, exact content/history recovery,
+current-head reconstruction, rollback and four bounded native lookups. Existing
+archive v1 is extended with an inert versioned sidecar; contract and actual HMK
+implementation pins stay separate. [Matrix PR #285](https://github.com/AlterMundi/daimon-matrix/pull/285)
+has successful relevant CI (73 archive tests and 41 exact-version contract tests),
+but independent review/merge and adoption are pending. **Stage three remains open.**
+Next executable action: finish that exact-head review, merge/adopt the manual tool,
+verify the preserved packet on merged main and record the exit. Stage four and
+native coexistence remain later; do not repeat consolidation or resume old queues.
+
+
 Current continuation, 2026-10-08: natural narration and stage two are qualified
 for the finite fictional corpus under the current reader-authority procedure.
 The [original closing](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-authority-closing-qualification.md)
