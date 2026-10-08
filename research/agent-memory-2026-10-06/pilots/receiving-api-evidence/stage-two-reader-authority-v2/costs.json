@@ -1,0 +1,101 @@
+{
+  "new_physical_calls": 347,
+  "new_known_tokens": 6429555,
+  "new_by_provider": {
+    "openai-codex-native": 244,
+    "deepseek": 103
+  },
+  "new_dispatch_states": {
+    "completed": 346,
+    "failed": 1
+  },
+  "unknown_usage_dispatches": 1,
+  "exact_reused_distinct_physical_calls": 72,
+  "reused_known_tokens": 341557,
+  "by_role": {
+    "narrative_revision": {
+      "distinct_consumed_physical_calls": 75,
+      "known_tokens": 1811783,
+      "new_physical_calls": 72,
+      "reasoning_efforts": [
+        "low"
+      ],
+      "summed_call_seconds": 1757.4307378111407
+    },
+    "recall": {
+      "distinct_consumed_physical_calls": 63,
+      "known_tokens": 187958,
+      "new_physical_calls": 11,
+      "reasoning_efforts": [
+        "low"
+      ],
+      "summed_call_seconds": 314.04553215485066
+    },
+    "narrative_review": {
+      "distinct_consumed_physical_calls": 173,
+      "known_tokens": 3428714,
+      "new_physical_calls": 164,
+      "reasoning_efforts": [
+        "medium"
+      ],
+      "summed_call_seconds": 19089.733879314736
+    },
+    "narrative_generation": {
+      "distinct_consumed_physical_calls": 107,
+      "known_tokens": 1342657,
+      "new_physical_calls": 99,
+      "reasoning_efforts": [
+        "low"
+      ],
+      "summed_call_seconds": 2591.36942882929
+    }
+  },
+  "new_organization_calls": 0,
+  "new_selection_calls": 0,
+  "billed_usd": null,
+  "native_subscription_conversion_unknown": true,
+  "new_known_provider_usage": {
+    "deepseek": {
+      "known_calls": 103,
+      "input_tokens": 670109,
+      "cached_input_tokens": 306432,
+      "uncached_input_tokens": 363677,
+      "output_tokens_including_reasoning": 550369,
+      "current_tariff_usd_range": [
+        0.38569224599999996,
+        0.7713844919999999
+      ],
+      "observed_invoice_usd": null
+    },
+    "openai-codex-native": {
+      "known_calls": 243,
+      "input_tokens": 4443332,
+      "cached_input_tokens": 1016192,
+      "uncached_input_tokens": 3427140,
+      "output_tokens_including_reasoning": 765745,
+      "cache_write_input_tokens": 0,
+      "api_standard_equivalent_usd": 14.6133492,
+      "actual_native_charge_usd": null
+    }
+  },
+  "tariff_reference_scope": "Current 2026-10-08 tariff reference only; excludes unknown timeout usage, embeddings and reused calls. Native uses subscription, not API billing. See observed-costs-and-daily-consolidation report.",
+  "embeddings": {
+    "new_measured_calls": 374,
+    "by_phase": {
+      "indexing": 15,
+      "recall": 359
+    },
+    "states": {
+      "completed": 374
+    },
+    "input_characters": 159561,
+    "texts": 416,
+    "summed_call_seconds": 93.93035391066223,
+    "tokens": null,
+    "billed_usd": null,
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3-embed-1b",
+    "index_space_changed": false,
+    "frozen_formation_preserved_before_reader": true
+  }
+}

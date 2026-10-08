@@ -1,0 +1,97 @@
+{
+  "scope": "Exact post-capture replay state/conditions/projection equality: qualified pass-three observations referenced, no new receiving dispatch.",
+  "qualified_answers": [
+    {
+      "index": 0,
+      "source_package_sha256": "b83b0f1caee911f73e9f04b9178e6ed295243c4df6a2bc7595fd49b5141b10b8"
+    },
+    {
+      "index": 1,
+      "source_package_sha256": "370f7166c143c524aa70ca8369146f4f8a5c5f617d505d15722591ce3f3f4ef0"
+    },
+    {
+      "index": 2,
+      "source_package_sha256": "836329465ce65ea0b21025bd33dcd6f72159b00fdec7313576bbbedcdd9e67d4"
+    },
+    {
+      "index": 3,
+      "source_package_sha256": "8b73b985fd6106efc5d978db37488860bd9c8748e5d40c2016cc326f50746aca"
+    },
+    {
+      "index": 4,
+      "source_package_sha256": "abc4ae87cf8f85c6c8b3ccdd73ee66096d61afe8d9f676f831b89256b583fb1f"
+    },
+    {
+      "index": 5,
+      "source_package_sha256": "f09a0a8129f06b6833de25bc82dfdf6a8ae34f7578c11de9be2dd5b5dfb7a37b"
+    },
+    {
+      "index": 6,
+      "source_package_sha256": "f5a78f4964ce073faf2303a6374b8b9b036a64a57e628e0eb7759335903279a3"
+    },
+    {
+      "index": 7,
+      "source_package_sha256": "26a9fffe96fd8b2786a15b527e17994abab3a02c997a6fde41aa27d82da680b2"
+    },
+    {
+      "index": 8,
+      "source_package_sha256": "25cd3b55d6c78aad6727d9b5ef34240f5411747a6d517830065f2b0c2ec7f145"
+    },
+    {
+      "index": 9,
+      "source_package_sha256": "681ed553d3159841028c85a4f6a952ee787e07ab20211eeec78221faa9aead4f"
+    },
+    {
+      "index": 10,
+      "source_package_sha256": "16693810779727758929c835424e0dc206dae2458d6d438598f60dc67f57503d"
+    },
+    {
+      "index": 11,
+      "source_package_sha256": "4eae41b89f684a68e5d91f626d0c79f8626eae0272414d7fda68984a4f95d344"
+    },
+    {
+      "index": 12,
+      "source_package_sha256": "c1c8efcd66d090d45031ad81f4a5aff9a3faead1e5c9135b87b3d9380d611791"
+    },
+    {
+      "index": 13,
+      "source_package_sha256": "9a62a1d4de996bbb2afb552fd2847200ba0522a98e92c20e3229ff114e6eb223"
+    },
+    {
+      "index": 14,
+      "source_package_sha256": "bc302af7bfee5ff97c86a1f23097a9f2e5847ae5b1662c58b6bff7aea309ae75"
+    },
+    {
+      "index": 15,
+      "source_package_sha256": "f2f789d9689b2b96b09ca96422de78c031e50817feef3453e062b9cf6f193cd5"
+    },
+    {
+      "index": 16,
+      "source_package_sha256": "a4835792909d586cf333466b22486cd0e5f2687cda16d3518e0ba00a2a944200"
+    },
+    {
+      "index": 17,
+      "source_package_sha256": "e6c7f89f443472169b46541e6fcf0daee41a9ba54f8706e2fc08f998eb645d4f"
+    },
+    {
+      "index": 18,
+      "source_package_sha256": "735fc5a7a7376eabf81943afb3e80985ee37b1e331f7928baf30d9a492e20da8"
+    },
+    {
+      "index": 19,
+      "source_package_sha256": "0599e92b43a24786bbcdb2513d2cff44c4504c03af914febf076db5df5cc5316"
+    },
+    {
+      "index": 20,
+      "source_package_sha256": "0940b7f2f2d99d05aac685f48ba61e2334dc31a79aff0080c8ce46b0c1cc247d"
+    },
+    {
+      "index": 21,
+      "source_package_sha256": "90b9049e5a2a7c690fa149530e9a0d0714cfafcaa967c23ad82064dd6c388a94"
+    }
+  ],
+  "canonical_sha256": "9f6215fee31c0de0c16500d4ccdb57b3f9f503298f7c44fd4bc1e272ccd3859b",
+  "new_calls": 0,
+  "new_embeddings": 0,
+  "conditions_equal": true
+}
