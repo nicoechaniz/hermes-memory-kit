@@ -1,0 +1,1497 @@
+{
+  "scope": "Actual native fictional three-pass organization, exact replay and literal correction/reconciliation; cold receiving qualification pending separately.",
+  "stage_two_qualified": false,
+  "three_passes_applied": true,
+  "account_applications": [
+    {
+      "pass_number": 1,
+      "account_phase": "tideatlas-project",
+      "chapter_id": 12,
+      "revision": 2,
+      "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 1,
+      "account_phase": "ren-account",
+      "chapter_id": 13,
+      "revision": 2,
+      "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 1,
+      "account_phase": "understanding",
+      "chapter_id": 21,
+      "revision": 1,
+      "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 1,
+      "account_phase": "project",
+      "chapter_id": 20,
+      "revision": 1,
+      "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 2,
+      "account_phase": "tideatlas-project",
+      "chapter_id": 12,
+      "revision": 3,
+      "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 2,
+      "account_phase": "ren-account",
+      "chapter_id": 13,
+      "revision": 3,
+      "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 2,
+      "account_phase": "understanding",
+      "chapter_id": 21,
+      "revision": 2,
+      "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 2,
+      "account_phase": "project",
+      "chapter_id": 20,
+      "revision": 2,
+      "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 3,
+      "account_phase": "tideatlas-project",
+      "chapter_id": 12,
+      "revision": 4,
+      "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 3,
+      "account_phase": "ren-account",
+      "chapter_id": 13,
+      "revision": 4,
+      "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 3,
+      "account_phase": "understanding",
+      "chapter_id": 21,
+      "revision": 3,
+      "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 3,
+      "account_phase": "project",
+      "chapter_id": 20,
+      "revision": 3,
+      "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 4,
+      "account_phase": "understanding",
+      "chapter_id": 21,
+      "revision": 4,
+      "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+      "rollback_verified": true,
+      "support_status": "current"
+    },
+    {
+      "pass_number": 4,
+      "account_phase": "project",
+      "chapter_id": 20,
+      "revision": 4,
+      "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+      "rollback_verified": true,
+      "support_status": "current"
+    }
+  ],
+  "exact_capture_replay": {
+    "events_replayed": 18,
+    "model_calls": 0,
+    "canonical_unchanged": true,
+    "ledger_unchanged": true,
+    "before": {
+      "books": {
+        "rows": 21,
+        "sha256": "50161bbe13159a824b812b8376ea6bcdd808a6ab352e90fe7bf3031e7544a57c"
+      },
+      "chapter_links": {
+        "rows": 20,
+        "sha256": "fc3add0b4e266a20b5dbba5299957e2c21326b59ebc7ea1daa677e050ae08382"
+      },
+      "chapter_revisions": {
+        "rows": 11,
+        "sha256": "0e770006c74e52a48f7199f90b7c76341b687fa746f8532397a3a16f0f04f795"
+      },
+      "chapters": {
+        "rows": 21,
+        "sha256": "3c245c606fe52b31e90336a8537b617be45db4b1fb9002e0eeaeb1a59dc82822"
+      },
+      "shelves": {
+        "rows": 11,
+        "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+      }
+    },
+    "ledger_before": {
+      "capture_events": "ff91731b716824cc2011a460c4c78c733faa9aa1aba2305ae0c1a6a6afc1aa12",
+      "capture_streams": "42f40c85d6446f1f89487d185da4cfa1dcf8da0cc59adfe30f63a9339d2821f6"
+    }
+  },
+  "literal_correction": {
+    "correction.json": {
+      "event": {
+        "stream_id": "fixture:organization:correction",
+        "sequence": 1,
+        "event_id": "fixture:field-trial-outcome-correction",
+        "source_version": "6e5d54e71135b812e44b53c73df02e9a68cd8f6315948b0567900575209157ba",
+        "content": "{\"id\": \"field-trial-correction\", \"channel\": \"human_message\", \"originating_body\": \"fixture:body:code\", \"received_at\": \"2026-10-05\", \"content\": \"I need to correct my May 3 HarborMesh field-trial report. The April 30 trial did not replay every buffered reading correctly: we recovered readings on two nodes, but the third node lost some buffered readings. My earlier description was too broad. The trial group was me and two human collaborators; I am not reporting the being's attendance at that trial. The May 2 wider-rollout pause remains as reported, and I still have no evidence of a production deployment. This correction is a later human report, not a new trial or a fresh measurement of the current system.\"}",
+        "metadata": {
+          "mode": "reported",
+          "source_instance": "fixture:body:code",
+          "evidence": [
+            "field-trial-correction"
+          ]
+        }
+      },
+      "decision": {
+        "outcome": "applied",
+        "reason": "An attributed later correction to a significant trial outcome.",
+        "selection_version": "fictional-exact-correction/v1",
+        "records": [
+          {
+            "key": "correction",
+            "operation": "update",
+            "chapter_id": 3,
+            "expected_revision": 1,
+            "title": "April 30 HarborMesh trial",
+            "raw": "Human report; source field-trial; received 2026-05-03 through fixture:body:code:\n\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"\n\nHuman report; source field-trial-correction; received 2026-10-05 through fixture:body:code:\n\"I need to correct my May 3 HarborMesh field-trial report. The April 30 trial did not replay every buffered reading correctly: we recovered readings on two nodes, but the third node lost some buffered readings. My earlier description was too broad. The trial group was me and two human collaborators; I am not reporting the being's attendance at that trial. The May 2 wider-rollout pause remains as reported, and I still have no evidence of a production deployment. This correction is a later human report, not a new trial or a fresh measurement of the current system.\"",
+            "engram_type": "episodic",
+            "metadata": {
+              "mode": "reported",
+              "correction_of": "mem:a302bb74-5147-4959-9abd-6f485cc1e3cd@1"
+            }
+          }
+        ],
+        "links": []
+      },
+      "receipt": {
+        "records": {
+          "correction": {
+            "chapter_id": 3,
+            "embedding_status": "pending",
+            "lexical_ready": true,
+            "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+            "revision": 2
+          }
+        },
+        "selection_version": "fictional-exact-correction/v1",
+        "event_key": "4650aa91c75ef4063079874252f61970c08a74405b9dc6509aac64846abd4e8e",
+        "state": "applied",
+        "processed_through": 1,
+        "reason": "An attributed later correction to a significant trial outcome."
+      },
+      "before": {
+        "books": {
+          "rows": 21,
+          "sha256": "50161bbe13159a824b812b8376ea6bcdd808a6ab352e90fe7bf3031e7544a57c"
+        },
+        "chapter_links": {
+          "rows": 20,
+          "sha256": "fc3add0b4e266a20b5dbba5299957e2c21326b59ebc7ea1daa677e050ae08382"
+        },
+        "chapter_revisions": {
+          "rows": 11,
+          "sha256": "0e770006c74e52a48f7199f90b7c76341b687fa746f8532397a3a16f0f04f795"
+        },
+        "chapters": {
+          "rows": 21,
+          "sha256": "3c245c606fe52b31e90336a8537b617be45db4b1fb9002e0eeaeb1a59dc82822"
+        },
+        "shelves": {
+          "rows": 11,
+          "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+        }
+      },
+      "after": {
+        "books": {
+          "rows": 21,
+          "sha256": "e53e942ade7a0930f4ba38eb7dfa791752a76cf1c9f2f45c155217375325f15e"
+        },
+        "chapter_links": {
+          "rows": 20,
+          "sha256": "fc3add0b4e266a20b5dbba5299957e2c21326b59ebc7ea1daa677e050ae08382"
+        },
+        "chapter_revisions": {
+          "rows": 12,
+          "sha256": "f37dea4b51287a713f7918b6c1c2278a65d61c4da0515aa0cefda06e85ed6c35"
+        },
+        "chapters": {
+          "rows": 21,
+          "sha256": "a63f7efcd130af48e0e52f3f37f1dbd205f5d04fa46ef00a2b9fb654238785c4"
+        },
+        "shelves": {
+          "rows": 11,
+          "sha256": "d2253533a2924baafc7cd503b2b654a8906de77fc092ce5c77729600ff237b43"
+        }
+      },
+      "restore_lookup": {
+        "query": "\"April 30 HarborMesh trial\"",
+        "expected_id": 3,
+        "retrieved_ids": [
+          2,
+          3,
+          20,
+          21
+        ],
+        "exact_source_bytes": true
+      },
+      "original_raw_prefix_retained": true,
+      "stale_dependents": [
+        {
+          "id": 20,
+          "status": "needs_reconciliation",
+          "checks": [
+            {
+              "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+              "revision": 1,
+              "status": "current"
+            },
+            {
+              "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+              "revision": 2,
+              "status": "current"
+            },
+            {
+              "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+              "revision": 1,
+              "status": "changed"
+            }
+          ],
+          "preview_refusal": "reconcile derived support before using it for consolidation"
+        },
+        {
+          "id": 21,
+          "status": "needs_reconciliation",
+          "checks": [
+            {
+              "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+              "revision": 3,
+              "status": "needs_reconciliation",
+              "dependencies": [
+                {
+                  "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+                  "revision": 1,
+                  "status": "changed"
+                }
+              ]
+            },
+            {
+              "record_uid": "d9ba6100-89fa-4fc9-b3f9-102155d39cb6",
+              "revision": 1,
+              "status": "current"
+            },
+            {
+              "record_uid": "3517fe7f-605d-422a-b96b-e89ff2a0564b",
+              "revision": 1,
+              "status": "current"
+            },
+            {
+              "record_uid": "2792ebd1-623c-4492-9b24-10042a0bfd35",
+              "revision": 1,
+              "status": "current"
+            }
+          ],
+          "preview_refusal": "reconcile derived support before using it for consolidation"
+        }
+      ],
+      "rollback_verified": true
+    },
+    "preservation.json": {
+      "originals": [
+        {
+          "id": 1,
+          "status": "unchanged"
+        },
+        {
+          "id": 2,
+          "status": "unchanged"
+        },
+        {
+          "id": 3,
+          "status": "original_revision_preserved",
+          "current_revision": 2
+        },
+        {
+          "id": 4,
+          "status": "unchanged"
+        },
+        {
+          "id": 5,
+          "status": "unchanged"
+        },
+        {
+          "id": 6,
+          "status": "unchanged"
+        },
+        {
+          "id": 7,
+          "status": "unchanged"
+        },
+        {
+          "id": 8,
+          "status": "unchanged"
+        },
+        {
+          "id": 9,
+          "status": "unchanged"
+        },
+        {
+          "id": 10,
+          "status": "unchanged"
+        },
+        {
+          "id": 11,
+          "status": "unchanged"
+        },
+        {
+          "id": 12,
+          "status": "original_revision_preserved",
+          "current_revision": 4
+        },
+        {
+          "id": 13,
+          "status": "original_revision_preserved",
+          "current_revision": 4
+        },
+        {
+          "id": 14,
+          "status": "unchanged"
+        },
+        {
+          "id": 15,
+          "status": "unchanged"
+        },
+        {
+          "id": 16,
+          "status": "unchanged"
+        },
+        {
+          "id": 17,
+          "status": "unchanged"
+        },
+        {
+          "id": 18,
+          "status": "unchanged"
+        },
+        {
+          "id": 19,
+          "status": "unchanged"
+        }
+      ],
+      "available_original_history_preserved": true,
+      "historical_rows": 12,
+      "current_raw_characters": 16093
+    }
+  },
+  "all_originals_and_available_prior_history_preserved": {
+    "originals": [
+      {
+        "id": 1,
+        "status": "unchanged"
+      },
+      {
+        "id": 2,
+        "status": "unchanged"
+      },
+      {
+        "id": 3,
+        "status": "original_revision_preserved",
+        "current_revision": 2
+      },
+      {
+        "id": 4,
+        "status": "unchanged"
+      },
+      {
+        "id": 5,
+        "status": "unchanged"
+      },
+      {
+        "id": 6,
+        "status": "unchanged"
+      },
+      {
+        "id": 7,
+        "status": "unchanged"
+      },
+      {
+        "id": 8,
+        "status": "unchanged"
+      },
+      {
+        "id": 9,
+        "status": "unchanged"
+      },
+      {
+        "id": 10,
+        "status": "unchanged"
+      },
+      {
+        "id": 11,
+        "status": "unchanged"
+      },
+      {
+        "id": 12,
+        "status": "original_revision_preserved",
+        "current_revision": 4
+      },
+      {
+        "id": 13,
+        "status": "original_revision_preserved",
+        "current_revision": 4
+      },
+      {
+        "id": 14,
+        "status": "unchanged"
+      },
+      {
+        "id": 15,
+        "status": "unchanged"
+      },
+      {
+        "id": 16,
+        "status": "unchanged"
+      },
+      {
+        "id": 17,
+        "status": "unchanged"
+      },
+      {
+        "id": 18,
+        "status": "unchanged"
+      },
+      {
+        "id": 19,
+        "status": "unchanged"
+      }
+    ],
+    "available_original_history_preserved": true,
+    "historical_rows": 14,
+    "current_raw_characters": 15512
+  },
+  "metrics": {
+    "pass-1-understanding": {
+      "chapters": 21,
+      "active_raw_characters": 15037,
+      "account_raw_characters": {
+        "12": 994,
+        "13": 1193,
+        "20": 1814,
+        "21": 2691
+      },
+      "history_rows": 3,
+      "database_bytes": 835584,
+      "rows": [
+        {
+          "id": 1,
+          "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+          "revision": 1,
+          "raw_chars": 624
+        },
+        {
+          "id": 2,
+          "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+          "revision": 2,
+          "raw_chars": 917
+        },
+        {
+          "id": 3,
+          "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+          "revision": 1,
+          "raw_chars": 430
+        },
+        {
+          "id": 4,
+          "record_uid": "9c42b201-1f05-423a-8b71-3b007a6794d5",
+          "revision": 1,
+          "raw_chars": 535
+        },
+        {
+          "id": 5,
+          "record_uid": "1fa51542-b87b-4ecf-a565-9d7fb82a0076",
+          "revision": 1,
+          "raw_chars": 383
+        },
+        {
+          "id": 6,
+          "record_uid": "c20c35e8-9dc8-4b73-995f-e9f2a1c31996",
+          "revision": 1,
+          "raw_chars": 429
+        },
+        {
+          "id": 7,
+          "record_uid": "59495c4d-bc27-431e-aef3-61656d95e1fe",
+          "revision": 1,
+          "raw_chars": 667
+        },
+        {
+          "id": 8,
+          "record_uid": "432b3ddc-1faf-45f4-9e94-8d1e609d3c0c",
+          "revision": 1,
+          "raw_chars": 420
+        },
+        {
+          "id": 9,
+          "record_uid": "d9ba6100-89fa-4fc9-b3f9-102155d39cb6",
+          "revision": 1,
+          "raw_chars": 510
+        },
+        {
+          "id": 10,
+          "record_uid": "3517fe7f-605d-422a-b96b-e89ff2a0564b",
+          "revision": 1,
+          "raw_chars": 570
+        },
+        {
+          "id": 11,
+          "record_uid": "2792ebd1-623c-4492-9b24-10042a0bfd35",
+          "revision": 1,
+          "raw_chars": 839
+        },
+        {
+          "id": 12,
+          "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+          "revision": 2,
+          "raw_chars": 994
+        },
+        {
+          "id": 13,
+          "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+          "revision": 2,
+          "raw_chars": 1193
+        },
+        {
+          "id": 14,
+          "record_uid": "fa15f032-b359-4da1-8f6b-afefc9e955d4",
+          "revision": 1,
+          "raw_chars": 419
+        },
+        {
+          "id": 15,
+          "record_uid": "79427a22-dd4a-49a9-a211-936fdc1d7cc6",
+          "revision": 1,
+          "raw_chars": 672
+        },
+        {
+          "id": 16,
+          "record_uid": "e87bf110-8106-41d8-8c72-0dbb0bf2cc67",
+          "revision": 1,
+          "raw_chars": 456
+        },
+        {
+          "id": 17,
+          "record_uid": "7f35653a-7574-47f1-9335-64489282989b",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 18,
+          "record_uid": "47515e0d-5ae9-4565-ad9f-73ad9f7118a3",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 19,
+          "record_uid": "c646ff6f-3762-489b-976f-56e4faac1436",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 20,
+          "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+          "revision": 1,
+          "raw_chars": 1814
+        },
+        {
+          "id": 21,
+          "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+          "revision": 1,
+          "raw_chars": 2691
+        }
+      ]
+    },
+    "pass-2-understanding": {
+      "chapters": 21,
+      "active_raw_characters": 15557,
+      "account_raw_characters": {
+        "12": 935,
+        "13": 1285,
+        "20": 1756,
+        "21": 3236
+      },
+      "history_rows": 7,
+      "database_bytes": 868352,
+      "rows": [
+        {
+          "id": 1,
+          "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+          "revision": 1,
+          "raw_chars": 624
+        },
+        {
+          "id": 2,
+          "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+          "revision": 2,
+          "raw_chars": 917
+        },
+        {
+          "id": 3,
+          "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+          "revision": 1,
+          "raw_chars": 430
+        },
+        {
+          "id": 4,
+          "record_uid": "9c42b201-1f05-423a-8b71-3b007a6794d5",
+          "revision": 1,
+          "raw_chars": 535
+        },
+        {
+          "id": 5,
+          "record_uid": "1fa51542-b87b-4ecf-a565-9d7fb82a0076",
+          "revision": 1,
+          "raw_chars": 383
+        },
+        {
+          "id": 6,
+          "record_uid": "c20c35e8-9dc8-4b73-995f-e9f2a1c31996",
+          "revision": 1,
+          "raw_chars": 429
+        },
+        {
+          "id": 7,
+          "record_uid": "59495c4d-bc27-431e-aef3-61656d95e1fe",
+          "revision": 1,
+          "raw_chars": 667
+        },
+        {
+          "id": 8,
+          "record_uid": "432b3ddc-1faf-45f4-9e94-8d1e609d3c0c",
+          "revision": 1,
+          "raw_chars": 420
+        },
+        {
+          "id": 9,
+          "record_uid": "d9ba6100-89fa-4fc9-b3f9-102155d39cb6",
+          "revision": 1,
+          "raw_chars": 510
+        },
+        {
+          "id": 10,
+          "record_uid": "3517fe7f-605d-422a-b96b-e89ff2a0564b",
+          "revision": 1,
+          "raw_chars": 570
+        },
+        {
+          "id": 11,
+          "record_uid": "2792ebd1-623c-4492-9b24-10042a0bfd35",
+          "revision": 1,
+          "raw_chars": 839
+        },
+        {
+          "id": 12,
+          "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+          "revision": 3,
+          "raw_chars": 935
+        },
+        {
+          "id": 13,
+          "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+          "revision": 3,
+          "raw_chars": 1285
+        },
+        {
+          "id": 14,
+          "record_uid": "fa15f032-b359-4da1-8f6b-afefc9e955d4",
+          "revision": 1,
+          "raw_chars": 419
+        },
+        {
+          "id": 15,
+          "record_uid": "79427a22-dd4a-49a9-a211-936fdc1d7cc6",
+          "revision": 1,
+          "raw_chars": 672
+        },
+        {
+          "id": 16,
+          "record_uid": "e87bf110-8106-41d8-8c72-0dbb0bf2cc67",
+          "revision": 1,
+          "raw_chars": 456
+        },
+        {
+          "id": 17,
+          "record_uid": "7f35653a-7574-47f1-9335-64489282989b",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 18,
+          "record_uid": "47515e0d-5ae9-4565-ad9f-73ad9f7118a3",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 19,
+          "record_uid": "c646ff6f-3762-489b-976f-56e4faac1436",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 20,
+          "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+          "revision": 2,
+          "raw_chars": 1756
+        },
+        {
+          "id": 21,
+          "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+          "revision": 2,
+          "raw_chars": 3236
+        }
+      ]
+    },
+    "pass-3-understanding": {
+      "chapters": 21,
+      "active_raw_characters": 15430,
+      "account_raw_characters": {
+        "12": 935,
+        "13": 1263,
+        "20": 1695,
+        "21": 3192
+      },
+      "history_rows": 11,
+      "database_bytes": 913408,
+      "rows": [
+        {
+          "id": 1,
+          "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+          "revision": 1,
+          "raw_chars": 624
+        },
+        {
+          "id": 2,
+          "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+          "revision": 2,
+          "raw_chars": 917
+        },
+        {
+          "id": 3,
+          "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+          "revision": 1,
+          "raw_chars": 430
+        },
+        {
+          "id": 4,
+          "record_uid": "9c42b201-1f05-423a-8b71-3b007a6794d5",
+          "revision": 1,
+          "raw_chars": 535
+        },
+        {
+          "id": 5,
+          "record_uid": "1fa51542-b87b-4ecf-a565-9d7fb82a0076",
+          "revision": 1,
+          "raw_chars": 383
+        },
+        {
+          "id": 6,
+          "record_uid": "c20c35e8-9dc8-4b73-995f-e9f2a1c31996",
+          "revision": 1,
+          "raw_chars": 429
+        },
+        {
+          "id": 7,
+          "record_uid": "59495c4d-bc27-431e-aef3-61656d95e1fe",
+          "revision": 1,
+          "raw_chars": 667
+        },
+        {
+          "id": 8,
+          "record_uid": "432b3ddc-1faf-45f4-9e94-8d1e609d3c0c",
+          "revision": 1,
+          "raw_chars": 420
+        },
+        {
+          "id": 9,
+          "record_uid": "d9ba6100-89fa-4fc9-b3f9-102155d39cb6",
+          "revision": 1,
+          "raw_chars": 510
+        },
+        {
+          "id": 10,
+          "record_uid": "3517fe7f-605d-422a-b96b-e89ff2a0564b",
+          "revision": 1,
+          "raw_chars": 570
+        },
+        {
+          "id": 11,
+          "record_uid": "2792ebd1-623c-4492-9b24-10042a0bfd35",
+          "revision": 1,
+          "raw_chars": 839
+        },
+        {
+          "id": 12,
+          "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+          "revision": 4,
+          "raw_chars": 935
+        },
+        {
+          "id": 13,
+          "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+          "revision": 4,
+          "raw_chars": 1263
+        },
+        {
+          "id": 14,
+          "record_uid": "fa15f032-b359-4da1-8f6b-afefc9e955d4",
+          "revision": 1,
+          "raw_chars": 419
+        },
+        {
+          "id": 15,
+          "record_uid": "79427a22-dd4a-49a9-a211-936fdc1d7cc6",
+          "revision": 1,
+          "raw_chars": 672
+        },
+        {
+          "id": 16,
+          "record_uid": "e87bf110-8106-41d8-8c72-0dbb0bf2cc67",
+          "revision": 1,
+          "raw_chars": 456
+        },
+        {
+          "id": 17,
+          "record_uid": "7f35653a-7574-47f1-9335-64489282989b",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 18,
+          "record_uid": "47515e0d-5ae9-4565-ad9f-73ad9f7118a3",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 19,
+          "record_uid": "c646ff6f-3762-489b-976f-56e4faac1436",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 20,
+          "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+          "revision": 3,
+          "raw_chars": 1695
+        },
+        {
+          "id": 21,
+          "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+          "revision": 3,
+          "raw_chars": 3192
+        }
+      ]
+    },
+    "replay": {
+      "chapters": 21,
+      "active_raw_characters": 15430,
+      "account_raw_characters": {
+        "12": 935,
+        "13": 1263,
+        "20": 1695,
+        "21": 3192
+      },
+      "history_rows": 11,
+      "database_bytes": 913408,
+      "rows": [
+        {
+          "id": 1,
+          "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+          "revision": 1,
+          "raw_chars": 624
+        },
+        {
+          "id": 2,
+          "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+          "revision": 2,
+          "raw_chars": 917
+        },
+        {
+          "id": 3,
+          "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+          "revision": 1,
+          "raw_chars": 430
+        },
+        {
+          "id": 4,
+          "record_uid": "9c42b201-1f05-423a-8b71-3b007a6794d5",
+          "revision": 1,
+          "raw_chars": 535
+        },
+        {
+          "id": 5,
+          "record_uid": "1fa51542-b87b-4ecf-a565-9d7fb82a0076",
+          "revision": 1,
+          "raw_chars": 383
+        },
+        {
+          "id": 6,
+          "record_uid": "c20c35e8-9dc8-4b73-995f-e9f2a1c31996",
+          "revision": 1,
+          "raw_chars": 429
+        },
+        {
+          "id": 7,
+          "record_uid": "59495c4d-bc27-431e-aef3-61656d95e1fe",
+          "revision": 1,
+          "raw_chars": 667
+        },
+        {
+          "id": 8,
+          "record_uid": "432b3ddc-1faf-45f4-9e94-8d1e609d3c0c",
+          "revision": 1,
+          "raw_chars": 420
+        },
+        {
+          "id": 9,
+          "record_uid": "d9ba6100-89fa-4fc9-b3f9-102155d39cb6",
+          "revision": 1,
+          "raw_chars": 510
+        },
+        {
+          "id": 10,
+          "record_uid": "3517fe7f-605d-422a-b96b-e89ff2a0564b",
+          "revision": 1,
+          "raw_chars": 570
+        },
+        {
+          "id": 11,
+          "record_uid": "2792ebd1-623c-4492-9b24-10042a0bfd35",
+          "revision": 1,
+          "raw_chars": 839
+        },
+        {
+          "id": 12,
+          "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+          "revision": 4,
+          "raw_chars": 935
+        },
+        {
+          "id": 13,
+          "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+          "revision": 4,
+          "raw_chars": 1263
+        },
+        {
+          "id": 14,
+          "record_uid": "fa15f032-b359-4da1-8f6b-afefc9e955d4",
+          "revision": 1,
+          "raw_chars": 419
+        },
+        {
+          "id": 15,
+          "record_uid": "79427a22-dd4a-49a9-a211-936fdc1d7cc6",
+          "revision": 1,
+          "raw_chars": 672
+        },
+        {
+          "id": 16,
+          "record_uid": "e87bf110-8106-41d8-8c72-0dbb0bf2cc67",
+          "revision": 1,
+          "raw_chars": 456
+        },
+        {
+          "id": 17,
+          "record_uid": "7f35653a-7574-47f1-9335-64489282989b",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 18,
+          "record_uid": "47515e0d-5ae9-4565-ad9f-73ad9f7118a3",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 19,
+          "record_uid": "c646ff6f-3762-489b-976f-56e4faac1436",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 20,
+          "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+          "revision": 3,
+          "raw_chars": 1695
+        },
+        {
+          "id": 21,
+          "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+          "revision": 3,
+          "raw_chars": 3192
+        }
+      ]
+    },
+    "correction": {
+      "chapters": 21,
+      "active_raw_characters": 16093,
+      "account_raw_characters": {
+        "12": 935,
+        "13": 1263,
+        "20": 1695,
+        "21": 3192
+      },
+      "history_rows": 12,
+      "database_bytes": 913408,
+      "rows": [
+        {
+          "id": 1,
+          "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+          "revision": 1,
+          "raw_chars": 624
+        },
+        {
+          "id": 2,
+          "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+          "revision": 2,
+          "raw_chars": 917
+        },
+        {
+          "id": 3,
+          "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+          "revision": 2,
+          "raw_chars": 1093
+        },
+        {
+          "id": 4,
+          "record_uid": "9c42b201-1f05-423a-8b71-3b007a6794d5",
+          "revision": 1,
+          "raw_chars": 535
+        },
+        {
+          "id": 5,
+          "record_uid": "1fa51542-b87b-4ecf-a565-9d7fb82a0076",
+          "revision": 1,
+          "raw_chars": 383
+        },
+        {
+          "id": 6,
+          "record_uid": "c20c35e8-9dc8-4b73-995f-e9f2a1c31996",
+          "revision": 1,
+          "raw_chars": 429
+        },
+        {
+          "id": 7,
+          "record_uid": "59495c4d-bc27-431e-aef3-61656d95e1fe",
+          "revision": 1,
+          "raw_chars": 667
+        },
+        {
+          "id": 8,
+          "record_uid": "432b3ddc-1faf-45f4-9e94-8d1e609d3c0c",
+          "revision": 1,
+          "raw_chars": 420
+        },
+        {
+          "id": 9,
+          "record_uid": "d9ba6100-89fa-4fc9-b3f9-102155d39cb6",
+          "revision": 1,
+          "raw_chars": 510
+        },
+        {
+          "id": 10,
+          "record_uid": "3517fe7f-605d-422a-b96b-e89ff2a0564b",
+          "revision": 1,
+          "raw_chars": 570
+        },
+        {
+          "id": 11,
+          "record_uid": "2792ebd1-623c-4492-9b24-10042a0bfd35",
+          "revision": 1,
+          "raw_chars": 839
+        },
+        {
+          "id": 12,
+          "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+          "revision": 4,
+          "raw_chars": 935
+        },
+        {
+          "id": 13,
+          "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+          "revision": 4,
+          "raw_chars": 1263
+        },
+        {
+          "id": 14,
+          "record_uid": "fa15f032-b359-4da1-8f6b-afefc9e955d4",
+          "revision": 1,
+          "raw_chars": 419
+        },
+        {
+          "id": 15,
+          "record_uid": "79427a22-dd4a-49a9-a211-936fdc1d7cc6",
+          "revision": 1,
+          "raw_chars": 672
+        },
+        {
+          "id": 16,
+          "record_uid": "e87bf110-8106-41d8-8c72-0dbb0bf2cc67",
+          "revision": 1,
+          "raw_chars": 456
+        },
+        {
+          "id": 17,
+          "record_uid": "7f35653a-7574-47f1-9335-64489282989b",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 18,
+          "record_uid": "47515e0d-5ae9-4565-ad9f-73ad9f7118a3",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 19,
+          "record_uid": "c646ff6f-3762-489b-976f-56e4faac1436",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 20,
+          "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+          "revision": 3,
+          "raw_chars": 1695
+        },
+        {
+          "id": 21,
+          "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+          "revision": 3,
+          "raw_chars": 3192
+        }
+      ]
+    },
+    "correction-project": {
+      "chapters": 21,
+      "active_raw_characters": 16629,
+      "account_raw_characters": {
+        "12": 935,
+        "13": 1263,
+        "20": 2231,
+        "21": 3192
+      },
+      "history_rows": 13,
+      "database_bytes": 925696,
+      "rows": [
+        {
+          "id": 1,
+          "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+          "revision": 1,
+          "raw_chars": 624
+        },
+        {
+          "id": 2,
+          "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+          "revision": 2,
+          "raw_chars": 917
+        },
+        {
+          "id": 3,
+          "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+          "revision": 2,
+          "raw_chars": 1093
+        },
+        {
+          "id": 4,
+          "record_uid": "9c42b201-1f05-423a-8b71-3b007a6794d5",
+          "revision": 1,
+          "raw_chars": 535
+        },
+        {
+          "id": 5,
+          "record_uid": "1fa51542-b87b-4ecf-a565-9d7fb82a0076",
+          "revision": 1,
+          "raw_chars": 383
+        },
+        {
+          "id": 6,
+          "record_uid": "c20c35e8-9dc8-4b73-995f-e9f2a1c31996",
+          "revision": 1,
+          "raw_chars": 429
+        },
+        {
+          "id": 7,
+          "record_uid": "59495c4d-bc27-431e-aef3-61656d95e1fe",
+          "revision": 1,
+          "raw_chars": 667
+        },
+        {
+          "id": 8,
+          "record_uid": "432b3ddc-1faf-45f4-9e94-8d1e609d3c0c",
+          "revision": 1,
+          "raw_chars": 420
+        },
+        {
+          "id": 9,
+          "record_uid": "d9ba6100-89fa-4fc9-b3f9-102155d39cb6",
+          "revision": 1,
+          "raw_chars": 510
+        },
+        {
+          "id": 10,
+          "record_uid": "3517fe7f-605d-422a-b96b-e89ff2a0564b",
+          "revision": 1,
+          "raw_chars": 570
+        },
+        {
+          "id": 11,
+          "record_uid": "2792ebd1-623c-4492-9b24-10042a0bfd35",
+          "revision": 1,
+          "raw_chars": 839
+        },
+        {
+          "id": 12,
+          "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+          "revision": 4,
+          "raw_chars": 935
+        },
+        {
+          "id": 13,
+          "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+          "revision": 4,
+          "raw_chars": 1263
+        },
+        {
+          "id": 14,
+          "record_uid": "fa15f032-b359-4da1-8f6b-afefc9e955d4",
+          "revision": 1,
+          "raw_chars": 419
+        },
+        {
+          "id": 15,
+          "record_uid": "79427a22-dd4a-49a9-a211-936fdc1d7cc6",
+          "revision": 1,
+          "raw_chars": 672
+        },
+        {
+          "id": 16,
+          "record_uid": "e87bf110-8106-41d8-8c72-0dbb0bf2cc67",
+          "revision": 1,
+          "raw_chars": 456
+        },
+        {
+          "id": 17,
+          "record_uid": "7f35653a-7574-47f1-9335-64489282989b",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 18,
+          "record_uid": "47515e0d-5ae9-4565-ad9f-73ad9f7118a3",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 19,
+          "record_uid": "c646ff6f-3762-489b-976f-56e4faac1436",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 20,
+          "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+          "revision": 4,
+          "raw_chars": 2231
+        },
+        {
+          "id": 21,
+          "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+          "revision": 3,
+          "raw_chars": 3192
+        }
+      ]
+    },
+    "correction-understanding": {
+      "chapters": 21,
+      "active_raw_characters": 15512,
+      "account_raw_characters": {
+        "12": 935,
+        "13": 1263,
+        "20": 2231,
+        "21": 2075
+      },
+      "history_rows": 14,
+      "database_bytes": 925696,
+      "rows": [
+        {
+          "id": 1,
+          "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+          "revision": 1,
+          "raw_chars": 624
+        },
+        {
+          "id": 2,
+          "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+          "revision": 2,
+          "raw_chars": 917
+        },
+        {
+          "id": 3,
+          "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+          "revision": 2,
+          "raw_chars": 1093
+        },
+        {
+          "id": 4,
+          "record_uid": "9c42b201-1f05-423a-8b71-3b007a6794d5",
+          "revision": 1,
+          "raw_chars": 535
+        },
+        {
+          "id": 5,
+          "record_uid": "1fa51542-b87b-4ecf-a565-9d7fb82a0076",
+          "revision": 1,
+          "raw_chars": 383
+        },
+        {
+          "id": 6,
+          "record_uid": "c20c35e8-9dc8-4b73-995f-e9f2a1c31996",
+          "revision": 1,
+          "raw_chars": 429
+        },
+        {
+          "id": 7,
+          "record_uid": "59495c4d-bc27-431e-aef3-61656d95e1fe",
+          "revision": 1,
+          "raw_chars": 667
+        },
+        {
+          "id": 8,
+          "record_uid": "432b3ddc-1faf-45f4-9e94-8d1e609d3c0c",
+          "revision": 1,
+          "raw_chars": 420
+        },
+        {
+          "id": 9,
+          "record_uid": "d9ba6100-89fa-4fc9-b3f9-102155d39cb6",
+          "revision": 1,
+          "raw_chars": 510
+        },
+        {
+          "id": 10,
+          "record_uid": "3517fe7f-605d-422a-b96b-e89ff2a0564b",
+          "revision": 1,
+          "raw_chars": 570
+        },
+        {
+          "id": 11,
+          "record_uid": "2792ebd1-623c-4492-9b24-10042a0bfd35",
+          "revision": 1,
+          "raw_chars": 839
+        },
+        {
+          "id": 12,
+          "record_uid": "b62aebe2-f7bc-49a3-9096-dbf74dd32269",
+          "revision": 4,
+          "raw_chars": 935
+        },
+        {
+          "id": 13,
+          "record_uid": "b74e1733-3a54-4d7b-a0ba-14a7ae2ddb34",
+          "revision": 4,
+          "raw_chars": 1263
+        },
+        {
+          "id": 14,
+          "record_uid": "fa15f032-b359-4da1-8f6b-afefc9e955d4",
+          "revision": 1,
+          "raw_chars": 419
+        },
+        {
+          "id": 15,
+          "record_uid": "79427a22-dd4a-49a9-a211-936fdc1d7cc6",
+          "revision": 1,
+          "raw_chars": 672
+        },
+        {
+          "id": 16,
+          "record_uid": "e87bf110-8106-41d8-8c72-0dbb0bf2cc67",
+          "revision": 1,
+          "raw_chars": 456
+        },
+        {
+          "id": 17,
+          "record_uid": "7f35653a-7574-47f1-9335-64489282989b",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 18,
+          "record_uid": "47515e0d-5ae9-4565-ad9f-73ad9f7118a3",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 19,
+          "record_uid": "c646ff6f-3762-489b-976f-56e4faac1436",
+          "revision": 1,
+          "raw_chars": 158
+        },
+        {
+          "id": 20,
+          "record_uid": "8edeb5bd-aec3-4f40-be00-64ca76e6ba07",
+          "revision": 4,
+          "raw_chars": 2231
+        },
+        {
+          "id": 21,
+          "record_uid": "4475022c-3828-4b37-91d5-32c783762c21",
+          "revision": 4,
+          "raw_chars": 2075
+        }
+      ]
+    }
+  },
+  "compactness": {
+    "soft_250_word_target_met": false,
+    "prior_chars": 3192,
+    "candidate_chars": 2075,
+    "prior_words": 412,
+    "candidate_words": 251,
+    "notes": "Single bounded compaction produces a shorter derived projection; full chronology remains in native linked supports. Net database/history/storage cost is separate."
+  }
+}
