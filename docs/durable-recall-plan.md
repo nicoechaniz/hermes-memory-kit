@@ -56,15 +56,18 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: the [bounded source-referent and world-pointer correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-report-referents-and-world-pointers.md)
-now detects two observed accepted ownership errors while preserving four faithful
-controls. It also removes unmatched prose punctuation from URLs, eliminating a
-false revision trigger. Six isolated native Sol-low calls, 47 inspected claims
-and 83 focused tests support this correction; they are not full qualification.
-Requalify the complete closing packages with exact-request evidence reuse, then
-finish the required post-transformation receiving gates. Keep Flash/current
-embeddings and all valid consolidation/replay/reconciliation evidence. Stage two
-remains open, and old queues remain stopped.
+Current continuation, 2026-10-08: [source-referent/world-pointer correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-report-referents-and-world-pointers.md)
+preserves four faithful attribution controls and detects two actual errors. Its
+closing comparison stopped after 13 answers/188 claims with one unsupported
+temporal qualifier. The [temporal-evidence correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-temporal-evidence-not-receipt-chronology.md)
+now retains native event timestamps/nulls already delivered by HMK, distinguishing
+receipt order from occurrence order without dropping quoted event timing. Five
+bounded native reviews/81 inspected claims and 85 focused tests support this change;
+complete receiving qualification is still pending. Use this source evidence in
+a new complete closing comparison, then finish remaining per-transformation
+receiving gates. Keep Flash/current embeddings and valid consolidation/replay/
+reconciliation. Reuse eligible actual responses and independent outside grading;
+old queues stay stopped. Stage two remains open.
 
 Preserved evidence: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation

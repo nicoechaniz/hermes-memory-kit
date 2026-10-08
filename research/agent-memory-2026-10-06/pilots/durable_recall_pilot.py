@@ -155,8 +155,10 @@ def grounded_answer(value, candidates, receiving_body=None):
     return value
 
 
-def answer_evidence(packs, expanded):
+def answer_evidence(packs, expanded, include_temporal_metadata=False):
     """Only actually supplied text; expansion supersedes an incomplete preview."""
+    if type(include_temporal_metadata) is not bool:
+        raise ValueError('temporal metadata requires an explicit boolean option')
     available = {}
     for pack in packs:
         for item in pack['items']:
@@ -176,6 +178,26 @@ def answer_evidence(packs, expanded):
         available[row['id']] = dict(id=row['id'], text=row.get('raw', row.get('spr', '')),
             origin=row.get('origin'), support_status=row.get('support_status'),
             support_checks=row.get('support_checks'), representation='expanded_record')
+    if include_temporal_metadata:
+        # Carry actual native fields rather than deriving an occurrence date
+        # from a receipt header. A null timestamp is not proof that quoted
+        # content lacks all event timing or that two events are unordered.
+        originals = {}
+        for pack in packs:
+            for item in pack['items']:
+                for row in [item, *item.get('neighbors', [])]:
+                    originals[row['id']] = row
+        for row in expanded:
+            for neighbor in row.get('neighbors', []):
+                originals.setdefault(neighbor['id'], neighbor)
+        originals.update({row['id']: row for row in expanded})
+        for cid, item in available.items():
+            row = originals[cid]
+            if 'event_ts' in row:
+                item['temporal_metadata'] = dict(native_event_ts=row['event_ts'],
+                    receipt_headers='Dates labelled received describe receipt, not event occurrence.',
+                    occurrence_evidence='Use original event-specific quotation or an explicitly attributed native event timestamp; null is not an inferred time.',
+                    ordering='Receipt order does not establish event order. Earlier/later, before/after and chronology need support for that event relation, separately from the method, actor or outcome.')
     return available
 
 

@@ -1,0 +1,28 @@
+{
+  "stopped_closing": {
+    "new_model_dispatches": 37,
+    "new_known_tokens": 562778,
+    "new_by_provider": {
+      "openai-codex-native": 24,
+      "deepseek": 13
+    },
+    "reused_distinct_physical_calls": 6,
+    "reused_known_tokens": 67134,
+    "new_embeddings": 0,
+    "billed_usd": null,
+    "native_subscription_conversion_unknown": true
+  },
+  "bounded_temporal_diagnostic": {
+    "new_model_dispatches": 5,
+    "new_known_tokens": 76934,
+    "new_by_provider": {
+      "openai-codex-native": 5
+    },
+    "reused_distinct_physical_calls": 0,
+    "reused_known_tokens": 0,
+    "new_embeddings": 0,
+    "billed_usd": null,
+    "native_subscription_conversion_unknown": true
+  },
+  "original_formation_and_organization": "Preserved and reported separately; no valid consolidation repeated."
+}
