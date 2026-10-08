@@ -1,0 +1,18 @@
+{
+  "applied": false,
+  "schema_valid": true,
+  "raw_and_reason_read": true,
+  "issues": [
+    {
+      "kind": "ownership_ambiguity",
+      "reason": "Our known code-body renderer contribution is recast as the source's code body/group; no curating same-being membership is provided to the organizer, unlike the qualified receiver."
+    },
+    {
+      "kind": "compactness_not_demonstrated",
+      "previous_raw_characters": 388,
+      "proposed_raw_characters": 961,
+      "reason": "Long repeated source-event scaffolding is not a compact current account. Original episode stays preserved and linked; projection should retain role, recognition, dated outcome and pointers without recopying every span."
+    }
+  ],
+  "next_action": "Provide explicitly scoped fictional same-being context and clarify compact account scope; preserve this proposal and calls; inspect any bounded correction before application."
+}

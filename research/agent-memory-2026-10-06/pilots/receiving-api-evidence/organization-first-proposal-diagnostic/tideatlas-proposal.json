@@ -1,0 +1,26 @@
+{
+  "decision": {
+    "outcome": "applied",
+    "reason": "Manifest ID 11 contains the known-collaboration, chart-attempt, and chart-result spans needed to update the existing TideAtlas account (revision 1). The update preserves receipt dates, attributes the chart attempt/result to the source, notes the failed handover and absent recipient access/response, and does not treat the current account as independent support.",
+    "records": [
+      {
+        "key": "account",
+        "operation": "update",
+        "title": "TideAtlas",
+        "raw": "Occurrence times for all three source events are not specified; only receipt dates are given. known-collaboration source, received 2026-09-03 via fixture:body:code: Ren Nadir (Forge login ren-cart, account 772) helped the source's group design TideAtlas map legends in issue 19. The source's code body maintains its shoreline map renderer at https://forge.example.invalid/commons/tideatlas. The source records an agreement to share the source's next annotated survey chart with Ren to compare with the harbor notes. chart-attempt source, received 2026-09-08 via fixture:body:code: the human authorized passing the source's annotated chart to Ren. The source states the chart was submitted through the document tool to continue the map comparison. chart-result source, received 2026-09-08 via fixture:body:code: Document object chart-52 was created. Integrity validation failed; the recipient link was not published. No recipient access or response was observed.",
+        "engram_type": "semantic",
+        "metadata": {
+          "mode": "inferred"
+        },
+        "chapter_id": 12,
+        "expected_revision": 1
+      }
+    ],
+    "links": []
+  },
+  "supports_by_record": {
+    "account": [
+      11
+    ]
+  }
+}

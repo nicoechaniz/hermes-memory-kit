@@ -1,0 +1,11 @@
+{
+  "physical_model_attempts": 3,
+  "completed": 3,
+  "known_usage": {
+    "prompt_tokens": 7663,
+    "completion_tokens": 19505,
+    "total_tokens": 27168
+  },
+  "billed_usd": null,
+  "local_unsupported_phase_dispatches": 0
+}

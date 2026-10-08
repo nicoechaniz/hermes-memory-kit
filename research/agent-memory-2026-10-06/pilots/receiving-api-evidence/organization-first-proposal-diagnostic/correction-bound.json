@@ -1,0 +1,7 @@
+{
+  "max_correction_dispatches": 1,
+  "input_sha256": "cef8085b2288890a177723b9aff67a1ebfb6b1acee25a3073fab3a5d53883eef",
+  "rejected_proposal_sha256": "aaa820e343d280dc1c99812750ab49370de2c903fcb1f6fe5e6f33b3950f8f50",
+  "helper_sha256": "73a8242e07556e533c039853cfe4fffe4cfd3138a19cbe59b15f870fb65ee30c",
+  "automatic_application": false
+}

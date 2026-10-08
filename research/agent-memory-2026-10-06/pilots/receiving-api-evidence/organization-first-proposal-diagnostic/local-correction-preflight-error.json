@@ -1,0 +1,5 @@
+{
+  "error": "unsupported phase consolidation_revision rejected by existing HTTP parameter guard",
+  "physical_dispatches": 0,
+  "continuation": "Use the existing supported consolidation_review phase with the same one-dispatch bound, unchanged input and rejected candidate."
+}

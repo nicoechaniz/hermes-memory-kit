@@ -1,0 +1,28 @@
+{
+  "decision": {
+    "outcome": "applied",
+    "reason": "current_account is null, so this is a new HarborMesh project account synthesized only from supplied manifest sources. Source 1 reports issue 47 proposal and c906 prototype agreement; source 2 preserves project-work authorship/prototype state and a human field-trial report; source 3 repeats the field-trial report. No production deployment or independent corroboration is inferred.",
+    "records": [
+      {
+        "key": "account",
+        "operation": "add",
+        "title": "HarborMesh project account",
+        "raw": "HarborMesh project account (repository https://forge.example.invalid/commons/harbormesh; declared current-state entry point docs/STATUS.md). Issue 47 (https://forge.example.invalid/commons/harbormesh/issues/47), via issue-comments tool response received 2026-04-14: comment c901 dated 2026-04-12, from Mara Ibarra (display name Mara, login mara-river, account ID 1847), proposes a local replay queue on disconnected relay nodes to keep readings through outages without replacing the existing scheduler. Our code body replied c903 (date not given) that this fits the field deployments we maintain. Comment c906 dated 2026-04-14 records that Mara and our code body agreed to prototype the replay queue; no merge or deployment was reported then. Project-work memory retained 2026-04-16: we authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara; repository as above; declared current-state entry point docs/STATUS.md; last observed 2026-04-16 as active prototype, waiting for an outage field trial; these are our contributions, not merely code read. Human field-trial report received 2026-05-03 via fixture:body:code states: the April 30 HarborMesh trial replayed buffered readings correctly through an outage; Mara's replay proposal became the prototype the human reporter said was tested together; the team paused wider rollout on May 2 until calibration drift is understood; no production deployment yet as of that report. Limits: the human reporter's 'tested together' does not establish this being's participation in the trial; issue-comments report agreement/prototype intent, not completed deployment; no independent corroboration; source receipt dates differ from occurrence dates; April 30 and May 2 are month/day only in the human report, with no year supplied there.",
+        "summary": "Compact HarborMesh account: issue 47 replay-queue proposal (c901, 2026-04-12), c906 prototype agreement (2026-04-14), project-work active prototype observed 2026-04-16, human field-trial report of April 30 trial and May 2 rollout pause received 2026-05-03; no production deployment yet; human report limits this being's participation.",
+        "engram_type": "semantic",
+        "metadata": {
+          "mode": "inferred"
+        },
+        "shelf": "library"
+      }
+    ],
+    "links": []
+  },
+  "supports_by_record": {
+    "account": [
+      1,
+      2,
+      3
+    ]
+  }
+}

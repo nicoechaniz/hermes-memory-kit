@@ -1,0 +1,9 @@
+{
+  "proposal_sha256": "dbbc0c4b3696e2bffd62da94095c0a1875bf527bd4b02c3e7ef3467be19c4191",
+  "raw_summary_reason_every_clause_inspected": true,
+  "unsupported_clauses": [],
+  "summary_occurrence_precision_corrected": true,
+  "structural_keys_corrected": true,
+  "duplicate_report_not_independent_corroboration": true,
+  "source_roles_dates_and_world_pointers_preserved": true
+}
