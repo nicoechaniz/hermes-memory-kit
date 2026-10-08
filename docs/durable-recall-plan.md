@@ -56,14 +56,17 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: two organization passes and three third-pass
-account writes are applied with native replay, original/history preservation and
-backup/restore verified. The final V5 receiving contract is frozen; its complete
-fresh comparison and finite immutable-snapshot recalls are pending outside
-grading. Finish third-pass understanding, exact capture replay, literal source
-correction and direct/transitive reconciliation, then close recall and measured
-compactness/cost gates. Preserve earlier diagnostics and false rejections without
-starting another prompt variant by default. The
+Current continuation, 2026-10-08: all three organization passes, exact eighteen-input
+capture replay, literal source correction and direct/transitive reconciliation
+are applied with native replay, original/history preservation and backup/restore
+verified. The [actual preservation/reconciliation report](../research/agent-memory-2026-10-06/pilots/2026-10-08-three-pass-preservation-and-reconciliation.md)
+records source currency/refusals, projection reduction, storage growth and separate
+organization costs. The final V5 receiving contract is frozen; its complete fresh
+comparison and finite immutable-snapshot recalls remain pending outside grading.
+Finish those recalls and every claim/requirement assessment, including corrected
+and stale intermediate sources, then close separated fidelity/cost gates. Preserve
+earlier diagnostics and false rejections without starting another prompt variant
+by default. The
 [revision headroom diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-08-narrative-revision-headroom.md)
 records the final guidance and its observed trigger. Stage two is not complete.
 

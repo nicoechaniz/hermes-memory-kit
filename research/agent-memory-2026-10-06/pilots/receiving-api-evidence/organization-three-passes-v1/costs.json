@@ -1,0 +1,26 @@
+{
+  "scope": "Only actual organization/review/bounded-correction dispatches referenced by these four account phases; excludes formation, recall, embeddings and the non-model literal correction/replay. Historical calls reused in prior diagnostics are not new billing.",
+  "total": {
+    "distinct_physical_attempts": 34,
+    "known_tokens": 346408,
+    "unknown_usage": 0,
+    "median_seconds": 24.10706881713122,
+    "billed_usd": null
+  },
+  "by_phase": {
+    "consolidation_review": {
+      "distinct_physical_attempts": 20,
+      "known_tokens": 225866,
+      "unknown_usage": 0,
+      "median_seconds": 25.914383861701936,
+      "billed_usd": null
+    },
+    "consolidation": {
+      "distinct_physical_attempts": 14,
+      "known_tokens": 120542,
+      "unknown_usage": 0,
+      "median_seconds": 21.770830136258155,
+      "billed_usd": null
+    }
+  }
+}
