@@ -1,0 +1,22 @@
+{
+  "schema": "hmk.stage-three-evidence/v1",
+  "scope": "fictional qualified stage-two corpus; synthetic Matrix authority; no real receiving enrollment",
+  "matrix_candidate": "0263a4e3e5ded16277fca4a570441711f41cb2ae",
+  "files": [
+    {
+      "path": "memory-preservation.json",
+      "bytes": 43176,
+      "sha256": "91c6448924481cd7b2cb9b68ac04e311de0b261140044522daa710ea2d0f7ce1"
+    },
+    {
+      "path": "portable-fixture.tgz",
+      "bytes": 291608,
+      "sha256": "f881590ddd54d89c9dd7904bc33e463673f955596b1a824ed07cc39866c74ad1"
+    },
+    {
+      "path": "qualification.json",
+      "bytes": 17625,
+      "sha256": "748abd9ac73575b1cc288732df2ef589426ce3761ec004c081e57a16036f1df6"
+    }
+  ]
+}
