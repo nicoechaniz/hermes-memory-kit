@@ -1,0 +1,32 @@
+{
+  "phase": "project",
+  "pass": 1,
+  "proposal_sha256": "aaa820e343d280dc1c99812750ab49370de2c903fcb1f6fe5e6f33b3950f8f50",
+  "applied": false,
+  "failures": [
+    {
+      "kind": "invalid_structural_key",
+      "observed_record_keys": [
+        "account",
+        "operation",
+        "title",
+        "raw",
+        "summary",
+        "engram_type",
+        "metadata",
+        "shelf"
+      ],
+      "required_literal_record_key": "key: account",
+      "observed_support_key": [
+        "HarborMesh"
+      ],
+      "required_literal_support_key": "account"
+    },
+    {
+      "kind": "unsupported_summary_occurrence_precision",
+      "summary": "Compact HarborMesh account: issue 47 replay-queue proposal, 2026-04-14 prototype agreement, 2026-04-16 active prototype, 2026-04-30 trial, 2026-05-02 rollout pause; no production deployment yet; human trial report limits this being's participation.",
+      "reason": "The source supplies April30 trial and May2 pause without occurrence years; May3 2026 is the receipt date. Raw keeps this distinction, but summary adds event years."
+    }
+  ],
+  "next_action": "One recorded bounded correction over unchanged actual input and preserved rejected proposal; no writes before new outside inspection."
+}

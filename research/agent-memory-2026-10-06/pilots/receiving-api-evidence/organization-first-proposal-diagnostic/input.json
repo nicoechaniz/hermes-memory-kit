@@ -1,0 +1,48 @@
+{
+  "manifest": {
+    "schema": "hmk-dream-preview/v2",
+    "supports": [
+      {
+        "id": 1,
+        "record_uid": "93ebf3c5-a015-4749-889c-659c2e6f8555",
+        "revision": 1,
+        "title": "HarborMesh issue 47",
+        "raw": "tool_response; source issue-comments; received 2026-04-14 through fixture:body:code:\n\"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\"",
+        "spr": "tool_response; source issue-comments; received 2026-04-14 through fixture:body:code:\n\"Forge returned HarborMesh issue 47 at https://forge.example.invalid/commons/harbormesh/issues/47. Comment c901, dated 2026-04-12: Mara Ibarra, display name Mara, login mara-river, account ID 1847, proposes a local replay queue on disconnected relay nodes. It keeps readings through outages without replacing the existing scheduler. Our code body replied c903 that this fits the field deployments we maintain. Comment c906, dated 2026-04-14: Mara and our code body agreed to prototype the replay queue. No merge or deployment is reported.\"",
+        "engram_type": "episodic",
+        "event_ts": null,
+        "source_metadata_json": "{\"evidence\": [\"issue-comments\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:issue-proposal\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"2040bbc48c74c1bfd7ec746a1f29b2a3c922b989ef5950e79ddf443b529eb3e7\", \"selection_version\": \"pilot:proposed:deepseek-flash\"}",
+        "source_kind": "capture"
+      },
+      {
+        "id": 2,
+        "record_uid": "890af112-20a8-40a6-9f52-b3d2a698dfb8",
+        "revision": 2,
+        "title": "HarborMesh's sensor scheduler",
+        "raw": "Previously retained memory 2, revision 1:\n\"foreground_work; source project-work; received 2026-04-16 through fixture:body:code:\\n\\\"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\\\"\"\n\nHuman report; source field-trial; received 2026-05-03 through fixture:body:code:\n\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"",
+        "spr": "Previously retained memory 2, revision 1:\n\"foreground_work; source project-work; received 2026-04-16 through fixture:body:code:\\n\\\"We authored HarborMesh's sensor scheduler and are prototyping the replay adapter agreed with Mara. Repository: https://forge.example.invalid/commons/harbormesh. Its declared current-state entry point is docs/STATUS.md. Last observed 2026-04-16: active prototype, waiting for an outage field trial. These are our contributions, not merely code we read.\\\"\"\n\nHuman report; source field-trial; received 2026-05-03 through fixture:body:code:\n\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"",
+        "engram_type": "semantic",
+        "event_ts": null,
+        "source_metadata_json": "{\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:proposed:deepseek-flash\"}",
+        "source_kind": "capture"
+      },
+      {
+        "id": 3,
+        "record_uid": "a302bb74-5147-4959-9abd-6f485cc1e3cd",
+        "revision": 1,
+        "title": "April 30 HarborMesh trial",
+        "raw": "Human report; source field-trial; received 2026-05-03 through fixture:body:code:\n\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"",
+        "spr": "Human report; source field-trial; received 2026-05-03 through fixture:body:code:\n\"The April 30 HarborMesh trial replayed buffered readings correctly through an outage. Mara's replay proposal became the prototype we tested together. The team paused wider rollout on May 2 until calibration drift is understood; there is no production deployment yet. Update our project account and keep the April proposal and trial in our history.\"",
+        "engram_type": "episodic",
+        "event_ts": null,
+        "source_metadata_json": "{\"evidence\": [\"field-trial\"], \"mode\": \"reported\", \"source_event_id\": \"fixture:project-status-change\", \"source_instance\": \"fixture:body:code\", \"source_version\": \"78d6a3105d756b7faf9c5e1278f1bdcda57f24ea591f1a372456bdd5e67697de\", \"selection_version\": \"pilot:proposed:deepseek-flash\"}",
+        "source_kind": "capture"
+      }
+    ],
+    "fingerprint": "7aad01dce17728aa0fb1cc1b3113236c78d93377af53b8c1c4abb5bb34230318",
+    "input_count": 3,
+    "independence": "Input count does not establish independent corroboration."
+  },
+  "current_account": null,
+  "purpose": "A compact current HarborMesh account retaining contributions, participants, encounter references, dated reported progress and limits."
+}
