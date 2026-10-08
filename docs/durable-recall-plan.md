@@ -61,12 +61,22 @@ capture replay, literal source correction and direct/transitive reconciliation
 are applied with native replay, original/history preservation and backup/restore
 verified. The [actual preservation/reconciliation report](../research/agent-memory-2026-10-06/pilots/2026-10-08-three-pass-preservation-and-reconciliation.md)
 records source currency/refusals, projection reduction, storage growth and separate
-organization costs. The final V5 receiving contract is frozen; its complete fresh
-comparison and finite immutable-snapshot recalls remain pending outside grading.
-Finish those recalls and every claim/requirement assessment, including corrected
-and stale intermediate sources, then close separated fidelity/cost gates. Preserve
-earlier diagnostics and false rejections without starting another prompt variant
-by default. The
+organization costs. The [completed V5 assessment and bounded continuation](../research/agent-memory-2026-10-06/pilots/2026-10-08-v5-failure-and-bounded-continuation.md)
+cover all 44 answers and 571 claims. Both arms meet all candidate positive
+requirements, but four support/basis errors and one actual change of meaning
+prevent qualification. Native revision introduced the changed meaning and native
+review accepted it. Further broad snapshot queues have been stopped with completed
+in-flight receipts, preserved responses and unfinished cursors. Do not resume
+those queues or launch another full variant before correcting the demonstrated
+mechanism on the same fixed packets. The next action is assertion-level source
+verification that preserves faithful paraphrases and catches changed semantic
+relations, with memory, binding and uncertainty distinguished. Keep every
+existing fidelity/provenance/positive/negative requirement. Once that bounded
+correction is stable, execute one complete closing comparison and finish the
+required per-transformation receiving gates, reusing eligible exact evidence.
+If it fails again, document the limit and make a component decision rather than
+repeating broad prompt adjustments. Earlier diagnostics and pending work remain
+preserved. The
 [complete V4 diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-08-complete-v4-receiving-diagnostic.md)
 retains all 597 assessed claims: no invented final fact, but three support/basis
 failures and one omitted shared-participation requirement keep it unqualified.
