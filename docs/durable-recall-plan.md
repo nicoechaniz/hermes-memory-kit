@@ -56,19 +56,21 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: [complete positive-premise closing](../research/agent-memory-2026-10-06/pilots/2026-10-08-positive-premise-closing-qualification.md)
-qualifies all 44 original packages: 583 outside-assessed final clauses, all 102
-positive requirements, no unsupported/rejected deliveries. The stricter existing
-review instruction detects embedded positive premises without adding a review
-phase. It makes 100 new native calls/1,669,962 known tokens; all 45 original
-physical generation/shape-repair requests are reused exactly. Five extra actual
-review/revision pairs versus the prior profile remain a measured cost, not an
-optimality claim. The stopped 25-answer stage failure, five bounded diagnostics
-and all earlier evidence are preserved. Fresh first-pass stage receiving has
-begun under the qualified procedure. Finish targets/full understanding after each
-pass and correction, using explicit unchanged control/replay references. Keep
-valid consolidation/replay/reconciliation; old queues stay stopped. Stage two
-remains open; 99 focused component tests remain valid.
+Current continuation, 2026-10-08: [reader guidance is not memory](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-guidance-is-not-memory.md)
+records a stopped stage observation: 19 answers / 307 outside-assessed clauses,
+four unsupported clauses in two identical drafts. Reader rules became memory
+claims; a prototype-status date became a file-observation date. Removing normative
+source fields alone did not qualify the mechanism. The corrected source adapter
+retains original words/pronoun interpretations, fingerprints report-referents/v2,
+and the existing review explicitly separates reader guidance, unknown basis and
+actual date-object relations. Four real medium decisions match outside assessment,
+including the faithful nineteen-clause control; 100 component tests pass. Fresh
+original-package closing under this correction is running. After qualification,
+finish preserved snapshot receiving with explicit unchanged control/replay
+references; old queues stay stopped and valid consolidation/reconciliation is
+not repeated. The installed 27 native scripts are byte-identical; no live
+migration is needed. All failures/earlier closings remain preserved; stage two
+is open.
 
 Preserved evidence: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation

@@ -150,7 +150,7 @@ def test_assertion_protocol_accepts_source_relabeling_without_semantic_revision(
                 trace,pending,tmp_path/'pending.json',chat,save,review_protocol='assertions',**options)
 
 
-def test_report_referents_preserve_source_and_require_event_specific_membership():
+def test_report_referents_preserve_source_without_promoting_reader_rules():
     quotation = 'You helped me yesterday. I want us to remember Leto; we have not contacted the group.'
     evidence = {1: {'text': 'Human report; source report; received 2026-09-17 through code:\n'
                      + json.dumps(quotation)}}
@@ -159,7 +159,11 @@ def test_report_referents_preserve_source_and_require_event_specific_membership(
     clarified = nr.supplied_context('Who contacted whom?', evidence, binding, 'decoded', True)
     block = clarified['evidence'][0]['attributed_blocks'][0]
     assert block['quotation'] == original['evidence'][0]['attributed_blocks'][0]['quotation'] == quotation
-    assert block['source_referents']['receiving_being_membership'] == 'requires explicit event-specific source evidence'
+    assert set(block['source_referents']) == {
+        'first_person_singular', 'first_person_plural', 'second_person'}
+    assert block['source_referents']['second_person'] == 'being addressed by this report'
+    assert 'requires explicit event-specific' not in json.dumps(block['source_referents'])
+    assert 'Include our being in past participation only when the source identifies' in nr.GENERATION
     assert 'does not identify' in block['source_referents']['first_person_plural']
     assert 'source_referents' not in original['evidence'][0]['attributed_blocks'][0]
     evidence[1]['text'] = evidence[1]['text'].replace('Human report', 'Human conversation')
@@ -283,3 +287,30 @@ def test_unknown_premise_contract_changes_only_review_and_keeps_bounded_phases(t
     with pytest.raises(ValueError,match='unknown premise checks'):
         nr.answer('fixture','q',evidence,binding,SimpleNamespace(phase='recall'),{},
             tmp_path/'invalid.json',chat,save,review_protocol='passages',check_unknown_premises=True)
+
+
+def test_reader_rule_removal_cannot_silently_adopt_an_old_accepted_checkpoint(tmp_path, monkeypatch):
+    candidate, evidence, binding, review = example()
+    raw = json.loads(json.dumps(review))
+    raw['claims'][0]['assertions'][0]['proof'] = [{'id': 1, 'passage': 0}]
+    pending, trace = {}, SimpleNamespace(phase='recall')
+    phases = []
+    def chat(model, messages, trace):
+        phases.append(trace.phase)
+        return candidate if trace.phase == 'narrative_generation' else raw
+    save = lambda path, value: path.write_text(json.dumps(value))
+    current = nr.SOURCE_REFERENTS_PROTOCOL
+    monkeypatch.setattr(nr, 'SOURCE_REFERENTS_PROTOCOL', 'report-deixis/v1')
+    nr.answer('fixture', 'Can this body run the checks?', evidence, binding,
+        trace, pending, tmp_path/'pending.json', chat, save,
+        review_protocol='assertions', clarify_deixis=True)
+    assert 'accepted' in pending['narrative']
+    before = json.dumps(pending, sort_keys=True)
+    monkeypatch.setattr(nr, 'SOURCE_REFERENTS_PROTOCOL', current)
+    with pytest.raises(ValueError, match='procedure/model changed'):
+        nr.answer('fixture', 'Can this body run the checks?', evidence, binding,
+            trace, pending, tmp_path/'pending.json',
+            lambda *args: pytest.fail('Old approval cannot trigger a new call'), save,
+            review_protocol='assertions', clarify_deixis=True)
+    assert json.dumps(pending, sort_keys=True) == before
+    assert phases == ['narrative_generation', 'narrative_review']

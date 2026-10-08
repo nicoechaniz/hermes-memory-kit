@@ -119,6 +119,9 @@ def complete_source_envelopes(text, depth=0):
     return count > 0 and not text[cursor:].strip()
 
 
+SOURCE_REFERENTS_PROTOCOL = 'report-referents/v2'
+
+
 def supplied_context(query, evidence, binding, source_representation='full', clarify_deixis=False):
     if source_representation not in {'full', 'decoded'}:
         raise ValueError('explicit full or decoded source representation required')
@@ -138,9 +141,10 @@ def supplied_context(query, evidence, binding, source_representation='full', cla
                 block['source_referents'] = dict(
                     first_person_singular='human reporter',
                     first_person_plural='human reporter and a group whose members the pronoun alone does not identify',
-                    second_person='being addressed by this report',
-                    receiving_being_membership='requires explicit event-specific source evidence',
-                    scope='A wish or request directed to the being does not establish its participation in another action, intention or non-action reported as we.')
+                    second_person='being addressed by this report')
+                # Reader constraints belong to task instructions, not this
+                # source interpretation: they are not remembered events or
+                # quoted evidence for a procedural rule.
         if source_representation == 'decoded' and complete_source_envelopes(item.get('text', '')):
             row['source_text_sha256'] = hashlib.sha256(row.pop('text').encode()).hexdigest()
             row['source_representation'] = 'complete_decoded_envelopes'
@@ -720,6 +724,16 @@ actual supplied receiving fields and empty proof. Unknown assertions require
 empty proof and binding_fields: they describe only an unrecorded detail of this
 packet, never prove an event did not happen. A source's explicit historical
 negative or uncertainty can instead have memory basis and its original proof.
+Reader instructions and adapter rules govern this task; they are not memories
+or current body capabilities. Speaker/pronoun annotations interpret quotations,
+not independent source evidence. Do not cite a quotation to prove an adapter
+rule absent from that quotation. Internal field names or procedural requirements
+are not remembered episode facts unless the original memory or actual binding
+explicitly supplies that statement. Unknown basis describes a packet-bounded
+absence and its limits; it cannot certify positive procedural requirements from
+task instructions. Narration uses ordinary prose, not reader implementation labels.
+A date qualifying one object or status cannot date observation of an adjacent
+file, pointer or finding. Match the date's actual object/relation to source_fact.
 Never hide a remembered event in a binding assertion or an available fact in an
 unknown. Decompose a sentence combining these classes into separate assertions;
 do not request prose revisions merely to correct draft source labels.
@@ -819,7 +833,7 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
     if type(clarify_deixis) is not bool:
         raise ValueError('source referents require an explicit boolean option')
     if clarify_deixis:
-        procedure_settings['source_referents_protocol'] = 'report-deixis/v1'
+        procedure_settings['source_referents_protocol'] = SOURCE_REFERENTS_PROTOCOL
     if allow_joint_support:
         procedure_settings['joint_support_protocol'] = 'memory-and-binding/v1'
     if review_effort is not None:
