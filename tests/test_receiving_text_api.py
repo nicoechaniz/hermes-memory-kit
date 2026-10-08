@@ -85,6 +85,22 @@ def test_explicit_deepseek_nonthinking_profile_omits_unsupported_effort(api,tmp_
     assert api.parameters(value,'deepseek')==old
 
 
+def test_output_override_is_explicit_and_cannot_change_receiving_profile(api,tmp_path):
+    _,value=request(api,tmp_path)
+    value['output_token_limit']=32768
+    with pytest.raises(ValueError,match='fictional operation'):
+        api.parameters(value,'deepseek')
+    value.update(format='hmk-fictional-memory-operation/v1',fictional=True,
+                 phase='consolidation_review')
+    assert api.parameters(value,'deepseek')['max_tokens']==32768
+    for invalid in [True,0,32769,'32768']:
+        value['output_token_limit']=invalid
+        with pytest.raises(ValueError,match='fictional operation'):
+            api.parameters(value,'deepseek')
+    del value['output_token_limit']
+    assert api.parameters(value,'deepseek')['max_tokens']==12000
+
+
 @pytest.mark.parametrize('failure',['incomplete','interrupted'])
 def test_ended_body_failure_keeps_status_without_private_partial_bytes(api,tmp_path,failure):
     import http.client

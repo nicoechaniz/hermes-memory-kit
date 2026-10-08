@@ -1,0 +1,11 @@
+{
+  "physical_calls": 3,
+  "completed_calls": 3,
+  "length_terminated_calls": 1,
+  "known_tokens": 28959,
+  "original_generation_tokens": 5387,
+  "truncated_review_tokens": 15216,
+  "explicit_expanded_retry_tokens": 8356,
+  "billed_usd": null,
+  "causal_limit": "The retry completed within 5140 completion tokens; stochastic variation means success does not establish that the higher cap was causally necessary for this particular completion."
+}

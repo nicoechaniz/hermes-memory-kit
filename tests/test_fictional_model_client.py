@@ -81,3 +81,31 @@ def test_narrative_call_cannot_bypass_frozen_role(client_module,tmp_path):
     trace.phase='narrative_review'
     with pytest.raises(ValueError,match='frozen processing role'):
         c.chat('deepseek-flash',messages,trace)
+
+
+def test_explicit_larger_operation_limit_preserves_truncated_attempt(client_module,tmp_path):
+    m=client_module;fixture,catalog,trace,messages=inputs(m,tmp_path);calls=[]
+    def dispatch(path,root):
+        request=json.loads(path.read_text());params=m.api.parameters(request,'deepseek');calls.append(params)
+        receipt=root/'dispatches'/path.name;receipt.parent.mkdir(exist_ok=True)
+        response=root/'responses'/path.name;response.parent.mkdir(exist_ok=True)
+        limited=params['max_tokens']==12000;content='{"partial":' if limited else '{"outcome":"applied"}'
+        m.api.exchange.pilot.save(receipt,dict(state='completed',content=content,parameters=params,
+            parameters_sha256=m.api.exchange.pilot.digest(params)))
+        m.api.exchange.pilot.save(response,dict(request_sha256=path.stem,requested_model='deepseek-flash',
+            fresh_context=True,tool_calls_observed=[],dispatch_receipt=str(receipt),content=content,
+            usage=None,finish_reason='length' if limited else 'stop'))
+    old=m.Client(tmp_path/'old',fixture,'fixture-key',catalog,dispatcher=dispatch)
+    truncated=old.chat('deepseek-flash',messages,trace)
+    assert truncated['_finish_reason']=='length'
+    retained=next((tmp_path/'old/proposed/responses').glob('*.json')).read_bytes()
+    with pytest.raises(ValueError,match='transport changed'):
+        m.Client(tmp_path/'old',fixture,'fixture-key',catalog,operation_output_limit=32768)
+    new=m.Client(tmp_path/'expanded',fixture,'fixture-key',catalog,dispatcher=dispatch,
+                 operation_output_limit=32768)
+    assert new.chat('deepseek-flash',messages,trace)=={'outcome':'applied'}
+    assert new.chat('deepseek-flash',messages,trace)=={'outcome':'applied'}
+    assert [c['max_tokens'] for c in calls]==[12000,32768]
+    assert calls[0]['messages']==calls[1]['messages']
+    assert next((tmp_path/'old/proposed/responses').glob('*.json')).read_bytes()==retained
+    assert len(trace)==2

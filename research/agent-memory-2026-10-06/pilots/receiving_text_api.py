@@ -34,6 +34,10 @@ def parameters(request, provider, generation_limit=12000, review_limit=32768):
         raise ValueError('explicit supported fictional text profile required')
     if any(type(n) is not int or not 1 <= n <= 32768 for n in (generation_limit, review_limit)):
         raise ValueError('invalid explicit output limits')
+    operation_limit = request.get('output_token_limit')
+    if operation_limit is not None and (
+            not operation or type(operation_limit) is not int or not 1 <= operation_limit <= 32768):
+        raise ValueError('explicit output token override requires a supported fictional operation')
     messages = request['messages']
     if (not isinstance(messages, list) or not messages or messages[0].get('role') != 'system'
             or any(set(m) != {'role', 'content'} or not isinstance(m['content'], str)
@@ -45,7 +49,8 @@ def parameters(request, provider, generation_limit=12000, review_limit=32768):
         *messages[1:]]
     value = dict(model=request['model'], messages=messages,
         reasoning_effort=request['reasoning_effort'], response_format={'type': 'json_object'},
-        max_tokens=review_limit if request['phase'] == 'narrative_review' else generation_limit)
+        max_tokens=(operation_limit if operation_limit is not None else
+                    review_limit if request['phase'] == 'narrative_review' else generation_limit))
     if provider == 'deepseek':
         value['thinking'] = {'type': 'disabled' if request['reasoning_effort'] == 'none' else 'enabled'}
         if request['reasoning_effort'] == 'none':
