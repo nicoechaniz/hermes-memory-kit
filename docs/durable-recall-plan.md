@@ -56,7 +56,17 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: all three organization passes, exact eighteen-input
+Current continuation, 2026-10-08: the [bounded source-referent and world-pointer correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-report-referents-and-world-pointers.md)
+now detects two observed accepted ownership errors while preserving four faithful
+controls. It also removes unmatched prose punctuation from URLs, eliminating a
+false revision trigger. Six isolated native Sol-low calls, 47 inspected claims
+and 83 focused tests support this correction; they are not full qualification.
+Requalify the complete closing packages with exact-request evidence reuse, then
+finish the required post-transformation receiving gates. Keep Flash/current
+embeddings and all valid consolidation/replay/reconciliation evidence. Stage two
+remains open, and old queues remain stopped.
+
+Preserved evidence: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation
 are applied with native replay, original/history preservation and backup/restore
 verified. The [assertion-verification correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-assertion-verification-diagnostic.md)

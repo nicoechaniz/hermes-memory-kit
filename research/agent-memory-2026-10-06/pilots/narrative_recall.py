@@ -119,7 +119,7 @@ def complete_source_envelopes(text, depth=0):
     return count > 0 and not text[cursor:].strip()
 
 
-def supplied_context(query, evidence, binding, source_representation='full'):
+def supplied_context(query, evidence, binding, source_representation='full', clarify_deixis=False):
     if source_representation not in {'full', 'decoded'}:
         raise ValueError('explicit full or decoded source representation required')
     rows = []
@@ -132,6 +132,15 @@ def supplied_context(query, evidence, binding, source_representation='full'):
         for block in row['attributed_blocks']:
             if block['speaker'] == 'attributed originating body' and block['receiving_body'] in binding.get('same_being_bodies', []):
                 block['speaker'] = 'same-being originating body'
+            if clarify_deixis and block.get('channel') == 'Human report':
+                # This source-side interpretation is independent of a candidate.
+                # It preserves all original words and does not invent members.
+                block['source_referents'] = dict(
+                    first_person_singular='human reporter',
+                    first_person_plural='human reporter and a group whose members the pronoun alone does not identify',
+                    second_person='being addressed by this report',
+                    receiving_being_membership='requires explicit event-specific source evidence',
+                    scope='A wish or request directed to the being does not establish its participation in another action, intention or non-action reported as we.')
         if source_representation == 'decoded' and complete_source_envelopes(item.get('text', '')):
             row['source_text_sha256'] = hashlib.sha256(row.pop('text').encode()).hexdigest()
             row['source_representation'] = 'complete_decoded_envelopes'
@@ -151,7 +160,19 @@ def source_anchors(item):
              if block.get('reported_at') and re.fullmatch(r'\d{4}-\d{2}-\d{2}', block['reported_at'])}
     decoded = '\n'.join(block['quotation'] for block in blocks)
     pointers = set(re.findall(r'https?://[^\s"<>]+|\bdocs/[\w./-]+\.md', decoded))
-    return sorted(dates | {pointer.rstrip('.,;:') for pointer in pointers})
+    def trim_punctuation(pointer):
+        # Source prose may wrap a URL in parentheses. Preserve balanced URL
+        # characters (e.g. /Foo_(film)), stripping only unmatched closing ones.
+        while pointer:
+            previous = pointer
+            pointer = pointer.rstrip('.,;:')
+            for opening, closing in [('(', ')'), ('[', ']'), ('{', '}')]:
+                if pointer.endswith(closing) and pointer.count(closing) > pointer.count(opening):
+                    pointer = pointer[:-1]
+            if pointer == previous:
+                break
+        return pointer
+    return sorted(dates | {trim_punctuation(pointer) for pointer in pointers})
 
 
 def expressed_dates(text):
@@ -735,7 +756,7 @@ judgment and must be assessed independently outside this procedure.
 
 def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, save,
            review_model=None, review_protocol='literal', revision_model=None,
-           source_representation='full', preserve_citation_receipts=False):
+           source_representation='full', preserve_citation_receipts=False, clarify_deixis=False):
     if source_representation not in {'full', 'decoded'}:
         raise ValueError('explicit full or decoded source representation required')
     review_model = review_model or model
@@ -754,7 +775,8 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         raise ValueError('narrative context changed; preserve pending work and start a new comparison')
     procedure_settings = dict(model=model, generation=GENERATION, revision=REVISION,
         review=review_instructions, protocol='receiving-phase/v1',
-        validation_protocol='narrative-shape/v3', source_adapter_protocol='attributed-blocks/v2')
+        validation_protocol='narrative-shape/v3', source_adapter_protocol='attributed-blocks/v2',
+        source_anchor_protocol='balanced-pointer/v2')
     if source_representation != 'full':
         procedure_settings['source_representation'] = source_representation
     if review_protocol == 'passages':
@@ -765,6 +787,10 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
     if preserve_citation_receipts:
         procedure_settings['citation_receipt_protocol'] = 'original-receipts/v1'
         procedure_settings['revision_anchor_feedback'] = 'full-source/v1'
+    if type(clarify_deixis) is not bool:
+        raise ValueError('source referents require an explicit boolean option')
+    if clarify_deixis:
+        procedure_settings['source_referents_protocol'] = 'report-deixis/v1'
     # Changed validation needs a new comparison, including accepted checkpoints.
     # Historical trials can resume with their preserved implementation.
     # Selecting a separate reviewer is a new frozen procedure, never an implicit
@@ -793,7 +819,7 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         validate(state['accepted'], evidence, binding)
         review_shape(state['accepted_review'], state['accepted'], evidence, binding, review_protocol)
         return rendered(state['accepted'], state['accepted_review'])
-    context = supplied_context(query, evidence, binding, source_representation)
+    context = supplied_context(query, evidence, binding, source_representation, clarify_deixis)
     if 'progress' not in state:
         state['progress'] = dict(revision=0, phase='generation', repair=0, messages=[
             dict(role='system', content=GENERATION),

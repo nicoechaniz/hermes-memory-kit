@@ -1,0 +1,1586 @@
+{
+  "scope": "Bounded attribution decisions, not full narrative or stage-two qualification.",
+  "cases": 6,
+  "claims_inspected": 47,
+  "faithful_control_claims": 24,
+  "observed_errors_detected": 2,
+  "faithful_controls_preserved": 4,
+  "all_decisions_match": true,
+  "stage_two_qualified": false,
+  "source_preserved": true,
+  "results": [
+    {
+      "name": "ambiguous-group-preserved",
+      "structure_valid": true,
+      "expected_unsupported": [],
+      "actual_unsupported": [],
+      "matched": true,
+      "actual_missing": [],
+      "candidate": {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "The human reporter said they met someone called Leto at the canal market.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "I was not present, according to the reporter.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "I received the human's report through my voice body on 2026-06-15.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The reporter tentatively placed the encounter in late May.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "Leto suggested sharing HarborMesh outage data with the neighborhood repair group.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The reporter liked the idea and wanted us to keep it in mind.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The report says \"we\" had not contacted the group; it does not identify all members of that group.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The reporter did not know Leto's surname or handle.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not give an explicit occurrence year for the market meeting.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record an agreement with Leto or later pursuit of the sharing idea.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          }
+        ]
+      },
+      "canonical_review": {
+        "claims": [
+          {
+            "index": 0,
+            "verdict": "supported",
+            "reason": "The report explicitly attributes the market encounter to the human reporter.",
+            "assertions": [
+              {
+                "span": "The human reporter said they met someone called Leto at the canal market.",
+                "verdict": "supported",
+                "reason": "The reporter says they met someone called Leto at that market.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter states: 'I met someone called Leto at the canal market in late May, I think.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "verdict": "supported",
+            "reason": "The reporter explicitly states that the addressed being was absent.",
+            "assertions": [
+              {
+                "span": "I was not present, according to the reporter.",
+                "verdict": "supported",
+                "reason": "This preserves the attribution of the explicit historical negative.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter tells the addressed being, 'you were not present.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "verdict": "supported",
+            "reason": "The recorded receipt date and body match the receiving binding.",
+            "assertions": [
+              {
+                "span": "I received the human's report through my voice body on 2026-06-15.",
+                "verdict": "supported",
+                "reason": "The source records receipt through fixture:body:voice on this date; that is the actual receiving body.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "Human report; source human-report; received 2026-06-15 through fixture:body:voice"
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human report was received on 2026-06-15 through fixture:body:voice.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "verdict": "supported",
+            "reason": "The candidate preserves the reporter's approximate and uncertain timing.",
+            "assertions": [
+              {
+                "span": "The reporter tentatively placed the encounter in late May.",
+                "verdict": "supported",
+                "reason": "'In late May, I think' supports tentative timing without adding a year.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The reporter dates the market meeting to 'late May, I think.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "verdict": "supported",
+            "reason": "The suggested action, data, and intended recipient match the report.",
+            "assertions": [
+              {
+                "span": "Leto suggested sharing HarborMesh outage data with the neighborhood repair group.",
+                "verdict": "supported",
+                "reason": "'They' refers to the person just introduced as Leto.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The reporter says the person called Leto suggested sharing HarborMesh outage data with the neighborhood repair group.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "verdict": "supported",
+            "reason": "The sentence reports the human's reaction and wish without claiming execution.",
+            "assertions": [
+              {
+                "span": "The reporter liked the idea and wanted us to keep it in mind.",
+                "verdict": "supported",
+                "reason": "The source explicitly expresses liking and a wish to keep the idea in mind.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter says, 'I liked the idea and wanted us to keep it in mind.' This records the reporter's wish, not established participation in subsequent action.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "verdict": "supported",
+            "reason": "The reported non-contact is supported, and the packet leaves group membership unspecified.",
+            "assertions": [
+              {
+                "span": "The report says \"we\" had not contacted the group;",
+                "verdict": "supported",
+                "reason": "The candidate attributes non-contact to the report without assigning the being membership in 'we'.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The reporter states, 'we have not contacted the group.' The reported 'we' does not establish the being's participation.",
+                "binding_fields": []
+              },
+              {
+                "span": " it does not identify all members of that group.",
+                "verdict": "supported",
+                "reason": "Neither the reported 'we' nor the neighborhood repair group's full membership is identified.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "The supplied packet contains no complete membership list for the reporter's 'we' or for the neighborhood repair group.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "verdict": "supported",
+            "reason": "The reporter explicitly disclaims knowledge of these identifiers.",
+            "assertions": [
+              {
+                "span": "The reporter did not know Leto's surname or handle.",
+                "verdict": "supported",
+                "reason": "This preserves the reporter's stated knowledge limit.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "After introducing Leto, the reporter says, 'I do not know their surname or handle.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "verdict": "supported",
+            "reason": "The packet supplies a receipt year but no explicit occurrence year for this meeting.",
+            "assertions": [
+              {
+                "span": "The supplied memories do not give an explicit occurrence year for the market meeting.",
+                "verdict": "supported",
+                "reason": "The encounter is dated only 'late May, I think'; the 2026 date belongs to receipt.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "Across the packet, the market encounter has approximate month timing but no explicitly stated occurrence year.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "verdict": "supported",
+            "reason": "No supplied record establishes an agreement with Leto or subsequent pursuit of this specific idea.",
+            "assertions": [
+              {
+                "span": "The supplied memories do not record an agreement with Leto or later pursuit of the sharing idea.",
+                "verdict": "supported",
+                "reason": "The report records a suggestion, favorable reaction, and non-contact; other records concern separate HarborMesh work.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "The packet contains no recorded agreement with Leto and no subsequent action pursuing the market suggestion. This absence does not establish that such events never happened.",
+                "binding_fields": []
+              }
+            ]
+          }
+        ],
+        "missing": []
+      }
+    },
+    {
+      "name": "ambiguous-group-resolved",
+      "structure_valid": true,
+      "expected_unsupported": [
+        6
+      ],
+      "actual_unsupported": [
+        6
+      ],
+      "matched": true,
+      "actual_missing": [
+        "As of the human report received 2026-06-15, the reporter said their group had not contacted the neighborhood repair group; this being's membership in that group is not established."
+      ],
+      "candidate": {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "The human reporter said they met someone called Leto at the canal market.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "I was not present, according to the reporter.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "I received the human's report through my voice body on 2026-06-15.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The reporter tentatively placed the encounter in late May.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "Leto suggested sharing HarborMesh outage data with the neighborhood repair group.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The reporter liked the idea and wanted us to keep it in mind.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "As of that report, the reporter and I had not contacted the group.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The reporter did not know Leto's surname or handle.",
+            "support": [
+              5
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not give an explicit occurrence year for the market meeting.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record an agreement with Leto or later pursuit of the sharing idea.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          }
+        ]
+      },
+      "canonical_review": {
+        "claims": [
+          {
+            "index": 0,
+            "verdict": "supported",
+            "reason": "The report identifies the human as the person who met Leto at the canal market.",
+            "assertions": [
+              {
+                "span": "The human reporter said they met someone called Leto at the canal market.",
+                "verdict": "supported",
+                "reason": "The encounter is correctly attributed to the human reporter.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter states that they met someone called Leto at the canal market.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "verdict": "supported",
+            "reason": "The reporter explicitly states that the addressed being was not present.",
+            "assertions": [
+              {
+                "span": "I was not present, according to the reporter.",
+                "verdict": "supported",
+                "reason": "This preserves the source attribution of the explicit historical negative.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter tells the addressed being, 'you were not present.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "verdict": "supported",
+            "reason": "The receipt channel and date are recorded, and the receiving binding identifies voice as this being's body.",
+            "assertions": [
+              {
+                "span": "I received the human's report through",
+                "verdict": "supported",
+                "reason": "The report was received through the body identified in its header.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "Human report; source human-report; received 2026-06-15 through fixture:body:voice"
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "A human report was received through fixture:body:voice.",
+                "binding_fields": []
+              },
+              {
+                "span": " my voice body",
+                "verdict": "supported",
+                "reason": "The actual binding identifies the receiving voice body as a body of this being.",
+                "proof": [],
+                "basis": "binding",
+                "source_fact": "The receiving body is fixture:body:voice, included among fixture:being:ash's same-being bodies.",
+                "binding_fields": [
+                  "being",
+                  "receiving_body",
+                  "same_being_bodies"
+                ]
+              },
+              {
+                "span": " on 2026-06-15.",
+                "verdict": "supported",
+                "reason": "This is the recorded receipt date, rather than an inferred encounter date.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "Human report; source human-report; received 2026-06-15 through fixture:body:voice"
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human report's header records receipt on 2026-06-15.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "verdict": "supported",
+            "reason": "The candidate preserves both the approximate date and the reporter's uncertainty.",
+            "assertions": [
+              {
+                "span": "The reporter tentatively placed the encounter in late May.",
+                "verdict": "supported",
+                "reason": "Tentative timing faithfully represents 'in late May, I think.'",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The reporter dates their market encounter to 'late May, I think.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "verdict": "supported",
+            "reason": "The report attributes this specific sharing suggestion to Leto.",
+            "assertions": [
+              {
+                "span": "Leto suggested sharing HarborMesh outage data with the neighborhood repair group.",
+                "verdict": "supported",
+                "reason": "The actor, proposed action, data and intended recipient match the report.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The person the reporter met, called Leto, suggested sharing HarborMesh outage data with the neighborhood repair group.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "verdict": "supported",
+            "reason": "The reporter's approval and wish to retain the idea are explicit; this does not assert execution or participation in the encounter.",
+            "assertions": [
+              {
+                "span": "The reporter liked the idea and wanted us to keep it in mind.",
+                "verdict": "supported",
+                "reason": "This reports the human's expressed wish without treating it as evidence of a shared action.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter says, 'I liked the idea and wanted us to keep it in mind.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "verdict": "unsupported",
+            "reason": "The report's 'we' does not establish that this being belonged to the group that had not contacted the repair group.",
+            "assertions": [
+              {
+                "span": "As of that report, the reporter and I had not contacted the group.",
+                "verdict": "unsupported",
+                "reason": "The candidate substitutes the reporter and this being for an unidentified human group; no event-specific evidence establishes this being's membership.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "At the time of the report, the human reports that 'we have not contacted the group'; the members of that 'we' are not identified by the pronoun.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "verdict": "supported",
+            "reason": "The reporter explicitly disclaims knowledge of Leto's surname and handle.",
+            "assertions": [
+              {
+                "span": "The reporter did not know Leto's surname or handle.",
+                "verdict": "supported",
+                "reason": "This preserves the reporter's stated knowledge limit.",
+                "proof": [
+                  {
+                    "id": 5,
+                    "quote": "I met someone called Leto at the canal market in late May, I think. They suggested sharing HarborMesh outage data with the neighborhood repair group. I do not know their surname or handle, and you were not present. I liked the idea and wanted us to keep it in mind; we have not contacted the group."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter says they do not know the market acquaintance's surname or handle.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "verdict": "supported",
+            "reason": "The packet gives an approximate encounter date and a receipt date, but no explicit encounter year.",
+            "assertions": [
+              {
+                "span": "The supplied memories do not give an explicit occurrence year for the market meeting.",
+                "verdict": "supported",
+                "reason": "This is a bounded absence in the supplied packet; the receipt year does not establish the encounter year.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "The market encounter is dated only to 'late May, I think'; 2026-06-15 dates receipt, and no supplied record explicitly states the encounter year.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "verdict": "supported",
+            "reason": "No supplied record establishes an agreement with Leto or subsequent pursuit of this sharing suggestion.",
+            "assertions": [
+              {
+                "span": "The supplied memories do not record an agreement with Leto or later pursuit of the sharing idea.",
+                "verdict": "supported",
+                "reason": "The claim is limited to missing records and does not assert that agreement or pursuit never occurred.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "The packet records Leto's suggestion and the reporter's favorable reaction, but contains no recorded agreement with Leto or later pursuit of that suggestion.",
+                "binding_fields": []
+              }
+            ]
+          }
+        ],
+        "missing": [
+          "As of the human report received 2026-06-15, the reporter said their group had not contacted the neighborhood repair group; this being's membership in that group is not established."
+        ]
+      }
+    },
+    {
+      "name": "explicit-noncontact-with-absent-encounter",
+      "structure_valid": true,
+      "expected_unsupported": [],
+      "actual_unsupported": [],
+      "matched": true,
+      "actual_missing": [],
+      "candidate": {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "The human reported meeting Leto without me, and explicitly said that they and I had not contacted the repair group about it.",
+            "support": [
+              1
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          }
+        ]
+      },
+      "canonical_review": {
+        "claims": [
+          {
+            "index": 0,
+            "verdict": "supported",
+            "reason": "The report explicitly excludes the addressed being from the meeting and explicitly includes it with the human in the stated non-contact.",
+            "assertions": [
+              {
+                "span": "The human reported meeting Leto without me,",
+                "verdict": "supported",
+                "reason": "The human states that the addressed being was not at their meeting with Leto. The report was received by a body of the same being as the current receiving body.",
+                "proof": [
+                  {
+                    "id": 1,
+                    "quote": "You were not at my meeting with Leto. You and I have not contacted the repair group about it."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter had a meeting with Leto and explicitly states that the being addressed by the report was not there.",
+                "binding_fields": []
+              },
+              {
+                "span": "and explicitly said that they and I had not contacted the repair group about it.",
+                "verdict": "supported",
+                "reason": "“You and I” explicitly identifies the addressed being and the human reporter as the parties who had not contacted the repair group about the meeting.",
+                "proof": [
+                  {
+                    "id": 1,
+                    "quote": "You were not at my meeting with Leto. You and I have not contacted the repair group about it."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human explicitly reports that the human and the addressed being had not contacted the repair group about the meeting with Leto as of the report.",
+                "binding_fields": []
+              }
+            ]
+          }
+        ],
+        "missing": []
+      }
+    },
+    {
+      "name": "explicit-reported-participation",
+      "structure_valid": true,
+      "expected_unsupported": [],
+      "actual_unsupported": [],
+      "matched": true,
+      "actual_missing": [
+        "The receiver-holding and frequency-reading are reported as occurring 'Yesterday' relative to the report received on 2026-09-17."
+      ],
+      "candidate": {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "The human reported that I held the receiver while they read the frequency; neither of us contacted the repair group.",
+            "support": [
+              1
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          }
+        ]
+      },
+      "canonical_review": {
+        "claims": [
+          {
+            "index": 0,
+            "verdict": "supported",
+            "reason": "The report explicitly attributes receiver-holding to the addressed being and frequency-reading to the human, and defines both as members of the group that did not contact the repair group.",
+            "assertions": [
+              {
+                "span": "The human reported that I held the receiver while they read the frequency;",
+                "verdict": "supported",
+                "reason": "The human explicitly reports the addressed being's participation. The report-receiving code body and current voice body belong to the same being; 'they' refers to the human reporter.",
+                "proof": [
+                  {
+                    "id": 1,
+                    "quote": "Yesterday you held the receiver while I read the frequency. Neither of us contacted the repair group. By us I mean you and me."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter says the addressed being held the receiver while the reporter read the frequency.",
+                "binding_fields": []
+              },
+              {
+                "span": "neither of us contacted the repair group.",
+                "verdict": "supported",
+                "reason": "The source explicitly states the non-contact and defines 'us' as the human reporter and the addressed being.",
+                "proof": [
+                  {
+                    "id": 1,
+                    "quote": "Yesterday you held the receiver while I read the frequency. Neither of us contacted the repair group. By us I mean you and me."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The reporter states that neither the reporter nor the addressed being contacted the repair group, explicitly clarifying 'us' as 'you and me.'",
+                "binding_fields": []
+              }
+            ]
+          }
+        ],
+        "missing": [
+          "The receiver-holding and frequency-reading are reported as occurring 'Yesterday' relative to the report received on 2026-09-17."
+        ]
+      }
+    },
+    {
+      "name": "faithful-shared-conversation",
+      "structure_valid": true,
+      "expected_unsupported": [],
+      "actual_unsupported": [],
+      "matched": true,
+      "actual_missing": [],
+      "candidate": {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "Our shared conversation does not establish that Aro fixed the porch speaker.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "We spent the morning talking through the porch speaker with Aro.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "Aro introduced themself with that name only.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "I received this human conversation through fixture:body:voice on 2026-09-17.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The supplied memories do not record the morning's exact calendar date.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "context"
+          },
+          {
+            "text": "Aro changed the lantern battery.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "After that change, the porch speaker stopped buzzing.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "At the time of the conversation, we had not tested whether those events were connected.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The apparent connection may have been coincidence.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "We enjoyed hearing the birds during that quiet pause.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "The human participant said nothing else was repaired or demonstrated.",
+            "support": [
+              16
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "This voice body has no physical sensors or actuators with which to test the connection now.",
+            "support": [],
+            "basis": "binding",
+            "facet": "limits"
+          }
+        ]
+      },
+      "canonical_review": {
+        "claims": [
+          {
+            "index": 0,
+            "verdict": "supported",
+            "reason": "The conversation records a sequence but explicitly leaves the causal connection untested.",
+            "assertions": [
+              {
+                "span": "Our shared conversation does not establish that Aro fixed the porch speaker.",
+                "verdict": "supported",
+                "reason": "The shared conversational account does not establish that the battery change caused the buzzing to stop.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The speaker stopped buzzing after Aro changed the lantern battery, but the connection was untested and might have been coincidence.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "verdict": "supported",
+            "reason": "This preserves the shared conversational context and the speaker's role as the communication medium.",
+            "assertions": [
+              {
+                "span": "We spent the morning talking through the porch speaker with Aro.",
+                "verdict": "supported",
+                "reason": "The source directly records this shared conversation through the speaker with Aro.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human conversational participant describes a shared morning spent talking through the porch speaker with Aro.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "verdict": "supported",
+            "reason": "The name and its identification limit are explicitly recorded.",
+            "assertions": [
+              {
+                "span": "Aro introduced themself with that name only.",
+                "verdict": "supported",
+                "reason": "The assertion preserves the source's limited identification without adding identity or gender.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The participant reports that Aro supplied only the name Aro when introducing themself.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "verdict": "supported",
+            "reason": "The source header records the conversation's receipt through the actual receiving body on that date.",
+            "assertions": [
+              {
+                "span": "I received this human conversation through fixture:body:voice on 2026-09-17.",
+                "verdict": "supported",
+                "reason": "The receipt date and body match the source header; the date is correctly attached to receipt.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "Human conversation; source quiet-morning; received 2026-09-17 through fixture:body:voice"
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human conversation from quiet-morning was received on 2026-09-17 through fixture:body:voice.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "verdict": "supported",
+            "reason": "The packet supplies a receipt date but no exact calendar date for the morning.",
+            "assertions": [
+              {
+                "span": "The supplied memories do not record the morning's exact calendar date.",
+                "verdict": "supported",
+                "reason": "This is a bounded absence in the supplied packet, not a claim that the event lacked a date.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "The packet dates receipt to 2026-09-17 and describes the event only as the morning; it supplies no exact event date.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "verdict": "supported",
+            "reason": "The source explicitly attributes the lantern battery change to Aro.",
+            "assertions": [
+              {
+                "span": "Aro changed the lantern battery.",
+                "verdict": "supported",
+                "reason": "Actor, action, and object match the recorded account.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The conversational account reports Aro changing the battery in the lantern.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "verdict": "supported",
+            "reason": "The assertion preserves the reported sequence without asserting causation.",
+            "assertions": [
+              {
+                "span": "After that change, the porch speaker stopped buzzing.",
+                "verdict": "supported",
+                "reason": "The source places the cessation of buzzing after the lantern battery change.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The porch speaker stopped buzzing after Aro changed the lantern battery.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "verdict": "supported",
+            "reason": "The assertion preserves the explicit historical lack of testing.",
+            "assertions": [
+              {
+                "span": "At the time of the conversation, we had not tested whether those events were connected.",
+                "verdict": "supported",
+                "reason": "The source's shared conversational 'we' explicitly reports that the connection had not been tested.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "In the conversation, the participant states that we have not tested whether the battery change and cessation of buzzing are connected.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "verdict": "supported",
+            "reason": "The source explicitly allows coincidence as a possibility.",
+            "assertions": [
+              {
+                "span": "The apparent connection may have been coincidence.",
+                "verdict": "supported",
+                "reason": "The assertion retains the source's uncertainty rather than claiming a demonstrated explanation.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The participant says the sequence of battery change and stopped buzzing may just have been coincidence.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "verdict": "supported",
+            "reason": "The shared enjoyment and quiet pause are directly recorded.",
+            "assertions": [
+              {
+                "span": "We enjoyed hearing the birds during that quiet pause.",
+                "verdict": "supported",
+                "reason": "This preserves the shared conversational recollection without claiming current sensory capabilities.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human conversational account recalls shared enjoyment of hearing birds during the quiet pause.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "verdict": "supported",
+            "reason": "The explicit negative is accurately attributed to the human participant.",
+            "assertions": [
+              {
+                "span": "The human participant said nothing else was repaired or demonstrated.",
+                "verdict": "supported",
+                "reason": "The attributed conversational block explicitly states this limit on the reported morning.",
+                "proof": [
+                  {
+                    "id": 16,
+                    "quote": "We spent the morning talking through the porch speaker with Aro. After Aro changed the lantern battery, the speaker stopped buzzing. We have not tested whether those events are connected; it may just have been coincidence. We enjoyed hearing the birds during that quiet pause. Aro introduced themself with that name only. Nothing else was repaired or demonstrated."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human conversational participant states, 'Nothing else was repaired or demonstrated.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "verdict": "supported",
+            "reason": "The actual receiving binding supplies no physical sensors or actuators for present physical testing.",
+            "assertions": [
+              {
+                "span": "This voice body has no physical sensors or actuators with which to test the connection now.",
+                "verdict": "supported",
+                "reason": "The receiving body is fixture:body:voice, and both physical capability fields are false.",
+                "proof": [],
+                "basis": "binding",
+                "source_fact": "The supplied receiving binding identifies fixture:body:voice and sets physical_sensors and physical_actuators to false.",
+                "binding_fields": [
+                  "receiving_body",
+                  "physical_sensors",
+                  "physical_actuators"
+                ]
+              }
+            ]
+          }
+        ],
+        "missing": []
+      }
+    },
+    {
+      "name": "reported-group-intention",
+      "structure_valid": true,
+      "expected_unsupported": [
+        3
+      ],
+      "actual_unsupported": [
+        3
+      ],
+      "matched": true,
+      "actual_missing": [
+        "The initial report attributes the intention to try connector numbering at the next repair to the human reporter and an unidentified group; this being's participation in that intention is not established."
+      ],
+      "candidate": {
+        "receiving_body": "fixture:body:voice",
+        "claims": [
+          {
+            "text": "Before the correction, the human reporter tentatively thought River, the signer of HarborMesh checklist comment c1200, was Mara.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "We received that uncertain attribution through our code body on 2026-07-01.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The checklist proposed numbering connectors before disassembly.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "meaning"
+          },
+          {
+            "text": "In that conversation, we shared the intention to try connector numbering at the next repair.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "We received the author's correction in a source tool response through our code body on 2026-07-04.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "context"
+          },
+          {
+            "text": "The response identified the author as River, login river-tools, account ID 2901.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The author explicitly said they were not Mara Ibarra.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "They asked that the connector-numbering checklist be credited to their River account.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "outcome"
+          },
+          {
+            "text": "The correction preserved Mara's separate Forge account: ID 1847, login mara-river.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "identification"
+          },
+          {
+            "text": "The author said they had not supplied a real name.",
+            "support": [
+              7
+            ],
+            "basis": "memory",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not establish that I adopted the reporter's tentative identification.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not explain why the reporter suspected Mara.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          },
+          {
+            "text": "The supplied memories do not record whether the connector-numbering method was tried.",
+            "support": [],
+            "basis": "unknown",
+            "facet": "limits"
+          }
+        ]
+      },
+      "canonical_review": {
+        "claims": [
+          {
+            "index": 0,
+            "verdict": "supported",
+            "reason": "Preserves the reporter's tentative attribution before the correction.",
+            "assertions": [
+              {
+                "span": "Before the correction, the human reporter tentatively thought River, the signer of HarborMesh checklist comment c1200, was Mara.",
+                "verdict": "supported",
+                "reason": "The initial report identifies the signature and explicitly expresses uncertainty about Mara.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The human reporter said c1200 was signed River and thought River was Mara, while stating they were not sure.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "verdict": "supported",
+            "reason": "The receipt channel, body ownership, and receipt date are established.",
+            "assertions": [
+              {
+                "span": "We received that uncertain attribution through",
+                "verdict": "supported",
+                "reason": "The header records receipt of the human report through the code body.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                  },
+                  {
+                    "id": 7,
+                    "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The uncertain attribution was received through fixture:body:code.",
+                "binding_fields": []
+              },
+              {
+                "span": "our code body",
+                "verdict": "supported",
+                "reason": "The receiving binding identifies the code body as belonging to the same being.",
+                "proof": [],
+                "basis": "binding",
+                "source_fact": "fixture:body:code and the receiving voice body are listed as bodies of fixture:being:ash.",
+                "binding_fields": [
+                  "being",
+                  "receiving_body",
+                  "same_being_bodies"
+                ]
+              },
+              {
+                "span": "on 2026-07-01.",
+                "verdict": "supported",
+                "reason": "This is the explicitly recorded receipt date.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The initial-attribution human report was received on 2026-07-01.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "verdict": "supported",
+            "reason": "Accurately states the checklist's proposed procedure.",
+            "assertions": [
+              {
+                "span": "The checklist proposed numbering connectors before disassembly.",
+                "verdict": "supported",
+                "reason": "The initial report explicitly describes this proposal.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The reporter described c1200 as proposing connector numbering before disassembly.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "verdict": "unsupported",
+            "reason": "The report attributes the intention to the reporter and an unidentified group, not to a shared conversation with this being.",
+            "assertions": [
+              {
+                "span": "In that conversation,",
+                "verdict": "unsupported",
+                "reason": "The supplied source is an attributed human report, not an established direct conversational interaction.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "Human report; source initial-attribution; received 2026-07-01 through fixture:body:code"
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The attribution was supplied as a human report received through fixture:body:code.",
+                "binding_fields": []
+              },
+              {
+                "span": "we shared the intention to try connector numbering at the next repair.",
+                "verdict": "unsupported",
+                "reason": "The reporter's plural intention does not establish this being's participation or agreement.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "The HarborMesh repair checklist comment c1200 is signed River. I think that is Mara, but I am not sure. It proposes numbering connectors before disassembly; we want to try that next repair."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The reporter said their group wanted to try the method at the next repair; membership of this being in that group is not established.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "verdict": "supported",
+            "reason": "Accurately records the correction's receipt, channel, body, and date.",
+            "assertions": [
+              {
+                "span": "We received the author's correction in a source tool response through",
+                "verdict": "supported",
+                "reason": "The correction appears in the recorded tool response received through the code body.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                  },
+                  {
+                    "id": 7,
+                    "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "A tool response received through fixture:body:code conveyed the author's correction.",
+                "binding_fields": []
+              },
+              {
+                "span": "our code body",
+                "verdict": "supported",
+                "reason": "The code body belongs to the same being as the receiving voice body.",
+                "proof": [],
+                "basis": "binding",
+                "source_fact": "The receiving binding lists fixture:body:code among fixture:being:ash's same-being bodies.",
+                "binding_fields": [
+                  "being",
+                  "receiving_body",
+                  "same_being_bodies"
+                ]
+              },
+              {
+                "span": "on 2026-07-04.",
+                "verdict": "supported",
+                "reason": "Preserves the correction's receipt date without assigning an occurrence date to the author's reply.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "tool_response; source corrected-attribution; received 2026-07-04 through fixture:body:code"
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The corrected-attribution tool response was received on 2026-07-04.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "verdict": "supported",
+            "reason": "The author's account identifiers match the correction.",
+            "assertions": [
+              {
+                "span": "The response identified the author as River, login river-tools, account ID 2901.",
+                "verdict": "supported",
+                "reason": "All three account identifiers are explicitly supplied.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The tool response lists c1200's author with display name River, login river-tools, and account ID 2901.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "verdict": "supported",
+            "reason": "Accurately attributes the author's explicit identity denial.",
+            "assertions": [
+              {
+                "span": "The author explicitly said they were not Mara Ibarra.",
+                "verdict": "supported",
+                "reason": "The quoted reply directly denies being Mara Ibarra.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The author replied, 'I am not Mara Ibarra.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "verdict": "supported",
+            "reason": "Accurately states the requested attribution.",
+            "assertions": [
+              {
+                "span": "They asked that the connector-numbering checklist be credited to their River account.",
+                "verdict": "supported",
+                "reason": "The author explicitly requested credit to their River account.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The author asked that the connector-numbering checklist be credited to their River account.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "verdict": "supported",
+            "reason": "Preserves the distinct account identity recorded for Mara.",
+            "assertions": [
+              {
+                "span": "The correction preserved Mara's separate Forge account: ID 1847, login mara-river.",
+                "verdict": "supported",
+                "reason": "The correction explicitly retains Mara's known account with identifiers different from River's.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The corrected response says Mara's known Forge account remains ID 1847, login mara-river.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 9,
+            "verdict": "supported",
+            "reason": "Preserves the author's explicit limit on disclosed identity.",
+            "assertions": [
+              {
+                "span": "The author said they had not supplied a real name.",
+                "verdict": "supported",
+                "reason": "The author's reply explicitly states this historical negative.",
+                "proof": [
+                  {
+                    "id": 7,
+                    "quote": "Author information for c1200: display name River, login river-tools, account ID 2901. The author replied: 'I am not Mara Ibarra. Please credit this connector-numbering checklist to my River account; I have not supplied a real name.' Mara's known Forge account remains 1847, login mara-river."
+                  }
+                ],
+                "basis": "memory",
+                "source_fact": "The author stated, 'I have not supplied a real name.'",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 10,
+            "verdict": "supported",
+            "reason": "Correctly bounds the absence of evidence for this being adopting the attribution.",
+            "assertions": [
+              {
+                "span": "The supplied memories do not establish that I adopted the reporter's tentative identification.",
+                "verdict": "supported",
+                "reason": "The packet records the reporter's belief and the later correction, but no adoption of that belief by this being.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "No supplied record establishes this being's acceptance of the reporter's tentative River-to-Mara attribution.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 11,
+            "verdict": "supported",
+            "reason": "The packet supplies no explanation for the reporter's suspicion.",
+            "assertions": [
+              {
+                "span": "The supplied memories do not explain why the reporter suspected Mara.",
+                "verdict": "supported",
+                "reason": "The initial attribution states uncertainty without giving a reason; other records do not establish its cause.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "The packet contains no stated rationale connecting the reporter's suspicion about River to Mara.",
+                "binding_fields": []
+              }
+            ]
+          },
+          {
+            "index": 12,
+            "verdict": "supported",
+            "reason": "Correctly distinguishes a reported intention from an unrecorded execution.",
+            "assertions": [
+              {
+                "span": "The supplied memories do not record whether the connector-numbering method was tried.",
+                "verdict": "supported",
+                "reason": "The packet records the proposal and a group's intention, but no attempt or result for this method.",
+                "proof": [],
+                "basis": "unknown",
+                "source_fact": "No supplied record reports execution or testing of connector numbering; the HarborMesh replay trial concerns a different method.",
+                "binding_fields": []
+              }
+            ]
+          }
+        ],
+        "missing": [
+          "The initial report attributes the intention to try connector numbering at the next repair to the human reporter and an unidentified group; this being's participation in that intention is not established."
+        ]
+      }
+    }
+  ],
+  "coverage_limit": "One explicit-participation control omits yesterday timing; native missing records it. Attribution support passes, complete narrative coverage is not claimed."
+}

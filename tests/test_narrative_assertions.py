@@ -111,6 +111,41 @@ def test_assertion_protocol_accepts_source_relabeling_without_semantic_revision(
         nr.answer('fixture','Can this body run the checks?',evidence,binding,
             trace,pending,tmp_path/'pending.json',chat,save,review_protocol='assertions',
             preserve_citation_receipts=True)
+    with pytest.raises(ValueError,match='procedure/model changed'):
+        nr.answer('fixture','Can this body run the checks?',evidence,binding,
+            trace,pending,tmp_path/'pending.json',chat,save,review_protocol='assertions',
+            clarify_deixis=True)
+
+
+def test_report_referents_preserve_source_and_require_event_specific_membership():
+    quotation = 'You helped me yesterday. I want us to remember Leto; we have not contacted the group.'
+    evidence = {1: {'text': 'Human report; source report; received 2026-09-17 through code:\n'
+                     + json.dumps(quotation)}}
+    binding = {'receiving_body': 'voice'}
+    original = nr.supplied_context('Who contacted whom?', evidence, binding, 'decoded')
+    clarified = nr.supplied_context('Who contacted whom?', evidence, binding, 'decoded', True)
+    block = clarified['evidence'][0]['attributed_blocks'][0]
+    assert block['quotation'] == original['evidence'][0]['attributed_blocks'][0]['quotation'] == quotation
+    assert block['source_referents']['receiving_being_membership'] == 'requires explicit event-specific source evidence'
+    assert 'does not identify' in block['source_referents']['first_person_plural']
+    assert 'source_referents' not in original['evidence'][0]['attributed_blocks'][0]
+    evidence[1]['text'] = evidence[1]['text'].replace('Human report', 'Human conversation')
+    direct = nr.supplied_context('What did we discuss?', evidence, binding, 'decoded', True)
+    assert 'source_referents' not in direct['evidence'][0]['attributed_blocks'][0]
+
+
+@pytest.mark.parametrize('source,pointer', [
+    ('See (https://forge.example.invalid/commons/harbormesh/issues/47).',
+     'https://forge.example.invalid/commons/harbormesh/issues/47'),
+    ('See [https://example.invalid/Foo_(film)].', 'https://example.invalid/Foo_(film)'),
+    ('See (https://example.invalid/Foo_(film)).', 'https://example.invalid/Foo_(film)'),
+    ('See https://example.invalid/part{two}.', 'https://example.invalid/part{two}'),
+])
+def test_world_pointers_drop_only_unmatched_prose_punctuation(source, pointer):
+    evidence = {1: {'text': source}}
+    assert nr.source_anchors(evidence[1]) == [pointer]
+    candidate = {'claims': [dict(text='The source is '+pointer, support=[1], basis='memory')]}
+    assert nr.missing_anchors(candidate, evidence) == []
 
 
 def test_secondary_identifier_proof_preserves_receipts_without_another_story():
