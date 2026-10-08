@@ -81,6 +81,27 @@ def test_temporal_metadata_does_not_invent_an_unavailable_native_field(pilot):
         pilot.answer_evidence(packs,[],'yes')
 
 
+def test_joint_projection_is_bound_to_selected_procedure_and_preserves_sources(pilot,tmp_path):
+    evidence={1:{'text':'Running the remembered checks requires runtime tools.'}}
+    binding={'receiving_body':'voice','repository_runtime_access':False}
+    candidate={'receiving_body':'voice','claims':[dict(text='I cannot run those checks here.',basis='binding',support=[],facet='limits')]}
+    raw={'claims':[dict(index=0,verdict='supported',reason='Joint premises.',assertions=[dict(
+        span=candidate['claims'][0]['text'],basis='memory',source_fact='Checks need tools; current runtime is unavailable.',
+        proof=[{'id':1,'passage':0}],binding_fields=['repository_runtime_access'],verdict='supported',reason='Remembered dependency plus actual capability.')])],'missing':[]}
+    state={}
+    def chat(_model,_messages,trace):
+        return raw if trace.phase=='narrative_review' else candidate
+    result=pilot.narrative_recall.answer('fixture','Can you run the checks?',evidence,binding,
+        SimpleNamespace(phase='recall'),state,tmp_path/'pending.json',chat,pilot.save,
+        review_protocol='assertions',allow_joint_support=True,review_effort='medium')
+    assert result['claims'][0]['basis']=='mixed' and result['claims'][0]['support']==[1]
+    assert result['text']==candidate['claims'][0]['text']
+    assert pilot.verify_narrative_answer(result,state,evidence,binding)==result
+    forged=dict(result,joint_support_protocol='other')
+    with pytest.raises(ValueError,match='accepted procedure'):
+        pilot.verify_narrative_answer(forged,state,evidence,binding)
+
+
 def test_trace_survives_rejected_response(pilot, tmp_path, monkeypatch):
     path = tmp_path/'trace.json'
     trace = pilot.Trace(path)

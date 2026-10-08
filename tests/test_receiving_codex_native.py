@@ -87,6 +87,31 @@ def test_review_and_revision_preserve_only_explicit_task_transcript(native, tmp_
         native.command(request, catalog, tmp_path, tmp_path)
 
 
+def test_medium_is_an_explicit_review_only_profile_with_actual_receipt_effort(native, tmp_path):
+    _path, request, catalog = inputs(native, tmp_path)
+    request['reasoning_effort'] = 'medium'
+    with pytest.raises(ValueError, match='medium review profile'):
+        native.command(request, catalog, tmp_path, tmp_path)
+    request['phase'] = 'narrative_review'
+    argv, _stdin = native.command(request, catalog, tmp_path, tmp_path)
+    assert 'model_reasoning_effort="medium"' in argv
+    path = tmp_path/(native.exchange.pilot.digest(request)+'.json')
+    native.exchange.pilot.save(path, request)
+    with pytest.raises(ValueError, match='medium reasoning support'):
+        native.dispatch(path, tmp_path, catalog, lambda *_a, **_k:pytest.fail('dispatched'))
+    data = json.loads(catalog.read_text())
+    data['models'][0]['supported_reasoning_levels'] = [{'effort':'medium'}]
+    native.exchange.pilot.save(catalog, data)
+    credential = tmp_path/'fixture-auth.json'; credential.write_text('{}')
+    def runner(argv, **kwargs):
+        assert 'model_reasoning_effort="medium"' in argv
+        events = [dict(type='item.completed', item=dict(type='agent_message', text='{}')),
+                  dict(type='turn.completed', usage=dict(input_tokens=10, output_tokens=2))]
+        return SimpleNamespace(returncode=0, stdout='\n'.join(map(json.dumps, events)), stderr='')
+    receipt = native.dispatch(path, tmp_path, catalog, runner, credential)
+    assert json.loads(receipt.read_text())['reasoning_effort'] == 'medium'
+
+
 def test_unsupported_model_or_tool_capable_catalog_never_dispatches(native, tmp_path):
     path, request, catalog = inputs(native, tmp_path)
     request['model'] = 'openai/gpt-6.1-sol'

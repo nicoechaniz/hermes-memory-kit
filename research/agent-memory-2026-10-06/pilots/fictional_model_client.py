@@ -14,7 +14,7 @@ class Client:
     def __init__(self, root, fixture, api_key, catalog, *, operation_effort='low',
                  generation_model='deepseek-flash', review_model='gpt-6.1-sol',
                  revision_model='gpt-6.1-sol', dispatcher=None, operation_output_limit=None,
-                 review_protocol='passages'):
+                 review_protocol='passages', review_effort='low'):
         self.root, self.catalog = Path(root), Path(catalog).resolve()
         self.key, self.dispatcher = api_key, dispatcher
         corpus = json.loads(Path(fixture).read_text())
@@ -23,6 +23,9 @@ class Client:
         if generation_model != 'deepseek-flash' or review_model != 'gpt-6.1-sol' or revision_model != 'gpt-6.1-sol':
             raise ValueError('explicit current Flash/native-Sol candidate roles required')
         self.operation_effort = operation_effort
+        if review_effort not in {'low','medium'}:
+            raise ValueError('explicit native low or medium verification effort required')
+        self.review_effort = review_effort
         if review_protocol not in {'passages','assertions'}:
             raise ValueError('explicit passages or assertions review protocol required')
         self.review_protocol = review_protocol
@@ -42,6 +45,8 @@ class Client:
             catalog_sha256=api.exchange.checksum(self.catalog),tools_allowed=False,native_memory_allowed=False)
         if operation_output_limit is not None:
             frozen['operation_output_limit'] = operation_output_limit
+        if review_effort != 'low':
+            frozen['review_effort'] = review_effort
         self.root.mkdir(parents=True,exist_ok=True,mode=0o700)
         path = self.root/'client-conditions.json'
         if path.exists() and json.loads(path.read_text()) != frozen:
@@ -62,7 +67,7 @@ class Client:
                 expected_protocol = 'assertions/v2' if self.review_protocol == 'assertions' else 'passages/v1'
                 if protocol != expected_protocol:
                     raise ValueError('narrative review does not match frozen support protocol')
-            transport = api.exchange.FileExchange(root,'low','low')
+            transport = api.exchange.FileExchange(root,'low',self.review_effort)
             try:
                 return transport(model,messages,trace)
             except api.exchange.ResponsePending as pending:

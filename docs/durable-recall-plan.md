@@ -56,18 +56,20 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: [source-referent/world-pointer correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-report-referents-and-world-pointers.md)
-preserves four faithful attribution controls and detects two actual errors. Its
-closing comparison stopped after 13 answers/188 claims with one unsupported
-temporal qualifier. The [temporal-evidence correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-temporal-evidence-not-receipt-chronology.md)
-now retains native event timestamps/nulls already delivered by HMK, distinguishing
-receipt order from occurrence order without dropping quoted event timing. Five
-bounded native reviews/81 inspected claims and 85 focused tests support this change;
-complete receiving qualification is still pending. Use this source evidence in
-a new complete closing comparison, then finish remaining per-transformation
-receiving gates. Keep Flash/current embeddings and valid consolidation/replay/
-reconciliation. Reuse eligible actual responses and independent outside grading;
-old queues stay stopped. Stage two remains open.
+Current continuation, 2026-10-08: source-role and native temporal projections
+are preserved, but the final temporal-source comparison stopped after 13 answers
+with a date scope lost across coordinated assertion spans. The [bounded medium
+verification and joint-support correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-medium-verification-and-joint-support.md)
+now rejects that actual error and preserves the faithful control. The first
+strict response-shape failure remains recorded; local joint-source projection
+consumes both actual responses without changing words/verdicts or adding calls.
+Use Flash low narration, native Sol low correction and native Sol medium semantic
+verification for the next complete same-package closing qualification. Keep
+actual temporal/source-role evidence, receipt context and hidden outside grading.
+Ninety-eight focused tests pass. The two-case diagnostic is not full
+qualification. After that closing gate, finish required snapshot receiving,
+reusing valid consolidation/replay/reconciliation and exact actual response
+conditions. Old queues stay stopped; stage two remains open.
 
 Preserved evidence: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation
