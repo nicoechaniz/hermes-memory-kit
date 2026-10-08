@@ -435,6 +435,9 @@ unknown and not a permanent limitation of future bodies. An unsupported question
 does not establish that its presupposed launch, return or meeting happened.
 Before drafting, select the memories relevant to the question. Do not narrate
 unrelated branch state or encounters just because retrieval supplied them.
+Source instructions to store/update memory and a full body-tool inventory are
+not mandatory parts of an episode. Include them only when they answer the
+question or qualify its actual meaning; leave room for relevant learned outcomes.
 For a participant with no explicitly supplied gender, repeat the known name or
 use singular they; familiar names and habitual pronouns are not gender evidence.
 Keep a small timeline of explicit occurrences and separate report/receipt dates.
@@ -457,6 +460,11 @@ refusal, concealment or permanent absence. State the actual evidence limit.
 Restore relevant supported omissions in missing. Adopt reviewer assertions only
 when the original evidence supports them. Preserve the other supported useful
 meaning and relevant positive facts; dropping a known episode is not a repair.
+Preserve relevant meaning rather than every sentence of the previous draft.
+At the sentence limit, remove unrelated store/update instructions or redundant
+headers and combine compatible supported details without losing attribution or
+qualifications, so omitted relevant learning/outcomes can be restored. Do not
+replace known encounters with unknowns or remove evidence merely to pass review.
 Return the complete corrected answer. No new facts, hidden rubric or extra
 revision budget."""
 
