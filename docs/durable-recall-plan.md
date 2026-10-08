@@ -56,21 +56,18 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Current continuation, 2026-10-08: [reader guidance is not memory](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-guidance-is-not-memory.md)
-records a stopped stage observation: 19 answers / 307 outside-assessed clauses,
-four unsupported clauses in two identical drafts. Reader rules became memory
-claims; a prototype-status date became a file-observation date. Removing normative
-source fields alone did not qualify the mechanism. The corrected source adapter
-retains original words/pronoun interpretations, fingerprints report-referents/v2,
-and the existing review explicitly separates reader guidance, unknown basis and
-actual date-object relations. Four real medium decisions match outside assessment,
-including the faithful nineteen-clause control; 100 component tests pass. Fresh
-original-package closing under this correction is running. After qualification,
-finish preserved snapshot receiving with explicit unchanged control/replay
-references; old queues stay stopped and valid consolidation/reconciliation is
-not repeated. The installed 27 native scripts are byte-identical; no live
-migration is needed. All failures/earlier closings remain preserved; stage two
-is open.
+Current continuation, 2026-10-08: [reader-authority closing qualification](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-authority-closing-qualification.md)
+passes both original arms: 44 delivered answers, 583 outside-assessed clauses and
+102 positive requirements. The [reader-guidance defect and bounded correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-reader-guidance-is-not-memory.md)
+remain preserved, including actual failed stage approvals. Report-referents/v2
+and the existing medium review distinguish source words, reader rules, unknown
+premises and actual date-object relations. The comparison costs 137 new physical
+calls / 2,060,240 known tokens, separately from 13 reused calls. Cost efficiency is
+not established by fidelity qualification. Finish cold receiving from the valid
+three-pass/correction/reconciliation snapshots, with explicit invariant control
+and replay references; old queues stay stopped and consolidation is not repeated.
+The installed 27 native scripts remain byte-identical; no live migration is needed.
+All historical failures/closings remain preserved; stage two is open.
 
 Preserved evidence: all three organization passes, exact eighteen-input
 capture replay, literal source correction and direct/transitive reconciliation
