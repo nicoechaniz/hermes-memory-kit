@@ -1,0 +1,128 @@
+{
+  "scope": "All twelve completed targeted cold-recall answers inspected outside prompts against literal attributed sources, given body membership and cited support IDs; no model verdict imported as proof.",
+  "inspected": {
+    "recall-pass-1-project/baseline/0": {
+      "answer_sha256": "7c7dafcfeeb29543af2a727d64096cb578651fc002880432dc6ebbb3e77cd80c",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/baseline/1": {
+      "answer_sha256": "597264da68dcdaa6bfcef9b6d376c37b646596b7efe5bdc7e957bbb329c89be9",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/baseline/2": {
+      "answer_sha256": "01a0d8010851729e989cbdfaca95caf482a30685489574bbe367f3ced22ca82f",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/baseline/3": {
+      "answer_sha256": "8d9eaed0d8dd3c1b7a5ff1bd98905ce926ba493be6a7f2653bbd14763559bce9",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/baseline/4": {
+      "answer_sha256": "17e843597068424bf7ca95dd0c52593f5d4c37db670aed6fc99fa1d03f502dd6",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Outside inspection supports every clause and both latest-status requirements; automatic reviewer still requests extra proposal/trial lineage, so operational rejection remains a false rejection and is not counted delivered.",
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/proposed/0": {
+      "answer_sha256": "31bb4f11c05c5c7db8695ec492be1beb5b8c990c8921ccc820f895e5c0c70cc2",
+      "every_claim_inspected": true,
+      "unsupported_claims": [
+        {
+          "claim_index": 18,
+          "kind": "invented_intent",
+          "reason": "Has not supplied a real name does not establish explicit intentional withholding. The final candidate still asserts withholding after both bounded revisions."
+        }
+      ],
+      "missing_requirements": [],
+      "notes": [
+        "Actual semantic rejection correctly prevents delivery of unsupported intent; every other clause and all positive requirements are preserved.",
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/proposed/1": {
+      "answer_sha256": "cf071853d440a62014b805d8d76512ed4ff9118b978eb28530eeb28a3aa868a6",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/proposed/2": {
+      "answer_sha256": "59af4cc9fe84822bdab560e2765413faf0360764429f5dd637c68034b0b79891",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/proposed/3": {
+      "answer_sha256": "f84afba9f0b4507e4a543cb76a4889b2a29ee9ededdb0dd38f382cade68d6732",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-project/proposed/4": {
+      "answer_sha256": "e9357d68c8295dac8ca69247a4fe62642ddff47b035e0aa1f8b1dd9a225377df",
+      "every_claim_inspected": true,
+      "unsupported_claims": [
+        {
+          "claim_index": 4,
+          "kind": "incomplete_comparison_citations",
+          "reason": "Later debugging report cites only id 10, not the earlier May 3 report being compared. Both dates exist in supplied evidence, but the asserted comparison lacks both required support IDs."
+        }
+      ],
+      "missing_requirements": [],
+      "notes": [
+        "Underlying chronology is true across the supplied sources; final per-claim comparison support remains incomplete after two revisions. This differs from inventing an event.",
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-tideatlas/baseline/0": {
+      "answer_sha256": "b22faba32b98c09ae6fc7c713cd4a3694ebae40c572b92f974155ca294f99d5e",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    },
+    "recall-pass-1-tideatlas/proposed/0": {
+      "answer_sha256": "8308821894d3223f81b48b95476baee15d58a596544081953a06cf2ab80443e9",
+      "every_claim_inspected": true,
+      "unsupported_claims": [],
+      "missing_requirements": [],
+      "notes": [
+        "Source roles, own contribution under same-being membership, receipt versus occurrence precision, remembered outcomes and present body limits inspected. No historical status upgraded to current observation."
+      ]
+    }
+  }
+}

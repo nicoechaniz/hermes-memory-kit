@@ -410,6 +410,9 @@ synthesis override a supplied correction or discard the original corrected histo
 A created object is not delivery; no observed receipt/access is not proof of
 non-receipt. Say the supplied actual failure and bound unknown acceptance or
 attendance to the records. Distinguish sequence from demonstrated cause.
+Not supplied, not recorded or not observed describes the available evidence.
+It does not establish deliberate withholding, refusal, concealment or never
+having acted. Preserve that distinction when paraphrasing negative evidence.
 Historical project status is LAST KNOWN AS OF ITS SOURCE DATE, never verified
 current status. Give the recorded entry point for checking present state.
 An unsupported detail must not erase a known qualified episode. Unknowns are
@@ -443,6 +446,19 @@ encounter we missed, preserve the reporter's experience without making it ours.
 Separate sentences about remembered learning from sentences about current-body
 tools, so memory support and the receiving binding each have their proper basis.
 """
+
+REVISION = """Revise the answer against the SAME supplied evidence.
+For each unsupported assertion, inspect the cited original passage and the
+reviewer's precise objection. Change the asserted fact or its cited support;
+do not repeat the disputed assertion using an equally unsupported synonym.
+For a comparison or chronology using two sources, cite both supporting sources.
+Not supplied/recorded/observed does not establish intentional withholding,
+refusal, concealment or permanent absence. State the actual evidence limit.
+Restore relevant supported omissions in missing. Adopt reviewer assertions only
+when the original evidence supports them. Preserve the other supported useful
+meaning and relevant positive facts; dropping a known episode is not a repair.
+Return the complete corrected answer. No new facts, hidden rubric or extra
+revision budget."""
 
 REVIEW = '''Review every sentence against its cited supplied memory and the
 receiving binding. Candidate prose is not evidence. Return ONLY JSON with claims:
@@ -588,7 +604,7 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
         sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     if state.get('context_sha256', fingerprint) != fingerprint:
         raise ValueError('narrative context changed; preserve pending work and start a new comparison')
-    procedure_settings = dict(model=model, generation=GENERATION,
+    procedure_settings = dict(model=model, generation=GENERATION, revision=REVISION,
         review=review_instructions, protocol='receiving-phase/v1',
         validation_protocol='narrative-shape/v3')
     if source_representation != 'full':
@@ -720,11 +736,7 @@ def answer(model, query, evidence, binding, trace, pending, checkpoint, chat, sa
                     raise_rejection()
                 state['error'] = 'unsupported or incomplete narrative'
                 progress['messages'].extend([dict(role='assistant', content=json.dumps(candidate)),
-                    dict(role='user', content=json.dumps(dict(review=review))+
-                        '\nRevise the answer against the SAME supplied evidence. Correct attribution '
-                        'and qualifications; restore relevant supported omissions in missing. Do not '
-                        'adopt reviewer assertions unless the original evidence supports them. '
-                        'Retain supported useful meaning. No new facts or rubric.')])
+                    dict(role='user', content=json.dumps(dict(review=review))+'\n'+REVISION)])
                 progress.update(phase='generation', repair=0, revision=revision+1)
                 save(checkpoint, pending)
             else:
