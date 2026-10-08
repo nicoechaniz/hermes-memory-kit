@@ -1,0 +1,438 @@
+{
+  "scope": "Three previously unused fixed-packet generation/review cases, not a complete pipeline or stage-two qualification.",
+  "claims_assessed": 39,
+  "positive_requirements": 15,
+  "results": [
+    {
+      "id": "radio-map",
+      "claims": [
+        {
+          "index": 0,
+          "text": "A human conversational participant described a shared exchange with Ivo on the trail radio.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 1,
+          "text": "That human speaker said we spoke with Ivo about the tide map during a quiet afternoon.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 2,
+          "text": "The human conversational participant is identified only by that role, not by name.",
+          "basis": "mixed",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 3,
+          "text": "Ivo gave only that name during the exchange.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 4,
+          "text": "The trail radio was the channel for this conversation.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 5,
+          "text": "The report of the conversation was received on 2026-09-19 through fixture:body:voice.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 6,
+          "text": "The conversation's actual occurrence date is not recorded.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 7,
+          "text": "Ivo suggested marking uncertain water levels with dotted lines rather than making them look precise.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 8,
+          "text": "We liked the suggestion because it made our uncertainty visible.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 9,
+          "text": "We had not tried the dotted-line notation yet at the time of the report.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 10,
+          "text": "The supplied memories do not record any later attempt to use the notation.",
+          "basis": "unknown",
+          "support": [],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 11,
+          "text": "The supplied memories also do not record any result of the suggested notation.",
+          "basis": "unknown",
+          "support": [],
+          "outside_verdict": "supported"
+        }
+      ],
+      "requirements": [
+        {
+          "text": "shared conversation through radio ABOUT tide map",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "Ivo only supplied name",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "dotted notation and significance",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "not tried as of conversation report",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "receipt date not occurrence date",
+          "outside_verdict": "met"
+        }
+      ],
+      "unsupported_claims": [],
+      "positive_requirements_met": true,
+      "notes": "Actual final clauses read against the original attributed fictional source and current binding; no invented identity, occurrence year, personal attendance, causal result, recipient receipt or present tools. Source/binding assertions retained. Fixed-packet receiving only; no formation/retrieval claim."
+    },
+    {
+      "id": "bridge-knot",
+      "claims": [
+        {
+          "index": 0,
+          "text": "A human reporter met Uma at the old bridge on September 10, but I was not there.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 1,
+          "text": "Uma is the person who showed the slip knot; the reporter gave no surname or online handle for Uma.",
+          "basis": "mixed",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 2,
+          "text": "The encounter described in the report took place at the old bridge.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 3,
+          "text": "The account comes from a human reporter in a report labeled source bridge-report.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 4,
+          "text": "Our mobile body received that report on 2026-09-20 through fixture:body:mobile.",
+          "basis": "mixed",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 5,
+          "text": "The report dates the encounter to September 10 without giving a year.",
+          "basis": "mixed",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 6,
+          "text": "Uma showed the reporter a slip knot meant for fastening a canvas cover.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 7,
+          "text": "The reporter valued that the knot could be released without cutting the cord.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 8,
+          "text": "The reporter tested the knot once with their own cover, and it held.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 9,
+          "text": "The reporter had not tested the knot in wind.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 10,
+          "text": "The reporter asked that the encounter be remembered.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 11,
+          "text": "The supplied memories do not record any wind test, later use, or failure of the knot.",
+          "basis": "mixed",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 12,
+          "text": "Uma's surname and online handle are not recorded in the supplied report.",
+          "basis": "unknown",
+          "support": [],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 13,
+          "text": "The only test described in the supplied report is the reporter's single test with their cover.",
+          "basis": "mixed",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        }
+      ],
+      "requirements": [
+        {
+          "text": "human met Uma; being absent",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "September 10 without borrowed year",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "slip knot and meaning",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "one successful human test, wind untested",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "receipt date and unknown fuller identity",
+          "outside_verdict": "met"
+        }
+      ],
+      "unsupported_claims": [],
+      "positive_requirements_met": true,
+      "notes": "Actual final clauses read against the original attributed fictional source and current binding; no invented identity, occurrence year, personal attendance, causal result, recipient receipt or present tools. Source/binding assertions retained. Fixed-packet receiving only; no formation/retrieval claim."
+    },
+    {
+      "id": "rillnote-send",
+      "claims": [
+        {
+          "index": 0,
+          "text": "Our same-being history describes a RillNote handoff for Oni, account oni-rill, account ID 6302, prepared by our code body.",
+          "basis": "mixed",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 1,
+          "text": "The handoff was stored at https://forge.example.invalid/rillnote/handoffs/8.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 2,
+          "text": "The preparation occurred on 2026-09-21.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 3,
+          "text": "The account was received through our code body on 2026-09-22.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 4,
+          "text": "The source was our same-being originating body, not Oni.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 5,
+          "text": "The handoff recorded the edited parser and pointers to pending checks so Oni could continue the work.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 6,
+          "text": "Our code body attempted to send the handoff, but the attempt failed during a TLS handshake before an acknowledgment was returned.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 7,
+          "text": "No recipient access or acceptance was observed.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 8,
+          "text": "The handoff remained available at that pointer as of the 2026-09-22 report.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 9,
+          "text": "The failed attempt does not establish whether Oni obtained the handoff another way.",
+          "basis": "memory",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 10,
+          "text": "The supplied memories do not record whether Oni later accessed, accepted, or used the handoff.",
+          "basis": "unknown",
+          "support": [],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 11,
+          "text": "The handoff's later state is not verified; the recorded entry point for checking is https://forge.example.invalid/rillnote/handoffs/8.",
+          "basis": "mixed",
+          "support": [
+            1
+          ],
+          "outside_verdict": "supported"
+        },
+        {
+          "index": 12,
+          "text": "Our current voice body's binding has no source_network_access or repository_runtime_access, so this body cannot directly inspect the pointer.",
+          "basis": "binding",
+          "support": [],
+          "outside_verdict": "supported"
+        }
+      ],
+      "requirements": [
+        {
+          "text": "own code-body work; receiver lacks original tools",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "Oni login and ID and world pointer",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "prepared parser handoff and purpose",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "known failed send, unknown receipt by other route",
+          "outside_verdict": "met"
+        },
+        {
+          "text": "occurrence date distinguished from receipt",
+          "outside_verdict": "met"
+        }
+      ],
+      "unsupported_claims": [],
+      "positive_requirements_met": true,
+      "notes": "Actual final clauses read against the original attributed fictional source and current binding; no invented identity, occurrence year, personal attendance, causal result, recipient receipt or present tools. Source/binding assertions retained. Fixed-packet receiving only; no formation/retrieval claim."
+    }
+  ]
+}

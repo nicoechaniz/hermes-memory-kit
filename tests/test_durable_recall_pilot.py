@@ -39,6 +39,28 @@ def test_equivalent_query_shapes_and_bounded_ids(pilot):
         'queries':['arrival evidence'],'expand_ids':[]}
 
 
+def test_pipeline_accepts_typed_source_projection_and_rejects_tampered_prose(pilot):
+    evidence={1:{'text':'The checks require runtime tools.'}}
+    binding={'receiving_body':'voice','repository_runtime_access':False}
+    candidate={'receiving_body':'voice','claims':[dict(text='The checks require runtime tools, which I lack here.',
+        basis='binding',support=[],facet='limits')]}
+    atoms=[dict(span='The checks require runtime tools,',basis='memory',source_fact=evidence[1]['text'],
+        proof=[{'id':1,'quote':evidence[1]['text']}],binding_fields=[]),
+        dict(span=' which I lack here.',basis='binding',source_fact='Current runtime access is false.',
+        proof=[],binding_fields=['repository_runtime_access'])]
+    for a in atoms:a.update(verdict='supported',reason='Actual supplied source.')
+    review={'claims':[dict(index=0,verdict='supported',reason='Supported clauses.',assertions=atoms)],'missing':[]}
+    state={'narrative':dict(accepted=candidate,accepted_review=review)}
+    answer=dict(pilot.narrative_recall.supported_claims(candidate,review),used_ids=[1],
+        text=candidate['claims'][0]['text'],semantic_review=review,review_is_proof=False,support_protocol='assertions/v2')
+    assert pilot.verify_narrative_answer(answer,state,evidence,binding)==answer
+    with pytest.raises(ValueError,match='accepted candidate/review'):
+        pilot.verify_narrative_answer(answer,{},evidence,binding)
+    answer['claims'][0]['text']='The checks already passed.'
+    with pytest.raises(ValueError,match='accepted source projection'):
+        pilot.verify_narrative_answer(answer,state,evidence,binding)
+
+
 def test_trace_survives_rejected_response(pilot, tmp_path, monkeypatch):
     path = tmp_path/'trace.json'
     trace = pilot.Trace(path)
