@@ -100,6 +100,11 @@ Sources remain preserved; this is an attributed synthesis, not another event.
 For procedural understanding, explain the learned method, its attributed origin,
 dated illustrative outcomes and where to follow the original evidence. Do not
 copy every participant/comment/timeline from already linked project accounts.
+Keep a short dated illustrative outcome and an original pointer for each
+application of the method. Leave detailed project chronology and participant
+inventories in their preserved linked accounts/episodes unless essential to the
+lesson itself. Details can leave this derived projection when their original
+linked source retains them; preserve the actual qualifier and history there.
 Use receiving_binding to interpret ownership; do not persist the receiving
 body's temporary tools, access flags or test-membership inventory as a learned
 method or a permanent being limitation. Retain source-established skill/tool

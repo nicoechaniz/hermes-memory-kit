@@ -1,0 +1,18 @@
+{
+  "scope": "Single retained faithful but operationally rejected candidate under the preserved V4 procedure; not a complete comparison or qualification.",
+  "every_claim_inspected": true,
+  "claims_assessed": 20,
+  "unsupported_factual_assertions": [],
+  "candidate_positive_requirements": [
+    "Agreement/prototype followed by reported April 30 trial",
+    "Human-reported successful replay",
+    "Rollout pause and unknown later outcome"
+  ],
+  "all_positive_requirements_met": true,
+  "operational_status": "rejected",
+  "delivered": false,
+  "reviewer_missing": [
+    "The later same-being debugging account received on 2026-08-05 reports examining HarborMesh replay failures and learning that retry counters were not evidence of delivered readings.",
+    "Checking the outage prototype produced a reusable method: distinguish enqueue, send attempt and receiver acknowledgment when debugging unreliable links. Its implementation is documented in docs/replay-debugging.md."
+  ]
+}

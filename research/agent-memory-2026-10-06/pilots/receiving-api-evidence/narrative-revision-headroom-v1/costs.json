@@ -1,0 +1,8 @@
+{
+  "physical_calls": 8,
+  "known_tokens": 134679,
+  "unknown_usage": 0,
+  "median_seconds": 42.33010467374697,
+  "billed_usd": null,
+  "scope": "Only this retained rejected question: planner, generation, reviews and bounded repairs/revisions; full-comparison and formation costs separately measured."
+}

@@ -56,6 +56,17 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
+Current continuation, 2026-10-08: two organization passes and three third-pass
+account writes are applied with native replay, original/history preservation and
+backup/restore verified. The final V5 receiving contract is frozen; its complete
+fresh comparison and finite immutable-snapshot recalls are pending outside
+grading. Finish third-pass understanding, exact capture replay, literal source
+correction and direct/transitive reconciliation, then close recall and measured
+compactness/cost gates. Preserve earlier diagnostics and false rejections without
+starting another prompt variant by default. The
+[revision headroom diagnostic](../research/agent-memory-2026-10-06/pilots/2026-10-08-narrative-revision-headroom.md)
+records the final guidance and its observed trigger. Stage two is not complete.
+
 The human selected the next implementation direction: retain HMK as the current
 durable-memory store, bring useful researched mechanisms into it, and then test
 native Codex memory alongside it. Alternative systems remain documented options;
