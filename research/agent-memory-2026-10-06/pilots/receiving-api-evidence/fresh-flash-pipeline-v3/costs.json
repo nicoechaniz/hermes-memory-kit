@@ -1,0 +1,118 @@
+{
+  "new_inference": {
+    "physical_attempts": 238,
+    "completed_calls": 238,
+    "other_receipt_states": {},
+    "known_usage": {
+      "prompt_tokens": 2344715,
+      "completion_tokens": 482378,
+      "total_tokens": 2827093
+    },
+    "attempts_with_unknown_usage": 0,
+    "billed_usd": null,
+    "median_completed_seconds": 21.904245261102915
+  },
+  "distinct_receiving_attempts_including_reused": {
+    "physical_attempts": 238,
+    "completed_calls": 238,
+    "other_receipt_states": {},
+    "known_usage": {
+      "prompt_tokens": 2344715,
+      "completion_tokens": 482378,
+      "total_tokens": 2827093
+    },
+    "attempts_with_unknown_usage": 0,
+    "billed_usd": null,
+    "median_completed_seconds": 21.904245261102915
+  },
+  "original_formation_inference": {
+    "physical_attempts": 72,
+    "completed_calls": 72,
+    "other_receipt_states": {},
+    "known_usage": {
+      "prompt_tokens": 366133,
+      "completion_tokens": 162036,
+      "total_tokens": 528169
+    },
+    "attempts_with_unknown_usage": 0,
+    "billed_usd": null,
+    "median_completed_seconds": 8.906727910973132
+  },
+  "by_provider_phase": {
+    "openai-codex-native/narrative_review": {
+      "physical_attempts": 99,
+      "completed_calls": 99,
+      "other_receipt_states": {},
+      "known_usage": {
+        "prompt_tokens": 1256121,
+        "completion_tokens": 178056,
+        "total_tokens": 1434177
+      },
+      "attempts_with_unknown_usage": 0,
+      "billed_usd": null,
+      "median_completed_seconds": 37.07029131054878
+    },
+    "deepseek/recall": {
+      "physical_attempts": 44,
+      "completed_calls": 44,
+      "other_receipt_states": {},
+      "known_usage": {
+        "prompt_tokens": 71102,
+        "completion_tokens": 33306,
+        "total_tokens": 104408
+      },
+      "attempts_with_unknown_usage": 0,
+      "billed_usd": null,
+      "median_completed_seconds": 3.781173984054476
+    },
+    "openai-codex-native/narrative_revision": {
+      "physical_attempts": 49,
+      "completed_calls": 49,
+      "other_receipt_states": {},
+      "known_usage": {
+        "prompt_tokens": 835673,
+        "completion_tokens": 26027,
+        "total_tokens": 861700
+      },
+      "attempts_with_unknown_usage": 0,
+      "billed_usd": null,
+      "median_completed_seconds": 12.357385370880365
+    },
+    "deepseek/narrative_generation": {
+      "physical_attempts": 44,
+      "completed_calls": 44,
+      "other_receipt_states": {},
+      "known_usage": {
+        "prompt_tokens": 157962,
+        "completion_tokens": 243544,
+        "total_tokens": 401506
+      },
+      "attempts_with_unknown_usage": 0,
+      "billed_usd": null,
+      "median_completed_seconds": 23.339398317039013
+    },
+    "openai-codex-native/narrative_generation": {
+      "physical_attempts": 2,
+      "completed_calls": 2,
+      "other_receipt_states": {},
+      "known_usage": {
+        "prompt_tokens": 23857,
+        "completion_tokens": 1445,
+        "total_tokens": 25302
+      },
+      "attempts_with_unknown_usage": 0,
+      "billed_usd": null,
+      "median_completed_seconds": 18.528159397654235
+    }
+  },
+  "embeddings": {
+    "new_attempts": 131,
+    "original_formation_attempts": 5,
+    "new_texts": 131,
+    "new_seconds": 30.932694886811078,
+    "usage_known": false,
+    "billed_usd": null
+  },
+  "native_subscription_conversion_unknown": true,
+  "original_started_receipt_is_preserved": true
+}
