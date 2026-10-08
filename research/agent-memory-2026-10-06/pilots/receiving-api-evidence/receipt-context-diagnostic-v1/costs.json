@@ -1,0 +1,10 @@
+{
+  "new_model_dispatches": 0,
+  "reused_observed_physical_calls": 5,
+  "reused_known_tokens": 80127,
+  "old_logical_narrative_steps": 7,
+  "new_logical_narrative_steps": 5,
+  "previous_physical_costs_retained": true,
+  "avoided_future_suffix": "One native semantic revision and review; historical completed costs are not refunded.",
+  "billed_usd": null
+}

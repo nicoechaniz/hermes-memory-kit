@@ -297,3 +297,17 @@ and verifies stale input is refused for new synthesis. Reconciliation must
 proceed in dependency order. These mechanical checks are not model-quality or
 stage-two qualification. Actual three-pass model proposals, independently graded
 recall after each transformation and the later correction remain required.
+
+### Original receipt context without mandatory extra stories
+
+The optional `preserve_citation_receipts=True` assertion-review procedure emits
+`citation_receipt_protocol: original-receipts/v1` and deterministic original
+source headers, speakers, receiving bodies and receipt dates, with source hashes.
+A secondary identity proof need not force narration of every episode in its
+record. Receipt dates may appear in that citation context; world entry points
+still must appear in the prose. Semantic review, every narrative requirement,
+occurrence-date precision and outside adjudication remain required. Metadata is
+not proof of a statement's meaning. It must exactly match supplied sources.
+The option changes the procedure fingerprint, so older checkpoints cannot be
+silently adopted. It is experimental and disabled by default. See the
+[observed rejection and bounded correction](../research/agent-memory-2026-10-06/pilots/2026-10-08-citation-receipts-without-forced-stories.md).

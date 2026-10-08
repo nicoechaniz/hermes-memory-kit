@@ -197,6 +197,10 @@ def verify_narrative_answer(value, pending, evidence, binding):
     narrative_recall.review_shape(review, candidate, evidence, binding, 'assertions')
     expected = narrative_recall.supported_claims(candidate, review)
     ids = list(dict.fromkeys(cid for c in expected['claims'] for cid in c['support']))
+    if 'citation_receipt_protocol' in value or 'citation_receipts' in value:
+        if (value.get('citation_receipt_protocol') != 'original-receipts/v1' or
+                value.get('citation_receipts') != narrative_recall.receipt_context(expected, evidence)):
+            raise ValueError('citation receipts differ from the original source projection')
     if (value.get('receiving_body') != expected['receiving_body'] or
             value.get('claims') != expected['claims'] or value.get('used_ids') != ids or
             value.get('text') != ' '.join(c['text'] for c in expected['claims']) or
