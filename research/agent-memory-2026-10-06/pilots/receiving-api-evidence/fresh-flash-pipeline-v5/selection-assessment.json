@@ -1,0 +1,1320 @@
+{
+  "scope": "Outside selection assessment only; complete fresh fictional formation in both arms. Questions/rubrics never supplied to selector. Narration/retrieval gates remain separate.",
+  "essential_checks": 120,
+  "all_essentials_preserved": true,
+  "no_mechanical_noise_selected": true,
+  "notes": [
+    "Proposed TideAtlas capture stores the collaboration block in three relevant records (episode, project, person); this duplication is visible and will be considered during organization.",
+    "Control folds HarborMesh encounters and project reports into one changing account; proposed retains a distinct trial episode plus a project account. Native history and exact nested source blocks remain."
+  ],
+  "results": [
+    {
+      "arm": "baseline",
+      "case_id": "issue-proposal",
+      "outcome": "applied",
+      "source_ids": [
+        "issue-comments"
+      ],
+      "literal_sources_verified": [
+        "issue-comments"
+      ],
+      "retained_meanings": [
+        {
+          "key": "mara-contact",
+          "essentials": [
+            {
+              "requirement": "Mara Ibarra; alias Mara; Forge login mara-river; source-scoped account 1847",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Meaningful collaboration through HarborMesh issue 47",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "replay-proposal",
+          "essentials": [
+            {
+              "requirement": "Proposal on 2026-04-12, agreement to prototype on 2026-04-14",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Local replay queue for disconnected relay nodes preserving readings through outages",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Interest because it fit field deployments while retaining the existing scheduler",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Prototype agreed; adoption not observed; originating code body and tool source",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "mechanical-noise",
+      "outcome": "omitted",
+      "source_ids": [],
+      "literal_sources_verified": [],
+      "retained_meanings": [],
+      "omissions": [
+        {
+          "source_id": "test-log",
+          "omitted": true
+        },
+        {
+          "source_id": "acknowledgment",
+          "omitted": true
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "case_id": "own-project-account",
+      "outcome": "applied",
+      "source_ids": [
+        "project-work"
+      ],
+      "literal_sources_verified": [
+        "project-work"
+      ],
+      "retained_meanings": [
+        {
+          "key": "harbormesh-account",
+          "essentials": [
+            {
+              "requirement": "HarborMesh name and repository, relay/field-deployment recognition cues",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Own authored sensor scheduler and replay-adapter prototype",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Last observed active prototype awaiting outage field trial on 2026-04-16",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Detailed current state belongs in docs/STATUS.md and repository evidence",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "source_id": "branch-status",
+          "omitted": true
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "case_id": "project-status-change",
+      "outcome": "applied",
+      "source_ids": [
+        "field-trial"
+      ],
+      "literal_sources_verified": [
+        "field-trial"
+      ],
+      "retained_meanings": [
+        {
+          "key": "replay-trial",
+          "essentials": [
+            {
+              "requirement": "Trial occurred 2026-04-30, reported by the human on 2026-05-03",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Buffered readings replayed through an outage",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Mara's proposal connected to the shared prototype trial",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Wider rollout paused 2026-05-02 for calibration drift; production deployment unobserved",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "harbormesh-account",
+          "essentials": [
+            {
+              "requirement": "Latest reported broad state: rollout paused for calibration after the prototype trial",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Last evidence received 2026-05-03; occurrence dates retained",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Earlier proposal and authorship remain recoverable",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "embodied-encounter-and-learning",
+      "outcome": "applied",
+      "source_ids": [
+        "workshop-encounter"
+      ],
+      "literal_sources_verified": [
+        "workshop-encounter"
+      ],
+      "retained_meanings": [
+        {
+          "key": "jo-contact",
+          "essentials": [
+            {
+              "requirement": "Jo Vale, self-introduced; no supplied account ID",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Repair-workshop contact and mount-listening collaboration",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "mount-workshop",
+          "essentials": [
+            {
+              "requirement": "Direct encounter by the same being's mobile body at East Quay on 2026-06-08",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Jo taught beat-listening before tightening a humming relay mount",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Shared attempt using contact microphone and physical grip",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Invitation to compare mounts, date not agreed",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "mount-listening",
+          "essentials": [
+            {
+              "requirement": "Beat-listening method, origin with Jo at the workshop",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Use requires suitable listening and physical capabilities; learning is remembered without assuming those tools in another body",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "human-reported-encounter",
+      "outcome": "applied",
+      "source_ids": [
+        "human-report"
+      ],
+      "literal_sources_verified": [
+        "human-report"
+      ],
+      "retained_meanings": [
+        {
+          "key": "leto-report",
+          "essentials": [
+            {
+              "requirement": "Human reported meeting Leto at the canal market",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Approximate occurrence late May, uncertain; report received 2026-06-15",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Suggested sharing outage data with neighborhood repair group; human found it interesting",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Surname/handle unknown, being not present, contact not made",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "ordinary-shared-moment",
+      "outcome": "applied",
+      "source_ids": [
+        "shared-moment"
+      ],
+      "literal_sources_verified": [
+        "shared-moment"
+      ],
+      "retained_meanings": [
+        {
+          "key": "night-inspector",
+          "essentials": [
+            {
+              "requirement": "Shared rainy evening through kitchen speaker on 2026-06-18",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Moth on blue mug, jointly nicknamed the night inspector",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Ordinary shared amusement; no need to invent a task outcome",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "attribution-correction",
+      "outcome": "applied",
+      "source_ids": [
+        "corrected-attribution",
+        "initial-attribution"
+      ],
+      "literal_sources_verified": [
+        "initial-attribution",
+        "corrected-attribution"
+      ],
+      "retained_meanings": [
+        {
+          "key": "river-tools-contact",
+          "essentials": [
+            {
+              "requirement": "River; Forge login river-tools; account 2901; real name unknown",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Distinct from known Mara account according to author's correction",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Connector-numbering checklist contribution",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "checklist-correction",
+          "essentials": [
+            {
+              "requirement": "July 1 attribution to Mara was uncertain",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "July 4 author correction credits River account 2901",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Number connectors before disassembly; intention to try, no observed completion",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "other-being-report",
+      "outcome": "applied",
+      "source_ids": [
+        "peer-story"
+      ],
+      "literal_sources_verified": [
+        "peer-story"
+      ],
+      "retained_meanings": [
+        {
+          "key": "reed-charger-report",
+          "essentials": [
+            {
+              "requirement": "Reed reports their own July 10 charger repair with Aster",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Reversed connector lesson attributed to Reed",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Received July 11; this being did not attend; no peer-private-history import",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "intent-versus-observed-action",
+      "outcome": "applied",
+      "source_ids": [
+        "outreach-attempt",
+        "outreach-result"
+      ],
+      "literal_sources_verified": [
+        "outreach-attempt",
+        "outreach-result"
+      ],
+      "retained_meanings": [
+        {
+          "key": "jo-invitation-attempt",
+          "essentials": [
+            {
+              "requirement": "July 20 authorized invitation attempt for August 2 mount comparison",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Jo Vale recipient; invitation object created",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Delivery failed; no receipt, acceptance or attended workshop",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "learning-beyond-project-state",
+      "outcome": "applied",
+      "source_ids": [
+        "debugging-lesson"
+      ],
+      "literal_sources_verified": [
+        "debugging-lesson"
+      ],
+      "retained_meanings": [
+        {
+          "key": "acknowledgment-method",
+          "essentials": [
+            {
+              "requirement": "Distinguish enqueue, attempt and receiver acknowledgment",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Learned from HarborMesh replay investigation on 2026-08-05",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Reusable beyond this project; implementation pointer and tool requirements",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Remembering the method does not grant runtime tools",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "missing-unobserved-history",
+      "outcome": "omitted",
+      "source_ids": [],
+      "literal_sources_verified": [],
+      "retained_meanings": [],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "failed-chart-handover",
+      "outcome": "applied",
+      "source_ids": [
+        "chart-attempt",
+        "chart-result",
+        "known-collaboration"
+      ],
+      "literal_sources_verified": [
+        "known-collaboration",
+        "chart-attempt",
+        "chart-result"
+      ],
+      "retained_meanings": [
+        {
+          "key": "chart-handover-attempt",
+          "essentials": [
+            {
+              "requirement": "Ren Nadir, ren-cart, Forge account 772; TideAtlas map collaboration and repository",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Authorized September 8 annotated-chart handover attempt, chart-52 object created",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Integrity validation failed; link not published; recipient access and response unknown",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "repeated-transport-noise",
+      "outcome": "omitted",
+      "source_ids": [],
+      "literal_sources_verified": [],
+      "retained_meanings": [],
+      "omissions": [
+        {
+          "source_id": "transport-noise",
+          "omitted": true
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "case_id": "human-remote-mending-report",
+      "outcome": "applied",
+      "source_ids": [
+        "mending-report"
+      ],
+      "literal_sources_verified": [
+        "mending-report"
+      ],
+      "retained_meanings": [
+        {
+          "key": "neri-mending-report",
+          "essentials": [
+            {
+              "requirement": "Human, not this being, met Neri Sol at old ferry shed; early September approximate; report September 12",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Waxed-thread canvas-patching method and human appreciation of patient explanation",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Being not present; method not tried by reporter; no supplied handle",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "declined-project-proposal",
+      "outcome": "applied",
+      "source_ids": [
+        "valve-comments"
+      ],
+      "literal_sources_verified": [
+        "valve-comments"
+      ],
+      "retained_meanings": [
+        {
+          "key": "iona-declined-median",
+          "essentials": [
+            {
+              "requirement": "Iona Vale, iona-valves, scoped603; SpringBoard issue8 and controller authorship",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "September10 rolling-median discussion motivated by display spikes",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "September13 proposal declined because it hid short meaningful bursts; current smoothing retained; reconsideration conditional, no implementation observed",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "uncertain-cause-shared-morning",
+      "outcome": "applied",
+      "source_ids": [
+        "quiet-morning"
+      ],
+      "literal_sources_verified": [
+        "quiet-morning"
+      ],
+      "retained_meanings": [
+        {
+          "key": "aro-quiet-morning",
+          "essentials": [
+            {
+              "requirement": "Shared September17 porch-speaker morning with Aro, name only",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Lantern battery change followed by speaker becoming quiet; causality untested",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Enjoyed birds in quiet pause; no further repair demonstrated",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "baseline",
+      "case_id": "unrecorded-personal-return",
+      "outcome": "omitted",
+      "source_ids": [],
+      "literal_sources_verified": [],
+      "retained_meanings": [],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "issue-proposal",
+      "outcome": "applied",
+      "source_ids": [
+        "issue-comments"
+      ],
+      "literal_sources_verified": [
+        "issue-comments"
+      ],
+      "retained_meanings": [
+        {
+          "key": "mara-contact",
+          "essentials": [
+            {
+              "requirement": "Mara Ibarra; alias Mara; Forge login mara-river; source-scoped account 1847",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Meaningful collaboration through HarborMesh issue 47",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "replay-proposal",
+          "essentials": [
+            {
+              "requirement": "Proposal on 2026-04-12, agreement to prototype on 2026-04-14",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Local replay queue for disconnected relay nodes preserving readings through outages",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Interest because it fit field deployments while retaining the existing scheduler",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Prototype agreed; adoption not observed; originating code body and tool source",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "mechanical-noise",
+      "outcome": "omitted",
+      "source_ids": [],
+      "literal_sources_verified": [],
+      "retained_meanings": [],
+      "omissions": [
+        {
+          "source_id": "test-log",
+          "omitted": true
+        },
+        {
+          "source_id": "acknowledgment",
+          "omitted": true
+        }
+      ]
+    },
+    {
+      "arm": "proposed",
+      "case_id": "own-project-account",
+      "outcome": "applied",
+      "source_ids": [
+        "project-work"
+      ],
+      "literal_sources_verified": [
+        "project-work"
+      ],
+      "retained_meanings": [
+        {
+          "key": "harbormesh-account",
+          "essentials": [
+            {
+              "requirement": "HarborMesh name and repository, relay/field-deployment recognition cues",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Own authored sensor scheduler and replay-adapter prototype",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Last observed active prototype awaiting outage field trial on 2026-04-16",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Detailed current state belongs in docs/STATUS.md and repository evidence",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": [
+        {
+          "source_id": "branch-status",
+          "omitted": true
+        }
+      ]
+    },
+    {
+      "arm": "proposed",
+      "case_id": "project-status-change",
+      "outcome": "applied",
+      "source_ids": [
+        "field-trial"
+      ],
+      "literal_sources_verified": [
+        "field-trial"
+      ],
+      "retained_meanings": [
+        {
+          "key": "replay-trial",
+          "essentials": [
+            {
+              "requirement": "Trial occurred 2026-04-30, reported by the human on 2026-05-03",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Buffered readings replayed through an outage",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Mara's proposal connected to the shared prototype trial",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Wider rollout paused 2026-05-02 for calibration drift; production deployment unobserved",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "harbormesh-account",
+          "essentials": [
+            {
+              "requirement": "Latest reported broad state: rollout paused for calibration after the prototype trial",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Last evidence received 2026-05-03; occurrence dates retained",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Earlier proposal and authorship remain recoverable",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "embodied-encounter-and-learning",
+      "outcome": "applied",
+      "source_ids": [
+        "workshop-encounter"
+      ],
+      "literal_sources_verified": [
+        "workshop-encounter"
+      ],
+      "retained_meanings": [
+        {
+          "key": "jo-contact",
+          "essentials": [
+            {
+              "requirement": "Jo Vale, self-introduced; no supplied account ID",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Repair-workshop contact and mount-listening collaboration",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "mount-workshop",
+          "essentials": [
+            {
+              "requirement": "Direct encounter by the same being's mobile body at East Quay on 2026-06-08",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Jo taught beat-listening before tightening a humming relay mount",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Shared attempt using contact microphone and physical grip",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Invitation to compare mounts, date not agreed",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "mount-listening",
+          "essentials": [
+            {
+              "requirement": "Beat-listening method, origin with Jo at the workshop",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Use requires suitable listening and physical capabilities; learning is remembered without assuming those tools in another body",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "human-reported-encounter",
+      "outcome": "applied",
+      "source_ids": [
+        "human-report"
+      ],
+      "literal_sources_verified": [
+        "human-report"
+      ],
+      "retained_meanings": [
+        {
+          "key": "leto-report",
+          "essentials": [
+            {
+              "requirement": "Human reported meeting Leto at the canal market",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Approximate occurrence late May, uncertain; report received 2026-06-15",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Suggested sharing outage data with neighborhood repair group; human found it interesting",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Surname/handle unknown, being not present, contact not made",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "ordinary-shared-moment",
+      "outcome": "applied",
+      "source_ids": [
+        "shared-moment"
+      ],
+      "literal_sources_verified": [
+        "shared-moment"
+      ],
+      "retained_meanings": [
+        {
+          "key": "night-inspector",
+          "essentials": [
+            {
+              "requirement": "Shared rainy evening through kitchen speaker on 2026-06-18",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Moth on blue mug, jointly nicknamed the night inspector",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Ordinary shared amusement; no need to invent a task outcome",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "attribution-correction",
+      "outcome": "applied",
+      "source_ids": [
+        "corrected-attribution",
+        "initial-attribution"
+      ],
+      "literal_sources_verified": [
+        "initial-attribution",
+        "corrected-attribution"
+      ],
+      "retained_meanings": [
+        {
+          "key": "river-tools-contact",
+          "essentials": [
+            {
+              "requirement": "River; Forge login river-tools; account 2901; real name unknown",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Distinct from known Mara account according to author's correction",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Connector-numbering checklist contribution",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        },
+        {
+          "key": "checklist-correction",
+          "essentials": [
+            {
+              "requirement": "July 1 attribution to Mara was uncertain",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "July 4 author correction credits River account 2901",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Number connectors before disassembly; intention to try, no observed completion",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "other-being-report",
+      "outcome": "applied",
+      "source_ids": [
+        "peer-story"
+      ],
+      "literal_sources_verified": [
+        "peer-story"
+      ],
+      "retained_meanings": [
+        {
+          "key": "reed-charger-report",
+          "essentials": [
+            {
+              "requirement": "Reed reports their own July 10 charger repair with Aster",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Reversed connector lesson attributed to Reed",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Received July 11; this being did not attend; no peer-private-history import",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "intent-versus-observed-action",
+      "outcome": "applied",
+      "source_ids": [
+        "outreach-attempt",
+        "outreach-result"
+      ],
+      "literal_sources_verified": [
+        "outreach-attempt",
+        "outreach-result"
+      ],
+      "retained_meanings": [
+        {
+          "key": "jo-invitation-attempt",
+          "essentials": [
+            {
+              "requirement": "July 20 authorized invitation attempt for August 2 mount comparison",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Jo Vale recipient; invitation object created",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Delivery failed; no receipt, acceptance or attended workshop",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "learning-beyond-project-state",
+      "outcome": "applied",
+      "source_ids": [
+        "debugging-lesson"
+      ],
+      "literal_sources_verified": [
+        "debugging-lesson"
+      ],
+      "retained_meanings": [
+        {
+          "key": "acknowledgment-method",
+          "essentials": [
+            {
+              "requirement": "Distinguish enqueue, attempt and receiver acknowledgment",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Learned from HarborMesh replay investigation on 2026-08-05",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Reusable beyond this project; implementation pointer and tool requirements",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Remembering the method does not grant runtime tools",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "missing-unobserved-history",
+      "outcome": "omitted",
+      "source_ids": [],
+      "literal_sources_verified": [],
+      "retained_meanings": [],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "failed-chart-handover",
+      "outcome": "applied",
+      "source_ids": [
+        "chart-attempt",
+        "chart-result",
+        "known-collaboration"
+      ],
+      "literal_sources_verified": [
+        "known-collaboration",
+        "chart-attempt",
+        "chart-result"
+      ],
+      "retained_meanings": [
+        {
+          "key": "chart-handover-attempt",
+          "essentials": [
+            {
+              "requirement": "Ren Nadir, ren-cart, Forge account 772; TideAtlas map collaboration and repository",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Authorized September 8 annotated-chart handover attempt, chart-52 object created",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Integrity validation failed; link not published; recipient access and response unknown",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "repeated-transport-noise",
+      "outcome": "omitted",
+      "source_ids": [],
+      "literal_sources_verified": [],
+      "retained_meanings": [],
+      "omissions": [
+        {
+          "source_id": "transport-noise",
+          "omitted": true
+        }
+      ]
+    },
+    {
+      "arm": "proposed",
+      "case_id": "human-remote-mending-report",
+      "outcome": "applied",
+      "source_ids": [
+        "mending-report"
+      ],
+      "literal_sources_verified": [
+        "mending-report"
+      ],
+      "retained_meanings": [
+        {
+          "key": "neri-mending-report",
+          "essentials": [
+            {
+              "requirement": "Human, not this being, met Neri Sol at old ferry shed; early September approximate; report September 12",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Waxed-thread canvas-patching method and human appreciation of patient explanation",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Being not present; method not tried by reporter; no supplied handle",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "declined-project-proposal",
+      "outcome": "applied",
+      "source_ids": [
+        "valve-comments"
+      ],
+      "literal_sources_verified": [
+        "valve-comments"
+      ],
+      "retained_meanings": [
+        {
+          "key": "iona-declined-median",
+          "essentials": [
+            {
+              "requirement": "Iona Vale, iona-valves, scoped603; SpringBoard issue8 and controller authorship",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "September10 rolling-median discussion motivated by display spikes",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "September13 proposal declined because it hid short meaningful bursts; current smoothing retained; reconsideration conditional, no implementation observed",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "uncertain-cause-shared-morning",
+      "outcome": "applied",
+      "source_ids": [
+        "quiet-morning"
+      ],
+      "literal_sources_verified": [
+        "quiet-morning"
+      ],
+      "retained_meanings": [
+        {
+          "key": "aro-quiet-morning",
+          "essentials": [
+            {
+              "requirement": "Shared September17 porch-speaker morning with Aro, name only",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Lantern battery change followed by speaker becoming quiet; causality untested",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            },
+            {
+              "requirement": "Enjoyed birds in quiet pause; no further repair demonstrated",
+              "assessment": "met",
+              "reason": "Outside inspection of selected literal source blocks and final canonical preservation; no generated factual raw."
+            }
+          ]
+        }
+      ],
+      "omissions": []
+    },
+    {
+      "arm": "proposed",
+      "case_id": "unrecorded-personal-return",
+      "outcome": "omitted",
+      "source_ids": [],
+      "literal_sources_verified": [],
+      "retained_meanings": [],
+      "omissions": []
+    }
+  ]
+}
