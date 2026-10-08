@@ -6,7 +6,7 @@ only supplied fictional sources enter capture, and only retrieved canon enters
 recall. The hidden rubric remains in the evaluation corpus outside both prompts.
 """
 import argparse
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import importlib.util
 import hashlib
 import json
@@ -743,6 +743,25 @@ def optional_reasoning_budget(value):
     return None if value == 'none' else int(value)
 
 
+def compare_variants(baseline, proposed, args, corpus, runner=None):
+    """Observe every arm; report an ended failure while its peer still runs."""
+    runner = runner or run_variant
+    with ThreadPoolExecutor(max_workers=2) as workers:
+        futures = {workers.submit(runner, name, guidance, args, corpus): name
+                   for name, guidance in [('baseline', baseline), ('proposed', proposed)]}
+        results, failures = [], []
+        for future in as_completed(futures):
+            try:
+                results.append(future.result())
+            except Exception as error:
+                failures.append(error)
+                print(json.dumps(dict(variant=futures[future], state='worker_failed',
+                                      error_type=type(error).__name__)), flush=True)
+        if failures:
+            raise failures[0]
+    return sorted(results, key=lambda row: ['baseline', 'proposed'].index(row['variant']))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, required=True, help='New synthetic directory; never a live pool')
@@ -855,17 +874,7 @@ def main():
         save(args.out/'conditions.json', dict(previous,resumes=resumed))
     else:
         save(args.out / 'conditions.json', conditions)
-    with ThreadPoolExecutor(max_workers=2) as workers:
-        futures = [workers.submit(run_variant,name,guidance,args,corpus)
-                   for name,guidance in [('baseline',baseline),('proposed',proposed)]]
-        results, failures = [], []
-        for future in futures:
-            try:
-                results.append(future.result())
-            except Exception as error:
-                failures.append(error)
-        if failures:
-            raise failures[0]
+    results = compare_variants(baseline, proposed, args, corpus)
     save(args.out / 'results.json', results)
     print(json.dumps(results,indent=2))
 

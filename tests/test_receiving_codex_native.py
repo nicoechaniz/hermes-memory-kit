@@ -96,3 +96,19 @@ def test_unsupported_model_or_tool_capable_catalog_never_dispatches(native, tmp_
     native.exchange.pilot.save(catalog, data)
     with pytest.raises(ValueError, match='disable all'):
         native.dispatch(path, tmp_path, catalog, lambda *_a, **_k: pytest.fail('dispatched'))
+
+
+def test_native_interruption_records_failed_attempt_and_closes_credential_fd(native,tmp_path):
+    import os
+    path,_request,catalog=inputs(native,tmp_path)
+    credential=tmp_path/'fixture-auth.json';credential.write_text('{}');fds=[]
+    def runner(*_a,**kwargs):
+        fds.extend(kwargs['pass_fds']);raise KeyboardInterrupt('PRIVATE_INTERRUPT_DETAIL')
+    with pytest.raises(KeyboardInterrupt):native.dispatch(path,tmp_path,catalog,runner,credential)
+    receipt=tmp_path/'dispatches'/path.name;data=json.loads(receipt.read_text())
+    assert data['state']=='failed' and data['error_type']=='KeyboardInterrupt'
+    assert data['usage'] is None and 'PRIVATE_INTERRUPT_DETAIL' not in receipt.read_text()
+    assert not (tmp_path/'responses'/path.name).exists()
+    with pytest.raises(OSError):os.fstat(fds[0])
+    with pytest.raises(ValueError,match='no implicit retry'):
+        native.dispatch(path,tmp_path,catalog,lambda *_a,**_k:pytest.fail('Repeated interrupted dispatch'),credential)

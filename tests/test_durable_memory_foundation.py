@@ -880,3 +880,32 @@ def test_terminal_shape_diagnostic_retains_actual_candidate_and_continues(mc,tmp
     archived=json.loads(next((args.out/'proposed/rejected-recall').glob('*.json')).read_text())
     assert archived['narrative']['progress']['phase']=='rejected'
     assert archived['narrative']['generations']==[malformed]
+
+
+def test_compare_reports_failed_peer_before_waiting_for_running_arm(tmp_path,monkeypatch):
+    import threading
+    pilots=SCRIPTS.parent/'research/agent-memory-2026-10-06/pilots'
+    monkeypatch.syspath_prepend(str(pilots));monkeypatch.syspath_prepend(str(SCRIPTS))
+    p=load('compare_observation_fixture',pilots/'durable_recall_pilot.py')
+    reported=threading.Event();finished=[];messages=[]
+    def report(text,**_kwargs):messages.append(json.loads(text));reported.set()
+    monkeypatch.setattr(p,'print',report,raising=False)
+    def runner(name,*_args):
+        if name=='proposed':raise OSError('PRIVATE_PROVIDER_DIAGNOSTIC')
+        assert reported.wait(2),'Failed peer was hidden behind the running baseline'
+        finished.append(name);return {'variant':name}
+    with pytest.raises(OSError):p.compare_variants('baseline','proposed',None,{},runner)
+    assert finished==['baseline'] and messages==[{'variant':'proposed','state':'worker_failed','error_type':'OSError'}]
+    assert 'PRIVATE_' not in json.dumps(messages)
+
+
+def test_compare_results_keep_arm_order_after_out_of_order_completion(tmp_path,monkeypatch):
+    import threading
+    pilots=SCRIPTS.parent/'research/agent-memory-2026-10-06/pilots'
+    monkeypatch.syspath_prepend(str(pilots));monkeypatch.syspath_prepend(str(SCRIPTS))
+    p=load('compare_order_fixture',pilots/'durable_recall_pilot.py');second=threading.Event()
+    def runner(name,*_args):
+        if name=='baseline':assert second.wait(2)
+        else:second.set()
+        return {'variant':name}
+    assert p.compare_variants('baseline','proposed',None,{},runner)==[{'variant':'baseline'},{'variant':'proposed'}]
