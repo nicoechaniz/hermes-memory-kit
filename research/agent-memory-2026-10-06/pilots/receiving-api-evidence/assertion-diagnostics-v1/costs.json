@@ -1,0 +1,15 @@
+{
+  "physical_attempts": 14,
+  "completed": 14,
+  "known_usage": {
+    "prompt_tokens": 136836,
+    "completion_tokens": 32169,
+    "total_tokens": 169005
+  },
+  "unknown_usage": 0,
+  "median_seconds": 51.47562696551904,
+  "billed_usd": null,
+  "native_subscription_conversion_unknown": true,
+  "formation_calls": 0,
+  "embedding_calls": 0
+}

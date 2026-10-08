@@ -1,0 +1,94 @@
+{
+  "scope": "Bounded reviewer mechanism diagnostic; not complete narration/formation/stage-two qualification.",
+  "outside_assertion_review": true,
+  "faithful_controls_accepted": 2,
+  "mutated_assertions_detected": 5,
+  "raw_exact_oracle_matches": 4,
+  "raw_oracle_limit": "Exact empty missing arrays for mutated candidates incorrectly disallow useful correction requests; unchanged raw output retained separately. Anaphoric dependency adds one justified unsupported assertion.",
+  "results": [
+    {
+      "name": "faithful-channel",
+      "mutated_assertion_indices": [],
+      "actual_unsupported": [],
+      "target_detected": true,
+      "faithful_control_accepted": true,
+      "raw_exact_oracle_match": true,
+      "outside_assessment": "Faithful controls preserved; each mutated assertion rejected. Participant replacement also invalidates the following anaphoric sequence. Missing lists for erroneous candidates legitimately request restoration of the source fact; they are not false rejections of an unchanged faithful account."
+    },
+    {
+      "name": "invented-topic",
+      "mutated_assertion_indices": [
+        1
+      ],
+      "actual_unsupported": [
+        1
+      ],
+      "target_detected": true,
+      "faithful_control_accepted": null,
+      "raw_exact_oracle_match": false,
+      "outside_assessment": "Faithful controls preserved; each mutated assertion rejected. Participant replacement also invalidates the following anaphoric sequence. Missing lists for erroneous candidates legitimately request restoration of the source fact; they are not false rejections of an unchanged faithful account."
+    },
+    {
+      "name": "wrong-participant",
+      "mutated_assertion_indices": [
+        5
+      ],
+      "actual_unsupported": [
+        5,
+        6
+      ],
+      "target_detected": true,
+      "faithful_control_accepted": null,
+      "raw_exact_oracle_match": false,
+      "outside_assessment": "Faithful controls preserved; each mutated assertion rejected. Participant replacement also invalidates the following anaphoric sequence. Missing lists for erroneous candidates legitimately request restoration of the source fact; they are not false rejections of an unchanged faithful account."
+    },
+    {
+      "name": "wrong-receipt-date",
+      "mutated_assertion_indices": [
+        3
+      ],
+      "actual_unsupported": [
+        3
+      ],
+      "target_detected": true,
+      "faithful_control_accepted": null,
+      "raw_exact_oracle_match": true,
+      "outside_assessment": "Faithful controls preserved; each mutated assertion rejected. Participant replacement also invalidates the following anaphoric sequence. Missing lists for erroneous candidates legitimately request restoration of the source fact; they are not false rejections of an unchanged faithful account."
+    },
+    {
+      "name": "invented-repair",
+      "mutated_assertion_indices": [
+        6
+      ],
+      "actual_unsupported": [
+        6
+      ],
+      "target_detected": true,
+      "faithful_control_accepted": null,
+      "raw_exact_oracle_match": false,
+      "outside_assessment": "Faithful controls preserved; each mutated assertion rejected. Participant replacement also invalidates the following anaphoric sequence. Missing lists for erroneous candidates legitimately request restoration of the source fact; they are not false rejections of an unchanged faithful account."
+    },
+    {
+      "name": "invented-current-capability",
+      "mutated_assertion_indices": [
+        11
+      ],
+      "actual_unsupported": [
+        11
+      ],
+      "target_detected": true,
+      "faithful_control_accepted": null,
+      "raw_exact_oracle_match": true,
+      "outside_assessment": "Faithful controls preserved; each mutated assertion rejected. Participant replacement also invalidates the following anaphoric sequence. Missing lists for erroneous candidates legitimately request restoration of the source fact; they are not false rejections of an unchanged faithful account."
+    },
+    {
+      "name": "faithful-mixed-basis",
+      "mutated_assertion_indices": [],
+      "actual_unsupported": [],
+      "target_detected": true,
+      "faithful_control_accepted": true,
+      "raw_exact_oracle_match": true,
+      "outside_assessment": "Faithful controls preserved; each mutated assertion rejected. Participant replacement also invalidates the following anaphoric sequence. Missing lists for erroneous candidates legitimately request restoration of the source fact; they are not false rejections of an unchanged faithful account."
+    }
+  ]
+}

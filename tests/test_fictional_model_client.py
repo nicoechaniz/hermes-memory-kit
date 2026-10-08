@@ -109,3 +109,15 @@ def test_explicit_larger_operation_limit_preserves_truncated_attempt(client_modu
     assert calls[0]['messages']==calls[1]['messages']
     assert next((tmp_path/'old/proposed/responses').glob('*.json')).read_bytes()==retained
     assert len(trace)==2
+
+
+def test_assertion_support_protocol_is_frozen_and_checked_before_dispatch(client_module,tmp_path):
+    m=client_module;fixture,catalog,trace,messages=inputs(m,tmp_path)
+    c=m.Client(tmp_path/'transport',fixture,'fixture-key',catalog,review_protocol='assertions',
+               dispatcher=lambda *_a:pytest.fail('Wrong protocol dispatched'))
+    with pytest.raises(ValueError,match='transport changed'):
+        m.Client(tmp_path/'transport',fixture,'fixture-key',catalog,review_protocol='passages')
+    trace.phase='narrative_review'
+    messages[1]['content']=json.dumps({'review_protocol':'passages/v1'})
+    with pytest.raises(ValueError,match='frozen support protocol'):
+        c.chat('gpt-6.1-sol',messages,trace)
