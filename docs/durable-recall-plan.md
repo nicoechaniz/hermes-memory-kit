@@ -788,3 +788,5 @@ continuity, cross-session local memory, external import and the compiled backend
 seam. It incorporates the existing #11/#12 work and specifies a fictional native
 versus coexistence experiment. This is source-verified integration design;
 capture/consolidation measurements and live activation remain pending.
+
+The [completed upgraded-reader V2 comparison](../research/agent-memory-2026-10-06/pilots/2026-10-08-complete-upgraded-reader-comparison.md) now finishes both 22-question arms. All 102 positive requirements are delivered, and the lost acknowledgment method is recovered, but outside inspection of 582 claims finds one unsupported human-trial ownership clause in the proposed arm. It remains unqualified. The original IncompleteRead and one exact-parameter retry are preserved with separate costs. V3 actor/decoded-evidence qualification is the next action; no stage-two pass is claimed.
