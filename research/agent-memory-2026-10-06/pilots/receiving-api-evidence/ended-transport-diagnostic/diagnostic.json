@@ -1,0 +1,10 @@
+{
+  "scope": "Historical fresh-v2 control attempt; scope-ended receipt without response or recorded exception class. No reclassification or retry.",
+  "request_sha256": "33466c9c83e580f63df41776dc4baf0e1d4b1f64ac05f05258e404a9225df6a2",
+  "observed_seconds": 48.17825143691152,
+  "observed_state": "started",
+  "response_exists": false,
+  "usage_known": false,
+  "cause": "Original worker exception has not yet been surfaced; incomplete-read reproduction is a separate controlled test, not a diagnosis.",
+  "frozen_dispatcher_sha256": "29ef618724cc791ce5a125fbdfaef11446f741fee500835c36f893d9c723c4dc"
+}

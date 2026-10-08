@@ -81,15 +81,17 @@ def dispatch(request_path, root, api_key, provider, opener=urllib.request.urlope
         headers={'Authorization': 'Bearer '+api_key, 'Content-Type': 'application/json'})
     try:
         with opener(call, timeout=300) as response:
-            result = json.load(response)
             receipt['http_status'] = response.status
+            result = json.load(response)
         choice = result['choices'][0]
         message = choice['message']
         receipt.update(state='completed', response_id=result.get('id'),
             response_model=result.get('model'), response_provider=result.get('provider'),
             usage=result.get('usage'), finish_reason=choice.get('finish_reason'),
             content=message.get('content'), tool_calls_observed=message.get('tool_calls') or [])
-    except (urllib.error.URLError, TimeoutError, ValueError, KeyError, IndexError) as error:
+    except BaseException as error:
+        # Include interrupted and incomplete-body attempts. Re-raise unchanged;
+        # store only the class, never exception text or partial response bytes.
         receipt.update(state='failed', error_type=type(error).__name__)
         if isinstance(error, urllib.error.HTTPError):
             receipt['http_status'] = error.code

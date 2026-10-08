@@ -475,6 +475,15 @@ only for complete envelopes. Eleven observed packet checks reduce characters
 by 23.1%; no inference quality or dollar savings are claimed. Its default is off
 and a new equivalent receiving comparison is required before adoption.
 
+The [terminal transport receipt repair](../research/agent-memory-2026-10-06/pilots/2026-10-08-terminal-transport-receipts.md)
+preserves interrupted/incomplete attempts, unknown usage and pending work, and
+reports worker failures as they finish. Historical fresh-v2 control has an ended
+receipt without a recorded exception; its cause remains unassigned until the
+actual error surfaces. Its other arm continues under frozen original code.
+The extended narrative fixture has 60 retained essentials per arm; its qualified
+fresh canon, not an unqualified new capture or the old 48-item report alone,
+is the starting point for stage-two organization.
+
 ### Stage 1 exit evidence and exact continuation
 
 The [stage-one report](../research/agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md)

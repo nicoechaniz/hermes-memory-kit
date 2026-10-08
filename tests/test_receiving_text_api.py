@@ -83,3 +83,22 @@ def test_explicit_deepseek_nonthinking_profile_omits_unsupported_effort(api,tmp_
     with pytest.raises(ValueError):api.parameters(value,'nous')
     value.update(model='deepseek-flash',reasoning_effort='low')
     assert api.parameters(value,'deepseek')==old
+
+
+@pytest.mark.parametrize('failure',['incomplete','interrupted'])
+def test_ended_body_failure_keeps_status_without_private_partial_bytes(api,tmp_path,failure):
+    import http.client
+    path,_=request(api,tmp_path)
+    error=http.client.IncompleteRead(b'PRIVATE_PARTIAL_RESPONSE',40) if failure=='incomplete' else KeyboardInterrupt('PRIVATE_INTERRUPT_DETAIL')
+    class BrokenBody(io.StringIO):
+        status=200
+        def read(self,*_a,**_k):raise error
+    with pytest.raises(type(error)):
+        api.dispatch(path,tmp_path,'fixture-secret','deepseek',lambda *_a,**_k:BrokenBody())
+    receipt=tmp_path/'dispatches'/path.name;data=json.loads(receipt.read_text())
+    assert data['state']=='failed' and data['error_type']==type(error).__name__
+    assert data['http_status']==200 and data['usage'] is None and data['seconds']>=0
+    assert 'PRIVATE_' not in receipt.read_text() and 'fixture-secret' not in receipt.read_text()
+    assert not (tmp_path/'responses'/path.name).exists()
+    with pytest.raises(ValueError,match='no implicit retry'):
+        api.dispatch(path,tmp_path,'fixture-secret','deepseek',lambda *_a,**_k:pytest.fail('Repeated failed dispatch'))

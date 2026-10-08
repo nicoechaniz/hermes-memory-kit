@@ -138,7 +138,9 @@ def dispatch(request_path, root, catalog, runner=subprocess.run, credential_file
         if result.returncode or not turns or unexpected or len(messages) != 1:
             raise ValueError('native attempt failed, used tools or did not return one final message')
         receipt.update(state='completed', content=messages[0]['text'], tool_calls_observed=[])
-    except (subprocess.TimeoutExpired, ValueError, KeyError, OSError) as error:
+    except BaseException as error:
+        # Preserve every ended attempt, including foreground interruption,
+        # without exporting exception text, authentication data or CLI stderr.
         receipt.update(state='failed', error_type=type(error).__name__)
         raise
     finally:
