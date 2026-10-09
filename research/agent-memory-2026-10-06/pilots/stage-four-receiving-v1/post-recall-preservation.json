@@ -1,0 +1,12 @@
+{
+  "schema": "hmk.stage-four-post-recall-preservation/v1",
+  "real_canonical_tables_equal_after_receiving": true,
+  "excluded_volatile_fields": [
+    "chapters.last_access",
+    "chapters.access_count",
+    "queries_log rows"
+  ],
+  "originals_revisions_links_embeddings_projection_markers_unknown_values_preserved": true,
+  "memory_formation_changed": false,
+  "native_embedding_spaces_unchanged": true
+}

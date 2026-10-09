@@ -1,0 +1,11 @@
+{
+  "package": "mariano-memory-kit",
+  "version": "1.1.4",
+  "exact_commit": "7696869abf4ce38320e2b290f4fe1fff9d0a91a2",
+  "published_pr": "https://github.com/AlterMundi/Skills/pull/31",
+  "isolated_describe_prepare_apply_status_rollback_reapply": true,
+  "active_apply_status_rollback_reapply": true,
+  "prior_package_bytes_retained": true,
+  "surface_check": "ok",
+  "memory_database_mutated": false
+}

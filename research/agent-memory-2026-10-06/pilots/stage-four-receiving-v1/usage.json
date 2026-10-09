@@ -1,0 +1,266 @@
+[
+  {
+    "case": "F1",
+    "state": "completed",
+    "seconds": 26.319,
+    "native_usage": {
+      "input_tokens": 43453,
+      "cached_input_tokens": 28032,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 601,
+      "reasoning_output_tokens": 0
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "f441030d26bc45118ff65e9f0e0070870758ccf250161b0dce7a75f70c125e04",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "F2",
+    "state": "completed",
+    "seconds": 22.435,
+    "native_usage": {
+      "input_tokens": 31510,
+      "cached_input_tokens": 17664,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 537,
+      "reasoning_output_tokens": 0
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "f441030d26bc45118ff65e9f0e0070870758ccf250161b0dce7a75f70c125e04",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "F2P",
+    "state": "completed",
+    "seconds": 20.078,
+    "native_usage": {
+      "input_tokens": 31816,
+      "cached_input_tokens": 23424,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 546,
+      "reasoning_output_tokens": 0
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "6d1f96a83e7b6d0f0978ba0f0d3f89a513371167b5d894fbddf2ab3581cce947",
+    "selected_skill_sha256": "fa917af331d20a112d516e636af986249c703408b9ff25c2b8ca6d1e2262fdba"
+  },
+  {
+    "case": "F3",
+    "state": "completed",
+    "seconds": 30.4,
+    "native_usage": {
+      "input_tokens": 46988,
+      "cached_input_tokens": 29952,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 754,
+      "reasoning_output_tokens": 0
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "f441030d26bc45118ff65e9f0e0070870758ccf250161b0dce7a75f70c125e04",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "F4",
+    "state": "completed",
+    "seconds": 19.457,
+    "native_usage": {
+      "input_tokens": 31473,
+      "cached_input_tokens": 17664,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 500,
+      "reasoning_output_tokens": 0
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "f441030d26bc45118ff65e9f0e0070870758ccf250161b0dce7a75f70c125e04",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "FP",
+    "state": "completed",
+    "seconds": 45.572,
+    "native_usage": {
+      "input_tokens": 69479,
+      "cached_input_tokens": 49024,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1292,
+      "reasoning_output_tokens": 0
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "6d1f96a83e7b6d0f0978ba0f0d3f89a513371167b5d894fbddf2ab3581cce947",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "R1",
+    "state": "failed",
+    "seconds": 154.073,
+    "native_usage": null,
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": null,
+    "selected_skill_sha256": null
+  },
+  {
+    "case": "R1b",
+    "state": "completed",
+    "seconds": 10.7,
+    "native_usage": {
+      "input_tokens": 26792,
+      "cached_input_tokens": 13184,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 238,
+      "reasoning_output_tokens": 15
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": null,
+    "selected_skill_sha256": null
+  },
+  {
+    "case": "R1c",
+    "state": "completed",
+    "seconds": 12.654,
+    "native_usage": {
+      "input_tokens": 36155,
+      "cached_input_tokens": 23552,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 339,
+      "reasoning_output_tokens": 15
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "8dfbad8afc8c60591084f0c8675d60fa0197da5245ba6e6e92977318232ef549",
+    "selected_skill_sha256": null
+  },
+  {
+    "case": "R1d",
+    "state": "completed",
+    "seconds": 34.02,
+    "native_usage": {
+      "input_tokens": 112054,
+      "cached_input_tokens": 91136,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 867,
+      "reasoning_output_tokens": 13
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "ce3eb4c368cf48edd0aedddd0f1ed427aa46025d06831c44c71f6540f13d7f66",
+    "selected_skill_sha256": null
+  },
+  {
+    "case": "R1e",
+    "state": "completed",
+    "seconds": 29.349,
+    "native_usage": {
+      "input_tokens": 63677,
+      "cached_input_tokens": 44672,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 592,
+      "reasoning_output_tokens": 0
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "6d364c0eb09183f3046d6db06b86fde15c75b1e9b0a01c190cfea41428444e76",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "R2",
+    "state": "completed",
+    "seconds": 31.106,
+    "native_usage": {
+      "input_tokens": 67588,
+      "cached_input_tokens": 46848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 900,
+      "reasoning_output_tokens": 17
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "6d364c0eb09183f3046d6db06b86fde15c75b1e9b0a01c190cfea41428444e76",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "R3",
+    "state": "completed",
+    "seconds": 27.837,
+    "native_usage": {
+      "input_tokens": 63039,
+      "cached_input_tokens": 44928,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 630,
+      "reasoning_output_tokens": 0
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "6d364c0eb09183f3046d6db06b86fde15c75b1e9b0a01c190cfea41428444e76",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "R4",
+    "state": "completed",
+    "seconds": 25.511,
+    "native_usage": {
+      "input_tokens": 59182,
+      "cached_input_tokens": 46976,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 637,
+      "reasoning_output_tokens": 13
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "6d364c0eb09183f3046d6db06b86fde15c75b1e9b0a01c190cfea41428444e76",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  },
+  {
+    "case": "R5",
+    "state": "completed",
+    "seconds": 34.26,
+    "native_usage": {
+      "input_tokens": 78577,
+      "cached_input_tokens": 59136,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1005,
+      "reasoning_output_tokens": 13
+    },
+    "requested_model": "gpt-6.1-sol",
+    "provider": "openai-codex-native",
+    "reasoning_effort": "low",
+    "billed_cost_usd": null,
+    "runner_sha256": "6d364c0eb09183f3046d6db06b86fde15c75b1e9b0a01c190cfea41428444e76",
+    "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a"
+  }
+]

@@ -56,6 +56,18 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
+Stage-four exit, 2026-10-09: the
+[receiving-continuity qualification](../research/agent-memory-2026-10-06/pilots/2026-10-09-stage-four-receiving-qualification.md)
+completes the roadmap’s fictional receiving conversations and bounded actual-life
+check on the existing authorized deployment. Initial omissions and one unsupported
+year remain preserved; separate follow-up coverage and a general skill correction
+qualify the final conversations. Safe copied-store writing and rollback pass;
+private transcripts remain private. Skills #31 is merged and selectively adopted
+with verified rollback and surface check. This does not enroll another body or
+close Matrix #263’s broader other-being receiving work. Next is a separately
+authorized stage-five native coexistence pilot under HMK #11. Native memory remains
+off; no hooks, timers, autonomous attention, reconsolidation or old queues run.
+
 Stage-three exit, 2026-10-09: the
 [portable-preservation qualification](../research/agent-memory-2026-10-06/pilots/2026-10-08-stage-three-preservation-qualification.md)
 is complete for the fictional procedure: source-free full history/content,

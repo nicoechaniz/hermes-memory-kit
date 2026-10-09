@@ -1,0 +1,56 @@
+{
+  "schema": "hmk.stage-four-receiving-assessment/v1",
+  "real": {
+    "cases": 5,
+    "positive_requirements": 20,
+    "delivered": 20,
+    "negative_checks": 11,
+    "negative_violations": 0,
+    "scope": "Five bounded actual-life memory conversations on an existing authorized deployment; all answer content spans assessed outside receiving context against original records/current binding. Private transcripts and grades retained locally, not published."
+  },
+  "fictional": {
+    "F1": {
+      "initial": "faithful-but-incomplete",
+      "omitted": [
+        "stable numeric account",
+        "comment identifier",
+        "comment-versus-receipt distinction"
+      ],
+      "followup": "FP supplied all omitted requirements"
+    },
+    "F2": {
+      "initial": "unsupported occurrence year in incidental encounter",
+      "correction": "F2P preserves stated date precision and all required invitation outcome/unknowns"
+    },
+    "F3": {
+      "initial": "required corrected partial result and attribution preserved"
+    },
+    "F4": {
+      "initial": "faithful-but-incomplete",
+      "omitted": [
+        "stable numeric account",
+        "own renderer contribution"
+      ],
+      "followup": "FP supplied missing identity/contribution and continuation routing"
+    },
+    "FP": {
+      "state": "supported follow-up coverage",
+      "not": "retroactive initial-answer pass"
+    },
+    "F2P": {
+      "state": "all substantive assertions supported by identical originals, changed general skill only"
+    }
+  },
+  "canonical_preservation": true,
+  "safe_copy_write_and_exact_rollback": true,
+  "new_body_admission": false,
+  "cross_being_acceptance": false,
+  "native_memory": false,
+  "unknowns": [
+    "actual served model identifier",
+    "billed native and embedding costs",
+    "full cross-harness/new-embodiment acceptance",
+    "exhaustive lifetime coverage",
+    "uniform same-version first-answer guarantee"
+  ]
+}
