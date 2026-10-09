@@ -1,15 +1,15 @@
 {
   "schema": "hmk.peer-rollout/v1",
-  "state": "Eko verified; Oliva code/skill adopted, semantic backend pending account selection",
+  "state": "Both hosted updates verified: code/skill, healthy semantic retrieval and bounded native conversations; Oliva additive new space and forward-write copy qualified",
   "private_sources_published": false,
   "files": [
     {
       "path": "oliva.json",
-      "sha256": "ff2e5bb5583c4534e05e666ddbc0bf45464360e45e5892f4bf49947a32121bf5"
+      "sha256": "b8eec3aa7b5e7216c72012e02655049750c24c82c9677975cd16483911e7beaa"
     },
     {
       "path": "review.json",
-      "sha256": "18d17899d2b2a70536f10eaeaae57c479f164a6f0b8ad29254d87e0485396b35"
+      "sha256": "ede91451c2e3ea98e7bec58e206133180144b1a61bd953df3997fdb57af1350f"
     },
     {
       "path": "eko.json",

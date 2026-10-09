@@ -57,11 +57,15 @@ proof of absence.
 ## Agreed roadmap — 2026-10-07
 
 Peer adoption continuation, 2026-10-09: [Eko/Oliva rollout](../research/agent-memory-2026-10-06/pilots/2026-10-09-eko-oliva-hmk-adoption.md)
-records actual code/skill adoption in both existing hosted bodies. Eko’s preserved
-embedding backend and bounded real native conversation pass. Oliva’s healthy
-semantic retrieval remains pending embedding-account selection; do not claim both
-fully verified or repeat Eko’s valid checks. This rollout is distinct from
-full source-machine migration and the later native-memory coexistence pilot.
+records actual code/skill adoption, healthy semantic retrieval and bounded native
+receiving conversations in both existing hosted bodies. Eko’s preserved embedding
+space remains unchanged. Oliva’s retired NVIDIA model is replaced by a separately
+qualified space while retaining every old vector and the same active memory
+database. A synthetic copied-store new-write/index/recall/rollback check passes;
+no old database overwrites subsequent work. Both hosted updates are complete for
+their selected stores; Eko’s valid checks are reused. Broader source-machine
+migration/cross-host reconciliation remains with Matrix #263. Native-memory
+coexistence remains a separately authorized later pilot; native memory stays off.
 
 Stage-four exit, 2026-10-09: the
 [receiving-continuity qualification](../research/agent-memory-2026-10-06/pilots/2026-10-09-stage-four-receiving-qualification.md)
