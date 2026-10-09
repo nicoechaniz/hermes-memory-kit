@@ -1,10 +1,12 @@
 # Portable memory preservation and current HMK compatibility
 
-The stage-three fictional procedure qualifies preservation and bounded
-reconstruction. Matrix implementation [PR #285](https://github.com/AlterMundi/daimon-matrix/pull/285)
-at `0263a4e3e5ded16277fca4a570441711f41cb2ae` is published with successful
-relevant CI; independent review and merge are pending. Stage three is **not yet
-closed**. This does not qualify stage-four conversation in an actual other body.
+Stage three is complete for the qualified fictional preservation procedure.
+Matrix [PR #285](https://github.com/AlterMundi/daimon-matrix/pull/285) is merged at
+`e7c5d54c1979d0854a3b0195124a11f3a76f75e2`; the final reviewed head is
+`cfabc0ddcc55d9a2ddaec1616f9bd2369716fd1d`. Relevant CI passes and the manual
+tool is adopted and verified from ordinary Matrix main. The original candidate
+and packet below remain unchanged as history. This does not qualify stage-four
+conversation, enrollment or history admission in an actual other body.
 
 ## Contract and observed repairs
 
@@ -107,16 +109,70 @@ CI execution are not provider billing.
 The tools operate manually from the ordinary Matrix checkout. No service,
 live memory, authorized binding, native Codex generation or automatic lifecycle
 changes are needed. Snapshot rollback is exercised in the isolated receiving
-copy. Adoption on merged main and independent review remain pending; a candidate
-checkout is not an installed release. Preserve the packet and originals as the
-rollback/source evidence. Actual body enrollment, received-history authority
+copy. The [adoption receipt](stage-three-preservation-v1/adoption-2026-10-09/adoption.json)
+records the actual merged main, reviewed tool hash and verified packet. Main's
+preservation/exporter/SDK projection bytes match the reviewed implementation.
+Source-free archive/profile verification and original logical state match; a
+verified SQLite snapshot then restores exact original state after deliberately
+damaging a disposable copy. The damaged copy and snapshot remain separate
+private test evidence; no live pool was touched. Preserve the public packet and
+originals as rollback/source evidence. Actual body enrollment, received-history authority
 acceptance and conversation are stage four under a later goal.
+
+## Independent review and release qualification — 2026-10-09
+
+The human authorized one isolated reviewer. Its [original review](stage-three-preservation-v1/adoption-2026-10-09/review-initial.md)
+found a P1: unvalidated source IDs could escape the profile staging directory
+and overwrite an unrelated sibling bundle. Exporter-equivalent source-ID/kind
+validation now precedes I/O. The independent reproduction and a focused
+regression confirm rejection, intact sibling bytes and no partial profile.
+[Correction approval](stage-three-preservation-v1/adoption-2026-10-09/review-source-id-fix.md)
+preserves that finding instead of relabelling the original candidate safe.
+
+A subsequent CI check exposed offline-tool dependencies imported into the strict
+SDK test graph. The owning tool-test module now contains the identical portable
+fixture, called lazily by the opt-in SDK qualifier. [The review](stage-three-preservation-v1/adoption-2026-10-09/review-fixture-isolation.md)
+verified identical behavioral AST and all nineteen assertions. Current exact-pin
+checks and qualification requirements remain unchanged; strict SDK types pass.
+
+Actual CI logs also showed a stale event base `3b67edf5` while the synthetic merge
+included newer main `f5df821e`, pulling unrelated upstream changes into scope.
+The selector now binds the event's explicit PR head to the actual second parent
+before comparing the real first parent. Unexpected topology/head remains full;
+push behavior remains unchanged. Real Git regressions prove that an actual SDK
+change still requires full CI. A clean-runner failure in that new regression was
+fixed by a fictitious committer identity in the temporary repository, verified
+with global/system Git configuration disabled. [The final review](stage-three-preservation-v1/adoption-2026-10-09/review-ci-scope.md)
+approves exact head `cfabc0dd`; preservation code and memory criteria are unchanged.
+Earlier failed CI runs remain public history; no cancelled or skipped relevant
+job is counted as success.
+
+Final [CI](https://github.com/AlterMundi/daimon-matrix/actions/runs/37960694894)
+passes **76 archive tests** (1.695 seconds) and **41 exact-version HMK tests**
+(22.608 seconds). Coordination, drift and scope checks also pass. The archive
+count includes the independently merged upstream scope test, the path-safety
+regression and actual-Git scope regression. Optional unrelated job profiles are
+not qualification evidence. The larger fictional corpus was rechecked after
+fixture isolation: native full-state and the four lookup results are identical
+to the original run, with corrected/retracted reconstruction still passing.
+No consolidation or old queue was resumed.
+
+The [release evidence manifest](stage-three-preservation-v1/adoption-2026-10-09/manifest.json)
+separates those tests, review history, revised qualification and main adoption.
+Main adoption verification and isolated snapshot rollback take 230 ms for this
+packet. Qualification performs zero provider-model/embedding requests and has
+$0 API spend. Independent review used five bounded native Codex subagent turns;
+token/dollar usage was not supplied and is not reported as zero or added to the
+qualification's inference cost. No new runtime, binding, live migration,
+credentials, hooks, timer, native generation or autonomous attention was adopted.
 
 ## Exact continuation
 
-1. Complete the independent review on exact Matrix PR #285 head and fix only
-   demonstrated blockers; retain successful current-head CI or recheck affected fixes.
-2. Merge and adopt the offline tool from ordinary main, verify the preserved
-   packet with that exact release, and record the final head/adoption receipt.
-3. Close stage three in roadmap/issue #13 and link this evidence in Matrix #263.
-   Leave #263 open for stage-four actual receiving; native coexistence stays later.
+Start stage four under a later goal using Matrix #263 and this versioned profile:
+select one authorized real receiving embodiment and its preserved source history;
+validate ownership, available artifacts/content and actual target configuration;
+then test receiving authority and conversation without original sessions. Keep
+HMK-native records separate from Matrix admission and preserve the original
+packet before any target migration. Do not claim body enrollment or conversational
+acceptance from this fictional offline qualification. Native Codex coexistence
+remains stage five; no old consolidation queue needs resuming.

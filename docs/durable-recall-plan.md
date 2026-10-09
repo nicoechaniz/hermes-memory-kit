@@ -56,18 +56,23 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
-Stage-three continuation, 2026-10-08: the
+Stage-three exit, 2026-10-09: the
 [portable-preservation qualification](../research/agent-memory-2026-10-06/pilots/2026-10-08-stage-three-preservation-qualification.md)
-passes the source-free fictional round trip, exact content/history recovery,
-current-head reconstruction, rollback and four bounded native lookups. Existing
-archive v1 is extended with an inert versioned sidecar; contract and actual HMK
-implementation pins stay separate. [Matrix PR #285](https://github.com/AlterMundi/daimon-matrix/pull/285)
-has successful relevant CI (73 archive tests and 41 exact-version contract tests),
-but independent review/merge and adoption are pending. **Stage three remains open.**
-Next executable action: finish that exact-head review, merge/adopt the manual tool,
-verify the preserved packet on merged main and record the exit. Stage four and
-native coexistence remain later; do not repeat consolidation or resume old queues.
-
+is complete for the fictional procedure: source-free full history/content,
+unknown values, native originals/IDs/links, correction/retraction reconstruction,
+repair/replay, bounded recall and snapshot rollback pass. Existing archive v1
+retains its authority meaning; an inert sidecar records preservation and both
+frozen/current HMK identifiers. [Matrix PR #285](https://github.com/AlterMundi/daimon-matrix/pull/285)
+is independently reviewed, merged and adopted on ordinary main
+`e7c5d54c1979d0854a3b0195124a11f3a76f75e2`, with 76 archive and 41 exact-version
+HMK tests passing in relevant CI. The path-write defect and CI corrections retain
+their original failed evidence. Main verification and backup/rollback are in the
+[adoption receipt](../research/agent-memory-2026-10-06/pilots/stage-three-preservation-v1/adoption-2026-10-09/adoption.json).
+Next executable stage under a later goal: stage-four actual receiving-harness
+continuity through Matrix #263; select one authorized body and test authority
+acceptance plus conversation without original sessions. Native coexistence stays
+stage five. No live corpus/runtime migration, native memory, hooks, timers or
+autonomous attention was needed; do not reconsolidate or resume old queues.
 
 Current continuation, 2026-10-08: natural narration and stage two are qualified
 for the finite fictional corpus under the current reader-authority procedure.
@@ -85,7 +90,7 @@ separate, including a preserved timeout and one exact retry. The
 separates qualification from a small daily-delta organization estimate and native
 subscription usage from API equivalents. Installed native scripts remain
 byte-identical; no live corpus/runtime migration is required. Historical failures
-and stopped queues remain preserved. Next, under a new authorized scope: stage 3,
+and stopped queues remain preserved. The then-next authorized scope was stage 3,
 qualify full-history/content closure and Matrix/HMK target compatibility through
 [Matrix #263](https://github.com/AlterMundi/daimon-matrix/issues/263), reusing export
 PR #261 and the existing preservation profile. Native memory and automatic
@@ -618,8 +623,7 @@ native-history bytes; the expanded 60-check formation evidence remains unchanged
 Original/history preservation and rollback are separate from all
 clause and positive/negative requirement grades. Native memory remains disabled;
 portability and actual cross-harness receiving acceptance retain stages 3–4.
-Continue at the stage-three Matrix archive/content-closure and supported-target
-qualification; do not resume stopped research queues or rerun valid consolidation.
+Stage three now also has the exit recorded above. Continue with stage-four actual receiving through Matrix #263 under a later goal; do not resume stopped research queues or rerun valid consolidation.
 
 ### Earlier preservation and qualification history
 

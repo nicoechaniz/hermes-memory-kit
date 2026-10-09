@@ -1,0 +1,43 @@
+{
+  "schema": "hmk.stage-three-adoption-evidence/v1",
+  "matrix_main": "e7c5d54c1979d0854a3b0195124a11f3a76f75e2",
+  "approved_head": "cfabc0ddcc55d9a2ddaec1616f9bd2369716fd1d",
+  "qualification_ci": {
+    "run": "https://github.com/AlterMundi/daimon-matrix/actions/runs/37960694894",
+    "archive_tests": 76,
+    "hmk_tests": 41,
+    "relevant_checks": "success"
+  },
+  "files": [
+    {
+      "path": "adoption.json",
+      "bytes": 1370,
+      "sha256": "7e2e6650e755eec6982501ad7496885fcd403a1d5baacef946c9d6127f06f659"
+    },
+    {
+      "path": "qualification-reviewed.json",
+      "bytes": 17625,
+      "sha256": "74d4a579e291c0b605b48025ad7351d1ce8035ee0f654569a13d0eec00d2c97c"
+    },
+    {
+      "path": "review-ci-scope.md",
+      "bytes": 3065,
+      "sha256": "6e002af711bd31bd1efd611e03c5f5894e1e10a2d540d59f45c09235ea24e1e6"
+    },
+    {
+      "path": "review-fixture-isolation.md",
+      "bytes": 2130,
+      "sha256": "9ecfdbb395aec0517525997c055f18d11708ec7848e50b0a279c603651f76b7b"
+    },
+    {
+      "path": "review-initial.md",
+      "bytes": 3505,
+      "sha256": "16aeff919f405bce3466da34569179b02c90ee3d4d140007fd58df8819b83807"
+    },
+    {
+      "path": "review-source-id-fix.md",
+      "bytes": 1929,
+      "sha256": "d4d62b6089c23fbcdd8b46a92e452f9cc4a7fe93455e801a6d115d5d8c0ff9e0"
+    }
+  ]
+}
