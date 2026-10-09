@@ -51,5 +51,123 @@
       }
     ]
   },
-  "native_memory_disabled": true
+  "native_memory_disabled": true,
+  "nemotron-qualified": {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3-embed-1b",
+    "new_vectors": 16,
+    "old_vectors": 13,
+    "dimensions": [
+      2048
+    ],
+    "originals_unchanged": true,
+    "old_vectors_unchanged": true,
+    "isolated_rollback_verified": true,
+    "seconds": 2.559,
+    "billed_cost_usd": null
+  },
+  "nemotron-adopted": {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3-embed-1b",
+    "added_vectors": 16,
+    "old_vectors_preserved": 13,
+    "all_other_canonical_state_preserved": true,
+    "new_space_matches_qualified_copy": true,
+    "provider_pointer_rollback_verified": true,
+    "live_database_restored": false
+  },
+  "nemotron-verification": {
+    "checks": [
+      {
+        "age": "oldest",
+        "target_retrieved": true,
+        "backend_errors": false,
+        "original_expansion_matches": true
+      },
+      {
+        "age": "newest",
+        "target_retrieved": true,
+        "backend_errors": false,
+        "original_expansion_matches": true
+      }
+    ],
+    "current_canonical_preserved": true
+  },
+  "forward-verification": {
+    "synthetic_copy_only": true,
+    "native_add_succeeded": true,
+    "default_model": "nvidia/nemotron-3-embed-1b",
+    "only_one_missing_vector_created": true,
+    "all_existing_rows_and_vectors_unchanged": true,
+    "new_record_hybrid_retrieved": true,
+    "original_expansion_matches": true,
+    "copy_rollback_verified": true,
+    "active_database_never_restored_or_replaced": true,
+    "active_canonical_state_preserved": true,
+    "seconds": 6.007,
+    "billed_cost_usd": null
+  },
+  "native-receiving": {
+    "being": "oliva",
+    "requested_model": "gpt-6.1-sol",
+    "effort": "low",
+    "provider": "native-openai-codex",
+    "seconds": 54.459,
+    "usage": {
+      "input_tokens": 71534,
+      "cached_input_tokens": 48768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1359,
+      "reasoning_output_tokens": 0
+    },
+    "private_transcript_retained": true,
+    "native_memory_enabled": false,
+    "accepted_narrative": true,
+    "billed_cost_usd": null,
+    "outside_assessment": {
+      "scope": "Two actual selected records; all substantive answer statements compared with original records, current owner context and observed five-call trace. No independent verification of historical world claims.",
+      "participants_meaning_origin_precision_outcomes": "supported",
+      "remembered_vs_current_capabilities": "distinguished",
+      "historical_pending_vs_current_authority": "distinguished",
+      "new_identity_or_admission": "not_claimed",
+      "private_contents_published": false
+    }
+  },
+  "post-native-preservation": {
+    "all_canonical_records_history_and_vectors_preserved": true,
+    "excluded_access_bookkeeping_only": true,
+    "live_database_never_restored": true
+  },
+  "storage": {
+    "before_new_space_snapshot_bytes": 2998272,
+    "qualified_new_space_snapshot_bytes": 3457024
+  },
+  "backend": {
+    "provider": "nvidia",
+    "model": "nvidia/nemotron-3-embed-1b",
+    "account_choice_human_authorized": true,
+    "legacy_model_failed_http_status": 410,
+    "legacy_model_retirement_date": "2026-08-25",
+    "legacy_spaces_preserved": true,
+    "active_database_path_changed": false
+  },
+  "operation_call_accounting": {
+    "basis": "Observed command phases and native trace; not independent network metering",
+    "new_space_document_embedding_requests": 2,
+    "healthy_hybrid_query_requests": 5,
+    "synthetic_forward_document_embedding_requests": 1,
+    "failed_legacy_model_requests": 2,
+    "nvidia_billed_cost_usd": null,
+    "native_billed_cost_usd": null
+  },
+  "fixture_correction": {
+    "unsupported_metadata_rejected_before_insertion": true,
+    "corrected_to_existing_generated_provenance_schema": true,
+    "canonical_memory_written": false
+  },
+  "index_driver_versions": {
+    "qualification_executed_sha256": "0120b1a5102275bc7d2a7bc83d415b1c12e8fb7a99745ac5f298d0d90f9b81ec",
+    "successful_adoption_executed_sha256": "984b9f28d3113488d0698d990818c7e03d30a01a49165c47dadd03c4c40e4673",
+    "verification_executed_sha256": "a8717f9d8194410323c0a7135ea28dbaf32a226d03ee99d444b0b2e4e6dcf93f"
+  }
 }

@@ -7,5 +7,21 @@
     "pinned updater source",
     "required target retrieval membership"
   ],
-  "private_source_reviewed": false
+  "private_source_reviewed": false,
+  "additive_index_review": {
+    "approved_driver_sha256": "a8717f9d8194410323c0a7135ea28dbaf32a226d03ee99d444b0b2e4e6dcf93f",
+    "scope": "Bounded static additive-index persistence review; no private records or API calls by reviewer",
+    "findings_corrected": [
+      "guarded compensation for provider rollback/reapply",
+      "cleanup of this invocation\u2019s temporary file after failure"
+    ],
+    "actual_successful_adoption_executed_sha256": "984b9f28d3113488d0698d990818c7e03d30a01a49165c47dadd03c4c40e4673",
+    "final_helper_failure_check": {
+      "tested_driver_sha256": "a8717f9d8194410323c0a7135ea28dbaf32a226d03ee99d444b0b2e4e6dcf93f",
+      "injected_reapply_fsync_failure": true,
+      "owned_temp_removed": true,
+      "guarded_current_model_restoration": true,
+      "real_provider_file_used": false
+    }
+  }
 }
