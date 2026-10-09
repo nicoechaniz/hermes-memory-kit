@@ -1,0 +1,30 @@
+{
+  "schema": "hmk.stage-three-adoption/v1",
+  "matrix_merged_main": "e7c5d54c1979d0854a3b0195124a11f3a76f75e2",
+  "approved_pr_head": "cfabc0ddcc55d9a2ddaec1616f9bd2369716fd1d",
+  "matrix_prechange_main": "f5df821e56ca2b46a8384b87a50a70f2b889081f",
+  "tool_sha256": "227eef98e935127f711a5aa66ee27b0d5b5b07307aa99f21d9eeb52a487555cb",
+  "public_packet_sha256": "f881590ddd54d89c9dd7904bc33e463673f955596b1a824ed07cc39866c74ad1",
+  "preservation": {
+    "schema": "dm.being-memory-preservation/v1",
+    "preservation_verified": true,
+    "complete_available_content": true,
+    "unavailable_before_export": 0,
+    "verified_members": 8,
+    "authority_or_admission": "not_performed"
+  },
+  "full_native_state_equal": true,
+  "backup_integrity_and_fks": "ok",
+  "rollback_restored_full_native_state": true,
+  "rollback_failure_evidence_retained": true,
+  "core_tool_and_sdk_bytes_match_reviewed_head": true,
+  "adoption": "manual offline tools available in ordinary Matrix main checkout",
+  "live_memory_migration": "not_needed; no live data or daemon/binding/config changes",
+  "native_codex_memory_enabled": false,
+  "hooks_timers_autonomous_attention_added": false,
+  "elapsed_milliseconds": 230,
+  "qualification_api_calls": 0,
+  "qualification_api_cost_usd": 0,
+  "review_native_agent_turns": 5,
+  "review_token_and_monetary_usage": "not supplied by agent tooling"
+}

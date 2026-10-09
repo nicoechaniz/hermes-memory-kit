@@ -4,7 +4,7 @@
 |---|---|---|---|
 | [Lifelong agent memory and consolidation](agent-memory-2026-10-06/README.md) | 2026-10-06 | research closed; implementation tracked below | Five primary-source research lanes; HMK upgrade mechanisms, continuity evaluation and component/replacement gates. Competing systems were not deployed/benchmarked. |
 | [Codex native memory integration addendum](../docs/codex-native-memory-review.md) | 2026-10-07 | source review complete; experiment pending | Native session continuity and local durable learning, external import/backend seams, controlled coexistence and the existing #11/#12 experiment. |
-| [Durable memory implementation plan](../docs/durable-recall-plan.md) | 2026-10-07 | stages 1–2 complete; stage 3 qualified candidate pending review/merge | [Issue #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13) tracks adopted foundation repairs and the [stage-one qualification](agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md): complete fictional comparison, paired affected-case reruns, exact supported answers, preserved failures/history and separate costs. Native Codex remains #11/#12 after later qualification gates. |
+| [Durable memory implementation plan](../docs/durable-recall-plan.md) | 2026-10-07 | stages 1–3 complete for qualified fictional procedures; stage 4 actual receiving next | [Issue #13](https://github.com/nicoechaniz/hermes-memory-kit/issues/13) tracks adopted foundation repairs and the [stage-one qualification](agent-memory-2026-10-06/pilots/2026-10-07-stage-one-qualification.md): complete fictional comparison, paired affected-case reruns, exact supported answers, preserved failures/history and separate costs. Native Codex remains #11/#12 after later qualification gates. |
 | [Mariano memory research comparison](../docs/mariano-memory-research-review.md) | 2026-10-07 | source comparison, mounted source/API relationship and scoped GitHub freshness check complete | Seven research documents plus system context and pinned public source; July thematic synthesis implementation, author-aware upstream PR checks and source-loss adaptations. Both views may carry current work, with 66 selected files matching by hash. No newer autobiographical-sleep study was established within the inspected scope; HTTP access and model experiments remain unqualified. |
 
 The [lifelong-memory and interoperability addendum](../docs/lifelong-memory-portability-review.md)
@@ -30,4 +30,5 @@ resonant storage remain documented future options rather than prerequisites.
 The [stage-three portable preservation report](agent-memory-2026-10-06/pilots/2026-10-08-stage-three-preservation-qualification.md)
 preserves the fictional packet, full logical history fingerprints and source-free
 reconstruction/cost evidence. Matrix PR #285 is published with successful relevant
-CI; its independent review, merge and main adoption remain the exact continuation.
+CI. Matrix PR #285 is now independently reviewed, merged and adopted with verified
+packet/snapshot rollback. Actual receiving continuity through Matrix #263 is next.
