@@ -168,6 +168,7 @@
   "index_driver_versions": {
     "qualification_executed_sha256": "0120b1a5102275bc7d2a7bc83d415b1c12e8fb7a99745ac5f298d0d90f9b81ec",
     "successful_adoption_executed_sha256": "984b9f28d3113488d0698d990818c7e03d30a01a49165c47dadd03c4c40e4673",
-    "verification_executed_sha256": "a8717f9d8194410323c0a7135ea28dbaf32a226d03ee99d444b0b2e4e6dcf93f"
+    "verification_executed_sha256": "a8717f9d8194410323c0a7135ea28dbaf32a226d03ee99d444b0b2e4e6dcf93f",
+    "final_retained_and_statically_reviewed_sha256": "317bbc3fc0fadcfc6a64987ad47dd7f09f03d8218472bc60a99537cd74520905"
   }
 }

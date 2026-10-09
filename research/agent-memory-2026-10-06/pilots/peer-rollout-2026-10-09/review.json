@@ -9,11 +9,12 @@
   ],
   "private_source_reviewed": false,
   "additive_index_review": {
-    "approved_driver_sha256": "a8717f9d8194410323c0a7135ea28dbaf32a226d03ee99d444b0b2e4e6dcf93f",
+    "approved_driver_sha256": "317bbc3fc0fadcfc6a64987ad47dd7f09f03d8218472bc60a99537cd74520905",
     "scope": "Bounded static additive-index persistence review; no private records or API calls by reviewer",
     "findings_corrected": [
       "guarded compensation for provider rollback/reapply",
-      "cleanup of this invocation\u2019s temporary file after failure"
+      "cleanup of this invocation\u2019s temporary file after failure",
+      "retained live phase uses owning pool maintenance lock"
     ],
     "actual_successful_adoption_executed_sha256": "984b9f28d3113488d0698d990818c7e03d30a01a49165c47dadd03c4c40e4673",
     "final_helper_failure_check": {
@@ -21,7 +22,9 @@
       "injected_reapply_fsync_failure": true,
       "owned_temp_removed": true,
       "guarded_current_model_restoration": true,
-      "real_provider_file_used": false
-    }
+      "real_provider_file_used": false,
+      "env_replacement_helper_unchanged_in_final_driver": true
+    },
+    "executed_lock_scope": "qualification workspace; executed BEGIN IMMEDIATE and full canonical fence serialized live writes"
   }
 }

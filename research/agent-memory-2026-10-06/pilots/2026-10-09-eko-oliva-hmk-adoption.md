@@ -87,7 +87,7 @@ A new consistent verified snapshot precedes qualification on a separate copy.
 Native backfill creates the new space there; all original rows and unknown fields
 remain intact. A mutated witness is retained and isolated restoration equals the
 snapshot. Adoption inserts only these qualified new vectors through native upsert
-under a maintenance lock and immediate transaction. The live canonical state is
+under an immediate transaction. The live canonical state is
 fenced against intervening changes; a conflict stops without overwriting those
 changes. The live database path is unchanged and no old database is restored over
 active work. The atomically selected provider/model applies to both future
@@ -96,7 +96,11 @@ retrieved without backend errors, and expansion matches original content/UID.
 
 Actual provider-pointer rollback/reapply succeeds while retaining every vector.
 A bounded static review also fixes failure compensation and cleanup of the
-operation’s own temporary file. A synthetic injected reapply-fsync failure proves
+operation’s own temporary file. The executed operation’s batch lock was in the
+qualification workspace; its immediate transaction and full canonical fence
+serialized live writes. The final retained driver additionally selects the
+owning pool’s maintenance lock for future live phases. A synthetic injected
+reapply-fsync failure proves
 guarded restoration to the current model without using the real provider file.
 The successful adoption receipt and final reviewed helper have separately pinned
 versions; the final correction does not imply the earlier success exercised a
