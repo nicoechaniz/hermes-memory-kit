@@ -56,6 +56,13 @@ proof of absence.
 
 ## Agreed roadmap — 2026-10-07
 
+Peer adoption continuation, 2026-10-09: [Eko/Oliva rollout](../research/agent-memory-2026-10-06/pilots/2026-10-09-eko-oliva-hmk-adoption.md)
+records actual code/skill adoption in both existing hosted bodies. Eko’s preserved
+embedding backend and bounded real native conversation pass. Oliva’s healthy
+semantic retrieval remains pending embedding-account selection; do not claim both
+fully verified or repeat Eko’s valid checks. This rollout is distinct from
+full source-machine migration and the later native-memory coexistence pilot.
+
 Stage-four exit, 2026-10-09: the
 [receiving-continuity qualification](../research/agent-memory-2026-10-06/pilots/2026-10-09-stage-four-receiving-qualification.md)
 completes the roadmap’s fictional receiving conversations and bounded actual-life

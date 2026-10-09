@@ -1,0 +1,11 @@
+{
+  "approved_driver_sha256": "71b849de0b1cfa8dbc60c5020785d3e8bc0d589653b35565bf854912829da999",
+  "scope": "static pre-activation code-pointer/persistence paths; not observed deployment acceptance",
+  "findings_corrected": [
+    "atomic fenced pointer replacements",
+    "independent compensation and conflict receipts",
+    "pinned updater source",
+    "required target retrieval membership"
+  ],
+  "private_source_reviewed": false
+}

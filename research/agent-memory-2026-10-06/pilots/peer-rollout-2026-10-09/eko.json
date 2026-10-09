@@ -1,0 +1,155 @@
+{
+  "being": "eko",
+  "adoption": {
+    "being": "eko",
+    "skill_version": "1.1.4",
+    "hmk_commit": "0f9a3b22c7a765514d36c9aa64d4649d7318a863",
+    "stores": 2,
+    "code_pointer_rollback_verified": true,
+    "canonical_memory_unchanged": true,
+    "originals_and_backups_retained": true
+  },
+  "store_counts": [
+    {
+      "chapters": 10,
+      "revisions": 0,
+      "links": 0
+    },
+    {
+      "chapters": 15,
+      "revisions": 0,
+      "links": 0
+    }
+  ],
+  "code_files": {
+    "backfill-semantic.py": "545601ee887b0d7f30512f3dc7f25904c2853c1ca62117679c6013b87153d489",
+    "bootstrap_agent.py": "34b5a6f1dd8f423f40e771ba63cbc66274803e35d936d09f3649b82ea0397b65",
+    "bootstrap_workspace.py": "a8dd4c4ad7853a370ae8378950b289ae74a04680acf35f3d90bf051e72913dce",
+    "capture_schema.py": "fddbd99fcd919766bfae0c91df64c12dfaf417a9e4bace176e8127b750ed69f5",
+    "capturectl.py": "8f752747c09b1d9e0a266aeec5951cd112c11c88d05fba91ec975c45d93eb1fd",
+    "consolidationctl.py": "c526c5914e81adae4ce4af71c22f880d39a2709b6481670068db14c8b476d5ef",
+    "continuityctl.py": "18c71845d245b9b6ff0bfda804906ae4e40d2233d47c9898ecf39015d03967ac",
+    "corpus_policy.py": "24a20a82496ca144d3a5ba7a629ca280f06a8c5dfef35001538a04bbcccbbb34",
+    "daimon_projection.py": "42cc534a48fcf9a2e973bcee82b9e4414a0d9b8676c963654ba873cb860819a4",
+    "embed_benchmark.py": "d2c2438a1dbf4d1d507fd8ca4b95f6f082e9cb2a842408b77987ce27af65bd9d",
+    "embed_benchmark_compare.py": "48e69daacaae64454acf686a5f7d71ea28991f7bd532986fbc721aee21ad9dca",
+    "embed_clear.py": "9012c8ae10d84f5baec2882bf76e7aa80c683da4e2d5db089923579097e8c2ff",
+    "embed_verify.py": "0146b1f3f680055ea1bdb8063148809fb8ceebdd33ff88d9c688f33345c4ae7b",
+    "export_obsidian.py": "6f76f8ef8d108268877ea20692fe2c9396124f5afaa606a6894471032e1ab4c8",
+    "generate_daimon_projection_vectors.py": "e52606c5b25a13c588e157c9f7cfbd134a381c2d9d2ab7942cd3a7c130526204",
+    "ingest_any.py": "80075514f64160fa998d5632b200a324b4e45dcbccf745cd25ad36f446f00613",
+    "memoryctl.py": "a0a24bcacd2c9efd548df27ab2d1439f2ad8b41f44976f9424d490e80b8067d5",
+    "migrate-engram.py": "32691a57bca4d92a75a27baf965a107df8991f5b95f92e95b2807326b1aa1b7d",
+    "native_records.py": "62ce01ed8205d1eb3cdb9d39026c3b826f2dd49f43ca6e343d3956f1dda5fe29",
+    "publish_collective.py": "8cf6d0dfe4790442ca7dc0d09f84630d2c59a112cc37730d99f3210d0f170c96",
+    "sqlite_snapshot.py": "0136507be90a383c3f64c0d1e9c54af0d1301fdb874f5b20a2b28c6115871e23",
+    "support_currency.py": "ec7b8f55c98c7d19cdea659ea6c19aad2c4c7b15d47c15981a3c6d9b8c593d35"
+  },
+  "skill_status": {
+    "packages": [
+      {
+        "commit": "7696869abf4ce38320e2b290f4fe1fff9d0a91a2",
+        "content_sha256": "15c3f9850711a616c72b0f5b9214dd236f664a3707d2e3cd659d096c66118857",
+        "outcome": "installed",
+        "package": "mariano-memory-kit",
+        "version": "1.1.4"
+      }
+    ]
+  },
+  "native_memory_disabled": true,
+  "verification": {
+    "being": "eko",
+    "stores": [
+      {
+        "checks": [
+          {
+            "age": "oldest",
+            "nonempty_hybrid": true,
+            "backend_errors": false,
+            "expanded_original_matches": true,
+            "record_retrieved": true
+          },
+          {
+            "age": "newest",
+            "nonempty_hybrid": true,
+            "backend_errors": false,
+            "expanded_original_matches": true,
+            "record_retrieved": true
+          }
+        ],
+        "canonical_state_preserved": true
+      },
+      {
+        "checks": [
+          {
+            "age": "oldest",
+            "nonempty_hybrid": true,
+            "backend_errors": false,
+            "expanded_original_matches": true,
+            "record_retrieved": true
+          },
+          {
+            "age": "newest",
+            "nonempty_hybrid": true,
+            "backend_errors": false,
+            "expanded_original_matches": true,
+            "record_retrieved": true
+          }
+        ],
+        "canonical_state_preserved": true
+      }
+    ],
+    "native_memory_enabled": false
+  },
+  "backend-applied": {
+    "being": "eko",
+    "provider": "model2vec",
+    "model": "minishlab/potion-retrieval-32M",
+    "index_mutated": false,
+    "recovery": "Restore backend layer first using expected-after fences and retained before files, then core pointer layer if desired."
+  },
+  "native-receiving": {
+    "being": "eko",
+    "requested_model": "gpt-6.1-sol",
+    "effort": "low",
+    "provider": "native-openai-codex",
+    "seconds": 55.433,
+    "usage": {
+      "input_tokens": 73686,
+      "cached_input_tokens": 48384,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1256,
+      "reasoning_output_tokens": 0
+    },
+    "private_transcript_retained": true,
+    "native_memory_enabled": false,
+    "accepted_narrative": true,
+    "billed_cost_usd": null,
+    "outside_assessment": {
+      "scope": "Two actual selected records, all substantive answer statements compared with original raw records, current owner context and observed five-call trace. No independent verification of historical world claims.",
+      "participants_meaning_origin_precision_outcomes": "supported",
+      "remembered_vs_current_capabilities": "distinguished",
+      "new_identity_or_admission": "not_claimed",
+      "private_contents_published": false
+    }
+  },
+  "model2vec-space-check": {
+    "model": "minishlab/potion-retrieval-32M",
+    "provider": "model2vec",
+    "comparisons": [
+      {
+        "store": "store-001",
+        "indexed_input_hash_matched": true,
+        "dims": 512,
+        "cosine_to_preserved_index": 1.0000000000000002
+      },
+      {
+        "store": "store-002",
+        "indexed_input_hash_matched": true,
+        "dims": 512,
+        "cosine_to_preserved_index": 1.0000000000000002
+      }
+    ],
+    "old_embeddings_modified": false
+  }
+}
