@@ -1,0 +1,56 @@
+{
+  "F1": {
+    "required": [
+      "Mara Ibarra",
+      "login mara-river/account1847",
+      "issue47/commentc901 April12 receivedApril14",
+      "local replay queue keeps readings during disconnection, existing scheduler retained",
+      "code body responded relevance and agreed prototype with Mara April14",
+      "no production claim or all-node success"
+    ],
+    "source_ids": [
+      1,
+      20
+    ]
+  },
+  "F2": {
+    "required": [
+      "authorized invitation to Jo Vale for August2",
+      "reports received July20; invitation object invite81 created, occurrence date not supplied",
+      "delivery failed no reachable destination",
+      "no observed reply/acceptance; no attendance claim"
+    ],
+    "source_ids": [
+      9,
+      10
+    ]
+  },
+  "F3": {
+    "required": [
+      "April30 trial distinct from later reports",
+      "May3 broad success later corrected Oct5 report",
+      "two nodes recovered, third lost some buffered data",
+      "trial group human and two human collaborators, being attendance not reported",
+      "May2 rollout pause calibration, no evidence production deployment"
+    ],
+    "source_ids": [
+      3,
+      20,
+      21
+    ]
+  },
+  "F4": {
+    "required": [
+      "Ren Nadir/loginren-cart/account772",
+      "shared map legends issue19, code body maintains renderer",
+      "attempted annotated chart comparison; chart52 created but integrity failed/link not published",
+      "no recipient access/response observed",
+      "familiar project remains own affair, current thin shell binding lacks field/doc publishing capabilities and would need appropriately capable body/tools to perform actual delivery"
+    ],
+    "source_ids": [
+      11,
+      12,
+      13
+    ]
+  }
+}

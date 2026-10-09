@@ -80,3 +80,5 @@ filtered index, including its curated map and source documents. Both mounted
 views may contain current work; 66 selected memory research files matched by hash.
 This additive review preserves the five original raw reports and
 does not change the public-source scope of the closed October investigation.
+
+Latest implementation continuation: [stage-four receiving qualification](pilots/2026-10-09-stage-four-receiving-qualification.md) closes the bounded existing-deployment gate, with fictional/public evidence and private aggregate assessment. Stage five native coexistence is next; native memory remains disabled.

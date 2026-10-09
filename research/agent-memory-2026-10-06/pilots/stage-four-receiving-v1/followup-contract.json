@@ -1,0 +1,15 @@
+{
+  "scope": "targeted conversation continuation; no first-answer omissions relabelled",
+  "source_arms": [
+    "F1",
+    "F4"
+  ],
+  "pending_requirements": [
+    "Mara account1847 and c901 stable issue pointer",
+    "April12 comment vs April14 receipt",
+    "Ren account772 and TideAtlas issue19/worldpointer",
+    "being code body owns shoreline renderer contribution",
+    "current thin receiver can plan, needs applicable code/doc/chart capabilities for actual continuation"
+  ],
+  "original_hidden_rubrics_unchanged": true
+}

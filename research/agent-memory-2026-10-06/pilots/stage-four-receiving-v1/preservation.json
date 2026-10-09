@@ -1,0 +1,11 @@
+{
+  "schema": "hmk.stage-four-fictional-preservation/v1",
+  "canonical_state_equal": true,
+  "fts_equal": true,
+  "integrity_and_foreign_keys_ok": true,
+  "excluded": [
+    "access counters/timestamps",
+    "queries_log"
+  ],
+  "formation_or_embedding_changed": false
+}

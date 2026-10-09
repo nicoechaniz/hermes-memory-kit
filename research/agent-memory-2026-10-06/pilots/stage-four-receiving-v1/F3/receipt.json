@@ -1,0 +1,36 @@
+{
+  "case": "F3",
+  "state": "completed",
+  "requested_model": "gpt-6.1-sol",
+  "provider": "openai-codex-native",
+  "reasoning_effort": "low",
+  "task_sha256": "5f73eb844d4f5645ea26c0256093df398050a95ae1fd7f148083ab7a810f295f",
+  "instruction_sha256": "6af4af9fff55e58881a2016ba332c76a57f6d2ccb71326779c8b825af1c88984",
+  "catalog_sha256": "82581b4f8a771f784d19479269d3e3935becb267deee2b38f153a8321b4f145e",
+  "source_sessions_available": false,
+  "rubrics_available": false,
+  "isolation_revision": "resolver-direct-tools-private-pty-approved-hmk-skill-v5",
+  "runner_sha256": "f441030d26bc45118ff65e9f0e0070870758ccf250161b0dce7a75f70c125e04",
+  "selected_skill_sha256": "10fe7aad1adb86d6ead2ef4f08897cda523751b561eab30f272ae390be814c3a",
+  "native_memory_enabled": false,
+  "new_matrix_enrollment": false,
+  "corpus_kind": "fictional",
+  "billed_cost_usd": null,
+  "exit_code": 0,
+  "item_types": [
+    "error",
+    "agent_message",
+    "command_execution",
+    "command_execution",
+    "command_execution",
+    "agent_message"
+  ],
+  "native_usage": {
+    "input_tokens": 46988,
+    "cached_input_tokens": 29952,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 754,
+    "reasoning_output_tokens": 0
+  },
+  "seconds": 30.4
+}

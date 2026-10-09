@@ -1,0 +1,5 @@
+Era **Mara Ibarra**, que figuraba como **Mara**, con el usuario `mara-river`. Dejó la propuesta el **12 de abril de 2026**, en el **issue 47 de HarborMesh**. [mem:1]
+
+Proponía una **cola local de lecturas pendientes en los nodos de relay**: conservarlas durante las desconexiones y reproducirlas después, sin reemplazar el planificador existente. Importaba porque encajaba con los despliegues de campo que mantenía el cuerpo de código; el **14 de abril**, ese cuerpo y Mara acordaron hacer un prototipo. [mem:1]
+
+La propuesta llegó a una prueba de campo del **30 de abril**, pero el resultado fue parcial. Según la corrección humana recibida el **5 de octubre de 2026**, dos nodos recuperaron las lecturas y un tercero perdió algunas. Esa corrección también aclaró que participaron quien informó y dos colaboradores humanos. El despliegue más amplio había quedado pausado el **2 de mayo**, hasta entender la deriva de calibración; el último reporte consultado seguía sin aportar evidencia de un despliegue en producción. [mem:3]

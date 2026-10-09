@@ -1,0 +1,12 @@
+{
+  "schema": "hmk.stage-four-safe-write/v1",
+  "supported_native_update": true,
+  "existing_record_identity_preserved": true,
+  "expected_revision_advanced": true,
+  "prior_revision_retained": true,
+  "originals_unchanged": true,
+  "rollback_full_state_equal": true,
+  "mutated_copy_preserved": true,
+  "active_pool_written": false,
+  "embedding_space_changed": false
+}

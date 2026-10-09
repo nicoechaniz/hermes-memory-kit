@@ -1,0 +1,173 @@
+{
+  "schema": "hmk.stage-four-evidence/v1",
+  "privacy": "Fictional transcripts only; real-life cases aggregate only. Local operational paths redacted in fictional traces. Private originals remain local.",
+  "previous_corpus": "../stage-three-preservation-v1/portable-fixture.tgz",
+  "source_formation_changed": false,
+  "files": [
+    {
+      "path": "F1/answer.md",
+      "bytes": 1048,
+      "sha256": "122230dd0b2c44a48273cc7145ed3c2ca51c6d8fe063a9146aa631c5c0e607fb"
+    },
+    {
+      "path": "F1/events.json",
+      "bytes": 29305,
+      "sha256": "b51077c01b78181515ffeaccc2001e6a86fc53b1b6499d447a99fbb285753546"
+    },
+    {
+      "path": "F1/receipt.json",
+      "bytes": 1239,
+      "sha256": "7e0efeb69832d84cf80fc81a010333112e693ffa3a90088a5c478204e1c78cc5"
+    },
+    {
+      "path": "F1/task.json",
+      "bytes": 249,
+      "sha256": "5b8edf121d70361149d70a82b31cad3c9bac37370c4f10c66aff7042ce70d331"
+    },
+    {
+      "path": "F2/answer.md",
+      "bytes": 879,
+      "sha256": "2b3866745fdbfec5ff7059e8f25a543511fc91878fabd6ff5eaa64a1d2f85baa"
+    },
+    {
+      "path": "F2/events.json",
+      "bytes": 22246,
+      "sha256": "bd297fbe6cf3fe6087f9c0a508d31f2450664c7e452c7ee5832bc4db9505c0bb"
+    },
+    {
+      "path": "F2/receipt.json",
+      "bytes": 1214,
+      "sha256": "ffd77d9cb528742fae781e44e014f17799f3c1dfe85fd90a87deba6581aff662"
+    },
+    {
+      "path": "F2/task.json",
+      "bytes": 184,
+      "sha256": "e4e010f7691241f948e54b76ec16576932dabe36288de9637b9ba35c675e3872"
+    },
+    {
+      "path": "F2P/answer.md",
+      "bytes": 964,
+      "sha256": "2bff75c4e25911dc4638123a67716ce3acf0ec083e62d818baabd9ac1a4b0b11"
+    },
+    {
+      "path": "F2P/events.json",
+      "bytes": 22333,
+      "sha256": "692dd51fff25d4083ea5c5dcf14ea1434b07b902726cf6161893c5e68e0bd9fe"
+    },
+    {
+      "path": "F2P/receipt.json",
+      "bytes": 1215,
+      "sha256": "0550bea27dd8816badaae600f48959cafc8f9085b71d652850495fe9fbacb4cc"
+    },
+    {
+      "path": "F2P/task.json",
+      "bytes": 184,
+      "sha256": "638fc83a1a3fa59b2f7e54a42076552375c931e3c789f95a550c5d07ea8493f2"
+    },
+    {
+      "path": "F3/answer.md",
+      "bytes": 1673,
+      "sha256": "30fec73e69880a482e4004cb76d15c74bf6f8407366da456b38e3c96ea73bc42"
+    },
+    {
+      "path": "F3/events.json",
+      "bytes": 34644,
+      "sha256": "e41bdb1c0e57f7633c14646ca772cdc9cd4e21ab8fc85e2fa8cbbdb47c4676f6"
+    },
+    {
+      "path": "F3/receipt.json",
+      "bytes": 1237,
+      "sha256": "171ff95e42dbbc46a237e5aba0f31fc6f748c45954a729a971ed562bf8a4996c"
+    },
+    {
+      "path": "F3/task.json",
+      "bytes": 189,
+      "sha256": "5f73eb844d4f5645ea26c0256093df398050a95ae1fd7f148083ab7a810f295f"
+    },
+    {
+      "path": "F4/answer.md",
+      "bytes": 1175,
+      "sha256": "bfbe4ff7031df6190dc335d1e400d17b57c80b57c23e1769f9e4d19c29685416"
+    },
+    {
+      "path": "F4/events.json",
+      "bytes": 22964,
+      "sha256": "7ca95739d10ddc69869fbdb303fef62a79bbf3723cc1f4232ef44986d9adbabf"
+    },
+    {
+      "path": "F4/receipt.json",
+      "bytes": 1214,
+      "sha256": "e66baddc45cecb2e1bab3c72a83e9e48edf752fe61d2ec3462af2b30ad5c0238"
+    },
+    {
+      "path": "F4/task.json",
+      "bytes": 188,
+      "sha256": "bfbf3e03790483958c4c180fdf95d8c17432ccf5f551852fc65604e8e9d1a522"
+    },
+    {
+      "path": "FP/answer.md",
+      "bytes": 3433,
+      "sha256": "472e28231ebb60715a611ef5cdffe9496f47886c98debd6d2498bd55de05ad40"
+    },
+    {
+      "path": "FP/events.json",
+      "bytes": 48441,
+      "sha256": "167b1cfb1e11b45ce09dc63bf68dd4036744cae7d2e276fb8cf1ae30a9b2253c"
+    },
+    {
+      "path": "FP/receipt.json",
+      "bytes": 1265,
+      "sha256": "b7c812d46417d5b3824c6aacd54ad5152db811f7cde2d1e1d4b1f8830d31279b"
+    },
+    {
+      "path": "FP/task.json",
+      "bytes": 2819,
+      "sha256": "e6e7853fb4207cc2786e9a608bdfaf733e13db3b9ea5e3bb4c57689e20ec9fa9"
+    },
+    {
+      "path": "assessment.json",
+      "bytes": 1932,
+      "sha256": "1a18db60d6dc7bd76233628e81c8775a11e6ef9b6eafa434198c3bcb2edcc20f"
+    },
+    {
+      "path": "followup-contract.json",
+      "bytes": 531,
+      "sha256": "a751155b619edc637e755e5b055d1a6397db518ccb35a7c9698ca2371228f200"
+    },
+    {
+      "path": "independent-review.md",
+      "bytes": 5967,
+      "sha256": "b042455de86f27d70f493217f29f8ca445cdcf06903157076a5cfe13076d84df"
+    },
+    {
+      "path": "post-recall-preservation.json",
+      "bytes": 407,
+      "sha256": "6b90173024401988a33ce1d5e28f31c57ddbc2aaf037a6226f0acef89c556d14"
+    },
+    {
+      "path": "preservation.json",
+      "bytes": 270,
+      "sha256": "0e2250ebda7c0075516d6b9fca73f5b256a7f6ad87faeb76c63b6ca1f0c4ddfc"
+    },
+    {
+      "path": "rubrics-revealed-after-calls.json",
+      "bytes": 1726,
+      "sha256": "b4544d3b0e3435abf8af0055251075cd66a1f3a89709218b883fbafc32b15929"
+    },
+    {
+      "path": "safe-write.json",
+      "bytes": 371,
+      "sha256": "fc7f558c433d2b72bee43843d95737a27f2298c236f7f3b01f5a742c3c7613cd"
+    },
+    {
+      "path": "skill-adoption.json",
+      "bytes": 404,
+      "sha256": "3bf497e04524e9accde5df216fc0776aaf91e8c54eb9c676075ccda312ee9ae3"
+    },
+    {
+      "path": "usage.json",
+      "bytes": 8349,
+      "sha256": "07b81e4428171a12e0a665698b2919527eb23f238a51cce862f4af170b747a14"
+    }
+  ]
+}
