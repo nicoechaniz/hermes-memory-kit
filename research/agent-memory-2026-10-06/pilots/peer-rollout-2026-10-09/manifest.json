@@ -1,0 +1,19 @@
+{
+  "schema": "hmk.peer-rollout/v1",
+  "state": "Eko verified; Oliva code/skill adopted, semantic backend pending account selection",
+  "private_sources_published": false,
+  "files": [
+    {
+      "path": "oliva.json",
+      "sha256": "ff2e5bb5583c4534e05e666ddbc0bf45464360e45e5892f4bf49947a32121bf5"
+    },
+    {
+      "path": "review.json",
+      "sha256": "18d17899d2b2a70536f10eaeaae57c479f164a6f0b8ad29254d87e0485396b35"
+    },
+    {
+      "path": "eko.json",
+      "sha256": "e04a3ae129a495254254105eb2f5a596b4041704f10a25b53f67331c696f34cb"
+    }
+  ]
+}
