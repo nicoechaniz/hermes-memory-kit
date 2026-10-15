@@ -1,3 +1,6 @@
+> **Development has moved to [DaimonMemoryKit at AlterMundi](https://github.com/AlterMundi/daimon-memory-kit).**
+> Existing issues and PRs remain here as historical evidence; [continue work in the new repository](https://github.com/AlterMundi/daimon-memory-kit/issues/1).
+
 # Hermes Memory Kit
 
 Self-contained memory infrastructure for Hermes-style agents.
